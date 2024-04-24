@@ -1,0 +1,2590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Alternate medieval font from Google: Amarante -->
+	<link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Almendra Display' rel='stylesheet'>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>All That Glitters — Player's Handbook</title>   <!-- Liberation Serif -->
+	<!-- h1=title h2=subtitle h3=chapter h4=section h5=subsection -->
+	<style>
+		html { font-family: "Calibri", serif; color: white; background-color: black; }
+		h1 { font-family: "Almendra Display"; font-size: 30pt; text-align: center; color: #cb0; margin: 20px 0; }
+		h2, h3, h4, h5 { font-family: "Aboreto"; font-size: 16pt; }
+		h2 { font-size: 12pt; font-weight: normal; text-align: center; color: #cb0; margin: 20px 0; }
+		h3 { font-size: 20pt; text-align: center; color: #cb0; margin: 20px 0 0 0 }
+		h4, h5 { margin-bottom: 0px; margin-top: 20px; color: #aaa; }
+		h5 { font-size: 14px; }
+		h4:after, h5:after {
+			content:' ';
+			display:block;
+			border: .5px solid #aaa;
+        }
+
+		p  { font-size: 10pt; line-height: 110%; margin: 5px 0 10px 0; }
+		a  { font-size: 10pt; line-height: 110%; margin: 10px 0; }
+		a:link { color: #cb0 }
+		a:visited { color : #980 }
+		a:hover { color: #fff }
+
+		li { font-size: 10pt; line-height: 100%; margin: 10px 0; }
+		ol { counter-reset: item; }
+		ol li { display: block; margin: 10px 0; }
+		ol li:before { content: counters(item, ".") ". "; counter-increment: item; }
+
+		table { border-collapse: collapse; width: 100%; }
+		tr:nth-child(odd) { background-color: #30302c; }
+		tr:nth-child(even) { background-color: #151515; }
+		tr:hover { background-color: #664; }
+		th { font-size: 10pt; border: 1px solid #aa8; padding: 6px; text-align: center; color: #aa8; background-color: #303033; }
+		td { font-size: 9pt; border: 1px solid #aa8; padding: 4px; }
+	</style>
+</head>
+<body>
+<h1>All That Glitters</h1>
+<h2>An Early Renaissance Tabletop Role-Playing Game<br/><br/>Player's Handbook</h2>
+<p>This guide exists to answer the following questions for players:</p>
+<ol>
+	<li><a href="#C1">How do I play the game?</a>
+		<ol>
+			<li><a href="#C1S1">Session Zero</a></li>
+			<li><a href="#C1S2">The Game Cycle</a></li>
+			<li><a href="#C1S3">Event Rolls</a></li>
+			<li><a href="#C1S4">Other Rules</a></li>
+		</ol>
+	</li>
+	<li><a href="#C2">What are my character's abilities?</a>
+		<ol>
+			<li><a href="#C2S1">Attributes</a></li>
+			<li><a href="#C2S2">Skills</a></li>
+			<li><a href="#C2S3">Proficiency Levels</a></li>
+			<li><a href="#C2S4">Race, Class, and Size</a></li>
+			<li><a href="#C2S5">Hit Points</a></li>
+			<li><a href="#C2S6">Abilities and Ability Points</a></li>
+			<li><a href="#C2S7">Mitigation</a></li>
+			<li><a href="#C2S8">Equipment</a></li>
+		</ol>
+	<li><a href="#C3">How does my character fight?</a>
+		<ol>
+			<li><a href="#C3S1">Actions</a></li>
+			<li><a href="#C3S2">Attacking</a></li>
+			<li><a href="#C3S3">Moving</a></li>
+			<li><a href="#C3S4">Grappling</a></li>
+			<li><a href="#C3S5">Reacting</a></li>
+			<li><a href="#C3S6">Damage Types</a></li>
+		</ol>
+	<li><a href="#C4">How does my character become stronger?</a>
+		<ol>
+			<li><a href="#C4S1">Leveling</a></li>
+			<li><a href="#C4S2">Training</a></li>
+			<li><a href="#C4S3">Looting</a></li>
+		</ol>
+	<li><a href="#C5">How do I create a character?</a>
+		<ol>
+			<li><a href="#C5S1">Choosing a Race</a></li>
+			<li><a href="#C5S2">Choosing a Class</a></li>
+			<li><a href="#C5S3">Writing a Backstory</a></li>
+			<li><a href="#C5S4">Choosing an alignment and goals</a></li>
+			<li><a href="#C5S5">Choosing starting equipment</a></li>
+		</ol>
+	<li><a href="#Appendices">Appendices</a>
+		<ol>
+			<li><a href="#Appendix_Spells">Spells</a></li>
+			<li><a href="#Appendix_Training">Training</a></li>
+			<li><a href="#Appendix_Weapons">Weapons</a></li>
+			<li><a href="#Appendix_Gear">Gear</a></li>
+			<li><a href="#Appendix_Items">Items</a></li>
+		</ol>
+	</li>
+</ol>
+<h3><a id="C1"></a>How do I play the game?</h3>
+<p>All That Glitters, like any tabletop roleplaying system, has three parts: The players, the Dungeon Master, and the
+	rulebook. Each part has a duty:</p>
+<ul>
+	<li><p>The players should understand the abilities of their characters, avoid cheating or metagaming, respect each
+		other and the DM, and give the DM feedback so that problems don’t arise out of the blue.</p></li>
+	<li><p>The DM should create a compelling setting, characters, and story and introduce challenging combat encounters
+		while avoiding favoritism and respecting player agency. </p></li>
+	<li><p>The rulebook should provide a framework where players can reason about the outcome of their actions and see
+		their characters progressing in potency, and assist the DM in creating encounters that are both unique and
+		appropriately difficult.</p></li>
+</ul>
+<p>In order to play the game, you need a group of people who are willing to meet on a semi-regular basis for about 3-4
+	hours. You also need someone to run the game: the Dungeon Master. If you’re reading this and you don’t know
+	who your DM is, it’s probably you. <i>Be the DM you wish to see in the world.</i></p>
+<h4><a id="C1S1"></a>Session Zero</h4>
+<p>Once you have a group of friends and a DM, you should have a session zero. Session zero doesn’t have to be in-person;
+	it can be a few text messages exchanged over the course of a few days. What matters is that everyone voices their
+	expectations and ensures that they are compatible with their group before the first session.</p>
+<p>Here are some important questions to discuss:</p>
+<ol>
+	<li><b>What type of game do you want to play?</b><br/>Does your group want a lot of combat, a lot of story, or a mix
+		of both? Do they want a main quest with a primary villain, or a sandbox world with a lot sidequests? Are
+		problems like bandits in the countryside or necromancer cults part of an oncoming apocalypse, or merely
+		business-as-usual? Having a single epic main quest can be fun, but the constant urgency tends to reduce player
+		freedom. On the other hand, sandbox campaigns may feel unfocused and purposeless.
+	</li>
+	<li><b>Can player characters permanently die?</b><br/>Discuss player character death and total party kill (TPK)
+		expectations. Are either of these outcomes possible? On the one hand, it can be heartbreaking to part with a
+		beloved character. On the other hand, the possibility of player death leads to some extremely high stakes.
+		Having the story end on a TPK is a very sour note; I think it is better for circumstances to intervene. However,
+		having the possibility of true defeat does increase the authenticity of the threats.
+	</li>
+	<li><b>How do your characters meet?</b><br/>A tavern meeting is tried-and-true, but there are other options. Perhaps
+		they’ve been enlisted by a local lord, jarl, or ealdorman to pursue some quest. Or maybe they've recently
+		escaped from prison together, in which case one wonders whether they were falsely convicted, or are true
+		scoundrels. Another possibility is that they were abducted and have awakened inside a labyrinth or cultist lair.
+		Also, are any of the party natives to the starting area, or are they all foreigners? Can the players choose any
+		race they want from the standard races list, or does the DM wish to create custom races to match a specific
+		setting?
+	</li>
+	<li><b>What is the tone of the story?</b><br/>Do you want the story to be comedic, epic, grimdark, or realistic? How
+		comfortable is your group with fantasy violence, sexuality, or politics? Oftentimes racism and sexism can make
+		unsavory characters more compelling, but they may make some people in the group uncomfortable. Likewise,
+		excessive humor at the wrong moments can ruin heart pounding moments of tension or suffocating dread.
+	</li>
+	<li><b>Are there any other concerns?</b><br/>For example, is player-versus-player combat allowed? (Not recommended.)
+		Is this everyone’s first time playing the game, or is this a group of experienced players? Do you want to start
+		at level 1, or higher?
+	</li>
+</ol>
+<p>Once your group answers these questions, you’re ready to make your characters and start playing the game. Remember
+	that most of these questions don’t have wrong answers—you can play whatever game you want to play.</p>
+<h4><a id="C1S2"></a>The Game Cycle</h4>
+<p>The game cycles between three states: narration, questioning, and action. During narration, the DM describes a
+	situation, scene, or setting. At some point, the DM introduces one or more hooks that invite player interaction. For
+	example, a suspicious NPC, a quest board at a tavern, a hallway branching into several mysterious passages, or even
+	a crime being comitted.</p>
+<p>Questioning happens after narration is complete, but before player have decided how they wish to respond. Players are
+	usually trying to visualize the scene, probe for clues or hooks, or ask questions pertinent to their planned
+	actions.</p>
+<p>Once questioning is complete, the game moves into the action phase as the players tell the DM what they do.
+	Sometimes, the DM simply narrates the outcome of these actions, completing the cycle. Other times, the action phase
+	continues as the DM initiates either an event roll or a combat sequence.</p>
+<h4><a id="C1S3"></a>Event Rolls </h4>
+<p>An event roll happens when the DM determines that the outcome of some player's action depends on chance, usually
+	related to the capabilities of their character. To perform an event roll, the DM first determines which aspect of
+	the character will be tested, usually an attribute or a skill. An attribute check tests the raw abilities of a
+	character, such as moving a heavy statue or sprinting quickly, while a skill check tests more applied abilities
+	which may be improved through training, such as aiming a bow or haggling with a merchant.</p>
+<p>The DM then asks the player to roll for that skill, while privately determining a difficulty threshold (DT) typically
+	ranging from 1 to 20. In response, the player rolls a d20 and adds their associated attribute score modifier. If the
+	sum is greater than or equal to the DT, the character’s action succeeds.</p>
+<p style="margin-left: 25px;">Note: By tradition, rolling a 1 on a d20 is called a critical fail and results in an
+	unusually bad outcome. Conversely, rolling a 20 is called a natural 20 and usually results in instant success.</p>
+<p>If an event roll should have more than one potential outcome, the DM can add additional DT. For example, if the
+	player is attempting to treat a wound, they may be asked to roll for medicine. The DM may decide that passing DT 12
+	indicates that the player is able to fully clean the wound and stanch the bleeding. Below 12 but above 6, and the
+	wound is treated but later develops an infection. In any case, the DM does not usually disclose what the difficulty
+	threshold(s) are—only the outcome.</p>
+<p>After the event roll is complete, the DM describes what has changed or transpired, returning to the narration
+	phase.</p>
+<h4><a id="C1S4"></a>Other Rules</h4>
+<p>When rolling dice:</p>
+<ul>
+	<li>Rolling with advantage means to roll a die twice and take the higher result.</li>
+	<li>Rolling with disadvantage means to roll a die twice and take the lower result.</li>
+	<li>Advantage and disadvantage each other cancel out.</li>
+	<li>Rolling the middle means to roll a die three times and take the middle result.</li>
+	<li>If a number comes up twice when rolling the middle, take the repeated number as the result.</li>
+</ul>
+<p>When rounding numbers, always round down.</p>
+<p>When rules conflict, specifics override general rules.</p>
+<h4>Abbreviations</h4>
+<p>Throughout the game, several abbreviations are used to keep the text reasonably concise. These are the most
+	common:</p>
+<p>Combat:</p>
+<ul>
+	<li>HP: Health Points</li>
+	<li>AP: Ability Points</li>
+	<li>BC: Block Chance</li>
+	<li>DC: Dodge Chance</li>
+	<li>MIT: Mitigation</li>
+</ul>
+<p>Attributes:</p>
+<ul>
+	<li>STR: Strength</li>
+	<li>SPD: Speed</li>
+	<li>DEX: Dexterity</li>
+	<li>INT: Intelligence</li>
+	<li>CHA: Charisma</li>
+	<li>WILL: Willpower</li>
+</ul>
+<p>Other:</p>
+<ul>
+	<li>DM: Dungeon Master</li>
+	<li>ASM: Attribute Score Modifier</li>
+	<li>DT: Difficulty Threshold</li>
+</ul>
+<h3><a id="C2"></a>What are my character's abilities?</h3>
+<p>In All That Glitters, characters have several important aspects that determine what they can do in and out of
+	combat:</p>
+<ul>
+	<li><a href="#C2S1">Attributes</a></li>
+	<li><a href="#C2S2">Skills</a></li>
+	<li><a href="#C2S3">Proficiency Levels</a></li>
+	<li><a href="#C2S4">Race, Class, and Size</a></li>
+	<li><a href="#C2S5">Hit Points</a></li>
+	<li><a href="#C2S6">Ability Points and Abilities</a></li>
+	<li><a href="#C2S7">Mitigation</a></li>
+	<li><a href="#C2S8">Equipment</a></li>
+</ul>
+<h4><a id="C2S1"></a>Attributes</h4>
+<p>The capabilities of player characters are determined by six attributes: Strength, Dexterity, Speed, Intelligence,
+	Charisma, and Willpower. Attributes describe the raw physical and mental capabilities of a player. For a given
+	character, each attribute has a value, typically from 0 to 20. In general, a score of 0 indicates a total absence of
+	the attribute (as with someone who is dead or unconscious) while a score of 20 indicates a nearly superhuman level
+	of aptitude. For humans, a score of ten indicates an average level of proficiency.</p>
+<p>Each attribute has an associated hard cap and soft cap. A player can surpass the soft cap only through strenuous
+	training, necessarily neglecting other attributes to do so. The hard cap cannot be surpassed through any amount of
+	training, however. For humans, the soft cap for each ability is at 16, and the hard cap is at 20. Racial bonuses to
+	any attribute increase both the soft and hard cap by the same amount. For example, since dwarves receive a +2 bonus
+	to strength, they can later increase their strength to 22, surpassing the human limit of 20, because their racial
+	bonus has increased both their hard and soft caps for that attribute. The effect also works in reverse: dwarves take
+	a penalty to speed, and so cannot train their speed stat beyond 19.</p>
+<table>
+	<tr>
+		<th>Attribute Name</th>
+		<th>What it measures</th>
+		<th>Gameplay Effects</th>
+		<th>Real-life Equivalence</th>
+	</tr>
+	<tr>
+		<td>Strength</td>
+		<td>Core physical body power</td>
+		<td>Melee weapon damage and hitpoints</td>
+		<td>10 Strength equals 100 lbs deadlift weight. Each additional point is a ~25% increase in deadlift weight.
+		</td>
+	</tr>
+	<tr>
+		<td>Dexterity</td>
+		<td>Acrobatics and manual dexterity</td>
+		<td>Hit chance, Dodge chance</td>
+		<td>N/A</td>
+	</tr>
+	<tr>
+		<td>Speed</td>
+		<td>Walking and running speed</td>
+		<td>Polearm damage, movement speed, initiative</td>
+		<td>2 Speed equals 1 ft/s walking speed</td>
+	</tr>
+	<tr>
+		<td>Intelligence</td>
+		<td>Reasoning and factual recall</td>
+		<td>Scholastic spell power and training slots</td>
+		<td>1 Intelligence point equals 10 points of IQ</td>
+	</tr>
+	<tr>
+		<td>Charisma</td>
+		<td>Communication skills</td>
+		<td>Conjuration spell power and haggling</td>
+		<td>N/A</td>
+	</tr>
+	<tr>
+		<td>Willpower</td>
+		<td>Force of personality and determination to succeed</td>
+		<td>Natural Spell power and ability points</td>
+		<td>N/A</td>
+	</tr>
+</table>
+<p><br/>In addition to these effects, each attribute supports one or more skills, which are used during event rolls.
+	Importantly, each attribute affects multiple aspects of gameplay, meaning that players should care about which stats
+	they prioritize and which they neglect. Not every character needs to be well-rounded, but characters with unusual
+	ability score distributions should feel somewhat unbalanced to play.</p>
+<p style="margin-left: 25px;">Note: In most situations, we do not use the attribute score directly, but the attribute
+	score modifier (ASM). The ASM for an attribute is obtained by subtracting 10 from the attribute score. An average
+	human with 10 for all attribute scores would thus have 0 for their attribute score modifiers.</p>
+<h4><a id="C2S2"></a>Skills</h4>
+<p>Skills are related to attributes in that they are also used for event rolls. Every skill has an underlying supporting
+	attribute, whose ASM is added to the roll as with an attribute check. In addition to this, players add a bonus from
+	training called a proficiency bonus. The number rolled on the d20 plus the ASM plus the proficency bonus determine
+	the final value for the event roll.</p>
+<p>Although every skill depends on at least one attribute, several skills have a secondary supporting attribute whose
+	modifier may be used instead, under certain circumstances. For example, a player who is sneaking may decide that
+	they are too clumsy to move quietly and instead opt to sprint past the guard while his gaze is turned. In this case,
+	the player is trying to use their ASM for speed instead of dexterity for the stealth check. Whether this type of
+	substitution is used is situational. In fact, certain circumstances <i>require</i>that the alternative attribute
+	score modifier is used, while others permit it, in which case it would only be used if the second attribute’s score
+	is higher for that character.</p>
+<p>Here is a list of all skills:</p>
+<table>
+	<tr>
+		<th>Skill Name</th>
+		<th>Supporting Attributes</th>
+		<th>Explanation</th>
+	</tr>
+	<tr>
+		<td>Accuracy</td>
+		<td>Dex</td>
+		<td>Describes a player’s accuracy with bows, crossbows, and gunpowder weapons. Proficiency bonuses for this
+			skill affect attack rolls with ranged weapons.
+		</td>
+	</tr>
+	<tr>
+		<td>Defense</td>
+		<td>Str</td>
+		<td>Used when shielding attacks outside of combat or attempting to quickly don and doff heavy armor. Proficiency
+			bonuses for this skill affect what types of armor and shields can be used in combat.
+		</td>
+	</tr>
+	<tr>
+		<td>Initiative</td>
+		<td>Spd</td>
+		<td>Determines move order in battle.</td>
+	</tr>
+	<tr>
+		<td>Intimidation</td>
+		<td>Cha/Str</td>
+		<td>The ability to manipulate others through fear. If the threat is based purely on physical violence, strength
+			replaces charisma as the base attribute.
+		</td>
+	</tr>
+	<tr>
+		<td>Literacy</td>
+		<td>Int</td>
+		<td>Measures background knowledge that would usually be obtained via formal education or reading books. Checking
+			for knowledge of subjects such as history, religion, and the arcane are done through a check for literacy.
+		</td>
+	</tr>
+	<tr>
+		<td>Martial Arts</td>
+		<td>Str/Dex</td>
+		<td>Describes skill in areas such as boxing, grappling, and wrestling. Proficiency bonuses for this skill affect
+			attack rolls with melee weapons. In most situations, both strength and dexterity can be used interchangeably
+			as the base attribute.
+		</td>
+	</tr>
+	<tr>
+		<td>Medicine</td>
+		<td>Int</td>
+		<td>Measures knowledge of disease and wound treatment.</td>
+	</tr>
+	<tr>
+		<td>Nature</td>
+		<td>Int</td>
+		<td>Measures background knowledge that would usually be obtained by spending time in nature, or around animals.
+		</td>
+	</tr>
+	<tr>
+		<td>Parkour</td>
+		<td>Dex</td>
+		<td>The ability to climb, mantle, vault, and otherwise navigate past obstacles.</td>
+	</tr>
+	<tr>
+		<td>Performance</td>
+		<td>Cha/Dex</td>
+		<td>The players ability to sing, dance, play instruments, or otherwise entertain a crowd. Performance is also
+			used when attempting to display proper manners before a royal court. Dexterity should be used only in cases
+			where the player is attempting to entertain a crowd with acrobatic feats.
+		</td>
+	</tr>
+	<tr>
+		<td>Persuasion</td>
+		<td>Cha</td>
+		<td>Used to convince others to change their beliefs or intended course of action, whether through factual debate
+			or outright deception. Intelligence should only be used as the base attribute if the player is able to
+			present a rational argument and both conversants would likely understand.
+		</td>
+	</tr>
+	<tr>
+		<td>Perception</td>
+		<td>Int/Cha</td>
+		<td>The ability to notice out-of-place objects or people, traps, and recognize partially obscured or remote
+			objects. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat.
+		</td>
+	</tr>
+	<tr>
+		<td>Sleight-of-Hand</td>
+		<td>Dex</td>
+		<td>Used for lockpicking and pickpocketing items, or other such tricks.</td>
+	</tr>
+	<tr>
+		<td>Stealth</td>
+		<td>Dex/Spd</td>
+		<td>Used for sneaking or attempting to perform actions without being seen. Speed can be used if the noise of
+			sprinting is unlikely to arouse excessive suspicion.
+		</td>
+	</tr>
+	<tr>
+		<td>Survival</td>
+		<td>Will</td>
+		<td>The ability to stay alive, including the ability to hunt and live off the land.</td>
+	</tr>
+</table>
+<p>Certain skills have special applications. For example, persuasion can be used to haggle with merchants, as follows:
+	The player may attempt to haggle with a merchant up to three times, with successively higher DT for each successful
+	haggle. If the player fails any haggle, they cannot continue to haggle and the discount for that item is not
+	increased further. If the player rolls a critical fail on any haggle, the merchant becomes irritated and removes all
+	discounts completely.</p>
+<p>After attempting to haggle a merchant, the same merchant will not allow themselves to be haggled again for some time,
+	unless they are fond of the adventuring party or from a culture where haggling is expected.</p>
+<table>
+	<tr>
+		<th>Haggle Attempt</th>
+		<th>DT</th>
+		<th>Price Reduction</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>15</td>
+		<td>15%</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>20</td>
+		<td>30%</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>25</td>
+		<td>50%</td>
+	</tr>
+</table>
+<h4><a id="C2S3"></a>Proficiency Levels</h4>
+<p>There are five levels of proficiency in each skill, as follows:</p>
+<table>
+	<tr>
+		<td>Deficiency</td>
+		<td>-2</td>
+	</tr>
+	<tr>
+		<td>None</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>Proficiency</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>Expertise</td>
+		<td>4</td>
+	</tr>
+	<tr>
+		<td>Mastery</td>
+		<td>6</td>
+	</tr>
+</table>
+<p>Each of these labels indicate that the player has either undertaken training or has an especial weakness in that
+	skill. Deficiencies can be overcome and expertise and mastery can be attained through training even after a
+	character is made.</p>
+<p>When players obtain proficiency bonuses to the same skill from multiple sources, they do not combine to advance one’s
+	proficiency in that skill to the next level. The only exception to this rule is that proficiency bonuses from a
+	player’s race and class can be combined, allowing a player to begin the game with expert level in that skill.</p>
+<h4><a id="C2S4"></a>Race, Class, and Size</h4>
+<p>Every character belongs to a race, which provides certain starting bonuses and determines the limits of their
+	attribute scores. Race cannot be changed after a character is created. Examples of races include humans, elves, and
+	dwarves.</p>
+<p>A character’s race also determines their size class, ranging from tiny to huge. Size primarily affects what weapons a
+	character can and can’t use, and how effectively they can grapple. Grappling will be explained in further detail in
+	the combat section.</p>
+<table>
+	<tr>
+		<th>Size</th>
+		<th>Maximum Height</th>
+		<th>Grid Size</th>
+		<th>Restrictions</th>
+	</tr>
+	<tr>
+		<td>Tiny</td>
+		<td>2 feet</td>
+		<td>0x0</td>
+		<td>May not wield ordinary weapons (except daggers).</td>
+	</tr>
+	<tr>
+		<td>Small</td>
+		<td>4 feet</td>
+		<td>1x1</td>
+		<td>May not wield versatile or great weapons.</td>
+	</tr>
+	<tr>
+		<td>Medium</td>
+		<td>8 feet</td>
+		<td>1x1</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Large</td>
+		<td>16 feet</td>
+		<td>2x2</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Huge</td>
+		<td>32 feet</td>
+		<td>3x3</td>
+		<td>May not wield ordinary weapons (except great weapons).</td>
+	</tr>
+	<tr>
+		<td>Enormous</td>
+		<td>No Maximum</td>
+		<td>4x4</td>
+		<td>May not wield ordinary weapons.</td>
+	</tr>
+</table>
+<p>In addition to a race, each character has a class, which determines how they fight. Character’s classes confer some
+	bonuses immediately, but most bonuses are unlocked as the player levels up. Unlike race, classes can be changed
+	after a character is created, under certain circumstances.</p>
+<h4><a id="C2S5"></a>Hit Points</h4>
+<p>Hit points (HP) are a resource that cause the player to fall unconscious when depleted. Since the character cannot
+	move or fight when unconscious, keeping HP from falling to zero is extremely important. There are two sets of rules
+	that govern what happens when a player falls unconscious: permadeath and modern.</p>
+<p>Under permadeath rules, once the player has been downed, they roll a d20 every time it is their turn in combat. Every
+	roll of a 10 or higher is considered a save, while every roll of 9 or lower is considered a fail. If the character
+	makes three saves, they become stable and do not need to make additional saves to stay alive. However, if a
+	character accumulates three fails, they are dead and can only be revived by powerful resurrection magic. Under this
+	system, players can be revived and resume fighting after being healed by any healing spell, regardless of how many
+	saves they have failed.</p>
+<p style="margin-left: 25px;">Note: Under permadeath rules, rolling a natural 20 immediately causes the player to become
+	stable.</p>
+<p>The modern rules offer an alternative system where unconscious players do not need to make saving throws to stay
+	alive. However, they also do not regain consciousness after being healed by healing magic. Instead, they regain
+	consciousness 1d4 hours after combat is over.</p>
+<p>In gameplay strategy, modern rules prioritize keeping the characters conscious, making single-target healing spells
+	quite valuable. Permadeath rules favor mass healing spells that resurrect the character whenever they fall. You
+	should think carefully about which system works best for you.</p>
+<p>A character’s HP cannot exceed their maximum HP stat. Initially, maximum HP is equal to the strength attribute, but
+	it increases over time as a character levels up. The precise amount will be explained in more detail in the section
+	on character leveling. All missing HP is restored after a long rest, while only one-half is restored after a short
+	rest.</p>
+<h4><a id="C2S6"></a>Abilities and Ability Points</h4>
+<p>Ability points (AP) are similar to HP in that both are depleted during combat, recovered by resting, and have a
+	maximum amount that increases as players level. AP are expended as the player uses powerful spells and abilities.
+	When AP is fully depleted, the character is said to be exhausted. There is not an immediate penalty for this
+	condition, other than not being able to use critically necessary abilities.</p>
+<p>Like HP, all missing AP are restored after a long rest. Unlike HP, only one-third of missing attribute points are
+	restored after a short rest. Maximum AP is affected by the willpower stat similarly to the way maximum HP is
+	affected by the strength stat.</p>
+<p>Abilities are learned or innate skills that confer some benefit to the player, such as spells, combat maneuvers, or
+	proficiency improvements. Abilities are categorized in a few ways. First, abilities acquired from a player’s class
+	(such as the barbarian’s rage) are called innate abilities. Abilities learned from trainers are called trained
+	abilities, and finally trained abilities which have been fully mastered are called rote abilities. </p>
+<p>Abilities are also classified by whether or not they are explicitly invoked by the player or if they take effect
+	automatically. The former are called active abilities and usually cost AP to activate, while the latter are called
+	passive abilities (or perks) and take effect without the use of AP.</p>
+<p>An example of a passive ability would be a perk that restores HP at the start of the player’s turn. Since the player
+	is not required to do anything to receive this benefit, it is passive. On the other hand, an ability that allows the
+	player to spend AP to deal extra damage would be an active ability.</p>
+<h4><a id="C2S7"></a>Mitigation</h4>
+<p>Mitigation is a derived statistic which determines how likely a player is to successfully dodge or block an attack,
+	similar to armor class from DnD. During combat, melee and ranged attacks are treated as an event roll testing the
+	martial arts or accuracy skill, respectively. In this situation, mitigation provides the difficulty threshold for
+	whether the attack succeeds. Thus, players with high mitigation are hit less often and therefore survive longer.</p>
+<p>Mitigation is composed primarily of two values: dodge chance (DC), conferred by the player’s dexterity attribute, and
+	block chance (BC), conferred by the player’s shields, armor and defense skill profiency. A third value, parry
+	chance, is less common but used when a player is actively attempting to parry an attack. The three values are added
+	together to calculate total mitigation, but certain attacks may bypass some or all of the three values, reducing
+	effective mitigation against that tactic. For example, most types of armor are not ideal for absorbing blows from
+	blunt weapons. Accordingly, bludgeoning damage automatically bypasses half of the target’s BC.</p>
+<p>The player’s DC is normally equal to their dexterity attribute, while BC and parry chance start at zero. Block chance
+	is increased by wearing armor and equipping shields, while parry chance is increased by taking the parry action
+	while wielding a melee weapon. </p>
+<h4><a id="C2S8"></a>Equipment</h4>
+<p>The final aspect of each player character is their equipment. Equipment categorized into weapons, gear, and items,
+	which are further subcategorized by use.</p>
+<p><a href="#Appendix_Weapons">Weapons</a> fall into five categories:</p>
+<ul>
+	<li><p>Small Weapons (Daggers, improvised) </p></li>
+	<li><p>Standard Weapons (Swords, Maces, Morningstars) </p></li>
+	<li><p>Great Weapons (Longswords, Greataxes, Polearms)</p></li>
+	<li><p>Ranged (Longbow, Crossbow, Musket, Javelin)</p></li>
+	<li><p>Special Weapons (Shields, Whips, Flails, Hook Swords)</p></li>
+</ul>
+<p>A player can carry up to two weapons, as follows:</p>
+<ul>
+	<li><p>A single greatweapon, carried in a two-handed grip</p></li>
+	<li><p>A standard weapon and a shield</p></li>
+	<li><p>A standard weapon, plus a small weapon in the offhand</p></li>
+	<li><p>Two light weapons, such as two shortswords </p></li>
+	<li><p>Two small weapons, such as two daggers </p></li>
+	<li><p>Any standard or small weapon, with the offhand kept free in order to cast spells</p></li>
+</ul>
+<p>Gear falls into these categories:</p>
+<ul>
+	<li><p>Armor</p></li>
+	<li><p>Clothing</p></li>
+	<li><p>Jewelry</p></li>
+</ul>
+<p>Items fall into these categories:</p>
+<ul>
+	<li><p>Potions</p></li>
+	<li><p>Scrolls</p></li>
+	<li><p>Tools</p></li>
+	<li><p>Other</p></li>
+</ul>
+<h3><a id="C3"></a>How does my character fight?</h3>
+<p>Combat is pure chaos. It's nothing like the movies; you won't find any choreographed fencing with somersaults and
+	pirouettes, dramatic music, or witty banter. Real combat is full of noise and blood and grime, broken bones, and the
+	screams of the dying—or the eerie silence of the dead. Be that as it may, mortal combat is actually the pinnacle of
+	problem-solving on a great many worlds. So you'd better get good at it.</p>
+<p>In order to make sense out of chaos, combat is divided into <i>turns</i> and <i>rounds</i>. A turn of combat captures
+	a single fighter doing their best to kill and not be killed for a single 5-second snapshot of time. Meanwhile, a
+	round is completed when all combatants have completed their turn. Turns do not happen simultaneously, but in order
+	of initiative, which will be explained shortly. Once combat has started, it continues through as many rounds as it
+	needs to until only one faction remains, and all others have either surrendered, fled, or been slain. Then it ends,
+	as quickly as it began.</p>
+<p>In addition to turns and rounds, we often use a grid to make sense out of the way monsters and playe</p>
+
+
+<h4></h4>
+<ol></ol>
+<p>Combat begins with a skill check, as both players and npc combatants roll for initiative. In <i>All That Glitters</i>,
+	rolling for initiative is an ordinary event roll, and therefore all other rules such as proficiency bonuses apply.
+	When two characters roll the same initiative, players move before monsters, and two players rolling the same
+	initiative may either reach an agreement about who moves first or roll a d20 to decide. Monsters rolling the same
+	initiative move in whatever order the DM decides.</p>
+<p>Optionally, the DM may decide to allow players to roll for recognition to see the stats of the monsters they are
+	about to fight. This check depends on the survival skill and its DT is determined by the rarity of the monsters in
+	question:
+<table>
+	<tr>
+		<th>Monster Rarity</th>
+		<th>Interpretation</th>
+		<th>Typical DT</th>
+	</tr>
+	<tr>
+		<td>Common</td>
+		<td>The monster's physicalities are thoroughly documented in literature, and its attacks are an (at least)
+			annual occurance.
+		</td>
+		<td>18</td>
+	</tr>
+	<tr>
+		<td>Rare</td>
+		<td>The monster has been seen before, but not studied thoroughly. It may have been years to decades since the
+			last sighting.
+		</td>
+		<td>24</td>
+	</tr>
+	<tr>
+		<td>Legendary</td>
+		<td>The monster has not been sighted in perhaps a century or more. Many doubt that it still exists, or ever
+			existed.
+		</td>
+		<td>30</td>
+	</tr>
+</table>
+<p>The recognition roll is normally made with disadvantage if the area is obscured by heavy fog or darkness. Conversely,
+	players may roll with advantage if attempting to discern monsters that emit distinctive noises or smells. If
+	successful, the players gain knowledge of the monster's HP, attacks, and mitigation stat, and any other information
+	the DM chooses to reveal. If there are several monsters attacking together, the roll should be done in one go rather
+	than rolling again for each unique type of monster in the encounter.</p>
+<p>After initiative and recognition are rolled, combatants begin to take turns in order of their initiative score.
+	Combat then proceeds until the last monster has acted, completing the first round of combat. Subsequent rounds
+	proceed in the same fashion, with characters and monsters taking turns attacking each other until only one faction
+	remains, at which point combat ends.</p>
+<p style="margin-left=25px">Note: Sometimes, players may have a chance to view their enemies from a distance before they
+	are recognized. In this case, they may roll for recognition before combat begins, usually with advantage.</p>
+<p>During an ambush or surprise attack, sometimes one side is so completely discombobulated that they are unable to
+	defend themselves decisively. This condition is called "surprise" and has the following effects: </p>
+<ul>
+	<li>Characters automatically cannot make recognition rolls</li>
+	<li>Surprised characters have disadvantage on the initiative roll.</li>
+	<li></li>
+</ul>
+<p style="margin-left: 25px;">Note: Each combat round corresponds roughly to 5 seconds of time in the game world.</p>
+<h4><a id="C3S1"></a>Actions</h4>
+<p>At the beginning of every combat turn, players gain one main hand action, one offhand action, and movement points
+	equal to one half their speed attribute. The various actions taken during the turn deplete these resources until the
+	player has no more abilities to use, at which point their turn ends. Monsters may have more or fewer actions that
+	human players, but otherwise their combat turns proceed in essentially the same way.</p>
+<p>In addition to these, combatants possess hit points and AP. Hit points are related to the strength stat, and the
+	character or monster falls unconscious when they are reduced to zero. AP are related to the willpower stat, and are
+	expended as the player or monster uses special abilities. When a character has zero AP, they are said to be
+	exhausted, but there is not usually a penalty for this condition.</p>
+<p>Here is a chart of actions available to players.</p>
+<table>
+	<tr>
+		<th>Action</th>
+		<th>Cost</th>
+		<th>Effect</th>
+	</tr>
+	<tr>
+		<td>Attack</td>
+		<td>Main Hand Action</td>
+		<td>The character attacks with their main-hand weapon, but not a two-handed grip or dual-wield attack.
+		</td>
+	</tr>
+	<tr>
+		<td>Double Attack</td>
+		<td>Main and Offhand Action</td>
+		<td>The character performs a two-handed grip or dual-wield attack.</td>
+	</tr>
+	<tr>
+		<td>Offhand Attack</td>
+		<td>Offhand Action</td>
+		<td>The character attacks with an offhand weapon, such as a dagger strike or shield bash.</td>
+	</tr>
+	<tr>
+		<td>Ability</td>
+		<td>Ability Dependent</td>
+		<td>The character uses a special ability.</td>
+	</tr>
+	<tr>
+		<td>Throw</td>
+		<td>Main or Offhand Action</td>
+		<td>The character throws an object such as a spear. Throwing with the offhand deals no damage.</td>
+	</tr>
+	<tr>
+		<td>Grapple</td>
+		<td>Main and Offhand Action</td>
+		<td>The character attempts to wrestle an enemy, rendering them incapable of taking actions or bonus actions.
+		</td>
+	</tr>
+	<tr>
+		<td>Block</td>
+		<td>Off Hand Action</td>
+		<td>The player uses their shield to block incoming attacks, doubling its BC.</td>
+	</tr>
+	<tr>
+		<td>Parry</td>
+		<td>Main Hand Action</td>
+		<td>The player attempts to use their melee weapon to deflect incoming attacks.</td>
+	</tr>
+	<tr>
+		<td>Disengage</td>
+		<td>Off Hand Action</td>
+		<td>The player disentangles themselves from adjacent melee attackers.</td>
+	</tr>
+	<tr>
+		<td>Help</td>
+		<td>Main Hand Action</td>
+		<td>The player attempts to rouse an unconscious player, or assist another player with an assailant or condition.
+		</td>
+	</tr>
+	<tr>
+		<td>Item</td>
+		<td>Offhand Action</td>
+		<td>The player uses an item such as a potion. Some items can only be used with the main hand.</td>
+	</tr>
+	<tr>
+		<td>Change Grip</td>
+		<td>Offhand Action</td>
+		<td>The player switches to or from a two-handed grip, or adopts a mordhau grip on a sword.</td>
+	</tr>
+	<tr>
+		<td>Move</td>
+		<td>Movement Points</td>
+		<td>The player traverses the battlefield on foot.</td>
+	</tr>
+	<tr>
+		<td>Jog</td>
+		<td>Offhand Action</td>
+		<td>The player doubles their remaining movement points.</td>
+	</tr>
+	<tr>
+		<td>Sprint</td>
+		<td>Main Hand Action</td>
+		<td>The player quadruples their remaining movement points.</td>
+	</tr>
+	<tr>
+		<td>Jump</td>
+		<td>Offhand Action</td>
+		<td>The player jumps across the battlefield, gaining height and bypassing obstacles.</td>
+	</tr>
+</table>
+<h4><a id="C3S2"></a>Attacking</h4>
+<p>The actions most commonly taken during a turn are those that deal damage. Attacks are handled in two parts, the first
+	being an attack roll to determine whether the attack connects, and the second being a damage roll to determine how
+	much damage is dealt. The attack roll is an ordinary skill check for either martial arts (for melee) or accuracy
+	(for ranged). The DT of the attack roll is the mitigation stat of the target.</p>
+<p>To determine the damage of an attack which has connected, the player rolls that weapon’s damage dice and adds the
+	ability score modifier to the total value. Each weapon has a unique damage die and one or more attack attributes.
+	For example, a dagger’s damage die is a d4 and its attribute is dexterity. A player with a dexterity score of 12
+	rolling a 4 on a 1d4 would deal a total of 6 damage—4 from the weapon die, and 2 from their dexterity ASM. To give
+	another example, a pike has a damage die of d12 and either speed or strength may be used as its attribute. A
+	character with 14 speed rolling an 8 on the d12 would deal a total of 12 damage with their pike.</p>
+<p>Attack rules for spells are different and depend on the precise spell in question. Many spells partially or
+	completely bypass ordinary mitigation or hit an entire area at once. In such cases, the target usually tries to pass
+	a skill check to avoid full damage, rather than the caster trying to pass an ability check to cast the spell.</p>
+<h4><a id="C3S3"></a>Moving</h4>
+<p>When moving around on a rectangular battle grid, the player expends 1 movement point for every vertical, horizontal,
+	or diagonal move. Optionally, players can agree that diagonal movement costs 1.5 movement points. This effectively
+	makes reachable tiles more circular and makes fractional movement points more relevant, but also increases the
+	complexity of combat. In any case, a character cannot enter a tile unless they have the required amount of movement
+	points remaining. For example, a character with 5.5 movement points would be able to move at most 5 tiles
+	horizontally or vertically.</p>
+<p>In a 5-second combat round with 5-foot square tiles, a speed of 10 (average) translates to 5 feet per second, or
+	around 3.5 miles per hours. This implies a typical jog speed of 7 miles per hour, and a sprint speed of 14 miles per
+	hours.</p>
+<h4><a id="C3S4"></a>Grappling</h4>
+<p>A player can attempt to grapple an enemy by using both a main and offhand action. If they are able to pass a martial
+	arts check with a DT of enemy’s strength attribute, the grapple is successful. In this event, the grappled creature
+	cannot move or take main or offhand actions during their turn. However, they can roll a martial arts check with a DT
+	equal to the player’s strength attribute. If they succeed, they are no longer grappled and will be able to move and
+	act normally on their next turn. </p>
+<p>Note that relative size affects grappling chances. If a player attempts to grapple a smaller enemy, they gain
+	advantage on the martial arts check, while if they attempt to grapple a larger enemy, they gain disadvantage. No
+	character may grapple a character more than one size class larger than they are.</p>
+<p>If a player is grappling an enemy at the start of their turn, they may drag, throw, or release the enemy. While
+	dragging, the player moves at half speed and cannot take any other actions. The player can attempt to throw the
+	enemy by making a strength check, with the </p>
+<p>Finally, a player can choose to release a grappled enemy. This does not cost a main or offhand action, but the player
+	will have to pass another martial arts check to grapple the creature again. Players have advantage on attacks
+	against creatures they have just released from being grappled.</p>
+<h4><a id="C3S5"></a>Reacting</h4>
+<p>Reactions are special moves that happen in response to specific triggers, such as an enemy moving into or out of
+	melee range. Reactions take effect before a player’s next turn, and give the player the option to expend actions for
+	their pending turn to make special moves. Each player may take only one reaction per turn, and using a reaction
+	expends some of the actions that would normally be available on their next turn.</p>
+<p>For example, if a player is engaged in melee combat with a monster that chooses to run away, the player can make a
+	special move called an opportunity attack to punish the monster for turning its back on an attacker. This allows the
+	player to deal the damage of an full attack while only expending an offhand action. However, on their next turn they
+	will only have a main hand action, since their offhand action was used to damage the escaping monster. If that
+	player decides to consume a potion on their next turn, they would have to expend a main hand action to do so,
+	instead of the usual offhand action.</p>
+<p>Most monsters are also capable of scoring opportunity attacks against players, but players can use the disengage
+	action to avoid this. Disengage allows the player to move out of melee range without triggering the opportunity
+	attack reaction, useful for repositioning.</p>
+<a id="C3S6"></a><h4>Damage Types</h4>
+<p>Smashing, slashing, poisoning, burning… There are quite a few ways to do someone in. Here's a list of damage types
+	and their unique effects:</p>
+<p>Common damage types:</p>
+<ul>
+	<li><b>Slashing</b>: Liable to cause bleeding.</li>
+	<li><b>Bludgeoning</b>: More effective versus plate armors.</li>
+	<li><b>Piercing</b>: More effective versus mail armors.</li>
+	<li><b>Fire</b>: Liable to cause burning.</li>
+	<li><b>Freezing</b>: Reduces and dexterity.</li>
+	<li><b>Lightning</b>: Ignores metal armor.</li>
+</ul>
+<p>Rare damage types:</p>
+<ul>
+	<li><b>Acid/Corrosive</b>: Causes armor damage which must later be repaired at a smithy.</li>
+	<li><b>Light/Holy</b>: Causes extra damage to undead and evil aligned creatures.</li>
+	<li><b>Dark/Profane</b>: Causes extra damage to good-aligned creatures.</li>
+</ul>
+<p>Good-aligned characters possess resistance to holy damage, and evil-aligned characters possess resistance to profane
+	damage.</p>
+<p>Explosions usually deal a mix of damage types, usually bludgeoning and a magical damage types.</p>
+<p style="margin-left:25px">Note: poison is not a damage type. Poison attacks deal unique effects depending on their
+	type. Those that damage the victim over time inflict acid damage (but do not damage armor).</p>
+<p>
+	Poison effects: Neurotoxic -> Reduce willpower Hallucinogenic -> confusion or frenzy Paralytic -> Paralysis
+	Blindness Amnesia Onset? </p>
+<h4><a id="C3S7"></a>Status Effects</h4>
+<p>During combat, sometimes characters fall prey to certain temporary conditions that reduce their effectiveness in
+	combat.</p>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Effect</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+		<td>Bleeding</td>
+		<td>Each turn, the target takes damage equal to the number of turns of bleeding remaining.</td>
+		<td>Inflicted by slashing damage. May be alleviated by the "help" action.</td>
+	</tr>
+	<tr>
+		<td>Grappled</td>
+		<td>The target is incapacitated, but can roll for martial arts on its turn in order to break free.</td>
+		<td>May be alleviated by the "help" action. The ally giving aid may roll for martial arts to break the target
+			free.
+		</td>
+	</tr>
+	<tr>
+		<td>Frozen</td>
+		<td>The target is encased in ice and incapacitated. They are resistant to all forms of damage except
+			bludgeoning.
+		</td>
+		<td>Ends the "burning" and "bleeding" status effects.</td>
+	</tr>
+	<tr>
+		<td>Incapacitated</td>
+		<td>The target cannot move or take actions. Enemies have advantage on attacks against the target.</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Burning</td>
+		<td>The target takes 4 fire damage each turn. At the start of its turn, the target must make a DT 12 willpower
+			check or become incapacitated for the remainder of its turn.
+		</td>
+		<td>Alleviated by the ability <i>Fire Mitigation Technique</i>.</td>
+	</tr>
+	<tr>
+		<td>Poisoned</td>
+		<td>After a set number of turns, the poison takes effect.</td>
+		<td>Alleviated by the antidote consumable.</td>
+	</tr>
+	<tr>
+		<td>Petrified</td>
+		<td>The player is incapacitated encased in stone</td>
+		<td></td>
+	</tr>
+</table>
+<h3><a id="C4"></a>How does my character become stronger?</h3>
+<p>In All That Glitters, there are three ways that characters increase their power level: leveling, training, and
+	looting. The main difference between these systems is that leveling provides guaranteed and predictable bonuses,
+	while looting provides more irregular and chaotic bonuses that players cannot foresee. The bonuses from leveling
+	promote planning and ambition, while the bonuses from looting are unique to each adventure, and promote character
+	identity. Contrasting these, training allows players to take control of their own destinies and acquire the
+	abilities they deem most useful.</p>
+<h4><a id="C4S1"></a>Leveling</h4>
+<p>Each character’s skill as an adventurer is measured by their level, which typically begins at 1 and progresses up to
+	20. Typically, all characters in a party level up together, usually after a huge battle or major obstacle is
+	overcome as the DM recognizes the adventuring party’s increasing skill and renown. This is known as milestone
+	leveling. When leveling, players gain two types of bonuses: attribute training and class features. </p>
+<p>As a result of training, players may increase two of their attribute scores by one, if the increase does not put
+	either attribute above the soft cap for that character. If the player wishes to increase an ability beyond the soft
+	cap, they may only increase one attribute score.</p>
+<p>As part of attribute training, players increase their maximum HP and AP according to their strength and willpower
+	scores, according to the following chart:</p>
+<table>
+	<tr>
+		<th>Attribute Level</th>
+		<th>HP or AP per level</th>
+	</tr>
+	<tr>
+		<td>1-3</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td>4-5</td>
+		<td>1+1d4</td>
+	</tr>
+	<tr>
+		<td>6-7</td>
+		<td>2+1d4</td>
+	</tr>
+	<tr>
+		<td>8-9</td>
+		<td>2+1d6</td>
+	</tr>
+	<tr>
+		<td>10-11</td>
+		<td>3+1d6</td>
+	</tr>
+	<tr>
+		<td>12-13</td>
+		<td>3+1d8</td>
+	</tr>
+	<tr>
+		<td>14-15</td>
+		<td>4+1d8</td>
+	</tr>
+	<tr>
+		<td>16-17</td>
+		<td>4+1d10</td>
+	</tr>
+	<tr>
+		<td>18-19</td>
+		<td>5+1d10</td>
+	</tr>
+	<tr>
+		<td>20+</td>
+		<td>5+1d12</td>
+	</tr>
+</table>
+<p>When rolling for max HP or AP, players should roll the middle. Meaning, roll three dice and take the middle result.
+	This reduces the occurrence of extreme values, which can be frustrating at low levels.</p>
+<p>In addition to the attribute, HP, and AP bonuses, players gain unique bonuses (called class features) based upon
+	their chosen combat class. These bonuses are discussed further in the next chapter, on creating a character.</p>
+<h4><a id="C4S2"></a>Training and Training Slots</h4>
+<p>It is possible for characters to proactively learn many abilities from NPC trainers, such as skill proficiencies,
+	combat tactics, and spells. In addition to any gold cost, learning abilities in this way costs training slots. Each
+	player has training slots equal to their intelligence score, which represent the time and mental effort required to
+	fully master the new skill. Most abilities consume four training slots at first, but that number is reduced by half
+	every time the player levels up, rounded down. After leveling up, any trained abilities that consume only one
+	training slot become rote abilities, and no longer consume training slots. </p>
+<p>If a player does not have enough training slots available to learn a new ability, they cannot learn the ability even
+	if they have sufficient gold to purchase the training. In this case, players can choose to forget abilities they are
+	in the process of learning. If this is done, the training slots for the forgotten ability are recovered but the gold
+	use to purchase the ability is lost and the skill can no longer be used.</p>
+<p>In order to learn new abilities, players must first ensure that they meet the requirements of the ability they are
+	trying to learn. For example:</p>
+<ul>
+	<li><p>Many abilities require a certain level of strength or intelligence, or other attribute.</p></li>
+	<li><p>Some abilities require a level of proficiency in a certain skill.</p></li>
+	<li><p>High level spells often require mastery of other low level spells before they can be learned.</p></li>
+	<li><p>Players must have sufficient training slots available for the ability they are trying to learn.</p></li>
+</ul>
+<p>Assuming they meet these requirements, players must find and hire a trainer of the appropriate discipline and skill
+	level. After this, the new ability is gained, and can be used at any point in the adventure.</p>
+<h4><a id="C4S3"></a>Looting</h4>
+<p>Looting refers to the acquisition of gold, weapons, armor, and magical items during the adventure. Importantly,
+	looting—and in particular, the acquisition of gold—is considered a part of the leveling process itself rather than a
+	mere footnote. Because gold is so closely connected with training, DMs usually provide players a certain amount of
+	gold per level, as indicated in the following chart:</p>
+<table>
+	<tr>
+		<th>Party Level</th>
+		<th>Gold per player</th>
+		<th>Typical Expenditures</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>0-50</td>
+		<td>The party is focused on basic spell and ability training</td>
+	</tr>
+	<tr>
+		<td>2-3</td>
+		<td>50-100</td>
+		<td>The party continues to train spells and abilities, while beginning to explore enchanted gadgets and
+			consumables
+		</td>
+	</tr>
+	<tr>
+		<td>4-5</td>
+		<td>100-200</td>
+		<td>The party begins upgrading weapons and armor to improved metals such as titanium.</td>
+	</tr>
+	<tr>
+		<td>6-7</td>
+		<td>200-300</td>
+		<td>As players reach the soft caps for their attributes, elite attribute training becomes useful.</td>
+	</tr>
+	<tr>
+		<td>8-10</td>
+		<td>300-500</td>
+		<td>The party fully progresses beyond steel weaponry to mithril and adamant.</td>
+	</tr>
+	<tr>
+		<td>11-15</td>
+		<td>500-1000</td>
+		<td>Players hone their skill sets and may pursue attribute training: Olympian.</td>
+	</tr>
+	<tr>
+		<td>16+</td>
+		<td>1000+</td>
+		<td>The party focuses primarily on the acquisition of rare and powerful trinkets and armor.</td>
+	</tr>
+</table>
+<h3><a id="C5"></a>How do I create a character?</h3>
+<p>To create a character, follow these steps: </p>
+<ol>
+	<li><a href="#C5S1">Choose a Race</a>
+		<ol>
+			<li><a href="#C5S1_Human">Human</a></li>
+			<li><a href="#C5S1_Elf">Elf</a></li>
+			<li><a href="#C5S1_Dwarf">Dwarf</a></li>
+			<li><a href="#C5S1_Halfling">Halfling</a></li>
+			<li><a href="#C5S1_Orc">Orc</a></li>
+			<li><a href="#C5S1_Tiefling">Tiefling</a></li>
+			<li><a href="#C5S1_Aarakocra">Aarakocra</a></li>
+			<li><a href="#C5S1_Saurid">Saurid</a></li>
+		</ol>
+	</li>
+	<li><a href="#C5S2">Choose a Class</a></li>
+	<li>Write a backstory.</li>
+	<li>Choose an alignment and character goals.</li>
+	<li>Choose starting gear.</li>
+</ol>
+<h4><a id="C5S1"></a>Races</h4>
+<p>I provide seven example races here, representing some of my favorite repeat offenders in the fantasy genre. That
+	said, homebrewing new races is very much in the spirit of All that Glitters, and if a race you want to play isn’t in
+	this list, you absolutely should create it. Alternatively, feel free to create your own lore for any of these
+	races—don’t let my ideas stifle yours! Further on, I’ll explain some guidelines for creating new races (without
+	upsetting gameplay balance).</p>
+<p>Without further ado:</p>
+<a id="C5S1_Human"></a><h5>Human</h5>
+<p>Overall, humans are proud, robust, and athletic. I daresay we are altogether quite handsome. Men average around 5’9”
+	in height; women around 5’4”. Weight varies greatly, usually between 100-200 lbs. We live between 70 and 90 years,
+	if we do not die in one of our many wars.</p>
+<p>Although we humans may seem an uninspiring choice to some, it’s all a matter of perspective. To dwarves, we are tall
+	and regal. To elves, we are robust and warlike. Among saurids, we are called slow and loud. And so it goes.</p>
+<p>Human characters start with a single bonus point in an ability of their choice, and may take a level of proficiency
+	in any skill.</p>
+<a id="C5S1_Elf"></a><h5>Elf</h5>
+<p>Graceful and elegant, elves exemplify much of what humans aspire to be. In height, male elves average about 6’3”;
+	female elves about 5’9”. Weight varies between 120-200 lbs. They are barely heavier than humans, despite their
+	increased stature. The gods have truly blessed their race: they live around 200 years at least, and some (of the
+	royal line) as long as five hundred.</p>
+<p>Over time, their kind has diverged into three bloodlines. Descendants of the royal bloodline are called Eldarii and
+	excel in magic and all manner of letters. They incorporate magic into nearly every level of society. As a
+	consequence, even their young children know basic spells. They are invariably blonde haired and fair skinned, and
+	persistently arrogant. Some of them attempt to repent their hubris, but I have come to prefer the frank honesty of
+	arrogance to a feigned humility.</p>
+<p>Members of the common line are called Numenarii, and pursue archery, hunting, fishing, and farming. They have
+	interbred on occasion with humans, and so take on darker hair and skin tones. They imitate the arrogance of the
+	Eldarii, though it is but a veneer: they are quite insecure.</p>
+<p>Members of the third bloodline are called Drow, and are descended from the line of the nameless usurper. Tales of
+	their cruelty are exaggerated, but not by much. Their skin is bluish gray, and their hair silver. They do not spare
+	themselves from their own ruthless designs, and many attempt to escape their subterranean holds. Those few who do
+	often become brave adventurers. </p>
+<p>All elven characters suffer a -1 penalty to strength, and gain bonuses depending on their bloodline. Those of the
+	royal line gain +2 INT and knowledge of a level 1 spell, plus proficiency in literacy, along with deficiency in
+	survival. Members of the common line gain +2 DEX and proficiency in nature and accuracy. Drow gain +2 WILL and
+	proficiency in perception and stealth. Drow also have the gift of darkvision.</p>
+<a id="C5S1_Dwarf"></a><h5>Dwarf</h5>
+<p>A short and ruddy race. Male dwarves average around 5 feet in height, while their females average around 4’8”.
+	Despite their stature, they weigh between 100-160 lbs. It is customary for their men to grow long beards, though
+	beards longer than twenty inches are seldom seen outside storybooks. They live a bit longer than humans, so a
+	century and a half is not out of the question.</p>
+<p>The dwarves of yore possessed insatiable bloodthirst and fought man, elf, and dragon alike in a great many wars.
+	Times have changed, and they have been at peace nigh on two millennia. They are now greatly concerned with the
+	exploration of mountains and caves, the industry of mining, and the acquisition of gold.</p>
+<p>Despite their unusual habits and short stature, dwarves are actually a fairly well balanced race that can excel in
+	many roles. Dwarves gain +1 STR and +1 WILL at the cost of -2 SPD, and choose an additional +1 in STR or WILL. Also,
+	dwarves have a keen sense for gold and have advantage on perception and persuasion checks when searching for
+	treasure or bartering with merchants. All dwarves have proficiency in defense.</p>
+<a id="C5S1_Halfling"></a><h5>Halfling</h5>
+<p>The shortest of the races, halfling men average 3’9” in height. Their women are yet shorter, scantly 3’6” by average.
+	A tall halfling may resemble a short dwarf, though the former will be discernible by his slender build and wispy
+	facial hair, if he has any at all. Halflings weigh only 50-100 lbs, and I’ll wager a drink you can’t find a heavier
+	one in under a fortnight. They are somewhat long lived, often lasting a bit more than a century.</p>
+<p>As timeless as their quaint and cozy country villages may seem, they are no strangers to change. Nearly half of them
+	are now second or third generation immigrants in large cities. They are unwelcome there on account of their ill
+	reputation: it is said that nearly a third of them are criminals. As thieves, they are exceedingly sly.</p>
+<p>Halflings tend to be unbalanced characters, having a -2 penalty to STR and a -2 penalty to SPD. They make up for this
+	with a +2 to DEX, and another +2 to INT, CHA, or WILL. Urban halflings start with proficiency in parkour and sleight
+	of hand, while rural halflings start with proficiency in nature and survival. </p>
+<a id="C5S1_Orc"></a><h5>Orc</h5>
+<p>Stout and rippling with muscle, orcs are warriors to the last. Their menfolk are nearly as tall as the elves, around
+	6’, and their women are barely any shorter, around 5’10”. Fully grown, they weigh somewhere between 180 to 300
+	lbs—quite formidable! Their hair is almost invariably black or gray, while their skin ranges from dark green to pale
+	yellow or gray. In years, they may reach 60 if they are lucky; usually less. They make up for this by living with
+	what I will graciously call ‘extreme vigor’.</p>
+<p>The history of orcs is full of long and bloody intertribal conflicts. Despite this, they have made steady progress as
+	a species and have transitioned from cave dwellings to small villages, then larger villages, until now many think to
+	mingle with humans, dwarves, and halflings on the frontiers of civilization. (Elves will have none of their ilk.)
+	They are well-suited to mercenary or guard work. They make poor thieves or wizards. </p>
+<p>Orcs gain +2 to STR and WILL, at the cost of -1 to DEX and -1 INT, and an addional -1 to either INT or CHA. They have
+	proficiency in intimidation and survival.</p>
+<a id="C5S1_Tiefling"></a><h5>Tiefling</h5>
+<p>Of middling stature and musculature, tieflings are nearly human. Yet as the saying goes, ‘so close and yet so far.’
+	By virtue of their debauched bloodline (the devil-dealings of their ancestors being no small secret) they are cursed
+	with horns, pointed ears, and skin of a blood-red hue (or other outrageous colors). Almost everywhere, they are
+	shunned by all ‘good’ folk. Yet I think they can be accorded a little understanding, for they are neither warlike
+	nor pompous, and wisely take their poor lot in life with a dose of good humor. </p>
+<p>It is difficult to give a straightforward account of their physical nature, because it is so widely varied. I have
+	seen some as short as 5’ and others as tall as 6’8”. Their are neither particularly bulky nor slender, and so their
+	weight is comparable to that of a human. Only in longevity have the gods relented, granting them perhaps 110 years,
+	around the same span as a halfling.</p>
+<p>Tieflings typically live in colonies suitably removed from human and elven settlements. They have dealings with
+	dwarves and halflings, who treat them fairly. They quietly pursue industry and keep to themselves, but their young
+	oft grow weary of their meek ways and seek adventure and companionship abroad. </p>
+<p>Tieflings gain +1 to CHA and DEX, and an additional +1 to INT or CHA, at the cost of -2 WILL. They possess the gift
+	of darkvision, and can see in total darkness to a range of 3 yards, or dim light to about 30 yards. They have
+	proficiency in performance and either medicine or perception.</p>
+<a id="C5S1_Aarakocra"></a><h5>Aarakocra</h5>
+<p>Flighty and covered with feathers, the Aarakocra are an extremely vibrant and colorful race. There are as many
+	sub-races of these as of man or elf; it seems that many take after some species of bird or another. So you have one
+	with feathers of azure and gold, another crimson, cream, and jade, and a third black as a raven. In general, they
+	are about the size of a man, but extraordinarily light. I think 5'6" is a typical height, but they weigh less than
+	80 pounds. Their longevity varies greatly, and some have a span of up to 250 years, rivaling even the elves.
+	However, this is not common and I have met very few over the age of ninety or so.</p>
+<p>On my travels, I have observed that Aarakocra races and tribes can be roughly divided into two categories: raptors
+	and songbirds. The former are taller and stronger, and possess extremely keen hearing and sight. As for the
+	songbirds, they are extremely quick with their limbs and can mimic almost any sound they hear. They have a
+	reputation for bing tricksters, and are in the habit of gathering shiny things, as their brothers the ravens and
+	crows do.</p>
+<p>Aarakocra gain a +2 bonus to SPD, but -2 to STR. All aarakocra can glide and are immune to fall damage. Raptors gain
+	+1 STR and proficiency in perception, while songbirds gain +1 DEX and proficiency in performance.</p>
+<a id="C5S1_Saurid"></a><h5>Saurid</h5>
+<p>Slinking, skulking, scurrying—these are words befitting a saurid. Treading the slender line between man and beast,
+	they are a fierce folk. As much lizard as man, they possess scaly hides, long tails, and snouts lined with razor
+	sharp teeth. Some say they are cruel, but I having observed them closely on more than one occasion, I would rather
+	describe them as practical.</p>
+<p>A saurid is typically shorter than a man, but they grow all their lives until extreme old age. Some can become quite
+	large. Their females are a bit taller and more muscular than their males. In terms of height, they reach about 5’6”
+	while the male might reach only 5’2 or so. They are not long lived, and seventy years is a ripe age for a
+	saurid.</p>
+<p>The saurids I have seen are fairly xenophobic, and live in colonies inside caves usually near water. They hunt, fish,
+	and raise their hatchlings quietly, having few dealings with man or elf, except for the occasional territorial
+	clash. They have developed a unique sort of architecture, and their colonies are quite remarkable, often lavishly
+	decorated with precious stones and cut stone. Their predilection for gathering all things shiny has attracted
+	dwarven traders, which has brought the common tongue to their knowledge. Many of them now seek adventure abroad,
+	bringing with them their fearsome and curious ways.</p>
+<p>Saurids gain +2 to STR and SPD, at the cost of -2 INT and -1 CHA. They possess the gift of darkvision, able to see in
+	near total darkness. They have deficiency in literacy, but may take proficiency in two out of initiative, stealth,
+	or perception.</p>
+<p>When creating new races, consider following these general:</p>
+<ol>
+	<li>No stat bonus should exceed +2, and no stat penalty should exceed -2.</li>
+	<li>The sum of all racial bonuses minus all penalties should equal 1.</li>
+	<li>Every race should have at least one proficiency bonus, but no more than 2.</li>
+	<li>Ideally, the player should have some choices regarding either subraces, attributes, or proficiencies.
+	</li>
+	<li>Be careful making races that give +2 bonuses to both strength and dexterity, or both intelligence and will. Such
+		races would make very strong warriors or wizards respectively with very little downside.
+	</li>
+</ol>
+<h4><a id="C5S2"></a>Classes</h4>
+<p>For a given character, their combat class answers the question <i>how do I fight? </i>and also suggests their
+	background or origin story. For example, the barbarian fights with reckless melee attacks, showing little regard for
+	personal safety or technique. Accordingly, a barbarian would be more likely to hail from a remote farming village or
+	an uncivilized tribe than from a royal court or a monastery.</p>
+<p>There is some ongoing debate as to the ideal number of classes in a TTRPG system. Too few classes, and players are
+	less likely to find one that really captures their interest and vision. Too many, and the player is at risk of being
+	drowned by excess choices, which may not be well balanced, either. I’ve decided to use 20 classes, which are grouped
+	into five categories. Players who find the 20 classes intimidating can thus choose between one of these five
+	categories, and then between the four classes within that category. Hopefully it is easier to make two simple
+	choices than one complicated choice.</p>
+<p>Here are the five categories:</p>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Classes</th>
+		<th>Bonuses</th>
+	</tr>
+	<tr>
+		<td>Warrior</td>
+		<td>For those who want to play as someone sturdy, and wear heavy armor while fighting with weapons like swords,
+			spears, and halberds.
+		</td>
+		<td>Barbarian, Knight, Mercenary, Veteran</td>
+		<td>+1 Strength
+			<p>Martial Arts proficiency</p>
+			<p>Heavy Attacks</p></td>
+	</tr>
+	<tr>
+		<td>Mage</td>
+		<td>For those who wish to wield mystical powers, casting arcane spells and wielding the elements of frost, fire,
+			and lightning.
+		</td>
+		<td>Psychic, Scholar, Warlock, Wizard</td>
+		<td>+1 Intelligence
+			<p>Literacy Proficiency</p>
+			<p>Mana Regeneration</p></td>
+	</tr>
+	<tr>
+		<td>Renegade</td>
+		<td>For those focused on stealth, sneak attacks, and subterfuge—or assasination and seduction!</td>
+		<td>Assassin, Bard, Thief, Tinker</td>
+		<td>+1 Dexterity
+			<p>Stealth Proficiency</p>
+			<p>Vital Strike</p></td>
+	</tr>
+	<tr>
+		<td>Naturalist</td>
+		<td>For those who want to work closely with nature and animals, living in harmony with the natural world.
+		</td>
+		<td>Druid, Marksman, Ranger, Warg</td>
+		<td>+1 Willpower
+			<p>Nature Proficiency</p>
+			<p>Beast Speech</p></td>
+	</tr>
+	<tr>
+		<td>Zealot</td>
+		<td>For those who wish to combine magical and martial prowess in devotion to a higher principle or power.
+		</td>
+		<td>Crusader, Inquisitor, Monk, Prophet</td>
+		<td>+1 Charisma
+			<p>Persuasion Proficiency</p>
+			<p>Meditation</p></td>
+	</tr>
+</table>
+<p style="margin-left: 25px;">Note: Starting bonuses for each class category are in addition to the starting bonus for
+	each class.</p>
+<p>In addition to each category’s attribute and proficiency bonus, each class category has a special bonus move they can
+	make shared between all characters in that category. Here’s what each ability does:</p>
+<ul>
+	<li><p><b>Heavy Attack</b>: When making a weapon attack with your main hand, you may expend 1 AP to roll the damage
+		die twice, taking the higher result.</p></li>
+	<li><p><b>Mana Regeneration</b>: When starting a combat turn with less than one AP, gain an ability point.</p>
+	</li>
+	<li><p><b>Vital Strike</b>: When making a regular weapon attack, you may expend 1 ability point to lower the
+		critical threshold by 2. (i.e. from 20 to 18, under normal circumstances.) </p></li>
+	<li><p><b>Beast Speech</b>: You may spend 1 AP to gain the ability to converse with beasts. This ability lasts for
+		one hour.</p></li>
+	<li><p><b>Meditation</b>: Once per long rest and while outside of combat, you may spend 1 AP to meditate or pray to
+		your deity. You may increase 1 attribute of your choice by 1 for one hour, not exceeding the hard cap. </p></li>
+</ul>
+<p>A detailed explanation of classes is given below, in alphabetical order.</p>
+<h5><a id="C5S2_Assassin"></a>Assassin</h5>
+<p>An assassin’s art is a quick and sure death, delivered without remorse or hesitation. Typically employed by a
+	political state or criminal syndicate, assassins quickly learn to make use of any weapon available, including the
+	weapons of their own targets. This makes them extremely versatile adventurers, able to adapt to nearly any combat
+	situation as the need arises. </p>
+<p>While writing the backstory for an assassin, consider the following:</p>
+<ol>
+	<li><p>Who has hired you in the past?</p></li>
+	<li><p>How many targets have you killed? </p></li>
+	<li><p>Do you remember your first kill?</p></li>
+	<li><p>How did you acquire your unique skillset? </p></li>
+	<li><p>Does your character struggle with any form of guilt?</p></li>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Alignment Suggestion</b>: Non-Good</p>
+<p><b>Core Ability</b>: <i>Assassination.</i>More than just a lucky shot, a successful assassination is the result of
+	careful planning. You may expend 3 willpower to convert a critical hit into an assassination, damaging an enemy by
+	30, or one-third their maximum health bar, whichever is higher. When triggered, assassination replaces your normal
+	weapon damage.</p>
+<p><b>Leveling Bonuses</b>:</p>
+<p>At level 1, you gain +2 dexterity and proficiency in accuracy.</p>
+<p>At level 2, learn <i>Hideaway.</i>Wherever you travel, you know the location of at least one secret hideout, lair,
+	NPC, or dead drop location. Whenever the party takes a long rest, you may choose to visit this location instead of
+	receiving the benefits of a long rest. When hideaway is activated, you may receive an assassination contract. The
+	contract names an NPC and a bounty of at least 100 gold to be paid upon the contract’s completion. If the NPC
+	perishes in any way while you have the contract, you receive the specified sum the following morning. You do not
+	have to visit the hideaway, and the bounty is paid in full even if they did not perish as a result of your actions
+	or you were witnessed during the commission of the crime. You may not have more than one assassination contract at a
+	time, but you may cancel an active contract in order to receive a new one, at the DM’s discretion. You may not visit
+	your hideaway if you are imprisoned, within a dungeon, or sufficiently deep in the wilderness.</p>
+<p>If at any point you disclose the location of the hideaway (whether intentional or not), someone dispatches 1d4
+	assassins to terminate you, who attack your party during a night’s rest. If this happens, you cannot use the
+	hideaway ability again for 1d10 long rests.</p>
+<p style="margin-left: 25px;">Note: If the party spends multiple nights in or near a town, it is plausible that the
+	Assassin character would be able to gain the benefits of a full rest on one night, while visiting their secret
+	location on another night.</p>
+<p>At level 3, you may choose to further specialize as either a Ninja or a Saboteur:</p>
+<p style="margin-left: 25px;">As a Ninja, you gain advantage on stealth checks, and on attack rolls with thrown
+	weapons.</p>
+<p style="margin-left: 25px;">As a Saboteur, you gain a toolbelt of 3 grenades whenever you visit your hideaway. Each
+	grenade deals 4d4 explosion damage to all targets in a ten foot radius. Targets up to twenty feet take half damage.
+	You may not possess more than 3 grenades at a time.</p>
+<p>At level 4, learn <i>Assassination: Descending Blade</i>. You may trigger an assassination when leaping down onto
+	your target from a height of ten or more feet, even if you were not already concealed.</p>
+<p>At level 5, your proficiency in stealth and accuracy increase to expertise.</p>
+<p>At level 6, the critical threshold for your melee attacks is lowered by 1. Assassination minimum damage is increased
+	by 10.</p>
+<p>At level 7, as a Ninja: learn <i>Assassination: Deadly Toxin</i>. You learn a codename that connects you to a
+	supplier of deadly poison. When hideaway is activated, you may spend 500 gold to purchase a vial of deadly toxin
+	from this supplier. You may purchase only one vial of this poison at a time. With a bonus action, you (or another
+	party member, with an action) may coat their blade with the toxin, converting their next melee weapon strike into an
+	assassination. If you forget the name of the supplier, you lose this ability. You may attempt to re-learn the
+	codename by inquiring at the hideaway, at the discretion of them DM. If at any point you disclose the name of the
+	supplier (whether intentional or not), the supplier dispatches 1d4 assassins to terminate you, who attack your party
+	during a night’s rest.</p>
+<p>Note: If the hideaway location is a dead drop, you cannot purchase the toxin immediately. Instead, you leave behind a
+	special mark or indication, along with the payment. The poison will be in your pack by the time you return to
+	camp.</p>
+<p>At level 7, as a Saboteur: learn <i>Nail Bomb</i>. You learn a codename that connects you to an arms manufacturer.
+	When hideaway is activated, you may spend 500 gold to purchase a bomb that deals 6d6 + 12 piercing damage to all
+	targets within 20 feet. The bomb is armed or disarmed by inserting a special key, and can be configured to explode
+	on touch, after a delay, or by a proximity spell. If disassembly is attempted, the bomb explodes, even if it was not
+	armed.</p>
+<p>At level 8, gain <i>Assassination: Vital Strike</i>. When vital strike triggers a critical, it now triggers an
+	assassination, if possible.</p>
+<p>At level 10, learn <i>Redirection</i>. If an enemy melee attack against you fails, you may roll for Martial Arts to
+	redirect that damage into an enemy adjacent to your attacker.</p>
+<p>At level 12, the critical threshold for your attacks is lowered by 1. Assassination minimum damage is increased by
+	10.</p>
+<p>At level 15, learn <i>Assassination: Sniper Shot</i>. You may trigger an assassination by striking your target with a
+	critical hit from a ranged weapon from a concealed position. </p>
+<p>At level 18, learn <i>Double Assassination</i>. When triggering Assassination: Stealth or Assassination: Descending
+	Blade near at least two enemy targets, you may trigger Assassination on two targets instead of one. </p>
+<h5><a id="C5S2_Barbarian"></a>Barbarian</h5>
+<p>Whether a local farmhand or a tribesman from a remote tundra or jungle, barbarians are united by their unparalleled
+	fury in battle, as well as sheer physical brawn. By tapping into primal rage, barbarians can strike harder and
+	faster than anyone else while laughing off blows that would stagger an ordinary man. Barbarians typically wear light
+	armor, and swing the largest weapons they can find. Their bodies are often covered in scars, either from tribal
+	initiation rituals, or past battles. Some barbarians channel their rage in a drunken stupor, while others transform
+	into the animals that embody their inner beast.</p>
+<p>While writing the backstory for an assassin, consider the following:</p>
+<ol>
+	<li><p>Have you always been strong, or did you go through a lot of training?</p></li>
+	<li><p>Is your immense brawn shared by other members of your family or tribe?</p></li>
+	<li><p>When did you first discover that rage could make you stronger?</p></li>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Alignment Suggestion</b>: Chaotic</p>
+<p><b>Core Ability</b>: Rage. You may spend 6 ability points to enter a rage for 5 combat turns. During a rage, you deal
+	3 extra damage per weapon attack and take 3 less damage from bludgeoning, slashing, piercing, and fire damage.You
+	may not cast spells, read scrolls, or consume potions.</p>
+<p><b>Limitations</b>: Barbarians choose a deficiency in two of the following three skills: defense, literacy, stealth.
+</p>
+<p><b>Leveling Bonuses</b>:</p>
+<p>At level 1: +2 to Strength, proficiency in intimidation and survival.</p>
+<p>At level 2: When you enter your rage, you deliver a terrifying roar. Nearby</p>
+<p>At level 3: You may choose to further develop your rage, as a Berserker or Skald.</p>
+<p>As a Berserker, you gain the ability to intensify your rage. Once per turn, you may expend two AP to increase your
+	damage by 2 and damage reduction by 1, for the remainder of your current rage.</p>
+<p>As a Skald, you </p>
+<p>At level 4, you </p>
+<p>Berserker:</p>
+<p>At level 3, controlled rage</p>
+<p>level 4 skullcrushing finisher: end rage early and deal extra damage. If deathblow, rage does not end.</p>
+<p>level 6 bloodlust: rage deepens from incoming damage</p>
+<p>level 10 blackout rage</p>
+<h5><a id="C5S2_Crusader"></a>Crusader</h5>
+<p>The crusader offers their services to a chosen deity by taking a formal theological oath. As long as the oath is
+	kept, their powers never wane and their enemies are smitten down before them. But even the most devoted mortal may
+	at times be sorely tempted to break their oath. Should the temptation prove too much, the crusader may find
+	themselves tumbling down a new path altogether, of the oathbreaker.</p>
+<p>While writing the backstory for a crusader, consider the following:</p>
+<ol>
+	<li><p>Which god do you serve, and why?</p></li>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Alignment Suggestion</b>: Lawful</p>
+<p><b>Core Ability</b>: <i>Righteous Oath</i>. You have sworn a solemn oath to a higher power, whose goals </p>
+<p>Leveling Bonuses:</p>
+<p>At level 1, you gain +2 willpower, and proficiency in either medicine or intimidation.</p>
+<h5><a id="C5S2_Druid"></a>Druid</h5>
+<p>Whether a shaman from a remote tribe or an isolated hermit, a druid reveres, worships, and protects nature. Nature
+	rewards this special connection by allowing the druid to practice unique and powerful forms of magic, such as
+	transforming into various animals.</p>
+<p>While writing the backstory for a druid, consider the following:</p>
+<p><b>Alignment Suggestion</b>: Non-evil</p>
+<p><b>Core Ability</b>: <i>Wildshape</i>. You have the ability to transform into animals, expending an amount of AP
+	dependent on the animal chosen to do so.</p>
+<p><b>Leveling Bonuses</b>:</p>
+<p>At level 1, you gain the ability to transform into any tiny animal.</p>
+<p>Tiny: mouse, spider, fish, frog, bird</p>
+<p>Small: Puma, Wolf, Monkey</p>
+<p>Medium: Alligator, Chimpanzee, Direwolf, Horse</p>
+<h5><a id="C5S2_Inquisitor"></a>Inquisitor</h5>
+<p>Often clad in black armor and concealed beneath a dark hood or mask, the inquisitor’s dark countenance usually
+	conceals and ever darker heart. An inquisitor has been called by their deity to drive out heresy, and will not
+	hesitate to interrogate or kill anyone who stands in his or her way. Inquisitors are perhaps best known for branding
+	their opponents as heretics, marking them for divine retribution.</p>
+<p>While writing the backstory for an inquisitor, consider the following:</p>
+<ol>
+	<li><p>How did you come to choose to serve your god?</p></li>
+	<li><p>Is your persecution of heretics commanded by god directly, or through a religious institution?</p></li>
+</ol>
+<p><b>Alignment Suggestion</b>: Non-good</p>
+<p><b>Core Ability</b>: <i>Heretic’s Brand</i>. In addition to your regular equipment, you have a special branding iron
+	obtained from your chosen deity. This iron is imbued with divine magic and cannot be heated by ordinary means, but
+	you may expend 2 AP to whisper a short prayer or sacred word, causing the end of the brand to glow blazing hot. The
+	brand retains its heat for 1 minute. It behaves as a short melee weapon and deals 1d6 plus your charisma modifier in
+	fire damage. Enemies struck by this weapon also receive the heretic’s brand, marking them for divine retribution.
+</p>
+<p>Leveling Bonuses:</p>
+<h5><a id="C5S2_Knight"></a>Knight</h5>
+<p>The knight is a low-ranking noble with formal combat training. Although they may be called to fight in battle, a
+	knight’s primary purpose is to serve for the glory of their Lord or Lady, to whom they have sworn an oath of fealty.
+	Many knights are also accompanied by a squire, a young knight in training who may carry their lord’s banner or help
+	them don and doff their armor. </p>
+<p>On the battlefield, a knight is a magnificent sight, clad in expensive steel plate armor and with their lord’s
+	enisgnia emblazoned on their shield. However, some knights forgo a shield altogether, preferring a heavier
+	two-handed weapon. Either way, knights train extensively and are rarely caught flat-footed, even when out of
+	armor.</p>
+<p>While writing the backstory for a knight, consider the following:</p>
+<ol>
+	<li><p>How far back can you trace your lineage? </p></li>
+	<li><p>Are you proud of your country, your liege, and your god?</p></li>
+	<li><p>Was your oath of fealty inspired by love, respect, or political convenience?</p></li>
+</ol>
+<p><b>Alignment Suggestion</b>: Lawful</p>
+<p><b>Core Ability</b>: <i>Oath of Fealty</i>. You have sworn an oath to a nobleman or noblewoman, to protect them with
+	your life and to fight for them in battle. In return, they have provided you with armor and an excellent sword, in
+</p>
+<p><b>Leveling Bonuses</b>:</p>
+<p>At level 2, your liege dispatches you on a quest, usually to rid the world of some evil or slay some troublesome
+	beast. Although it is understood that you undertake this quest in order to honor your word, a sizeable payment would
+	not be out of the question, paid upon completion.</p>
+<p>At level 6, your exploits have suitably pleased your </p>
+<h5>Marksman</h5>
+<p>Anyone can pick up a bow. With some strength and a little training, one can draw and release an arrow as well.
+	However, only a true marksman can hit a distant target quickly and reliably. Such potency with a bow is what
+	distinguishes an ordinary archer from a true marksman.</p>
+<p>While writing the backstory for a marksman, consider the following:</p>
+<p><b>Core Ability</b>: Sniping Shot</p>
+<p>Leveling Bonuses:</p>
+<h5><a id="C5S2_Mercenary"></a>Mercenary</h5>
+<p>The mercenary eschews lofty aspirations of honor and glory and fights almost exclusively for coin. Although they have
+	a cutthroat reputation, there is a simple pragmatism to their motives. Mercenaries fight with whatever weapons and
+	training they can purchase, and do not limit themselves to any particular discipline.</p>
+<p>While writing the backstory for a mercenary, consider the following:</p>
+<p><b>Alignment Suggestion</b>: Non-lawful </p>
+<p><b>Core Ability</b>: <i>Mercenary Contract</i>. You have associations with a mercenaries guild, which connects
+	individuals of martial prowess with clients in need of muscle. This mercenary guild positions you well to take on
+	mercenary contracts and meet trainers for various skills: defense, martial arts, </p>
+<p>Leveling Bonuses:</p>
+<p>At level </p>
+<h5><a id="C5S2_Minstrel"></a>Minstrel</h5>
+<p>A minstrel is easy to spot—simply listen for the sound of a cheering crowd, and see what has captured their
+	attention. It might be a jester, or a woman with a guitar, or a halfling turning flips and cartwheels. Either way,
+	the minstrel is occupied with the trade of entertainment. As one should be, if one feasts or goes hungry according
+	to the quality of one’s performance. </p>
+<p>While writing the backstory for a bard, consider the following:</p>
+<ol>
+	<li><p>How do you entertain crowds?</p></li>
+	<li><p>When was your first performance? How did it go?</p></li>
+	<li><p>Do you ever get stage fright?</p></li>
+	<li><p>How does it feel to finish a performance to thunderous applause?</p></li>
+	<li><p>Have you ever been booed off a stage? </p></li>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Subclasses</b>: Bard, Jester</p>
+<p><b>Alignment Suggestion</b>: Non-lawful </p>
+<p><b>Core Ability</b>: TODO</p>
+<p><b>Leveling Bonuses</b>:</p>
+<h5><a id="C5S2_Monk"></a>Monk</h5>
+<p>The path to enlightenment is not without its twists and turns. For some, a monastery is a permanent home—a place to
+	perfect the techniques of breathing, unarmed combat, and meditation. For others, the monastery is only a resting
+	place before embarking on the road to adventure. Adventuring monks journey far and wide, where they become known for
+	seemingly superhuman feats of endurance, speed, and strength enabled by extensive training.</p>
+<p>While writing the backstory for a monk, consider the following:</p>
+<ol>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Alignment Suggestion</b>: Non-evil</p>
+<p><b>Core Ability</b>: </p>
+<p>Leveling Bonuses:</p>
+<h5><a id="C5S2_Prophet"></a>Prophet</h5>
+<p>The prophet is an individual called upon by a specific god to bring about religious transformation. Often a firebrand
+	or a heretic, prophets care little for the practical consequences of their actions and instead operate based off of
+	faith and unwavering moral or spiritual convictions. For this reason, they are scorned and hated by religious
+	authorities and may be on the run.</p>
+<p>While writing the backstory for a prophet, consider the following:</p>
+<ol>
+	<li><p>When did you first hear the voice of your god?</p></li>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Alignment Suggestion</b>: Chaotic</p>
+<p><b>Core Ability</b>: Divine Smite</p>
+<p>Leveling Bonuses:</p>
+<h5><a id="C5S2_Psychic"></a>Psychic</h5>
+<p>The powers of a true psychic are a sight to behold. Imagine, for example, an unassuming young woman clad in simple
+	black robes. She raises her hand and her eyes glow bright white, and suddenly the earth begins to tremble. A rock
+	surges upward from the soil, bidden by her telekinetic impulse, and is sent flying towards its target. Surely such
+	power is to be coveted—and feared!</p>
+<p>While writing the backstory for a psychic, consider the following:</p>
+<ol>
+	<li><p>When did you first discover your unique powers?</p></li>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Core Ability</b>: <i>Telekinesis</i>. You are able to move objects using your mind. As an action, you may expend 3
+	willpower to lift a nearby small object weighing less than 10 pounds (such as a rock, brick, dagger, etc.) and hurl
+	it at a speed equal to twice your willpower stat in feet per second. The object deals 1d12 damage, plus your
+	willpower modifier in damage. The object deals either piercing or bludgeoning damage, depending on the shape of the
+	object.</p>
+<p>Leveling Bonuses:</p>
+<p>At level 1, gain 2 willpower and proficiency in perception.</p>
+<h5><a id="C5S2_Ranger"></a>Ranger</h5>
+<p>The ranger is someone—a farmer, a hunter, or maybe a lumberjack—who lives and works on the edge of civilization and
+	has acquired a deep knowledge of nature and survival. They may have learned to hunt or track prey, tame beasts, or
+	construct traps as a result of living in the wilderness.</p>
+<p>While writing the backstory for a ranger, consider the following:</p>
+<ol>
+	<li><p>Who’s a good boy?</p></li>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Core Ability</b>: <i>Animal Companion</i>.</p>
+<p>Leveling Bonuses:</p>
+<h5><a id="C5S2_Scholar"></a>Scholar</h5>
+<p>Scholars are formally-trained magic users typically found in highly sheltered environments: libraries, universities,
+	or perhaps a royal laboratory. Here, they are kept safe from the dangers and inconveniences of the outside world.
+	Once in a great while, however, a scholar shuts the cover of his or her dusty tome and packs a bag to go
+	adventuring. Whenever they do so, they are a force to be reckoned with, having mastered powerful forms of magic that
+	have been thoroughly documented and perfected over generations. </p>
+<p>While writing the backstory for a scholar, consider the following:</p>
+<ol>
+	<li><p>Where did you attend university?</p></li>
+	<li><p>Are you a student, graduate student, or professor?</p></li>
+	<li><p>Are you well-liked by your classmates or collegues?</p></li>
+	<li><p>What are you currently researching or studying?</p></li>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Alignment Suggestion</b>: Lawful</p>
+<p><b>Core Ability</b>: Codex Arcana</p>
+<p>Leveling Bonuses:</p>
+<h5><a id="C5S2_Thief"></a>Thief (Rogue)</h5>
+<p>Thieves are found in every city and village and borough, in every corner of the world. Their techniques are as varied
+	as you can imagine, but they have one thing in common: the ability to disappear quickly and quietly. This skill
+	proves immensely useful for those that turn to the path of adventuring, for one cannot easily be killed if one is
+	not seen. Of course, the occasional coinpurse snipped from the belt of an unsuspecting noble doesn’t hurt
+	either.</p>
+<p>While writing the backstory for a thief, consider the following:</p>
+<ol>
+	<li><p>Do you have any moral qualms about taking things that don’t belong to you?</p></li>
+	<li><p>Have you ever been in prison?</p></li>
+	<li><p>Do you have any connections to organized crime?</p></li>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Alignment Suggestion</b>: Non-good</p>
+<p><b>Core Ability</b>: <i>Sneak</i>.</p>
+<p>Leveling Bonuses:</p>
+<p>At level 1, your charisma and willpower increase by 1. You gain proficiency in sleight-of-hand.</p>
+<p>At level 2, learn <i>Strategic</i><i>Retreat</i>. You may disengage from melee combat with a bonus action instead of
+	an action. Alternatively, you may use a bonus action to counter their opportunity attack with a melee weapon attack
+	of your own (as long as you survive their attack).</p>
+<h5><a id="C5S2_Tinker"></a>Tinker (Artificer)</h5>
+<p>Deep in his workshop, the tinker sits hunched over a table full of parts. The sound of clonking and rattling is heard
+	as he searches for this cog, that corkscrew, or a metal shaft of certain dimensions. The moon rises high as he works
+	through the dead of night. Perhaps by dawn he emerges, bearing some bizarre contraption. Then, with the winding of a
+	screw, it springs to “life”. This is the way of a tinker.</p>
+<p>While writing the backstory for a tinker, consider the following:</p>
+<ol>
+	<li><p>How did you become skilled with mechanical parts?</p></li>
+</ol>
+<p><b>Core Ability</b>: </p>
+<p>Leveling Bonuses:</p>
+<h5><a id="C5S2_Veteran"></a>Veteran</h5>
+<p>The veteran is an experienced former soldier trained in the use of military grade melee weapons. Veterans thrive on
+	camaraderie and fight best when backed up by their companions. Most importantly, veterans bolster their team in
+	various ways without stepping back from the frontline of battle.</p>
+<p>While writing the backstory for a veteran, consider the following:</p>
+<ol>
+	<li><p>Why did you join the military?</p></li>
+	<li><p>What rank did you achieve?</p></li>
+	<li><p>In which battles or wars did you fight, if any?</p></li>
+	<li><p>Did you have trouble readjusting to civilian life?</p></li>
+</ol>
+<p><b>Core Ability</b>: <i>Battlefield Triage</i>. You may expend two willpower to </p>
+<p>Leveling Bonuses:</p>
+<p>At level 1</p>
+<h5><a id="C5S2_Warg"></a>Warg</h5>
+<p>Once or twice a year, a certain man shambles into town to buy some supplies. Usually, that’s all that happens, and he
+	leaves. Only this time, a group of bandits have planned a robbery. The strange man, a wrinkle in their plan, is to
+	become simply another innocent bystander, caught in the crossfire.</p>
+<p>Except, that’s not what happens. As one bandit whirls around, brandishing his crossbow recklessly, he finds that the
+	man is gone. The bandit is suddenly face to face with a pouncing direwolf. Seconds later, his screams are cut short.
+	The direwolf lumbers towards the next bandit, yellow eyes glimmeirng balefully, but his prey is already gone,
+	sprinting into the hinterlands. </p>
+<p>Suddenly the strange man is back, unfazed. He nods towards the proprietor and finishes his purchase, and heads back
+	into the woods from whence he came.</p>
+<p>A warg is usually a hermit or cultist who—over many years—has cultivated the ability to transform at will into a
+	certain animal. Unlike a druid, who can transform into a number of small animals, a warg can only transform into one
+	type of animal. But what a warg sacrifices in flexibilty, they gain in power. Wargs usually transform into large
+	animals, such as direwolves, rune bears, or even rhinoceri. Unlike many other forms of magic, warging is usually a
+	deeply emotional form of magic, and also requires intense </p>
+<p>While writing the backstory for a warg, consider the following:</p>
+<ol>
+	<li><p>Why did you choose to learn to transform into your specific animal?</p></li>
+	<li><p>Have you always had a close connection to nature, or did something spur that connection?</p></li>
+	<li><p>What was your first transformation like?</p></li>
+	<li><p>What made you give up your previous life and start adventuring?</p></li>
+</ol>
+<p><b>Core Ability</b>: <i>Transform</i>. You expend 6 ability points to transform into your chosen animal, for 12
+	combat turns.</p>
+<p>Leveling Bonuses:</p>
+<p>At level 1, choose your animal form. You may choose any animal from this list:</p>
+<ul>
+	<li><p>Bear</p></li>
+	<li><p>Direwolf</p></li>
+	<li><p>Rhinoceros: Charge</p></li>
+	<li><p>Lion</p></li>
+	<li><p>Raptor: Flight</p></li>
+	<li><p>Gorilla: Grappling</p></li>
+</ul>
+<h5><a id="C5S2_Warlock"></a>Warlock</h5>
+<p>Warlocks are a diverse sort, hailing from many walks of life. You may find one in a palace in the very heart of
+	luxury, another in a dingy cave or a squalid coven, and a third in a quaint shack amidst a great forest. Wherever
+	they are found, warlocks are defined by their immense power, gained from their pact with a supernatural entity. The
+	terms of these pacts are as diverse and as varied as warlocks themselves, and bring danger, madness, and power in
+	equal measure.</p>
+<p>A warlock is an entity who has entered into a pact with an immaterial being, offering service in return for a
+	fraction of the supplicated entity’s power. Broadly speaking, such pacts are usually made with demonic or fey
+	beings, for angels and dragons have little use of pacts.</p>
+<p>demonic patrons typically allow their supplicants to dispose of their power in whatever manner they wish, in exchange
+	for enslavement in the afterlife. Conversely, fey entities constantly demand small favors or acts of service, but
+	care very little for their supplicant’s eternal fate.</p>
+<p>While writing the backstory for a warlock, consider the following:</p>
+<ol>
+	<li><p>Why did you seek power in service to a supernatural being?</p></li>
+	<li><p>Do you believe that this deal will turn out in your favor?</p></li>
+	<li><p>Do you follow a ritual when you supplicate before demonic or fey beings?</p></li>
+	<li><p>How do you intend to deal with the consequences of your pact?</p></li>
+</ol>
+<p><b>Alignment Suggestion</b>: Non-good</p>
+<p><b>Core Ability</b>: <i>Eldritch Blast</i>. You expend 2 willpower, causing a beam of eerie blue energy to streak
+	from your outstretched hand to your target within 60 feet, dealing 1d10 plus your charisma modifier in bludgeoning
+	damage.</p>
+<p><b>Leveling Bonuses</b>:</p>
+<p>At level 1, gain +2 charisma and proficiency in perception. Once per day, you may perform a ritual of supplication to
+	receive your warlock powers.</p>
+<p>At level 2, in response to your supplications, a supernatural entity invades your mind during a dreamless sleep and
+	takes you to a location in the astral plane. Roll a d6 to determine which pact is offered:</p>
+<p style="margin-left: 25px;">1. Dark Pact: Scholar of the Abyss</p>
+<p style="margin-left: 50px;">You are taken to the ruins of a temple, perched precariously at the edge of the abyss. A
+	black cloaked figure brings you to the edge of a dark pool, and bids you to immerse yourself in the waters therein.
+	Once fully submerged, an eldritch horror beyond human comprehension enters your head through your eyes and nasal
+	passages, bringing you visions of deep and forbidden knowledge. The entity fills your skull with whispers of
+	infinite knowledge, a taste of what shall be yours if you swear your life to its service.</p>
+<p style="margin-left: 50px;">If you accept, you receive:</p>
+<p style="margin-left: 75px;">A dark tome with gilded pages. Opening the book transports your mind to an astral library
+	of esoteric and arcane knowledge. Once per level, including this level, you may use this tome to acquire learned
+	knowledge of any spell for which you meet the requirements. If anyone else attempts to use this tome, they must
+	succeed a threshold 12 willpower check, or become mad for 1d4 days. The tome then crumbles to ash in their hands,
+	and is returned to your possession the next time the clock strikes midnight.</p>
+<p style="margin-left: 25px;">2. Dark Pact: Profane Champion</p>
+<p style="margin-left: 50px;">You slowly come to awareness, surrounded by a stinking and suffocating darkness. You hear
+	the noise of buzzing flies, and see—or seem to see—the form of a wretched man, sewn inside a bodybag and swaying
+	from the end of a noose. There is a sudden bolt of lightning and the bodybag splits open, exposing a gleaming silver
+	blade among its visceral contents. As your hand grips the hilt, a sneering voice from within beseeches you to use
+	the blade in service to True Death.</p>
+<p style="margin-left: 50px;">If you accept, you receive:</p>
+<p style="margin-left: 75px;">A gleaming silver weapon which has an unnatural tendency to strike true. The weapon may
+	take the form of a short weapon, medium weapon, or great weapon. The weapon’s hit chance increases with your
+	charisma modifier. Each successful hit with this weapon during combat increases the damage of your next eldritch
+	blast invocation by 1.</p>
+<p style="margin-left: 25px;">3. Dark Pact: Infernal Tyrant</p>
+<p style="margin-left: 50px;">You are brought before the flaming throne of a demonic tyrant, with eyes of burning
+	darkness. The entity does not speak to you, but a snap of his fingers directs a malnourished slave to present you
+	with a flaming parchment scrawled in blood. The meaning of the worlds are burned into your mind: a slave for a
+	slave. If you accept, you may choose one of the tyrant’s slaves to serve you in life. In return, you shall become
+	the tyrant’s slave after your death—for eternity? </p>
+<p style="margin-left: 50px;">If you accept, you receive:</p>
+<p style="margin-left: 75px;">An infernal servant, bound to your will. You may banish the servant back to their master’s
+	realm at will, and summon them again once per long rest. The servant fights and levels as you do, and may be any
+	race or gender of your choosing. However, they take a -3 penalty to all attributes, soft and hard caps, and their
+	health and willpower are reduced by one half. They may choose a class category, but not a class, and are leveled to
+	your current level.</p>
+<p style="margin-left: 25px;">4. Fey Pact: Crystal Pixie</p>
+<p style="margin-left: 50px;">You find yourself reduced to miniscule size, peering out of the hollow of a tree. At
+	first,</p>
+<p style="margin-left: 50px;">If you accept, you receive:</p>
+<p style="margin-left: 75px;"><br/><br/></p>
+<p style="margin-left: 50px;"><br/><br/></p>
+<p style="margin-left: 25px;">5. Fey Pact: Storm Djinn</p>
+<p style="margin-left: 50px;">The entity takes you to a great palace in the clouds, everywhere bedecked with signs of
+	unparalleled splendor: gates and trimmings of pure gold, gleaming pillars of marble, and tapestries of silk and
+	satin. You are lead up a stair in a great minaret, past great windows at increasingly dizzying heights. At the top,
+	a mighty Djinn </p>
+<p style="margin-left: 50px;">If you accept, you receive:</p>
+<p style="margin-left: 50px;"><br/><br/></p>
+<p style="margin-left: 25px;">6. Fey Pact: Celestial of the Great Comet</p>
+<p style="margin-left: 50px;">Your you find yourself in the vast darkness of outer space. Stars swirl around you and
+	dance across your body, sparkling with splendor. </p>
+<p style="margin-left: 50px;">If you accept, you receive:</p>
+<p style="margin-left: 75px;"><br/><br/></p>
+<p style="margin-left: 25px;"><br/><br/></p>
+<p style="margin-left: 25px;"><br/><br/></p>
+<p>You may accept this pact and all boons it confers, or reject it. If rejected, another pact will be offered on a
+	subsequent night. If the DM allows, you do not need to roll a d6 again and may simply choose the pact you
+	desire.</p>
+<h5><a id="C5S2_Wizard"></a>Wizard</h5>
+<p>Cloistered in his high tower, a tall and heavily bearded man pushes arcane magic to its absolute limit. Bedecked in a
+	great flowing robe and pointed hat, he ensures that the stars and planets align before pursuing his audacious
+	experiment. Sanity and restraint long forsaken, he clutches a pristine crystal ball, gazing somewhere within as blue
+	electricity arcs from the tips of his fingers.</p>
+<p>No-one knows how he got his power; some say it runs in his blood, while others say that he was expelled from a
+	university. Whatever the case, a wizard is someone with a naturally high aptitude for magic who usually practices on
+	their own terms, outside the auspices of a university.</p>
+<p>While writing the backstory for a wizard, consider the following:</p>
+<p><b>Core Ability</b>: Favored Spell</p>
+<p><b>Leveling Bonuses</b>:</p>
+<p>At level 1, choose and instantly learn three elemental spells. You know these spells innately, and can never forget
+	them. Of these three, choose one that is your favorite spell. When you cast this spell, additional damage is added
+	to the spell equal to your willpower modifier.</p>
+<p>At level 2, </p>
+<p>At level 3, you </p>
+<h4>Alignment</h4>
+<p>In keeping with traditional TTPRGs, we use a simple alignment system to roughly track a character’s motives. The
+	alignment chart has two axes: <i>lawfulness </i>and <i>morality</i>. Lawfulness describes a character’s
+	predictability and their faith (or lack of faith) in ideals. Meanwhile, morality describes a character’s level of
+	empathy and compassion for others, or lack thereof.</p>
+<table>
+	<tr>
+		<td>Lawful Good</td>
+		<td>Neutral Good</td>
+		<td>Chaotic Good</td>
+	</tr>
+	<tr>
+		<td>Lawful Neutral</td>
+		<td>True Neutral</td>
+		<td>Chaotic Neutral</td>
+	</tr>
+	<tr>
+		<td>Lawful Evil</td>
+		<td>Neutral Evil</td>
+		<td>Chaotic Evil</td>
+	</tr>
+</table>
+<p>The Alignments</p>
+<p>A character’s alignment provides a rough guide to how they intend to behave. Of course, a character’s alignment can
+	change over time, and not all actions are perfectly representative of their alignment. Also, certain actions don’t
+	have a middle ground. You either run into a burning orphanage to save the children, or you don’t. Such circumstances
+	can be polarizing, driving character development and pushing neutral characters towards the extremes of morality.
+	Likewise, polarizing events might also serve to disillusion good characters and turn them evil or neutral, or
+	inspire evil characters to reconsider their ways.</p>
+<p>Before we move on, I’d like to dispel some misconceptions regarding lawfulness and the alignment chart in general.
+	First, alignment should always be secondary to a character’s personality. Second, lawfulness is often used to
+	capture two separate ideas. The first interpretation is <i>a tendency to follow laws </i>while the second is <i>a
+		tendency to believe in and adhere to some fixed set of ideals</i>. This leads to confusion because a seemingly
+	lawful paladin could suddenly start breaking laws if they travel to a land where the foreign laws conflict heavily
+	with their ideals. It’s not always clear whether this represents a change in alignment or not. Although there’s no
+	single correct interpretation, I suggest a third interpretation that lawful characters tend to behave according to
+	reason and logic, while chaotic characters behave according to emotion. One advantage of this interpretation is that
+	it allows lawful characters the flexibility to sometimes be driven by pure emotion, and also explains when and why
+	chaotic characters behave unpredictably—as opposed to just providing chaos for the sake of chaos.</p>
+<h3><a id="Appendices"></a>Appendices</h3>
+<h4><a id="Appendix_Spells"></a>Spells</h4>
+<p>Name: Arcane Flames</p>
+<p>Type: Elemental Burst Spell</p>
+<p>Description: Continuous flames flow from the user’s outstretched hands, dealing 1d6 fire damage to all targets caught
+	in the blaze, plus the caster’s willpower modifier.</p>
+<p>Requirements: Intelligence 10, Willpower 12</p>
+<p>Training Cost: 30 Gold, 4 training slots</p>
+<p>Usage: 3 Ability points</p>
+<h4><a id="Appendix_Training"></a>Training</h4>
+<p>Here is a list of training available to players:</p>
+<p><b>Attribute Training: Elite</b></p>
+<p style="margin-left: 25px;"><b>Cost</b>: 50 Gold and 1 training slot.<br/><b>Effect</b>: The player hires an
+	experienced coach or tutor to assist them in breaking their limits. Increases the soft cap for an attribute by 2.
+	Purchasable once per attribute.</p>
+<p><b>Attribute Training: Olympian</b></p>
+<p style="margin-left: 25px;">Cost: 100 Gold and 2 training slots.</p>
+<p style="margin-left: 25px;">Prerequisite: The player has already achieved “Attribute Training: Elite” for this
+	attribute.</p>
+<p style="margin-left: 25px;">Effect: The player increases the soft cap for this attribute by 2, up to the hard cap.
+	Purchasable once per attribute.</p>
+<p>Proficiency Training: Remediation</p>
+<p style="margin-left: 25px;">Cost: 50 Gold and 5 training slots</p>
+<p style="margin-left: 25px;">Effect: The player performs a DT 10 skill check in the chosen skill. If the check
+	succeeds, skill recovers from “deficient” to “normal”. Otherwise, the skill remains at “deficient” but training
+	slots are restored.</p>
+<p>Proficiency Training: Apprenticeship</p>
+<p style="margin-left: 25px;">Cost: 20 Gold and 4 training slots</p>
+<p style="margin-left: 25px;">Effect: The player performs a DT 12 skill check in the chosen skill. If the check
+	succeeds, skill advances from “normal” to “proficient”. Otherwise, the skill remains at “deficient” but training
+	slots are restored.</p>
+<p>Proficiency Training: Expertise</p>
+<p style="margin-left: 25px;">Cost: 50 gold and 5 training slots.</p>
+<p style="margin-left: 25px;">Effect: The player performs a DT 15 skill check in the chosen skill. If the check
+	succeeds, skill advances from “proficient” to “expert”. Otherwise, the skill remains at “proficient” but training
+	slots are restored.</p>
+<p>Proficiency Training: Mastery</p>
+<p style="margin-left: 25px;">Cost: 100 Gold and 6 training slots</p>
+<p style="margin-left: 25px;">Effect: The player performs a DT 18 skill check in the chosen skill. If the check
+	succeeds, skill advances from “expert” to “master”. Otherwise, the skill remains at “expert” but training slots are
+	restored. </p>
+<p>Combat Training: Mordhau Grip</p>
+<p style="margin-left: 25px;">Cost: 50 Gold and 3 training slots</p>
+<p style="margin-left: 25px;">Effect: The player unlocks the Mordhau Grip ability for large swords with straight
+	crossguards. The player may use the “change grip” action to activate mordhau grip, dealing bludgeoning damage with
+	these swords.</p>
+<p>Combat Training: Estoc</p>
+<p style="margin-left: 25px;">Cost: 75 Gold and 3 training slots</p>
+<p style="margin-left: 25px;">Effect: The player unlocks the <i>Piercing Strike</i>ability for the estoc, reducing BC by
+	half for opponents in any type of mail.</p>
+<p style="margin-left: 25px;">Note: The Estoc is an unbladed sword specifically designed for piercing chainmail. Due to
+	its lack of a blade, the sword is not ideal as a civilian self-defense weapon.</p>
+<p>Combat Training: Shield Bash</p>
+<p style="margin-left: 25px;">Cost 50 gold and 2 training slots</p>
+<p style="margin-left: 25px;">Effect: The player masters the ability <i>Shield Bash</i>, allowing extra damage with
+	bucklers and shields. </p>
+<p>Combat Training: Shield Bash</p>
+<p>Combat Training: Shield Charge</p>
+<p style="margin-left: 25px;">Cost: 50 Gold, 1 training slot.</p>
+<p style="margin-left: 25px;">Effect: The player acquires the <i>Shield Charge</i><span>ability. While carrying a greatshield or mantlet, the player mayexpend 2 willpower</span>
+</p>
+<p>Combat Training: Polearm Charge</p>
+<p style="margin-left: 25px;">Cost: 50 gold, 1 training slot.</p>
+<p style="margin-left: 25px;">Effect: The player acquires the <i>Polearm Charge</i><span>ability. While carrying a pole arm, the player may expend 2 willpower</span>
+</p>
+<p>Combat Training: Flailing Strike</p>
+<p style="margin-left: 25px;">Cost: 75 Gold and 3 training slots</p>
+<p style="margin-left: 25px;">Effect: The player learns to use the flail, an unusual weapon designed to bypass shields.
+	The player unlocks the <i>Flailing Strike</i>ability for the flail, reducing BC gained by opponents with shields.
+	Specifically, the shield no longer provides any BC unless it is actively blocking, in which case BC provided is
+	reduced by half.</p>
+<p>Combat Training: Hook Sword</p>
+<p style="margin-left: 25px;">Cost: 100 Gold and 4 training slots</p>
+<p style="margin-left: 25px;">Effect: The player learns to use the hook sword, a rare sword designed to trip up or
+	disarm opponents. When successfully parrying, the player may disarm the opponent bypassing a martial arts skill
+	check. The DT of the skill check is equal to the opponent’s dexterity attribute.</p>
+<p>Combat Training: Grappling Hook</p>
+<p style="margin-left: 25px;">Cost: 100 Gold and 6 training slots</p>
+<p style="margin-left: 25px;">Prerequisite: 15 dexterity.</p>
+<p style="margin-left: 25px;">Effect: The player learns to use the grappling hook in combat, acquiring the ability <i>Come
+	Hither</i>. Using an offhand action, the player may make throw the grappling hook at a target within 20 feet. Upon a
+	successful accuracy skill check against the target’s dexterity, the target is pulled 15 feet towards the player.</p>
+<p>Mobility Training: Grappling Hook</p>
+<p style="margin-left: 25px;">Cost: 50 gold and 1 training slots</p>
+<p style="margin-left: 25px;">Effect: The player learns to use the grappling hook to escape, acquiring the ability <i>Vertical
+	Escape</i>. Using a main hand action, the player can throw the grappling hook to any point overhead in a 20 foot
+	radius and climb using their movement points.</p>
+<h4><a id="Appendix_Weapons"></a>Weapons</h4>
+<p>Certain weapons have special properties, which affect how they behave:</p>
+<ul>
+	<li><p><b>Piercing</b>: The weapon deals piercing damage only.</p></li>
+	<li><p><b>Slashing</b>: The weapon deals slashing damage only.</p></li>
+	<li><p><b>Bludgeoning</b>: The weapon deals bludgeoning damage only.</p></li>
+	<li><p><b>Cut-and-Thrust</b>: The item can deal either piercing or slashing damage.</p></li>
+	<li><p><b>Parrying</b><span>:	The weapon allows parrying, increasing parry chance for the weapon	by the indicated amount.</span>
+	</p></li>
+	<li><p><b>Blocking</b><span>:	The weapon allows blocking, increasing BC by a certain amount, and	double when actively blocking.</span>
+	</p></li>
+	<li><p><b>Mordhau</b>: The weapon can be held in a reversed grip to change the damage type to bludgeoning. This
+		changes the weapon’s damage die. (Larger swords have this property.) </p></li>
+	<li><p><b>Versatile</b>: The weapon can be held in a two handed grip for extra damage.</p></li>
+	<li><p><b>Nimble</b>: Dexterity can be used to augment the weapon’s damage, instead of strength.</p></li>
+	<li><p><b>Improvised</b>: The item is not primarily intended as a weapon. The damage die is rolled with
+		disadvantage. </p></li>
+	<li><p><b>Light</b>: The weapon can be dual-wielded, alongside another light weapon. Of a ranged weapon, indicates
+		that the weapon can be fire with one hand. (All small weapons have this property.)</p></li>
+	<li><p><b>Heavy</b>: The weapon requires two hands to use effectively, and has a strength requirement. (All great
+		weapons and polearms have this property.)</p></li>
+	<li><p><b>Sharp</b>: The critical threshold for the weapon is reduced to the indicated amount. (Daggers and
+		Stilettos have this property.)</p></li>
+	<li><p><b>Reach</b>: The weapon can hit targets 10 feet away, instead of 5.</p></li>
+	<li><p><b>Throwable</b>: In addition to regular use, the weapon can be effectively thrown.</p></li>
+	<li><p><b>Thrown</b>: The weapon is <i>only</i>thrown, and never retained in the hand.</p></li>
+	<li><p><b>Projectile</b>: The weapon fires a specific type of projectile.</p></li>
+	<li><p><b>Loading</b>: Once discharged, the weapon must be loaded again to be re-used. Loading such a weapon takes a
+		full main hand action. The weapon’s damage is also not affected by any attributes of the bearer, such as
+		strength or dexterity.</p></li>
+</ul>
+<p>Small Weapons</p>
+<p>Such weapons are those which are easily wielded in one hand, including small everyday tools improvised as weapons.
+	Typically wielded by civilians, and easily concealed. These weapons automatically have the light property, and can
+	be dual-wielded or used in an offhand. Most of these weapons use the d4 damage die, except the club and sickle.
+	However, these possess the improvised trait. Therefore, the dagger and stiletto are usually the best choices from
+	this category.</p>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Damage</th>
+		<th>Price</th>
+		<th>Modifiers</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+		<td>Knife</td>
+		<td>An ordinary workman’s knife</td>
+		<td>1d4, Piercing</td>
+		<td>1</td>
+		<td>Nimble, Improvised</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Dagger</td>
+		<td>A short sidearm, suitable for slashing or stabbing</td>
+		<td>1d4, Cut-and-Thrust</td>
+		<td>5</td>
+		<td>Nimble, Sharp, Throwable(20/60)</td>
+		<td>Range 20/60</td>
+	</tr>
+	<tr>
+		<td>Stiletto</td>
+		<td>A stabbing knife, long and sharp</td>
+		<td>1d4, Piercing</td>
+		<td>5</td>
+		<td>Nimble, Sharp</td>
+		<td>Ignores BC from chainmail.</td>
+	</tr>
+	<tr>
+		<td>Cleaver</td>
+		<td>A heavy knife for cutting meat</td>
+		<td>1d4, Slashing</td>
+		<td>2</td>
+		<td>Improvised</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Hatchet</td>
+		<td>A small axe suitable for throwing</td>
+		<td>1d4, Slashing</td>
+		<td>5</td>
+		<td>Nimble, Throwable(20/60)</td>
+		<td>Range 20/60</td>
+	</tr>
+	<tr>
+		<td>Club</td>
+		<td>A hefty stick, chair leg, or workman’s hammer</td>
+		<td>1d6, Bludgeoning</td>
+		<td>1</td>
+		<td>Improvised.</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Sickle</td>
+		<td>A farmer’s tool of dubious sharpness</td>
+		<td>1d6, Slashing</td>
+		<td>5</td>
+		<td>Nimble, Improvised.</td>
+		<td>May be modified by a blacksmith to lose the Improvised trait, for 10 gold.</td>
+	</tr>
+</table>
+<p>Standard Weapons</p>
+<p>These are proper weapon and sidearms, usable in one hand. Some of the larger entries are compatible with a two-handed
+	swing.</p>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Damage</th>
+		<th>Price</th>
+		<th>Modifiers</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+		<td>Rapier</td>
+		<td>A rapscallion’s sword—or a gentleman’s</td>
+		<td>1d6, Piercing</td>
+		<td>30</td>
+		<td>Nimble, Parrying(4)</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Estoc</td>
+		<td>A soldier’s thrusting sword for piercing mail</td>
+		<td>1d8, Piercing</td>
+		<td>50</td>
+		<td>Sharp, Parrying(5)</td>
+		<td>Ignores chainmail BC. Training required.</td>
+	</tr>
+	<tr>
+		<td>Shortsword</td>
+		<td>A shorter sword for lighter weight, and an ideal sidearm</td>
+		<td>1d6, Cut-and-Thrust</td>
+		<td>20</td>
+		<td>Nimble, Light.</td>
+		<td>Includes arming sword and gladius.</td>
+	</tr>
+	<tr>
+		<td>Katana</td>
+		<td>A curved sword of exceptionally fine make</td>
+		<td>1d8, Slashing</td>
+		<td>100</td>
+		<td>Nimble, Sharp, Parrying(4)</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Cutlass</td>
+		<td>A sword for slashing</td>
+		<td>1d6, Slashing</td>
+		<td>20</td>
+		<td>Light. Parrying(5)</td>
+		<td>Includes machete, broadsword, falchion, and scimitar.</td>
+	</tr>
+	<tr>
+		<td>Bastard Sword</td>
+		<td>A flexible sword of many uses.</td>
+		<td>1d6, Cut-and-Thrust</td>
+		<td>100</td>
+		<td>Versatile (1d10), Mordhau (1d6), Parrying(6)</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Battle Axe</td>
+		<td>An axe, designed for combat</td>
+		<td>1d6, Slashing</td>
+		<td>30</td>
+		<td>Light</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Bearded Axe</td>
+		<td>An axe with its weight balanced at the head</td>
+		<td>1d8, Slashing</td>
+		<td>50</td>
+		<td>Versatile(1d8)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Quarterstaff</td>
+		<td>A walking staff, only at first glance</td>
+		<td>1d8, Bludgeoning</td>
+		<td>10</td>
+		<td>Nimble, Improvised, Parrying(6)</td>
+		<td>Improvised trait does not apply if attacking with dexterity.</td>
+	</tr>
+	<tr>
+		<td>Spear</td>
+		<td>A pointed weapon for throwing or stabbing</td>
+		<td>1d8, Piercing</td>
+		<td>20</td>
+		<td>Reach, Throwable(20/60)</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Mace</td>
+		<td>A martial weapon for crushing armor</td>
+		<td>1d8, Bludgeoning</td>
+		<td>30</td>
+		<td>Parrying(4)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Morningstar</td>
+		<td>A martial weapon, spiked for piercing mail</td>
+		<td>1d8, Piercing</td>
+		<td>50</td>
+		<td>Parrying(4)</td>
+		<td>Damage becomes bludgeoning versus plate armor.</td>
+	</tr>
+	<tr>
+		<td>Warhammer</td>
+		<td>A martial weapon, sized for one or two hands</td>
+		<td>1d6, Bludgeoning</td>
+		<td>30</td>
+		<td>Versatile (1d10), Parrying(6)</td>
+		<td><br/></td>
+	</tr>
+</table>
+<p>Great Weapons</p>
+<p>Great Weapons are fully two-handed martial weapons that sacrifice precision for power, including polearms. Polearms,
+	in particular, are the primary weapons of infantry and possess excellent damage and reach. All of these weapons
+	possess the heavy modifier.</p>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Damage</th>
+		<th>Price</th>
+		<th>Modifiers</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+		<td>Longsword</td>
+		<td>A knight’s two-handed sword</td>
+		<td>1d10, Cut-and-Thrust</td>
+		<td>150</td>
+		<td>Heavy(12), Mordhau (1d8)</td>
+		<td>May be upgraded by a blacksmith to gain Sharp for 150 gold.</td>
+	</tr>
+	<tr>
+		<td>Claymore</td>
+		<td>An exceptionally powerful two-handed sword</td>
+		<td>1d12, Cut-and-Thrust</td>
+		<td>200</td>
+		<td>Heavy(14), Mordhau (1d8)</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Greataxe</td>
+		<td>A two-handed axe, for one possessing great brawn</td>
+		<td>1d12, Slashing</td>
+		<td>150</td>
+		<td>Heavy(14)</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Maul</td>
+		<td>A great hammer, for smashing through armor.</td>
+		<td>1d12, Bludgeoning</td>
+		<td>150</td>
+		<td>Heavy(14)</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Bardiche</td>
+		<td>A poleaxe</td>
+		<td>1d10, Slashing</td>
+		<td>200</td>
+		<td>Reach, Heavy(13)</td>
+		<td>May target multiple adjacent opponents.</td>
+	</tr>
+	<tr>
+		<td>Halberd</td>
+		<td>A poleaxe and spear combination</td>
+		<td>1d12, Cut-and-Thrust</td>
+		<td>250</td>
+		<td>Reach, Heavy(13)</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Pike</td>
+		<td>A thrusting Reach too heavy for throwing</td>
+		<td>1d10, Piercing</td>
+		<td>150</td>
+		<td>Reach, Heavy(13), Sharp</td>
+		<td>Includes glaive, partisan and fauchard, etc.</td>
+	</tr>
+	<tr>
+		<td>Naginata</td>
+		<td>It has the appearance of a sword on a stick</td>
+		<td>1d10, Slashing</td>
+		<td>200</td>
+		<td>Reach, Heavy(12), Nimble</td>
+		<td><br/></td>
+	</tr>
+	<tr>
+		<td>Lance</td>
+		<td>An extremely long spear, designed for mounted combat</td>
+		<td>1d12, Piercing</td>
+		<td>250</td>
+		<td>Reach, Improvised</td>
+		<td>Improvised trait does not apply if attacking from horseback.</td>
+	</tr>
+	<tr>
+		<td>Trident</td>
+		<td>A triple pointed polearm</td>
+		<td>1d8, Piercing</td>
+		<td>150</td>
+		<td>Reach, Throwable(20/60)</td>
+		<td></td>
+	</tr>
+</table>
+<p>Ranged Weapons</p>
+<p>Weapons designed to be thrown or to launch a projectile.</p>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Damage</th>
+		<th>Price</th>
+		<th>Modifiers</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+		<td>Throwing Knife</td>
+		<td>A knife specially designed to be hurled</td>
+		<td>1d4, Piercing</td>
+		<td>1</td>
+		<td>Nimble, Thrown</td>
+		<td>Range 30/90</td>
+	</tr>
+	<tr>
+		<td>Shuriken</td>
+		<td>A spinning weapon, from a distant land</td>
+		<td>1d4, Slashing</td>
+		<td>2</td>
+		<td>Nimble, Thrown</td>
+		<td>Range 30/90</td>
+	</tr>
+	<tr>
+		<td>Javelin</td>
+		<td>A light spear, made for throwing</td>
+		<td>1d6, Piercing</td>
+		<td>5</td>
+		<td>Thrown</td>
+		<td>Range 30/120</td>
+	</tr>
+	<tr>
+		<td>Boomerang</td>
+		<td>A throwing weapon that returns to its user</td>
+		<td>1d4, Bludgeoning</td>
+		<td>5</td>
+		<td>Nimble, Thrown</td>
+		<td>Range 30/90</td>
+	</tr>
+	<tr>
+		<td>Shortbow</td>
+		<td>A bow favored by hunters and spies</td>
+		<td>1d6, Piercing</td>
+		<td>10</td>
+		<td>Projectile: Arrows, Nimble.</td>
+		<td>100/300</td>
+	</tr>
+	<tr>
+		<td>Longbow</td>
+		<td>The bow used by professional archers</td>
+		<td>1d8, Piercing</td>
+		<td>30</td>
+		<td>Projectile: Arrows</td>
+		<td>Range 200/600</td>
+	</tr>
+	<tr>
+		<td>Hand Crossbow</td>
+		<td>A miniature crossbow. Widely considered a gimmick.</td>
+		<td>1d6, Piercing</td>
+		<td>50</td>
+		<td>Projectile: Bolts, Loading, Mechanical</td>
+		<td>50/150</td>
+	</tr>
+	<tr>
+		<td>Crossbow</td>
+		<td>A mechanic bow operated by a trigger</td>
+		<td>1d10, Piercing</td>
+		<td>100</td>
+		<td>Projectile: Bolts, Loading, Mechanical</td>
+		<td>Range 300/600</td>
+	</tr>
+	<tr>
+		<td>Arbalest</td>
+		<td>A heavy crossbow</td>
+		<td>1d12, Piercing</td>
+		<td>250</td>
+		<td>Projectile: Bolts, Loading</td>
+		<td>Range 300/600</td>
+	</tr>
+	<tr>
+		<td>Pistol</td>
+		<td>A compact firearm, carried in one hand.</td>
+		<td>2d4, Bludgeoning</td>
+		<td>100</td>
+		<td>Projectile: Bullets, Loading, Light</td>
+		<td>Range 50/150</td>
+	</tr>
+	<tr>
+		<td>Hand Cannon</td>
+		<td>A heavy pistol, for those strong enough to wield it</td>
+		<td>2d6, Bludgeoning</td>
+		<td>200</td>
+		<td>Projectile: Bullets, Loading, Light</td>
+		<td>Light modifier does not apply if strength is less than 14. 50/150</td>
+	</tr>
+	<tr>
+		<td>Arquebus</td>
+		<td>A powerful, yet unpredictable firearm.</td>
+		<td>2d6, Bludgeoning</td>
+		<td>150</td>
+		<td>Projectile: Bullets, Loading</td>
+		<td>100/300</td>
+	</tr>
+	<tr>
+		<td>Blunderbus</td>
+		<td>A heavier gun, firing grapeshot</td>
+		<td>2d8, Bludgeoning</td>
+		<td>200</td>
+		<td>Projectile: Bullets, Loading</td>
+		<td>100/300</td>
+	</tr>
+	<tr>
+		<td>Musket</td>
+		<td>The pinnacle of technological prowess</td>
+		<td>2d10, Bludgeoning</td>
+		<td>250</td>
+		<td>Projectile: Bullets, Loading</td>
+		<td>100/300</td>
+	</tr>
+</table>
+<p>Special Weapons</p>
+<p>Weapons with atypical abilities. Often not suitable for general use.</p>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Damage</th>
+		<th>Price</th>
+		<th>Modifiers</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+		<td>Net</td>
+		<td>For catching and restraining</td>
+		<td>0</td>
+		<td>10</td>
+		<td></td>
+		<td>Allows trapping opponents.</td>
+	</tr>
+	<tr>
+		<td>Grappling Hook</td>
+		<td>For hooking and pulling, or escaping</td>
+		<td>0</td>
+		<td>10</td>
+		<td></td>
+		<td>Allows <i>Vertical Escape</i> and <i>Come Hither</i>.</td>
+	</tr>
+	<tr>
+		<td>Flail</td>
+		<td>For countering shields.</td>
+		<td>1d6, Piercing</td>
+		<td>100</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Hook Sword</td>
+		<td>For disarming opponents.</td>
+		<td>1d6, Slashing</td>
+		<td>100</td>
+		<td><br/></td>
+		<td>Allows Disarming.</td>
+	</tr>
+	<tr>
+		<td>Buckler</td>
+		<td>A small shield</td>
+		<td>1d4, Bludgeoning</td>
+		<td>30</td>
+		<td>Blocking(1)</td>
+		<td>Allows shield bash.</td>
+	</tr>
+	<tr>
+		<td>Shield</td>
+		<td>An ordinaty shield</td>
+		<td>1d4, Bludgeoning</td>
+		<td>50</td>
+		<td>Blocking(2)</td>
+		<td>Requires 12 STR. Allows shield bash.</td>
+	</tr>
+	<tr>
+		<td>Greatshield</td>
+		<td><br/></td>
+		<td>0</td>
+		<td>100</td>
+		<td>Blocking(3)</td>
+		<td>Requires 14 STR. Allows shield charge.</td>
+	</tr>
+	<tr>
+		<td>Mantlet</td>
+		<td>A shield designed to be carried with two hands and planted on the ground.</td>
+		<td>0</td>
+		<td>150</td>
+		<td>Heavy, Blocking(4)</td>
+		<td>Requires 14 STR. Allows shield charge. Provides full cover when placed on the ground.</td>
+	</tr>
+</table>
+<h4><a id="Appendix_Gear"></a>Armor</h4>
+<p>Many forms of armor are available for the prospective adventurer. In general, nimble and dexterous characters such as
+	thieves and assassins prefer leather armor or brigandine. Barbarians, mercenaries, inquisitors, and most others
+	usually make use of medium armors, such as breastplate or chainmail. Knights, veterans, and crusaders often wear
+	splinted mail or even full plate, being stouter folk.</p>
+<p style="margin-left: 25px;">Note: Cheaper forms of chainmail struggle versus piercing damage, but high quality mail no
+	longer has this weakness. However, those talented with the estoc sword may yet be able to pierce it.</p>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Block Chance</th>
+		<th>Requirements</th>
+		<th>Cost</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+		<td>Quilted Armor</td>
+		<td>A homespun gambeson. A sure sign of a hooligan.</td>
+		<td>1</td>
+		<td></td>
+		<td>1</td>
+		<td>-1 Charisma</td>
+	</tr>
+	<tr>
+		<td>Gambeson</td>
+		<td>A proper gambeson, befitting a squire.</td>
+		<td>1</td>
+		<td></td>
+		<td>10</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Leather Armor</td>
+		<td>Composed of boiled leather. Worn by knaves.</td>
+		<td>2</td>
+		<td></td>
+		<td>20</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Brigandine</td>
+		<td>Metal plates riveted together beneath leather. Cheaper than mail.</td>
+		<td>3</td>
+		<td>Strength 10</td>
+		<td>30</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Hauberk</td>
+		<td>A chainmail shirt, as worn by rank-and-file infantry.</td>
+		<td>4</td>
+		<td>Strength 10</td>
+		<td>50</td>
+		<td>Stealth disadvantage. BC bonus is halved versus piercing damage.</td>
+	</tr>
+	<tr>
+		<td>Breastplate</td>
+		<td>Robust protection for the vital regions.</td>
+		<td>5</td>
+		<td>Strength 10, Defense Proficiency</td>
+		<td>50</td>
+		<td>-1 Dexterity. BC bonus is halved versus blunt.</td>
+	</tr>
+	<tr>
+		<td>Ringmail</td>
+		<td>Chainmail, almost, but the links are not woven together.</td>
+		<td>5</td>
+		<td>Strength 12, Defense Proficiency</td>
+		<td>100</td>
+		<td>Stealth disadvantage. BC bonus is halved versus piercing damage.</td>
+	</tr>
+	<tr>
+		<td>Chainmail</td>
+		<td>Full mail. Flexible and effective.</td>
+		<td>6</td>
+		<td>Strength 12, Defense Proficiency</td>
+		<td>200</td>
+		<td>Stealth disadvantage.</td>
+	</tr>
+	<tr>
+		<td>Splinted Chainmail</td>
+		<td>Chainmail with vertical splints to shore up defense of the limbs.</td>
+		<td>7</td>
+		<td>Strength 12, Defense Expertise</td>
+		<td>300</td>
+		<td>Stealth disadvantage.</td>
+	</tr>
+	<tr>
+		<td>Half Plate Armor</td>
+		<td>Plate armor, but with nonessentials stripped away to spare the cost.</td>
+		<td>8</td>
+		<td>Strength 12, Defense Expertise</td>
+		<td>250</td>
+		<td>-1 Dexterity. BC bonus is halved versus blunt.</td>
+	</tr>
+	<tr>
+		<td>Full Plate Armor</td>
+		<td>The highest quality.</td>
+		<td>10</td>
+		<td>Strength 14, Defense Expertise</td>
+		<td>500</td>
+		<td>-1 Dexterity. Stealth disadvantage. BC bonus is halved versus blunt.</td>
+	</tr>
+</table>
+<h5>Materials</h5>
+<p>The stats given above are for steel armor. Some armors can be upgraded to rely on tougher metals such as titanium,
+	orichalcum, adamantine, and mithril. These give better results but are significantly more expensive.</p>
+<table>
+	<tr>
+		<th>Material</th>
+		<th>Description</th>
+		<th>Cost Multiplier</th>
+		<th>Defense Bonus</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+		<td>Steel</td>
+		<td>Ordinary iron smelted with carbon.</td>
+		<td>1x</td>
+		<td>+0</td>
+		<td>Prone to rust if neglected.</td>
+	</tr>
+	<tr>
+		<td>Titanium</td>
+		<td>An advanced alloy of steel.</td>
+		<td>2x</td>
+		<td>+1</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Orichalcum</td>
+		<td>Smelted from an ore mined by goblins and orcs.</td>
+		<td>3x</td>
+		<td>+3</td>
+		<td>-1 Dexterity, due to weight.</td>
+	</tr>
+	<tr>
+		<td>Mithril</td>
+		<td>Made by the dwarves, after a secret technique.</td>
+		<td>5x</td>
+		<td>+3</td>
+		<td>Extremely light. Removes dexterity penalties from plate armors.</td>
+	</tr>
+	<tr>
+		<td>Adamantine</td>
+		<td>Smelted in the heart of a volcano, for no other heat can touch it.</td>
+		<td>10x</td>
+		<td>+5</td>
+		<td>Confers resistance to fire damage. -1 Dexterity.</td>
+	</tr>
+</table>
+<h4>Beastiary</h4>
+<p>Animus Celestis (Gods)</p>
+<p>Animus Aetherea (Dragons, Demons, Angels, and Fey)</p>
+<p>Animus Mortalis (Humans and animal souls)</p>
+<h5>Beasts</h5>
+<p>Living beasts of an ordinary sort.</p>
+<p style="margin-left: 25px;">Mammalian</p>
+<p style="margin-left: 50px;">Humanoid</p>
+<p style="margin-left: 50px;">Giants</p>
+<p style="margin-left: 50px;">Ogroids</p>
+<p style="margin-left: 25px;">Avian</p>
+<p style="margin-left: 25px;">Reptilian</p>
+<p style="margin-left: 50px;">Draconoid</p>
+<p style="margin-left: 50px;">Saurid</p>
+<p style="margin-left: 50px;">Viper</p>
+<p style="margin-left: 25px;">Amphibian</p>
+<p style="margin-left: 25px;">Aquatic: Fish, Sharks, and other aquatic vertebrates.</p>
+<h5>Invertebrates</h5>
+<p>Living creatures of a primitive sort.</p>
+<p style="margin-left: 25px;">Insectoid: Resemblin an insect, spider, or other arthopod.</p>
+<p style="margin-left: 25px;">Cephaloid: Resembling a cephalopod, or other mollusk.</p>
+<p style="margin-left: 25px;">Amorphous: Oozes, and other formless entities.</p>
+<p style="margin-left: 25px;">Plants: Photosynthetic entities possessing biological and morphological similarities to
+	plants.</p>
+<h5>Constructs</h5>
+<p>Conglomerations of non-living components animated by lesser spirits.</p>
+<p style="margin-left: 25px;">Elementals</p>
+<p style="margin-left: 25px;">Golems</p>
+<h5>Undead</h5>
+<p>Death-touched entities either returned to unnatural semblance of life, or undeparted spirits of the deceased.</p>
+<p style="margin-left: 25px;">Vampiric: Entities sustained by the lifeblood of living, preferably sentient beasts.</p>
+<p style="margin-left: 25px;">Zomboid: Re-animated beasts, humanoids, and ogroids.</p>
+<p style="margin-left: 25px;">Spectrals: Ghosts and other non-departed spirits.</p>
+<h5>Demigods</h5>
+<p> Pure spiritual beings which may manifest in the material plane. They never die, but may be banished to their home
+	realm.</p>
+<p style="margin-left: 25px;">Demonic: Cursed spirits from the hells, whose power cannot alleviate their suffering.</p>
+<p style="margin-left: 25px;">Fey: Ancient spirits of nature and the wilds who cannot be tamed.</p>
+<p style="margin-left: 25px;">Angelic: Joyful spirits who maintain a connection to the creator God.</p>
+<p style="margin-left: 25px;">Draconic: Ferocious beings of absolute power. They may take any form, but prefer that of
+	the dragon.</p>
+<p>Monstrosities: Unnatural beings of unknown origin. Some were created as the servants of demonic spirits, while others
+	are suspected to have been creating as a byproduct of entangled magical processes.</p>
+<h1>...Is Not Gold!</h1>
+<h2>Thank you for reading.</h2>
+</body>
+</html>
