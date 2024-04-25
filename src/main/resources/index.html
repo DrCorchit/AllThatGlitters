@@ -23,12 +23,11 @@
 			border: .5px solid #aaa;
         }
 
-		p, a { font-size: 10pt; line-height: 110%; margin: 0 0 10px 0; }
+		li, p, a { font-size: 10pt; line-height: 110%; margin: 0 0 10px 0; }
 		a:link { color: #cb0 }
 		a:visited { color : #980 }
 		a:hover { color: #fff }
 
-		li { font-size: 10pt; line-height: 100%; margin: 10px 0; }
 		ol { counter-reset: item; }
 		ol li { display: block; margin: 10px 0; }
 		ol li:before { content: counters(item, ".") ". "; counter-increment: item; }
@@ -40,14 +39,15 @@
 		th { font-size: 14pt; border: 1px solid #aa8; padding: 6px; text-align: center; color: #aa8; background-color: #303033; }
 		td { font-size: 12pt; border: 1px solid #aa8; padding: 4px; }
 
-		.row { display: flex; }
+		.row { display: flex; flex-wrap: nowrap; justify-content:flex-start; }
 		.column {
-			flex: 10 10 auto
-			padding: 10px;
+			width: 100%;
+			flex: 0 1 auto;
+			margin: 10px;
 		}
 
 		.collapsible {
-			background-color: #000;
+			background-color: #30302c;
 			color: #aa8;
 			cursor: pointer;
 			padding: 10px;
@@ -70,7 +70,7 @@
 </head>
 <body>
 <h1>All That Glitters</h1>
-<h2>An Early Renaissance Tabletop Role-Playing Game<br/><br/>Player's Handbook</h2>
+<h2>A Fantasy Renaissance Tabletop Role-Playing Game<br/><br/>Player's Handbook</h2>
 <p>This guide exists to answer the following questions for players:</p>
 <ol>
 	<li><a href="#C1">How do I play the game?</a>
@@ -135,13 +135,15 @@
 			<li><a href="#Appendix_Spells">Spells</a></li>
 			<li><a href="#Appendix_Training">Training</a></li>
 			<li><a href="#Appendix_Weapons">Weapons</a></li>
-			<li><a href="#Appendix_Gear">Gear</a></li>
-			<li><a href="#Appendix_Items">Items</a></li>
+			<li><a href="#Appendix_Armor">Gear</a></li>
+			<li><a href="#Appendix_Tools">Tools</a></li>
+			<li><a href="#Appendix_Consumables">Consumables</a></li>
+			<li><a href="#Appendix_Beastiary">Beastiary</a></li>
 		</ol>
 	</li>
 </ol>
 <h3><a id="C1"></a>How do I play the game?</h3>
-<p>All That Glitters, like any tabletop roleplaying system, has three parts: The players, the Dungeon Master, and the
+<p>All That Glitters, like any tabletop roleplaying system, has three parts: The players, the dungeon master, and the
 	rulebook. Each part has a duty:</p>
 <ul>
 	<li><p>The players should understand the abilities of their characters and avoid cheating or metagaming. They should
@@ -154,7 +156,7 @@
 		unique and appropriately difficult.</p></li>
 </ul>
 <p>In order to play the game, you need a group of people who are willing to meet on a semi-regular basis for about 3-4
-	hours. You also need someone to run the game: the Dungeon Master. If you’re reading this and you don’t know who your
+	hours. You also need someone to run the game: the dungeon master. If you’re reading this and you don’t know who your
 	DM is, it’s probably you. <i>Be the DM you wish to see in the world.</i></p>
 <h4><a id="C1_Session_Zero"></a>Session Zero</h4>
 <p>Once you have a group of friends and a DM, you should have a session zero. Session zero doesn’t have to be in-person;
@@ -248,9 +250,9 @@
 	<li>DC: Dodge Chance</li>
 	<li>MIT: Mitigation</li>
 </ul>
-<p style="margin-left: 25px;">Note: DC can easily be confused with "difficulty class", which is used in other games and
-	often abbreviated DC. In <i>All That Glitters</i>, "difficulty class" is renamed to difficulty threshold and
-	abbreviated DT.</p>
+<p style="margin-left: 25px;">Note: DC can easily be confused with difficulty class, which is used in other games and
+	often abbreviated DC. Difficulty class is not used in this game, but expresses the same concept as difficulty
+	threshold (DT).</p>
 <p>Attributes:</p>
 <ul>
 	<li>STR: Strength</li>
@@ -408,23 +410,23 @@
 	</li>
 </ol>
 <h4><a id="C2_Choosing_a_Class"></a>Classes</h4>
-<ol>
-	<li><a href="#C2_Choosing_a_Class_Assassin">Assassin</a></li>
-	<li><a href="#C2_Choosing_a_Class_Barbarian">Barbarian</a></li>
-</ol>
 <div class="row">
-	<div class="column"><p>For a given character, their combat class answers the question <i>how do I fight? </i>and
-		also suggests their background or origin story. For example, the barbarian fights with reckless melee attacks,
-		showing little regard for personal safety or technique. Accordingly, a barbarian would be more likely to hail
-		from a remote farming village or an uncivilized tribe than from a royal court or a monastery.</p>
+	<div class="column"><p>A character's combat class gives you an idea of both their fighting style and occupational
+		background. Realtistically, these two are rarely separate. Unless you're an aristocrat, you don't have the time
+		and money to aquire skills of little use within your day-to-day life. So, a monk picks up his staff, or a
+		veteran takes his sword from the mantlepiece, or else a scholar gathers her books. Each of them takes something
+		familiar to them and does something extraordinary with it—and it all begins by embarking on an adventure!</p>
+		<p>The easiest way to choose a class is to avoid all the details and just pick one that sounds cool. However, if
+			you're of a mind to make an informed decision by carefully examine the unique features of each class, you
+			certainly can! There are no wrong choices, only interesting ones. </p>
 		<p>There is some ongoing debate as to the ideal number of classes in a TTRPG system. Too few classes, and
 			players are less likely to find one that really captures their interest and vision. Too many, and the player
 			is at risk of being drowned by excess choices—which may not be well balanced, either! I’ve decided to use 20
-			classes, which are grouped into five categories. Players who find the 20 classes intimidating can thus
-			choose between one of these five categories and then between the four classes within that category.
-			Hopefully it is easier to make two simple choices than one complicated choice.</p></div>
-	<div class="column">
-		<ol>
+			classes, which are grouped into five categories, listed below. Players who struggle to pick a class can thus
+			choose between one of these five categories and then choose between one of the four classes within that
+			category. Hopefully it is easier to make two simple choices than one complicated choice.</p></div>
+	<div class="column" style="width: 120px;">
+		<ul>
 			<li><a href="#C2_Choosing_a_Class_Assassin">Assassin</a></li>
 			<li><a href="#C2_Choosing_a_Class_Barbarian">Barbarian</a></li>
 			<li><a href="#C2_Choosing_a_Class_Crusader">Crusader</a></li>
@@ -435,6 +437,10 @@
 			<li><a href="#C2_Choosing_a_Class_Mercenary">Mercenary</a></li>
 			<li><a href="#C2_Choosing_a_Class_Minstrel">Minstrel</a></li>
 			<li><a href="#C2_Choosing_a_Class_Monk">Monk</a></li>
+		</ul>
+	</div>
+	<div class="column" style="width: 120px; ">
+		<ul>
 			<li><a href="#C2_Choosing_a_Class_Prophet">Prophet</a></li>
 			<li><a href="#C2_Choosing_a_Class_Psychic">Psychic</a></li>
 			<li><a href="#C2_Choosing_a_Class_Ranger">Ranger</a></li>
@@ -445,7 +451,7 @@
 			<li><a href="#C2_Choosing_a_Class_Warg">Warg</a></li>
 			<li><a href="#C2_Choosing_a_Class_Warlock">Warlock</a></li>
 			<li><a href="#C2_Choosing_a_Class_Wizard">Wizard</a></li>
-		</ol>
+		</ul>
 	</div>
 </div>
 <p>Here are the five categories:</p>
@@ -462,7 +468,7 @@
 			spears, and halberds.
 		</td>
 		<td>Barbarian, Knight, Mercenary, Veteran</td>
-		<td>+1 Strength
+		<td><p>+1 Strength</p>
 			<p>Martial Arts proficiency</p>
 			<p>Heavy Attacks</p></td>
 	</tr>
@@ -472,7 +478,7 @@
 			and lightning.
 		</td>
 		<td>Psychic, Scholar, Warlock, Wizard</td>
-		<td>+1 Intelligence
+		<td><p>+1 Intelligence</p>
 			<p>Literacy Proficiency</p>
 			<p>Mana Regeneration</p></td>
 	</tr>
@@ -480,7 +486,7 @@
 		<td>Renegade</td>
 		<td>For those focused on stealth, sneak attacks, and subterfuge—or assasination and seduction!</td>
 		<td>Assassin, Bard, Thief, Tinker</td>
-		<td>+1 Dexterity
+		<td><p>+1 Dexterity</p>
 			<p>Stealth Proficiency</p>
 			<p>Vital Strike</p></td>
 	</tr>
@@ -489,7 +495,7 @@
 		<td>For those who want to work closely with nature and animals, living in harmony with the natural world.
 		</td>
 		<td>Druid, Marksman, Ranger, Warg</td>
-		<td>+1 Willpower
+		<td><p>+1 Willpower</p>
 			<p>Nature Proficiency</p>
 			<p>Beast Speech</p></td>
 	</tr>
@@ -498,7 +504,7 @@
 		<td>For those who wish to combine magical and martial prowess in devotion to a higher principle or power.
 		</td>
 		<td>Crusader, Inquisitor, Monk, Prophet</td>
-		<td>+1 Charisma
+		<td><p>+1 Charisma</p>
 			<p>Persuasion Proficiency</p>
 			<p>Meditation</p></td>
 	</tr>
@@ -868,7 +874,7 @@
 	<li><p>What was your first transformation like?</p></li>
 	<li><p>What made you give up your previous life and start adventuring?</p></li>
 </ol>
-<p><b>Core Ability</b>: <i>Transform</i>. You expend 6 ability points to transform into your chosen animal, for 12
+<p><b>Core Ability</b>: <i>Beast Form</i>. You expend 6 ability points to transform into your chosen animal, for 12
 	combat turns.</p>
 <p>Leveling Bonuses:</p>
 <p>At level 1, choose your animal form. You may choose any animal from this list:</p>
@@ -1021,7 +1027,44 @@
 	it allows lawful characters the flexibility to sometimes be driven by pure emotion, and also explains when and why
 	chaotic characters behave unpredictably—as opposed to just providing chaos for the sake of chaos.</p>
 <h4><a id="C2_Writing_a_Backstory"></a>Writing a Backstory</h4>
+<p>In a medieval or renaissance setting, very few characters are either physically or financially disposed to go
+	cavorting about on grand adventures slaying dragons and dispatching necromancers and whatnot. Most of the characters
+	in this sort of world are farmers, either working on a manor for their feudal lord or fending for themselves on the
+	edges of civilization. Whether they're tied down by social expectations, afraid of death and the unkown, or just too
+	damn comfortable, the simple fact is that <i>most people are not, and never will be, adventurers</i>.</p>
+<p>So who does go adventuring? If not the cowardly and mediocre, then only the strongest, boldest, and most daring
+	individuals remain. <i>That's you!</i> Whether young or old, rich or poor, man or woman, an adventurer is someone
+	who possesses <i>true courage</i>, and a compelling <i>vision</i>. Whatever your old life was, you're leaving it
+	behind to try something new and exciting. Dangerous, certainly, but also glorious.</p>
+<p>Your backstory can be as long or short as you want it to be. Write from your heart, and create a character that
+	resonates with you. As you write your backstory, try to think about what drove them to abandon their old life and
+	become an adventurer. Here are some general questions to get you started:</p>
+<ol>
+	<li>Is your character the sort to make elaborate plans, or do they react to the world around them on the fly?</li>
+	<li>Has anyone in their family ever been an adventurer? Are they inspired by legends of adventurers past?</li>
+	<li>Does the idea of protecting the innocent and vulnerable resonate with them?</li>
+	<li>Was there something wrong with their old life?</li>
+	<li>Were they displaced by a natural disaster, such as a fire or flood?</li>
+	<li>Has your character known financial extremes, such as wealth or poverty?</li>
+	<li>Does your character know what true defeat looks like? Meaning, to lose everything?</li>
+	<li>What do they hope to find as an adventurer? For example, fame, money, friendship, or true love. Revenge is also
+		a compelling motive, but so is adventure itself.
+	</li>
+	<li>Is your character leaving anything behind in their decision to go adventuring? Perhaps family, an ancestral home
+		or village, or a spouse?
+	</li>
+	<li>How does your character come across to others? Are they amiable, eccentric, softspoken, confident, or perhaps
+		dark and brooding?
+	</li>
+	<li>How does your character feel about the downsides of adventuring, such as death, injury, or poverty?</li>
+	<li>Are there any unresolved threads from their old life that could come back to haunt them, such as a sworn enemy,
+		estranged family, or the law?
+	</li>
+</ol>
+<p>If you're having trouble coming up with character ideas, you can let the universe decide. Roll a d12 and choose the
+	corresponding question from the list as a basis for your character.</p>
 <h4><a id="C2_Choosing_Starting_Equipment"></a>Choosing Starting Equipment</h4>
+<p>TODO</p>
 <h3><a id="C3"></a>What are my character's abilities?</h3>
 <p>In All That Glitters, characters have several important aspects that determine what they can do in and out of
 	combat:</p>
@@ -2007,7 +2050,7 @@
 		full main hand action. The weapon’s damage is also not affected by any attributes of the bearer, such as
 		strength or dexterity.</p></li>
 </ul>
-<p>Small Weapons</p>
+<h5>Small Weapons</h5>
 <p>Such weapons are those which are easily wielded in one hand, including small everyday tools improvised as weapons.
 	Typically wielded by civilians, and easily concealed. These weapons automatically have the light property, and can
 	be dual-wielded or used in an offhand. Most of these weapons use the d4 damage die, except the club and sickle.
@@ -2079,7 +2122,7 @@
 		<td>May be modified by a blacksmith to lose the Improvised trait, for 10 gold.</td>
 	</tr>
 </table>
-<p>Standard Weapons</p>
+<h5>Standard Weapons</h5>
 <p>These are proper weapon and sidearms, usable in one hand. Some of the larger entries are compatible with a two-handed
 	swing.</p>
 <table>
@@ -2196,7 +2239,7 @@
 		<td><br/></td>
 	</tr>
 </table>
-<p>Great Weapons</p>
+<h5>Great Weapons</h5>
 <p>Great Weapons are fully two-handed martial weapons that sacrifice precision for power, including polearms. Polearms,
 	in particular, are the primary weapons of infantry and possess excellent damage and reach. All of these weapons
 	possess the heavy modifier.</p>
@@ -2290,7 +2333,7 @@
 		<td></td>
 	</tr>
 </table>
-<p>Ranged Weapons</p>
+<h5>Ranged Weapons</h5>
 <p>Weapons designed to be thrown or to launch a projectile.</p>
 <table>
 	<tr>
@@ -2414,7 +2457,7 @@
 		<td>100/300</td>
 	</tr>
 </table>
-<p>Special Weapons</p>
+<h5>Special Weapons</h5>
 <p>Weapons with atypical abilities. Often not suitable for general use.</p>
 <table>
 	<tr>
@@ -2490,7 +2533,7 @@
 		<td>Requires 14 STR. Allows shield charge. Provides full cover when placed on the ground.</td>
 	</tr>
 </table>
-<h4><a id="Appendix_Gear"></a>Armor</h4>
+<h4><a id="Appendix_Armor"></a>Armor</h4>
 <p>Many forms of armor are available for the prospective adventurer. In general, nimble and dexterous characters such as
 	thieves and assassins prefer leather armor or brigandine. Barbarians, mercenaries, inquisitors, and most others
 	usually make use of medium armors, such as breastplate or chainmail. Knights, veterans, and crusaders often wear
@@ -2642,7 +2685,9 @@
 		<td>Confers resistance to fire damage. -1 Dexterity.</td>
 	</tr>
 </table>
-<h4>Beastiary</h4>
+<h4><a id="Appendix_Tools"></a>Tools</h4>
+<h4><a id="Appendix_Consumables"></a>Consumables</h4>
+<h4><a id="Appendix_Beastiary"></a>Beastiary</h4>
 <p>Animus Celestis (Gods)</p>
 <p>Animus Aetherea (Dragons, Demons, Angels, and Fey)</p>
 <p>Animus Mortalis (Humans and animal souls)</p>
