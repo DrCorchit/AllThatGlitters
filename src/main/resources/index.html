@@ -6,15 +6,16 @@
 	<link href='https://fonts.googleapis.com/css?family=Almendra Display' rel='stylesheet'>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>All That Glitters — Player's Handbook</title>   <!-- Liberation Serif -->
+	<title>All That Glitters — Player's Handbook</title>
+	<!-- Old font: Liberation Serif -->
 	<!-- h1=title h2=subtitle h3=chapter h4=section h5=subsection -->
 	<style>
-		html { font-family: "Calibri", serif; color: white; background-color: black; }
+		html { font-family: "Calibri"; color: white; background-color: black; }
 		h1 { font-family: "Almendra Display"; font-size: 36pt; text-align: center; color: #cb0; margin: 20px 0; }
 		h2, h3, h4, h5 { font-family: "Aboreto"; font-size: 20pt; }
 		h2 { font-size: 16pt; font-weight: normal; text-align: center; color: #cb0; margin: 20px 0; }
-		h3 { font-size: 24pt; text-align: center; color: #cb0; margin: 20px 0 0 0 }
-		h4, h5 { margin-bottom: 0px; margin-top: 20px; color: #aaa; }
+		h3 { font-size: 24pt; text-align: center; color: #cb0; margin: 30px 0 10px 0 }
+		h4, h5 { margin-bottom: 5px; margin-top: 20px; color: #aaa; }
 		h5 { font-size: 18px; }
 		h4:after, h5:after {
 			content:' ';
@@ -22,8 +23,7 @@
 			border: .5px solid #aaa;
         }
 
-		p  { font-size: 10pt; line-height: 110%; margin: 5px 0 10px 0; }
-		a  { font-size: 10pt; line-height: 110%; margin: 10px 0; }
+		p, a { font-size: 10pt; line-height: 110%; margin: 0 0 10px 0; }
 		a:link { color: #cb0 }
 		a:visited { color : #980 }
 		a:hover { color: #fff }
@@ -33,12 +33,39 @@
 		ol li { display: block; margin: 10px 0; }
 		ol li:before { content: counters(item, ".") ". "; counter-increment: item; }
 
-		table { border-collapse: collapse; width: 100%; }
+		table { border-collapse: collapse; width: 100%; margin: 10px 0 10px 0; }
 		tr:nth-child(odd) { background-color: #30302c; }
 		tr:nth-child(even) { background-color: #151515; }
 		tr:hover { background-color: #664; }
 		th { font-size: 14pt; border: 1px solid #aa8; padding: 6px; text-align: center; color: #aa8; background-color: #303033; }
 		td { font-size: 12pt; border: 1px solid #aa8; padding: 4px; }
+
+		.row { display: flex; }
+		.column {
+			flex: 10 10 auto
+			padding: 10px;
+		}
+
+		.collapsible {
+			background-color: #000;
+			color: #aa8;
+			cursor: pointer;
+			padding: 10px;
+			width: 100%;
+			border: 1px solid #30302c;
+			border-radius: 3px;
+			text-align: left;
+			outline: none;
+			font-family: "Calibri";
+			font-size: 14px;
+		}
+		.active, .collapsible:hover {
+			background-color: #664;
+		}
+		.content {
+			display: none;
+			overflow: hidden;
+		}
 	</style>
 </head>
 <body>
@@ -70,7 +97,7 @@
 			<li><a href="#C3_Skills">Skills</a></li>
 			<li><a href="#C3_Proficiency_Levels">Proficiency Levels</a></li>
 			<li><a href="#C3_Race_Class_and_Size">Race, Class, and Size</a></li>
-			<li><a href="#C3_Hit_Points">Hit Points</a></li>
+			<li><a href="#C3_Hitpoints">Hitpoints</a></li>
 			<li><a href="#C3_Abilities_and_Ability_Points">Abilities and Ability Points</a></li>
 			<li><a href="#C3_Mitigation">Mitigation</a></li>
 			<li><a href="#C3_Equipment">Equipment</a></li>
@@ -117,13 +144,14 @@
 <p>All That Glitters, like any tabletop roleplaying system, has three parts: The players, the Dungeon Master, and the
 	rulebook. Each part has a duty:</p>
 <ul>
-	<li><p>The players should understand the abilities of their characters, avoid cheating or metagaming, respect each
-		other and the DM, and give the DM feedback so that problems don’t arise out of the blue.</p></li>
-	<li><p>The DM should create a compelling setting, characters, and story and introduce challenging combat encounters
-		while avoiding favoritism and respecting player agency. </p></li>
+	<li><p>The players should understand the abilities of their characters and avoid cheating or metagaming. They should
+		also respect each other and the DM, and give the DM feedback so that problems don’t arise out of the blue.</p>
+	</li>
+	<li><p>The DM should create a compelling setting, characters, and story. They should create tension and introduce
+		challenging combat encounters while also avoiding favoritism and respecting player agency.</p></li>
 	<li><p>The rulebook should provide a framework where players can reason about the outcome of their actions and see
-		their characters progressing in potency, and assist the DM in creating encounters that are both unique and
-		appropriately difficult.</p></li>
+		their characters progressing in potency. It should also assist the DM in creating encounters that are both
+		unique and appropriately difficult.</p></li>
 </ul>
 <p>In order to play the game, you need a group of people who are willing to meet on a semi-regular basis for about 3-4
 	hours. You also need someone to run the game: the Dungeon Master. If you’re reading this and you don’t know who your
@@ -244,45 +272,11 @@
 	you're not trying to completely optimal character, you </p>
 <p>Creating a character in <i>All That Glitters</i> is really simple. Just follow these steps:</p>
 <ol>
-	<li><a href="#C2_Choosing_a_Race">Choose a Race</a>
-		<ol>
-			<li><a href="#C2_Choosing_a_Race_Human">Human</a></li>
-			<li><a href="#C2_Choosing_a_Race_Elf">Elf</a></li>
-			<li><a href="#C2_Choosing_a_Race_Dwarf">Dwarf</a></li>
-			<li><a href="#C2_Choosing_a_Race_Halfling">Halfling</a></li>
-			<li><a href="#C2_Choosing_a_Race_Orc">Orc</a></li>
-			<li><a href="#C2_Choosing_a_Race_Tiefling">Tiefling</a></li>
-			<li><a href="#C2_Choosing_a_Race_Aarakocra">Aarakocra</a></li>
-			<li><a href="#C2_Choosing_a_Race_Saurid">Saurid</a></li>
-		</ol>
-	</li>
-	<li><a href="#C2_Choosing_a_Class">Choose a Class</a>
-		<ol>
-			<li><a href="#C2_Choosing_a_Class_Assassin">Assassin</a></li>
-			<li><a href="#C2_Choosing_a_Class_Barbarian">Barbarian</a></li>
-			<li><a href="#C2_Choosing_a_Class_Crusader">Crusader</a></li>
-			<li><a href="#C2_Choosing_a_Class_Druid">Druid</a></li>
-			<li><a href="#C2_Choosing_a_Class_Inquisitor">Inquisitor</a></li>
-			<li><a href="#C2_Choosing_a_Class_Knight">Knight</a></li>
-			<li><a href="#C2_Choosing_a_Class_Mercenary">Marksman</a></li>
-			<li><a href="#C2_Choosing_a_Class_Mercenary">Mercenary</a></li>
-			<li><a href="#C2_Choosing_a_Class_Minstrel">Minstrel</a></li>
-			<li><a href="#C2_Choosing_a_Class_Monk">Monk</a></li>
-			<li><a href="#C2_Choosing_a_Class_Prophet">Prophet</a></li>
-			<li><a href="#C2_Choosing_a_Class_Psychic">Psychic</a></li>
-			<li><a href="#C2_Choosing_a_Class_Ranger">Ranger</a></li>
-			<li><a href="#C2_Choosing_a_Class_Scholar">Scholar</a></li>
-			<li><a href="#C2_Choosing_a_Class_Thief">Thief</a></li>
-			<li><a href="#C2_Choosing_a_Class_Tinker">Tinker</a></li>
-			<li><a href="#C2_Choosing_a_Class_Veteran">Veteran</a></li>
-			<li><a href="#C2_Choosing_a_Class_Warg">Warg</a></li>
-			<li><a href="#C2_Choosing_a_Class_Warlock">Warlock</a></li>
-			<li><a href="#C2_Choosing_a_Class_Wizard">Wizard</a></li>
-		</ol>
-	</li>
-	<li>Write a backstory.</li>
-	<li>Choose an alignment and character goals.</li>
-	<li>Choose starting gear.</li>
+	<li><a href="#C2_Choosing_a_Race">Choose a Race</a></li>
+	<li><a href="#C2_Choosing_a_Class">Choose a Class</a></li>
+	<li><a href="#C2_Choosing_an_Alignment">Choose an Alignment</a></li>
+	<li><a href="#C2_Writing_a_Backstory">Write a backstory</a></li>
+	<li><a href="#C2_Choosing_Starting_Equipment">Choose starting Equipment</a></li>
 </ol>
 <h4><a id="C2_Choosing_a_Race"></a>Races</h4>
 <p>I provide seven example races here, representing some of my favorite repeat offenders in the fantasy genre. That
@@ -408,23 +402,52 @@
 	<li>No stat bonus should exceed +2, and no stat penalty should exceed -2.</li>
 	<li>The sum of all racial bonuses minus all penalties should equal 1.</li>
 	<li>Every race should have at least one proficiency bonus, but no more than 2.</li>
-	<li>Ideally, the player should have some choices regarding either subraces, attributes, or proficiencies.
-	</li>
+	<li>Ideally, the player should have some choices regarding either subraces, attributes, or proficiencies.</li>
 	<li>Be careful making races that give +2 bonuses to both strength and dexterity, or both intelligence and will. Such
 		races would make very strong warriors or wizards respectively with very little downside.
 	</li>
 </ol>
 <h4><a id="C2_Choosing_a_Class"></a>Classes</h4>
-<p>For a given character, their combat class answers the question <i>how do I fight? </i>and also suggests their
-	background or origin story. For example, the barbarian fights with reckless melee attacks, showing little regard for
-	personal safety or technique. Accordingly, a barbarian would be more likely to hail from a remote farming village or
-	an uncivilized tribe than from a royal court or a monastery.</p>
-<p>There is some ongoing debate as to the ideal number of classes in a TTRPG system. Too few classes, and players are
-	less likely to find one that really captures their interest and vision. Too many, and the player is at risk of being
-	drowned by excess choices, which may not be well balanced, either. I’ve decided to use 20 classes, which are grouped
-	into five categories. Players who find the 20 classes intimidating can thus choose between one of these five
-	categories, and then between the four classes within that category. Hopefully it is easier to make two simple
-	choices than one complicated choice.</p>
+<ol>
+	<li><a href="#C2_Choosing_a_Class_Assassin">Assassin</a></li>
+	<li><a href="#C2_Choosing_a_Class_Barbarian">Barbarian</a></li>
+</ol>
+<div class="row">
+	<div class="column"><p>For a given character, their combat class answers the question <i>how do I fight? </i>and
+		also suggests their background or origin story. For example, the barbarian fights with reckless melee attacks,
+		showing little regard for personal safety or technique. Accordingly, a barbarian would be more likely to hail
+		from a remote farming village or an uncivilized tribe than from a royal court or a monastery.</p>
+		<p>There is some ongoing debate as to the ideal number of classes in a TTRPG system. Too few classes, and
+			players are less likely to find one that really captures their interest and vision. Too many, and the player
+			is at risk of being drowned by excess choices—which may not be well balanced, either! I’ve decided to use 20
+			classes, which are grouped into five categories. Players who find the 20 classes intimidating can thus
+			choose between one of these five categories and then between the four classes within that category.
+			Hopefully it is easier to make two simple choices than one complicated choice.</p></div>
+	<div class="column">
+		<ol>
+			<li><a href="#C2_Choosing_a_Class_Assassin">Assassin</a></li>
+			<li><a href="#C2_Choosing_a_Class_Barbarian">Barbarian</a></li>
+			<li><a href="#C2_Choosing_a_Class_Crusader">Crusader</a></li>
+			<li><a href="#C2_Choosing_a_Class_Druid">Druid</a></li>
+			<li><a href="#C2_Choosing_a_Class_Inquisitor">Inquisitor</a></li>
+			<li><a href="#C2_Choosing_a_Class_Knight">Knight</a></li>
+			<li><a href="#C2_Choosing_a_Class_Mercenary">Marksman</a></li>
+			<li><a href="#C2_Choosing_a_Class_Mercenary">Mercenary</a></li>
+			<li><a href="#C2_Choosing_a_Class_Minstrel">Minstrel</a></li>
+			<li><a href="#C2_Choosing_a_Class_Monk">Monk</a></li>
+			<li><a href="#C2_Choosing_a_Class_Prophet">Prophet</a></li>
+			<li><a href="#C2_Choosing_a_Class_Psychic">Psychic</a></li>
+			<li><a href="#C2_Choosing_a_Class_Ranger">Ranger</a></li>
+			<li><a href="#C2_Choosing_a_Class_Scholar">Scholar</a></li>
+			<li><a href="#C2_Choosing_a_Class_Thief">Thief</a></li>
+			<li><a href="#C2_Choosing_a_Class_Tinker">Tinker</a></li>
+			<li><a href="#C2_Choosing_a_Class_Veteran">Veteran</a></li>
+			<li><a href="#C2_Choosing_a_Class_Warg">Warg</a></li>
+			<li><a href="#C2_Choosing_a_Class_Warlock">Warlock</a></li>
+			<li><a href="#C2_Choosing_a_Class_Wizard">Wizard</a></li>
+		</ol>
+	</div>
+</div>
 <p>Here are the five categories:</p>
 <table>
 	<tr>
@@ -959,7 +982,7 @@
 	to the spell equal to your willpower modifier.</p>
 <p>At level 2, </p>
 <p>At level 3, you </p>
-<h4>Alignment</h4>
+<h4><a id="C2_Choosing_an_Alignment"></a>Choosing an Alignment</h4>
 <p>In keeping with traditional TTPRGs, we use a simple alignment system to roughly track a character’s motives. The
 	alignment chart has two axes: <i>lawfulness </i>and <i>morality</i>. Lawfulness describes a character’s
 	predictability and their faith (or lack of faith) in ideals. Meanwhile, morality describes a character’s level of
@@ -981,7 +1004,6 @@
 		<td>Chaotic Evil</td>
 	</tr>
 </table>
-<p><a id="C2_Choosing_an_Alignment"></a>Choosing an Alignment</p>
 <p>A character’s alignment provides a rough guide to how they intend to behave. Of course, a character’s alignment can
 	change over time, and not all actions are perfectly representative of their alignment. Also, certain actions don’t
 	have a middle ground. You either run into a burning orphanage to save the children, or you don’t. Such circumstances
@@ -998,15 +1020,17 @@
 	reason and logic, while chaotic characters behave according to emotion. One advantage of this interpretation is that
 	it allows lawful characters the flexibility to sometimes be driven by pure emotion, and also explains when and why
 	chaotic characters behave unpredictably—as opposed to just providing chaos for the sake of chaos.</p>
+<h4><a id="C2_Writing_a_Backstory"></a>Writing a Backstory</h4>
+<h4><a id="C2_Choosing_Starting_Equipment"></a>Choosing Starting Equipment</h4>
 <h3><a id="C3"></a>What are my character's abilities?</h3>
 <p>In All That Glitters, characters have several important aspects that determine what they can do in and out of
 	combat:</p>
 <ul>
 	<li><a href="#C3_Attributes">Attributes</a></li>
 	<li><a href="#C3_Skills">Skills</a></li>
-	<li><a href="#C3_Race_Class_and_Size">Proficiency Levels</a></li>
-	<li><a href="#C3_Hit_Points">Race, Class, and Size</a></li>
-	<li><a href="#C3S5">Hit Points</a></li>
+	<li><a href="#C3_Proficiency_Levels">Proficiency Levels</a></li>
+	<li><a href="#C3_Race_Class_and_Size">Race, Class, and Size</a></li>
+	<li><a href="#C3_Hitpoints">Hitpoints</a></li>
 	<li><a href="#C3_Abilities_and_Ability_Points">Ability Points and Abilities</a></li>
 	<li><a href="#C3_Mitigation">Mitigation</a></li>
 	<li><a href="#C3_Equipment">Equipment</a></li>
@@ -1193,36 +1217,7 @@
 		<td>The ability to stay alive, including the ability to hunt and live off the land.</td>
 	</tr>
 </table>
-<p>Certain skills have special applications. For example, persuasion can be used to haggle with merchants, as follows:
-	The player may attempt to haggle with a merchant up to three times, with successively higher DT for each successful
-	haggle. If the player fails any haggle, they cannot continue to haggle and the discount for that item is not
-	increased further. If the player rolls a critical fail on any haggle, the merchant becomes irritated and removes all
-	discounts completely.</p>
-<p>After attempting to haggle a merchant, the same merchant will not allow themselves to be haggled again for some time,
-	unless they are fond of the adventuring party or from a culture where haggling is expected.</p>
-<table>
-	<tr>
-		<th>Haggle Attempt</th>
-		<th>DT</th>
-		<th>Price Reduction</th>
-	</tr>
-	<tr>
-		<td>1</td>
-		<td>15</td>
-		<td>15%</td>
-	</tr>
-	<tr>
-		<td>2</td>
-		<td>20</td>
-		<td>30%</td>
-	</tr>
-	<tr>
-		<td>3</td>
-		<td>25</td>
-		<td>50%</td>
-	</tr>
-</table>
-<h4><a id="C3_Race_Class_and_Size"></a>Proficiency Levels</h4>
+<h4><a id="C3_Proficiency_Levels"></a>Proficiency Levels</h4>
 <p>There are five levels of proficiency in each skill, as follows:</p>
 <table>
 	<tr>
@@ -1252,7 +1247,7 @@
 <p>When players obtain proficiency bonuses to the same skill from multiple sources, they do not combine to advance one’s
 	proficiency in that skill to the next level. The only exception to this rule is that proficiency bonuses from a
 	player’s race and class can be combined, allowing a player to begin the game with expert level in that skill.</p>
-<h4><a id="C3_Hit_Points"></a>Race, Class, and Size</h4>
+<h4><a id="C3_Race_Class_and_Size"></a>Race, Class, and Size</h4>
 <p>Every character belongs to a race, which provides certain starting bonuses and determines the limits of their
 	attribute scores. Race cannot be changed after a character is created. Examples of races include humans, elves, and
 	dwarves.</p>
@@ -1306,7 +1301,7 @@
 <p>In addition to a race, each character has a class, which determines how they fight. Character’s classes confer some
 	bonuses immediately, but most bonuses are unlocked as the player levels up. Unlike race, classes can be changed
 	after a character is created, under certain circumstances.</p>
-<h4><a id="C3S5"></a>Hit Points</h4>
+<h4><a id="C3_Hitpoints"></a>Hit Points</h4>
 <p>Hit points (HP) are a resource that cause the player to fall unconscious when depleted. Since the character cannot
 	move or fight when unconscious, keeping HP from falling to zero is extremely important. There are two sets of rules
 	that govern what happens when a player falls unconscious: permadeath and modern.</p>
@@ -1361,37 +1356,17 @@
 	is increased by wearing armor and equipping shields, while parry chance is increased by taking the parry action
 	while wielding a melee weapon. </p>
 <h4><a id="C3_Equipment"></a>Equipment</h4>
-<p>The final aspect of each player character is their equipment. Equipment categorized into weapons, gear, and items,
-	which are further subcategorized by use.</p>
-<p><a href="#Appendix_Weapons">Weapons</a> fall into five categories:</p>
+<p>The final aspect of your character is their equipment. Equipment is categorized into weapons, gear, tools, and
+	consumables. As you might expect, weapons deal damage and enable combat maneuvers while gear confers passive (often
+	defensive) bonuses. Meanwhile, tools are usually reusable and convey minor bonuses, while consumables (such as
+	potions and scrolls) convey more powerful one-time abilities. In most cases, your character will carry one or two
+	weapons, some type of armor, and an adventurer's pack containing diverse and sundry items for the odd occasion.</p>
+<p>For more info on equipment, see the following appendices:</p>
 <ul>
-	<li><p>Small Weapons (Daggers, improvised) </p></li>
-	<li><p>Standard Weapons (Swords, Maces, Morningstars) </p></li>
-	<li><p>Great Weapons (Longswords, Greataxes, Polearms)</p></li>
-	<li><p>Ranged (Longbow, Crossbow, Musket, Javelin)</p></li>
-	<li><p>Special Weapons (Shields, Whips, Flails, Hook Swords)</p></li>
-</ul>
-<p>A player can carry up to two weapons, as follows:</p>
-<ul>
-	<li><p>A single greatweapon, carried in a two-handed grip</p></li>
-	<li><p>A standard weapon and a shield</p></li>
-	<li><p>A standard weapon, plus a small weapon in the offhand</p></li>
-	<li><p>Two light weapons, such as two shortswords </p></li>
-	<li><p>Two small weapons, such as two daggers </p></li>
-	<li><p>Any standard or small weapon, with the offhand kept free in order to cast spells</p></li>
-</ul>
-<p>Gear falls into these categories:</p>
-<ul>
-	<li><p>Armor</p></li>
-	<li><p>Clothing</p></li>
-	<li><p>Jewelry</p></li>
-</ul>
-<p>Items fall into these categories:</p>
-<ul>
-	<li><p>Potions</p></li>
-	<li><p>Scrolls</p></li>
-	<li><p>Tools</p></li>
-	<li><p>Other</p></li>
+	<li><a href="#Appendix_Weapons">Weapons</a></li>
+	<li><a href="#Appendix_Armor">Armor</a></li>
+	<li><a href="#Appendix_Tools">Tools</a></li>
+	<li><a href="#Appendix_Consumables">Consumables</a></li>
 </ul>
 <h3><a id="C4"></a>How does my character become stronger?</h3>
 <p>In All That Glitters, there are three ways that characters increase their power level: leveling, training, and
@@ -1874,6 +1849,36 @@
 <h4><a id="C6_Pickpocket"></a>Pickpocket</h4>
 <h4><a id="C6_Lockpicking"></a>Lockpicking</h4>
 <h4><a id="C6_Haggling"></a>Haggling</h4>
+<p>Players can attempt to haggle merchants using the persuasion skill. A merchant can be haggled up to three times,
+	offering successively larger discounts if the player is able to pass successively higher DT persuasion checks. If
+	the player fails any haggle, the merchant becomes obstinate and the discount for that item cannot be increased
+	further. If the player fails to surpass DT 10 on any haggle, the merchant becomes irritated and removes all
+	discounts completely.</p>
+<p>After attempting to haggle a merchant, the same merchant will not allow themselves to be haggled again for some time,
+	unless they are fond of the adventuring party or from a culture where haggling is expected. The DM may impose
+	situational bonuses or penalties to haggling accordingly.</p>
+<table>
+	<tr>
+		<th>Haggle Attempt</th>
+		<th>DT</th>
+		<th>Price Reduction</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>15</td>
+		<td>15%</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>20</td>
+		<td>25%</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>25</td>
+		<td>50%</td>
+	</tr>
+</table>
 <h3><a id="Appendices"></a>Appendices</h3>
 <h4><a id="Appendix_Spells"></a>Spells</h4>
 <p>Name: Arcane Flames</p>
@@ -1962,6 +1967,16 @@
 	Escape</i>. Using a main hand action, the player can throw the grappling hook to any point overhead in a 20 foot
 	radius and climb using their movement points.</p>
 <h4><a id="Appendix_Weapons"></a>Weapons</h4>
+<p>A player can carry up to two weapons, as follows:</p>
+<ul>
+	<li><p>A single greatweapon, carried in a two-handed grip</p></li>
+	<li><p>A standard weapon and a shield</p></li>
+	<li><p>A standard weapon, plus a small weapon in the offhand</p></li>
+	<li><p>Two light weapons, such as two shortswords or two rapiers</p></li>
+	<li><p>Two small weapons, such as two daggers </p></li>
+	<li><p>A standard weapon, with the offhand kept free in order to cast spells</p></li>
+	<li><p>A small weapon, with the main hand kept free in order to cast more powerful spells</p></li>
+</ul>
 <p>Certain weapons have special properties, which affect how they behave:</p>
 <ul>
 	<li><p><b>Piercing</b>: The weapon deals piercing damage only.</p></li>
@@ -2672,5 +2687,22 @@
 	are suspected to have been creating as a byproduct of entangled magical processes.</p>
 <h1>...Is Not Gold!</h1>
 <h2>Thank you for reading.</h2>
+<!-- Enables collapsible functionality -->
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+</script>
 </body>
 </html>
