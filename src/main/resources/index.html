@@ -37,7 +37,7 @@
 		tr:nth-child(even) { background-color: #151515; }
 		tr:hover { background-color: #664; }
 		th { font-size: 14pt; border: 1px solid #aa8; padding: 6px; text-align: center; color: #aa8; background-color: #303033; }
-		td { font-size: 12pt; border: 1px solid #aa8; padding: 4px; }
+		td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
 
 		.row { display: flex; flex-wrap: nowrap; justify-content:flex-start; }
 		.column {
@@ -71,6 +71,25 @@
 <body>
 <h1>All That Glitters</h1>
 <h2>A Fantasy Renaissance Tabletop Role-Playing Game<br/><br/>Player's Handbook</h2>
+<p>All That Glitters is a fantasy tabletop role-playing game set in a world inspired by the late medieval to early
+	renaissance period. There's fantasy races like dwarves and elves, knights in shining armor, some gunpowder, and
+	plenty of magic. The central theme of the game is the call of adventure, where souls of every stripe leave behind
+	the comfortable and familiar in order to bravely explore the unknown, fight evil, or find their fortune—often all
+	three.</p>
+<p>The main draw of the game is its focus on loot (both gold and magical items) as a parallel leveling system alongside
+	combat class leveling. more traditional leveling. Although most of each character's power still comes from their
+	class abilities, </p>
+<p>In terms of gameplay, the game has three goals:</p>
+<ol>
+	<li>To increase the importance of loot.</li>
+	<li>To provide guidelines for creating balanced homebrew content</li>
+	<li>To simplify combat, making it faster and more accessible.</li>
+	<li>To increase flexibility when leveling characters, without sacrificing variety.</li>
+	<li>To increase</li>
+</ol>
+<p>
+	The point of this game is to fix DND problems: Too little class flexibility. Too much power gained from class levels
+	(reduces importance of loot) Non-casting stats have little to no use CR doesn't work well </p>
 <p>This guide exists to answer the following questions for players:</p>
 <ol>
 	<li><a href="#C1">How do I play the game?</a>
@@ -249,6 +268,7 @@
 	<li>BC: Block Chance</li>
 	<li>DC: Dodge Chance</li>
 	<li>MIT: Mitigation</li>
+	<li>CT: Critical Threshold</li>
 </ul>
 <p style="margin-left: 25px;">Note: DC can easily be confused with difficulty class, which is used in other games and
 	often abbreviated DC. Difficulty class is not used in this game, but expresses the same concept as difficulty
@@ -270,8 +290,9 @@
 </ul>
 <h3><a id="C2"></a>How do I create a character?</h3>
 <p>Now that you know the basics, you're ready to create a character. This section of the text will refer to some
-	mechanics which aren't explained until later sections, so feel free to read later sections first as necessary. If
-	you're not trying to completely optimal character, you </p>
+	mechanics which aren't explained until later sections. If that bothers you, you can skip ahead to later chapters and
+	revisit this section later. However, you don't need to perfectly understand the rules to make an excellent
+	character. I recommend at least a quick read of this chapter before moving on.</p>
 <p>Creating a character in <i>All That Glitters</i> is really simple. Just follow these steps:</p>
 <ol>
 	<li><a href="#C2_Choosing_a_Race">Choose a Race</a></li>
@@ -281,11 +302,11 @@
 	<li><a href="#C2_Choosing_Starting_Equipment">Choose starting Equipment</a></li>
 </ol>
 <h4><a id="C2_Choosing_a_Race"></a>Races</h4>
-<p>I provide seven example races here, representing some of my favorite repeat offenders in the fantasy genre. That
+<p>There are eight example races here, representing some of my favorite repeat offenders from the fantasy genre. That
 	said, homebrewing new races is very much in the spirit of All that Glitters, and if a race you want to play isn’t in
 	this list, you absolutely should create it. Alternatively, feel free to create your own lore for any of these
-	races—don’t let my ideas stifle yours! Further on, I’ll explain some guidelines for creating new races (without
-	upsetting gameplay balance).</p>
+	races—don’t let my ideas stifle yours! Further on, I’ll explain some guidelines for creating new races while also
+	respecting gameplay balance.</p>
 <p>Without further ado:</p>
 <a id="C2_Choosing_a_Race_Human"></a><h5>Human</h5>
 <p>Overall, humans are proud, robust, and athletic. I daresay we are altogether quite handsome. Men average around 5’9”
@@ -294,7 +315,7 @@
 <p>Although we humans may seem an uninspiring choice to some, it’s all a matter of perspective. To dwarves, we are tall
 	and regal. To elves, we are robust and warlike. Among saurids, we are called slow and loud. And so it goes.</p>
 <p>Human characters start with a single bonus point in an ability of their choice, and may take a level of proficiency
-	in any skill.</p>
+	in any skill. Humans are well suited to any class.</p>
 <a id="C2_Choosing_a_Race_Elf"></a><h5>Elf</h5>
 <p>Graceful and elegant, elves exemplify much of what humans aspire to be. In height, male elves average about 6’3”;
 	female elves about 5’9”. Weight varies between 120-200 lbs. They are barely heavier than humans, despite their
@@ -327,7 +348,8 @@
 <p>Despite their unusual habits and short stature, dwarves are actually a fairly well balanced race that can excel in
 	many roles. Dwarves gain +1 STR and +1 WILL at the cost of -2 SPD, and choose an additional +1 in STR or WILL. Also,
 	dwarves have a keen sense for gold and have advantage on perception and persuasion checks when searching for
-	treasure or bartering with merchants. All dwarves have proficiency in defense.</p>
+	treasure or bartering with merchants. All dwarves have proficiency in defense. Dwarves make particularly fearsome
+	warriors, but are a solid choice in many other roles.</p>
 <a id="C2_Choosing_a_Race_Halfling"></a><h5>Halfling</h5>
 <p>The shortest of the races, halfling men average 3’9” in height. Their women are yet shorter, scantly 3’6” by average.
 	A tall halfling may resemble a short dwarf, though the former will be discernible by his slender build and wispy
@@ -338,7 +360,8 @@
 	reputation: it is said that nearly a third of them are criminals. As thieves, they are exceedingly sly.</p>
 <p>Halflings tend to be unbalanced characters, having a -2 penalty to STR and a -2 penalty to SPD. They make up for this
 	with a +2 to DEX, and another +2 to INT, CHA, or WILL. Urban halflings start with proficiency in parkour and sleight
-	of hand, while rural halflings start with proficiency in nature and survival. </p>
+	of hand, while rural halflings start with proficiency in nature and survival. They excel as mages, zealots, and
+	renegades, but struggle as warriors.</p>
 <a id="C2_Choosing_a_Race_Orc"></a><h5>Orc</h5>
 <p>Stout and rippling with muscle, orcs are warriors to the last. Their menfolk are nearly as tall as the elves, around
 	6’, and their women are barely any shorter, around 5’10”. Fully grown, they weigh somewhere between 180 to 300
@@ -384,12 +407,11 @@
 <a id="C2_Choosing_a_Race_Saurid"></a><h5>Saurid</h5>
 <p>Slinking, skulking, scurrying—these are words befitting a saurid. Treading the slender line between man and beast,
 	they are a fierce folk. As much lizard as man, they possess scaly hides, long tails, and snouts lined with razor
-	sharp teeth. Some say they are cruel, but I having observed them closely on more than one occasion, I would rather
+	sharp teeth. Some say they are cruel, but having observed them closely on more than one occasion, I would rather
 	describe them as practical.</p>
-<p>A saurid is typically shorter than a man, but they grow all their lives until extreme old age. Some can become quite
-	large. Their females are a bit taller and more muscular than their males. In terms of height, they reach about 5’6”
-	while the male might reach only 5’2 or so. They are not long lived, and seventy years is a ripe age for a
-	saurid.</p>
+<p>A saurid is typically shorter than a man, but they grow all their lives until old age. Some can become quite large.
+	Their females are a bit taller and more muscular than their males. In terms of height, they reach about 5’6” while
+	the male might reach only 5’2 or so. They are not long-lived, and seventy years is a ripe age for a saurid.</p>
 <p>The saurids I have seen are fairly xenophobic, and live in colonies inside caves usually near water. They hunt, fish,
 	and raise their hatchlings quietly, having few dealings with man or elf, except for the occasional territorial
 	clash. They have developed a unique sort of architecture, and their colonies are quite remarkable, often lavishly
@@ -399,14 +421,14 @@
 <p>Saurids gain +2 to STR and SPD, at the cost of -2 INT and -1 CHA. They possess the gift of darkvision, able to see in
 	near total darkness. They have deficiency in literacy, but may take proficiency in two out of initiative, stealth,
 	or perception.</p>
-<p>When creating new races, consider following these general:</p>
+<p>When creating new races, consider following these general guidelines:</p>
 <ol>
 	<li>No stat bonus should exceed +2, and no stat penalty should exceed -2.</li>
-	<li>The sum of all racial bonuses minus all penalties should equal 1.</li>
+	<li>The sum of all attribute bonuses minus all penalties should equal 1.</li>
 	<li>Every race should have at least one proficiency bonus, but no more than 2.</li>
 	<li>Ideally, the player should have some choices regarding either subraces, attributes, or proficiencies.</li>
 	<li>Be careful making races that give +2 bonuses to both strength and dexterity, or both intelligence and will. Such
-		races would make very strong warriors or wizards respectively with very little downside.
+		races make very strong warriors or wizards respectively with very little downside.
 	</li>
 </ol>
 <h4><a id="C2_Choosing_a_Class"></a>Classes</h4>
@@ -464,31 +486,31 @@
 	</tr>
 	<tr>
 		<td>Warrior</td>
-		<td>For those who want to play as someone sturdy, and wear heavy armor while fighting with weapons like swords,
+		<td>For those who want to play as someone sturdy, wearing heavy armor and fighting with weapons like swords,
 			spears, and halberds.
 		</td>
 		<td>Barbarian, Knight, Mercenary, Veteran</td>
 		<td><p>+1 Strength</p>
 			<p>Martial Arts proficiency</p>
-			<p>Heavy Attacks</p></td>
+			<p>Ability: Heavy Attack</p></td>
 	</tr>
 	<tr>
 		<td>Mage</td>
-		<td>For those who wish to wield mystical powers, casting arcane spells and wielding the elements of frost, fire,
-			and lightning.
+		<td>For those who wish to wield mystical powers, casting arcane spells and unleashing the elements of frost,
+			fire, and lightning.
 		</td>
 		<td>Psychic, Scholar, Warlock, Wizard</td>
 		<td><p>+1 Intelligence</p>
 			<p>Literacy Proficiency</p>
-			<p>Mana Regeneration</p></td>
+			<p>Ability: Mana Regeneration</p></td>
 	</tr>
 	<tr>
 		<td>Renegade</td>
-		<td>For those focused on stealth, sneak attacks, and subterfuge—or assasination and seduction!</td>
+		<td>For those focused on stealth, sneak attacks, and subterfuge—or assassination and seduction!</td>
 		<td>Assassin, Bard, Thief, Tinker</td>
 		<td><p>+1 Dexterity</p>
 			<p>Stealth Proficiency</p>
-			<p>Vital Strike</p></td>
+			<p>Ability: Precision Strike</p></td>
 	</tr>
 	<tr>
 		<td>Naturalist</td>
@@ -497,7 +519,7 @@
 		<td>Druid, Marksman, Ranger, Warg</td>
 		<td><p>+1 Willpower</p>
 			<p>Nature Proficiency</p>
-			<p>Beast Speech</p></td>
+			<p>Ability: Beast Speech</p></td>
 	</tr>
 	<tr>
 		<td>Zealot</td>
@@ -506,25 +528,30 @@
 		<td>Crusader, Inquisitor, Monk, Prophet</td>
 		<td><p>+1 Charisma</p>
 			<p>Persuasion Proficiency</p>
-			<p>Meditation</p></td>
+			<p>Ability: Meditation</p></td>
 	</tr>
 </table>
-<p style="margin-left: 25px;">Note: Starting bonuses for each class category are in addition to the starting bonus for
-	each class.</p>
-<p>In addition to each category’s attribute and proficiency bonus, each class category has a special bonus move they can
-	make shared between all characters in that category. Here’s what each ability does:</p>
+<p>In addition to each category’s attribute and proficiency bonus, each class category has a special bonus ability
+	shared between all characters in that category. Here’s what each ability does:</p>
 <ul>
-	<li><p><b>Heavy Attack</b>: When making a weapon attack with your main hand, you may expend 1 AP to roll the damage
-		die twice, taking the higher result.</p></li>
-	<li><p><b>Mana Regeneration</b>: When starting a combat turn with less than one AP, gain an ability point.</p>
+	<li><b>Heavy Attack</b>: When making a strength-based weapon attack, you may expend 2 AP to increase the damage of
+		your attack. If it hits, you may roll your weapon's damage die a second time and add its value to the total
+		damage for the attack.
 	</li>
-	<li><p><b>Vital Strike</b>: When making a regular weapon attack, you may expend 1 ability point to lower the
-		critical threshold by 2. (i.e. from 20 to 18, under normal circumstances.) </p></li>
-	<li><p><b>Beast Speech</b>: You may spend 1 AP to gain the ability to converse with beasts. This ability lasts for
-		one hour.</p></li>
-	<li><p><b>Meditation</b>: Once per long rest and while outside of combat, you may spend 1 AP to meditate or pray to
-		your deity. You may increase 1 attribute of your choice by 1 for one hour, not exceeding the hard cap. </p></li>
+	<li><b>Mana Regeneration</b>: When starting a combat turn with less than two AP, gain one ability point.</li>
+	<li><b>Precision Strike</b>: When making a dexterity-based weapon attack, you may expend 2 AP to gain +3 to hit on
+		the attack roll and lower the critical threshold by 1. (i.e. from 20 to 19, typically.)
+	</li>
+	<li><b>Beast Speech</b>: You know the language of beasts, and may converse with them at any time. Once a day, you
+		may expend 5 AP to attempt a persuasion check to convince an animal to fight by your side for 1 hour. The
+		difficulty of the check depends on the type of animal being recruited.
+	</li>
+	<li><b>Meditation</b>: Once per long rest and while outside of combat, you may expend 5 AP to meditate or pray to
+		your deity. You may increase an attribute of your choice by 2 for one hour, not exceeding the hard cap.
+	</li>
 </ul>
+<p> In addition to these bonuses, the proficiency bonus of the base skill for each category advances to the next level
+	at level 5 and again at level 10. This bonus cannot increase the proficiency bonus beyond mastery.</p>
 <p>A detailed explanation of classes is given below, in alphabetical order.</p>
 <h5><a id="C2_Choosing_a_Class_Assassin"></a>Assassin</h5>
 <p>An assassin’s art is a quick and sure death, delivered without remorse or hesitation. Typically employed by a
@@ -532,56 +559,61 @@
 	weapons of their own targets. This makes them extremely versatile adventurers, able to adapt to nearly any combat
 	situation as the need arises. </p>
 <p>While writing the backstory for an assassin, consider the following:</p>
-<ol>
-	<li><p>Who has hired you in the past?</p></li>
-	<li><p>How many targets have you killed? </p></li>
-	<li><p>Do you remember your first kill?</p></li>
-	<li><p>How did you acquire your unique skillset? </p></li>
-	<li><p>Does your character struggle with any form of guilt?</p></li>
-	<li><p>What made you give up your previous life and start adventuring?</p></li>
-</ol>
+<ul>
+	<li>Who has hired you in the past?</li>
+	<li>How many targets have you killed?</li>
+	<li>Do you remember your first kill?</li>
+	<li>How did you acquire your unique skillset?</li>
+	<li>Does your character struggle with any form of guilt?</li>
+	<li>What made you give up your previous life and start adventuring?</li>
+</ul>
 <p><b>Alignment Suggestion</b>: Non-Good</p>
-<p><b>Core Ability</b>: <i>Assassination.</i>More than just a lucky shot, a successful assassination is the result of
-	careful planning. You may expend 3 willpower to convert a critical hit into an assassination, damaging an enemy by
-	30, or one-third their maximum health bar, whichever is higher. When triggered, assassination replaces your normal
-	weapon damage.</p>
+<p><b>Core Ability</b>: <i>Assassination.</i>You may expend 2 willpower to convert an ordinary attack into an
+	assassination attempt. If the attack results in a critical hit, it becomes an assassination, damaging an enemy by 15
+	in addition to your normal weapon damage.</p>
+<p style="margin-left: 25px;">Note: assassination attempts can be combined with other moves, such as precision
+	strike.</p>
+<p>For their initial equipment, players choose one of the following: </p>
+<ol>
+	<li></li>
+</ol>
 <p><b>Leveling Bonuses</b>:</p>
 <p>At level 1, you gain +2 dexterity and proficiency in accuracy.</p>
 <p>At level 2, learn <i>Hideaway.</i>Wherever you travel, you know the location of at least one secret hideout, lair,
 	NPC, or dead drop location. Whenever the party takes a long rest, you may choose to visit this location instead of
-	receiving the benefits of a long rest. When hideaway is activated, you may receive an assassination contract. The
-	contract names an NPC and a bounty of at least 100 gold to be paid upon the contract’s completion. If the NPC
-	perishes in any way while you have the contract, you receive the specified sum the following morning. You do not
-	have to visit the hideaway, and the bounty is paid in full even if they did not perish as a result of your actions
-	or you were witnessed during the commission of the crime. You may not have more than one assassination contract at a
-	time, but you may cancel an active contract in order to receive a new one, at the DM’s discretion. You may not visit
-	your hideaway if you are imprisoned, within a dungeon, or sufficiently deep in the wilderness.</p>
-<p>If at any point you disclose the location of the hideaway (whether intentional or not), someone dispatches 1d4
-	assassins to terminate you, who attack your party during a night’s rest. If this happens, you cannot use the
-	hideaway ability again for 1d10 long rests.</p>
-<p style="margin-left: 25px;">Note: If the party spends multiple nights in or near a town, it is plausible that the
-	Assassin character would be able to gain the benefits of a full rest on one night, while visiting their secret
+	receiving the benefits of a long rest.</p>
+<p>While at your hideout, you may accept an assassination contract. The contract names an NPC and a bounty of at least
+	100 gold to be paid upon the contract’s completion. If the NPC perishes for any reason while you have the contract,
+	you receive the specified sum the following morning. You do not have to visit the hideaway to receive payment. You
+	may not have more than one assassination contract at a time, but you may cancel an active contract in order to
+	receive a new one. You may not visit your hideaway if you are imprisoned, within a dungeon, or sufficiently deep in
+	the wilderness.</p>
+<p style="margin-left: 25px;">Note: If the party spends multiple nights in or near a town, it is plausible that an
+	Assassin character would be able to gain the benefits of a full rest on one night while visiting their secret
 	location on another night.</p>
 <p>At level 3, you may choose to further specialize as either a Ninja or a Saboteur:</p>
 <p style="margin-left: 25px;">As a Ninja, you gain advantage on stealth checks, and on attack rolls with thrown
 	weapons.</p>
 <p style="margin-left: 25px;">As a Saboteur, you gain a toolbelt of 3 grenades whenever you visit your hideaway. Each
-	grenade deals 4d4 explosion damage to all targets in a ten foot radius. Targets up to twenty feet take half damage.
-	You may not possess more than 3 grenades at a time.</p>
-<p>At level 4, learn <i>Assassination: Descending Blade</i>. You may trigger an assassination when leaping down onto
-	your target from a height of ten or more feet, even if you were not already concealed.</p>
-<p>At level 5, your proficiency in stealth and accuracy increase to expertise.</p>
-<p>At level 6, the critical threshold for your melee attacks is lowered by 1. Assassination minimum damage is increased
-	by 10.</p>
+	grenade deals 4d4 explosion damage to all targets within a ten foot radius. Targets up to twenty feet take half
+	damage. You may not possess more than 3 grenades at a time.</p>
+<p>At level 4, learn one of these abilities:</p>
+<ul>
+	<li><i>Assassination: Descending Blade</i>:</li>
+	<li><i>Assassination: </i></li>
+</ul>
+<p><i>Assassination: Descending Blade</i>. You may trigger an assassination when leaping down onto your target from a
+	height of ten or more feet, even if you were not already concealed.</p>
+<p>At level 6, Assassination minimum damage is increased by 10.</p>
 <p>At level 7, as a Ninja: learn <i>Assassination: Deadly Toxin</i>. You learn a codename that connects you to a
-	supplier of deadly poison. When hideaway is activated, you may spend 500 gold to purchase a vial of deadly toxin
+	supplier of deadly poison. When hideaway is activated, you may spend 100 gold to purchase a vial of deadly toxin
 	from this supplier. You may purchase only one vial of this poison at a time. With a bonus action, you (or another
 	party member, with an action) may coat their blade with the toxin, converting their next melee weapon strike into an
 	assassination. If you forget the name of the supplier, you lose this ability. You may attempt to re-learn the
 	codename by inquiring at the hideaway, at the discretion of them DM. If at any point you disclose the name of the
 	supplier (whether intentional or not), the supplier dispatches 1d4 assassins to terminate you, who attack your party
 	during a night’s rest.</p>
-<p>Note: If the hideaway location is a dead drop, you cannot purchase the toxin immediately. Instead, you leave behind a
+<p>Note: If the hideaway location is a dead drop, you do not purchase the toxin immediately. Instead, you leave behind a
 	special mark or indication, along with the payment. The poison will be in your pack by the time you return to
 	camp.</p>
 <p>At level 7, as a Saboteur: learn <i>Nail Bomb</i>. You learn a codename that connects you to an arms manufacturer.
@@ -1170,6 +1202,11 @@
 		</td>
 	</tr>
 	<tr>
+		<td>Esoterica</td>
+		<td>Int</td>
+		<td>Describes a player's knowledge of the mystical and the arcane. Used when casting spells.</td>
+	</tr>
+	<tr>
 		<td>Defense</td>
 		<td>Str</td>
 		<td>Used when shielding attacks outside of combat or attempting to quickly don and doff heavy armor. Proficiency
@@ -1237,26 +1274,26 @@
 	</tr>
 	<tr>
 		<td>Perception</td>
-		<td>Int/Cha</td>
+		<td>WILL</td>
 		<td>The ability to notice out-of-place objects or people, traps, and recognize partially obscured or remote
 			objects. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat.
 		</td>
 	</tr>
 	<tr>
 		<td>Sleight-of-Hand</td>
-		<td>Dex</td>
+		<td>DEX</td>
 		<td>Used for lockpicking and pickpocketing items, or other such tricks.</td>
 	</tr>
 	<tr>
 		<td>Stealth</td>
-		<td>Dex/Spd</td>
+		<td>DEX/SPD</td>
 		<td>Used for sneaking or attempting to perform actions without being seen. Speed can be used if the noise of
 			sprinting is unlikely to arouse excessive suspicion.
 		</td>
 	</tr>
 	<tr>
 		<td>Survival</td>
-		<td>Will</td>
+		<td>WILL</td>
 		<td>The ability to stay alive, including the ability to hunt and live off the land.</td>
 	</tr>
 </table>
@@ -1477,7 +1514,7 @@
 <p>When rolling for max HP or AP, players should roll the middle. Meaning, roll three dice and take the middle result.
 	This reduces the occurrence of extreme values, which can be frustrating at low levels.</p>
 <p>In addition to the attribute, HP, and AP bonuses, players gain unique bonuses (called class features) based upon
-	their chosen combat class. These bonuses are discussed further in the next chapter, on creating a character.</p>
+	their chosen combat class. These bonuses are covered <a href="#C2_Choosing_a_Class">here</a>.</p>
 <h4><a id="C4_Training_and_Training_Slots"></a>Training and Training Slots</h4>
 <p>It is possible for characters to proactively learn many abilities from NPC trainers, such as skill proficiencies,
 	combat tactics, and spells. In addition to any gold cost, learning abilities in this way costs training slots. Each
@@ -1610,11 +1647,11 @@
 <p style="margin-left=25px">Note: Sometimes, players may have a chance to view their enemies from a distance before they
 	are recognized. In this case, they may roll for recognition before combat begins, usually with advantage.</p>
 <p>During an ambush or surprise attack, sometimes one side is so completely discombobulated that they are unable to
-	defend themselves decisively. This condition is called "surprise" and has the following effects: </p>
+	defend themselves decisively. This condition is called <i>surprise</i> and has the following effects: </p>
 <ul>
 	<li>Characters automatically cannot make recognition rolls</li>
 	<li>Surprised characters have disadvantage on the initiative roll.</li>
-	<li></li>
+	<li>Surprised characters cannot take reactions before their first turn.</li>
 </ul>
 <p style="margin-left: 25px;">Note: Each combat round corresponds roughly to 5 seconds of time in the game world.</p>
 <h4><a id="C5_Actions"></a>Actions</h4>
@@ -1776,11 +1813,12 @@
 <p>Common damage types:</p>
 <ul>
 	<li><b>Slashing</b>: Liable to cause bleeding.</li>
-	<li><b>Bludgeoning</b>: More effective versus plate armors.</li>
-	<li><b>Piercing</b>: More effective versus mail armors.</li>
+	<li><b>Bludgeoning</b>: +3 to hit versus plate armors.</li>
+	<li><b>Piercing</b>: +3 to hit versus mail armors.</li>
 	<li><b>Fire</b>: Liable to cause burning.</li>
-	<li><b>Freezing</b>: Reduces and dexterity.</li>
-	<li><b>Lightning</b>: Ignores metal armor.</li>
+	<li><b>Freezing</b>: Reduces target dexterity.</li>
+	<li><b>Lightning</b>: +3 to hit vs metal armor.</li>
+	<li><b>Force</b>: Liable to knock the target prone.</li>
 </ul>
 <p>Rare damage types:</p>
 <ul>
@@ -1981,12 +2019,13 @@
 <p>Combat Training: Shield Bash</p>
 <p>Combat Training: Shield Charge</p>
 <p style="margin-left: 25px;">Cost: 50 Gold, 1 training slot.</p>
-<p style="margin-left: 25px;">Effect: The player acquires the <i>Shield Charge</i><span>ability. While carrying a greatshield or mantlet, the player mayexpend 2 willpower</span>
-</p>
+<p style="margin-left: 25px;">Effect: The player acquires the <i>Shield Charge</i>ability. While carrying a greatshield
+	or mantlet, the player may expend 2 willpower </p>
 <p>Combat Training: Polearm Charge</p>
 <p style="margin-left: 25px;">Cost: 50 gold, 1 training slot.</p>
-<p style="margin-left: 25px;">Effect: The player acquires the <i>Polearm Charge</i><span>ability. While carrying a pole arm, the player may expend 2 willpower</span>
-</p>
+<p style="margin-left: 25px;">Effect: The player acquires the <i>Polearm Charge</i>ability. While carrying a pole arm,
+	the player may expend 1 willpower to charge at the enemy, changing the damage type of the polearm weapon from STR to
+	SPD. </p>
 <p>Combat Training: Flailing Strike</p>
 <p style="margin-left: 25px;">Cost: 75 Gold and 3 training slots</p>
 <p style="margin-left: 25px;">Effect: The player learns to use the flail, an unusual weapon designed to bypass shields.
@@ -2026,22 +2065,17 @@
 	<li><p><b>Slashing</b>: The weapon deals slashing damage only.</p></li>
 	<li><p><b>Bludgeoning</b>: The weapon deals bludgeoning damage only.</p></li>
 	<li><p><b>Cut-and-Thrust</b>: The item can deal either piercing or slashing damage.</p></li>
-	<li><p><b>Parrying</b><span>:	The weapon allows parrying, increasing parry chance for the weapon	by the indicated amount.</span>
+	<li><p><b>Parrying</b>: The weapon allows parrying, increasing parry chance for the weapon by the indicated amount.
 	</p></li>
-	<li><p><b>Blocking</b><span>:	The weapon allows blocking, increasing BC by a certain amount, and	double when actively blocking.</span>
-	</p></li>
+	<li><p><b>Blocking</b>: The weapon increases BC by a certain amount when blocking.</p></li>
 	<li><p><b>Mordhau</b>: The weapon can be held in a reversed grip to change the damage type to bludgeoning. This
-		changes the weapon’s damage die. (Larger swords have this property.) </p></li>
-	<li><p><b>Versatile</b>: The weapon can be held in a two handed grip for extra damage.</p></li>
+		changes the weapon’s damage die. (Larger swords have this property.)</p></li>
+	<li><p><b>Versatile</b>: The weapon can be held in a two-handed grip for extra damage.</p></li>
 	<li><p><b>Nimble</b>: Dexterity can be used to augment the weapon’s damage, instead of strength.</p></li>
-	<li><p><b>Improvised</b>: The item is not primarily intended as a weapon. The damage die is rolled with
-		disadvantage. </p></li>
+	<li><p><b>Improvised</b>: The item is not designed as a weapon. The damage die is rolled with disadvantage.</p></li>
 	<li><p><b>Light</b>: The weapon can be dual-wielded, alongside another light weapon. Of a ranged weapon, indicates
-		that the weapon can be fire with one hand. (All small weapons have this property.)</p></li>
-	<li><p><b>Heavy</b>: The weapon requires two hands to use effectively, and has a strength requirement. (All great
-		weapons and polearms have this property.)</p></li>
-	<li><p><b>Sharp</b>: The critical threshold for the weapon is reduced to the indicated amount. (Daggers and
-		Stilettos have this property.)</p></li>
+		that the weapon can be fired with one hand. (All small weapons have this property.)</p></li>
+	<li><p><b>Sharp</b>: The critical threshold for the weapon is reduced by 1.</p></li>
 	<li><p><b>Reach</b>: The weapon can hit targets 10 feet away, instead of 5.</p></li>
 	<li><p><b>Throwable</b>: In addition to regular use, the weapon can be effectively thrown.</p></li>
 	<li><p><b>Thrown</b>: The weapon is <i>only</i>thrown, and never retained in the hand.</p></li>
@@ -2052,50 +2086,36 @@
 </ul>
 <h5>Small Weapons</h5>
 <p>Such weapons are those which are easily wielded in one hand, including small everyday tools improvised as weapons.
-	Typically wielded by civilians, and easily concealed. These weapons automatically have the light property, and can
-	be dual-wielded or used in an offhand. Most of these weapons use the d4 damage die, except the club and sickle.
-	However, these possess the improvised trait. Therefore, the dagger and stiletto are usually the best choices from
-	this category.</p>
+	They require no especial skill to use, are easily concealed, and are typically wielded by civilians. These weapons
+	automatically have the light property, and can be dual-wielded or used in the offhand.</p>
 <table>
 	<tr>
 		<th>Name</th>
-		<th>Description</th>
 		<th>Damage</th>
 		<th>Price</th>
 		<th>Modifiers</th>
 		<th>Notes</th>
 	</tr>
 	<tr>
-		<td>Knife</td>
-		<td>An ordinary workman’s knife</td>
-		<td>1d4, Piercing</td>
-		<td>1</td>
-		<td>Nimble, Improvised</td>
-		<td><br/></td>
-	</tr>
-	<tr>
-		<td>Dagger</td>
-		<td>A short sidearm, suitable for slashing or stabbing</td>
-		<td>1d4, Cut-and-Thrust</td>
-		<td>5</td>
-		<td>Nimble, Sharp, Throwable(20/60)</td>
-		<td>Range 20/60</td>
-	</tr>
-	<tr>
-		<td>Stiletto</td>
-		<td>A stabbing knife, long and sharp</td>
-		<td>1d4, Piercing</td>
-		<td>5</td>
-		<td>Nimble, Sharp</td>
-		<td>Ignores BC from chainmail.</td>
-	</tr>
-	<tr>
 		<td>Cleaver</td>
-		<td>A heavy knife for cutting meat</td>
 		<td>1d4, Slashing</td>
 		<td>2</td>
 		<td>Improvised</td>
-		<td><br/></td>
+		<td>A heavy knife for cutting meat.</td>
+	</tr>
+	<tr>
+		<td>Club</td>
+		<td>1d6, Bludgeoning</td>
+		<td>1</td>
+		<td>Improvised.</td>
+		<td>A hefty stick, chair leg, or workman’s hammer</td>
+	</tr>
+	<tr>
+		<td>Dagger</td>
+		<td>1d4 Cut-and-Thrust</td>
+		<td>5</td>
+		<td>Nimble, Sharp, Throwable(20/60)</td>
+		<td>A short sidearm, suitable for slashing or stabbing. Loses the sharp property when thrown. Range 20/60</td>
 	</tr>
 	<tr>
 		<td>Hatchet</td>
@@ -2106,355 +2126,387 @@
 		<td>Range 20/60</td>
 	</tr>
 	<tr>
-		<td>Club</td>
-		<td>A hefty stick, chair leg, or workman’s hammer</td>
-		<td>1d6, Bludgeoning</td>
+		<td>Knife</td>
+		<td>1d4 Piercing</td>
 		<td>1</td>
-		<td>Improvised.</td>
-		<td></td>
+		<td>Nimble, Improvised</td>
+		<td>An ordinary workman’s knife</td>
 	</tr>
 	<tr>
 		<td>Sickle</td>
-		<td>A farmer’s tool of dubious sharpness</td>
 		<td>1d6, Slashing</td>
 		<td>5</td>
 		<td>Nimble, Improvised.</td>
-		<td>May be modified by a blacksmith to lose the Improvised trait, for 10 gold.</td>
+		<td>A farmer’s tool of dubious sharpness. May be modified by a blacksmith to lose the Improvised trait, for 50
+			gold.
+		</td>
+	</tr>
+	<tr>
+		<td>Stiletto</td>
+		<td>1d4 Piercing</td>
+		<td>5</td>
+		<td>Nimble, Sharp</td>
+		<td>A stabbing knife, long and sharp. Ignores BC from chainmail.</td>
+	</tr>
+	<tr>
+		<td>Tanto</td>
+		<td>1d4 Slashing</td>
+		<td>10</td>
+		<td>Nimble, Sharp</td>
+		<td>A short slashing blade with an angular tip.</td>
 	</tr>
 </table>
 <h5>Standard Weapons</h5>
-<p>These are proper weapon and sidearms, usable in one hand. Some of the larger entries are compatible with a two-handed
-	swing.</p>
+<p>These are proper weapon and sidearms, usable in one hand. Some of these require martial training, or accomodate a
+	two-handed grip.</p>
 <table>
 	<tr>
 		<th>Name</th>
-		<th>Description</th>
 		<th>Damage</th>
+		<th>Requirements</th>
 		<th>Price</th>
 		<th>Modifiers</th>
 		<th>Notes</th>
 	</tr>
 	<tr>
-		<td>Rapier</td>
-		<td>A rapscallion’s sword—or a gentleman’s</td>
-		<td>1d6, Piercing</td>
-		<td>30</td>
-		<td>Nimble, Parrying(4)</td>
-		<td><br/></td>
-	</tr>
-	<tr>
-		<td>Estoc</td>
-		<td>A soldier’s thrusting sword for piercing mail</td>
-		<td>1d8, Piercing</td>
-		<td>50</td>
-		<td>Sharp, Parrying(5)</td>
-		<td>Ignores chainmail BC. Training required.</td>
-	</tr>
-	<tr>
-		<td>Shortsword</td>
-		<td>A shorter sword for lighter weight, and an ideal sidearm</td>
-		<td>1d6, Cut-and-Thrust</td>
-		<td>20</td>
-		<td>Nimble, Light.</td>
-		<td>Includes arming sword and gladius.</td>
-	</tr>
-	<tr>
-		<td>Katana</td>
-		<td>A curved sword of exceptionally fine make</td>
-		<td>1d8, Slashing</td>
-		<td>100</td>
-		<td>Nimble, Sharp, Parrying(4)</td>
-		<td><br/></td>
-	</tr>
-	<tr>
-		<td>Cutlass</td>
-		<td>A sword for slashing</td>
-		<td>1d6, Slashing</td>
-		<td>20</td>
-		<td>Light. Parrying(5)</td>
-		<td>Includes machete, broadsword, falchion, and scimitar.</td>
-	</tr>
-	<tr>
 		<td>Bastard Sword</td>
-		<td>A flexible sword of many uses.</td>
 		<td>1d6, Cut-and-Thrust</td>
+		<td>12 STR, Martial Arts Expertise</td>
 		<td>100</td>
-		<td>Versatile (1d10), Mordhau (1d6), Parrying(6)</td>
-		<td><br/></td>
+		<td>Versatile (1d8), Mordhau (1d6), Parrying(6)</td>
+		<td>A flexible sword with many uses.</td>
 	</tr>
 	<tr>
 		<td>Battle Axe</td>
-		<td>An axe, designed for combat</td>
 		<td>1d6, Slashing</td>
 		<td>30</td>
 		<td>Light</td>
-		<td><br/></td>
+		<td>An axe especially designed for combat</td>
 	</tr>
 	<tr>
 		<td>Bearded Axe</td>
-		<td>An axe with its weight balanced at the head</td>
-		<td>1d8, Slashing</td>
+		<td>1d6, Slashing</td>
+		<td>Martial Arts Proficiency</td>
 		<td>50</td>
 		<td>Versatile(1d8)</td>
+		<td>An axe with its weight balanced at the head.</td>
+	</tr>
+	<tr>
+		<td>Cutlass</td>
+		<td>1d6, Slashing</td>
 		<td></td>
-	</tr>
-	<tr>
-		<td>Quarterstaff</td>
-		<td>A walking staff, only at first glance</td>
-		<td>1d8, Bludgeoning</td>
-		<td>10</td>
-		<td>Nimble, Improvised, Parrying(6)</td>
-		<td>Improvised trait does not apply if attacking with dexterity.</td>
-	</tr>
-	<tr>
-		<td>Spear</td>
-		<td>A pointed weapon for throwing or stabbing</td>
-		<td>1d8, Piercing</td>
 		<td>20</td>
-		<td>Reach, Throwable(20/60)</td>
-		<td><br/></td>
+		<td>Light. Parrying(6)</td>
+		<td>A sword for slashing, of a category including the machete, broadsword, falchion, and scimitar.</td>
+	</tr>
+	<tr>
+		<td>Estoc</td>
+		<td>1d6, Piercing</td>
+		<td>Martial Arts Proficiency</td>
+		<td>50</td>
+		<td>Parrying(6)</td>
+		<td>A soldier’s thrusting sword for piercing mail. Wielded in the right hands, can be used to ignore chainmail
+			BC.
+		</td>
 	</tr>
 	<tr>
 		<td>Mace</td>
-		<td>A martial weapon for crushing armor</td>
-		<td>1d8, Bludgeoning</td>
-		<td>30</td>
-		<td>Parrying(4)</td>
+		<td>1d6, Bludgeoning</td>
 		<td></td>
+		<td>30</td>
+		<td>Versatile(1d8), Parrying(3)</td>
+		<td>A martial weapon for crushing armor</td>
 	</tr>
 	<tr>
 		<td>Morningstar</td>
-		<td>A martial weapon, spiked for piercing mail</td>
-		<td>1d8, Piercing</td>
+		<td>1d6, Piercing</td>
+		<td>Martial Arts Proficiency</td>
 		<td>50</td>
-		<td>Parrying(4)</td>
-		<td>Damage becomes bludgeoning versus plate armor.</td>
+		<td></td>
+		<td>A martial weapon, spiked for piercing mail. Damage becomes bludgeoning versus plate armor.</td>
+	</tr>
+	<tr>
+		<td>Rapier</td>
+		<td>1d6, Piercing</td>
+		<td></td>
+		<td>30</td>
+		<td>Nimble, Parrying(3)</td>
+		<td>A rapscallion’s sword—or a gentleman’s...</td>
+	</tr>
+	<tr>
+		<td>Shortsword</td>
+		<td>1d6, Cut-and-Thrust</td>
+		<td></td>
+		<td>20</td>
+		<td>Nimble, Light, Parrying(3).</td>
+		<td>A shorter sword of lighter weight, making an ideal sidearm. Includes arming sword and gladius.</td>
+	</tr>
+	<tr>
+		<td>Quarterstaff</td>
+		<td>1d6, Bludgeoning</td>
+		<td></td>
+		<td>10</td>
+		<td>Nimble, Improvised, Parrying(6)</td>
+		<td>A walking staff, at first glance. Improvised trait does not apply when attacking with dexterity.</td>
+	</tr>
+	<tr>
+		<td>Spear</td>
+		<td>1d6, Piercing</td>
+		<td></td>
+		<td>20</td>
+		<td>Reach, Throwable(20/60)</td>
+		<td>A pointed weapon for throwing or stabbing</td>
+	</tr>
+	<tr>
+		<td>Wakizashi</td>
+		<td>1d6, Slashing</td>
+		<td>Martial Arts Proficiency</td>
+		<td>100</td>
+		<td>Nimble, Sharp, Light.</td>
+		<td>A curved sword of foreign make. Excellent craftsmanship.</td>
 	</tr>
 	<tr>
 		<td>Warhammer</td>
-		<td>A martial weapon, sized for one or two hands</td>
 		<td>1d6, Bludgeoning</td>
+		<td></td>
 		<td>30</td>
-		<td>Versatile (1d10), Parrying(6)</td>
-		<td><br/></td>
+		<td>Versatile(1d8), Parrying(6)</td>
+		<td>A large hammer, sized for one or two hands</td>
 	</tr>
 </table>
 <h5>Great Weapons</h5>
 <p>Great Weapons are fully two-handed martial weapons that sacrifice precision for power, including polearms. Polearms,
-	in particular, are the primary weapons of infantry and possess excellent damage and reach. All of these weapons
-	possess the heavy modifier.</p>
+	in particular, are the primary weapons of infantry and possess excellent damage and reach.</p>
 <table>
 	<tr>
 		<th>Name</th>
-		<th>Description</th>
 		<th>Damage</th>
+		<th>Requirements</th>
 		<th>Price</th>
 		<th>Modifiers</th>
 		<th>Notes</th>
 	</tr>
 	<tr>
 		<td>Longsword</td>
-		<td>A knight’s two-handed sword</td>
-		<td>1d10, Cut-and-Thrust</td>
+		<td>1d10 Cut-and-Thrust</td>
+		<td>10 STR, Martial Arts Proficiency</td>
 		<td>150</td>
-		<td>Heavy(12), Mordhau (1d8)</td>
-		<td>May be upgraded by a blacksmith to gain Sharp for 150 gold.</td>
+		<td>Heavy(12), Mordhau(1d8)</td>
+		<td>A knight’s two-handed sword. May be upgraded by a blacksmith to gain <i>Sharp</i> for 150 gold.</td>
+	</tr>
+	<tr>
+		<td>Katana</td>
+		<td>1d8 Slashing</td>
+		<td>10 STR, 14 DEX, Martial Arts Expertise</td>
+		<td>200</td>
+		<td>Nimble, Sharp</td>
+		<td>Lighter and sharper than a longsword.</td>
 	</tr>
 	<tr>
 		<td>Claymore</td>
-		<td>An exceptionally powerful two-handed sword</td>
-		<td>1d12, Cut-and-Thrust</td>
+		<td>1d12 Cut-and-Thrust</td>
+		<td>14 STR, Martial Arts Expertise</td>
 		<td>200</td>
-		<td>Heavy(14), Mordhau (1d8)</td>
-		<td><br/></td>
+		<td>Mordhau (1d8)</td>
+		<td>An exceptionally powerful two-handed sword</td>
 	</tr>
 	<tr>
 		<td>Greataxe</td>
-		<td>A two-handed axe, for one possessing great brawn</td>
-		<td>1d12, Slashing</td>
+		<td>1d12 Slashing</td>
+		<td>14 STR, Martial Arts Proficiency</td>
 		<td>150</td>
-		<td>Heavy(14)</td>
-		<td><br/></td>
+		<td></td>
+		<td>A large axe well suited to those possessing great brawn</td>
 	</tr>
 	<tr>
 		<td>Maul</td>
-		<td>A great hammer, for smashing through armor.</td>
-		<td>1d12, Bludgeoning</td>
+		<td>1d12 Bludgeoning</td>
+		<td>15 STR, Martial Arts Proficiency</td>
 		<td>150</td>
-		<td>Heavy(14)</td>
-		<td><br/></td>
+		<td></td>
+		<td>A greathammer, for smashing through armor.</td>
 	</tr>
 	<tr>
 		<td>Bardiche</td>
-		<td>A poleaxe</td>
-		<td>1d10, Slashing</td>
+		<td>1d10 Slashing</td>
+		<td>13 STR, Martial Arts Proficiency</td>
 		<td>200</td>
-		<td>Reach, Heavy(13)</td>
-		<td>May target multiple adjacent opponents.</td>
+		<td>Reach</td>
+		<td>'Tis a poleaxe, and nothing less.</td>
 	</tr>
 	<tr>
 		<td>Halberd</td>
-		<td>A poleaxe and spear combination</td>
-		<td>1d12, Cut-and-Thrust</td>
+		<td>1d12 Cut-and-Thrust</td>
+		<td>13 STR, Martial Arts Proficiency</td>
 		<td>250</td>
-		<td>Reach, Heavy(13)</td>
-		<td><br/></td>
+		<td>Reach</td>
+		<td>A poleaxe and spear combination.</td>
 	</tr>
 	<tr>
 		<td>Pike</td>
-		<td>A thrusting Reach too heavy for throwing</td>
 		<td>1d10, Piercing</td>
+		<td>13 STR, Martial Arts Proficiency</td>
 		<td>150</td>
-		<td>Reach, Heavy(13), Sharp</td>
-		<td>Includes glaive, partisan and fauchard, etc.</td>
+		<td>Reach, Sharp</td>
+		<td>A thrusting polearm too heavy for throwing. Similar to the glaive, partisan, and fauchard.</td>
 	</tr>
 	<tr>
 		<td>Naginata</td>
-		<td>It has the appearance of a sword on a stick</td>
 		<td>1d10, Slashing</td>
+		<td>12 STR, 12 DEX, Martial Arts Expertise.</td>
 		<td>200</td>
-		<td>Reach, Heavy(12), Nimble</td>
-		<td><br/></td>
+		<td>Reach, Nimble</td>
+		<td>A light polearm favored by the deft.</td>
+		<td></td>
 	</tr>
 	<tr>
 		<td>Lance</td>
-		<td>An extremely long spear, designed for mounted combat</td>
 		<td>1d12, Piercing</td>
+		<td>12 STR, Martial Arts Proficiency</td>
 		<td>250</td>
 		<td>Reach, Improvised</td>
-		<td>Improvised trait does not apply if attacking from horseback.</td>
+		<td>An extremely long spear, designed for mounted combat. Improvised trait does not apply if attacking from
+			horseback.
+		</td>
 	</tr>
 	<tr>
 		<td>Trident</td>
-		<td>A triple pointed polearm</td>
-		<td>1d8, Piercing</td>
+		<td>1d10, Piercing</td>
+		<td>10 STR</td>
 		<td>150</td>
 		<td>Reach, Throwable(20/60)</td>
-		<td></td>
+		<td>A triple pointed polearm.</td>
 	</tr>
 </table>
 <h5>Ranged Weapons</h5>
-<p>Weapons designed to be thrown or to launch a projectile.</p>
+<p>Weapons designed to be thrown or to launch a projectile. These are broadly divided into four subcategories: thrown
+	weapons, drawn bows, crossbows, and firearms. Thrown weapons
+
+	Except for the hand crossbow and handcannon, all All projectiles use
+	DEX to hit (never STR). Crossbows and gunpowder weapons do a flat damage amount unrelated to the attributes of the
+	wielder.</p>
 <table>
 	<tr>
 		<th>Name</th>
-		<th>Description</th>
 		<th>Damage</th>
+		<th>Requirements</th>
 		<th>Price</th>
 		<th>Modifiers</th>
 		<th>Notes</th>
 	</tr>
 	<tr>
 		<td>Throwing Knife</td>
-		<td>A knife specially designed to be hurled</td>
-		<td>1d4, Piercing</td>
+		<td>1d4+DEX, Piercing</td>
+		<td>14 DEX, Accuracy Proficiency</td>
 		<td>1</td>
-		<td>Nimble, Thrown</td>
-		<td>Range 30/90</td>
+		<td>Sharp, Thrown, Light</td>
+		<td>A knife specially designed to be hurled. Range: 30/90</td>
 	</tr>
 	<tr>
 		<td>Shuriken</td>
-		<td>A spinning weapon, from a distant land</td>
-		<td>1d4, Slashing</td>
+		<td>1d6+DEX Slashing</td>
+		<td>14 DEX, Accuracy Expertise.</td>
 		<td>2</td>
-		<td>Nimble, Thrown</td>
-		<td>Range 30/90</td>
+		<td>Thrown, Light</td>
+		<td>A spinning weapon, from a distant land. Range: 30/90</td>
 	</tr>
 	<tr>
 		<td>Javelin</td>
-		<td>A light spear, made for throwing</td>
-		<td>1d6, Piercing</td>
+		<td>1d8+STR Piercing</td>
+		<td>12 DEX, Accuracy Proficiency.</td>
 		<td>5</td>
 		<td>Thrown</td>
-		<td>Range 30/120</td>
+		<td>A light spear, made for throwing. Range: 30/120</td>
 	</tr>
 	<tr>
 		<td>Boomerang</td>
-		<td>A throwing weapon that returns to its user</td>
-		<td>1d4, Bludgeoning</td>
+		<td>1d4+DEX Bludgeoning</td>
+		<td>12 DEX, Accuracy Proficiency</td>
 		<td>5</td>
-		<td>Nimble, Thrown</td>
-		<td>Range 30/90</td>
+		<td>Nimble, Thrown, Light</td>
+		<td>A throwing weapon that returns to its user. May be enchanted to return items to the thrower, for 200 gold. Range: 30/90</td>
 	</tr>
 	<tr>
 		<td>Shortbow</td>
-		<td>A bow favored by hunters and spies</td>
-		<td>1d6, Piercing</td>
+		<td>1d8+DEX/STR Piercing</td>
+		<td>12 DEX</td>
 		<td>10</td>
 		<td>Projectile: Arrows, Nimble.</td>
-		<td>100/300</td>
+		<td>A bow favored by hunters and spies. Range: 100/300</td>
 	</tr>
 	<tr>
 		<td>Longbow</td>
-		<td>The bow used by professional archers</td>
-		<td>1d8, Piercing</td>
+		<td>1d12+STR Piercing</td>
+		<td>12 STR, 14 DEX, Accuracy Proficiency</td>
 		<td>30</td>
 		<td>Projectile: Arrows</td>
-		<td>Range 200/600</td>
+		<td>The bow used by professional archers. Range: 200/600</td>
 	</tr>
 	<tr>
 		<td>Hand Crossbow</td>
-		<td>A miniature crossbow. Widely considered a gimmick.</td>
-		<td>1d6, Piercing</td>
+		<td>1d8 Piercing</td>
+		<td></td>
 		<td>50</td>
 		<td>Projectile: Bolts, Loading, Mechanical</td>
-		<td>50/150</td>
+		<td>A miniature crossbow. Widely considered a gimmick. Range: 50/150</td>
 	</tr>
 	<tr>
 		<td>Crossbow</td>
-		<td>A mechanic bow operated by a trigger</td>
-		<td>1d10, Piercing</td>
+		<td>1d12 Piercing</td>
+		<td></td>
 		<td>100</td>
 		<td>Projectile: Bolts, Loading, Mechanical</td>
-		<td>Range 300/600</td>
+		<td>A mechanical bow operated by a trigger. Range 300/600</td>
 	</tr>
 	<tr>
 		<td>Arbalest</td>
-		<td>A heavy crossbow</td>
-		<td>1d12, Piercing</td>
+		<td>2d8, Piercing</td>
+		<td>STR 14, DEX 12</td>
 		<td>250</td>
 		<td>Projectile: Bolts, Loading</td>
-		<td>Range 300/600</td>
+		<td>A crossbow of monstrous proportions. Range: 300/600</td>
 	</tr>
 	<tr>
 		<td>Pistol</td>
-		<td>A compact firearm, carried in one hand.</td>
-		<td>2d4, Bludgeoning</td>
+		<td>3d4 Bludgeoning</td>
+		<td>12 DEX</td>
 		<td>100</td>
 		<td>Projectile: Bullets, Loading, Light</td>
-		<td>Range 50/150</td>
+		<td>A compact firearm, carried in one hand. Designed to be fired once and then holstered. Range 20/60</td>
 	</tr>
 	<tr>
 		<td>Hand Cannon</td>
-		<td>A heavy pistol, for those strong enough to wield it</td>
-		<td>2d6, Bludgeoning</td>
+		<td>3d4 Force</td>
+		<td>14 STR, 12 DEX</td>
 		<td>200</td>
 		<td>Projectile: Bullets, Loading, Light</td>
-		<td>Light modifier does not apply if strength is less than 14. 50/150</td>
+		<td>A heavy pistol, for those strong enough to wield it. Light modifier does not apply if strength is less than
+			14. 20/60
+		</td>
 	</tr>
 	<tr>
 		<td>Arquebus</td>
-		<td>A powerful, yet unpredictable firearm.</td>
-		<td>2d6, Bludgeoning</td>
+		<td>3d6 Force</td>
+		<td>12 STR, 12 DEX</td>
 		<td>150</td>
 		<td>Projectile: Bullets, Loading</td>
-		<td>100/300</td>
+		<td>A powerful and unpredictable firearm. Range: 30/90</td>
 	</tr>
 	<tr>
 		<td>Blunderbus</td>
-		<td>A heavier gun, firing grapeshot</td>
-		<td>2d8, Bludgeoning</td>
+		<td>3d8 Force</td>
+		<td>12 STR, 12 DEX</td>
 		<td>200</td>
 		<td>Projectile: Bullets, Loading</td>
-		<td>100/300</td>
+		<td>A heavier gun, firing grapeshot. Range: 20/60</td>
 	</tr>
 	<tr>
 		<td>Musket</td>
-		<td>The pinnacle of technological prowess</td>
-		<td>2d10, Bludgeoning</td>
+		<td>3d8 Force</td>
+		<td>12 STR, 12 DEX</td>
 		<td>250</td>
 		<td>Projectile: Bullets, Loading</td>
-		<td>100/300</td>
+		<td>The pinnacle of technological prowess. Range: 50/150</td>
 	</tr>
 </table>
 <h5>Special Weapons</h5>
@@ -2570,7 +2622,7 @@
 		<td>Composed of boiled leather. Worn by knaves.</td>
 		<td>2</td>
 		<td></td>
-		<td>20</td>
+		<td>15</td>
 		<td></td>
 	</tr>
 	<tr>
@@ -2578,7 +2630,7 @@
 		<td>Metal plates riveted together beneath leather. Cheaper than mail.</td>
 		<td>3</td>
 		<td>Strength 10</td>
-		<td>30</td>
+		<td>20</td>
 		<td></td>
 	</tr>
 	<tr>
@@ -2587,7 +2639,7 @@
 		<td>4</td>
 		<td>Strength 10</td>
 		<td>50</td>
-		<td>Stealth disadvantage. BC bonus is halved versus piercing damage.</td>
+		<td>Stealth disadvantage.</td>
 	</tr>
 	<tr>
 		<td>Breastplate</td>
@@ -2595,22 +2647,22 @@
 		<td>5</td>
 		<td>Strength 10, Defense Proficiency</td>
 		<td>50</td>
-		<td>-1 Dexterity. BC bonus is halved versus blunt.</td>
+		<td>-1 Dexterity.</td>
 	</tr>
 	<tr>
 		<td>Ringmail</td>
 		<td>Chainmail, almost, but the links are not woven together.</td>
 		<td>5</td>
-		<td>Strength 12, Defense Proficiency</td>
-		<td>100</td>
-		<td>Stealth disadvantage. BC bonus is halved versus piercing damage.</td>
+		<td>Strength 12, Defense Expertise</td>
+		<td>75</td>
+		<td>Stealth disadvantage.</td>
 	</tr>
 	<tr>
 		<td>Chainmail</td>
 		<td>Full mail. Flexible and effective.</td>
 		<td>6</td>
-		<td>Strength 12, Defense Proficiency</td>
-		<td>200</td>
+		<td>Strength 12, Defense Expertise</td>
+		<td>150</td>
 		<td>Stealth disadvantage.</td>
 	</tr>
 	<tr>
@@ -2618,7 +2670,7 @@
 		<td>Chainmail with vertical splints to shore up defense of the limbs.</td>
 		<td>7</td>
 		<td>Strength 12, Defense Expertise</td>
-		<td>300</td>
+		<td>200</td>
 		<td>Stealth disadvantage.</td>
 	</tr>
 	<tr>
@@ -2627,15 +2679,15 @@
 		<td>8</td>
 		<td>Strength 12, Defense Expertise</td>
 		<td>250</td>
-		<td>-1 Dexterity. BC bonus is halved versus blunt.</td>
+		<td>-1 Dexterity.</td>
 	</tr>
 	<tr>
 		<td>Full Plate Armor</td>
 		<td>The highest quality.</td>
 		<td>10</td>
-		<td>Strength 14, Defense Expertise</td>
+		<td>Strength 14, Defense Mastery</td>
 		<td>500</td>
-		<td>-1 Dexterity. Stealth disadvantage. BC bonus is halved versus blunt.</td>
+		<td>-1 Dexterity. Stealth disadvantage.</td>
 	</tr>
 </table>
 <h5>Materials</h5>
@@ -2724,8 +2776,8 @@
 <p> Pure spiritual beings which may manifest in the material plane. They never die, but may be banished to their home
 	realm.</p>
 <p style="margin-left: 25px;">Demonic: Cursed spirits from the hells, whose power cannot alleviate their suffering.</p>
-<p style="margin-left: 25px;">Fey: Ancient spirits of nature and the wilds who cannot be tamed.</p>
-<p style="margin-left: 25px;">Angelic: Joyful spirits who maintain a connection to the creator God.</p>
+<p style="margin-left: 25px;">Fey: Ancient spirits of nature and the wilds, who cannot be tamed.</p>
+<p style="margin-left: 25px;">Angelic: Joyful spirits who choose to serve the divine Source Consciousness.</p>
 <p style="margin-left: 25px;">Draconic: Ferocious beings of absolute power. They may take any form, but prefer that of
 	the dragon.</p>
 <p>Monstrosities: Unnatural beings of unknown origin. Some were created as the servants of demonic spirits, while others
