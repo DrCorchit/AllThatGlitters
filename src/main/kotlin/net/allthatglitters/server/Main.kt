@@ -5,13 +5,15 @@ import io.javalin.config.JavalinConfig
 import io.javalin.http.staticfiles.Location
 import java.io.File
 
+val inputDir = File("src/main/resources/input")
+val outputDir = File("src/main/resources/output")
+
 object Main {
     @JvmStatic
     fun main(vararg args: String) {
         val app: Javalin = Javalin.create { config: JavalinConfig ->
             //config.compression.gzipOnly();
-            val f = File("src/main/resources/generated")
-            config.staticFiles.add(f.path, Location.EXTERNAL)
+            config.staticFiles.add(outputDir.path, Location.EXTERNAL)
             config.http.gzipOnlyCompression()
         }
 
@@ -22,32 +24,17 @@ object Main {
 object Generate {
     @JvmStatic
     fun main(vararg args: String) {
-        val outputDir = File("src/main/resources/served")
+        HtmlFile("index.html").appendBody().save()
+        HtmlFile("phb_toc.html").appendBody().save()
+        val nav0 = Navigation(0).render(0)
+        HtmlFile("appendices.html").append(nav0).appendBody().append(nav0).save()
 
         val max = 7
         for (i in 1..max) {
-            val body = File("src/main/resources/chapters/c$i.html").readText()
+            val chapter = HtmlFile("c$i.html")
             val nav = Navigation(i)
-            val builder = Header(i).render()
-            builder.append(nav.render(max))
-            builder.append("<h2>Chapter $i</h2>")
-            builder.append(body)
-            builder.append(nav.render(max))
-            builder.append(Footer.render())
-
-            val output = File(outputDir, "c$i.html")
-            output.writeText(builder.toString())
+            chapter.append(nav.render(max)).append("<h2>Chapter $i</h2>")
+                .appendBody().append(nav.render(max)).append(Footer.render()).save()
         }
-
-        val appendix = File("src/main/resources/chapters/appendices.html").readText()
-        val nav = Navigation(0)
-        val builder = Header(0).render()
-        builder.append(nav.render(0))
-        builder.append(appendix)
-        builder.append(nav.render(0))
-        builder.append(Footer.render())
-
-        val output = File(outputDir, "appendices.html")
-        output.writeText(builder.toString())
     }
 }

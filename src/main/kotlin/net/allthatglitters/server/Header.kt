@@ -14,8 +14,8 @@ const val header = """<!DOCTYPE html>
 <h1>All That Glitters</h1>
 """
 
-class Header(val index: Int) {
+object Header {
     fun render(): StringBuilder {
-        return StringBuilder(header.replace("[chapter]", "Chapter $index"))
+        return StringBuilder(header)
     }
 }
