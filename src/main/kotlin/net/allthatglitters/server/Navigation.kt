@@ -4,7 +4,7 @@ const val hr = "<hr />"
 const val divStart = "<div class=\"row\" style=\"justify-content:space-evenly; margin: 0\" >"
 const val prev =
     "<div class=\"column-shrink\"><a href=\"[c-1].html\">Retreat to [prev]</a></div>"
-const val toc = "<div class=\"column-shrink\"><a href=\"index.html\">Back to the Table of Contents</a></div>"
+const val toc = "<div class=\"column-shrink\"><a href=\"phb_toc.html\">Back to the Table of Contents</a></div>"
 const val next =
     "<div class=\"column-shrink\"><a href=\"[c+1].html\">Advance to [next]</a></div>"
 const val divEnd = "</div>"

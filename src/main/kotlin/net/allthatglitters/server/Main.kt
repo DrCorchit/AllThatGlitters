@@ -33,8 +33,11 @@ object Generate {
         for (i in 1..max) {
             val chapter = HtmlFile("c$i.html")
             val nav = Navigation(i)
-            chapter.append(nav.render(max)).append("<h2>Chapter $i</h2>")
-                .appendBody().append(nav.render(max)).append(Footer.render()).save()
+            chapter.append(nav.render(max)).append("<h2>Chapter $i</h2>").appendBody().append(nav.render(max))
+            if (i == 2 || i == 7) {
+                chapter.append(Collapsible.render())
+            }
+            chapter.append(Footer.render()).save()
         }
     }
 }
