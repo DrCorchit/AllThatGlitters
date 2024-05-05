@@ -9,15 +9,16 @@
 <title>All That Glitters — Player's Handbook</title>
 </head>
 <body>
-<h2>Chapter 1</h2><hr />
+<h2>Chapter 1</h2>
+<h3>How do I play the game?</h3>
+<hr />
 <div class="row" style="justify-content:space-evenly; margin: 0" >
 	<div class="column-shrink"><a href="phb_toc.html">Back to the Table of Contents</a></div>
 	<div class="column-shrink"><a href="c2.html">Advance to Chapter 2</a></div>
 </div>
 <hr />
-<h3>How do I play the game?</h3>
-<p>All That Glitters, like any tabletop roleplaying system, has three parts: The players, the dungeon master, and the
-	rulebook. Each part has a duty:</p>
+<p>All That Glitters, like any tabletop roleplaying system, has three parts: The players, the dungeon master, and
+	the rulebook. Each part has a duty:</p>
 <ul>
 	<li><p>The players should understand the abilities of their characters and avoid cheating or metagaming. They should
 		also respect each other and the DM, and give the DM feedback so that problems don’t arise out of the blue.</p>
@@ -25,12 +26,12 @@
 	<li><p>The DM should create a compelling setting, characters, and story. They should create tension and introduce
 		challenging combat encounters while also avoiding favoritism and respecting player agency.</p></li>
 	<li><p>The rulebook should provide a framework where players can reason about the outcome of their actions and see
-		their characters progressing in potency. It should also assist the DM in creating encounters that are both
-		unique and appropriately difficult.</p></li>
+		their characters progressing in potency. It should also assist the DM in creating combat encounters that are
+		both unique and appropriately difficult.</p></li>
 </ul>
 <p>In order to play the game, you need a group of people who are willing to meet on a semi-regular basis for about 3-4
-	hours. You also need someone to run the game: the dungeon master. If you’re reading this and you don’t know who your
-	DM is, it’s probably you. <i>Be the DM you wish to see in the world.</i></p>
+	hours. You also need someone to run the game: the dungeon master (or DM). If you’re reading this and you
+	don’t know who your DM is, it’s probably you. <i>Be the DM you wish to see in the world.</i></p>
 <h4><a id="Session_Zero"></a>Session Zero</h4>
 <p>Once you have a group of friends and a DM, you should have a session zero. Session zero doesn’t have to be in-person;
 	it can be a few text messages exchanged over the course of a few days. What matters is that everyone voices their
@@ -139,6 +140,7 @@
 	<li>DM: Dungeon Master</li>
 	<li>ASM: Attribute Score Modifier</li>
 	<li>DT: Difficulty Threshold</li>
+	<li>NPC: Non-player Character</li>
 </ul>
 <hr />
 <div class="row" style="justify-content:space-evenly; margin: 0" >
@@ -146,6 +148,22 @@
 	<div class="column-shrink"><a href="c2.html">Advance to Chapter 2</a></div>
 </div>
 <hr />
+<!-- Enables collapsible functionality -->
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+</script>
 </body>
-</html></body>
 </html>

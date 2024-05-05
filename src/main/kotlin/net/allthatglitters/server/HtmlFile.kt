@@ -20,16 +20,19 @@ class HtmlFile(val fileName: String, val title: String) {
         return this
     }
 
-    fun appendTitle(tag: String = "h3"): HtmlFile {
-        builder.append("<$tag>$title</$tag>")
+    fun appendElement(tag: String, text: String): HtmlFile {
+        builder.append("<$tag>$text</$tag>\n")
         return this
+    }
+
+    fun appendTitle(tag: String = "h3"): HtmlFile {
+        return appendElement(tag, title)
     }
 
     fun appendBody(): HtmlFile {
         builder.append(text)
         return this
     }
-
 
     fun save() {
         builder.append(Footer.render())

@@ -16,6 +16,16 @@ val appendices = listOf(
     "appendix_beastiary.html" to "Appendix: Beastiary",
 )
 
+val chapterTitles = listOf(
+    "How do I play the game?",
+    "How do I create a character?",
+    "What's on my character sheet?",
+    "How does my character become stronger?",
+    "How does my character fight?",
+    "What can my character do besides fighting?",
+    "How does my character use magic?"
+)
+
 object Main {
     @JvmStatic
     fun main(vararg args: String) {
@@ -32,18 +42,22 @@ object Main {
 object Generate {
     @JvmStatic
     fun main(vararg args: String) {
-        HtmlFile("index.html", "All That Glitters").appendBody().save()
-        HtmlFile("phb_toc.html", "Player's Handbook").append("<h1>All That Glitters</h1>").appendTitle("h2").appendBody().save()
+        HtmlFile("index.html", "All That Glitters")
+            .appendTitle("h1").appendBody()
+            .save()
+        HtmlFile("phb_toc.html", "Player's Handbook")
+            .appendElement("h1", "All That Glitters")
+            .appendTitle("h2").appendBody()
+            .save()
 
         val max = 7
         for (i in 1..max) {
-            val chapter = HtmlFile("c$i.html", "Chapter $i")
             val nav = Navigation.render(i, max)
-            chapter.appendTitle("h2").append(nav).appendBody().append(nav)
-            if (i == 2 || i == 7) {
-                chapter.append(Collapsible.render())
-            }
-            chapter.append(Footer.render()).save()
+            HtmlFile("c$i.html", chapterTitles[i - 1])
+                .appendElement("h2", "Chapter $i")
+                .appendTitle().append(nav)
+                .appendBody().append(nav)
+                .append(Collapsible.render()).save()
         }
 
         for (i in appendices.indices) {
@@ -54,7 +68,9 @@ object Generate {
                 appendices[i + 1]
             } else null
             val nav = Navigation.render(prev, next)
-            HtmlFile(appendices[i].first, appendices[i].second).appendTitle().append(nav).appendBody().append(nav).save()
+            HtmlFile(appendices[i].first, appendices[i].second)
+                .appendTitle().append(nav)
+                .appendBody().append(nav).save()
         }
     }
 }
