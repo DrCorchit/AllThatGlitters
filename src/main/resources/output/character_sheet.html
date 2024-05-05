@@ -24,9 +24,13 @@
 			text-align: center;
 			border: 1px solid black;
 		}
+		th.sub {
+			border: 0;
+			font-size: 10pt;
+		}
 		td { line-height: 100%; border-bottom: 0.5px solid black; }
-		td.border { border: 1px solid black; }
-		td.noborder { border: 0; }
+		.border { border: 1px solid black; }
+		.noborder { border: 0; }
 
 		td.image { border: 0; text-align: center; position: relative; }
 		td.image img { height: 70px; width: auto; }
@@ -78,7 +82,7 @@
 				</tr>
 				<tr>
 					<td>Gold:</td>
-					<td>Training Slots:</td>
+					<td>Training Slots: &emsp; /</td>
 				</tr>
 			</table>
 		</td>
@@ -123,23 +127,27 @@
 		<td class="noborder">
 			<table class="inner">
 				<tr>
-					<td class="noborder">Main Hand</td>
-					<td class="noborder">Damage</td>
-					<td class="noborder">Modifiers</td>
+					<th style="border: none;"></th>
+					<th class="sub">Main Hand</th>
+					<th class="sub">Offhand</th>
 				</tr>
 				<tr>
-					<td><br/></td>
+					<td class="noborder">Name:</td>
 					<td><br/></td>
 					<td><br/></td>
 				</tr>
 				<tr>
-					<td class="noborder">Offhand</td>
-					<td class="noborder">Damage</td>
-					<td class="noborder">Modifiers</td>
+					<td class="noborder">Damage:</td>
+					<td><br/></td>
+					<td><br/></td>
 				</tr>
 				<tr>
+					<td class="noborder">Notes:</td>
 					<td><br/></td>
 					<td><br/></td>
+				</tr>
+				<tr>
+					<td colspan="2"><br/></td>
 					<td><br/></td>
 				</tr>
 			</table>
@@ -247,14 +255,8 @@
 			<table class="inner"
 			       style="background: white url(images/scene5.png) no-repeat bottom; background-size: 100%">
 				<tr>
-					<td class="noborder"
-					    style="font-family: Aboreto; font-weight: bold; font-size: 10pt; text-align: center;">Ability
-						Name
-					</td>
-					<td class="noborder"
-					    style="font-family: Aboreto; font-weight: bold; font-size: 10pt; text-align: center;width: 15%;">
-						Training Slots
-					</td>
+					<th class="sub">Ability Name</th>
+					<th class="sub" style="width: 15%;">Training Slots</th>
 				</tr>
 				<tr>
 					<td><br/></td>

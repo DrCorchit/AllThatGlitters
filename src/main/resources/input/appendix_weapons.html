@@ -1,42 +1,28 @@
-<p>A player can carry up to two weapons, as follows:</p>
-<ul>
-	<li>A single greatweapon, carried in a two-handed grip</li>
-	<li>A standard weapon and a shield</li>
-	<li>A standard weapon, plus a small weapon in the offhand</li>
-	<li>Two light weapons, such as two shortswords or two rapiers</li>
-	<li>Two small weapons, such as two daggers </li>
-	<li>A standard weapon, with the offhand kept free in order to cast spells</li>
-	<li>A small weapon, with the main hand kept free in order to cast more powerful spells</li>
-</ul>
+<h4>Weapon Modifiers</h4>
 <p>Certain weapons have special properties, which affect how they behave:
 <ul>
-	<li><b>Piercing</b>: The weapon deals piercing damage only.</li>
-	<li><b>Slashing</b>: The weapon deals slashing damage only.</li>
-	<li><b>Bludgeoning</b>: The weapon deals bludgeoning damage only.</li>
 	<li><b>Cut-and-Thrust</b>: The item can deal either piercing or slashing damage.</li>
-	<li><b>Parrying</b>: The weapon allows parrying, increasing parry chance for the weapon by the indicated amount.
+	<li><b>Parrying</b>: The weapon allows the parry reaction, increasing mitigation by the indicated amount.</li>
+	<li><b>Blocking</b>: The weapon increases BC by a certain amount, doubled when actively blocking.</li>
+	<li><b>Mordhau</b>: The weapon can be held by the blade, using the crossguard as a hammer. This changes the weapon’s
+		damage type to bludgeoning, and replaces the damage die. (Larger swords have this property.)
 	</li>
-	<li><b>Blocking</b>: The weapon increases BC by a certain amount when blocking.</li>
-	<li><b>Mordhau</b>: The weapon can be held in a reversed grip to change the damage type to bludgeoning. This
-		changes the weapon’s damage die. (Larger swords have this property.)</li>
 	<li><b>Versatile</b>: The weapon can be held in a two-handed grip for extra damage.</li>
 	<li><b>Nimble</b>: Dexterity can be used to augment the weapon’s damage, instead of strength.</li>
 	<li><b>Improvised</b>: The item is not designed as a weapon. The damage die is rolled with disadvantage.</li>
-	<li><b>Light</b>: The weapon can be dual-wielded, alongside another light weapon. Of a ranged weapon, indicates
-		that the weapon can be fired with one hand. (All small weapons have this property.)</li>
+	<li><b>Light</b>: The weapon can be used with a greatshield, or dual-wielded alongside another light weapon. (All
+		small weapons have this property.)
+	</li>
 	<li><b>Sharp</b>: The critical threshold for the weapon is reduced by 1.</li>
-	<li><b>Reach</b>: The weapon can hit targets 10 feet away, instead of 5.</li>
-	<li><b>Throwable</b>: In addition to regular use, the weapon can be effectively thrown.</li>
-	<li><b>Thrown</b>: The weapon is <i>only</i>thrown, and never retained in the hand.</li>
+	<li><b>Reach</b>: The weapon can hit targets 10 feet away, instead of 5. (All polearms have this property.)</li>
+	<li><b>Throwable</b>: The weapon deals full damage when thrown.</li>
 	<li><b>Projectile</b>: The weapon fires a specific type of projectile.</li>
-	<li><b>Loading</b>: Once discharged, the weapon must be loaded again to be re-used. Loading such a weapon takes a
-		full main hand action. The weapon’s damage is also not affected by any attributes of the bearer, such as
-		strength or dexterity.</li>
 </ul>
-<h5>Small Weapons</h5>
+<h4>Small Weapons</h4>
 <p>Such weapons are those which are easily wielded in one hand, including small everyday tools improvised as weapons.
 	They require no especial skill to use, are easily concealed, and are typically wielded by civilians. These weapons
-	automatically have the light property, and can be dual-wielded or used in the offhand.</p>
+	automatically have the light property, and can be dual-wielded or used in the offhand.
+</p>
 <table>
 	<tr>
 		<th>Name</th>
@@ -71,8 +57,7 @@
 		<td>A small axe suitable for throwing</td>
 		<td>1d4, Slashing</td>
 		<td>5</td>
-		<td>Nimble, Throwable(20/60)</td>
-		<td>Range 20/60</td>
+		<td>Nimble, Throwable, Range 20/60</td>
 	</tr>
 	<tr>
 		<td>Knife</td>
@@ -105,9 +90,10 @@
 		<td>A short slashing blade with an angular tip.</td>
 	</tr>
 </table>
-<h5>Standard Weapons</h5>
-<p>These are proper weapon and sidearms, usable in one hand. Some of these require martial training, or accomodate a
-	two-handed grip.</p>
+<h4>Standard Weapons</h4>
+<p>These are proper weapon and sidearms, usable in one hand. Some of these require martial training, or accommodate a
+	two-handed grip.
+</p>
 <table>
 	<tr>
 		<th>Name</th>
@@ -128,6 +114,7 @@
 	<tr>
 		<td>Battle Axe</td>
 		<td>1d6, Slashing</td>
+		<td></td>
 		<td>30</td>
 		<td>Light</td>
 		<td>An axe especially designed for combat</td>
@@ -223,9 +210,10 @@
 		<td>A large hammer, sized for one or two hands</td>
 	</tr>
 </table>
-<h5>Great Weapons</h5>
+<h4>Great Weapons</h4>
 <p>Great Weapons are fully two-handed martial weapons that sacrifice precision for power, including polearms. Polearms,
-	in particular, are the primary weapons of infantry and possess excellent damage and reach.</p>
+	in particular, are the primary weapons of infantry and possess excellent damage and reach.
+</p>
 <table>
 	<tr>
 		<th>Name</th>
@@ -281,7 +269,7 @@
 		<td>13 STR, Martial Arts Proficiency</td>
 		<td>200</td>
 		<td>Reach</td>
-		<td>'Tis a poleaxe, and nothing less.</td>
+		<td>'Tis a poleaxe, nothing less.</td>
 	</tr>
 	<tr>
 		<td>Halberd</td>
@@ -306,7 +294,6 @@
 		<td>200</td>
 		<td>Reach, Nimble</td>
 		<td>A light polearm favored by the deft.</td>
-		<td></td>
 	</tr>
 	<tr>
 		<td>Lance</td>
@@ -323,17 +310,17 @@
 		<td>1d10, Piercing</td>
 		<td>10 STR</td>
 		<td>150</td>
-		<td>Reach, Throwable(20/60)</td>
+		<td>Reach, Throwable, Range: 20/60</td>
 		<td>A triple pointed polearm.</td>
 	</tr>
 </table>
-<h5>Ranged Weapons</h5>
-<p>Weapons designed to be thrown or to launch a projectile. These are broadly divided into four subcategories: thrown
-	weapons, drawn bows, crossbows, and firearms. Thrown weapons
-
-	Except for the hand crossbow and handcannon, all All projectiles use
-	DEX to hit (never STR). Crossbows and gunpowder weapons do a flat damage amount unrelated to the attributes of the
-	wielder.</p>
+<h4>Ranged Weapons</h4>
+<p>Weapons designed to be thrown or to launch a projectile. Projectile weapons are divided into three categories: drawn
+	bows, crossbows, and firearms. Of these, only those with the <i>light</i> property may be operated with one hand.
+	All others require two hands to operate effectively. Drawn bows and thrown weapons possess the <i>nimble</i>
+	property, and may deal damage with either strength or dexterity. Firearms and crossbows deal flat damage that does
+	not depend on any attribute.
+</p>
 <table>
 	<tr>
 		<th>Name</th>
@@ -348,7 +335,7 @@
 		<td>1d4+DEX, Piercing</td>
 		<td>14 DEX, Accuracy Proficiency</td>
 		<td>1</td>
-		<td>Sharp, Thrown, Light</td>
+		<td>Sharp, Throwable, Light</td>
 		<td>A knife specially designed to be hurled. Range: 30/90</td>
 	</tr>
 	<tr>
@@ -356,7 +343,7 @@
 		<td>1d6+DEX Slashing</td>
 		<td>14 DEX, Accuracy Expertise.</td>
 		<td>2</td>
-		<td>Thrown, Light</td>
+		<td>Throwable, Light</td>
 		<td>A spinning weapon, from a distant land. Range: 30/90</td>
 	</tr>
 	<tr>
@@ -364,7 +351,7 @@
 		<td>1d8+STR Piercing</td>
 		<td>12 DEX, Accuracy Proficiency.</td>
 		<td>5</td>
-		<td>Thrown</td>
+		<td>Throwable, Light</td>
 		<td>A light spear, made for throwing. Range: 30/120</td>
 	</tr>
 	<tr>
@@ -372,8 +359,10 @@
 		<td>1d4+DEX Bludgeoning</td>
 		<td>12 DEX, Accuracy Proficiency</td>
 		<td>5</td>
-		<td>Nimble, Thrown, Light</td>
-		<td>A throwing weapon that returns to its user. May be enchanted to return items to the thrower, for 200 gold. Range: 30/90</td>
+		<td>Nimble, Throwable, Light</td>
+		<td>A throwing weapon that returns to its user. May be enchanted to return items to the thrower, for 200 gold.
+			Range: 30/90
+		</td>
 	</tr>
 	<tr>
 		<td>Shortbow</td>
@@ -386,7 +375,7 @@
 	<tr>
 		<td>Longbow</td>
 		<td>1d12+STR Piercing</td>
-		<td>12 STR, 14 DEX, Accuracy Proficiency</td>
+		<td>12 STR, 12 DEX, Accuracy Proficiency</td>
 		<td>30</td>
 		<td>Projectile: Arrows</td>
 		<td>The bow used by professional archers. Range: 200/600</td>
@@ -396,15 +385,15 @@
 		<td>1d8 Piercing</td>
 		<td></td>
 		<td>50</td>
-		<td>Projectile: Bolts, Loading, Mechanical</td>
-		<td>A miniature crossbow. Widely considered a gimmick. Range: 50/150</td>
+		<td>Projectile: Bolts, Light</td>
+		<td>A miniature crossbow, widely considered a gimmick. Range: 50/150</td>
 	</tr>
 	<tr>
 		<td>Crossbow</td>
 		<td>1d12 Piercing</td>
 		<td></td>
 		<td>100</td>
-		<td>Projectile: Bolts, Loading, Mechanical</td>
+		<td>Projectile: Bolts, Light</td>
 		<td>A mechanical bow operated by a trigger. Range 300/600</td>
 	</tr>
 	<tr>
@@ -412,25 +401,25 @@
 		<td>2d8, Piercing</td>
 		<td>STR 14, DEX 12</td>
 		<td>250</td>
-		<td>Projectile: Bolts, Loading</td>
+		<td>Projectile: Bolts</td>
 		<td>A crossbow of monstrous proportions. Range: 300/600</td>
 	</tr>
 	<tr>
 		<td>Pistol</td>
-		<td>3d4 Bludgeoning</td>
+		<td>3d4 Force</td>
 		<td>12 DEX</td>
 		<td>100</td>
-		<td>Projectile: Bullets, Loading, Light</td>
+		<td>Projectile: Bullets, Light</td>
 		<td>A compact firearm, carried in one hand. Designed to be fired once and then holstered. Range 20/60</td>
 	</tr>
 	<tr>
 		<td>Hand Cannon</td>
-		<td>3d4 Force</td>
+		<td>3d6 Force</td>
 		<td>14 STR, 12 DEX</td>
 		<td>200</td>
-		<td>Projectile: Bullets, Loading, Light</td>
+		<td>Projectile: Bullets, Light</td>
 		<td>A heavy pistol, for those strong enough to wield it. Light modifier does not apply if strength is less than
-			14. 20/60
+			16. 20/60
 		</td>
 	</tr>
 	<tr>
@@ -438,7 +427,7 @@
 		<td>3d6 Force</td>
 		<td>12 STR, 12 DEX</td>
 		<td>150</td>
-		<td>Projectile: Bullets, Loading</td>
+		<td>Projectile: Bullets</td>
 		<td>A powerful and unpredictable firearm. Range: 30/90</td>
 	</tr>
 	<tr>
@@ -446,7 +435,7 @@
 		<td>3d8 Force</td>
 		<td>12 STR, 12 DEX</td>
 		<td>200</td>
-		<td>Projectile: Bullets, Loading</td>
+		<td>Projectile: Bullets</td>
 		<td>A heavier gun, firing grapeshot. Range: 20/60</td>
 	</tr>
 	<tr>
@@ -454,11 +443,11 @@
 		<td>3d8 Force</td>
 		<td>12 STR, 12 DEX</td>
 		<td>250</td>
-		<td>Projectile: Bullets, Loading</td>
+		<td>Projectile: Bullets</td>
 		<td>The pinnacle of technological prowess. Range: 50/150</td>
 	</tr>
 </table>
-<h5>Special Weapons</h5>
+<h4>Special Weapons</h4>
 <p>Weapons with atypical abilities. Often not suitable for general use.</p>
 <table>
 	<tr>

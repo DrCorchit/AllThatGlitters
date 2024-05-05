@@ -3,10 +3,10 @@ package net.allthatglitters.server
 const val hr = "<hr />"
 const val divStart = "<div class=\"row\" style=\"justify-content:space-evenly; margin: 0\" >"
 const val prevText =
-    "<div class=\"column-shrink\"><a href=\"{{prev-link}}\">{{prev}}</a></div>"
+    "<div class=\"column-shrink\"><a href=\"{{prev-link}}\" rel=\"prev\">{{prev}}</a></div>"
 const val toc = "<div class=\"column-shrink\"><a href=\"phb_toc.html\">Back to the Table of Contents</a></div>"
 const val nextText =
-    "<div class=\"column-shrink\"><a href=\"{{next-link}}\">{{next}}</a></div>"
+    "<div class=\"column-shrink\"><a href=\"{{next-link}}\" rel=\"next\">{{next}}</a></div>"
 const val divEnd = "</div>"
 
 object Navigation {
