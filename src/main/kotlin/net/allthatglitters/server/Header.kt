@@ -11,7 +11,6 @@ const val header = """<!DOCTYPE html>
 <title>All That Glitters — Player's Handbook</title>
 </head>
 <body>
-<h1>All That Glitters</h1>
 """
 
 object Header {

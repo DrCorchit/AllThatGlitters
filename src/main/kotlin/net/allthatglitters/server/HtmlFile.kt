@@ -2,10 +2,11 @@ package net.allthatglitters.server
 
 import java.io.File
 
-class HtmlFile(val fileName: String) {
+class HtmlFile(val fileName: String, val title: String) {
 
-    val text = File(inputDir, fileName).readText()
-    val builder = StringBuilder()
+    private val text = File(inputDir, fileName).readText()
+    private val builder = StringBuilder()
+
     init {
         builder.append(Header.render())
     }
@@ -19,18 +20,24 @@ class HtmlFile(val fileName: String) {
         return this
     }
 
+    fun appendTitle(tag: String = "h3"): HtmlFile {
+        builder.append("<$tag>$title</$tag>")
+        return this
+    }
+
     fun appendBody(): HtmlFile {
         builder.append(text)
         return this
     }
 
 
-
     fun save() {
         builder.append(Footer.render())
         val outputFile = File(outputDir, fileName)
-        outputFile.createNewFile()
+        val new = outputFile.createNewFile()
         outputFile.writeText(builder.toString())
+        if (new) println("Created file $outputFile")
+        else println("Wrote file $outputFile")
     }
 
 }
