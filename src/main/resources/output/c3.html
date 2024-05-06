@@ -20,7 +20,7 @@
 <hr />
 <p>The character sheet, available <a href="character_sheet.html" target="_blank">here</a>, is divided into 8 sections:
 </p>
-<ul>
+<ol>
 	<li><a href="#Character_Information">Character Information</a></li>
 	<li><a href="#Statistics">Statistics</a></li>
 	<li><a href="#Attributes">Attributes</a></li>
@@ -29,7 +29,7 @@
 	<li><a href="#Abilities">Spells &amp; Abilities</a></li>
 	<li><a href="#Backstory">Backstory &amp; Personality</a></li>
 	<li><a href="#Inventory">Inventory</a></li>
-</ul>
+</ol>
 <h4><a id="Character_Information"></a>Character Information</h4>
 <p>This section is found in the topmost right section of the character sheet, and records the most basic information
 	about your character, including their name, combat class, level and race. Race, class, and alignment are discussed
@@ -56,7 +56,7 @@
 		<td>Small</td>
 		<td>4 feet</td>
 		<td>1x1</td>
-		<td>May not wield versatile or great weapons.</td>
+		<td>May not wield great weapons. Versatile weapons can only be held in a two-handed grip.</td>
 	</tr>
 	<tr>
 		<td>Medium</td>
@@ -84,39 +84,16 @@
 	</tr>
 </table>
 <h4><a id="Statistics"></a>Statistics</h4>
-<p>Found in the upper right corner, this section tracks several statistics, mostly combat related.</p>
+<p>Found in the upper right corner, this section tracks several important statistics.</p>
 <h5>Hitpoints</h5>
-<p>Hitpoints (HP) are a resource that cause the player to fall unconscious when fully depleted. There are two sets of
-	rules that govern what happens when a player falls unconscious: permadeath and modern.
-</p>
-<p>Under permadeath rules, once the player has been downed, they roll a d20 every time it is their turn in combat. Every
-	roll of a 10 or higher is considered a save, while every roll of 9 or lower is considered a fail. If the character
-	makes three saves, they become stable and do not need to make additional saves to stay alive. However, if a
-	character accumulates three fails, they are dead and can only be revived by powerful resurrection magic. Under this
-	system, players can be revived and resume fighting after being healed by any healing spell, regardless of how many
-	saves they have failed.
-</p>
-<p style="margin-left: 25px;">Note: Under permadeath rules, rolling a natural 20 immediately causes the player to become
-	stable.
-</p>
-<p>The modern rules offer an alternative system where unconscious players do not need to make saving throws to stay
-	alive. However, they also do not regain consciousness after being healed by healing magic. Instead, they regain
-	consciousness 1d4 hours after combat is over.
-</p>
-<p>In gameplay strategy, modern rules prioritize keeping the characters conscious, making single-target healing spells
-	quite valuable. Permadeath rules favor mass healing spells that resurrect the character whenever they fall. You
-	should think carefully about which system works best for you.
-</p>
-<p>A character’s Maximum HP is equal to thrice their level plus twice their strength score, but can be increased further
-	by various bonuses.
+<p>Hitpoints (HP) are a resource that cause the player to fall unconscious when fully depleted. A character’s maximum HP
+	is equal to thrice their level plus twice their strength score, but can be increased further by various bonuses.
 </p>
 <h5>Ability Points</h5>
 <p>Ability Points (AP) are expended as the player uses powerful spells and abilities. When AP is fully depleted, the
 	character is said to be exhausted. There is not an immediate penalty for this condition, other than not being able
-	to use critically necessary abilities.
-</p>
-<p>Maximum ability points is equal to a players level plus their willpower attribute, but can be increased further by
-	various bonuses.
+	to use critically necessary abilities. Maximum ability points is equal to a players level plus their willpower
+	attribute, but can be increased further by various bonuses.
 </p>
 <h5>Mitigation</h5>
 <p>Mitigation (MIT) is a derived statistic which determines how likely a player is to successfully dodge or block an
@@ -135,6 +112,8 @@
 <p>The player’s DC is normally equal to their dexterity attribute, while BC is determined by the player's choice of <a
 		href="appendix_armor.html">armor</a>. Parry chance is determined by the character's weapon, if the weapon is
 	capable of parrying. If the character is not parrying or their weapon does not allow parrying, parry chance is zero.
+	If you're filling out the sheet for the first time, put your dexterity score under DC and your armor BC plus your
+	shield BC (if you have one) under BC. Add the two together, and that's your base mitigation stat.
 </p>
 <h5>Gold</h5>
 <p>Gold is the currency of the land, whether pounds, doubloons, or rupees. Gold is used in a variety of ways, mainly to
@@ -210,6 +189,10 @@
 	score modifier (ASM). The ASM for an attribute is obtained by subtracting 10 from the attribute score. An average
 	human with 10 for all attribute scores would thus have 0 for their attribute score modifiers.
 </p>
+<p>If you're filling out your character sheet for the first time, your attributes are going to be determined by your
+	racial and class bonuses. Adding these together should give you 6 numbers. Copy these into the "attributes" section
+	and then move on to equipment.
+</p>
 <h4><a id="Equipment"></a>Equipment</h4>
 <h5>Weapons</h5>
 <p>This section records your character's equipped weapons and armor. Magical trinkets are not recorded here, but under
@@ -250,10 +233,11 @@
 	modifier may be used instead, under certain circumstances. For example, a player who is sneaking may decide that
 	they are too clumsy to move quietly and instead opt to sprint past the guard while his gaze is turned. In this case,
 	the player is trying to use their ASM for speed instead of dexterity for the stealth check. Whether this type of
-	substitution is used is situational. In fact, certain circumstances <i>require</i>that the alternative attribute
+	substitution is used is situational. In fact, certain circumstances <i>require</i> that the alternative attribute
 	score modifier is used, while others permit it, in which case it would only be used if the second attribute’s score
 	is higher for that character.
 </p>
+<p>When filling out this section, copy the value of the corresponding</p>
 <p>Here is a list of all skills:</p>
 <table>
 	<tr>
@@ -263,47 +247,40 @@
 	</tr>
 	<tr>
 		<td>Accuracy</td>
-		<td>Dex</td>
+		<td>DEX</td>
 		<td>Describes a player’s accuracy with bows, crossbows, and gunpowder weapons. Proficiency bonuses for this
 			skill affect attack rolls with ranged weapons.
 		</td>
 	</tr>
 	<tr>
 		<td>Defense</td>
-		<td>Str</td>
+		<td>STR</td>
 		<td>Used when shielding attacks outside of combat or attempting to quickly don and doff heavy armor. Proficiency
 			bonuses for this skill affect what types of armor and shields can be used in combat.
 		</td>
 	</tr>
 	<tr>
-		<td>Esoterica</td>
-		<td>Int/Cha</td>
-		<td>Describes a player's knowledge of the mystical and the arcane. Used when casting spells. Warlocks and
-			Zealots use CHA instead of INT.
-		</td>
-	</tr>
-	<tr>
 		<td>Initiative</td>
-		<td>Spd</td>
+		<td>SPD</td>
 		<td>Determines move order in battle.</td>
 	</tr>
 	<tr>
 		<td>Intimidation</td>
-		<td>Cha/Str</td>
+		<td>CHA/STR</td>
 		<td>The ability to manipulate others through fear. If the threat is based purely on physical violence, strength
 			replaces charisma as the base attribute.
 		</td>
 	</tr>
 	<tr>
 		<td>Literacy</td>
-		<td>Int</td>
+		<td>INT</td>
 		<td>Measures background knowledge that would usually be obtained via formal education or reading books. Checking
 			for knowledge of subjects such as history, religion, and the arcane are done through a check for literacy.
 		</td>
 	</tr>
 	<tr>
 		<td>Martial Arts</td>
-		<td>Str/Dex</td>
+		<td>STR/DEX</td>
 		<td>Describes skill in areas such as boxing, grappling, and wrestling. Proficiency bonuses for this skill affect
 			attack rolls with melee weapons. In most situations, both strength and dexterity can be used interchangeably
 			as the base attribute.
@@ -311,31 +288,31 @@
 	</tr>
 	<tr>
 		<td>Medicine</td>
-		<td>Int</td>
+		<td>INT</td>
 		<td>Measures knowledge of disease and wound treatment.</td>
 	</tr>
 	<tr>
 		<td>Nature</td>
-		<td>Int</td>
+		<td>WILL</td>
 		<td>Measures background knowledge that would usually be obtained by spending time in nature, or around animals.
 		</td>
 	</tr>
 	<tr>
 		<td>Parkour</td>
-		<td>Dex</td>
+		<td>DEX/SPD</td>
 		<td>The ability to climb, mantle, vault, and otherwise navigate past obstacles.</td>
 	</tr>
 	<tr>
 		<td>Performance</td>
-		<td>Cha/Dex</td>
+		<td>CHA/DEX</td>
 		<td>The players ability to sing, dance, play instruments, or otherwise entertain a crowd. Performance is also
-			used when attempting to display proper manners before a royal court. Dexterity should be used only in cases
-			where the player is attempting to entertain a crowd with acrobatic feats.
+			used when attempting to display proper manners before a royal court. Either dexterity or charisma can be
+			used.
 		</td>
 	</tr>
 	<tr>
 		<td>Persuasion</td>
-		<td>Cha</td>
+		<td>CHA</td>
 		<td>Used to convince others to change their beliefs or intended course of action, whether through factual debate
 			or outright deception. Intelligence should only be used as the base attribute if the player is able to
 			present a rational argument and both conversants would likely understand.
@@ -343,7 +320,7 @@
 	</tr>
 	<tr>
 		<td>Perception</td>
-		<td>WILL</td>
+		<td>WILL/CHA</td>
 		<td>The ability to notice out-of-place objects or people, traps, and recognize partially obscured or remote
 			objects. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat.
 		</td>
@@ -352,6 +329,13 @@
 		<td>Sleight-of-Hand</td>
 		<td>DEX</td>
 		<td>Used for lockpicking and pickpocketing items, or other such tricks.</td>
+	</tr>
+	<tr>
+		<td>Sorcery</td>
+		<td>INT/CHA</td>
+		<td>Describes a player's knowledge of the mystical and arcane. Used when casting spells. Either attribute can be
+			used.
+		</td>
 	</tr>
 	<tr>
 		<td>Stealth</td>
