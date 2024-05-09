@@ -34,13 +34,18 @@ class HtmlFile(val fileName: String, val title: String) {
         return this
     }
 
-    fun save() {
-        builder.append(Footer.render())
-        val outputFile = File(outputDir, fileName)
+    fun save(version: String) {
+        saveTo(version, "version/$version/$fileName")
+    }
+
+    fun saveTo( version: String, destination: String) {
+        val content = builder.append(Footer.render()).toString()
+            .replace("{{version}}", version)
+        val outputFile = File(outputDir, destination)
+        outputFile.parentFile.mkdirs()
         val new = outputFile.createNewFile()
-        outputFile.writeText(builder.toString())
+        outputFile.writeText(content)
         if (new) println("Created file $outputFile")
         else println("Wrote file $outputFile")
     }
-
 }

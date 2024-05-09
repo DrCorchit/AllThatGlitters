@@ -5,6 +5,7 @@ import io.javalin.config.JavalinConfig
 import io.javalin.http.staticfiles.Location
 import java.io.File
 
+val version = "0.1"
 val inputDir = File("src/main/resources/input")
 val outputDir = File("src/main/resources/output")
 val appendices = listOf(
@@ -26,7 +27,7 @@ val chapterTitles = listOf(
     "How does my character use magic?"
 )
 
-object Main {
+object Serve {
     @JvmStatic
     fun main(vararg args: String) {
         val app: Javalin = Javalin.create { config: JavalinConfig ->
@@ -44,11 +45,13 @@ object Generate {
     fun main(vararg args: String) {
         HtmlFile("index.html", "All That Glitters")
             .appendTitle("h1").appendBody()
-            .save()
+            .saveTo(version, "index.html")
         HtmlFile("phb_toc.html", "Player's Handbook")
             .appendElement("h1", "All That Glitters")
             .appendTitle("h2").appendBody()
-            .save()
+            .save(version)
+
+        HtmlFile("character_sheet.html", "Character Sheet").save(version)
 
         val max = 7
         for (i in 1..max) {
@@ -57,7 +60,7 @@ object Generate {
                 .appendElement("h2", "Chapter $i")
                 .appendTitle().append(nav)
                 .appendBody().append(nav)
-                .append(Collapsible.render()).save()
+                .append(Collapsible.render()).save(version)
         }
 
         for (i in appendices.indices) {
@@ -70,7 +73,7 @@ object Generate {
             val nav = Navigation.render(prev, next)
             HtmlFile(appendices[i].first, appendices[i].second)
                 .appendTitle().append(nav)
-                .appendBody().append(nav).save()
+                .appendBody().append(nav).save(version)
         }
     }
 }

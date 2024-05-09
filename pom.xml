@@ -37,7 +37,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib</classpathPrefix>
-                            <mainClass>net.allthatglitters.server.Main</mainClass>
+                            <mainClass>net.allthatglitters.server.Serve</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -76,7 +76,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <configuration>
-                    <mainClass>net.allthatglitters.server.Main</mainClass>
+                    <mainClass>net.allthatglitters.server.Serve</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -92,7 +92,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>net.allthatglitters.server.Main</mainClass>
+                                    <mainClass>net.allthatglitters.server.Serve</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
