@@ -44,23 +44,32 @@ object Generate {
     @JvmStatic
     fun main(vararg args: String) {
         HtmlFile("index.html", "All That Glitters")
-            .appendTitle("h1").appendBody()
+            .appendHeader()
+            .appendTitle("h1")
+            .appendBody()
+            .appendFooter()
             .saveTo(version, "index.html")
         HtmlFile("phb_toc.html", "Player's Handbook")
+            .appendHeader()
             .appendElement("h1", "All That Glitters")
-            .appendTitle("h2").appendBody()
+            .appendTitle("h2")
+            .appendBody()
+            .appendFooter()
             .save(version)
 
-        HtmlFile("character_sheet.html", "Character Sheet").save(version)
+        HtmlFile("character_sheet.html", "Character Sheet").appendBody().save(version)
 
         val max = 7
         for (i in 1..max) {
             val nav = Navigation.render(i, max)
             HtmlFile("c$i.html", chapterTitles[i - 1])
+                .appendHeader()
                 .appendElement("h2", "Chapter $i")
                 .appendTitle().append(nav)
                 .appendBody().append(nav)
-                .append(Collapsible.render()).save(version)
+                .append(Collapsible.render())
+                .appendFooter()
+                .save(version)
         }
 
         for (i in appendices.indices) {
@@ -72,8 +81,11 @@ object Generate {
             } else null
             val nav = Navigation.render(prev, next)
             HtmlFile(appendices[i].first, appendices[i].second)
+                .appendHeader()
                 .appendTitle().append(nav)
-                .appendBody().append(nav).save(version)
+                .appendBody().append(nav)
+                .appendFooter()
+                .save(version)
         }
     }
 }

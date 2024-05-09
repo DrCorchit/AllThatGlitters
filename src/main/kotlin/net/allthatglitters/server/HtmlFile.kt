@@ -7,8 +7,14 @@ class HtmlFile(val fileName: String, val title: String) {
     private val text = File(inputDir, fileName).readText()
     private val builder = StringBuilder()
 
-    init {
+    fun appendHeader(): HtmlFile {
         builder.append(Header.render())
+        return this
+    }
+
+    fun appendFooter(): HtmlFile {
+        builder.append(Footer.render())
+        return this
     }
 
     fun append(builder: StringBuilder): HtmlFile {
@@ -39,7 +45,7 @@ class HtmlFile(val fileName: String, val title: String) {
     }
 
     fun saveTo( version: String, destination: String) {
-        val content = builder.append(Footer.render()).toString()
+        val content = builder.toString()
             .replace("{{version}}", version)
         val outputFile = File(outputDir, destination)
         outputFile.parentFile.mkdirs()
