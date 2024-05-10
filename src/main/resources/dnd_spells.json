@@ -1,0 +1,11 @@
+[{
+  "name": "",
+  "level": 0,
+  "effect": ""
+},
+  {
+    "name": "Acid Splash",
+    "level": 0,
+    "effect": "1d6 acid"
+  }
+]

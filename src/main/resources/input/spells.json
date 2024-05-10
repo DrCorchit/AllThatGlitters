@@ -1,0 +1,49 @@
+[
+  {
+    "name": "",
+    "rarity": "",
+    "school": "",
+    "type": "",
+    "duration": "",
+    "range": "",
+    "training_reqs": {
+    },
+    "casting_reqs": {
+    },
+    "effect": ""
+  },
+  {
+    "name": "Arcane Flames",
+    "rarity": "common",
+    "school": "pragomancy",
+    "type": "evocation",
+    "duration": "Instant",
+    "range": "Cone 15 feet",
+    "training_reqs": {
+      "will": 12,
+      "int": 12
+    },
+    "casting_reqs": {
+      "action": "main",
+      "ap": 3
+    },
+    "effect": "Continuous flames flow from the user’s outstretched hands, dealing 1d6 fire damage to all targets caught in the blaze. The caster’s willpower modifier is added to the damage of the spell."
+  },
+  {
+    "name": "Frostbite Blast",
+    "rarity": "Common",
+    "school": "Physical",
+    "type": "Evocation",
+    "duration": "Instant",
+    "range": "15 feet (cone)",
+    "training_reqs": {
+      "will": 12,
+      "int": 12
+    },
+    "casting_reqs": {
+      "action": "main",
+      "ap": 3
+    },
+    "effect": ""
+  }
+]

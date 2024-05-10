@@ -131,5 +131,17 @@
             <artifactId>kotlin-stdlib-jdk8</artifactId>
             <version>1.9.23</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.1.0-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 </project>
