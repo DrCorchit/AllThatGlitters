@@ -1,4 +1,4 @@
-package net.allthatglitters.server
+package net.allthatglitters.server.util
 
 const val footer = """</body>
 </html>"""

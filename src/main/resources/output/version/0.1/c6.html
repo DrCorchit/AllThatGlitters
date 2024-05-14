@@ -23,6 +23,7 @@
 	<li><a href="#Resting">Resting</a></li>
 	<li><a href="#Travel">Travel</a></li>
 	<li><a href="#Swimming">Swimming</a></li>
+	<li><a href="#Falling">Fallling</a></li>
 	<li><a href="#Sneaking">Sneaking</a></li>
 	<li><a href="#Pickpocket">Pickpocket</a></li>
 	<li><a href="#Lockpicking">Lockpicking</a></li>
@@ -56,14 +57,14 @@
 <ul>
 	<li>After day 3, the party can no longer recover during short rests.</li>
 	<li>After day 5, the effect of a long rest is reduced to that of a short rest.</li>
-	<li>After day 7, the party can no longer take rests. Skill checks are made with disadvantage.</li>
+	<li>After day 10, the party can no longer take rests. Skill checks are made with disadvantage.</li>
 	<li>Starting on the 14th day, all attributes except speed are reduced by 1 each day. When strength reaches zero, the
 		character perishes of hunger.
 	</li>
 </ul>
 <p>The effects of starvation linger even after consuming rations. In the wilderness, characters recover 1 day of hunger
-	every day they consume rations. In villages and towns, 3 days of hunger are recovered per day. It takes
-	approximately one week to fully recover from the brink of starvation.
+	every day they consume rations. In villages and towns, 3 days of hunger are recovered per day. It takes a bit more
+	than one week to fully recover from the brink of starvation.
 </p>
 <h5>Bandits</h5>
 <p>Bandits usually set up ambushes along minor trade routes and between cities, but shy away from the cities themselves
@@ -82,14 +83,105 @@
 	Training: Freestyle), to bring swimming up to walking speed.
 </p>
 <p>Underwater, players can normally hold their breath for 10 seconds per point invested in the strength attribute, after
-	which point they must pass a DT 10 willpower saving throw every ten seconds to avoid drowning. As with
-	swimming speed, this can be improved with training (Athletics Training: Lung Capacity). The same rules apply when
-	holding one's breath for other reasons, such as trying to avoid inhaling toxic fumes.
+	which point they must pass a DT 10 willpower saving throw every ten seconds to avoid drowning. As with swimming
+	speed, this can be improved with training (Athletics Training: Lung Capacity). The same rules apply when holding
+	one's breath for other reasons, such as trying to avoid inhaling toxic fumes.
 </p>
 <h4><a id="Falling"></a>Falling</h4>
-<p>
-TODO
+<p>Damage from falling is determined by impact velocity, or how fast a character is moving when they hit the ground.
+	When airborn, characters accelerate downward at roughly 30 feet per second per second, until they reach a maximal
+	velocity due to air resistance. This means that fall damage increases the higher they fall until it reaches a
+	maximum value. <a href="c2.html#Size">Larger characters</a> have a higher terminal velocity and therefore have a
+	higher maximal fall damage.
 </p>
+<p style="margin-left: 25px;">Note:</p>
+<ul>
+	<li>Fall damage type is always bludgeoning.</li>
+	<li>Characters can take fall damage from sources other than falling, such as being hurled into a wall.</li>
+	<li>Characters can choose to fall up to twice their terminal velocity by tucking in their limbs and maneuvering into
+		a headfirst position, if so desired.
+	</li>
+	<li>Characters can take more damage than their terminal velocity if they are moving faster when they hit the ground.
+		Characters in the air accelerate or decelerate as necessary until they reach their terminal velocity.
+	</li>
+</ul>
+<p>For the purposes of determining fall damage, always round down the player's fall height or impact velocity to match
+	the last row applicable.
+</p>
+<table>
+	<tr>
+		<th>Impact Velocity (ft/s)</th>
+		<th>Fall Distance (feet)</th>
+		<th>Fall Time (seconds)</th>
+		<th>Fall Damage</th>
+	</tr>
+	<tr>
+		<td>45</td>
+		<td>35</td>
+		<td>1.5</td>
+		<td>1d4</td>
+	</tr>
+	<tr>
+		<td>60</td>
+		<td>60</td>
+		<td>2</td>
+		<td>2d6</td>
+	</tr>
+	<tr>
+		<td>75</td>
+		<td>100</td>
+		<td>2.5</td>
+		<td>3d8</td>
+	</tr>
+	<tr>
+		<td>90</td>
+		<td>135</td>
+		<td>3</td>
+		<td>4d10</td>
+	</tr>
+	<tr>
+		<td>100</td>
+		<td>175</td>
+		<td>3.3</td>
+		<td>5d10</td>
+	</tr>
+	<tr>
+		<td>120</td>
+		<td>240</td>
+		<td>4</td>
+		<td>6d10</td>
+	</tr>
+	<tr>
+		<td>150</td>
+		<td>380</td>
+		<td>5</td>
+		<td>8d10</td>
+	</tr>
+	<tr>
+		<td>180</td>
+		<td>550</td>
+		<td>6</td>
+		<td>10d10</td>
+	</tr>
+	<tr>
+		<td>210</td>
+		<td>750</td>
+		<td>7</td>
+		<td>12d10</td>
+	</tr>
+	<tr>
+		<td>240</td>
+		<td>1000</td>
+		<td>8</td>
+		<td>15d10</td>
+	</tr>
+	<tr>
+		<td>270</td>
+		<td>1250</td>
+		<td>9</td>
+		<td>Death, or 20d10</td>
+	</tr>
+</table>
 <h4><a id="Sneaking"></a>Sneaking</h4>
 <p>Sneaking is handled as an ability check. The DT is 5 under near-ideal conditions (night, light background noise, not
 	actively sought.) However, the following conditions affect the DT:
@@ -173,6 +265,16 @@ TODO
 		on a critical failure.
 	</li>
 	<li>Some locks may require two picks to be used at a time.</li>
+</ul>
+<h4><a id="Merchants"></a>Merchants</h4>
+<p>Merchants typically have a range of wares available for purchase. Some wares are common and available almost
+	anywehre, while others are exceptionally rare and usually unique to a specific merchant. Commonly available items
+	are listed in these locations:
+</p>
+<ul>
+	<li><a href="appendix_weapons.html">Weapons</a></li>
+	<li><a href="appendix_armor.html">Armor</a></li>
+	<li><a href="appendix_items.html">Items</a></li>
 </ul>
 <h4><a id="Haggling"></a>Haggling</h4>
 <p>Players can attempt to haggle merchants using the persuasion skill. A merchant can be haggled up to three times,

@@ -1,4 +1,4 @@
-package net.allthatglitters.server
+package net.allthatglitters.server.util
 
 const val header = """<!DOCTYPE html>
 <html lang="en">

@@ -1,4 +1,4 @@
-package net.allthatglitters.server
+package net.allthatglitters.server.util
 
 const val hr = "<hr />"
 const val divStart = "<div class=\"row\" style=\"justify-content:space-evenly; margin: 0\" >"
@@ -10,10 +10,6 @@ const val nextText =
 const val divEnd = "</div>"
 
 object Navigation {
-    fun render(): StringBuilder {
-        return render(null, null)
-    }
-
     fun render(current: Int, max: Int): StringBuilder {
         val prev = if (current > 1) {
             "c${current - 1}.html" to "Retreat to Chapter ${current - 1}"
@@ -23,6 +19,11 @@ object Navigation {
         } else null
 
         return render(prev, next)
+    }
+
+    fun render(prev: HtmlFile?, next: HtmlFile?): StringBuilder {
+        return render(prev?.let { prev.fileName to prev.title },
+            next?.let { next.fileName to next.title })
     }
 
     fun render(prev: Pair<String, String>?, next: Pair<String, String>?): StringBuilder {

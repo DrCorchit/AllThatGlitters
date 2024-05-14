@@ -4,8 +4,7 @@
     "rarity": "",
     "school": "",
     "type": "",
-    "duration": "",
-    "range": "",
+    "target": "",
     "training_reqs": {
     },
     "casting_reqs": {
@@ -15,10 +14,10 @@
   {
     "name": "Arcane Flames",
     "rarity": "common",
-    "school": "pragomancy",
+    "school": "elementurgy",
     "type": "evocation",
-    "duration": "Instant",
-    "range": "Cone 15 feet",
+    "target": "shape",
+    "range": "15 foot cone",
     "training_reqs": {
       "will": 12,
       "int": 12
@@ -31,19 +30,20 @@
   },
   {
     "name": "Frostbite Blast",
-    "rarity": "Common",
-    "school": "Physical",
-    "type": "Evocation",
-    "duration": "Instant",
-    "range": "15 feet (cone)",
+    "rarity": "common",
+    "school": "elementurgy",
+    "type": "evocation",
+    "target": "shape",
+    "range": "15 foot cone",
     "training_reqs": {
       "will": 12,
-      "int": 12
+      "int": 13
     },
     "casting_reqs": {
       "action": "main",
       "ap": 3
     },
-    "effect": ""
-  }
+    "effect": "A blast of cold wind flows from the user's outstretched hand, dealing 1d4 cold damage to all targets. The caster's willpower modifier is added to the damage."
+  },
+
 ]

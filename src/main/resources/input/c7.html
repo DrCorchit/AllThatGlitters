@@ -1,7 +1,8 @@
-<a id="Learning_Spells"></a><h4>Learning Spells</h4>
+<a id="Learning_Spells"></a>
+<h4>Learning Spells</h4>
 <p>In order to learn a spell, a player must usually find a spellbook, scroll, or trainer who has knowledge of that
 	specific spell. These would normally be found in larger towns and cities, or rarely in dungeons or out in the
-	wilderness. Certain spells are so widespread as to be considered common knowledge, and can be learned without a
+	wilderness. Certain spells are so widespread that they are considered common knowledge and can be learned without a
 	tome. Likewise, certain class abilities such as the Warlock's eldritch tome or the scholar's codex arcana provide
 	special access to arcane knowledge.
 </p>
@@ -23,24 +24,23 @@
 </p>
 <ul>
 	<li><b>Common</b> spells are widely known and often used for very practical applications such as healing or repair.
-		These spells are usually simplified incantations and rituals based on more powerful versions formally studied by
-		academic institutions.
+		These spells are usually watered-down versions of more powerful spells studied by academic institutions.
 	</li>
-	<li><b>Scholastic</b> spells are studied and taught at a university level. They are generally inaccessible to the
+	<li><b>Academic</b> spells are studied and taught at a university level. They are generally inaccessible to the
 		population at large, usually due to the high precision and innate talent required to cast correctly.
 	</li>
 	<li>
-		<b>Forbidden</b> spells are those deemed unethical by official institutions and public consensus. Includes all
-		forms of necromancy and demonolatry. Knowledge of these spells is actively suppressed and practice of such
-		spells is usually illegal. If you want to learn these spells, you might have to get your hands dirty.
+		<b>Forbidden</b> spells are those that respectable institutions have deemed unethical or dangerous. This
+		typically includes all forms of necromancy and demonolatry. Knowledge and practice of these spells is actively
+		suppressed and highly illegal. If you want to learn these spells, you might have to get your hands dirty, and be
+		careful where you use them.
 	</li>
-	<li><b>Esoteric</b> spells are not taught openly by universities, even at a doctoral level. Often the knowledge of
-		even the existence of such spells is suppressed by the scattered cults and secret societies that practice them.
-		Many spells of this sort are questionably ethical, but are so little known that their practice does not arouse
-		suspicion.
+	<li><b>Esoteric</b> spells are not taught by universities, even at a doctoral level. All but lost to time, these
+		spells are often guarded behind the bizarre initiation rituals of depraved secret societies or scattered cults.
+		Learning of the existence of such a spell (let alone learning its practice) is no small feat.
 	</li>
-</ul>
-<a id="Casting_Spells"></a><h4>Casting Spells</h4>
+</ul><a id="Casting_Spells"></a>
+<h4>Casting Spells</h4>
 <p>Once a spell has been learned, certain additional requirements must be met in order to cast the spell. These
 	requirements are unique to each spell, and detailed in the spell description. In general, most spells expend AP and
 	require a main hand action to cast. However, some spells require two hands, while others can be cast with the
@@ -64,7 +64,64 @@
 		rituals, these spells often have special requirements.
 	</li>
 </ul>
-<a id="Schools_of_Sorcery"></a><h4>Schools of Sorcery</h4>
+<h5>Targeting Spells</h5>
+<p>Many spells have a range of effectiveness and target a certain area of the battlefield. Every spell has a target, of
+	one of the following types:
+</p>
+<ul>
+	<li><b>Self</b>: The spell targets the caster of the spell only.</li>
+	<li><b>Touch</b>: The spell targets one or more creatures that the spellcaster is able to physically touch.</li>
+	<li><b>Ally</b>: The spell targets one or more allies within a given range, possibly including the caster
+		themselves.
+	</li>
+	<li><b>Enemy</b>: The spell targets one or more enemies within a given range.</li>
+	<li><b>Object</b>: The spell targets one or more inanimate objects within a given range.</li>
+	<li><b>Any</b>: The spell targets something in range, possibly an ally, enemy, or inanimate object.</li>
+	<li><b>Point</b>: The spell targets any point within range.</li>
+	<li><b>Shape</b>: The spell targets a specific area within range, based on one of the shapes described below. If the
+		range is zero, the shape is targeted on the caster.
+	</li>
+</ul>
+<p>Most spells that target something within a range require line-of-sight to the target. A spell can be cast on a target
+	without line-of-sight only if the description explicitly says so. The caster always has line-of-sight to themselves.
+</p>
+<p>Spells that have a range and a target of self or a point take one of the following shapes:</p>
+<table>
+	<tr>
+		<th>Shape</th>
+		<th>Effect</th>
+	</tr>
+	<tr>
+		<td>Sphere</td>
+		<td>Affects all targets which overlap a sphere. The sphere's radius is specified by the spell.</td>
+	</tr>
+	<tr>
+		<td>Cylinder</td>
+		<td>Affects all targets which overlap a vertical cylinder. The cylinder's radius and height are specified by the
+			spell.
+		</td>
+	</tr>
+	<tr>
+		<td>Cone</td>
+		<td>Affects all targets which overlap a horizontal cone, with the tip at the point of origination. The cone's
+			length is specified by the spell. Its angle defaults to 45 if not specified.
+		</td>
+	</tr>
+	<tr>
+		<td>Line</td>
+		<td>Affects all targets in the path of the line. The length is specified by the spell. The width defaults to 1
+			if not otherwise specified. If the spell target is self, then one of the line endpoints ends on the caster's
+			tile. The caster decides if the spell includes their tile or not.
+		</td>
+	</tr>
+	<tr>
+		<td>Cube</td>
+		<td>Affects all targets within a cube. The edge length of the cube is specified by the spell. The cube is
+			centered on the point of origination if not otherwise specified.
+		</td>
+	</tr>
+</table><a id="Schools_of_Sorcery"></a>
+<h4>Schools of Sorcery</h4>
 <blockquote>Any sensible treatise on magic will disclose the following insight: <i>magic is energy</i>. Therefore, magic
 	is classified according to whence this energy originates, the techniques used to manipulate it, and finally
 	according to the overall purpose of its application. In fact, all spells follow the same basic pattern, whereby the
@@ -94,13 +151,13 @@
 	<li><b>Astrology</b>: The study of magic sourced from the heavenly spheres. Such magic is often channeled for the
 		purposes of divination or protection. A mage excels in this discipline chiefly by virtue of his intelligence.
 	</li>
-	<li><b>Biomancy</b>: The magic of living things, the wild, and the human body. Commonly used for healing, and
-		enhancements or transformations of the physical body. This school opens itself most deeply to those with open
-		hearts, pure intentions, and strong willpower.
+	<li><b>Biomancy</b>: The magic of living things, the wild, and the human body. Also known as natural or primal
+		magic. Commonly used for healing, and enhancements or transformations of the physical body. This school opens
+		itself most deeply to those with open hearts, pure intentions, and strong willpower.
 	</li>
 	<li><b>Elementurgy</b>: School concerned with application of alchemical elements for destructive purposes. Includes
-		disciplines such as pyromancy, cryomancy, and electromancy. The spells in this school are immensely satisfying
-		to perform, but require exceptional willpower to fully master.
+		disciplines such as pyromancy, cryomancy, and electromancy. The spells in this school are equal parts
+		devastating and spectacular, but require strong willpower to master.
 	</li>
 	<li><b>Conjuration</b>: The magic of higher beings, including theurgy, feyseeking, dragonolatry, and demonolatry.
 		Those possessing high charisma tend to excel in attracting and entreating such spirits.
@@ -110,8 +167,8 @@
 		the result of workings of spells from the enchantment school. Excellence requires intelligence, first and
 		foremost.
 	</li>
-	<li><b>Psionics</b>: The magic of the psyche, whether used for illusion, hypnosis, or telekinesis. Most easily
-		mastered by those possessing exceptional charisma.
+	<li><b>Psionics</b>: The magic of the psyche, whether used for telekinesis, telepathy, hypnosis, or illusion. Most
+		easily mastered by those possessing energetic charisma.
 	</li>
 	<li><b>Necromancy</b>: The forbidden study of reanimating the dead or drawing energy from the souls of the departed.
 		The practice is iniquitous, but it is known that those possessing great willpower excel in this depraved art.

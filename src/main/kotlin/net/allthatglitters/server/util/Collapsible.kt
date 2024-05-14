@@ -1,4 +1,4 @@
-package net.allthatglitters.server
+package net.allthatglitters.server.util
 
 private const val script = """<!-- Enables collapsible functionality -->
 <script>
