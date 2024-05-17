@@ -82,6 +82,10 @@
 		character. During a ceremony, each participant contributes some energy towards the casting of the spell. Like
 		rituals, these spells often have special requirements.
 	</li>
+	<li><b>Enchantments</b>: An enchantment is a special type of ritual spell where the magic is infused into a physical
+		object or substance, such as a sword, piece of armor, or an alchemical brew. The enchantment's magic lingers
+		long after the spell is cast.
+	</li>
 </ul>
 <h5>Targeting Spells</h5>
 <p>Many spells have a range of effectiveness and target a certain area of the battlefield. Every spell has a target, of
@@ -90,11 +94,7 @@
 <ul>
 	<li><b>Self</b>: The spell targets the caster of the spell only.</li>
 	<li><b>Touch</b>: The spell targets one or more creatures that the spellcaster is able to physically touch.</li>
-	<li><b>Range</b>: The spell affects some or all targets within a given range. The spell specifies whether the
-		targets must be allies or enemies, how many may be affected. Line-of-sight to all targets is required unless
-		otherwise specified.
-	</li>
-	<li><b>Point</b>: The spell targets a specific point within range and line-of-sight.</li>
+	<li><b>Range</b>: The spell affects some or all targets of a specific type within a given range.</li>
 	<li><b>Shape</b>: The spell targets a specific area within range, based on one of the shapes described below. If the
 		range is zero, the shape is targeted on the caster.
 	</li>
@@ -102,7 +102,7 @@
 <p>Most spells that target something within a range require line-of-sight to the target. A spell can be cast on a target
 	without line-of-sight only if the description explicitly says so. The caster always has line-of-sight to themselves.
 </p>
-<p>Spells that have a range and a target of self or a point take one of the following shapes:</p>
+<p>Spells that target a shape use one of the following shapes:</p>
 <table>
 	<tr>
 		<th>Shape</th>
@@ -151,46 +151,91 @@
 	reproduce, and why other spells work at all. This inconvenience doesn't stop scholars from doing the one thing they
 	are truly good at, however: categorizing things.
 </p>
-<p>A long time ago, spells were categorized into two types: thaumaturgy and divination. Spells and spell schools ending
-	in -urgy belonged to the former category, while spells ending in -mancy belonged to the latter. For example, there
-	was once a distinction between necromancy and necromurgy; the former was concerned with contacting deceased spirits,
-	while the latter was concerned with raising their bodies. However, centuries of expanding magical theory as well as
-	a good deal of linguistic bastardization have relegated such distinction to a mere footnote.
+<p>A long time ago, spells were categorized into two types: thaumaturgy and divination. Thaumaturgical disciplines used
+	the suffix -urgy, while divination schools used the suffix -mancy. For example, there was once a distinction between
+	necromancy and necromurgy; the former was concerned with contacting deceased spirits, while the latter with raising
+	their bodies. However, centuries of expanding magical theory as well as a good deal of linguistic bastardization
+	have relegated such distinction to a mere footnote.
 </p>
-<p>In modern times, magic is roughly divided into eight categories, formally known as <i>schools of sorcery</i>.
-	Although scholars categorize by their primary energetic sources, some spells arguably belong to more than one
-	category, while others scarcely fit into any discipline. The eight schools are listed below:
+<p>In modern times, magic is roughly divided into six schools of sorcery, which each have their own disciplines. These
+	are listed below:
 </p>
+<h5>Alchemy</h5>
+<p>An ancient school focused on interactions between magic and chemistry. Spells of this school are always enchantment
+	rituals carried out upon a prepared solution. Optimal results are obtained when performed at an alchemical
+	laboratory.
+</p>
+<p><b>Primary Attribute</b>: Intelligence</p>
+<p><b>Disciplines</b></p>
 <ul>
-	<li><b>Alchemy</b>: The study of magical solvents, potions, and elixirs. Healing and transmutation are the end
-		result. The practice is tedious, and impenetrable to all but those of exceptional intelligence.
+	<li><i>Pharmacology</i>: The study of beneficial brews and potions.</li>
+	<li><i>Toxicology</i>: The study of toxins and potions with detrimental effects.</li>
+</ul>
+<h5>Astrology</h5>
+<p>The magic of the spheres and the vault of the heavens. Spells of this category vary significantly, allowing one to
+	deal damage, heal, invoke insanity, and travel instantaneously through the cosmos.
+</p>
+<p><b>Primary Attribute</b>: Intelligence</p>
+<p><b>Disciplines</b></p>
+<ul>
+	<li><i>Solar Astrology</i>: The subdivision of astrology concerned with the sun and stars. Focuses on radiance and
+		healing.
 	</li>
-	<li><b>Astrology</b>: The study of magic sourced from the heavenly spheres. Such magic is often channeled for the
-		purposes of divination or protection. A mage excels in this discipline chiefly by virtue of his intelligence.
+	<li><i>Lunar Astrology</i>: The subdivision of astrology connected with the moon and its phases. Focuses on darkness
+		and insanity.
 	</li>
-	<li><b>Biomancy</b>: The magic of living things, the wild, and the human body. Also known as natural or primal
-		magic. Commonly used for healing, and enhancements or transformations of the physical body. This school opens
-		itself most deeply to those with open hearts, pure intentions, and strong willpower.
+	<li><i>Planetary Astrology</i>: The subdivision of astrology focused on the movement and alignment of the lesser
+		spheres. Focuses on transportaion and teleportation.
 	</li>
-	<li><b>Elementurgy</b>: School concerned with application of alchemical elements for destructive purposes. Includes
-		disciplines such as pyromancy, cryomancy, and electromancy. The spells in this school are equal parts
-		devastating and spectacular, but require strong willpower to master.
+</ul>
+<h5>Biomancy</h5>
+<p>The magic of living things, of the wild, and the human body. Magical techniques of this school are explored chiefly
+	by the druids, who detest the term "biomancy" and have other names for their craft, such as <i>wyrdworking</i>
+	and <i>shamanism</i>.
+</p>
+<p><b>Primary Attribute</b>: Charisma</p>
+<p><b>Disciplines</b></p>
+<ul>
+	<li><i>Weal</i>: The magic of plants, often used for healing or poison.</li>
+	<li><i>Wild</i>: The magic of animals, often used for transformations.</li>
+	<li><i>Wyrd</i>: The magic of the fey. Spells of this discipline are as chaotic and unpredictable as the fey
+		themselves.
 	</li>
-	<li><b>Conjuration</b>: The magic of higher beings, including theurgy, feyseeking, dragonolatry, and demonolatry.
-		Those possessing high charisma tend to excel in attracting and entreating such spirits.
+</ul>
+<h5>Conjuration</h5>
+<p><b>Primary Attribute</b>: Charisma</p>
+<p><b>Disciplines</b></p>
+<ul>
+	<li><i>Divination</i>: The practice of summoning spirits for communication. By working this school the magus may
+		acquire a great deal of knowledge concerning the future, the past, and faroff lands.
 	</li>
-	<li><b>Enchantment</b>: The study of transferring magical energy to and from physical objects. Includes disciplines
-		such as infusion, disenchantment, and crystallurgy. All enchanted objects such as magical swords and armor are
-		the result of workings of spells from the enchantment school. Excellence requires intelligence, first and
-		foremost.
+	<li><i>Invocation</i>: The practice of summoning spirits in order to produce physical manifestations.</li>
+	<li><i>Necromancy</i>: An amalgamation of iniquitous practices which seek to maim, desecrate, and spew disease, as
+		well as contacting and raising the dead. The entire discipline is utterly forbidden.
 	</li>
-	<li><b>Psionics</b>: The magic of the psyche, whether used for telekinesis, telepathy, hypnosis, or illusion. Most
-		easily mastered by those possessing energetic charisma.
+</ul>
+<h5>Elementurgy</h5>
+<p><b>Primary Attribute</b>: Willpower</p>
+<p><b>Disciplines</b></p>
+<ul>
+	<li><i>Aerokinesis</i>: Elemental air magic. Focuses on forces such as wind, clouds, and lightning .</li>
+	<li><i>Geokinesis</i>: Elemental earth magic. Focuses on substances such as clay, stone, and metal.</li>
+	<li><i>Hydrokinesis</i>: Elemental water magic. Focuses on substances such as water, snow, and ice.</li>
+	<li><i>Pyrokinesis</i>: Elemental fire magic. Focuses on the forces of heat, flame, and lava.</li>
+</ul>
+<h5>Psionics</h5>
+<p><b>Primary Attribute</b>: Willpower</p>
+<p><b>Disciplines</b></p>
+<ul>
+	<li><i>Illusion</i>: Magic concerned with conveying false sensory impressions and misdirection, and dispelling the
+		same.
 	</li>
-	<li><b>Necromancy</b>: The forbidden study of reanimating the dead or drawing energy from the souls of the departed.
-		The practice is iniquitous, but it is known that those possessing great willpower excel in this depraved art.
+	<li><i>Telekinesis</i>: Magic concerned with the movement of objects by mental impulse alone.</li>
+	<li><i>Telepathy</i>: Explores magically aided communication, and various forms of mind control and mental
+		domination.
 	</li>
-</ul><hr />
+</ul>
+<hr />
 <div class="row" style="justify-content:space-evenly; margin: 0" >
 	<div class="column-shrink"><a href="c6.html" rel="prev">Retreat to Chapter 6</a></div>
 	<div class="column-shrink"><a href="phb_toc.html">Back to the Table of Contents</a></div>

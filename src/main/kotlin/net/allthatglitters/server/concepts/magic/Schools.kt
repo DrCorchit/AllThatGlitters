@@ -27,10 +27,10 @@ enum class Discipline(val school: School, val adjective: String) {
     Divination(School.Conjuration, "divination"),
     Necromancy(School.Conjuration, "necromantic"),
 
-    Fire(School.Elementurgy, "pyrotechnic"),
-    Earth(School.Elementurgy, "terrestrial"),
-    Water(School.Elementurgy, "aquatic"),
-    Air(School.Elementurgy, "aetherial"),
+    Fire(School.Elementurgy, "pyrokinetic"),
+    Earth(School.Elementurgy, "geokinetic"),
+    Water(School.Elementurgy, "hydrokinetic"),
+    Air(School.Elementurgy, "aerokinetic"),
 
     Illusion(School.Psionics, "illusion"),
     Telepathy(School.Psionics, "telepathic"),

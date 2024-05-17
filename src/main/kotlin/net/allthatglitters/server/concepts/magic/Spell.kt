@@ -1,15 +1,13 @@
 package net.allthatglitters.server.concepts.magic
 
+import com.drcorchit.justice.utils.json.JsonUtils.deserializeEnum
+import com.drcorchit.justice.utils.math.units.Measurement
+import com.drcorchit.justice.utils.math.units.TimeUnits
 import com.google.common.collect.ImmutableMap
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
-import net.allthatglitters.server.util.Util.deserializeEnum
-import net.allthatglitters.server.util.Util.deserializeMeasurement
-import net.allthatglitters.server.util.Util.parseEnum
 import net.allthatglitters.server.concepts.Attribute
 import net.allthatglitters.server.util.HtmlObject
-import net.allthatglitters.server.util.Measurement
-import net.allthatglitters.server.util.Time
 
 class Spell(
     val name: String,
@@ -17,7 +15,7 @@ class Spell(
     val discipline: Discipline,
     val type: Type,
     val target: Target?,
-    val duration: Measurement<Time>?,
+    val duration: Measurement<TimeUnits.Time>?,
     val trainingReqs: ImmutableMap<String, JsonElement>,
     val castingReqs: ImmutableMap<String, JsonElement>,
     val effect: String,
@@ -110,15 +108,15 @@ class Spell(
     }
 
     companion object {
+        val round: TimeUnits.Time = TimeUnits.add("rd", "Round", "Rounds", TimeUnits.SEC.ratio * 5)
+
         fun deserialize(info: JsonObject): Spell {
             val name = info.get("name").asString
-            val rarity = deserializeEnum<Rarity>(info.get("rarity"))
-            val discipline = deserializeEnum<Discipline>(info.get("discipline"))
-            val type = deserializeEnum<Type>(info.get("type"))
+            val rarity = info.get("rarity").deserializeEnum<Rarity>()
+            val discipline = info.get("discipline").deserializeEnum<Discipline>()
+            val type = info.get("type").deserializeEnum<Type>()
             val target = info.get("target")?.let { Target.deserialize(it) }
-            val duration = info.get("duration")
-                ?.let { ele -> deserializeMeasurement(ele, Time.ROUND) { parseEnum(it) } }
-                ?: Measurement(0.0, Time.ROUND)
+            val duration = TimeUnits.deserialize(info.get("duration"), round)
             val trainingReqs = info.getAsJsonObject("training_reqs")?.let {
                 it.entrySet().stream()
                     .collect(
