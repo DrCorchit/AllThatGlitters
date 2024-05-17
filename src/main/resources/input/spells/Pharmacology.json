@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Brew Curative",
+    "rarity": "common",
+    "discipline": "Pharmacology",
+    "type": "ritual",
+    "effect": "A pleasing philter of lion or bear's blood is precipitated in alchemical solution. The reaction yields 4 ounces of liquid, which are stored in a stoppered flask. As an action, you may drink up to 4 ounces from the flask, healing 1d4 damage each.",
+    "note": "If the potion is not consumed, the mixture denatures and becomes inert after a long rest.",
+    "training_reqs": {
+      "int": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 Action",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "1 ounce of fresh blood, taken from a lion or bear."
+    },
+    "scaling": {
+      "Quantity": "Improved distillation procedures allow you to produce one additional ounce of curative for each point of intelligence above 14."
+    }
+  }
+]

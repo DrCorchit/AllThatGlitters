@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Arcane Flames",
+    "rarity": "common",
+    "discipline": "Fire",
+    "type": "concentration",
+    "target": {
+      "type": "creature",
+      "shape": "cone",
+      "radius": 15
+    },
+    "duration": 10,
+    "effect": "Continuous flames flow from the user’s outstretched hands, dealing 1d6 fire damage to all creatures caught in the blaze.",
+    "training_reqs": {
+      "int": 11,
+      "will": 12,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 Action",
+      "ap": 3,
+      "concentration": 1
+    },
+    "scaling": {
+      "Damage": "Damage is increased by 1 for every point of willpower above 11",
+      "dualcast": "Damage is increased by 1d6."
+    }
+  }
+]

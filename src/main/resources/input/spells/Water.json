@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Frostbite Blast",
+    "rarity": "common",
+    "discipline": "Water",
+    "type": "evocation",
+    "target": {
+      "type": "creature",
+      "shape": "cone",
+      "radius": 10
+    },
+    "duration": 10,
+    "effect": "A blast of cold wind flows from your outstretched hand, dealing 1d4 cold damage to all targets.",
+    "note": "",
+    "training_reqs": {
+      "int": 12,
+      "will": 11,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 Action",
+      "ap": 2,
+      "concentration": 0
+    },
+    "scaling": {
+      "Damage": "Damage increases by 1 for every point of willpower above 14.",
+      "dualcast": "Damage is increased by 1d4."
+    }
+  }
+]

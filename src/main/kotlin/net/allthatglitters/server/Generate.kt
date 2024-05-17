@@ -1,14 +1,16 @@
 package net.allthatglitters.server
 
-import net.allthatglitters.server.appendices.Spells
+import net.allthatglitters.server.concepts.magic.Spells
 import net.allthatglitters.server.util.Collapsible
 import net.allthatglitters.server.util.HtmlFile
 import net.allthatglitters.server.util.Navigation
+import net.allthatglitters.server.util.inputDir
+import java.io.File
 
 object Generate {
     val version = "0.1"
     val appendices = listOf(
-        Spells("spells/psionics.json"),
+        Spells(File(inputDir, "spells")),
         HtmlFile("Appendix: Training", "appendix_training.html"),
         HtmlFile("Appendix: Weapons", "appendix_weapons.html"),
         HtmlFile("Appendix: Armor &amp; Materials", "appendix_armor.html"),
@@ -28,13 +30,13 @@ object Generate {
 
     @JvmStatic
     fun main(vararg args: String) {
-        HtmlFile("index.html", "All That Glitters")
+        HtmlFile("All That Glitters", "index.html")
             .appendHeader()
             .appendTitle("h1")
             .appendBody()
             .appendFooter()
             .saveTo(version, "index.html")
-        HtmlFile("phb_toc.html", "Player's Handbook")
+        HtmlFile("Player's Handbook", "phb_toc.html")
             .appendHeader()
             .appendElement("h1", "All That Glitters")
             .appendTitle("h2")
@@ -42,12 +44,12 @@ object Generate {
             .appendFooter()
             .save(version)
 
-        HtmlFile("character_sheet.html", "Character Sheet").appendBody().save(version)
+        HtmlFile("Character Sheet", "character_sheet.html").appendBody().save(version)
 
         val max = 7
         for (i in 1..max) {
             val nav = Navigation.render(i, max)
-            HtmlFile("c$i.html", chapterTitles[i - 1])
+            HtmlFile(chapterTitles[i - 1], "c$i.html")
                 .appendHeader()
                 .appendElement("h2", "Chapter $i")
                 .appendTitle().append(nav)

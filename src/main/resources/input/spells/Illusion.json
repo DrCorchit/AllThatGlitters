@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Detect Illusion",
+    "rarity": "common",
+    "discipline": "illusion",
+    "type": "evocation",
+    "target": "self",
+    "duration": "10 min",
+    "training_reqs": {
+      "int": 12,
+      "will": 12
+    },
+    "casting_reqs": {
+      "time": 1,
+      "ap": 1
+    },
+    "effect": "For ten minutes after casting the spell, you experience a distinct ringing noise in your ears while in the presence of illusion magic. The sound gains a distinctive overtone if the source of the spell is within 10 feet of you."
+  },
+  {
+    "name": "Dispell Illusion",
+    "rarity": "common",
+    "discipline": "illusion",
+    "type": "ritual",
+    "target": {
+      "type": "ally",
+      "range": "100 yd"
+    },
+    "training_reqs": {
+      "int": 13,
+      "will": 14
+    },
+    "casting_reqs": {
+      "time": "10 minutes",
+      "ap": 1
+    },
+    "effect": ""
+  },
+  {
+    "name": "Illusory Disguise",
+    "rarity": "common",
+    "discipline": "illusion",
+    "type": "ritual",
+    "duration": "1 Hour",
+    "target": "self",
+    "training_reqs": {
+      "cha": 12,
+      "will": 12
+    },
+    "casting_reqs": {
+      "ap": 2
+    },
+    "effect": "For the duration of the spell, your face appears to change to match any face you have seen previously. Your clothes, stature, and body type do not change. You may dismiss this spell at will before the duration is through. Anyone who scrutinizes your face makes a DT 15 perception check to see past your disguise. Once your disguise is foiled, the creature has advantage on saving throws against your illusions for the next 24 hours.",
+    "scaling": {
+      "Difficulty": "The DT of the perception check is increased by 1 for every point of charisma above 12.",
+      "Duration": "The duration of the spell is increased by 1 hour for every point of willpower above 12."
+    }
+  },
+  {
+    "name": "Illusory Being",
+    "rarity": "academic",
+    "discipline": "illusion",
+    "type": "concentration",
+    "target": {
+      "type": "point",
+      "range": 100
+    },
+    "duration": "1 hour",
+    "training_reqs": {
+      "int": 12,
+      "will": 14,
+      "spells": [
+        "illusory disguise"
+      ]
+    },
+    "casting_reqs": {
+      "action": 1,
+      "ap": 3,
+      "concentration": 0
+    },
+    "effect": "You create an illusory being of any of the following types: <i>Beguiling</i>, <i>Terrifying</i>, <i>Distracting</i>, or <i>Ordinary</i>. The being appears in a location you can see, and obeys your telepathic command for the duration of the spell. If the being has a humanoid form, you can take on the appearance of the being instead, as a disguise. Observers react to the being differently depending on the type created."
+  },
+  {
+    "name": "Fleeting Illusion",
+    "rarity": "common",
+    "discipline": "illusion",
+    "type": "evocation",
+    "target": {
+      "type": "creature",
+      "range": 50
+    },
+    "training_reqs": {
+      "int": 12,
+      "will": 14
+    },
+    "casting_reqs": {
+    },
+    "effect": "The caster manifests a small illusion visible toa small number of targets. The illusion may be used to lure, mystify, or repel the target."
+  },
+  {
+    "name": "Mass Illusion",
+    "rarity": "academic",
+    "discipline": "illusion",
+    "type": "evocation",
+    "target": {
+      "type": "creature",
+      "range": "1 mi"
+    },
+    "training_reqs": {
+      "int": 13,
+      "will": 16
+    },
+    "casting_reqs": {
+    },
+    "effect": "The caster manifests a large illusion that is visible to more than one person."
+  }
+]

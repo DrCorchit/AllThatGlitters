@@ -12,6 +12,10 @@ class HtmlObject(val tag: String) {
         return this
     }
 
+    fun hasContent(): Boolean {
+        return content.isNotEmpty()
+    }
+
     fun withContent(content: String): HtmlObject {
         this.content.append(content)
         return this
