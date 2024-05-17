@@ -58,8 +58,11 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
     font-family: "Calibri";
     font-size: 14px;
 }
-.active, .collapsible:hover {
+.collapsible:hover {
     background-color: #664;
+}
+.active {
+    background-color: #553
 }
 .content {
     display: none;

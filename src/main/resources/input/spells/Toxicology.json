@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Brew Aqua Regia",
+    "rarity": "academic",
+    "discipline": "Toxicology",
+    "type": "ritual",
+    "effect": "The alchemical ritual renders of an extremely volatile acid that even dissolves inert metals such as gold and platinum. The reaction yields four ounces of liquid, which are stored in a stoppered flask. When thrown at a target after the incantation has been uttered, it deals 4d4 acid damage and reduces armor by 1.",
+    "note": "The mixture remains stable and can be poured from one container to another until the correct incantation is uttered. Thereupon, the mixture explodes into a violent orange-colored froth and the pressure builds until it escapes or shatters the flask. If the incantation is never uttered, the mixture decomposes and becomes inert after a long rest.",
+    "training_reqs": {
+      "int": 16,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 4,
+      "Location": "Alchemical Laboratory",
+      "Materials": "1 ounce of nitric acid and 3 ounces of brimstone."
+    },
+    "scaling": {
+      "Damage": "Improved chemical purity increases damage by 1d4 for every two points of intelligence above 16."
+    }
+  },
+  {
+    "name": "Brew Neurotoxin",
+    "rarity": "common",
+    "discipline": "Toxicology",
+    "type": "ritual",
+    "effect": "A potent concentrate of serpent venom is precipitated in alchemical solution. The reaction yields 1 ounce of liquid, which are stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons must pass a DT 12 willpower saving throw or become paralysed.",
+    "note": "If the vial is not used, the mixture decomposes and becomes inert after a long rest.",
+    "training_reqs": {
+      "int": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "30 minutes",
+      "ap": 3,
+      "Location": "Alchemical Laboratory",
+      "Materials": "4 viper fangs"
+    },
+    "scaling": {
+      "Potency": "Saving throw DT increases by 1 for every point of intelligence above 14."
+    }
+  }
+]

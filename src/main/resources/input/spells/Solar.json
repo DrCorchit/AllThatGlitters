@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Solar Healing",
+    "rarity": "Academic",
+    "discipline": "Solar",
+    "type": "evocation",
+    "target": {
+      "type": "ally",
+      "shape": "cylinder",
+      "range": 100,
+      "radius": 5
+    },
+    "duration": 1,
+    "effect": "A beam of healing sunlight shines down on a designated area. Allied targets within heal for 1d4, while enemies take 1d4 holy damage instead.",
+    "note": "",
+    "training_reqs": {
+      "int": 15,
+      "will": 15,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "time": "1 Action",
+      "ap": 6
+    },
+    "scaling": {
+      "Healing": "Allies heal one additonal point of HP for every 2 points of intelligence above 15.",
+      "Damage": "Enemies take one additional point of damage for every 2 points of will above 15."
+    }
+  }
+]

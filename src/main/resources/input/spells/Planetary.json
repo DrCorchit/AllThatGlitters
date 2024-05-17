@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Astral Gate",
+    "rarity": "esoteric",
+    "discipline": "Planetary",
+    "type": "ceremony",
+    "effect": "Two parties working in tandem perform corresponding ceremonies in two desigated locations. After confirming appropriate astrological alignment, the two groups (typically working via psychic connection) gather around a circle and perform a complex ceremony involving specific incantations. When the ceremony is complete, a permanent astral gate appears in that location, linked to the corresponding gate constructed by the cooperating party. The portal remains open indefinitely, unless another ceremony is convened to banish it.",
+    "note": "The AP cost of the spell is paid twice, once by each party.",
+    "training_reqs": {
+      "int": 20,
+      "will": 16,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 day",
+      "ap": 200
+    }
+  }
+]

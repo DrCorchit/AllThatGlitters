@@ -1,4 +1,4 @@
-package net.allthatglitters.server.appendices
+package net.allthatglitters.server.concepts
 
 enum class Attribute(val fullName: String) {
     STR("Strength"),
@@ -9,7 +9,7 @@ enum class Attribute(val fullName: String) {
     WILL("Willpower");
 
     fun replace(string: String): String {
-        return if (fullName.equals(string, true)) fullName else string
+        return if (name.equals(string, true)) fullName else string
     }
 
     companion object {

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Water Walking",
+    "rarity": "common",
+    "discipline": "Wyrd",
+    "type": "concentration",
+    "target": "self",
+    "duration": "10 min",
+    "effect": "As long as you maintain concentration, you are able to walk on water as if it were solid ground.",
+    "note": "You cannot cast this spell while submerged in water.",
+    "training_reqs": {
+      "dex": 12,
+      "cha": 15,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 Action",
+      "ap": 2,
+      "concentration": 0
+    }
+  }
+]

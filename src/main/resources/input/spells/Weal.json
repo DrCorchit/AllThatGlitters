@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Aromatherapy",
+    "rarity": "common",
+    "discipline": "Weal",
+    "type": "ritual",
+    "target": {
+      "type": "Creature",
+      "range": 15,
+      "count": 0
+    },
+    "duration": "1 hour",
+    "effect": "You and all creatures seated within 10 feet of a bonfire heal 1d6 hp, in addition to the normal effects of a short rest.",
+    "training_reqs": {
+      "cha": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "Short Rest",
+      "ap": 5
+    },
+    "scaling": {
+      "Healing": "Affected creatures gain an additional 1d6 healing for every two point of charisma above 14."
+    }
+  }
+]
