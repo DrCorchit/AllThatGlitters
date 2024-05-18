@@ -48,15 +48,15 @@ sealed class Target {
         Target() {
         override fun render(): String {
             val part1 = "Affects all ${type.plural} that overlap a"
-            val part2 = "$radius ${shape.dimension} ${shape.name.lowercase()}"
+            val part2 = "${radius.toString("%.0f", true)} ${shape.dimension} ${shape.name.lowercase()}"
             val part3 = when (shape) {
-                Type.Cone -> if (range.value == 0.0) "originating from the caster."
+                Type.Cone -> if (range.isZero()) "originating from the caster."
                 else "originating from a point $range from the caster."
 
-                Type.Line -> if (range.value == 0.0) "originating from the caster."
+                Type.Line -> if (range.isZero()) "originating from the caster."
                 else "from any two points at most $range from the caster."
 
-                else -> if (range.value == 0.0) "centered on the caster."
+                else -> if (range.isZero()) "centered on the caster."
                 else "centered on a point $range from the caster."
             }
             return "$part1 $part2 $part3"

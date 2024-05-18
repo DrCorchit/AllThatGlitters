@@ -48,7 +48,7 @@ class Spells(private val spellsDir: File) : HtmlFile("Appendix: Spells", "append
             val reqCount = mutableMapOf<Int, Int>()
             it.value.forEach { spell ->
                 val key = it.key.primaryAttr.name.lowercase()
-                val req = spell.trainingReqs[key]!!.asInt
+                val req = spell.trainingReqs[key] as Int
                 reqCount[req] = reqCount.computeIfAbsent(req) { 0 } + 1
             }
             for (i in 10..20) {

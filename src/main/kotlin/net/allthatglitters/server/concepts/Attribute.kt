@@ -8,13 +8,9 @@ enum class Attribute(val fullName: String) {
     CHA("Charisma"),
     WILL("Willpower");
 
-    fun replace(string: String): String {
-        return if (name.equals(string, true)) fullName else string
-    }
-
     companion object {
-        fun replaceAll(string: String): String {
-            return entries.fold(string) { str, attr -> attr.replace(str) }
+        fun parse(str: String): Attribute? {
+            return entries.firstOrNull { it.name.equals(str, true) }
         }
     }
 }

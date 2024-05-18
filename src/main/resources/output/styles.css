@@ -74,10 +74,12 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
     border-radius: 3px;
 }
 .collapsible-2:hover {
+    color: #cca;
     border-radius: 3px;
     background-color: #443;
 }
 .active-2 {
+    color: #cca;
     background-color: #38382a
 }
 

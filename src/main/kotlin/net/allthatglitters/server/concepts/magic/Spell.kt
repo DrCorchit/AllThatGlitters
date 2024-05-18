@@ -16,11 +16,11 @@ class Spell(
     val type: Type,
     val target: Target?,
     val duration: Measurement<TimeUnits.Time>?,
-    val trainingReqs: ImmutableMap<String, JsonElement>,
-    val castingReqs: ImmutableMap<String, JsonElement>,
     val effect: String,
     val note: String?,
-    val scaling: ImmutableMap<String, String>,
+    val trainingReqs: ImmutableMap<String, Any>,
+    val castingReqs: ImmutableMap<String, Any>,
+    val scaling: ImmutableMap<String, Any>,
 ) {
     val tag = makeTag(name)
 
@@ -54,20 +54,7 @@ class Spell(
         if (trainingReqs.isNotEmpty()) {
             innerDiv.withContent(HtmlObject("p").withContent("<b>Training Requirements</b>:"))
             val trainingReqs = trainingReqs.map {
-                val key = when (it.key) {
-                    "slots" -> "Training Slots"
-                    "spells" -> "Spells"
-                    else -> Attribute.replaceAll(it.key)
-                }
-                val value = when (it.key) {
-                    "spells" -> it.value.asJsonArray
-                        .joinToString(", ") { ele -> toLink(ele.asString).render() }
-
-                    else -> it.value.toString()
-                }
-
-                "<li><b>$key</b>: $value</li>"
-
+                "<li><b>${it.key}</b>: ${it.value}</li>"
             }.joinToString("\n")
             innerDiv.withContent(HtmlObject("ul").withContent(trainingReqs))
         }
@@ -75,13 +62,7 @@ class Spell(
         if (castingReqs.isNotEmpty()) {
             innerDiv.withContent(HtmlObject("p").withContent("<b>Casting Requirements</b>:"))
             val castingReqs = castingReqs.map {
-                val key = when (it.key) {
-                    "time" -> "Casting Time"
-                    "ap" -> "Evocation AP"
-                    "concentration" -> "Concentration AP"
-                    else -> it.key
-                }
-                "<li><b>$key</b>: ${it.value}</li>"
+                "<li><b>${it.key}</b>: ${it.value}</li>"
             }.joinToString("\n")
             innerDiv.withContent(HtmlObject("ul").withContent(castingReqs))
         }
@@ -89,12 +70,7 @@ class Spell(
         if (scaling.isNotEmpty()) {
             innerDiv.withContent(HtmlObject("p").withContent("<b>Scaling</b>:"))
             val scaling = scaling.map {
-                val key = when (it.key) {
-                    "upcast" -> "Upcasting"
-                    "dualcast" -> "Dual Casting"
-                    else -> it.key
-                }
-                "<li><b>$key</b>: ${it.value}</li>"
+                "<li><b>${it.key}</b>: ${it.value}</li>"
             }.joinToString("\n")
             innerDiv.withContent(HtmlObject("ul").withContent(scaling))
         }
@@ -113,7 +89,10 @@ class Spell(
     }
 
     companion object {
-        val round: TimeUnits.Time = TimeUnits.add("rd", "Round", "Rounds", TimeUnits.SEC.ratio * 5)
+        val round = TimeUnits.add("rd", "Round", "Rounds", TimeUnits.SEC.ratio * 5)
+        val action = TimeUnits.add("act", "Action", "Actions", TimeUnits.SEC.ratio * 5)
+        val shortRest = TimeUnits.add("short", "Short Rest", "Short Rests", TimeUnits.HOUR.ratio)
+        val longRest = TimeUnits.add("long", "Long Rest", "Long Rests", TimeUnits.HOUR.ratio * 8)
 
         fun deserialize(info: JsonObject): Spell {
             val name = info.get("name").asString
@@ -122,31 +101,23 @@ class Spell(
             val type = info.get("type").deserializeEnum<Type>()
             val target = info.get("target")?.let { Target.deserialize(it) }
             val duration = info.get("duration")?.let { TimeUnits.deserialize(it, round) }
-            val trainingReqs = info.getAsJsonObject("training_reqs")?.let {
-                it.entrySet().stream()
-                    .collect(
-                        ImmutableMap.toImmutableMap(
-                            { entry -> entry.key },
-                            { entry -> entry.value })
-                    )
-            } ?: ImmutableMap.of()
-            val castingReqs = info.getAsJsonObject("casting_reqs")?.let {
-                it.entrySet().stream()
-                    .collect(
-                        ImmutableMap.toImmutableMap(
-                            { entry -> entry.key },
-                            { entry -> entry.value })
-                    )
-            } ?: ImmutableMap.of()
             val effect = info.get("effect").asString
             val note = info.get("note")?.asString
+
+            val trainingReqs = info.getAsJsonObject("training_reqs")?.let {
+                it.entrySet()
+                    .associate { entry -> mapReqs(entry) }
+                    .let { map -> ImmutableMap.copyOf(map) }
+            } ?: ImmutableMap.of()
+            val castingReqs = info.getAsJsonObject("casting_reqs")?.let {
+                it.entrySet()
+                    .associate { entry -> mapReqs(entry) }
+                    .let { map -> ImmutableMap.copyOf(map) }
+            } ?: ImmutableMap.of()
             val scaling = info.getAsJsonObject("scaling")?.let {
-                it.entrySet().stream()
-                    .collect(
-                        ImmutableMap.toImmutableMap(
-                            { entry -> entry.key },
-                            { entry -> entry.value.asString })
-                    )
+                it.entrySet()
+                    .associate { entry -> mapReqs(entry) }
+                    .let { map -> ImmutableMap.copyOf(map) }
             } ?: ImmutableMap.of()
 
             return Spell(
@@ -156,12 +127,31 @@ class Spell(
                 type,
                 target,
                 duration,
-                trainingReqs,
-                castingReqs,
                 effect,
                 note,
+                trainingReqs,
+                castingReqs,
                 scaling
             )
+        }
+
+        fun mapReqs(entry: Map.Entry<String, JsonElement>): Pair<String, Any> {
+            return when (entry.key) {
+                //training reqs
+                "slots" -> "Training Slots" to entry.value.asInt
+                "spells" -> "Spells" to entry.value.asJsonArray
+                    .joinToString(", ") { ele -> toLink(ele.asString).render() }
+                //casting reqs
+                "time" -> "Casting Time" to TimeUnits.deserialize(entry.value, action)
+                "ap" -> "Evocation AP" to entry.value.asInt
+                "concentration" -> "Concentration AP" to entry.value
+                //scaling
+                "upcast" -> "Upcasting" to entry.value.asString
+                "dualcast" -> "Dual Casting" to entry.value.asString
+                else -> Attribute.parse(entry.key)
+                    ?.let { it.fullName to entry.value.asInt }
+                    ?: (entry.key to entry.value.asString)
+            }
         }
 
         fun makeTag(name: String): String {
