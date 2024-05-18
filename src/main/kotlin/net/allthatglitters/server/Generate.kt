@@ -8,7 +8,7 @@ import net.allthatglitters.server.util.inputDir
 import java.io.File
 
 object Generate {
-    val version = "0.1"
+    val version = "0"
     val appendices = listOf(
         Spells(File(inputDir, "spells")),
         HtmlFile("Appendix: Training", "appendix_training.html"),
@@ -54,7 +54,7 @@ object Generate {
                 .appendElement("h2", "Chapter $i")
                 .appendTitle().append(nav)
                 .appendBody().append(nav)
-                .append(Collapsible.render())
+                .append(Collapsible.render("collapsible", "active"))
                 .appendFooter()
                 .save(version)
         }

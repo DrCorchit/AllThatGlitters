@@ -25,30 +25,34 @@ class Spell(
     val tag = makeTag(name)
 
     fun render(): String {
-        val output = mutableListOf<HtmlObject>()
-        output.add(HtmlObject("a").withTag("id", tag))
-        output.add(HtmlObject("h5").withContent(name))
+        val output = HtmlObject("div").withTag("class", "background")
+        output.withContent(HtmlObject("a").withTag("id", tag))
+        output.withContent(HtmlObject("h5").withContent(name))
         val category = discipline.describe(rarity, type)
-        output.add(HtmlObject("p").withContent(HtmlObject("i").withContent(category)))
+        output.withContent(HtmlObject("p").withContent(HtmlObject("i").withContent(category)))
 
         if (target != null) {
             val targetText = "<b>Target</b>: ${target.render()}"
-            output.add(HtmlObject("p").withContent(targetText))
+            output.withContent(HtmlObject("p").withContent(targetText))
         }
-        if (duration != null) output.add(HtmlObject("p").withContent("<b>Duration</b>: $duration"))
+        if (duration != null) {
+            output.withContent(HtmlObject("p").withContent("<b>Duration</b>: $duration"))
+        }
 
-        output.add(HtmlObject("p").withContent("<b>Effect</b>: $effect"))
+        output.withContent(HtmlObject("p").withContent("<b>Effect</b>: $effect"))
         if (note != null) {
-            output.add(
-                HtmlObject("p").withTag("style", "margin-left: 25px").withContent("Note: $note")
+            output.withContent(
+                HtmlObject("p").withTag("style", "margin-left: 25px")
+                    .withContent("Note: $note")
             )
         }
 
-        val button = HtmlObject("button").withTag("class", "collapsible")
+        val outerDiv = HtmlObject("div").withTag("class", "background-2")
+        val button = HtmlObject("button").withTag("class", "collapsible-2")
             .withContent("Additional Information")
-        val div = HtmlObject("div").withTag("class", "content")
+        val innerDiv = HtmlObject("div").withTag("class", "content")
         if (trainingReqs.isNotEmpty()) {
-            div.withContent(HtmlObject("p").withContent("<b>Training Requirements</b>:"))
+            innerDiv.withContent(HtmlObject("p").withContent("<b>Training Requirements</b>:"))
             val trainingReqs = trainingReqs.map {
                 val key = when (it.key) {
                     "slots" -> "Training Slots"
@@ -65,11 +69,11 @@ class Spell(
                 "<li><b>$key</b>: $value</li>"
 
             }.joinToString("\n")
-            div.withContent(HtmlObject("ul").withContent(trainingReqs))
+            innerDiv.withContent(HtmlObject("ul").withContent(trainingReqs))
         }
 
         if (castingReqs.isNotEmpty()) {
-            div.withContent(HtmlObject("p").withContent("<b>Casting Requirements</b>:"))
+            innerDiv.withContent(HtmlObject("p").withContent("<b>Casting Requirements</b>:"))
             val castingReqs = castingReqs.map {
                 val key = when (it.key) {
                     "time" -> "Casting Time"
@@ -79,11 +83,11 @@ class Spell(
                 }
                 "<li><b>$key</b>: ${it.value}</li>"
             }.joinToString("\n")
-            div.withContent(HtmlObject("ul").withContent(castingReqs))
+            innerDiv.withContent(HtmlObject("ul").withContent(castingReqs))
         }
 
         if (scaling.isNotEmpty()) {
-            div.withContent(HtmlObject("p").withContent("<b>Scaling</b>:"))
+            innerDiv.withContent(HtmlObject("p").withContent("<b>Scaling</b>:"))
             val scaling = scaling.map {
                 val key = when (it.key) {
                     "upcast" -> "Upcasting"
@@ -92,15 +96,16 @@ class Spell(
                 }
                 "<li><b>$key</b>: ${it.value}</li>"
             }.joinToString("\n")
-            div.withContent(HtmlObject("ul").withContent(scaling))
+            innerDiv.withContent(HtmlObject("ul").withContent(scaling))
         }
 
-        if (div.hasContent()) {
-            output.add(button)
-            output.add(div)
+        if (innerDiv.hasContent()) {
+            outerDiv.withContent(button)
+            outerDiv.withContent(innerDiv)
+            output.withContent(outerDiv)
         }
 
-        return output.joinToString("\n") { it.render() }
+        return output.render()
     }
 
     override fun toString(): String {
@@ -116,7 +121,7 @@ class Spell(
             val discipline = info.get("discipline").deserializeEnum<Discipline>()
             val type = info.get("type").deserializeEnum<Type>()
             val target = info.get("target")?.let { Target.deserialize(it) }
-            val duration = TimeUnits.deserialize(info.get("duration"), round)
+            val duration = info.get("duration")?.let { TimeUnits.deserialize(it, round) }
             val trainingReqs = info.getAsJsonObject("training_reqs")?.let {
                 it.entrySet().stream()
                     .collect(

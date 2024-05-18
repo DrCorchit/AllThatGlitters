@@ -40,7 +40,7 @@
     "rarity": "common",
     "discipline": "illusion",
     "type": "ritual",
-    "duration": "1 Hour",
+    "duration": "1 hour",
     "target": "self",
     "training_reqs": {
       "cha": 12,
@@ -88,6 +88,7 @@
       "type": "creature",
       "range": 50
     },
+    "duration": "1 minute",
     "training_reqs": {
       "int": 12,
       "will": 14

@@ -13,12 +13,13 @@ h4:after, h5:after {
 }
 hr { border: 0; border-top: 1px solid #bc0; }
 
-li, p, a { font-size: 10pt; line-height: 110%; margin: 0 0 10px 0; }
-blockquote { font-size: 9pt; line-height: 110)%; }
+li, p, a { font-size: 10pt; line-height: 100%; margin: 0 0 10px 0; }
+blockquote { font-size: 9pt; line-height: 100)%; }
 a:link { color: #cb0 }
 a:visited { color : #980 }
 a:hover { color: #fff }
 
+ul, li { margin: 10px 0px 10px 0px; }
 ol { counter-reset: item; }
 ol li { display: block; margin: 10px 0; }
 ol li:before { content: counters(item, ".") ". "; counter-increment: item; }
@@ -44,17 +45,52 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
     margin: 10px;
 }
 
+.background {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #30302a;
+    border-radius: 3px;
+    background-color: #181818
+}
+.background h5 {
+    margin-top: 0px;
+}
+
+.background-2 {
+    padding: 5px;
+    border: 1px solid #30302a;
+    background-color: #242420;
+    border-radius: 5px;
+}
+.collapsible-2 {
+    color: #aaa;
+    cursor: pointer;
+    width: 200px;
+    padding: 0;
+    font-family: "Aboreto";
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+}
+.collapsible-2:hover {
+    border-radius: 3px;
+    background-color: #443;
+}
+.active-2 {
+    background-color: #38382a
+}
+
 .collapsible {
-    background-color: #30302c;
+    background-color: #404030;
     color: #aa8;
     cursor: pointer;
     padding: 5px;
-    margin: 5px;
+    margin: 0;
     width: 100%;
-    border: 1px solid #30302c;
+    border: 0px solid #30302c;
     border-radius: 3px;
     text-align: left;
-    outline: none;
     font-family: "Calibri";
     font-size: 14px;
 }
@@ -62,9 +98,10 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
     background-color: #664;
 }
 .active {
-    background-color: #553
+    background-color: #fff
 }
 .content {
+    margin: 10px 5px 0px 5px;
     display: none;
 	overflow: hidden;
 }
