@@ -6,10 +6,9 @@
 
     <artifactId>AllThatGlitters</artifactId>
     <groupId>net.drcorchit</groupId>
-    <version>1</version>
     <packaging>jar</packaging>
-
     <name>AllThatGlitters</name>
+    <version>1</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

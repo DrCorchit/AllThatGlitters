@@ -8,7 +8,6 @@ import net.allthatglitters.server.util.outputDir
 object Serve {
     @JvmStatic
     fun main(vararg args: String) {
-        println("args: $args")
         val port = args[0].toInt()
         val app: Javalin = Javalin.create { config: JavalinConfig ->
             //config.compression.gzipOnly();
