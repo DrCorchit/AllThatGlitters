@@ -4,6 +4,6 @@ echo "Updated server code; building  server."
 sudo mvn clean package || exit 1
 sudo cp target/AllThatGlitters-*.jar target/server.jar || exit 1
 echo "Generating Files."
-sudo java -jar target/server.jar -cp net.allthatglitters.server.GenerateKT
+sudo java -cp target/server.jar net.allthatglitters.server.GenerateKT
 echo "Starting Server."
-sudo java -jar target/server.jar -cp net.allthatglitters.server.ServeKT &
+sudo java -jar target/server.jar &
