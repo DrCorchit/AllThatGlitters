@@ -8,7 +8,6 @@ import net.allthatglitters.server.util.outputDir
 object Serve {
     @JvmStatic
     fun main(vararg args: String) {
-        throw Exception("dont start")
         val app: Javalin = Javalin.create { config: JavalinConfig ->
             //config.compression.gzipOnly();
             config.staticFiles.add(outputDir.path, Location.EXTERNAL)
