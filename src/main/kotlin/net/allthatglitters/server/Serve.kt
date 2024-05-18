@@ -8,7 +8,8 @@ import net.allthatglitters.server.util.outputDir
 object Serve {
     @JvmStatic
     fun main(vararg args: String) {
-        val port = args[1].toInt()
+        println("args: $args")
+        val port = args[0].toInt()
         val app: Javalin = Javalin.create { config: JavalinConfig ->
             //config.compression.gzipOnly();
             config.staticFiles.add(outputDir.path, Location.EXTERNAL)
