@@ -1,8 +1,8 @@
 package net.allthatglitters.server.util
 
+import com.drcorchit.justice.utils.json.JsonUtils.deserializeEnum
 import com.google.gson.JsonElement
 import com.google.gson.JsonParser
-import net.allthatglitters.server.util.Util.deserializeEnum
 import java.io.File
 
 class DnD(file: File) {
@@ -77,7 +77,7 @@ class DnD(file: File) {
                     val obj = ele.asJsonObject
                     val name = obj.get("name").asString
                     val level = obj.get("level").asInt
-                    val school = deserializeEnum<School>(obj.get("school"))
+                    val school = obj.get("school").deserializeEnum<School>()
                     val effects = obj.get("entries").asJsonArray.filter { it.isJsonPrimitive }.map { it.asString }
                     return Spell(name, level, school, effects.joinToString(" "))
                 } catch (e: Exception) {

@@ -1,11 +1,9 @@
 package net.allthatglitters.server.concepts.magic
 
+import com.drcorchit.justice.utils.json.JsonUtils.deserializeEnum
+import com.drcorchit.justice.utils.math.units.DistanceUnits
+import com.drcorchit.justice.utils.math.units.Measurement
 import com.google.gson.JsonElement
-import net.allthatglitters.server.util.Util.deserializeEnum
-import net.allthatglitters.server.util.Util.deserializeMeasurement
-import net.allthatglitters.server.util.Util.parseEnum
-import net.allthatglitters.server.util.Distance
-import net.allthatglitters.server.util.Measurement
 
 sealed class Target {
 
@@ -26,7 +24,7 @@ sealed class Target {
     class Range(
         val type: Type,
         val count: Int = 1,
-        val range: Measurement<Distance>,
+        val range: Measurement<DistanceUnits.Distance>,
         val lineOfSight: Boolean = true
     ) :
         Target() {
@@ -44,22 +42,22 @@ sealed class Target {
     class Shape(
         val type: Target.Type,
         val shape: Type,
-        val range: Measurement<Distance> = Measurement(0.0, Distance.FT),
-        val radius: Measurement<Distance> = Measurement(0.0, Distance.FT)
+        val range: Measurement<DistanceUnits.Distance>,
+        val radius: Measurement<DistanceUnits.Distance>
     ) :
         Target() {
         override fun render(): String {
             val part1 = "Affects all ${type.plural} that overlap a"
-            val part2 = "$radius foot ${shape.dimension} ${shape.name.lowercase()}"
+            val part2 = "$radius ${shape.dimension} ${shape.name.lowercase()}"
             val part3 = when (shape) {
-                Type.Cone -> if (range.isZero()) "originating from the caster."
-                else "originating from a point $range feet from the caster."
+                Type.Cone -> if (range.value == 0.0) "originating from the caster."
+                else "originating from a point $range from the caster."
 
-                Type.Line -> if (range.isZero()) "originating from the caster."
-                else "from any two points at most $range feet from the caster."
+                Type.Line -> if (range.value == 0.0) "originating from the caster."
+                else "from any two points at most $range from the caster."
 
-                else -> if (range.isZero()) "centered on the caster."
-                else "centered on a point $range feet from the caster."
+                else -> if (range.value == 0.0) "centered on the caster."
+                else "centered on a point $range from the caster."
             }
             return "$part1 $part2 $part3"
         }
@@ -78,28 +76,18 @@ sealed class Target {
                 } else {
                     val obj = ele.asJsonObject
                     return if (obj.has("touch")) {
-                        val type = deserializeEnum<Type>(obj.get("type"))
+                        val type = obj.get("type").deserializeEnum<Type>()
                         Touch(type)
                     } else if (obj.has("shape")) {
-                        val type = deserializeEnum<Type>(obj.get("type"))
-                        val shape = deserializeEnum<Shape.Type>(obj.get("shape"))
-                        val range = deserializeMeasurement(
-                            obj.get("range"),
-                            Distance.FT
-                        ) { parseEnum<Distance>(it) }
-                        val radius = deserializeMeasurement(
-                            obj.get("radius"),
-                            Distance.FT
-                        ) { parseEnum<Distance>(it) }
-
-                        Shape(type, shape, radius, range)
+                        val type = obj.get("type").deserializeEnum<Type>()
+                        val shape = obj.get("shape").deserializeEnum<Shape.Type>()
+                        val range = DistanceUnits.deserialize(obj.get("range"))
+                        val radius = DistanceUnits.deserialize(obj.get("radius"))
+                        Shape(type, shape, range, radius)
                     } else {
-                        val type = deserializeEnum<Type>(obj.get("type"))
+                        val type = obj.get("type").deserializeEnum<Type>()
                         val count = obj.get("count")?.asInt ?: 1
-                        val range = deserializeMeasurement(
-                            obj.get("range"),
-                            Distance.FT
-                        ) { parseEnum<Distance>(it) }
+                        val range = DistanceUnits.deserialize(obj.get("range"))
                         return Range(type, count, range)
                     }
                 }

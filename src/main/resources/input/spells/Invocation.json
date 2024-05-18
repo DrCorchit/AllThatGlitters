@@ -28,5 +28,35 @@
       "Damage": "The damaged is increased by 1 for each point of willpower above 15.",
       "dualcast": "The spell's radius is doubled."
     }
+  },
+  {
+    "name": "Amor Vincit Omnia",
+    "rarity": "academic",
+    "discipline": "Invocation",
+    "type": "concentration",
+    "target": {
+      "type": "creature",
+      "shape": "cylinder",
+      "range": 50,
+      "radius": 5
+    },
+    "duration": 10,
+    "effect": "Dozens of daggers summoned from the astral plane begin to swirl around the designated region. Creatures within taken 1d4 slashing and 1d4 piercing damage when the spell is cast, at the start of their turn, and whenever they enter the cloud of daggers. (At most once per round).",
+    "note": "The same creature cannot be damaged by this spell more than once per round.",
+    "training_reqs": {
+      "int": 13,
+      "cha": 15,
+      "will": 15,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 Action",
+      "ap": 5,
+      "concentration": 2
+    },
+    "scaling": {
+      "Damage": "The damaged is increased by 1 for each point of willpower above 15.",
+      "dualcast": "The spell's radius is doubled."
+    }
   }
 ]
