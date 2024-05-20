@@ -28,7 +28,7 @@ class CombatClass(
         val nameHtml = HtmlObject("h5")
             .withContent(HtmlObject("a").withAttribute("id", name))
             .withContent(name)
-        if (altName != null) nameHtml.withContent("($altName)")
+        //if (altName != null) nameHtml.withContent(" ($altName)")
         output.withContent(nameHtml)
         output.withContent(description.wrapRaw("p"))
         output.withContent(
@@ -43,8 +43,8 @@ class CombatClass(
             output.withBoldedEntry("Alignment Suggestion", alignmentSuggestion)
         }
 
-        val p = HtmlObject.boldedEntry("p", "Core Ability", "${coreAbilityName.italicise()}. ")
-        coreAbilityDescription.preface(p).wrapRaw("p")
+        val coreAbilityName = HtmlObject.boldedEntry("p", "Core Ability", "${coreAbilityName.italicise()}. ")
+        coreAbilityDescription.preface(coreAbilityName).wrapRaw("p")
         output.withContent(coreAbilityDescription)
 
         if (limitations != null) {
@@ -58,8 +58,8 @@ class CombatClass(
 
         innerDiv.withBoldedEntry("Leveling Bonuses", "")
         levelingBonuses.forEach {
-            val p = HtmlObject("p").withContent("At level ${it.key}, ")
-            innerDiv.withContent(it.value.preface(p))
+            val atLevel = HtmlObject("p").withContent("At level ${it.key}, ")
+            innerDiv.withContent(it.value.preface(atLevel))
         }
         innerDiv.withBoldedEntry("Starting Equipment", "")
         innerDiv.withContent(startingEquipment)

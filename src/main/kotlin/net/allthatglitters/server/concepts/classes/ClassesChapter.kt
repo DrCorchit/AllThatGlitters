@@ -5,20 +5,24 @@ import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.inputDir
 import java.io.File
 
-class ClassesChapter(val characterDir: File = File(inputDir,"characters")) :
-    HtmlFile("How do I Create a Character?", "characters.html") {
+class ClassesChapter(
+    title: String,
+    fileName: String,
+    val characterDir: File = File(inputDir, "characters")
+) :
+    HtmlFile(title, fileName) {
 
-        fun getClasses(): List<CombatClass> {
-            return File(characterDir, "classes")
-                .listFiles()!!.map {
-                    try {
-                        val json = JsonParser.parseString(it.readText())
-                        CombatClass.deserialize(json.asJsonObject)
-                    } catch (e: Exception) {
-                        throw IllegalArgumentException("Error parsing class info for ${it.name}", e)
-                    }
-                }.sortedBy { it.name }
-        }
+    fun getClasses(): List<CombatClass> {
+        return File(characterDir, "classes")
+            .listFiles()!!.map {
+                try {
+                    val json = JsonParser.parseString(it.readText())
+                    CombatClass.deserialize(json.asJsonObject)
+                } catch (e: Exception) {
+                    throw IllegalArgumentException("Error parsing class info for ${it.name}", e)
+                }
+            }.sortedBy { it.name }
+    }
 
     override fun appendBody(): HtmlFile {
         if (characterDir.isDirectory) {

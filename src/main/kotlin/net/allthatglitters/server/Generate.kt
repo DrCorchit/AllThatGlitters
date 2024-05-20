@@ -44,32 +44,31 @@ object Generate {
             .save(version)
 
         HtmlFile("Character Sheet", "character_sheet.html").appendBody().save(version)
-        val nav = Navigation.render(2, 7)
-        ClassesChapter()
-            .appendHeader()
-            .appendElement("h2", "Chapter 2")
-            .appendTitle().append(nav)
-            .appendBody().append(nav)
-            .append(Collapsible.render())
-            .appendFooter()
-            .save(version)
 
         val max = 7
         for (i in 1..max) {
-            val nav = Navigation.render(i, max)
-            HtmlFile(chapterTitles[i - 1], "c$i.html")
-                .appendHeader()
-                .appendElement("h2", "Chapter $i")
-                .appendTitle().append(nav)
-                .appendBody().append(nav)
-                .append(Collapsible.render())
-                .appendFooter()
-                .save(version)
+            makeChapter(i, max)
         }
 
         for (i in appendices.indices) {
             makeAppendix(i)
         }
+    }
+
+    fun makeChapter(i: Int, max: Int) {
+        val nav = Navigation.render(i, max)
+        val chapter = if (i == 2) {
+            ClassesChapter(chapterTitles[1], "c2.html")
+        } else {
+            HtmlFile(chapterTitles[i - 1], "c$i.html")
+        }
+        chapter.appendHeader()
+            .appendElement("h2", "Chapter $i")
+            .appendTitle().append(nav)
+            .appendBody().append(nav)
+            .append(Collapsible.render())
+            .appendFooter()
+            .save(version)
     }
 
     fun makeAppendix(i: Int) {
