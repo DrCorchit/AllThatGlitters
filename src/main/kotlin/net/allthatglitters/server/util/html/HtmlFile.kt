@@ -7,7 +7,7 @@ import java.io.File
 
 open class HtmlFile(val title: String, val fileName: String) {
 
-    val head = HtmlObject("head")
+    val head = HtmlObject("head").withContent(HtmlObject("title").withContent(title))
     val body = HtmlObject("body")
 
     fun appendHeader(): HtmlFile {

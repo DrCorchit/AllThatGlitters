@@ -33,7 +33,7 @@ class CombatClass(
         output.withContent(description.wrapRaw("p"))
         output.withContent(
             HtmlObject("p")
-                .withContent("While writing the backstory for an ${name.lowercase()}, consider the following:")
+                .withContent("While writing the backstory for a ${name.lowercase()}, consider the following:")
         )
         val prompts = HtmlObject("ol")
             .withAll(backstoryPrompts.map { HtmlObject("li").withContent(it) })

@@ -30,11 +30,17 @@ object Generate {
 
     @JvmStatic
     fun main(vararg args: String) {
+        File(inputDir, "styles.css").copyTo(File(outputDir, "styles.css"), true)
+        println("Copied styles.css")
+        File(inputDir, "character_sheet.html").copyTo(File(outputDir, "version/$version/character_sheet.html"), true)
+        println("Copied character_sheet.html")
+
         HtmlFile("All That Glitters", "index.html")
             .appendHeader()
             .appendTitle("h1")
             .appendBody()
             .saveTo(version, "index.html")
+
         HtmlFile("Player's Handbook", "phb_toc.html")
             .appendHeader()
             .appendElement("h1", "All That Glitters")
@@ -42,16 +48,9 @@ object Generate {
             .appendBody()
             .save(version)
 
-        HtmlFile("Character Sheet", "character_sheet.html").appendBody().save(version)
-
         val max = 7
-        for (i in 1..max) {
-            makeChapter(i, max)
-        }
-
-        for (i in appendices.indices) {
-            makeAppendix(i)
-        }
+        for (i in 1..max) makeChapter(i, max)
+        for (i in appendices.indices) makeAppendix(i)
     }
 
     fun makeChapter(i: Int, max: Int) {

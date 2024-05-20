@@ -43,8 +43,7 @@ open class HtmlObject(
     }
 
     //val newlineWhitelist = setOf("html", "head", "body", "ol", "ul", "table")
-    val newlineBlacklist = setOf("p", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
-    val alwaysNewlineAfterClosingTags = setOf("head", "body", "ol", "ul", "table")
+    val newlineBlacklist = setOf("p", "b", "i", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
 
     private fun renderAttributes(): String {
         return attributes.map { "${it.key}=\"${it.value}\"" }
@@ -54,7 +53,6 @@ open class HtmlObject(
     override fun render(): String {
 
         val temp = StringBuilder()
-        //val useNewlines = newlineWhitelist.contains(tag)
         val useNewlines = !newlineBlacklist.contains(tag)
         if (useNewlines) {
             temp.append("\n")

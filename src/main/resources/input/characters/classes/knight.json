@@ -5,16 +5,51 @@
     "On the battlefield, a knight is a magnificent sight, clad in expensive steel plate armor and with their lord’s ensignia emblazoned on their shield. However, some knights forgo a shield altogether, preferring a heavier two-handed weapon. Either way, knights train extensively and are rarely caught flat-footed, even when out of armor"
   ],
   "backstoryPrompts": [
-    "How far back can you trace your lineage?",
-    "Did you train as a page and a squire before becoming a knight?",
+    "Did you train as a page or a squire before becoming a knight?",
     "Are you proud of your country and your liege, or have you become disillusioned?",
     "Was your oath of fealty inspired by love, respect, or political convenience?",
-    "What made you give up your previous life and start adventuring?"
+    "How far back can you trace your lineage?",
+    "What made you leave your previous life and start adventuring?"
   ],
   "alignment": "Lawful",
-  "coreAbilityName": "Oath of Fealty",
-  "coreAbilityDescription": "You have sworn an oath to a nobleman or noblewoman, to protect them with your life and to fight for them in battle. In return, they have provided you with armor and an excellent sword, in",
+  "limitations": "Deficient in Sorcery.",
+  "coreAbilityName": "Shining Armor",
+  "coreAbilityDescription": ["You have sworn an oath to a nobleman or lady, to protect them with your life and to fight for them in battle. In return, they have provided you with a fine suit of steel plate armor, and several high quality steel weapons.", {
+    "tag": "p",
+    "style": "margin-left: 25px",
+    "content": "Note: You are able to wear your armor even"
+  }],
   "levelingBonuses": {
-    "1": "TODO"
-  }
+    "1": "+1 to strength and +1 to charisma. Proficiency in defense.",
+    "2": "learn a combat ability from the following list:"
+  },
+  "startingEquipment": [
+    "A set of steel half-plate armor",
+    [
+      "A primary weapon, of one of the following types:",
+      "A bastard sword",
+      "A longsword",
+      "A bearded axe",
+      "A warhammer"
+    ],
+    [
+      "A secondary weapon, of one of the following types:",
+      "A battle axe",
+      "A falchion (broadsword)",
+      "An estoc",
+      "A mace",
+      "A morningstar",
+      "A rapier"
+    ],
+    "An arming sword (shortsword)",
+    "A shield",
+    [
+      "An adventurer's pack, containing:",
+      "50 + 1d100 gold.",
+      "7 days rations.",
+      "Two sets of regular clothing.",
+      "One set of formal wear.",
+      "50 feet of rope."
+    ]
+  ]
 }
