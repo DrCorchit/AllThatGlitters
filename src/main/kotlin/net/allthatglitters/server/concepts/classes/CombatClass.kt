@@ -59,7 +59,9 @@ class CombatClass(
         innerDiv.withBoldedEntry("Leveling Bonuses", "")
         levelingBonuses.forEach {
             val atLevel = HtmlObject("p").withContent("At level ${it.key}, ")
-            innerDiv.withContent(it.value.preface(atLevel))
+            //innerDiv.withContent(it.value.preface(atLevel))
+            it.value.preface(atLevel)
+            innerDiv.withContent(it.value)
         }
         innerDiv.withBoldedEntry("Starting Equipment", "")
         innerDiv.withContent(startingEquipment)

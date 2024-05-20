@@ -42,39 +42,49 @@ open class HtmlObject(
         return this
     }
 
-    //val newlineWhitelist = setOf("html", "head", "body", "ol", "ul", "table")
-    val newlineBlacklist = setOf("p", "b", "i", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
-
     private fun renderAttributes(): String {
         return attributes.map { "${it.key}=\"${it.value}\"" }
             .joinToString(" ")
     }
 
     override fun render(): String {
+        return render(0)
+    }
 
-        val temp = StringBuilder()
+    fun render(indent: Int): String {
+        val builder = StringBuilder()
         val useNewlines = !newlineBlacklist.contains(tag)
         if (useNewlines) {
-            temp.append("\n")
+            builder.append("\n")
         }
 
-        temp.append(content.render())
+        val renderedContent = content.render(indent+1).let {
+            if (indent > 0) {
+                val tab = "  ".repeat(indent)
+                tab + it.replace("\n", "\n$tab")
+            } else it
+        }
+
+        builder.append(renderedContent)
 
         if (useNewlines) {
-            temp.append("\n")
+            builder.append("\n")
         }
 
-        if (attributes.isEmpty()) {
-            return "<$tag>$temp</$tag>"
+        return if (attributes.isEmpty()) {
+            "<$tag>$builder</$tag>"
+        } else {
+            "<$tag ${renderAttributes()}>$builder</$tag>"
         }
-        return "<$tag ${renderAttributes()}>$temp</$tag>"
     }
 
     override fun toString(): String {
-        return "<$tag ${renderAttributes()}>...</$tag>"
+        return "<$tag ${renderAttributes()}>$content</$tag>"
     }
 
     companion object {
+        val newlineBlacklist = setOf("p", "b", "i", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
+
         fun boldedEntry(tag: String, bold: String, content: String): HtmlObject {
             return HtmlObject(tag).withContent("${bold.bold()}: $content")
         }
