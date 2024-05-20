@@ -46,8 +46,8 @@ class Spell(
             )
         }
 
-        val outerDiv = HtmlObject("div").withAttribute("class", "background-2")
-        val button = HtmlObject("button").withAttribute("class", "collapsible-2")
+        val outerDiv = HtmlObject("div").withAttribute("class", "background-inner")
+        val button = HtmlObject("button").withAttribute("class", "collapsible")
             .withContent("Additional Information")
         val innerDiv = HtmlObject("div").withAttribute("class", "content")
         if (trainingReqs.isNotEmpty()) {

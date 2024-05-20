@@ -50,7 +50,7 @@ object Generate {
             .appendElement("h2", "Chapter 2")
             .appendTitle().append(nav)
             .appendBody().append(nav)
-            .append(Collapsible.render("collapsible-2", "active-2"))
+            .append(Collapsible.render())
             .appendFooter()
             .save(version)
 
@@ -62,7 +62,7 @@ object Generate {
                 .appendElement("h2", "Chapter $i")
                 .appendTitle().append(nav)
                 .appendBody().append(nav)
-                .append(Collapsible.render("collapsible", "active"))
+                .append(Collapsible.render())
                 .appendFooter()
                 .save(version)
         }

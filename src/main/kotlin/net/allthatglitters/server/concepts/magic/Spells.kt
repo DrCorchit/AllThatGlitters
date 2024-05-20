@@ -49,7 +49,7 @@ class Spells(private val spellsDir: File = File(inputDir, "spells")) :
                 }
                 append(HtmlObject("a").withAttribute("href", "#top").withContent("Back to Top"))
             }
-            append(Collapsible.render("collapsible-2", "active-2"))
+            append(Collapsible.render())
         } else {
             println("Warning: spellsDir is not a directory ($spellsDir)")
         }
