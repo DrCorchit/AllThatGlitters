@@ -1,0 +1,16 @@
+{
+  "name": "Inquisitor",
+  "description": "Often clad in black armor and concealed beneath a dark hood or mask, the inquisitor’s dark countenance usually conceals and ever darker heart. An inquisitor has been called by their deity to drive out heresy, and will not hesitate to interrogate or kill anyone who stands in his or her way. Inquisitors are perhaps best known for branding their opponents as heretics, marking them for divine retribution.",
+  "backstoryPrompts": [
+    "How did you come to choose to serve your god?",
+    "Is your persecution of heretics commanded by god directly, or through a religious institution?",
+    "Do you have any moral qualms about the suffering you bring to the enemies of your god?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "alignment": "Non-Good",
+  "coreAbilityName": "Heretic’s Brand",
+  "coreAbilityDescription": "In addition to your regular equipment, you have a special branding iron obtained from your chosen deity. This iron is imbued with divine magic and cannot be heated by ordinary means, but you may expend 2 AP to whisper a short prayer or sacred word, causing the end of the brand to glow blazing hot. The brand retains its heat for 1 minute. It behaves as a short melee weapon and deals 1d6 plus your charisma modifier in fire damage. Enemies struck by this weapon also receive the heretic’s brand, marking them for divine retribution.",
+  "levelingBonuses": {
+    "1": "TODO"
+  }
+}

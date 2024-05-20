@@ -19,7 +19,7 @@
       "time": "1 short",
       "ap": 5
     },
-    "scaling": {
+    "modifiers": {
       "Healing": "Affected creatures gain an additional 1d6 healing for every two point of charisma above 14."
     }
   }

@@ -1,0 +1,16 @@
+{
+  "name": "Mercenary",
+  "description": "The mercenary eschews lofty aspirations of honor and glory and fights almost exclusively for coin. Although they have a cutthroat reputation, there is a simple pragmatism to their motives. Mercenaries fight with whatever weapons and training they can purchase, and do not limit themselves to any particular discipline.",
+  "backstoryPrompts": [
+    "How did you acquire your combat skill?",
+    "Do you take pride in your work?",
+    "Do you fight for money, for the excitement of battle, or something else?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "alignment": "Non-Good",
+  "coreAbilityName": "Mercenary Contract",
+  "coreAbilityDescription": "You have associations with a mercenaries guild, which connects individuals of martial prowess with clients in need of muscle. This mercenary guild positions you well to take on mercenary contracts and meet trainers for various skills: defense, martial arts, and even sorcery.",
+  "levelingBonuses": {
+    "1": "TODO"
+  }
+}

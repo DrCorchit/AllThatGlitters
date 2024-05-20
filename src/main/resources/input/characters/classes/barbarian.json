@@ -1,0 +1,17 @@
+{
+  "name": "Barbarian",
+  "description": "Whether a local farmhand or a tribesman from a remote tundra or jungle, barbarians are united by their unparalleled fury in battle, as well as sheer physical brawn. By tapping into primal rage, barbarians can strike harder and faster than anyone else while laughing off blows that would stagger an ordinary man. Barbarians typically wear light armor, and swing the largest weapons they can find. Their bodies are often covered in scars, either from tribal initiation rituals, or past battles. Some barbarians channel their rage in a drunken stupor, while others transform into the animals that embody their inner beast.",
+  "backstoryPrompts": [
+    "Have you always been strong, or did you go through a lot of training?",
+    "Is your immense brawn shared by other members of your family or tribe?",
+    "When did you first discover that rage could make you stronger?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "alignment": "Chaotic",
+  "coreAbilityName": "Rage",
+  "coreAbilityDescription": "You may spend 6 ability points to enter a rage for 5 combat turns. During a rage, you deal 3 extra damage per weapon attack and take 3 less damage from bludgeoning, slashing, piercing, and fire damage.You may not cast spells, read scrolls, or consume potions.",
+  "limitations": "Barbarians choose a deficiency in two of the following three skills: defense, literacy, stealth.",
+  "levelingBonuses": {
+    "1": "TODO"
+  }
+}

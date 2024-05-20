@@ -15,7 +15,7 @@
       "time": "1 Action",
       "ap": 2
     },
-    "scaling": {
+    "modifiers": {
       "Duration": "Spell duration increases by 10 minutes for every point of charisma above 12."
     }
   }

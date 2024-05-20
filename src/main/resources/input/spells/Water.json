@@ -22,7 +22,7 @@
       "ap": 2,
       "concentration": 0
     },
-    "scaling": {
+    "modifiers": {
       "Damage": "Damage increases by 1 for every point of willpower above 14.",
       "dualcast": "Damage is increased by 1d4."
     }

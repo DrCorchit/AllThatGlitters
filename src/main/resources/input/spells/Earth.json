@@ -15,7 +15,7 @@
       "time": "1 Action",
       "ap": 3
     },
-    "scaling": {
+    "modifiers": {
       "Dual Cast": "The spell increases BC by 3 instead of 2."
     }
   }

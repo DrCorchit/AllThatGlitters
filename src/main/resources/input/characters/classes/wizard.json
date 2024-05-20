@@ -1,0 +1,18 @@
+{
+  "name": "Wizard",
+  "description": [
+    "Cloistered in his high tower, a tall and heavily bearded man pushes arcane magic to its absolute limit. Bedecked in a great flowing robe and pointed hat, he ensures that the stars and planets align before pursuing his audacious experiment. Sanity and restraint long forsaken, he clutches a crystal ball, gazing somewhere within as blue electricity arcs from the tips of his fingers.",
+    "No-one knows how he got his power; some say it runs in his blood, while others say that he was once a promising young student expelled from a university. Whatever the case, a wizard is someone with a naturally high aptitude for magic who usually practices on their own terms, outside the auspices of a university."
+  ],
+  "backstoryPrompts": [
+    "Have you ever attended a magical university? If so, did you drop out or were you expelled?",
+    "How do you feel about the ethical limitations imposed on scholarly research?",
+    "Do you conduct experiments on your own? If so, are they ethical?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "coreAbilityName": "Favorite Spell",
+  "coreAbilityDescription": "Whenever you learn a spell, you may choose to make that spell your favorite. When you cast this spell, you add your willpower modifier to the spell potency in addition to the regular spell potency modifier.",
+  "levelingBonuses": {
+    "1": "TODO"
+  }
+}

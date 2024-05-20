@@ -1,44 +1,232 @@
 [
   {
-    "name": "Brew Aqua Regia",
+    "name": "Brew: Aphrodisiac",
+    "rarity": "common",
+    "discipline": "Toxicology",
+    "type": "enchantment",
+    "effect": "Produces a rosy pink concoction, brewed from crushed rose petals and thorns of the same. The reaction yields 1 ounce of liquid, which is stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons must pass a DT 11 willpower saving throw or fall in love with the next being it sees, of the appropriate gender and species.",
+    "note": "'Tis rightly a poison, though rarely considered as such.",
+    "training_reqs": {
+      "int": 11,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 4,
+      "Materials": "A rose entire (with petals and thorns) plus other ingredients costing 20 gold."
+    },
+    "modifiers": {
+      "Difficulty": "The DT of the willpower saving throw is increased by 1 for every 2 points of intelligence above 11."
+    }
+  },
+  {
+    "name": "Brew: Aqua Regia",
     "rarity": "academic",
     "discipline": "Toxicology",
-    "type": "ritual",
-    "effect": "The alchemical ritual renders of an extremely volatile acid that even dissolves inert metals such as gold and platinum. The reaction yields four ounces of liquid, which are stored in a stoppered flask. When thrown at a target after the incantation has been uttered, it deals 4d4 acid damage and reduces armor by 1.",
-    "note": "The mixture remains stable and can be poured from one container to another until the correct incantation is uttered. Thereupon, the mixture explodes into a violent orange-colored froth and the pressure builds until it escapes or shatters the flask. If the incantation is never uttered, the mixture decomposes and becomes inert after a long rest.",
+    "type": "enchantment",
+    "effect": "The alchemical ritual renders an extremely volatile acid that even dissolves inert metals such as gold and platinum. The reaction yields four ounces of liquid, which are stored in a stoppered flask. When thrown at a target after the incantation has been uttered, it deals 4d6 acid damage and reduces armor by 3.",
+    "note": "The mixture remains stable and can be poured from one container to another until the correct incantation is uttered. Thereupon, the mixture explodes into an orange-colored froth and the pressure builds until it escapes or shatters the flask.",
     "training_reqs": {
       "int": 16,
       "slots": 4
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 4,
+      "ap": 10,
       "Location": "Alchemical Laboratory",
-      "Materials": "1 ounce of nitric acid and 3 ounces of brimstone."
+      "Materials": "1 ounce of nitric acid and 3 ounces of brimstone, plus additional materials costing 80 gold."
     },
-    "scaling": {
-      "Damage": "Improved chemical purity increases damage by 1d4 for every two points of intelligence above 16."
+    "modifiers": {
+      "Location": "If brewed using field equipment rather than an alchemical laboratory, the caster must pass a DT 12 int saving throw or the spell fails and AP and ingredients are lost.",
+      "maintenance": "If the incantation is never uttered, the mixture eventually becomes volatile and spews from its flask. This mishap can be forestalled indefinitely via a daily ritual which takes 20 minutes and expends 10 AP.",
+      "Damage": "Improved chemical purity increases damage by 1d6 for every two points of intelligence above 16."
     }
   },
   {
-    "name": "Brew Neurotoxin",
+    "name": "Brew: Brimstone",
     "rarity": "common",
     "discipline": "Toxicology",
-    "type": "ritual",
-    "effect": "A potent concentrate of serpent venom is precipitated in alchemical solution. The reaction yields 1 ounce of liquid, which are stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons must pass a DT 12 willpower saving throw or become paralysed.",
-    "note": "If the vial is not used, the mixture decomposes and becomes inert after a long rest.",
+    "type": "enchantment",
+    "effect": "A frothing, ochre concentrate of sulfur is distilled in alchemical solution. The reaction yields 4 ounces of liquid, which are stored in a stoppered flask. The contents of the flask can be thrown at an enemy, dealing 2d6 acid damage and reducing their armor by 1.",
+    "training_reqs": {
+      "int": 12,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "30 minutes",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A cube of gypsum, and a rotten egg."
+    },
+    "modifiers": {
+      "maintenance": "If the vial is not used, the mixture decomposes and becomes inert after a long rest. Its original properties can be restored via a ritual which takes 20 minutes and expends 6 AP.",
+      "Potency": "Saving throw DT increases by 1 for every point of intelligence above 14."
+    }
+  },
+  {
+    "name": "Brew: Debilitative",
+    "rarity": "academic",
+    "discipline": "Toxicology",
+    "type": "enchantment",
+    "effect": "A tepid solution of nightshade oil and ocular jelly is dissolved in alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons must pass a DT 14 willpower saving throw or suffer -1 to INT, CHA, and WILL scores.",
     "training_reqs": {
       "int": 14,
       "slots": 3
     },
     "casting_reqs": {
       "time": "30 minutes",
-      "ap": 3,
+      "ap": 4,
       "Location": "Alchemical Laboratory",
-      "Materials": "4 viper fangs"
+      "Materials": "Nightshade oil, 4 eyeballs gathered from toads or newts, and additional materials costing 30 gold."
     },
-    "scaling": {
-      "Potency": "Saving throw DT increases by 1 for every point of intelligence above 14."
+    "modifiers": {
+      "maintenance": "If the vial is not used, the mixture denatures and becomes inert after a long rest. Its original properties can be restored via a ritual which takes 20 minutes and expends 4 AP.",
+      "Potency": "The DT of the saving throw is increased by 1 for every point of intelligence above 14."
+    }
+  },
+  {
+    "name": "Brew: Enervative",
+    "rarity": "academic",
+    "discipline": "Toxicology",
+    "type": "enchantment",
+    "effect": "A frothing solution of nettles and thistle is distilled from an alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons loses 1d4 AP for each hit.",
+    "training_reqs": {
+      "int": 15,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "time": "2 hours",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "An ounce of thistle oil and an ounce of nettle oil, plus additional materials costing 30 gold."
+    },
+    "modifiers": {
+      "Maintenance": "If the vial is not used, the mixture denatures and becomes inert after seven days. Its original properties can be restored via a ritual which takes 20 minutes and expends 6 AP.",
+      "Potency": "For every two points of intelligence above 15, the damage increases. AP damage progresses to 1d6 at 17, 1d8 at 19, and so on up to 1d12."
+    }
+  },
+  {
+    "name": "Brew: Gorgonic Toxin",
+    "rarity": "forbidden",
+    "discipline": "Toxicology",
+    "type": "enchantment",
+    "effect": "Following the correct procedure, a skilled alchemist may produce 1 drop of a foul grayish paste. Failing a DT 16 willpower saving throw, whoso drinks a drink tainted with a drop of this poison shall be turned to stone in a few seconds time. The drop may also be used to coat a weapon or arrow which, striking true, shall deliver the selfsame fate to an unlucky foe.",
+    "training_reqs": {
+      "int": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "time": "6 hours",
+      "ap": 20,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A gargoyle's tongue, ten scales of a dragon, a drop of quicksilver, plus additional materials costing 120 gold."
+    },
+    "modifiers": {
+      "Coercion": "An alchemist possessing 19 charisma may produce an alternative version of this poison. The alternate version takes effect after a week's time, but its effects may be forestalled or dismissed by an appropriate incantation. This incantation is known only to the brewer of the potion unless it is disclosed to others or overheard during preparation."
+    }
+  },
+  {
+    "name": "Brew: Lethargic Toxin",
+    "rarity": "common",
+    "discipline": "Toxicology",
+    "type": "enchantment",
+    "effect": "A viscous solution with a metallic luster remains after an alchemical mixture of algae and ogre bile has evaporated. The reaction yields 1 ounce of liquid, which is stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons must pass a DT 13 willpower saving throw or suffer -1 to STR, SPD, and DEX scores.",
+    "training_reqs": {
+      "int": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "30 minutes",
+      "ap": 4,
+      "Location": "Alchemical Laboratory",
+      "Materials": "Alchemical algae and a pinch of bile gathered from the stomach of an ogre, plus additional materials costing 30 gold."
+    },
+    "modifiers": {
+      "maintenance": "If the vial is not used, the mixture denatures and becomes inert after seven days. Its original properties can be restored via a ritual which takes 20 minutes and expends 4 AP.",
+      "Potency": "The DT of the saving throw is increased by 1 for every point of intelligence above 13."
+    }
+  },
+  {
+    "name": "Brew: Narcoleptic Toxin",
+    "rarity": "common",
+    "discipline": "Toxicology",
+    "type": "ritual",
+    "effect": "A warm and bubbly solution of butter and silver dust is dissolved in alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons must pass a DT 12 willpower saving throw or fall into a slumber for 10 turns, or until damaged.",
+    "note": "Though categorized as a toxin, the mixture is frequently used as a sleep aid, with no known ill effects.",
+    "training_reqs": {
+      "int": 12,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "30 minutes",
+      "ap": 4,
+      "Location": "Alchemical Laboratory",
+      "Materials": "Alchemical butter and a pile of silver dust, plus additional materials costing 30 gold."
+    },
+    "modifiers": {
+      "Potency": "The DT of the saving throw is increased by 1 for every point of intelligence above 12."
+    }
+  },
+  {
+    "name": "Brew: Necrotoxin",
+    "rarity": "common",
+    "discipline": "Toxicology",
+    "type": "enchantment",
+    "effect": "A pungent decoction derived from spider fangs and toadstool powder emerges after being separated from waste product. The reaction yields 1 ounce of liquid, which is stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons must pass a DT 11 willpower saving throw accumulate one level of necrotic poisoning, dealing 1d4 damage at the start of its turn.",
+    "training_reqs": {
+      "int": 11,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "30 minutes",
+      "ap": 4,
+      "Location": "Alchemical Laboratory",
+      "Materials": "Spider fangs and toadstool powder, plus additional materials costing 30 gold."
+    },
+    "modifiers": {
+      "Maintenance": "If the vial is not used, the mixture denatures and becomes inert after a long rest. Its original properties can be restored via a ritual which takes 20 minutes and expends 4 AP.",
+      "Potency": "The DT of the saving throw increases by 1 for every point of intelligence above 11."
+    }
+  },
+  {
+    "name": "Brew: Liquid Light",
+    "rarity": "academic",
+    "discipline": "Toxicology",
+    "type": "enchantment",
+    "effect": "A viscous, glowing solution of yellow-white light appears overnight after the proper admixture of rust shavings, crushed amber, and powdered dragon tooth has settled. The reaction yields 4 ounces of liquid, which are stored in a stoppered flask. With an action, you coat a weapon or up to ten arrows with one ounce of the solution. Any target damaged by these weapons takes 1d6 fire damage. Additionally, the entire flask can be thrown, causing an explosion which deals 3d6 fire damage and 3d6 force damage to all enemies within 10 feet.",
+    "training_reqs": {
+      "int": 18,
+      "slots": 8
+    },
+    "casting_reqs": {
+      "time": "12 hours",
+      "ap": 8,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A shard of amber, rust shavings, and a dragon tooth, plus additional materials costing 100 gold."
+    },
+    "modifiers": {
+      "maintenance": "If the vial is not used, the mixture denatures and becomes inert after a long rest. Its original properties can be restored via a ritual which takes 20 minutes and expends 8 AP."
+    }
+  },
+  {
+    "name": "Brew: Neurotoxin",
+    "rarity": "academic",
+    "discipline": "Toxicology",
+    "type": "enchantment",
+    "effect": "A potent concentrate of serpent venom is precipitated in alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons must pass a DT 12 willpower saving throw or become paralysed.",
+    "training_reqs": {
+      "int": 16,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "30 minutes",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "4 viper fangs, plus additional materials costing 30 gold."
+    },
+    "modifiers": {
+      "maintenance": "If the vial is not used, the mixture decomposes and becomes inert after a long rest. Its original properties can be restored via a ritual which takes 20 minutes and expends 6 AP.",
+      "Potency": "Saving throw DT increases by 1 for every point of intelligence above 16."
     }
   }
 ]

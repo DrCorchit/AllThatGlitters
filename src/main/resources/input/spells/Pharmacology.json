@@ -1,23 +1,330 @@
 [
   {
-    "name": "Brew Curative",
+    "name": "Brew: Acumen Philter",
+    "rarity": "academic",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "Produces a cerulean solution of crushed pearl and gold dust, which forms at the top of an alchemical mixture. The reaction yields 1 ounce of product, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 2 points of intelligence until the next long rest.",
+    "note": "Consuming this potion has no effect if one's intelligence has already been increased by another potion.",
+    "training_reqs": {
+      "int": 16,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A pearl and a pile of gold dust, plus other ingredients costing 50 gold."
+    },
+    "modifiers": {
+      "Potency": "Bonus intelligence is increased by an additional point for every 3 points of intelligence above 16 when the potion was brewed."
+    }
+  },
+  {
+    "name": "Brew: Amphibic Philter",
     "rarity": "common",
     "discipline": "Pharmacology",
-    "type": "ritual",
-    "effect": "A crimson philter of lion or bear's blood is precipitated in alchemical solution. The reaction yields 4 ounces of liquid, which are stored in a stoppered flask. As an action, you may drink up to 4 ounces from the flask, healing 1d4 damage each.",
-    "note": "If the potion is not consumed, the mixture denatures and becomes inert after a long rest.",
+    "type": "enchantment",
+    "effect": "Produces a viscous extract, condensed from an alchemical mixture of frog feet and fish scales. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining the ability to breathe underwater for 30 minutes.",
+    "note": "Consuming this potion a second time resets the duration of the effect.",
     "training_reqs": {
       "int": 14,
       "slots": 3
     },
     "casting_reqs": {
-      "time": "1 Action",
+      "time": "30 minutes",
       "ap": 6,
       "Location": "Alchemical Laboratory",
-      "Materials": "1 ounce of fresh blood, taken from a lion or bear."
+      "Materials": "Frog legs and fish scales, plus other ingredients costing 50 gold."
     },
-    "scaling": {
-      "Quantity": "Improved distillation procedures allow you to produce one additional ounce of curative for each point of intelligence above 14."
+    "modifiers": {
+      "Duration": "Breathe underwater for an additional 30 minutes for every two points of intelligence above 14 when the potion was brewed."
+    }
+  },
+  {
+    "name": "Brew: Anaesthetic Potion",
+    "rarity": "academic",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "Produces a transparent liquid, distilled from an alchemical solution of crushed glass and mermaid tears. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial. You gain 1d6 temporary HP and 1d4 temporary AP, and your nerves are greatly dulled to the sensation of pain.",
+    "training_reqs": {
+      "int": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 4,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A shard of glass and a vial of mermaid tears, plus other ingredients costing 30 gold."
+    },
+    "modifiers": {
+      "Potency": "Additional 1d6 temporary HP for every 3 points of intelligence above 14 when the potion was brewed."
+    }
+  },
+  {
+    "name": "Brew: Antivenin",
+    "rarity": "common",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A vile and brackish concoction. Nevertheless, one ounce is all that is required to cure ongoing poisons and ailments. The reaction yields 4 ounces of the substance, which are stored in a stoppered flask.",
+    "training_reqs": {
+      "int": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "15 minutes",
+      "ap": 4,
+      "Location": "Alchemical Laboratory",
+      "Materials": "The tail of a shrew and the wing of a bat, plus other ingredients costing 30 gold."
+    }
+  },
+  {
+    "name": "Brew: Curative Potion",
+    "rarity": "common",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A crimson philter of lion or bear's blood is precipitated in alchemical solution. The reaction yields 4 ounces of liquid, which are stored in a stoppered flask. As an action, you may drink up to 4 ounces from the flask, healing 1d4 damage each.",
+    "note": "If the potion is not consumed, the mixture denatures and becomes inert after a long rest.",
+    "training_reqs": {
+      "int": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "1 ounce of fresh blood, taken from a lion or bear, plus additional materials costing 25 gold."
+    },
+    "modifiers": {
+      "Potency": "For every two points of intelligence above 13, the healing per ounce increases. Healing progresses to 1d6 at 15, 1d8 at 17, and so on up to 1d12."
+    }
+  },
+  {
+    "name": "Brew: Elixir of Immortality",
+    "rarity": "esoteric",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A shimmering gold solution containing the essence of life is distilled from an alchemical solution. The reaction yields 1 ounce of liquid, stored in a vial. As an action, you may drink the contents of the vial, so extending your life by 500 years.",
+    "training_reqs": {
+      "int": 20,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "100 years",
+      "ap": 30,
+      "Location": "Alchemical Laboratory",
+      "Materials": "Unknown, but invariably obtained at extreme price."
+    },
+    "modifiers": {
+      "Preparation Time": "Brew time is reduced by 50% for every point of speed above 10."
+    }
+  },
+  {
+    "name": "Brew: Eloquence Philter",
+    "rarity": "academic",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A xanthous solution of egg yolk and four-leaf clovers is condensed from an alchemical mixture. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 1 point of charisma until the next long rest.",
+    "note": "Consuming this potion has no effect if one's charisma has already been increased by another potion.",
+    "training_reqs": {
+      "int": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "10 four leaf clovers, the yolk of a harpy's egg, plus other ingredients costing 50 gold."
+    },
+    "modifiers": {
+      "Potency": "Charisma is increased by an additional point for every 3 points of intelligence above 15."
+    }
+  },
+  {
+    "name": "Brew: Hallucinogenic",
+    "rarity": "common",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A cerulean solution of crushed pearl and gold dust is extracted from an alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 1 point of intelligence until the next long rest.",
+    "note": "Consuming this potion has no effect if one's intelligence has already been increased by another potion.",
+    "training_reqs": {
+      "int": 15,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A pearl and a pile of gold dust, plus other ingredients costing 50 gold."
+    },
+    "modifiers": {
+      "upcast": "The potion's potency is increased by 1 for every 3 points of intelligence above 16."
+    }
+  },
+  {
+    "name": "Brew: Hermetic Philter",
+    "rarity": "academic",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A pale solution of ostrich feathers and gazelle blood is condensed from an alchemical mixture. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 1 point of speed until the next long rest.",
+    "note": "Consuming this potion has no effect if one's speed has already been increased by another potion.",
+    "training_reqs": {
+      "int": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "10 four leaf clovers, the yolk of a harpy's egg, plus other ingredients costing 50 gold."
+    },
+    "modifiers": {
+      "upcast": "The potion's potency is increased by 1 "
+    }
+  },
+  {
+    "name": "Brew: Innoculative Philter",
+    "rarity": "common",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A cerulean solution of crushed pearl and gold dust is extracted from an alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 1 point of intelligence until the next long rest.",
+    "note": "Consuming this potion has no effect if one's intelligence has already been increased by another potion.",
+    "training_reqs": {
+      "int": 12,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A pearl and a pile of gold dust, plus other ingredients costing 50 gold."
+    },
+    "modifiers": {
+      "upcast": "The potion's potency is increased by 1 for every 3 points of intelligence above 16."
+    }
+  },
+  {
+    "name": "Brew: Invisibility Potion",
+    "rarity": "academic",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A glowing, translucent potion remains after aught else is boiled away. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, so becoming invisible for 10 minutes.",
+    "training_reqs": {
+      "int": 17,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A spiderweb, a , plus other ingredients costing 50 gold."
+    },
+    "modifiers": {
+      "duration": "Invisibility is extended by 10 minutes for every point of intelligence above 17."
+    }
+  },
+  {
+    "name": "Brew: Elixir of Invulnerability",
+    "rarity": "academic",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A dark crimson conconction derived from crushed bricks, tar, and grass plucked from between the cracks of a sidewalk. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining immunity to all forms of damage for 1 minute.",
+    "training_reqs": {
+      "int": 18,
+      "slots": 6
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A brick, a drop of tar, and freshly plucked grass, plus other ingredients costing 100 gold."
+    },
+    "modifiers": {
+      "maintenance": "Its original properties can be restored via a ritual which takes 20 minutes and expends 4 AP."
+    }
+  },
+  {
+    "name": "Brew: Persistence Philter",
+    "rarity": "academic",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A cerulean solution of crushed pearl and gold dust is extracted from an alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 1 point of intelligence until the next long rest.",
+    "note": "Consuming this potion has no effect if one's intelligence has already been increased by another potion.",
+    "training_reqs": {
+      "int": 15,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A pearl and a pile of gold dust, plus other ingredients costing 50 gold."
+    },
+    "modifiers": {
+      "upcast": "The potion's potency is increased by 1 for every 3 points of intelligence above 16."
+    }
+  },
+  {
+    "name": "Brew: Potency Philter",
+    "rarity": "academic",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "A cerulean solution of crushed pearl and gold dust is extracted from an alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 1 point of intelligence until the next long rest.",
+    "note": "Consuming this potion has no effect if one's intelligence has already been increased by another potion.",
+    "training_reqs": {
+      "int": 16,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "A pearl and a pile of gold dust, plus other ingredients costing 50 gold."
+    },
+    "modifiers": {
+      "upcast": "The potion's potency is increased by 1 for every 3 points of intelligence above 16."
+    }
+  },
+  {
+    "name": "Brew: Stimulant",
+    "rarity": "common",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "",
+    "note": "",
+    "training_reqs": {
+      "int": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": ""
+    },
+    "modifiers": {
+      "upcast": "The potion's potency is increased by 1 for every 3 points of intelligence above 16."
+    }
+  },
+  {
+    "name": "Brew: Vigor Philter",
+    "rarity": "academic",
+    "discipline": "Pharmacology",
+    "type": "enchantment",
+    "effect": "Produces an effervescent yellow potion which swirls without cessation. The reaction produces 1 ounce of product, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 2 points of dexterity until the next long rest.",
+    "note": "Consuming this potion has no effect if one's dexterity has already been increased by another potion.",
+    "training_reqs": {
+      "int": 15,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "time": "1 Hour",
+      "ap": 6,
+      "Location": "Alchemical Laboratory",
+      "Materials": "10 crickets and the foot of a rabbit, plus additional materials costing 50 gold."
+    },
+    "modifiers": {
+      "Potency": "Dexterity is increased by an additional point for every 3 points of intelligence above 15."
     }
   }
 ]

@@ -1,0 +1,15 @@
+{
+  "name": "Veteran",
+  "description": "The veteran is an experienced former soldier trained in the use of military grade melee weapons. Veterans thrive on camaraderie and fight best when backed up by their companions. Most importantly, veterans bolster their team in various ways without stepping back from the frontline of battle.",
+  "backstoryPrompts": [
+    "Why did you join the military?",
+    "What rank did you achieve?",
+    "In which battles or wars did you fight, if any?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "coreAbilityName": "Battlefield Triage",
+  "coreAbilityDescription": "When you help an ally, you may expend 2 AP to heal them for 2d6 HP.",
+  "levelingBonuses": {
+    "1": "TODO"
+  }
+}

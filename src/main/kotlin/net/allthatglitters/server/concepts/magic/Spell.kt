@@ -7,7 +7,7 @@ import com.google.common.collect.ImmutableMap
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import net.allthatglitters.server.concepts.Attribute
-import net.allthatglitters.server.util.HtmlObject
+import net.allthatglitters.server.util.html.HtmlObject
 
 class Spell(
     val name: String,
@@ -20,59 +20,55 @@ class Spell(
     val note: String?,
     val trainingReqs: ImmutableMap<String, Any>,
     val castingReqs: ImmutableMap<String, Any>,
-    val scaling: ImmutableMap<String, Any>,
+    val modifiers: ImmutableMap<String, Any>,
 ) {
     val tag = makeTag(name)
 
     fun render(): String {
-        val output = HtmlObject("div").withTag("class", "background")
-        output.withContent(HtmlObject("a").withTag("id", tag))
+        val output = HtmlObject("div").withAttribute("class", "background")
+        output.withContent(HtmlObject("a").withAttribute("id", tag))
         output.withContent(HtmlObject("h5").withContent(name))
         val category = discipline.describe(rarity, type)
         output.withContent(HtmlObject("p").withContent(HtmlObject("i").withContent(category)))
 
         if (target != null) {
-            val targetText = "<b>Target</b>: ${target.render()}"
-            output.withContent(HtmlObject("p").withContent(targetText))
+            output.withBoldedEntry("Target", target.render())
         }
         if (duration != null) {
-            output.withContent(HtmlObject("p").withContent("<b>Duration</b>: $duration"))
+            output.withBoldedEntry("Duration", duration.toString())
         }
 
-        output.withContent(HtmlObject("p").withContent("<b>Effect</b>: $effect"))
+        output.withBoldedEntry("Effect", effect)
         if (note != null) {
             output.withContent(
-                HtmlObject("p").withTag("style", "margin-left: 25px")
+                HtmlObject("p").withAttribute("style", "margin-left: 25px")
                     .withContent("Note: $note")
             )
         }
 
-        val outerDiv = HtmlObject("div").withTag("class", "background-2")
-        val button = HtmlObject("button").withTag("class", "collapsible-2")
+        val outerDiv = HtmlObject("div").withAttribute("class", "background-2")
+        val button = HtmlObject("button").withAttribute("class", "collapsible-2")
             .withContent("Additional Information")
-        val innerDiv = HtmlObject("div").withTag("class", "content")
+        val innerDiv = HtmlObject("div").withAttribute("class", "content")
         if (trainingReqs.isNotEmpty()) {
-            innerDiv.withContent(HtmlObject("p").withContent("<b>Training Requirements</b>:"))
-            val trainingReqs = trainingReqs.map {
-                "<li><b>${it.key}</b>: ${it.value}</li>"
-            }.joinToString("\n")
-            innerDiv.withContent(HtmlObject("ul").withContent(trainingReqs))
+            innerDiv.withBoldedEntry("Training Requirements", "")
+            val list = HtmlObject("ul")
+            trainingReqs.forEach { list.withBoldedEntry(it.key, it.value.toString()) }
+            innerDiv.withContent(list)
         }
 
         if (castingReqs.isNotEmpty()) {
-            innerDiv.withContent(HtmlObject("p").withContent("<b>Casting Requirements</b>:"))
-            val castingReqs = castingReqs.map {
-                "<li><b>${it.key}</b>: ${it.value}</li>"
-            }.joinToString("\n")
-            innerDiv.withContent(HtmlObject("ul").withContent(castingReqs))
+            innerDiv.withBoldedEntry("Casting Requirements", "")
+            val list = HtmlObject("ul")
+            castingReqs.forEach { list.withBoldedEntry(it.key, it.value.toString()) }
+            innerDiv.withContent(list)
         }
 
-        if (scaling.isNotEmpty()) {
-            innerDiv.withContent(HtmlObject("p").withContent("<b>Scaling</b>:"))
-            val scaling = scaling.map {
-                "<li><b>${it.key}</b>: ${it.value}</li>"
-            }.joinToString("\n")
-            innerDiv.withContent(HtmlObject("ul").withContent(scaling))
+        if (modifiers.isNotEmpty()) {
+            innerDiv.withBoldedEntry("Modifiers", "")
+            val list = HtmlObject("ul")
+            modifiers.forEach { list.withBoldedEntry(it.key, it.value.toString()) }
+            innerDiv.withContent(list)
         }
 
         if (innerDiv.hasContent()) {
@@ -114,7 +110,7 @@ class Spell(
                     .associate { entry -> mapReqs(entry) }
                     .let { map -> ImmutableMap.copyOf(map) }
             } ?: ImmutableMap.of()
-            val scaling = info.getAsJsonObject("scaling")?.let {
+            val modifiers = info.getAsJsonObject("modifiers")?.let {
                 it.entrySet()
                     .associate { entry -> mapReqs(entry) }
                     .let { map -> ImmutableMap.copyOf(map) }
@@ -131,7 +127,7 @@ class Spell(
                 note,
                 trainingReqs,
                 castingReqs,
-                scaling
+                modifiers
             )
         }
 
@@ -145,7 +141,7 @@ class Spell(
                 "time" -> "Casting Time" to TimeUnits.deserialize(entry.value, action)
                 "ap" -> "Evocation AP" to entry.value.asInt
                 "concentration" -> "Concentration AP" to entry.value
-                //scaling
+                //modifiers
                 "upcast" -> "Upcasting" to entry.value.asString
                 "dualcast" -> "Dual Casting" to entry.value.asString
                 else -> Attribute.parse(entry.key)
@@ -159,7 +155,7 @@ class Spell(
         }
 
         fun toLink(name: String): HtmlObject {
-            return HtmlObject("a").withTag("href", "#${makeTag(name)}").withContent(name)
+            return HtmlObject("a").withAttribute("href", "#${makeTag(name)}").withContent(name)
         }
     }
 }

@@ -16,7 +16,7 @@
       "time": "1 Action",
       "ap": 0
     },
-    "scaling": {
+    "modifiers": {
       "Alternate Effects": "If the spell <i>Minor Telepathy</i> is known, the spirit can be instructed to transmit a silent telepathic alarm instead. If the spell <i>Major Telepathy</i> is known, it can also communicate certain general details about the situation when the alarm is triggered."
     }
   }

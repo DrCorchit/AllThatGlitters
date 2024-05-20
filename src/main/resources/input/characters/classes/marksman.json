@@ -1,0 +1,16 @@
+{
+  "name": "Marksman",
+  "altName": "Markswoman",
+  "description": "Anyone can pick up a bow. With some strength and a little training, one can draw and release an arrow as well. However, only a true marksman can hit a distant target quickly and reliably. Such potency with a bow or musket is what distinguishes an ordinary archer from a true marksman.",
+  "backstoryPrompts": [
+    "How did you learn to use a bow or musket?",
+    "Do you brag about the time you made that really tricky shot? (Of course you do...)",
+    "How often do you practice? Do you naturally have good aim?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "coreAbilityName": "Sniping Shot",
+  "coreAbilityDescription": "TODO",
+  "levelingBonuses": {
+    "1": "TODO"
+  }
+}

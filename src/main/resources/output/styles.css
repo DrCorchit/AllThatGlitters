@@ -14,15 +14,11 @@ h4:after, h5:after {
 hr { border: 0; border-top: 1px solid #bc0; }
 
 li, p, a { font-size: 10pt; line-height: 100%; margin: 0 0 10px 0; }
+ul, li { margin: 10px 0px 10px 0px; }
 blockquote { font-size: 9pt; line-height: 100)%; }
 a:link { color: #cb0 }
 a:visited { color : #980 }
 a:hover { color: #fff }
-
-ul, li { margin: 10px 0px 10px 0px; }
-ol { counter-reset: item; }
-ol li { display: block; margin: 10px 0; }
-ol li:before { content: counters(item, ".") ". "; counter-increment: item; }
 
 table { border-collapse: collapse; width: 100%; margin: 10px 0 10px 0; }
 tr:nth-child(odd) { background-color: #30302c; }
@@ -48,7 +44,7 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
 .background {
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #30302a;
+    border: 1px solid #30302A;
     border-radius: 3px;
     background-color: #181818
 }
@@ -58,8 +54,8 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
 
 .background-2 {
     padding: 5px;
-    border: 1px solid #30302a;
-    background-color: #242420;
+    border: 1px solid #30302A;
+    background-color: #282828;
     border-radius: 5px;
 }
 .collapsible-2 {
@@ -80,7 +76,7 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
 }
 .active-2 {
     color: #cca;
-    background-color: #38382a
+    background-color: #38382A;
 }
 
 .collapsible {
@@ -90,7 +86,7 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
     padding: 5px;
     margin: 0;
     width: 100%;
-    border: 0px solid #30302c;
+    border: 0px solid #30302C;
     border-radius: 3px;
     text-align: left;
     font-family: "Calibri";

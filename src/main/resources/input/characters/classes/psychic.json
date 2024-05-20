@@ -1,0 +1,16 @@
+{
+  "name": "Psychic",
+  "description": "The powers of a true psychic are a sight to behold. Imagine, for example, an unassuming young woman clad in simple black robes. She raises her hand and her eyes glow bright white, and suddenly the earth begins to tremble. A rock surges upward from the soil, bidden by her telekinetic impulse, and is sent flying towards its target. Surely such power is to be coveted—and feared!",
+  "backstoryPrompts": [
+    "When did you first discover your unique powers?",
+    "Do you ever struggle to control your powers?",
+    "Have your powers caused you to become an outcast, or changed the way that people view you?",
+    "Do your powers imbue you with a sense of purpose, such as the desire to protect or dominate others?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "coreAbilityName": "Telekinesis",
+  "coreAbilityDescription": "As a psychic prodigy, you begin the game with the knowledge of the spells \"Telekinetic Lift\", \"Lesser Telekinetic Pull\", and \"Telekinetic Throw\". You know these spells by rote and may cast them even if you do not meet the attribute requirements. Psionic spells cost half as many training slots when learned.",
+  "levelingBonuses": {
+    "1": "TODO"
+  }
+}

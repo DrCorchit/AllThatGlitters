@@ -1,0 +1,40 @@
+{
+  "name": "Assassin",
+  "description": "An assassin’s art is a quick and sure death, delivered without remorse or hesitation. Typically employed by a political state or criminal syndicate, assassins quickly learn to make use of any weapon available, including the weapons of their own targets. This makes them extremely versatile adventurers, able to adapt to nearly any combat situation as the need arises.",
+  "backstoryPrompts": [
+    "Who has hired you in the past?",
+    "How many targets have you killed?",
+    "Do you remember your first kill?",
+    "How did you acquire your unique skillset?",
+    "Does your character struggle with any form of guilt?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "alignment": "Non-Good",
+  "coreAbilityName": "Assassination",
+  "coreAbilityDescription": "You may expend 2 willpower to convert an ordinary attack into an assassination attempt. If the attack results in a critical hit, it becomes an assassination, damaging an enemy by 15 in addition to your normal weapon damage.",
+  "levelingBonuses": {
+    "1": "TODO"
+  },
+  "startingEquipment": [
+    "A set of Leather Armor.",
+    [
+      "An adventurer's pack, containing:",
+      "20 + 1d100 gold.",
+      "5 days rations.",
+      "Two sets of regular clothing.",
+      "One set of formal wear.",
+      "A disguise kit.",
+      "A lockpicking kit.",
+      "50 feet of rope."
+    ],
+    "Three vials of neurotoxic poison.",
+    "12 Throwing knives.",
+    "A grappling hook.",
+    [
+      "Any one of the following:",
+      "A nimble weapon and a buckler",
+      "Any two nimble weapons",
+      "A dagger, a stiletto, and a tanto blade."
+    ]
+  ]
+}

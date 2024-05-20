@@ -1,5 +1,7 @@
-package net.allthatglitters.server.util
+package net.allthatglitters.server.util.html
 
+import net.allthatglitters.server.util.Footer
+import net.allthatglitters.server.util.Header
 import java.io.File
 
 val inputDir = File("src/main/resources/input")
@@ -7,7 +9,6 @@ val outputDir = File("src/main/resources/output")
 
 open class HtmlFile(val title: String, val fileName: String) {
 
-    private val text = File(inputDir, fileName).readText()
     private val builder = StringBuilder()
 
     fun appendHeader(): HtmlFile {
@@ -18,6 +19,10 @@ open class HtmlFile(val title: String, val fileName: String) {
     fun appendFooter(): HtmlFile {
         builder.append(Footer.render())
         return this
+    }
+
+    fun append(html: HtmlObject): HtmlFile {
+        return append(html.render())
     }
 
     fun append(builder: StringBuilder): HtmlFile {
@@ -39,7 +44,7 @@ open class HtmlFile(val title: String, val fileName: String) {
     }
 
     open fun appendBody(): HtmlFile {
-        builder.append(text)
+        builder.append(File(inputDir, fileName).readText())
         return this
     }
 

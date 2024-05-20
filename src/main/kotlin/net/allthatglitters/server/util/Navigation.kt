@@ -1,5 +1,7 @@
 package net.allthatglitters.server.util
 
+import net.allthatglitters.server.util.html.HtmlFile
+
 const val hr = "<hr />"
 const val divStart = "<div class=\"row\" style=\"justify-content:space-evenly; margin: 0\" >"
 const val prevText =

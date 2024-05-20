@@ -3,7 +3,7 @@ package net.allthatglitters.server;
 import io.javalin.Javalin
 import io.javalin.config.JavalinConfig
 import io.javalin.http.staticfiles.Location
-import net.allthatglitters.server.util.outputDir
+import net.allthatglitters.server.util.html.outputDir
 
 object Serve {
     @JvmStatic

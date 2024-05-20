@@ -22,7 +22,7 @@
       "time": "1 Action",
       "ap": 6
     },
-    "scaling": {
+    "modifiers": {
       "Healing": "Allies heal one additonal point of HP for every 2 points of intelligence above 15.",
       "Damage": "Enemies take one additional point of damage for every 2 points of will above 15."
     }

@@ -20,7 +20,7 @@
       "ap": 5,
       "concentration": 1
     },
-    "scaling": {
+    "modifiers": {
       "targets": "The lightning strikes one additional target per point of intelligence above 15.",
       "Damage": "The lightning deals one additional damage per point of willpower above 15."
     }

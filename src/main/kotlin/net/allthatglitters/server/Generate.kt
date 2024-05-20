@@ -1,16 +1,15 @@
 package net.allthatglitters.server
 
+import net.allthatglitters.server.concepts.classes.ClassesChapter
 import net.allthatglitters.server.concepts.magic.Spells
 import net.allthatglitters.server.util.Collapsible
-import net.allthatglitters.server.util.HtmlFile
 import net.allthatglitters.server.util.Navigation
-import net.allthatglitters.server.util.inputDir
-import java.io.File
+import net.allthatglitters.server.util.html.HtmlFile
 
 object Generate {
     val version = "0"
     val appendices = listOf(
-        Spells(File(inputDir, "spells")),
+        Spells(),
         HtmlFile("Appendix: Training", "appendix_training.html"),
         HtmlFile("Appendix: Weapons", "appendix_weapons.html"),
         HtmlFile("Appendix: Armor &amp; Materials", "appendix_armor.html"),
@@ -45,6 +44,15 @@ object Generate {
             .save(version)
 
         HtmlFile("Character Sheet", "character_sheet.html").appendBody().save(version)
+        val nav = Navigation.render(2, 7)
+        ClassesChapter()
+            .appendHeader()
+            .appendElement("h2", "Chapter 2")
+            .appendTitle().append(nav)
+            .appendBody().append(nav)
+            .append(Collapsible.render("collapsible-2", "active-2"))
+            .appendFooter()
+            .save(version)
 
         val max = 7
         for (i in 1..max) {

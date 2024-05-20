@@ -50,7 +50,7 @@
       "ap": 2
     },
     "effect": "For the duration of the spell, your face appears to change to match any face you have seen previously. Your clothes, stature, and body type do not change. You may dismiss this spell at will before the duration is through. Anyone who scrutinizes your face makes a DT 15 perception check to see past your disguise. Once your disguise is foiled, the creature has advantage on saving throws against your illusions for the next 24 hours.",
-    "scaling": {
+    "modifiers": {
       "Difficulty": "The DT of the perception check is increased by 1 for every point of charisma above 12.",
       "Duration": "The duration of the spell is increased by 1 hour for every point of willpower above 12."
     }

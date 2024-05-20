@@ -1,0 +1,20 @@
+{
+  "name": "Warlock",
+  "altName": "Witch",
+  "description": [
+    "Witches and warlocks are a diverse sort, hailing from many walks of life. You may find one in a palace in the very heart of luxury, another in a dingy cave or a squalid coven, and a third in a quaint shack amidst a great forest. Wherever they are found, witches are defined by their immense power, gained from their pact with a supernatural entity. The terms of these pacts are as diverse and as varied as warlocks themselves, and bring danger, madness, and power in equal measure.",
+    "Such pacts are usually made with demonic or fey beings, for angels and dragons have little use of pacts. Demonic patrons typically allow their supplicants to dispose of their power in whatever manner they wish, in exchange for enslavement in the afterlife. Conversely, fey constantly demand small (or not-so-small) favors, but care very little for their supplicant’s eternal fate."
+  ],
+  "backstoryPrompts": [
+    "Why did you seek power in service to a supernatural being?",
+    "Do you believe that your pact will turn out in your favor?",
+    "Do you follow a ritual when you supplicate before your patron?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "alignment": "Non-Good",
+  "coreAbilityName": "Eldritch Blast",
+  "coreAbilityDescription": "You expend 2 willpower, causing a beam of eerie blue energy to streak from your outstretched hand to your target within 60 feet, dealing 1d10 plus your charisma modifier in bludgeoning damage.",
+  "levelingBonuses": {
+    "1": "TODO"
+  }
+}

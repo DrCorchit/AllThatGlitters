@@ -36,7 +36,7 @@
       ],
       "scalingLevelDice": {
         "label": "acid damage",
-        "scaling": {
+        "modifiers": {
           "1": "1d6",
           "5": "2d6",
           "11": "3d6",
@@ -2589,7 +2589,7 @@
       ],
       "scalingLevelDice": {
         "label": "necrotic damage",
-        "scaling": {
+        "modifiers": {
           "1": "1d8",
           "5": "2d8",
           "11": "3d8",
@@ -7609,7 +7609,7 @@
       ],
       "scalingLevelDice": {
         "label": "fire damage",
-        "scaling": {
+        "modifiers": {
           "1": "1d10",
           "5": "2d10",
           "11": "3d10",
@@ -13969,7 +13969,7 @@
       ],
       "scalingLevelDice": {
         "label": "poison damage",
-        "scaling": {
+        "modifiers": {
           "1": "1d12",
           "5": "2d12",
           "11": "3d12",
@@ -14574,7 +14574,7 @@
       ],
       "scalingLevelDice": {
         "label": "fire damage",
-        "scaling": {
+        "modifiers": {
           "1": "1d8",
           "5": "2d8",
           "11": "3d8",
@@ -15086,7 +15086,7 @@
       ],
       "scalingLevelDice": {
         "label": "cold damage",
-        "scaling": {
+        "modifiers": {
           "1": "1d8",
           "5": "2d8",
           "11": "3d8",
@@ -15727,7 +15727,7 @@
       ],
       "scalingLevelDice": {
         "label": "radiant damage",
-        "scaling": {
+        "modifiers": {
           "1": "1d8",
           "5": "2d8",
           "11": "3d8",
@@ -16478,7 +16478,7 @@
       ],
       "scalingLevelDice": {
         "label": "lightning damage",
-        "scaling": {
+        "modifiers": {
           "1": "1d8",
           "5": "2d8",
           "11": "3d8",
@@ -18353,7 +18353,7 @@
       ],
       "scalingLevelDice": {
         "label": "piercing damage",
-        "scaling": {
+        "modifiers": {
           "1": "1d6",
           "5": "2d6",
           "11": "3d6",
@@ -19035,7 +19035,7 @@
       ],
       "scalingLevelDice": {
         "label": "psychic damage",
-        "scaling": {
+        "modifiers": {
           "1": "1d4",
           "5": "2d4",
           "11": "3d4",

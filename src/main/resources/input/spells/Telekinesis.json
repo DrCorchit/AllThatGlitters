@@ -18,7 +18,7 @@
       "concentration": 1
     },
     "effect": "An object weighing less than 20 pounds responds to telekinetic impulse, rising to hover 3 feet above the ground. The object can be pushed or rotated while levitated without interrupting the spell.",
-    "scaling": {
+    "modifiers": {
       "Maximum Weight": "Additional 10 pounds for every point of willpower above 12.",
       "Maximum Levitation Height": "Additional 3 feet for every point of willpower above 12."
     }
@@ -47,7 +47,7 @@
       "concentration": 1
     },
     "effect": "Via subtle telekinetic impulses, the caster manipulates a target weighing less than 2 pounds with great precision, moving or rotating it at will. The object moves at a maximum speed of 5 ft/s and may not be rotated in such a way that any part of its outer boundary exceeds maximum speed relative to the center of mass. There is no limit to how many times this spell may be cast upon the same object or how much weight may be moved, provided all casters act in concert.",
-    "scaling": {
+    "modifiers": {
       "Maximum Weight": "Additional 2 pounds per point of willpower above 15.",
       "upcast": "The caster may double or triple AP costs associated with the spell to double or triple the maximum weight.",
       "dualcast": "The caster doubles the AP used to double maximum object weight."
@@ -73,7 +73,7 @@
       "concentration": 1
     },
     "effect": "A target weighing less than 20 pounds is drawn to the beckoning fingers of the caster's outstretched hand, at a rate of 2 ft/s.",
-    "scaling": {
+    "modifiers": {
       "Maximum Weight": "Additional 5 pounds for every point of willpower above 13.",
       "Maximum Speed": "Additional 1 ft/s for every point of willpower above 13.",
       "dualcast": "See \"Greater Telekinetic Pull\""
@@ -103,7 +103,7 @@
       "concentration": 1
     },
     "effect": "A target weighing less than 250 pounds is drawn towards the midpoint of the caster's outstretched hands, at a rate of 10 ft/s.",
-    "scaling": {
+    "modifiers": {
       "Maximum Weight": "Additional 50 pounds for every point of willpower above 14."
     }
   },
@@ -130,7 +130,7 @@
     },
     "effect": "An object within range (that is subject to a telekinetic positioning spell under your concentration) is launched towards a destination you choose. As a projectile, the object behaves as a thrown projectile, using your accuracy skill. If it hits, it deals 1d10 bludgeoning or piercing damage, depending on the shape of the object. The projectile's speed depends on the weight of the object. If the object weighs one pound or less, it moves at 300 ft/s. Otherwise, its speed is 300 ft/s divided by its weight in pounds.",
     "note": "This terminates any telekinetic spells currently under concentration.",
-    "scaling": {
+    "modifiers": {
       "Damage": "Increase damage by 1 for every point of willpower above 12.",
       "dualcast": "Speed is doubled, and the object deals an additional 1d10 damage."
     }
@@ -159,7 +159,7 @@
       "ap": 3
     },
     "effect": "With a blast of psionic power, the caster deals 1d8 force damage to both allies and enemies within the radius, knocking them back by 5 feet and causing them to fall prone. Targets in the affected area make a strength saving throw equal to the caster's willpower stat. On success, targets take half damage and are not knocked prone.",
-    "scaling": {
+    "modifiers": {
       "Damage": "Additional 1 damage for every point of willpower above 15.",
       "dualcast": "Radius and knockback distance are increased to 10 feet, and damage is increased by 1d8."
     }
@@ -185,7 +185,7 @@
       "concentration": 1
     },
     "effect": "An invisible wall of telekinetic impulse appears in the chosen location. The wall prevents the passage of people and objects except for the spellcaster and allies. The wall can absorb at most 50 damage before concentration fails and the spell must be recast.",
-    "scaling": {
+    "modifiers": {
       "Alternate Cast": "The wall takes the form of a sphere or hemisphere, with a maximum radius of 10 feet. Its properties are otherwise unchanged.",
       "Maximum Levitation Height": "Additional 3 feet for every point of willpower above 12."
     }

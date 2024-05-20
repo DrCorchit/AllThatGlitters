@@ -1,0 +1,16 @@
+{
+  "name": "Crusader",
+  "description": "The crusader offers their services to a chosen deity by swearing a sincere theological oath. As long as the oath is kept, their powers never wane and their enemies are smitten down before them. But even the most devoted mortal may at times be sorely tempted to break their oath. Should the temptation prove too much, the crusader may find themselves tumbling down a new path altogether, of the oathbreaker.",
+  "backstoryPrompts": [
+    "What made you swear fealty to one particular deity?",
+    "Do you ever feel tempted to break your oath?",
+    "Is your god pleased with your service, or are you on shaky terms?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "alignment": "Lawful",
+  "coreAbilityName": "Divine Oath",
+  "coreAbilityDescription": "TODO",
+  "levelingBonuses": {
+    "1": "TODO"
+  }
+}

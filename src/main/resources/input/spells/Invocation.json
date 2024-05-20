@@ -24,7 +24,7 @@
       "ap": 5,
       "concentration": 2
     },
-    "scaling": {
+    "modifiers": {
       "Damage": "The damaged is increased by 1 for each point of willpower above 15.",
       "dualcast": "The spell's radius is doubled."
     }
@@ -54,7 +54,7 @@
       "ap": 5,
       "concentration": 2
     },
-    "scaling": {
+    "modifiers": {
       "Damage": "The damaged is increased by 1 for each point of willpower above 15.",
       "dualcast": "The spell's radius is doubled."
     }

@@ -2,12 +2,13 @@ package net.allthatglitters.server.concepts.magic
 
 import com.google.gson.JsonParser
 import net.allthatglitters.server.util.Collapsible
-import net.allthatglitters.server.util.HtmlFile
-import net.allthatglitters.server.util.HtmlObject
-import net.allthatglitters.server.util.inputDir
+import net.allthatglitters.server.util.html.HtmlFile
+import net.allthatglitters.server.util.html.HtmlObject
+import net.allthatglitters.server.util.html.inputDir
 import java.io.File
 
-class Spells(private val spellsDir: File) : HtmlFile("Appendix: Spells", "appendix_spells.html") {
+class Spells(private val spellsDir: File = File(inputDir, "spells")) :
+    HtmlFile("Appendix: Spells", "appendix_spells.html") {
 
     fun getSpells(): List<Spell> {
         return spellsDir.listFiles()!!.flatMap { getSpells(it) }
@@ -22,8 +23,23 @@ class Spells(private val spellsDir: File) : HtmlFile("Appendix: Spells", "append
 
     override fun appendBody(): HtmlFile {
         if (spellsDir.isDirectory) {
+            append(HtmlObject("a").withAttribute("id", "top"))
+            val ol = HtmlObject("ol")
+            School.entries.forEach {
+                val link = HtmlObject("a").withAttribute("href", "#${it.name}").withContent(it.name)
+                ol.withContent(HtmlObject("li").withContent(link))
+            }
+            append(ol)
+
             getGroupedSpells().forEach {
-                append(HtmlObject("h4").withContent("School of ${it.key.name}").render())
+                append(
+                    HtmlObject("h4")
+                        .withContent(
+                            HtmlObject("a")
+                                .withAttribute("id", it.key.name)
+                        )
+                        .withContent("School of ${it.key.name}")
+                )
                 it.value.forEach { spell ->
                     try {
                         append(spell.render())
@@ -31,29 +47,32 @@ class Spells(private val spellsDir: File) : HtmlFile("Appendix: Spells", "append
                         throw IllegalArgumentException("Error rendering spell ${spell.name}", e)
                     }
                 }
+                append(HtmlObject("a").withAttribute("href", "#top").withContent("Back to Top"))
             }
-            return append(Collapsible.render("collapsible-2", "active-2"))
+            append(Collapsible.render("collapsible-2", "active-2"))
         } else {
             println("Warning: spellsDir is not a directory ($spellsDir)")
-            return this
         }
+        return this
     }
 
     fun showSpellStatistics() {
         val spellStatistics = StringBuilder()
-        spellStatistics.append("              10  11  12  13  14  15  16  17  18  19  20")
+        spellStatistics.append("              10  11  12  13  14  15  16  17  18  19  20 TOTAL")
 
         getGroupedSpells().forEach {
             spellStatistics.append(String.format("\n%-12s", it.key.name))
             val reqCount = mutableMapOf<Int, Int>()
             it.value.forEach { spell ->
-                val key = it.key.primaryAttr.name.lowercase()
+                val key = it.key.primaryAttr.fullName
                 val req = spell.trainingReqs[key] as Int
                 reqCount[req] = reqCount.computeIfAbsent(req) { 0 } + 1
             }
             for (i in 10..20) {
-                spellStatistics.append(String.format("%4s", reqCount.getOrDefault(i, 0)))
+                spellStatistics.append("%4s".format(reqCount.getOrDefault(i, 0)))
             }
+            spellStatistics.append("%6s".format(reqCount.values.sum()))
+
         }
 
         println(spellStatistics)

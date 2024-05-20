@@ -42,7 +42,7 @@
       "concentration": 0
     },
     "effect": "You reach out and place your palm upon your target's forehead, establishing a telepathic connection that allows you to read their thoughts, including those that the being is unable or unwilling to articulate. You may also impart your own thoughts into their mind. The spell lasts for as long as you maintain physical contact and continue concentration. Unwilling targets make a DT 15 willpower saving throw to resist. If successful, they reject your contact and have advantage on willpower saving throws against your psychic spells for the next 24 hours.",
-    "scaling": {
+    "modifiers": {
       "Difficulty": "The DT of the resistance saving throw is increased by 1 for each point of willpower above 13."
     },
     "note": "This spell allows you to view the target's active thoughts, but does not allow you to probe their memories or overcome brainwashing."
@@ -71,7 +71,7 @@
       "concentration": 1
     },
     "effect": "You establish a psychic connection with a being within range that you can see. You may read their thoughts, including those that the being is unable or unwilling to articulate. You may also impart your own thoughts into their mind. The spell lasts for as long as you continue concentration, or until the target breaks line of sight for ten minutes. If the target is unwilling, they may make a DT 15 willpower saving throw to resist. If successful, they reject your contact and have advantage on all willpower saving throws against you for the next 24 hours.",
-    "scaling": {
+    "modifiers": {
       "Difficulty": "The DT of the resistance saving throw is increased by 1 for every point of willpower above 16.",
       "Range": "The range of the spell is increased by 100 feet per point of willpower above 16."
     }
@@ -98,7 +98,7 @@
       "ap": 5
     },
     "effect": "You gain the ability to read the thoughts of an entity known to you by name, and may communicate with them telepathically. If at any point they become aware of your presence within their mind, they may make a DT 18 willpower saving throw to resist. If successful, they reject your intrusion and have advantage on all willpower saving throws against you for the next 24 hours.",
-    "scaling": {
+    "modifiers": {
       "Psychic Sight": "You may cast psychic sight on the target for 2 AP, even if you would not ordinarily be able to do so."
     }
   },
@@ -126,7 +126,7 @@
       "concentration": 1
     },
     "effect": "You see and hear through the senses of someone you can see, from a first person perspective. If the target has not consented to psychic contact, they make a DT 12 perception saving throw to detect your presence. Succeeding this, they may make an additional DT 15 willpower to resist. If this check succeeds, the spell ends and they have advantage on similar checks against you. If this check fails, they may make a DT 12 intelligence check to realize that they can interfere with the spell by closing their eyes.",
-    "scaling": {
+    "modifiers": {
       "Range": "Additional 50 feet of range per point of willpower above 14.",
       "Difficulty": "DT of perception and willpower checks are increased by 1 for every point of willpower above 14."
     },
@@ -178,7 +178,7 @@
       "concentration": 2
     },
     "effect": "The caster takes full control of being they can see within range. You automatically gain the psychic sight and major telepathy. The target makes a DT 10 perception check to realize they are being psychically dominated. If the target succeeds, they may make an additional DT 18 willpower check to resist your control. If they succeed this check, the spell ends and they have advantage on similar checks against you. If it fails, they may make additional attempts to resist at the end of each of their combat turns, or before making actions significantly against their interests. Additionally, if the target is aware that they are being dominated, they may give subtle tells such as speaking with unnatural vocal inflections or eye twitches.",
-    "scaling": {
+    "modifiers": {
       "Range": "Additional 50 feet of range per point of willpower above 18.",
       "Difficulty": "The difficulty of recognition and resistance checks are modified by the difference between the caster and target's combined intelligence and charisma scores. The DT can decrease if the target is more intelligent or charismatic than the caster."
     }
@@ -207,7 +207,7 @@
       "ap": 50
     },
     "effect": "While the spell is in effect, all participants share a single mind such that the thoughts and emotions of each participant are instantaneously apparent to all others. Participants other than the caster must possess at least 15 charisma in order to participate in the ritual. The AP cost is divided between all participants.",
-    "scaling": {
+    "modifiers": {
       "Participation": "The minimum charisma is decreased by 1 for each point of willpower above 17."
     }
   }

@@ -1,0 +1,16 @@
+{
+  "name": "Tinker",
+  "altName": "Artificer",
+  "description": "Deep in his workshop, the tinker sits hunched over a table full of parts. The sound of clanking and rattling is heard as he searches for this cog, that corkscrew, or a metal shaft. The moon rises high as he works through the dead of night. Perhaps by dawn he emerges, perhaps not. When he does, he is bearing some bizarre contraption. With the winding of a screw, it springs to “life”, another work of eccentric genius. This is the way of a tinker.",
+  "backstoryPrompts": [
+    "How did you become skilled with mechanical parts?",
+    "Do you use your trade to pay your bills, or is your hobby mostly a moneypit?",
+    "Are others envious of your skill and your inventions, or awestruck, or indifferent?",
+    "What made you give up your previous life and start adventuring?"
+  ],
+  "coreAbilityName": "Manufacture",
+  "coreAbilityDescription": "",
+  "levelingBonuses": {
+    "1": "TODO"
+  }
+}
