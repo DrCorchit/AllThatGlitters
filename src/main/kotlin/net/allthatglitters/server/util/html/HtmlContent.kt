@@ -3,8 +3,20 @@ package net.allthatglitters.server.util.html
 class HtmlContent : Renderable {
     private val content = mutableListOf<Renderable>()
 
+    fun hasContent(): Boolean {
+        return content.isNotEmpty()
+    }
+
+    fun withAll(html: Iterable<Renderable>): HtmlContent {
+        content.addAll(html)
+        return this
+    }
+
     fun withContent(html: Renderable): HtmlContent {
-        content.add(html)
+        if (html !is HtmlString || html.content.isNotEmpty()) {
+            //No empty strings.
+            content.add(html)
+        }
         return this
     }
 
@@ -30,10 +42,23 @@ class HtmlContent : Renderable {
     }
 
     override fun render(): String {
-        return content.joinToString("") { it.render() }
+        val output = StringBuilder()
+        for (i in content.indices) {
+            val ele = content[i]
+            val nextEle = if (i + 1 < content.size) content[i + 1] else null
+            output.append(content[i].render())
+            val adjacentElements = ele !is HtmlString && nextEle != null && nextEle !is HtmlString
+            if (adjacentElements) {
+                //TODO someday, would be nice to actually output pretty/readable html
+                output.append("\n")
+            }
+            //if (nextEle != null) output.append("\n")
+        }
+        return output.toString()
     }
 
     override fun toString(): String {
-        return content.joinToString(", ", "[", "]") { it.render() }
+        return "[${content.first()}...${content.size}]"
+        //return content.joinToString(", ", "[", "]") { it.render() }
     }
 }

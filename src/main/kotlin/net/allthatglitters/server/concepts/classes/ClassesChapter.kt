@@ -2,7 +2,7 @@ package net.allthatglitters.server.concepts.classes
 
 import com.google.gson.JsonParser
 import net.allthatglitters.server.util.html.HtmlFile
-import net.allthatglitters.server.util.html.inputDir
+import net.allthatglitters.server.inputDir
 import java.io.File
 
 class ClassesChapter(
@@ -29,9 +29,9 @@ class ClassesChapter(
             append(File(characterDir, "0_intro.html").readText())
             append(File(characterDir, "1_choosing_a_race.html").readText())
             append(File(characterDir, "2.1_choosing_a_class.html").readText())
-            append(CombatCategory.render())
+            append(CombatCategory)
             append(File(characterDir, "2.2_choosing_a_class.html").readText())
-            getClasses().forEach { append(it.render()) }
+            getClasses().forEach { append(it) }
             append(File(characterDir, "3_choosing_an_alignment.html").readText())
             append(File(characterDir, "4_writing_a_backstory.html").readText())
             append(File(characterDir, "5_choosing_starting_equipment.html").readText())

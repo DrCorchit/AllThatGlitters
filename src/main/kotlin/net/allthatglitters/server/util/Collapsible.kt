@@ -1,26 +1,13 @@
 package net.allthatglitters.server.util
 
-private const val script = """<!-- Enables collapsible functionality -->
-<script>
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
+import net.allthatglitters.server.inputDir
+import net.allthatglitters.server.util.html.Renderable
+import java.io.File
 
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-		this.classList.toggle("active");
-		var content = this.nextElementSibling;
-		if (content.style.display === "block") {
-		  content.style.display = "none";
-		} else {
-		  content.style.display = "block";
-		}
-	  });
-	}
-</script>
-"""
+private val script = File(inputDir, "collapsible.html").readText()
 
-object Collapsible {
-    fun render(): String {
+object Collapsible: Renderable {
+    override fun render(): String {
         return script
     }
 }

@@ -1,18 +1,11 @@
 package net.allthatglitters.server.util
 
+import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlFile
-
-const val hr = "<hr />"
-const val divStart = "<div class=\"row\" style=\"justify-content:space-evenly; margin: 0\" >"
-const val prevText =
-    "<div class=\"column-shrink\"><a href=\"{{prev-link}}\" rel=\"prev\">{{prev}}</a></div>"
-const val toc = "<div class=\"column-shrink\"><a href=\"phb_toc.html\">Back to the Table of Contents</a></div>"
-const val nextText =
-    "<div class=\"column-shrink\"><a href=\"{{next-link}}\" rel=\"next\">{{next}}</a></div>"
-const val divEnd = "</div>"
+import net.allthatglitters.server.util.html.HtmlObject
 
 object Navigation {
-    fun render(current: Int, max: Int): StringBuilder {
+    fun render(current: Int, max: Int): String {
         val prev = if (current > 1) {
             "c${current - 1}.html" to "Retreat to Chapter ${current - 1}"
         } else null
@@ -23,30 +16,53 @@ object Navigation {
         return render(prev, next)
     }
 
-    fun render(prev: HtmlFile?, next: HtmlFile?): StringBuilder {
+    fun render(prev: HtmlFile?, next: HtmlFile?): String {
         return render(prev?.let { prev.fileName to prev.title },
             next?.let { next.fileName to next.title })
     }
 
-    fun render(prev: Pair<String, String>?, next: Pair<String, String>?): StringBuilder {
-        val output = StringBuilder()
-        output.append(hr).append("\n")
-        output.append(divStart).append("\n")
+    fun render(prev: Pair<String, String>?, next: Pair<String, String>?): String {
+        val output = HtmlContent()
+        output.withContent(HorizontalRule)
+        val div = HtmlObject("div")
+            .withAttribute("class", "row")
+            .withAttribute("style", "justify-content:space-evenly; margin: 0")
+
         if (prev != null) {
-            val prevActual = prevText
-                .replace("{{prev-link}}", prev.first)
-                .replace("{{prev}}", prev.second)
-            output.append("\t").append(prevActual).append("\n")
+            div.withContent(
+                HtmlObject("div")
+                    .withAttribute("class", "column-shrink")
+                    .withContent(
+                        HtmlObject("a")
+                            .withAttribute("href", prev.first)
+                            .withContent(prev.second)
+                    )
+            )
         }
-        output.append("\t").append(toc).append("\n")
+
+        div.withContent(
+            HtmlObject("div")
+                .withAttribute("class", "column-shrink")
+                .withContent(
+                    HtmlObject("a")
+                        .withAttribute("href", "phb_toc.html")
+                        .withContent("Back to the Table of Contents")
+                )
+        )
+
         if (next != null) {
-            val nextActual = nextText
-                .replace("{{next-link}}", next.first)
-                .replace("{{next}}", next.second)
-            output.append("\t").append(nextActual).append("\n")
+            div.withContent(
+                HtmlObject("div")
+                    .withAttribute("class", "column-shrink")
+                    .withContent(
+                        HtmlObject("a")
+                            .withAttribute("href", next.first)
+                            .withContent(next.second)
+                    )
+            )
         }
-        output.append(divEnd).append("\n")
-        output.append(hr).append("\n")
-        return output
+        output.withContent(div)
+        output.withContent(HorizontalRule)
+        return output.render()
     }
 }

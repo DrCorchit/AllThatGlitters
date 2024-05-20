@@ -1,20 +1,13 @@
 package net.allthatglitters.server.util
 
-const val header = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Almendra Display' rel='stylesheet'>
-<link rel="stylesheet" href="/styles.css">
-<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>All That Glitters — Player's Handbook</title>
-</head>
-<body>
-"""
+import net.allthatglitters.server.inputDir
+import net.allthatglitters.server.util.html.Renderable
+import java.io.File
 
-object Header {
-    fun render(): StringBuilder {
-        return StringBuilder(header)
+object Header: Renderable {
+    val header = File(inputDir, "header.html").readText()
+
+    override fun render(): String {
+        return header
     }
 }

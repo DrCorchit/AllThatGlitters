@@ -5,6 +5,7 @@ import net.allthatglitters.server.concepts.magic.Spells
 import net.allthatglitters.server.util.Collapsible
 import net.allthatglitters.server.util.Navigation
 import net.allthatglitters.server.util.html.HtmlFile
+import java.io.File
 
 object Generate {
     val version = "0"
@@ -33,14 +34,12 @@ object Generate {
             .appendHeader()
             .appendTitle("h1")
             .appendBody()
-            .appendFooter()
             .saveTo(version, "index.html")
         HtmlFile("Player's Handbook", "phb_toc.html")
             .appendHeader()
             .appendElement("h1", "All That Glitters")
             .appendTitle("h2")
             .appendBody()
-            .appendFooter()
             .save(version)
 
         HtmlFile("Character Sheet", "character_sheet.html").appendBody().save(version)
@@ -66,8 +65,7 @@ object Generate {
             .appendElement("h2", "Chapter $i")
             .appendTitle().append(nav)
             .appendBody().append(nav)
-            .append(Collapsible.render())
-            .appendFooter()
+            .append(Collapsible)
             .save(version)
     }
 
@@ -84,7 +82,9 @@ object Generate {
             .appendHeader()
             .appendTitle().append(nav)
             .appendBody().append(nav)
-            .appendFooter()
             .save(version)
     }
 }
+
+val outputDir = File("src/main/resources/output")
+val inputDir = File("src/main/resources/input")

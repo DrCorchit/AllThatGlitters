@@ -4,10 +4,12 @@ import com.google.gson.JsonObject
 import net.allthatglitters.server.util.bold
 import java.util.*
 
-open class HtmlObject(val tag: String, val attributes: MutableMap<String, String> = TreeMap()) :
-    Renderable {
+open class HtmlObject(
+    val tag: String,
+    val attributes: MutableMap<String, String> = TreeMap()
+) : Renderable {
 
-    private val content: StringBuilder = StringBuilder()
+    private val content = HtmlContent()
 
     fun withAttribute(key: String, value: String): HtmlObject {
         attributes[key] = value
@@ -15,7 +17,7 @@ open class HtmlObject(val tag: String, val attributes: MutableMap<String, String
     }
 
     fun hasContent(): Boolean {
-        return content.isNotEmpty()
+        return content.hasContent()
     }
 
     fun withBoldedEntry(bold: String, content: String): HtmlObject {
@@ -26,30 +28,52 @@ open class HtmlObject(val tag: String, val attributes: MutableMap<String, String
         return withContent(boldedEntry(entryTag, bold, content))
     }
 
-    fun withAll(content: Iterable<Renderable>): HtmlObject {
-        return withContent(content.joinToString("\n") { it.render() })
-    }
-
-    fun withContent(content: String): HtmlObject {
-        this.content.append(content)
+    fun withAll(html: Iterable<Renderable>): HtmlObject {
+        content.withAll(html)
         return this
     }
 
+    fun withContent(content: String): HtmlObject {
+        return withContent(HtmlString(content))
+    }
+
     fun withContent(content: Renderable): HtmlObject {
-        return withContent(content.render())
+        this.content.withContent(content)
+        return this
+    }
+
+    //val newlineWhitelist = setOf("html", "head", "body", "ol", "ul", "table")
+    val newlineBlacklist = setOf("p", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
+    val alwaysNewlineAfterClosingTags = setOf("head", "body", "ol", "ul", "table")
+
+    private fun renderAttributes(): String {
+        return attributes.map { "${it.key}=\"${it.value}\"" }
+            .joinToString(" ")
     }
 
     override fun render(): String {
-        if (attributes.isEmpty()) {
-            return "<$tag>$content</$tag>"
+
+        val temp = StringBuilder()
+        //val useNewlines = newlineWhitelist.contains(tag)
+        val useNewlines = !newlineBlacklist.contains(tag)
+        if (useNewlines) {
+            temp.append("\n")
         }
-        val attrs = attributes.map { "${it.key}=\"${it.value}\"" }
-            .joinToString(" ")
-        return "<$tag $attrs>$content</$tag>"
+
+        temp.append(content.render())
+
+        if (useNewlines) {
+            temp.append("\n")
+        }
+
+        if (attributes.isEmpty()) {
+            return "<$tag>$temp</$tag>"
+        }
+        return "<$tag ${renderAttributes()}>$temp</$tag>"
     }
 
     override fun toString(): String {
-        return render()
+        return "<$tag ${renderAttributes()}>...</$tag>"
     }
 
     companion object {

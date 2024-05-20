@@ -1,42 +1,32 @@
 package net.allthatglitters.server.util.html
 
-import net.allthatglitters.server.util.Footer
+import net.allthatglitters.server.inputDir
+import net.allthatglitters.server.outputDir
 import net.allthatglitters.server.util.Header
 import java.io.File
 
-val inputDir = File("src/main/resources/input")
-val outputDir = File("src/main/resources/output")
-
 open class HtmlFile(val title: String, val fileName: String) {
 
-    private val builder = StringBuilder()
+    val head = HtmlObject("head")
+    val body = HtmlObject("body")
 
     fun appendHeader(): HtmlFile {
-        builder.append(Header.render())
+        head.withContent(Header)
         return this
     }
 
-    fun appendFooter(): HtmlFile {
-        builder.append(Footer.render())
+    fun append(renderable: Renderable): HtmlFile {
+        body.withContent(renderable)
         return this
-    }
-
-    fun append(html: HtmlObject): HtmlFile {
-        return append(html.render())
-    }
-
-    fun append(builder: StringBuilder): HtmlFile {
-        return append(builder.toString())
     }
 
     fun append(string: String): HtmlFile {
-        builder.append(string)
+        body.withContent(string)
         return this
     }
 
     fun appendElement(tag: String, text: String): HtmlFile {
-        builder.append("<$tag>$text</$tag>\n")
-        return this
+        return append(HtmlObject(tag).withContent(text))
     }
 
     fun appendTitle(tag: String = "h3"): HtmlFile {
@@ -44,17 +34,25 @@ open class HtmlFile(val title: String, val fileName: String) {
     }
 
     open fun appendBody(): HtmlFile {
-        builder.append(File(inputDir, fileName).readText())
-        return this
+        val text = File(inputDir, fileName).readText()
+        return append(text)
+    }
+
+    fun render(version: String): String {
+        return HtmlObject("html")
+            .withAttribute("lang", "en")
+            .withContent(head)
+            .withContent(body)
+            .render()
+            .replace("{{version}}", version)
     }
 
     fun save(version: String) {
         saveTo(version, "version/$version/$fileName")
     }
 
-    fun saveTo( version: String, destination: String) {
-        val content = builder.toString()
-            .replace("{{version}}", version)
+    fun saveTo(version: String, destination: String) {
+        val content = "<!DOCTYPE html>\n" + render(version)
         val outputFile = File(outputDir, destination)
         outputFile.parentFile.mkdirs()
         val new = outputFile.createNewFile()

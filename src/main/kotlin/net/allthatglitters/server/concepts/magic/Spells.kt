@@ -4,7 +4,7 @@ import com.google.gson.JsonParser
 import net.allthatglitters.server.util.Collapsible
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
-import net.allthatglitters.server.util.html.inputDir
+import net.allthatglitters.server.inputDir
 import java.io.File
 
 class Spells(private val spellsDir: File = File(inputDir, "spells")) :
@@ -23,8 +23,9 @@ class Spells(private val spellsDir: File = File(inputDir, "spells")) :
 
     override fun appendBody(): HtmlFile {
         if (spellsDir.isDirectory) {
+            append(HtmlObject("h4").withContent("Schools of Sorcery"))
             append(HtmlObject("a").withAttribute("id", "top"))
-            val ol = HtmlObject("ol")
+            val ol = HtmlObject("ul")
             School.entries.forEach {
                 val link = HtmlObject("a").withAttribute("href", "#${it.name}").withContent(it.name)
                 ol.withContent(HtmlObject("li").withContent(link))
