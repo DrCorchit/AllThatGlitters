@@ -14,11 +14,14 @@
   "alignment": "Lawful",
   "limitations": "Deficient in Sorcery.",
   "coreAbilityName": "Shining Armor",
-  "coreAbilityDescription": ["You have sworn an oath to a nobleman or lady, to protect them with your life and to fight for them in battle. In return, they have provided you with a fine suit of steel plate armor, and several high quality steel weapons.", {
-    "tag": "p",
-    "style": "margin-left: 25px",
-    "content": "Note: You are able to wear your armor even"
-  }],
+  "coreAbilityDescription": [
+    "You have sworn an oath to a nobleman or lady, to protect them with your life and to fight for them in battle. In return, they have provided you with a fine suit of steel plate armor, and several high quality steel weapons.",
+    {
+      "tag": "p",
+      "style": "margin-left: 25px",
+      "content": "Note: You are able to wear your armor even"
+    }
+  ],
   "levelingBonuses": {
     "1": "+1 to strength and +1 to charisma. Proficiency in defense.",
     "2": "learn a combat ability from the following list:"
@@ -49,7 +52,9 @@
       "7 days rations.",
       "Two sets of regular clothing.",
       "One set of formal wear.",
-      "50 feet of rope."
-    ]
+      "1 pint of oil"
+    ],
+    "A lantern",
+    "50 feet of rope."
   ]
 }

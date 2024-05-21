@@ -23,7 +23,7 @@ class CombatClass(
 ) : Renderable {
 
     override fun render(): String {
-        val output = HtmlObject("div").withAttribute("class", "background")
+        val output = HtmlObject.background()
 
         val nameHtml = HtmlObject("h5")
             .withContent(HtmlObject("a").withAttribute("id", name))
@@ -51,10 +51,10 @@ class CombatClass(
             output.withBoldedEntry("Limitations", limitations)
         }
 
-        val outerDiv = HtmlObject("div").withAttribute("class", "background-inner")
-        val button = HtmlObject("button").withAttribute("class", "collapsible")
+        val outerDiv = HtmlObject("div").withClass("background-inner")
+        val button = HtmlObject("button").withClass("collapsible")
             .withContent("Additional Information")
-        val innerDiv = HtmlObject("div").withAttribute("class", "content")
+        val innerDiv = HtmlObject("div").withClass("content")
 
         innerDiv.withBoldedEntry("Leveling Bonuses", "")
         levelingBonuses.forEach {

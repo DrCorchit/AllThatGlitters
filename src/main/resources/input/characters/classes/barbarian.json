@@ -13,5 +13,16 @@
   "limitations": "Barbarians choose a deficiency in two of the following three skills: defense, literacy, stealth.",
   "levelingBonuses": {
     "1": "TODO"
-  }
+  },
+  "startingEquipment": [
+    "A set of leather armor.",
+    [
+      "An adventurer's pack, containing:",
+      "20 + 1d100 gold.",
+      "3 days rations.",
+      "Two sets of regular clothing.",
+      "2 Bottles of Mead",
+      ""
+    ]
+  ]
 }

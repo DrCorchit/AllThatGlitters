@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Religious Vestments",
+    "cost": 70,
+    "description": "Distinguishing attire of a priest, or cleric, or similar ilk."
+  },
+  {
+    "name": "Formal Wear",
+    "cost": 100,
+    "description": "Appropriate for appearances before a noble or royal court."
+  },
+  {
+    "name": "Plain Clothes",
+    "cost": 20,
+    "description": "Ordinary clothes for ordinary folk."
+  },
+  {
+    "name": "Officiator's Ring &amp; Sealing Wax",
+    "cost": 100,
+    "description": "Allows a distinctive wax seal to be affixed to scrolls and letters. Provides proof of authenticity and prevents tampering."
+  },
+  {
+    "name": "Parchment",
+    "cost": 2,
+    "description": "A single blank page of parchment"
+  },
+  {
+    "name": "Ink &amp; Quill",
+    "cost": 10,
+    "description": "Sold by the ounce. Ought to last 1000 pages, at least."
+  },
+  {
+    "name": "Scroll",
+    "cost": 10,
+    "description": "5 feet of blank parchment."
+  },
+  {
+    "name": "Chalk",
+    "cost": 2,
+    "description": "For writing upon stone or rough surfaces."
+  },
+  {
+    "name": "Crystal Ball",
+    "cost": 200,
+    "description": "Aids in scrying, divination, and certain forms of astrology. Highly prized by mages."
+  },
+  {
+    "name": "Wand",
+    "cost": 100,
+    "description": ""
+  },
+  {
+    "name": "Magical Staff",
+    "cost": 50,
+    "description": "Infused with deep, yet subtle magic. Favored by wizards and prophets."
+  },
+  {
+    "name": "Bell",
+    "cost": 20,
+    "description": "For calling others to attention, or summoning spirits, depending on one's needs."
+  },
+  {
+    "name": "Censer",
+    "cost": 10,
+    "description": "For the ceremonial burning of incense. Infused with magic of a theurgical sort."
+  },
+  {
+    "name": "Incense",
+    "cost": 50,
+    "description": "1 pound of sweet smelling incense. An indispensable component of theurgical rituals."
+  },
+  {
+    "name": "Perfume",
+    "cost": 20,
+    "description": ""
+  },
+  {
+    "name": "Soap",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Barding",
+    "cost": 150,
+    "description": "Defense armor for a horse. Increases BC while riding by 5."
+  },
+  {
+    "name": "Hunting Trap",
+    "cost": 5,
+    "description": "Reusable. For trapping small animals, such as rabbits, mice, or gophers."
+  },
+  {
+    "name": "Caltrops, 10x",
+    "cost": 3,
+    "description": "Apt to stop charging cavalry, or wound the feet of careless attackers."
+  },
+  {
+    "name": "Chain",
+    "cost": 10,
+    "description": "10 yards. Heavy, but holds up to 10,000 pounds of weight."
+  },
+  {
+    "name": "Traveler's Chess Set",
+    "cost": 10,
+    "description": "The game of kings. Conveniently designed to allow the board to be folded and stowed along with the pieces."
+  },
+  {
+    "name": "Gambler's Dice",
+    "cost": 5,
+    "description": "A full set. Includes a d4, d6, d8, d10, d12, and d20, for games of chance."
+  },
+  {
+    "name": "A deck of cards.",
+    "cost": 10,
+    "description": "A pristine deck of cards, free of grime and distinguishing marks."
+  },
+  {
+    "name": "Utensils",
+    "cost": 10,
+    "description": "Steel silverware, for fine eating even in rugged places."
+  },
+  {
+    "name": "String",
+    "cost": 0,
+    "description": "50 feet of string wrapped around a spindle. It's use depends on one's needs and creativity. Good for entertaining cats, if nothing else."
+  }
+]

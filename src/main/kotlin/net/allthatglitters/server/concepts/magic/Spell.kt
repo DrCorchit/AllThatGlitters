@@ -25,7 +25,7 @@ class Spell(
     val tag = makeTag(name)
 
     fun render(): String {
-        val output = HtmlObject("div").withAttribute("class", "background")
+        val output = HtmlObject("div").withClass("background")
         output.withContent(HtmlObject("a").withAttribute("id", tag))
         output.withContent(HtmlObject("h5").withContent(name))
         val category = discipline.describe(rarity, type)
@@ -41,15 +41,15 @@ class Spell(
         output.withBoldedEntry("Effect", effect)
         if (note != null) {
             output.withContent(
-                HtmlObject("p").withAttribute("style", "margin-left: 25px")
+                HtmlObject("p").withStyle("margin-left: 25px")
                     .withContent("Note: $note")
             )
         }
 
-        val outerDiv = HtmlObject("div").withAttribute("class", "background-inner")
-        val button = HtmlObject("button").withAttribute("class", "collapsible")
+        val outerDiv = HtmlObject("div").withClass("background-inner")
+        val button = HtmlObject("button").withClass("collapsible")
             .withContent("Additional Information")
-        val innerDiv = HtmlObject("div").withAttribute("class", "content")
+        val innerDiv = HtmlObject("div").withClass("content")
         if (trainingReqs.isNotEmpty()) {
             innerDiv.withBoldedEntry("Training Requirements", "")
             val list = HtmlObject("ul")

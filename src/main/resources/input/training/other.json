@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Proficiency Training: Remediation",
+    "effect": "The player chooses a skill in which they are deficient. On a successful DT 10 skill check, they overcome the deficiency. Training slots are only expended if the check is successful, but gold is not refunded.",
+    "cost": {
+      "gold": "40",
+      "slots": "4"
+    },
+    "reqs": []
+  },
+  {
+    "name": "Proficiency Training: Apprenticeship",
+    "effect": "The player chooses a skill in which they are not proficient. On a successful DT 12 skill check, they attain proficiency. Training slots are only expended if the check is successful, but gold is not refunded.",
+    "cost": {
+      "gold": "30",
+      "slots": "3"
+    },
+    "reqs": []
+  },
+  {
+    "name": "Proficiency Training: Expertise",
+    "effect": "The player chooses a skill in which they are proficient. On a successful DT 16 skill check, their skill advances to expertise. Training slots are only expended if the check is successful, but gold is not refunded.",
+    "cost": {
+      "gold": "40",
+      "slots": "4"
+    },
+    "reqs": [
+      "A proficient level skill",
+      "An expert level trainer"
+    ]
+  },
+  {
+    "name": "Proficiency Training: Mastery",
+    "effect": "The player chooses a skill in which they are an expert. On a successful DT 20 skill check, their skill advances to mastery. Training slots are only expended if the check is successful, but gold is not refunded.",
+    "cost": {
+      "gold": "60",
+      "slots": "6"
+    },
+    "reqs": [
+      "An expert level skill",
+      "A master level trainer"
+    ]
+  },
+  {
+    "name": "Mobility Training: Vertical Escape",
+    "effect": "The player learns <i>Vertical Escape</i>, a technique for the grappling hook. If surroundings are appropriate, the player can throw the hook up to 30 feet vertically as an action. On a successful DT 12 parkour skill check, the grappling hook latches. The player can use an action to climb 10 feet up the rope, away from enemy melee attacks.",
+    "cost": {
+      "gold": "20",
+      "slots": "3"
+    },
+    "reqs": [
+      "Parkour Proficiency"
+    ]
+  },
+  {
+    "name": "Mobility Training: Wall Run",
+    "effect": "The player learns to run a short distance along or up walls, and to leap backwards off of them. ",
+    "cost": {
+      "slots": 4
+    },
+    "reqs": [
+      "Parkour Expertise",
+      "Speed 15 or Dexterity 15"
+    ]
+  }
+]

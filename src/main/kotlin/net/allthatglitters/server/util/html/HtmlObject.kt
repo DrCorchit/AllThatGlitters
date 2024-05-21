@@ -5,100 +5,119 @@ import net.allthatglitters.server.util.bold
 import java.util.*
 
 open class HtmlObject(
-    val tag: String,
-    val attributes: MutableMap<String, String> = TreeMap()
+	val tag: String,
+	val attributes: MutableMap<String, String> = TreeMap()
 ) : Renderable {
 
-    private val content = HtmlContent()
+	private val content = HtmlContent()
 
-    fun withAttribute(key: String, value: String): HtmlObject {
-        attributes[key] = value
-        return this
-    }
+	fun withClass(clazz: String): HtmlObject {
+		return this.withAttribute("class", clazz)
+	}
 
-    fun hasContent(): Boolean {
-        return content.hasContent()
-    }
+	fun withStyle(style: String): HtmlObject {
+		return this.withAttribute("style", style)
+	}
 
-    fun withBoldedEntry(bold: String, content: String): HtmlObject {
-        val entryTag = when (tag) {
-            "ul", "ol" -> "li"
-            else -> "p"
-        }
-        return withContent(boldedEntry(entryTag, bold, content))
-    }
+	fun withAttribute(key: String, value: String): HtmlObject {
+		attributes[key] = value
+		return this
+	}
 
-    fun withAll(html: Iterable<Renderable>): HtmlObject {
-        content.withAll(html)
-        return this
-    }
+	fun hasContent(): Boolean {
+		return content.hasContent()
+	}
 
-    fun withContent(content: String): HtmlObject {
-        return withContent(HtmlString(content))
-    }
+	fun withBoldedEntry(bold: String, content: String): HtmlObject {
+		val entryTag = when (tag) {
+			"ul", "ol" -> "li"
+			else -> "p"
+		}
+		return withContent(boldedEntry(entryTag, bold, content))
+	}
 
-    fun withContent(content: Renderable): HtmlObject {
-        this.content.withContent(content)
-        return this
-    }
+	fun withAll(html: Iterable<Renderable>): HtmlObject {
+		content.withAll(html)
+		return this
+	}
 
-    private fun renderAttributes(): String {
-        return attributes.map { "${it.key}=\"${it.value}\"" }
-            .joinToString(" ")
-    }
+	fun withContent(content: String): HtmlObject {
+		return withContent(HtmlString(content))
+	}
 
-    override fun render(): String {
-        return render(0)
-    }
+	fun withContent(tag: String, content: String): HtmlObject {
+		return this.withContent(HtmlObject(tag).withContent(content))
+	}
 
-    fun render(indent: Int): String {
-        val builder = StringBuilder()
-        val useNewlines = !newlineBlacklist.contains(tag)
-        if (useNewlines) {
-            builder.append("\n")
-        }
+	fun withContent(content: Renderable): HtmlObject {
+		this.content.withContent(content)
+		return this
+	}
 
-        val renderedContent = content.render(indent+1).let {
-            if (indent > 0) {
-                val tab = "  ".repeat(indent)
-                tab + it.replace("\n", "\n$tab")
-            } else it
-        }
+	private fun renderAttributes(): String {
+		return attributes.map { "${it.key}=\"${it.value}\"" }
+			.joinToString(" ")
+	}
 
-        builder.append(renderedContent)
+	override fun render(): String {
+		val builder = StringBuilder()
+		val useNewlines = !newlineBlacklist.contains(tag)
+		if (useNewlines) {
+			builder.append("\n")
+		}
 
-        if (useNewlines) {
-            builder.append("\n")
-        }
+		val renderedContent = content.render().let {
+			if (useNewlines) {
+				val tab = "  "
+				tab + it.replace("\n", "\n$tab")
+			} else it
+		}
 
-        return if (attributes.isEmpty()) {
-            "<$tag>$builder</$tag>"
-        } else {
-            "<$tag ${renderAttributes()}>$builder</$tag>"
-        }
-    }
+		builder.append(renderedContent)
 
-    override fun toString(): String {
-        return "<$tag ${renderAttributes()}>$content</$tag>"
-    }
+		if (useNewlines) {
+			builder.append("\n")
+		}
 
-    companion object {
-        val newlineBlacklist = setOf("p", "b", "i", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
+		return if (attributes.isEmpty()) {
+			"<$tag>$builder</$tag>"
+		} else {
+			"<$tag ${renderAttributes()}>$builder</$tag>"
+		}
+	}
 
-        fun boldedEntry(tag: String, bold: String, content: String): HtmlObject {
-            return HtmlObject(tag).withContent("${bold.bold()}: $content")
-        }
+	override fun toString(): String {
+		return "<$tag ${renderAttributes()}>$content</$tag>"
+	}
 
-        fun deserialize(obj: JsonObject): HtmlObject {
-            val tag = obj.get("tag").asString
-            val attributes = obj.getAsJsonObject("attributes")?.let {
-                it.entrySet().associate { attribute -> attribute.key to attribute.value.asString }
-            }?.toMutableMap() ?: TreeMap()
-            obj.get("style")?.let { attributes["style"] = it.asString }
-            obj.get("class")?.let { attributes["class"] = it.asString }
-            val content = obj.get("content")?.let { Renderable.deserialize(it) } ?: HtmlContent()
-            return HtmlObject(tag, attributes).withContent(content)
+	companion object {
+		val newlineBlacklist =
+			setOf("p", "b", "i", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
 
-        }
-    }
+		fun boldedEntry(tag: String, bold: String, content: String): HtmlObject {
+			return HtmlObject(tag).withContent("${bold.bold()}: $content")
+		}
+
+		fun background(): HtmlObject {
+			return HtmlObject("div").withClass("background")
+		}
+
+		fun flexBox(style: String = ""): HtmlObject {
+			return HtmlObject("div")
+				.withClass("row")
+				.withStyle("justify-content:start; flex-wrap: wrap; margin: 0; $style")
+		}
+
+		fun deserialize(obj: JsonObject): HtmlObject {
+			val tag = obj.get("tag").asString
+			val attributes = obj.getAsJsonObject("attributes")?.let {
+				it.entrySet().associate { attribute -> attribute.key to attribute.value.asString }
+			}?.toMutableMap() ?: TreeMap()
+			obj.get("style")?.let { attributes["style"] = it.asString }
+			obj.get("class")?.let { attributes["class"] = it.asString }
+			val content = obj.get("content")?.let { Renderable.deserialize(it) } ?: HtmlContent()
+			return HtmlObject(tag, attributes).withContent(content)
+
+		}
+	}
 }

@@ -11,7 +11,6 @@ class ClassesChapter(
     val characterDir: File = File(inputDir, "characters")
 ) :
     HtmlFile(title, fileName) {
-
     fun getClasses(): List<CombatClass> {
         return File(characterDir, "classes")
             .listFiles()!!.map {

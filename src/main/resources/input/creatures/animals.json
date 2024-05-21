@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Draft Horse",
+    "description": "A sturdy and robust horse for pulling carts, ploughs, or wagons.",
+    "cost": 150,
+    "upkeep": 2,
+    "stats": {
+      "str": 22,
+      "dex": 4,
+      "spd": 24,
+      "int": 4,
+      "cha": 4,
+      "will": 8
+    }
+  },
+  {
+    "name": "Riding Horse",
+    "description": "A horse suitable for riding long distances. Accustomed to carts and carriages.",
+    "cost": 250,
+    "upkeep": 2,
+    "stats": {
+      "str": 18,
+      "dex": 5,
+      "spd": 36,
+      "int": 5,
+      "cha": 5,
+      "will": 6
+    }
+  },
+  {
+    "name": "War Horse",
+    "description": "Thoroughbred, accustomed to combat, and tempered for excitement. Capable of bearing two riders and galloping at high speeds.",
+    "cost": 500,
+    "upkeep": 5,
+    "stats": {
+      "str": 20,
+      "dex": 5,
+      "spd": 30,
+      "int": 5,
+      "cha": 5,
+      "will": 6
+    }
+  },
+  {
+    "name": "Camel",
+    "description": "A beast of burden, superior to the horse in rocky, barren, and arid climates.",
+    "cost": 200,
+    "upkeep": 2,
+    "stats": {
+      "str": 20,
+      "dex": 4,
+      "spd": 24,
+      "int": 5,
+      "cha": 3,
+      "will": 8
+    }
+  },
+  {
+    "name": "Elephant",
+    "description": "Incredibly powerful and majestic. Able to manipulate heavy objects with its trunk.",
+    "cost": 1000,
+    "upkeep": 10,
+    "stats": {
+      "str": 25,
+      "dex": 14,
+      "spd": 14,
+      "int": 7,
+      "cha": 7,
+      "will": 8
+    }
+  },
+  {
+    "name": "Dog",
+    "description": "Man's best friend.",
+    "cost": 20,
+    "upkeep": 1,
+    "stats": {
+      "str": 7,
+      "dex": 10,
+      "spd": 20,
+      "int": 5,
+      "cha": 10,
+      "will": 8
+    }
+  },
+  {
+    "name": "Cat",
+    "description": "A domesticated cat, excellent at tracking and hunting small animals.",
+    "cost": 10,
+    "stats": {
+      "str": 5,
+      "dex": 15,
+      "spd": 17,
+      "int": 5,
+      "cha": 6,
+      "will": 10
+    }
+  },
+  {
+    "name": "Parrot",
+    "description": "A colorful bird able to mimic human speech. Those purchased from sailors often possess a colorful vocabulary.",
+    "cost": 20,
+    "stats": {
+      "str": 2,
+      "dex": 8,
+      "spd": 24,
+      "int": 5,
+      "cha": 4,
+      "will": 8
+    }
+  },
+  {
+    "name": "Monkey",
+    "cost": 50,
+    "description": "A small monkey likely imported from a faroff land. Able to obey simple commands, and in extremely rare cases, cast simple spells.",
+    "stats": {
+      "str": 30,
+      "dex": 4,
+      "spd": 15,
+      "int": 7,
+      "cha": 4,
+      "will": 8
+    }
+  },
+  {
+    "name": "Deer",
+    "description": "A forest-dwelling quadruped with a skittish demeanor. Too weak capable of carrying riders, and rarely domesticated.",
+    "cost": 20,
+    "stats": {
+      "str": 14,
+      "dex": 12,
+      "spd": 25,
+      "int": 4,
+      "cha": 3,
+      "will": 6
+    }
+  },
+  {
+    "name": "Bear",
+    "description": "A mighty animal with a thick hide and a prodigious horn. Fearsome and tamable only via magic.",
+    "upkeep": 5,
+    "stats": {
+      "str": 23,
+      "dex": 8,
+      "spd": 12,
+      "int": 7,
+      "cha": 4,
+      "will": 8
+    }
+  },
+  {
+    "name": "Rhinoceros",
+    "description": "A mighty animal with a thick hide and a prodigious horn. Fearsome and tamable only via magic.",
+    "upkeep": 5,
+    "stats": {
+      "str": 24,
+      "dex": 4,
+      "spd": 15,
+      "int": 6,
+      "cha": 3,
+      "will": 8
+    }
+  }
+]

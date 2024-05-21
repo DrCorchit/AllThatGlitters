@@ -42,21 +42,11 @@ class HtmlContent : Renderable {
 	}
 
 	override fun render(): String {
-		return render(0)
-	}
-
-	fun render(indent: Int): String {
 		val output = StringBuilder()
 		for (i in content.indices) {
 			val ele = content[i]
 			val nextEle = if (i + 1 < content.size) content[i + 1] else null
-
-			when (ele) {
-				is HtmlObject -> ele.render(indent)
-				is HtmlContent -> ele.render(indent)
-				else -> ele.render()
-			}.let { output.append(it) }
-
+			output.append(ele.render())
 			val adjacentElements = ele !is HtmlString && nextEle != null && nextEle !is HtmlString
 			if (adjacentElements) output.append("\n")
 		}

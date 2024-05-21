@@ -1,0 +1,243 @@
+[
+  {
+    "name": "100 Foot Rope",
+    "cost": 5,
+    "description": "Easily affixed to an adventurer's pack. Holds up to 1000 pounds of weight."
+  },
+  {
+    "name": "Net",
+    "cost": 10,
+    "description": "Suitable for fishing or restraining opponents in combat."
+  },
+  {
+    "name": "Dinghy",
+    "cost": 0,
+    "description": "Includes oars, and carries up to 4 people or 600 pounds of weight."
+  },
+  {
+    "name": "Lockpick",
+    "cost": 5,
+    "description": "For opening locks. Not sold by decent folk."
+  },
+  {
+    "name": "Guitar, Banjo, Lute, or Harp",
+    "cost": 75,
+    "description": "No included: the skill to play it."
+  },
+  {
+    "name": "Candle",
+    "cost": 1,
+    "description": "Lasts 1 hour; emits only dim light."
+  },
+  {
+    "name": "Lantern",
+    "cost": 40,
+    "description": "Requires oil."
+  },
+  {
+    "name": "Torch",
+    "cost": 5,
+    "description": "Lasts 4 hours"
+  },
+  {
+    "name": "Workman's Hammer",
+    "cost": 10,
+    "description": ""
+  },
+  {
+    "name": "Hiking Boots",
+    "cost": 10,
+    "description": "Comfortable, so as to accomodate long journeys."
+  },
+  {
+    "name": "Climbing Boots",
+    "cost": 20,
+    "description": "Includes crampons for the surest of footing."
+  },
+  {
+    "name": "Pickaxe",
+    "cost": 10,
+    "description": "Ideal for dislodging rocks and dirt."
+  },
+  {
+    "name": "Climbing Gear",
+    "cost": 25,
+    "description": "Includes 10 pitons, 3 carabiners, and a harness"
+  },
+  {
+    "name": "Scissors",
+    "cost": 5,
+    "description": "Suitable for cutting cloth or paper"
+  },
+  {
+    "name": "Portable Alchemy Set",
+    "cost": 150,
+    "description": "Allows brewing potions on the run, though less reliably so than at a proper alchemical laboratory."
+  },
+  {
+    "name": "Steel Looking Glass",
+    "cost": 20,
+    "description": "A finely polished steel mirror."
+  },
+  {
+    "name": "Looking Glass",
+    "cost": 80,
+    "description": "A finely polished glass mirror with silvered backing. No undead or unholy visage shall appear in its frame."
+  },
+  {
+    "name": "Spyglass",
+    "cost": 50,
+    "description": "Allows viewing distant objects at 4x magnification."
+  },
+  {
+    "name": "Spectacles",
+    "cost": 50,
+    "description": "For reading comfort, or restoring sight to the nearsighted adventurer."
+  },
+  {
+    "name": "Magnifying Glass",
+    "cost": 100,
+    "description": "An oddity. Of great use to those inclined to scrutinize objects."
+  },
+  {
+    "name": "Map",
+    "cost": 30,
+    "description": "Conveys a general sense of surrounding terrain."
+  },
+  {
+    "name": "Compass",
+    "cost": 30,
+    "description": "Always points north, except in the presence of magical fields."
+  },
+  {
+    "name": "Navigational Tools",
+    "cost": 50,
+    "description": "An astrolabe and sextant, used by mariners to determine approximate positioning ascertain the distance to landmarks of known height."
+  },
+  {
+    "name": "Ruler",
+    "cost": 10,
+    "description": "Measures lengths, up to 12 inches."
+  },
+
+  {
+    "name": "Saddle &amp; Bridle",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Thread",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Needle",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Crowbar",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Tinderbox",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Bedroll, Blanket, &amp; Pillow",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Disguise Kit",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Abacus",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Block &amp; Tackle",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Medical Kit",
+    "cost": 0,
+    "description": "Includes bandages, sutures, and antiseptic."
+  },
+  {
+    "name": "Hourglass",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Ladder",
+    "cost": 0,
+    "description": "10 foot, when unfolded."
+  },
+  {
+    "name": "Lock &amp; Key",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Pole",
+    "cost": 1,
+    "description": "10 foot, of oak."
+  },
+  {
+    "name": "Frying Pan",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Quiver",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Ram",
+    "cost": 0,
+    "description": "For when lockpicks fail thee"
+  },
+  {
+    "name": "Shovel",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Whistle",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Dog Whistle",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Whetstone",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Tent",
+    "cost": 0,
+    "description": "Suitable for two, or one king."
+  },
+  {
+    "name": "Forgery Kit",
+    "cost": 0,
+    "description": ""
+  },
+  {
+    "name": "Chisel",
+    "cost": 0,
+    "description": ""
+  }
+]
