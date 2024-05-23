@@ -14,4 +14,5 @@ class HtmlTable : HtmlObject("table") {
             .withAll(data.map { HtmlObject("td").withContent(it) })
         return withContent(row) as HtmlTable
     }
+
 }

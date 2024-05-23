@@ -10,7 +10,7 @@ object Serve {
         val port = args[0].toInt()
         val app: Javalin = Javalin.create { config: JavalinConfig ->
             //config.compression.gzipOnly();
-            config.staticFiles.add(outputDir.path, Location.EXTERNAL)
+            config.staticFiles.add(Generator.outputDir.path, Location.EXTERNAL)
             config.http.gzipOnlyCompression()
         }
 

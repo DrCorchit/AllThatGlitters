@@ -1,0 +1,17 @@
+[
+  {
+    "latin": "animus mortalis",
+    "singular": "Mortal",
+    "description": "Inhabitants of the physical plane, possessing a physical body. Mortals tend to increase in energy over time, eventually becoming higher beings after thousands or millions of years. After death, mortal spirits usually wander the lower astral until they reincarnate. Rarely, they may be summoned into the domain of a god or demon instead."
+  },
+  {
+    "latin": "animus aethera",
+    "singular": "Demigod",
+    "description": "Also known as higher beings, these are non-physical inhabitants of the astral planes. Roughly speaking, there are four types of these: demons, dragons, fey (including djinn and celestials) and angels. These beings serve to create, preserve, and destroy aspects of the physical realm, according to their own whims or the will of their creator. They can enter the physical world at will, but must expend energy to manifest a physical body to do so. If their body is destroyed, they return to their home in the astral and recuperate until eventually enough energy is gained for them to return. This process usually takes around 30 days to a year."
+  },
+  {
+    "latin": "animus caelestis",
+    "singular": "God",
+    "description": "Eternal beings of infinite creative power. Their existence is beyond human concepts such as pain, fear, death, or ambition. They usually communicate with mortals indirectly through angels, but are certainly capable of direct contact, as proven on various occasions."
+  }
+]

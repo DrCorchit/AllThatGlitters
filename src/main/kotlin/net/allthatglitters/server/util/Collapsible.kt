@@ -1,6 +1,6 @@
 package net.allthatglitters.server.util
 
-import net.allthatglitters.server.inputDir
+import net.allthatglitters.server.Generator.inputDir
 import net.allthatglitters.server.util.html.Renderable
 import java.io.File
 

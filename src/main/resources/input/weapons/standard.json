@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Bastard Sword",
+    "description": "A flexible sword with many uses.",
+    "damage": "1d6",
+    "cost": 100,
+    "modifiers": ["Cut-and-Thrust", "Versatile: 1d8", "Mordhau: 1d6", "Parrying 6"],
+    "requirements": ["12 STR", "Martial Arts Expertise"]
+  },
+  {
+    "name": "Battle Axe",
+    "description": "An axe especially designed for combat",
+    "damage": "1d6",
+    "cost": 30,
+    "modifiers": ["Slashing", "Light"],
+    "requirements": []
+  },
+  {
+    "name": "Bearded Axe",
+    "description": "An axe with its weight balanced at the head.",
+    "damage": "1d6",
+    "cost": 50,
+    "modifiers": ["Slashing", "Versatile: 1d8"],
+    "requirements": ["Martial Arts Proficiency"]
+  },
+  {
+    "name": "Broadsword",
+    "description": "A sword for slashing, of a category including the cutlass, machete, falchion, and scimitar.",
+    "damage": "1d6",
+    "cost": 20,
+    "modifiers": ["Slashing", "Light", "Parrying 6"],
+    "requirements": []
+  },
+  {
+    "name": "Estoc",
+    "description": "A soldier’s thrusting sword for piercing mail. In the right hands, can be used to ignore chainmail BC.",
+    "damage": "1d6",
+    "cost": 50,
+    "modifiers": ["Piercing", "Parrying 6"],
+    "requirements": ["Martial Arts Proficiency"]
+  },
+  {
+    "name": "Mace",
+    "description": "A martial weapon for crushing armor.",
+    "damage": "1d6",
+    "cost": 30,
+    "modifiers": ["Bludgeoning", "Versatile: 1d8", "Parrying 3"],
+    "requirements": []
+  },
+  {
+    "name": "Morningstar",
+    "description": "A martial weapon, spiked for piercing mail. Damage becomes bludgeoning versus plate armor.",
+    "damage": "1d6",
+    "cost": 50,
+    "modifiers": ["Piercing"],
+    "requirements": ["Martial Arts Proficiency"]
+  },
+  {
+    "name": "Rapier",
+    "description": "A rapscallion’s sword—or a gentleman’s...",
+    "damage": "1d6",
+    "cost": 30,
+    "modifiers": ["Piercing", "Nimble", "Parrying 3"],
+    "requirements": []
+  },
+  {
+    "name": "Shortsword",
+    "description": "A shorter sword of lighter weight, making an ideal sidearm. Similar to the arming sword and gladius.",
+    "damage": "1d6",
+    "cost": 20,
+    "modifiers": ["Cut-and-Thrust", "Nimble", "Light", "Parrying 3"],
+    "requirements": []
+  },
+  {
+    "name": "Quarterstaff",
+    "description": "More than a walking staff, in skilled hands. Improvised trait does not apply when attacking with dexterity.",
+    "damage": "1d6",
+    "cost": 10,
+    "modifiers": ["Bludgeoning", "Nimble", "Improvised", "Parrying 6"],
+    "requirements": []
+  },
+  {
+    "name": "Spear",
+    "description": "A pointed weapon for throwing or stabbing. Range: 20/60",
+    "damage": "1d6",
+    "cost": 20,
+    "modifiers": ["Piercing", "Polearm", "Throwable"],
+    "requirements": ["Martial Arts Proficiency"]
+  },
+  {
+    "name": "Wakizashi",
+    "description": "A curved sword of foreign make. Excellent craftsmanship.",
+    "damage": "1d6",
+    "cost": 100,
+    "modifiers": ["Slashing", "Nimble", "Sharp", "Light"],
+    "requirements": ["Martial Arts Proficiency"]
+  },
+  {
+    "name": "Warhammer",
+    "description": "A large hammer, sized for one or two hands.",
+    "damage": "1d6",
+    "cost": 30,
+    "modifiers": ["Bludgeoning", "Versatile: 1d8", "Parrying 6"],
+    "requirements": ["Martial Arts Proficiency"]
+  }
+]

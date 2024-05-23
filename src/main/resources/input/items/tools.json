@@ -1,243 +1,254 @@
 [
   {
     "name": "100 Foot Rope",
+    "description": "Easily affixed to an adventurer's pack. Holds up to 1000 pounds of weight.",
     "cost": 5,
-    "description": "Easily affixed to an adventurer's pack. Holds up to 1000 pounds of weight."
+    "weight": 2
   },
   {
-    "name": "Net",
+    "name": "Fishing Net",
     "cost": 10,
-    "description": "Suitable for fishing or restraining opponents in combat."
-  },
-  {
-    "name": "Dinghy",
-    "cost": 0,
-    "description": "Includes oars, and carries up to 4 people or 600 pounds of weight."
+    "weight": 10,
+    "description": "Suitable for catching fish or restraining opponents in combat."
   },
   {
     "name": "Lockpick",
     "cost": 5,
+    "weight": 0,
     "description": "For opening locks. Not sold by decent folk."
   },
   {
-    "name": "Guitar, Banjo, Lute, or Harp",
+    "name": "Musical Instrument",
     "cost": 75,
-    "description": "No included: the skill to play it."
+    "weight": 3,
+    "description": "An instrument such as a guitar, banjo, lute, or dulcimer. Not included: the skill to play it."
   },
   {
     "name": "Candle",
     "cost": 1,
+    "weight": 0,
     "description": "Lasts 1 hour; emits only dim light."
   },
   {
     "name": "Lantern",
     "cost": 40,
+    "weight": 2,
     "description": "Requires oil."
   },
   {
     "name": "Torch",
     "cost": 5,
+    "weight": 1,
     "description": "Lasts 4 hours"
   },
   {
     "name": "Workman's Hammer",
     "cost": 10,
-    "description": ""
-  },
-  {
-    "name": "Hiking Boots",
-    "cost": 10,
-    "description": "Comfortable, so as to accomodate long journeys."
-  },
-  {
-    "name": "Climbing Boots",
-    "cost": 20,
-    "description": "Includes crampons for the surest of footing."
+    "weight": 3,
+    "description": "An ordinary ball-peen hammer."
   },
   {
     "name": "Pickaxe",
     "cost": 10,
+    "weight": 10,
     "description": "Ideal for dislodging rocks and dirt."
   },
   {
     "name": "Climbing Gear",
     "cost": 25,
+    "weight": 0,
     "description": "Includes 10 pitons, 3 carabiners, and a harness"
   },
   {
     "name": "Scissors",
     "cost": 5,
+    "weight": 0,
     "description": "Suitable for cutting cloth or paper"
   },
   {
     "name": "Portable Alchemy Set",
     "cost": 150,
+    "weight": 0,
     "description": "Allows brewing potions on the run, though less reliably so than at a proper alchemical laboratory."
   },
   {
     "name": "Steel Looking Glass",
     "cost": 20,
+    "weight": 0,
     "description": "A finely polished steel mirror."
   },
   {
     "name": "Looking Glass",
     "cost": 80,
-    "description": "A finely polished glass mirror with silvered backing. No undead or unholy visage shall appear in its frame."
+    "weight": 0,
+    "description": "A genuine glass mirror with silvered backing. No undead or unholy visage shall appear in its frame."
   },
   {
     "name": "Spyglass",
     "cost": 50,
+    "weight": 0,
     "description": "Allows viewing distant objects at 4x magnification."
   },
   {
     "name": "Spectacles",
     "cost": 50,
+    "weight": 0,
     "description": "For reading comfort, or restoring sight to the nearsighted adventurer."
   },
   {
     "name": "Magnifying Glass",
     "cost": 100,
+    "weight": 0,
     "description": "An oddity. Of great use to those inclined to scrutinize objects."
   },
   {
     "name": "Map",
     "cost": 30,
+    "weight": 0,
     "description": "Conveys a general sense of surrounding terrain."
   },
   {
     "name": "Compass",
     "cost": 30,
+    "weight": 0,
     "description": "Always points north, except in the presence of magical fields."
   },
   {
     "name": "Navigational Tools",
     "cost": 50,
+    "weight": 0,
     "description": "An astrolabe and sextant, used by mariners to determine approximate positioning ascertain the distance to landmarks of known height."
   },
   {
     "name": "Ruler",
     "cost": 10,
+    "weight": 0,
     "description": "Measures lengths, up to 12 inches."
   },
-
   {
-    "name": "Saddle &amp; Bridle",
-    "cost": 0,
-    "description": ""
-  },
-  {
-    "name": "Thread",
-    "cost": 0,
-    "description": ""
-  },
-  {
-    "name": "Needle",
-    "cost": 0,
-    "description": ""
+    "name": "Needle &amp; Thread",
+    "cost": 1,
+    "weight": 0,
+    "description": "A needle and 100 feet of thread wound around a spindle, for sewing."
   },
   {
     "name": "Crowbar",
     "cost": 0,
-    "description": ""
+    "weight": 0,
+    "description": "Invented by workmen, for prying. A favorite of thieves and hoodlums galore."
   },
   {
     "name": "Tinderbox",
     "cost": 0,
-    "description": ""
-  },
-  {
-    "name": "Bedroll, Blanket, &amp; Pillow",
-    "cost": 0,
-    "description": ""
+    "weight": 0,
+    "description": "For starting fire. If one is in your possession, you may light a torch, candle, or lantern as an action."
   },
   {
     "name": "Disguise Kit",
-    "cost": 0,
-    "description": ""
+    "cost": 10,
+    "weight": 0,
+    "description": "For changing one's appearance. "
   },
   {
     "name": "Abacus",
-    "cost": 0,
-    "description": ""
+    "cost": 5,
+    "weight": 0,
+    "description": "Used to perform advanced arithmetical calculations, provided one has learned its use."
   },
   {
     "name": "Block &amp; Tackle",
-    "cost": 0,
-    "description": ""
+    "cost": 3,
+    "weight": 0,
+    "description": "For lifting weight and multiplying effort when hoisting with ropes."
   },
   {
     "name": "Medical Kit",
-    "cost": 0,
-    "description": "Includes bandages, sutures, and antiseptic."
+    "cost": 10,
+    "weight": 0,
+    "description": "Includes bandages, sutures, and antiseptic. +2 to medicine checks while in inventory, or may be used to provide 2d6 healing during a short rest."
   },
   {
     "name": "Hourglass",
-    "cost": 0,
-    "description": ""
+    "cost": 5,
+    "weight": 0,
+    "description": "Measures out the passage of an hour. Accurate to within one minute."
   },
   {
     "name": "Ladder",
-    "cost": 0,
-    "description": "10 foot, when unfolded."
+    "cost": 10,
+    "weight": 0,
+    "description": "10 foot, when unfolded. Holds up to 300 pounds."
   },
   {
-    "name": "Lock &amp; Key",
-    "cost": 0,
-    "description": ""
+    "name": "Padlock &amp; Key",
+    "cost": 10,
+    "weight": 0,
+    "description": "For securing valuables, or denying entry."
   },
   {
-    "name": "Pole",
-    "cost": 1,
-    "description": "10 foot, of oak."
+    "name": "Metal Pole",
+    "cost": 2,
+    "weight": 0,
+    "description": "A hollow metal rod ten foot in length and one inch in diameter. Useful for detecting and disarming traps."
   },
   {
     "name": "Frying Pan",
-    "cost": 0,
-    "description": ""
+    "cost": 1,
+    "weight": 0,
+    "description": "For frying eggs. Oft improvised as a weapon of housewives, against intruders."
   },
   {
     "name": "Quiver",
-    "cost": 0,
-    "description": ""
+    "cost": 2,
+    "weight": 0,
+    "description": "Holds up to 24 arrows."
   },
   {
     "name": "Ram",
-    "cost": 0,
-    "description": "For when lockpicks fail thee"
+    "cost": 5,
+    "weight": 0,
+    "description": "For when lockpicks fail. Allows 2-4 adventurers to combine their strength score when breaking down a door."
   },
   {
     "name": "Shovel",
-    "cost": 0,
-    "description": ""
+    "cost": 2,
+    "weight": 0,
+    "description": "For uncovering treasure, or hiding evidence."
   },
   {
     "name": "Whistle",
-    "cost": 0,
-    "description": ""
+    "cost": 1,
+    "weight": 0,
+    "description": "Emits a shrill noise, often to alert of danger."
   },
   {
     "name": "Dog Whistle",
-    "cost": 0,
-    "description": ""
+    "cost": 1,
+    "weight": 0,
+    "description": "Dogs may be trained to respond to its signal in a specific way. Typical commands: come, attack, heel, or fetch."
   },
   {
     "name": "Whetstone",
-    "cost": 0,
-    "description": ""
+    "cost": 5,
+    "weight": 0,
+    "description": "For sharpening knives and blades."
   },
   {
     "name": "Tent",
-    "cost": 0,
-    "description": "Suitable for two, or one king."
+    "cost": 10,
+    "weight": 0,
+    "description": "Suitable for two adventurers, or one royal highness."
   },
   {
     "name": "Forgery Kit",
-    "cost": 0,
-    "description": ""
+    "cost": 5,
+    "weight": 0,
+    "description": "Contains stationery, pens, and inks of various sorts, for falsifying signatures."
   },
   {
     "name": "Chisel",
-    "cost": 0,
-    "description": ""
+    "cost": 2,
+    "weight": 0,
+    "description": "For shaping stone and wood. Best when combined with a workman's hammer."
   }
 ]

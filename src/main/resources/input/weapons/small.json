@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Cleaver",
+    "description": "A heavy knife for cutting meat.",
+    "damage": "1d4",
+    "cost": 2,
+    "modifiers": ["Slashing", "Light", "Improvised"],
+    "requirements": []
+  },
+  {
+    "name": "Club",
+    "description": "A hefty stick, chair leg, or workman’s hammer",
+    "damage": "1d6",
+    "cost": 1,
+    "modifiers": ["Bludgeoning", "Light", "Improvised"],
+    "requirements": []
+  },
+  {
+    "name": "Dagger",
+    "description": "A short sidearm, suitable for slashing or stabbing. The \"Sharp\" property does not apply when thrown.",
+    "damage": "1d4",
+    "cost": 5,
+    "modifiers": ["Cut-and-Thrust", "Light", "Nimble", "Sharp", "Throwable", "Range: 20/60"],
+    "requirements": []
+  },
+  {
+    "name": "Hatchet",
+    "description": "A small axe suitable for throwing",
+    "damage": "1d4",
+    "cost": 5,
+    "modifiers": ["Slashing", "Light", "Nimble", "Throwable", "Range: 20/60"],
+    "requirements": []
+  },
+  {
+    "name": "Knife",
+    "description": "An ordinary workman’s knife",
+    "damage": "1d4",
+    "cost": 1,
+    "modifiers": ["Piercing", "Light", "Nimble", "Improvised"],
+    "requirements": []
+  },
+  {
+    "name": "Sickle",
+    "description": "A farmer’s tool of dubious sharpness. May be modified by a blacksmith to lose the Improvised trait, for 50 gold.",
+    "damage": "1d6",
+    "cost": 5,
+    "modifiers": ["Slashing", "Light", "Nimble", "Improvised"],
+    "requirements": []
+  },
+  {
+    "name": "Stiletto",
+    "description": "A stabbing knife, long and sharp. Ignores BC from chainmail.",
+    "damage": "1d4",
+    "cost": 5,
+    "modifiers": ["Piercing", "Light", "Nimble", "Sharp"],
+    "requirements": []
+  },
+  {
+    "name": "Tanto",
+    "description": "A short slashing blade with an angular tip.",
+    "damage": "1d4",
+    "cost": 10,
+    "modifiers": ["Slashing", "Light", "Nimble", "Sharp"],
+    "requirements": []
+  }
+]

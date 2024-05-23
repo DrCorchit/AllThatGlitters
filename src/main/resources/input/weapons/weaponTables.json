@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Small Weapons",
+    "description": "Small weapons are those which are easily wielded in one hand, including everyday tools improvised as weapons. They require no especial skill to use, are easily concealed, and are typically wielded by civilians. These weapons automatically have the light property, and can be dual-wielded or used in the offhand.",
+    "file": "small.json",
+    "bypassReqs": true
+  },
+  {
+    "name": "Standard Weapons",
+    "description": "These are proper weapon and sidearms, usable in one hand. Some of these require martial training, or accommodate a two-handed grip.",
+    "file": "standard.json"
+  },
+  {
+    "name": "Great Weapons",
+    "description": "Great Weapons are two-handed martial weapons that sacrifice precision for power. This category includes polearms, which are the primary weapons of infantry and possess excellent damage and reach.",
+    "file": "great.json"
+  },
+  {
+    "name": "Ranged Weapons",
+    "description": "Weapons designed to be thrown or to launch a projectile.",
+    "file": "ranged.json"
+  },
+  {
+    "name": "Special Weapons",
+    "description": "Weapons with atypical abilities for specialized use.",
+    "file": "special.json"
+  }
+]

@@ -1,22 +1,44 @@
 package net.allthatglitters.server
 
-import net.allthatglitters.server.concepts.AppendixItems
+import com.google.gson.*
+import net.allthatglitters.server.concepts.abilities.AppendixTraining
+import net.allthatglitters.server.concepts.armor.AppendixArmor
+import net.allthatglitters.server.concepts.bestiary.AppendixBestiary
+import net.allthatglitters.server.concepts.bestiary.Genus
+import net.allthatglitters.server.concepts.bestiary.Phylum
+import net.allthatglitters.server.concepts.items.AppendixItems
 import net.allthatglitters.server.concepts.classes.ClassesChapter
-import net.allthatglitters.server.concepts.magic.Spells
+import net.allthatglitters.server.concepts.magic.AppendixSpells
+import net.allthatglitters.server.concepts.weapons.AppendixWeapons
 import net.allthatglitters.server.util.Collapsible
 import net.allthatglitters.server.util.Navigation
 import net.allthatglitters.server.util.html.HtmlFile
 import java.io.File
 
-object Generate {
+object Generator {
+	val outputDir = File("src/main/resources/output")
+	val inputDir = File("src/main/resources/input")
 	val version = "0"
+
+	val deserializer: Gson
+
+	init {
+
+
+		val builder = GsonBuilder().setPrettyPrinting().disableHtmlEscaping()
+		builder.registerTypeAdapter(
+			Phylum::class.java,
+			JsonDeserializer { json, _, _ -> Phylum(json.asJsonObject) })
+		deserializer = builder.create()
+	}
+
 	val appendices = listOf(
-		Spells(),
-		HtmlFile("Appendix: Training", "appendix_training.html"),
-		HtmlFile("Appendix: Weapons", "appendix_weapons.html"),
-		HtmlFile("Appendix: Armor &amp; Materials", "appendix_armor.html"),
-		HtmlFile("Appendix: Mercantile Goods", "appendix_items.html"),
-		HtmlFile("Appendix: Beastiary", "appendix_beastiary.html"),
+		AppendixSpells,
+		AppendixTraining,
+		AppendixWeapons,
+		AppendixArmor,
+		AppendixItems,
+		AppendixBestiary
 	)
 
 	val chapterTitles = listOf(
@@ -54,13 +76,12 @@ object Generate {
 			.appendBody()
 			.save(version)
 
-		val max = 7
-		for (i in 1..max) makeChapter(i, max)
+		for (i in 1..chapterTitles.size) makeChapter(i)
 		for (i in appendices.indices) makeAppendix(i)
 	}
 
-	fun makeChapter(i: Int, max: Int) {
-		val nav = Navigation.render(i, max)
+	fun makeChapter(i: Int) {
+		val nav = Navigation.forChapter(i)
 		val chapter = if (i == 2) {
 			ClassesChapter(chapterTitles[1], "c2.html")
 		} else {
@@ -81,9 +102,11 @@ object Generate {
 		val next = if (i < appendices.size - 1) {
 			appendices[i + 1]
 		} else null
-		val nav = Navigation.render(prev, next)
+		val nav = Navigation(
+			prev?.let { it.title to it.fileName },
+			next?.let { it.title to it.fileName })
 
-		(if (i == 4) AppendixItems() else appendices[i])
+		appendices[i]
 			.appendHeader()
 			.appendTitle().append(nav)
 			.appendBody().append(nav)
@@ -91,5 +114,3 @@ object Generate {
 	}
 }
 
-val outputDir = File("src/main/resources/output")
-val inputDir = File("src/main/resources/input")

@@ -1,6 +1,6 @@
 [
   {
-    "name": "Combat Training: Come Hither",
+    "name": "Come Hither",
     "effect": "The player learns to use the grappling hook in combat, acquiring the ability Come Hither. Using an action, the player may throw the grappling hook at a target within 20 feet. Upon a successful accuracy skill check against the target’s mitigation, the target is pulled 15 feet towards the player.",
     "cost": {
       "gold": "30",
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "name": "Combat Training: Hook Sword Disarm",
+    "name": "Hook Sword Disarm",
     "effect": "",
     "cost": {
       "gold": "30",
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "name": "Combat Training: Hook Sword Link Strike",
+    "name": "Hook Sword Link Strike",
     "effect": "",
     "cost": {
       "gold": "30",
@@ -33,8 +33,8 @@
     ]
   },
   {
-    "name": "Combat Training: Flailing Strike",
-    "effect": "The player learns to use the <i>Flailing Strike<i> ability for the flail. When making a flail attack versus an opponent with a shield, BC from the shield is reduced by half.",
+    "name": "Flailing Strike",
+    "effect": "The player learns to use the <i>Flailing Strike</i> ability for the flail. When making a flail attack versus an opponent with a shield, BC from the shield is reduced by half.",
     "cost": {
       "gold": "30",
       "slots": "4"
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "name": "Combat Training: Polearm Charge",
+    "name": "Polearm Charge",
     "effect": "",
     "cost": {
       "gold": "30",
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "name": "Combat Training: Polearm Reverse Strike",
+    "name": "Polearm Reverse Strike",
     "effect": "The player learns to ride a saddle and control a horse via bridle. The player can now attempt mounted attacks from horseback, ",
     "cost": {
       "gold": 30,
@@ -66,7 +66,7 @@
     ]
   },
   {
-    "name": "Combat Training: Shield Bash",
+    "name": "Shield Bash",
     "effect": "",
     "cost": {
       "gold": "30",
@@ -77,7 +77,7 @@
     ]
   },
   {
-    "name": "Combat Training: Shield Charge",
+    "name": "Shield Charge",
     "effect": "",
     "cost": {
       "gold": "30",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "name": "Combat Training: Estoc Piercing Strike",
+    "name": "Estoc Piercing Strike",
     "effect": "The player learns the proper use of the estoc, a martial thrusting sword. When attacking with the estoc, opponents wearing chain mail gain half BC from their armor.",
     "cost": {
       "gold": "30",
@@ -100,7 +100,7 @@
     ]
   },
   {
-    "name": "Combat Training: Mordhau",
+    "name": "Mordhau",
     "effect": "The player learns ",
     "cost": {
       "gold": "30",
@@ -112,7 +112,7 @@
     ]
   },
   {
-    "name": "Combat Training: Keshik",
+    "name": "Keshik",
     "effect": "The player learns to manipulate and aim a bow and arrow from horseback. Range attacks from horseback no longer have disadvantage.",
     "cost": {
       "gold": 30,
@@ -121,11 +121,11 @@
     "reqs": [
       "A horse",
       "Accuracy Mastery",
-      "Athletics Training: Horseback Riding"
+      "Horseback Riding"
     ]
   },
   {
-    "name": "Combat Training: Lancer",
+    "name": "Lancer",
     "effect": "The player trains to fight and use polearms while saddled on horseback. The player no longer has disadvantage",
     "cost": {
       "gold": 30,

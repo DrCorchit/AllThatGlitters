@@ -1,14 +1,14 @@
 package net.allthatglitters.server.concepts.classes
 
 import com.google.gson.JsonParser
+import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.html.HtmlFile
-import net.allthatglitters.server.inputDir
 import java.io.File
 
 class ClassesChapter(
     title: String,
     fileName: String,
-    val characterDir: File = File(inputDir, "characters")
+    val characterDir: File = File(Generator.inputDir, "characters")
 ) :
     HtmlFile(title, fileName) {
     fun getClasses(): List<CombatClass> {

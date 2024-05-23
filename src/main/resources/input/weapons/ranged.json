@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Throwing Knife",
+    "description": "A knife specially designed to be hurled.",
+    "damage": "1d4",
+    "cost": 1,
+    "modifiers": ["Piercing", "Sharp", "Throwable", "Light", "Range: 30/90"],
+    "requirements": ["14 DEX", "Accuracy Proficiency"]
+  },
+  {
+    "name": "Shuriken",
+    "description": "A thrown, spinning weapon from a distant land.",
+    "damage": "1d6",
+    "cost": 2,
+    "modifiers": ["Slashing", "Throwable", "Light", "Range: 30/90"],
+    "requirements": ["14 DEX", "Accuracy Expertise"]
+  },
+  {
+    "name": "Javelin",
+    "description": "A light spear, made for throwing.",
+    "damage": "1d8",
+    "cost": 5,
+    "modifiers": ["Piercing", "Throwable", "Light", "Range: 30/120"],
+    "requirements": ["12 DEX", "Accuracy Proficiency."]
+  },
+  {
+    "name": "Boomerang",
+    "description": "A throwing weapon that returns to its user. May be enchanted to return items to the thrower, for 200 gold. Range: 30/90",
+    "damage": "1d4",
+    "cost": 5,
+    "modifiers": ["Bludgeoning", "Nimble", "Throwable", "Light", "Range: 30/90"],
+    "requirements": ["12 DEX", "Accuracy Proficiency"]
+  },
+  {
+    "name": "Shortbow",
+    "description": "A bow favored by hunters and spies.",
+    "damage": "1d8",
+    "cost": 10,
+    "modifiers": ["Piercing", "Nimble", "Two-Handed", "Projectile: Arrows", "Range: 150/300"],
+    "requirements": ["12 DEX", "Accuracy Proficiency"]
+  },
+  {
+    "name": "Longbow",
+    "description": "The bow used by professional archers.",
+    "damage": "1d12",
+    "cost": 30,
+    "modifiers": ["Piercing", "Two-Handed", "Projectile: Arrows", "Range: 300/600"],
+    "requirements": ["12 STR", "12 DEX", "Accuracy Proficiency"]
+  },
+  {
+    "name": "Hand Crossbow",
+    "description": "A miniature crossbow. Widely considered a gimmick.",
+    "damage": "1d8",
+    "cost": 50,
+    "modifiers": ["Piercing", "Light", "Crossbow", "Projectile: Bolts", "Range: 50/150"],
+    "requirements": []
+  },
+  {
+    "name": "Crossbow",
+    "description": "A mechanical bow operated by a trigger.",
+    "damage": "2d8",
+    "cost": 100,
+    "modifiers": ["Piercing", "Crossbow", "Projectile: Bolts", "Range: 300/600"],
+    "requirements": []
+  },
+  {
+    "name": "Arbalest",
+    "description": "A crossbow of monstrous proportions.",
+    "damage": "3d8",
+    "cost": 250,
+    "modifiers": ["Piercing", "Two-Handed", "Crossbow", "Projectile: Bolts", "Range: 300/600"],
+    "requirements": ["STR 15"]
+  },
+  {
+    "name": "Pistol",
+    "description": "A compact firearm, carried in one hand. Designed to be fired once and then holstered.",
+    "damage": "1d12",
+    "cost": 100,
+    "modifiers": ["Firearm", "Projectile: Bullets", "Light", "Range: 20/60"],
+    "requirements": ["12 DEX"]
+  },
+  {
+    "name": "Hand Cannon",
+    "description": "A heavy pistol, for those strong enough to wield it. Light modifier does not apply if strength is less than 16.",
+    "damage": "2d12",
+    "cost": 200,
+    "modifiers": ["Firearm", "Projectile: Bullets", "Light", "Range: 20/60"],
+    "requirements": ["14 STR", "12 DEX"]
+  },
+  {
+    "name": "Arquebus",
+    "description": "A powerful and unpredictable firearm.",
+    "damage": "2d12",
+    "cost": 150,
+    "modifiers": ["Firearm", "Projectile: Bullets", "Range: 30/90"],
+    "requirements": []
+  },
+  {
+    "name": "Blunderbus",
+    "description": "A heavier gun, firing grapeshot.",
+    "damage": "3d12",
+    "cost": 200,
+    "modifiers": ["Firearm", "Projectile: Bullets", "Range: 20/60"],
+    "requirements": ["12 STR", "12 DEX"]
+  },
+  {
+    "name": "Musket",
+    "description": "The pinnacle of technological prowess.",
+    "damage": "3d12",
+    "cost": 250,
+    "modifiers": ["Firearm", "Projectile: Bullets", "Range: 50/150"],
+    "requirements": ["12 STR", "12 DEX"]
+  }
+]

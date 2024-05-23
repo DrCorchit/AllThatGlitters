@@ -1,0 +1,154 @@
+[
+  {
+    "latin": "chordata",
+    "singular": "Beast",
+    "adjective": "animal",
+    "description": "Living beasts of an ordinary sort.",
+    "genera": [
+      {
+        "latin": "mammalia",
+        "singular": "Mammal",
+        "adjective": "mammalian",
+        "description": "Warm blooded, hairy creatures. Often social."
+
+      },
+      {
+        "latin": "aves",
+        "singular": "Bird",
+        "adjective": "avian",
+        "description": "Warm, feathered creatures. Usually capable of flight."
+      },
+      {
+        "latin": "reptilia",
+        "singular": "Reptile",
+        "adjective": "reptilian",
+        "description": "Cold, scaly creatures. Limited empathic faculties."
+      },
+      {
+        "latin": "amphibia",
+        "singular": "Amphibian",
+        "adjective": "Amphibian",
+        "description": "Creatures which transition from water to land at different phases of their lifecycle."
+      },
+      {
+        "latin": "ichthia",
+        "singular": "Fish",
+        "plural": "Fish",
+        "adjective": "fish",
+        "description": "Creatures with gills and scales, native to lakes, rivers, the depths of the sea and so forth."
+      }
+    ]
+  },
+  {
+    "latin": "achordata",
+    "singular": "Invertebrate",
+    "adjective": "invertebrate",
+    "description": "Living creatures of a primitive sort.",
+    "genera": [
+      {
+        "latin": "arthropoda",
+        "singular": "Insect",
+        "adjective": "insectoid",
+        "description": "Creatures possessing an exoskeleton and jointed limbs, such as insects, spiders, and crustaceans."
+      },
+      {
+        "latin": "mollusca",
+        "singular": "Chiton",
+        "adjective": "chitonoid",
+        "description": "Creatures with soft, slimy flesh, such as octopi and snails. Often intelligent."
+      },
+      {
+        "latin": "amorphia",
+        "singular": "Blob",
+        "adjective": "amorphous",
+        "description": "Various amorphous or gelatinous entities colloquially known as slimes, oozes, or blobs."
+      },
+      {
+        "latin": "pseudophyta",
+        "singular": "Plant",
+        "adjective": "plant-",
+        "description": "Photosynthetic entities possessing biological and morphological similarities to plants."
+      }
+    ]
+  },
+  {
+    "latin": "necromorpha",
+    "singular": "Undead",
+    "plural": "Undead",
+    "description": "Death-touched entities either returned to unnatural semblance of life, or undeparted spirits of the deceased. These entities are greatly harmed by weapons of silver.",
+    "genera": [
+      {
+        "latin": "reanimis",
+        "singular": "Zombie",
+        "adjective": "zomboid",
+        "description": "Raised dead which feed on dead and decaying corpses. Extremely unpredictable."
+      },
+      {
+        "latin": "vampiris",
+        "singular": "Vampire",
+        "adjective": "vampiric",
+        "description": "Immortal undead which feed exclusively on the blood of the living."
+      },
+      {
+        "latin": "spectralis",
+        "singular": "Ghost",
+        "adjective": "spectral",
+        "description": "Spirits of the recently departed, which yet possess the energy required to manifest in the physical."
+      }
+    ]
+  },
+  {
+    "latin": "anima",
+    "singular": "demigod",
+    "adjective": "spiritual",
+    "description": "Pure spiritual beings which may manifest in the material plane. They never die, but may be banished to their home realm.",
+    "genera": [
+      {
+        "latin": "demens",
+        "singular": "Demon",
+        "adjective": "demonic",
+        "description": "Cursed spirits who rebelled against their maker. Now confined to the hells, where their power cannot alleviate their suffering. Too arrogant to seek mercy or forgiveness, they instead strive to bring mortals to subjugation, corruption, and torment."
+      },
+      {
+        "latin": "draconis",
+        "singular": "Dragon",
+        "adjective": "draconic",
+        "description": "Ferocious beings forged in the primordial fires. They may take any form, but find that of the dragon most befitting their immense power. Obsessed with hierarchy, they fight constantly amongst their own kind. They largely keep to their own, but occasionally take an interest in mortal affairs."
+      },
+      {
+        "latin": "nympha",
+        "singular": "Fey",
+        "plural": "Fey",
+        "adjective": "fey",
+        "description": "Playful and mischievous spirits of nature and the wilds, who cannot be tamed. They have acquired a negative reputation, but in truth they only lash out against mortals who encroach upon the forests and jungles of the world."
+      },
+      {
+        "latin": "angelis",
+        "singular": "Angel",
+        "adjective": "angelic",
+        "description": "Joyful spirits of light who willingly serve the divine Source Consciousness."
+      }
+    ]
+  },
+  {
+    "latin": "monstrum",
+    "singular": "oddity",
+    "plural": "oddities",
+    "adjective": "monstrous",
+    "description": "Unnatural beings of diverse and often unknown origins.",
+    "genera": [
+      {
+        "latin": "constructa",
+        "singular": "Construct",
+        "adjective": "constructed",
+        "description": "Conglomerations of non-living components animated by lesser spirits. Often assembled by skilled mortal mages."
+      },
+      {
+        "latin": "pseudomorpha",
+        "singular": "Mimic",
+        "adjective": "mimic",
+        "description": "Any of several entities which take the form of physical objects. Immensely dangerous."
+      }
+    ]
+  }
+]

@@ -1,27 +1,16 @@
 package net.allthatglitters.server.util
 
+import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.html.HtmlContent
-import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
+import net.allthatglitters.server.util.html.Renderable
 
-object Navigation {
-	fun render(current: Int, max: Int): String {
-		val prev = if (current > 1) {
-			"c${current - 1}.html" to "Retreat to Chapter ${current - 1}"
-		} else null
-		val next = if (current < max) {
-			"c${current + 1}.html" to "Advance to Chapter ${current + 1}"
-		} else null
+class Navigation(
+	val prev: Pair<String, String>?,
+	val next: Pair<String, String>?
+) : Renderable {
 
-		return render(prev, next)
-	}
-
-	fun render(prev: HtmlFile?, next: HtmlFile?): String {
-		return render(prev?.let { prev.fileName to prev.title },
-			next?.let { next.fileName to next.title })
-	}
-
-	fun render(prev: Pair<String, String>?, next: Pair<String, String>?): String {
+	override fun render(): String {
 		val output = HtmlContent()
 		output.withContent(HorizontalRule)
 		val div = HtmlObject("div")
@@ -34,8 +23,8 @@ object Navigation {
 					.withClass("column-shrink")
 					.withContent(
 						HtmlObject("a")
-							.withAttribute("href", prev.first)
-							.withContent(prev.second)
+							.withAttribute("href", prev.second)
+							.withContent(prev.first)
 					)
 			)
 		}
@@ -56,13 +45,27 @@ object Navigation {
 					.withClass("column-shrink")
 					.withContent(
 						HtmlObject("a")
-							.withAttribute("href", next.first)
-							.withContent(next.second)
+							.withAttribute("href", next.second)
+							.withContent(next.first)
 					)
 			)
 		}
 		output.withContent(div)
 		output.withContent(HorizontalRule)
 		return output.render()
+	}
+
+	companion object {
+		fun forChapter(i: Int): Navigation {
+			val max = Generator.chapterTitles.size - 1
+			val prev = if (i > 1) {
+				"Retreat to Chapter ${i - 1}" to "c${i - 1}.html"
+			} else null
+			val next = if (i < max) {
+				"Advance to Chapter ${i + 1}" to "c${i + 1}.html"
+			} else null
+
+			return Navigation(prev, next)
+		}
 	}
 }

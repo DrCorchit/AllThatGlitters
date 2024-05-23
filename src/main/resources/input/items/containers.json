@@ -2,36 +2,43 @@
   {
     "name": "Vial, empty",
     "cost": 2,
+    "weight": 0,
     "description": "Contains 1 ounce of liquid. Often used to store potent alchemical mixtures."
   },
   {
     "name": "Stoppered Flask, empty",
     "cost": 2,
+    "weight": 0,
     "description": "Contains up to 10 ounces of (possibly alchemical) liquid. Airtight when closed."
   },
   {
     "name": "Bucket",
     "cost": 0,
+    "weight": 0,
     "description": "For carrying water or other liquids. Holds 5 gallons."
   },
   {
     "name": "Barrel, empty",
     "cost": 2,
+    "weight": 0,
     "description": "Holds 40 gallons of liquid. (150 liters)"
   },
   {
     "name": "Basket",
     "cost": 1,
+    "weight": 0,
     "description": "A woven basket for smaller items, such as flowers or berries. 2 gallon capacity."
   },
   {
     "name": "Canteen",
     "cost": 2,
+    "weight": 0,
     "description": "Holds one quart of drinking water."
   },
   {
     "name": "Rucksack",
     "cost": 1,
+    "weight": 0,
     "description": "Of burlap, suitable for any purpose. 5 gallon capacity."
   }
 ]

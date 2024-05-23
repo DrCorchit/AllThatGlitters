@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Iron",
+    "description": "Pig iron, suitable for armor but inferior to steel. Prone to rust if neglected.",
+    "cost": 0.5,
+    "weight": 1,
+    "bc": -1
+  },
+  {
+    "name": "Steel",
+    "description": "Ordinary iron smelted with carbon.",
+    "cost": 1,
+    "weight": 1,
+    "bc": 0
+  },
+  {
+    "name": "Titanium",
+    "description": "An advanced and lightweight alloy of steel.",
+    "cost": 2,
+    "weight": 0.8,
+    "bc": 1,
+    "effects": ["Armor DC caps relaxed by 1"]
+  },
+  {
+    "name": "Orichalcum",
+    "description": "Smelted from an ore mined by goblins and orcs.",
+    "cost": 3,
+    "weight": 1.2,
+    "bc": 2,
+    "effects": ["Resists lightning damage."]
+  },
+  {
+    "name": "Adamantine",
+    "description": "Smelted in the heart of a volcano, for no other heat can touch it.",
+    "cost": 5,
+    "weight": 1.2,
+    "bc": 3,
+    "effects": ["Resists fire and cold damage."]
+  },
+  {
+    "name": "Mithril",
+    "description": "Made by the dwarves, after a secret technique.",
+    "cost": 10,
+    "weight": 0.5,
+    "bc": 2,
+    "effects": ["Acid damage does not lower BC.", "Armor DC caps relaxed by 2"]
+  }
+]

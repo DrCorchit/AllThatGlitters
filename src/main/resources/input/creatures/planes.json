@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Physical",
+    "description": "The physical planes are distinguished by strict natural laws and a magical veil which prevents creatures therein from obtaining more than a glimpse of the subtle mysteries of nature. Spirits within any of the physical planes are called mortals, or lesser spirits."
+  },
+  {
+    "name": "Astral",
+    "description": "The astral planes are any of various planes which are more dreamlike and responsive to consciousness than the physical. The astral plane is divided into several sub frequencies, from low to high, which grow progressively more surreal and abstract the further one journeys from the physical world. The lower astral mirrors the physical world, and contains low vibrational entities such as lurkers, energivores, and egregores, low ranking demons which prey on sentient energy. Higher astral planes are dreamlike, vibrant, and surreal, and are occupied by higher beings such as fey, djinn, dragons, and angels. Mortals often explore the astral unwittingly while dreaming."
+  },
+  {
+    "name": "Infernal",
+    "description": "The infernal planes are hells, created by demons. Each hell is simultaneously a prison and a palace for its reigning archdemon, alongside various lesser devils and enslaved spirits. Hells are filled with oppressive and joyless energy, and tend to suffocate emotions such as hope and compassion the longer one spends there. Hells are virtually indistinguishable from the physical plane, but are actually extremely dense astral planes."
+  },
+  {
+    "name": "Ethereal",
+    "description": "The ethereal planes are timeless planes of pure thought. They are changeless and eternal, and cannot be fully entered by mortal spirits. Each ethereal plane is the highest and purest expression of the god which inhabits it. Little is known about these planes, except that they act as sources of archetypical energy such as pure flame, pure light, or various pure emotions."
+  }
+]

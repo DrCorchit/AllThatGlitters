@@ -1,19 +1,20 @@
-package net.allthatglitters.server.concepts
+package net.allthatglitters.server.concepts.items
 
-import com.drcorchit.justice.utils.json.JsonUtils
 import com.google.gson.JsonObject
-import net.allthatglitters.server.util.bold
+import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.Renderable
 
-class Item(val name: String, val description: String, val cost: Int) : Renderable {
+class Item(val name: String, val description: String, val cost: Int, val weight: Int) : Renderable {
 
 	override fun render(): String {
 		val output = HtmlObject.background()
 			.withStyle("margin: 5px; width: 200px; flex: 0 0 auto;")
-		output.withContent("h5", name)
+		output.withContent("h6", name)
 		output.withContent("p", description)
-		val temp = "${"Cost".bold()}: $cost"
+		val temp = "<b>Price</b>: $cost" + if (weight > 0) {
+			" <b>Weight</b>: $weight lbs"
+		} else ""
 		output.withContent("p", temp)
 		return output.render()
 	}
@@ -21,7 +22,7 @@ class Item(val name: String, val description: String, val cost: Int) : Renderabl
 
 	companion object {
 		fun deserialize(obj: JsonObject): Item {
-			return JsonUtils.GSON.fromJson(obj, Item::class.java)
+			return Generator.deserializer.fromJson(obj, Item::class.java)
 		}
 	}
 

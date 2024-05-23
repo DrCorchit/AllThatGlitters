@@ -2,61 +2,73 @@
   {
     "name": "Flask of Oil",
     "cost": 10,
+    "weight": 0,
     "description": "Contains approximately one pint. Lasts 12 hours."
   },
   {
     "name": "Holy Water",
     "cost": 10,
+    "weight": 0,
     "description": "Contains 1 cup of water blessed by a priest. Deals 3d8 holy damage when thrown."
   },
   {
     "name": "Drinking Water",
     "cost": 2,
+    "weight": 0,
     "description": "1 Gallon of potable water for cooking and drinking."
   },
   {
     "name": "Rations",
     "cost": 2,
+    "weight": 0,
     "description": "Consists of non-perishable food items for a single day's sustenance."
   },
   {
     "name": "Salt, 1 cup",
     "cost": 1,
+    "weight": 0,
     "description": "For flavor, and curing meat. And driving off foul spirits."
   },
   {
     "name": "Sugar, 1 cup",
     "cost": 3,
+    "weight": 0,
     "description": "For sweeting cakes, or as a currency when trading with savages."
   },
   {
     "name": "Tobacco",
     "cost": 2,
+    "weight": 0,
     "description": "1 pound. Emits a thick smoke when lit, agreeable to some and noxious to others."
   },
   {
     "name": "Wine, Bottle of",
     "cost": 2,
+    "weight": 0,
     "description": "A finer drink, favored by nobles and kings."
   },
   {
     "name": "Mead, Bottle of",
     "cost": 1,
+    "weight": 0,
     "description": "Made from honey. Sweeter than beer."
   },
   {
     "name": "Beer, Bottle of",
     "cost": 1,
+    "weight": 0,
     "description": "Proof that the gods love us and want us to be happy."
   },
   {
     "name": "Moonshine, Flask of",
     "cost": 1,
+    "weight": 0,
     "description": "Extremely strong alcohol. Lacks the royal stamp, indicating that is has been manufactured illegally by peasants."
   },
   {
     "name": "Rum, Bottle of",
     "cost": 1,
+    "weight": 0,
     "description": "Manufactured from sugarcane. Favored by sailors, accordingly."
   }
 ]

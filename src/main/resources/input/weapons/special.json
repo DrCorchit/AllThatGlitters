@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Net",
+    "description": "For catching and restraining.",
+    "damage": "0",
+    "cost": 10,
+    "modifiers": [],
+    "requirements": ["Martial Arts Proficiency"]
+  },
+  {
+    "name": "Grappling Hook",
+    "description": "For hooking and pulling, or escaping. Allows <i>Vertical Escape</i> and <i>Come Hither</i>.",
+    "damage": "0",
+    "cost": 10,
+    "modifiers": [],
+    "requirements": ["Martial Arts proficiency"]
+  },
+  {
+    "name": "Flail",
+    "description": "For countering shields.",
+    "damage": "1d6",
+    "cost": 100,
+    "modifiers": ["Piercing"],
+    "requirements": ["Martial Arts Expertise"]
+  },
+  {
+    "name": "Hook Sword",
+    "description": "For disarming opponents.",
+    "damage": "1d6",
+    "cost": 100,
+    "modifiers": ["Slashing"],
+    "requirements": ["Martial Arts Expertise"]
+  },
+  {
+    "name": "Buckler",
+    "description": "A small shield. Allows shield bash.",
+    "damage": "1d4",
+    "cost": 30,
+    "modifiers": ["Bludgeoning", "Blocking 1"],
+    "requirements": []
+  },
+  {
+    "name": "Shield",
+    "description": "An ordinary shield. Allows shield bash.",
+    "damage": "1d4",
+    "cost": 50,
+    "modifiers": ["Bludgeoning", "Blocking 2"],
+    "requirements": ["Defense proficiency", "12 STR"]
+  },
+  {
+    "name": "Greatshield",
+    "description": "An extraordinarily large shield. Allows shield charge.",
+    "damage": "1d6",
+    "cost": 100,
+    "modifiers": ["Bludgeoning", "Blocking 3"],
+    "requirements": ["Defense Expertise", "14 STR"]
+  },
+  {
+    "name": "Mantlet",
+    "description": "A shield designed to be carried with two hands or planted on the ground. Cannot perform weapon attacks while carrying this shield. Provides cover when placed on the ground. Allows shield charge.",
+    "damage": "1d8",
+    "cost": 150,
+    "modifiers": ["Bludgeoning", "Blocking 4"],
+    "requirements": ["Defense Proficiency", "14 STR"]
+  }
+]

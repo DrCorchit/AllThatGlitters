@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Vertical Escape",
+    "effect": "The player learns <i>Vertical Escape</i>, a technique for the grappling hook. If surroundings are appropriate, the player can throw the hook up to 30 feet vertically as an action. On a successful DT 12 parkour skill check, the grappling hook latches. The player can use an action to climb 10 feet up the rope, away from enemy melee attacks.",
+    "cost": {
+      "gold": "20",
+      "slots": "3"
+    },
+    "reqs": [
+      "Parkour Proficiency"
+    ]
+  },
+  {
+    "name": "Wall Run",
+    "effect": "The player learns to run a short distance along or up walls, and to leap backwards off of them. ",
+    "cost": {
+      "slots": 4
+    },
+    "reqs": [
+      "Parkour Expertise",
+      "Speed 15 or Dexterity 15"
+    ]
+  }
+]

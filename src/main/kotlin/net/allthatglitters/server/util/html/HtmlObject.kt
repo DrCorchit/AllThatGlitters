@@ -37,7 +37,7 @@ open class HtmlObject(
 	}
 
 	fun withAll(html: Iterable<Renderable>): HtmlObject {
-		content.withAll(html)
+		html.forEach { withContent(it) }
 		return this
 	}
 
@@ -46,7 +46,7 @@ open class HtmlObject(
 	}
 
 	fun withContent(tag: String, content: String): HtmlObject {
-		return this.withContent(HtmlObject(tag).withContent(content))
+		return withContent(HtmlObject(tag).withContent(content))
 	}
 
 	fun withContent(content: Renderable): HtmlObject {

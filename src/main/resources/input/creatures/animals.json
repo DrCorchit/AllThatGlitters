@@ -15,6 +15,7 @@
   },
   {
     "name": "Riding Horse",
+    "phylum": "mammalia",
     "description": "A horse suitable for riding long distances. Accustomed to carts and carriages.",
     "cost": 250,
     "upkeep": 2,
@@ -29,6 +30,7 @@
   },
   {
     "name": "War Horse",
+    "phylum": "mammalia",
     "description": "Thoroughbred, accustomed to combat, and tempered for excitement. Capable of bearing two riders and galloping at high speeds.",
     "cost": 500,
     "upkeep": 5,
@@ -43,6 +45,7 @@
   },
   {
     "name": "Camel",
+    "phylum": "mammalia",
     "description": "A beast of burden, superior to the horse in rocky, barren, and arid climates.",
     "cost": 200,
     "upkeep": 2,
@@ -57,6 +60,7 @@
   },
   {
     "name": "Elephant",
+    "phylum": "mammalia",
     "description": "Incredibly powerful and majestic. Able to manipulate heavy objects with its trunk.",
     "cost": 1000,
     "upkeep": 10,
@@ -71,6 +75,7 @@
   },
   {
     "name": "Dog",
+    "phylum": "mammalia",
     "description": "Man's best friend.",
     "cost": 20,
     "upkeep": 1,
@@ -85,6 +90,7 @@
   },
   {
     "name": "Cat",
+    "phylum": "mammalia",
     "description": "A domesticated cat, excellent at tracking and hunting small animals.",
     "cost": 10,
     "stats": {
@@ -98,6 +104,7 @@
   },
   {
     "name": "Parrot",
+    "phylum": "aves",
     "description": "A colorful bird able to mimic human speech. Those purchased from sailors often possess a colorful vocabulary.",
     "cost": 20,
     "stats": {
@@ -111,6 +118,7 @@
   },
   {
     "name": "Monkey",
+    "phylum": "mammalia",
     "cost": 50,
     "description": "A small monkey likely imported from a faroff land. Able to obey simple commands, and in extremely rare cases, cast simple spells.",
     "stats": {
@@ -124,6 +132,7 @@
   },
   {
     "name": "Deer",
+    "phylum": "mammalia",
     "description": "A forest-dwelling quadruped with a skittish demeanor. Too weak capable of carrying riders, and rarely domesticated.",
     "cost": 20,
     "stats": {
@@ -137,6 +146,7 @@
   },
   {
     "name": "Bear",
+    "phylum": "mammalia",
     "description": "A mighty animal with a thick hide and a prodigious horn. Fearsome and tamable only via magic.",
     "upkeep": 5,
     "stats": {
@@ -150,6 +160,7 @@
   },
   {
     "name": "Rhinoceros",
+    "phylum": "mammalia",
     "description": "A mighty animal with a thick hide and a prodigious horn. Fearsome and tamable only via magic.",
     "upkeep": 5,
     "stats": {

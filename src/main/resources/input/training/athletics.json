@@ -1,6 +1,6 @@
 [
   {
-    "name": "Athletics Training: Freestyle",
+    "name": "Freestyle",
     "effect": "The player spends one week practicing freestyle swimming. Swim speed is increased by 50%.",
     "cost": {
       "slots": 3
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "name": "Athletics Training: Lung Capacity",
+    "name": "Lung Capacity",
     "effect": "The player spends one week practicing holding their breath and diving under water. After persistent practice, the player learns to hold their breath for 50% longer than normal.",
     "cost": {
       "slots": 4
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "name": "Athletics Training: Leaping and Landing",
+    "name": "Leaping and Landing",
     "effect": "The player spends one week practicing jumping from one surface to another, landing on a variety of terrain types. Jump height and distance are increased by 50%. The player gains a 1d4 bonus when making saving throws to avoid landing prone.",
     "cost": {
       "slots": 3
@@ -33,19 +33,19 @@
     ]
   },
   {
-    "name": "Athletics Training: Falling",
+    "name": "Falling",
     "effect": "The player practices landing on various surfaces from various heights, using a rolling technique whereby weight is distributed between the feet, legs, buttocks, and shoulders. Having learned various falling techniques, fall damage is reduced by 10 + 1d10.",
     "cost": {
       "slots": 4
     },
     "reqs": [
       "Terrain suitable for such practice.",
-      "Athletics Training: Leaping and Landing",
+      "Leaping and Landing",
       "Dexterity 14"
     ]
   },
   {
-    "name": "Athletics Training: Horseback Riding",
+    "name": "Horseback Riding",
     "effect": "The player learns to ride a saddle and control a horse via bridle. The player can now attempt mounted attacks from horseback, ",
     "cost": {
       "gold": 30,
