@@ -10,9 +10,10 @@
     "Do you conduct experiments on your own? If so, are they ethical?",
     "What made you leave your previous life and start adventuring?"
   ],
+  "limitations": "Wizards ",
   "coreAbilityName": "Favorite Spell",
   "coreAbilityDescription": "Whenever you learn a spell, you may choose to make that spell your favorite. When you cast this spell, you add your willpower modifier to the spell potency in addition to the regular spell potency modifier.",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "gain +1 to INT and WILL and proficiency in literacy."
   }
 }

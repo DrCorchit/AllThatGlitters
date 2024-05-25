@@ -15,7 +15,8 @@ fun String.italicise(): String {
 }
 
 fun <T> File.deserialize(deserializer: (JsonObject) -> T): List<T> {
-	return this.readText().let { JsonParser.parseString(it) }.asJsonArray.map {
+	return this.readText().let { JsonParser.parseString(it) }
+		.asJsonArray.map {
 		try {
 			deserializer.invoke(it.asJsonObject)
 		} catch (e: Exception) {

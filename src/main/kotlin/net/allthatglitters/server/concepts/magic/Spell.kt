@@ -6,7 +6,7 @@ import com.drcorchit.justice.utils.math.units.TimeUnits
 import com.google.common.collect.ImmutableMap
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
-import net.allthatglitters.server.concepts.Attribute
+import net.allthatglitters.server.concepts.sheet.Attribute
 import net.allthatglitters.server.util.html.HtmlObject
 
 class Spell(
@@ -145,7 +145,7 @@ class Spell(
                 "upcast" -> "Upcasting" to entry.value.asString
                 "dualcast" -> "Dual Casting" to entry.value.asString
                 else -> Attribute.parse(entry.key)
-                    ?.let { it.fullName to entry.value.asInt }
+                    ?.let { it.name to entry.value.asInt }
                     ?: (entry.key to entry.value.asString)
             }
         }

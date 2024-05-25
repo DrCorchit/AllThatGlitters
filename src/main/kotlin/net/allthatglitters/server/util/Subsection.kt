@@ -1,0 +1,27 @@
+package net.allthatglitters.server.util
+
+import net.allthatglitters.server.util.html.HtmlFile
+import net.allthatglitters.server.util.html.HtmlObject
+import net.allthatglitters.server.util.html.Renderable
+import java.io.File
+
+abstract class Subsection(val parent: HtmlFile, val title: String, val link: String): Renderable {
+
+	fun linkTo(): HtmlObject {
+		return HtmlObject("a")
+			.withAttribute("href", "${parent.fileName}#$link")
+			.withContent(title)
+	}
+
+	fun makeHeader() : HtmlObject {
+		return HtmlObject("h4")
+			.withContent(HtmlObject("a").withAttribute("id", link))
+			.withContent(title)
+	}
+}
+
+class FileSubsection(parent: HtmlFile, title: String, link: String, val prefix: String): Subsection(parent, title, link) {
+	override fun render(): String {
+		return File(parent.inputDir, "${prefix}_$link.html").readText()
+	}
+}

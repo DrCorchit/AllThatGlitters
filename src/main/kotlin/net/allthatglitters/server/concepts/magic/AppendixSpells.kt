@@ -1,6 +1,6 @@
 package net.allthatglitters.server.concepts.magic
 
-import net.allthatglitters.server.Generator.inputDir
+import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.Collapsible
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
@@ -8,9 +8,9 @@ import net.allthatglitters.server.util.html.HtmlObject
 import java.io.File
 
 object AppendixSpells : HtmlFile("Appendix: Spells", "appendix_spells.html") {
-	val spellsDir: File = File(inputDir, "spells")
-	val spells = spellsDir.listFiles()!!
-		.flatMap { it.deserialize { obj -> Spell.deserialize(obj) } }
+	override val inputDir: File = File(Generator.inputDir, "spells")
+	val spells = inputDir.listFiles()!!
+		.flatMap { spellFile -> spellFile.deserialize { Spell.deserialize(it) } }
 
 	fun getGroupedSpells(): Map<School, List<Spell>> {
 		return spells.groupBy { it.discipline.school }
@@ -20,7 +20,7 @@ object AppendixSpells : HtmlFile("Appendix: Spells", "appendix_spells.html") {
 	}
 
 	override fun appendBody(): HtmlFile {
-		if (spellsDir.isDirectory) {
+		if (inputDir.isDirectory) {
 			append(HtmlObject("h4").withContent("Schools of Sorcery"))
 			append(HtmlObject("a").withAttribute("id", "top"))
 			val ol = HtmlObject("ul")
@@ -50,7 +50,7 @@ object AppendixSpells : HtmlFile("Appendix: Spells", "appendix_spells.html") {
 			}
 			append(Collapsible.render())
 		} else {
-			println("Warning: spellsDir is not a directory ($spellsDir)")
+			println("Warning: spellsDir is not a directory ($inputDir)")
 		}
 		return this
 	}
@@ -63,7 +63,7 @@ object AppendixSpells : HtmlFile("Appendix: Spells", "appendix_spells.html") {
 			spellStatistics.append(String.format("\n%-12s", it.key.name))
 			val reqCount = mutableMapOf<Int, Int>()
 			it.value.forEach { spell ->
-				val key = it.key.primaryAttr.fullName
+				val key = it.key.primaryAttr.name
 				val req = spell.trainingReqs[key] as Int
 				reqCount[req] = reqCount.computeIfAbsent(req) { 0 } + 1
 			}

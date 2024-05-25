@@ -11,7 +11,7 @@ enum class CombatCategory(
     Warrior(
         "For those who want to play as someone sturdy, wearing heavy armor and fighting with weapons like swords, spears, and halberds.",
         listOf("Barbarian", "Knight", "Mercenary", "Veteran"),
-        listOf("Elite Strength", "Martial Arts proficiency", "Ability: Heavy Attack")
+        listOf("Elite Strength", "Martial Arts Proficiency", "Ability: Heavy Attack")
     ),
     Renegade(
         "For those focused on stealth, sneak attacks, and subterfuge—or assassination and seduction!",
@@ -32,7 +32,7 @@ enum class CombatCategory(
     Zealot(
         "For those who wish to combine magical and martial prowess in devotion to a higher principle or power.",
         listOf("Crusader", "Inquisitor", "Monk", "Prophet"),
-        listOf("Elite Willpower", "Persuasion Proficiency", "Ability: Meditation")
+        listOf("Elite Willpower", "Devotion Proficiency", "Ability: Meditation")
     );
 
     companion object : Renderable {

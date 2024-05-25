@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Accuracy",
+    "attrs": ["DEX"],
+    "description": "Describes a player’s accuracy with ranged weapons such as bows and firearms."
+  },
+  {
+    "name": "Alchemy",
+    "attrs": ["INT"],
+    "description": "Used when attempting to brew a magical potion. Proficiency in this skill affects which magical potions one is able to brew."
+  },
+  {
+    "name": "Defense",
+    "attrs": ["STR"],
+    "description": "Describes a player's knowledge and practice of defensive tactics. Proficiency bonuses for this skill affect what types of armor and shields can be used in combat."
+  },
+  {
+    "name": "Devotion",
+    "attrs": ["CHA"],
+    "description": "The ability to follow the correct protocols when seeking supernatural aid, with due reverence and sincerity. Used when requesting divine aid or performing conjuration spells."
+  },
+  {
+    "name": "Initiative",
+    "attrs": ["SPD"],
+    "description": "Determines move order in battle."
+  },
+  {
+    "name": "Literacy",
+    "attrs": ["INT"],
+    "description": "Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Used when performing alchemical experiments or casting astrological spells."
+  },
+  {
+    "name": "Martial Arts",
+    "attrs": ["STR", "DEX"],
+    "description": "Describes skill in armed and unarmed combat. Proficiency bonuses in this area are required to use certain melee weapons effectively. Normally, either strength or dexterity can be used interchangeably as the base attribute."
+  },
+  {
+    "name": "Medicine",
+    "attrs": ["INT"],
+    "description": "Measures knowledge of disease and wound treatment."
+  },
+  {
+    "name": "Mobility",
+    "attrs": ["DEX", "SPD"],
+    "description": "The ability to climb, mantle, vault, and otherwise navigate past obstacles."
+  },
+  {
+    "name": "Nature",
+    "attrs": ["CHA"],
+    "description": "Measures background knowledge that would usually be obtained by spending time in nature or around animals. Used when casting nature spells."
+  },
+  {
+    "name": "Performance",
+    "attrs": ["CHA"],
+    "description": "The players ability to sing, dance, play instruments, or otherwise entertain a crowd. Proficiency with this skill implies the ability to play at least one musical instruments."
+  },
+  {
+    "name": "Persuasion",
+    "attrs": ["CHA", "STR"],
+    "description": "Used when engaging in factual debate, intimidation, or deception. Strength becomes the base attribute only when making a threat of physical force."
+  },
+  {
+    "name": "Perception",
+    "attrs": ["WILL", "CHA"],
+    "description": "The ability to discern more than is immediately obvious. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat."
+  },
+  {
+    "name": "Sleight-of-Hand",
+    "attrs": ["DEX"],
+    "description": "Used when lockpicking and pickpocketing items, or other such tricks."
+  },
+  {
+    "name": "Sorcery",
+    "attrs": ["WILL"],
+    "description": "The ability to reach into one's inner magical reserves. Used when casting elemental magic."
+  },
+  {
+    "name": "Stealth",
+    "attrs": ["DEX", "SPD"],
+    "description": "Used when sneaking or attempting to perform actions without being seen. Speed cannot be used if the noise of sprinting would arouse excessive suspicion."
+  },
+  {
+    "name": "Survival",
+    "attrs": ["WILL"],
+    "description": "Measures general survival skills, including the ability to recognize threats, build shelter, and live off the land. Used when attempting to recognize monsters at the start of combat."
+  }
+]

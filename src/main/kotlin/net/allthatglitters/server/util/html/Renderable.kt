@@ -7,7 +7,7 @@ interface Renderable {
 
     fun render(): String
 
-    fun wrap(tag: String): Renderable {
+    fun wrap(tag: String): HtmlObject {
         return HtmlObject(tag).withContent(this)
     }
 

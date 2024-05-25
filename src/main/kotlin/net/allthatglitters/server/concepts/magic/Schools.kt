@@ -1,14 +1,17 @@
 package net.allthatglitters.server.concepts.magic
 
-import net.allthatglitters.server.concepts.Attribute
+import net.allthatglitters.server.concepts.sheet.Attribute
+import net.allthatglitters.server.concepts.sheet.Skill
 
-enum class School(val adjective: String, val primaryAttr: Attribute) {
-    Alchemy("alchemical", Attribute.INT),
-    Astrology("astrological", Attribute.INT),
-    Biomancy("biological", Attribute.CHA),
-    Conjuration("conjuration", Attribute.CHA),
-    Elementurgy("elemental", Attribute.WILL),
-    Psionics("psychic", Attribute.WILL);
+enum class School(val adjective: String, val primaryAttr: Attribute, skillName: String) {
+    Alchemy("alchemical", Attribute.INT, "alchemy"),
+    Astrology("astrological", Attribute.INT, "literacy"),
+    Biomancy("biological", Attribute.CHA, "nature"),
+    Conjuration("conjuration", Attribute.CHA, "devotion"),
+    Sorcery("elemental", Attribute.WILL, "sorcery"),
+    Psionics("psychic", Attribute.WILL, "psyche");
+
+    val skill = Skill.parse(skillName)
 }
 
 enum class Discipline(val school: School, val adjective: String) {
@@ -27,10 +30,10 @@ enum class Discipline(val school: School, val adjective: String) {
     Divination(School.Conjuration, "divination"),
     Necromancy(School.Conjuration, "necromantic"),
 
-    Fire(School.Elementurgy, "pyrokinetic"),
-    Earth(School.Elementurgy, "geokinetic"),
-    Water(School.Elementurgy, "hydrokinetic"),
-    Air(School.Elementurgy, "aerokinetic"),
+    Fire(School.Sorcery, "pyrokinetic"),
+    Earth(School.Sorcery, "geokinetic"),
+    Water(School.Sorcery, "hydrokinetic"),
+    Air(School.Sorcery, "aerokinetic"),
 
     Illusion(School.Psionics, "illusion"),
     Telepathy(School.Psionics, "telepathic"),

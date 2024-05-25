@@ -10,7 +10,7 @@
   "alignment": "Chaotic",
   "coreAbilityName": "Rage",
   "coreAbilityDescription": "You may spend 6 ability points to enter a rage for 5 combat turns. During a rage, you deal 3 extra damage per weapon attack and take 3 less damage from bludgeoning, slashing, piercing, and fire damage.You may not cast spells, read scrolls, or consume potions.",
-  "limitations": "Barbarians choose a deficiency in two of the following three skills: defense, literacy, stealth.",
+  "limitations": "Due to their careless approach and lack of education, barbarians start with a deficiency in two of the following three skills: defense, literacy, stealth.",
   "levelingBonuses": {
     "1": "TODO"
   },

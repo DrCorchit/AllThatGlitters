@@ -1,12 +1,12 @@
 package net.allthatglitters.server.concepts.abilities
 
-import net.allthatglitters.server.Generator.inputDir
+import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
 import java.io.File
 
 object AppendixTraining : HtmlFile("Appendix: Training", "appendix_training.html") {
-	val trainingDir = File(inputDir, "training")
+	override val inputDir = File(Generator.inputDir, "training")
 
 	override fun appendBody(): HtmlFile {
 		listOf("Athletics", "Combat", "Mobility", "Proficiency")
@@ -22,6 +22,6 @@ object AppendixTraining : HtmlFile("Appendix: Training", "appendix_training.html
 	}
 
 	private fun getTraining(filename: String): List<Training> {
-		return File(trainingDir, filename).deserialize { Training.deserialize(it) }
+		return File(inputDir, filename).deserialize { Training.deserialize(it) }
 	}
 }

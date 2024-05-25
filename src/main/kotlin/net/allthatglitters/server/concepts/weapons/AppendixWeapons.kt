@@ -1,13 +1,14 @@
 package net.allthatglitters.server.concepts.weapons
 
 import com.google.gson.JsonParser
-import net.allthatglitters.server.Generator.inputDir
+import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.HtmlTable
 import java.io.File
 
 object AppendixWeapons : HtmlFile("Appendix: Weapons", "appendix_weapons.html") {
+	override val inputDir = File(Generator.inputDir, "weapons")
 	private val headers =
 		arrayOf("Name", "Damage", "Price", "Modifiers", "Requirements", "Notes")
 
@@ -16,8 +17,8 @@ object AppendixWeapons : HtmlFile("Appendix: Weapons", "appendix_weapons.html") 
 				ValueModifier.Type.entries.map { it.displayName to it.description })
 			.sortedBy { it.first }
 
-	val weaponsDir = File(inputDir, "weapons")
-	val weaponTables = File(weaponsDir, "weaponTables.json")
+
+	val weaponTables = File(inputDir, "weaponTables.json")
 		.readText()
 		.let { JsonParser.parseString(it) }
 		.asJsonArray.map { it.asJsonObject }
@@ -25,7 +26,7 @@ object AppendixWeapons : HtmlFile("Appendix: Weapons", "appendix_weapons.html") 
 			WeaponsTable(
 				it.get("name").asString,
 				it.get("description").asString,
-				File(weaponsDir, it.get("file").asString)
+				File(inputDir, it.get("file").asString)
 			)
 		}.associateBy { it.name }
 	val weapons = weaponTables.values.flatMap { it.weapons }

@@ -2,8 +2,8 @@ package net.allthatglitters.server.concepts.bestiary
 
 import com.google.common.collect.ImmutableMap
 import com.google.gson.JsonObject
-import net.allthatglitters.server.concepts.Attribute
 import net.allthatglitters.server.concepts.items.Item
+import net.allthatglitters.server.concepts.sheet.Attribute
 import net.allthatglitters.server.util.bold
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.Renderable
@@ -11,9 +11,9 @@ import net.allthatglitters.server.util.html.Renderable
 class Creature(
 	obj: JsonObject
 ) : Renderable {
-	//val genus: Genus = Genus(obj.get("genus").asJsonObject)
 	val name = obj.get("name").asString
 	val description = obj.get("description").asString
+	//val species = AppendixBestiary.lookupSpecies(obj.get("species").asString)
 	val cost: Int = obj.get("cost")?.asInt ?: 0
 	val upkeep: Int = obj.get("upkeep")?.asInt ?: 0
 	val weight: Int = obj.get("weight")?.asInt ?: 1

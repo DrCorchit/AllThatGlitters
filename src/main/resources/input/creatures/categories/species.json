@@ -1,0 +1,38 @@
+[
+  {
+    "latinName": "equus",
+    "genus": "mammalia",
+    "commonName": "Horse",
+    "description": "A hoofed mammal with a short coat, long mane, and a long tail. Domesticated since times immemorial."
+  },
+  {
+    "latinName": "canis lupus",
+    "genus": "mammalia",
+    "commonName": "Dog",
+    "description": "A dog, or a wolf. Either a friend to man or a fearsome enemy, but never in between."
+  },
+  {
+    "latinName": "felis catus",
+    "genus": "mammalia",
+    "commonName": "Cat",
+    "description": "A soft and furry animal often served by humans."
+  },
+  {
+    "latinName": "elephas",
+    "genus": "mammalia",
+    "commonName": "Elephant",
+    "description": "An enormous, lumbering animal with a prodigious trunk. Its majesty is best appreciated from a respectful distance."
+  },
+  {
+    "latinName": "lamia",
+    "genus": "reptilia",
+    "commonName": "Lamia",
+    "description": "A creatures with the tail of a snake and the body of a human, usually a woman."
+  },
+  {
+    "latinName": "gulus",
+    "genus": "reanimis",
+    "commonName": "Ghoul",
+    "description": "A hoofed mammal with a short coat, long mane, and a long tail. Domesticated since times immemorial."
+  }
+]

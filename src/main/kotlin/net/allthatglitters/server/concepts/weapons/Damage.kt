@@ -1,7 +1,8 @@
 package net.allthatglitters.server.concepts.weapons
 
 import com.google.common.collect.ImmutableSet
-import net.allthatglitters.server.concepts.*
+import net.allthatglitters.server.concepts.NumDice
+import net.allthatglitters.server.concepts.sheet.Attribute
 
 class Damage(
 	//The base damage of the weapon

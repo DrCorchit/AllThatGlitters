@@ -1,9 +1,9 @@
 package net.allthatglitters.server.concepts.items
 
+import net.allthatglitters.server.Generator
 import net.allthatglitters.server.concepts.armor.AppendixArmor
-import net.allthatglitters.server.concepts.weapons.AppendixWeapons
-import net.allthatglitters.server.Generator.inputDir
 import net.allthatglitters.server.concepts.bestiary.AppendixBestiary
+import net.allthatglitters.server.concepts.weapons.AppendixWeapons
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
@@ -11,7 +11,7 @@ import java.io.File
 
 object AppendixItems : HtmlFile("Appendix: Mercantile Goods", "appendix_items.html") {
 
-	val itemsDir = File(inputDir, "items")
+	override val inputDir = File(Generator.inputDir, "items")
 
 	override fun appendBody(): HtmlFile {
 		appendItems("Tools")
@@ -40,7 +40,7 @@ object AppendixItems : HtmlFile("Appendix: Mercantile Goods", "appendix_items.ht
 	}
 
 	private fun getItems(filename: String): List<Item> {
-		return File(itemsDir, filename).deserialize { Item.deserialize(it) }
+		return File(inputDir, filename).deserialize { Item.deserialize(it) }
 	}
 
 	private fun getWeapons(): List<Item> {

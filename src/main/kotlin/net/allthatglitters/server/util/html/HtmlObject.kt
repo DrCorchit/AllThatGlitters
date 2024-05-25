@@ -66,14 +66,7 @@ open class HtmlObject(
 			builder.append("\n")
 		}
 
-		val renderedContent = content.render().let {
-			if (useNewlines) {
-				val tab = "  "
-				tab + it.replace("\n", "\n$tab")
-			} else it
-		}
-
-		builder.append(renderedContent)
+		builder.append(content.render())
 
 		if (useNewlines) {
 			builder.append("\n")
@@ -92,7 +85,7 @@ open class HtmlObject(
 
 	companion object {
 		val newlineBlacklist =
-			setOf("p", "b", "i", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
+			setOf("a", "p", "b", "i", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
 
 		fun boldedEntry(tag: String, bold: String, content: String): HtmlObject {
 			return HtmlObject(tag).withContent("${bold.bold()}: $content")

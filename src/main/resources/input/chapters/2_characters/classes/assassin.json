@@ -12,8 +12,9 @@
   "alignment": "Non-Good",
   "coreAbilityName": "Assassination",
   "coreAbilityDescription": "You may expend 2 willpower to convert an ordinary attack into an assassination attempt. If the attack results in a critical hit, it becomes an assassination, damaging an enemy by 15 in addition to your normal weapon damage.",
+  "limitations": "Due to their extremely specialized skillset, assassins have a deficiency in two of the following three skills: devotion, defense, or survival.",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "gain proficiency in martial arts and mobility."
   },
   "startingEquipment": [
     "A set of Leather Armor.",

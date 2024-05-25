@@ -18,7 +18,6 @@ enum class Abbreviations(val fullName: String) {
     CT("Critical Threshold"),
     DT("Difficulty Threshold"),
     ATTR("Attribute"),
-    ASM("Attribute Score Modifier"),
 
     WEIGHT_UNITS("pounds"),
     DISTANCE_UNITS("ft"),

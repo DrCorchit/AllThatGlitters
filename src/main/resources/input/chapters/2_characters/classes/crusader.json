@@ -10,6 +10,7 @@
   "alignment": "Lawful",
   "coreAbilityName": "Divine Oath",
   "coreAbilityDescription": "TODO",
+  "limitations": "Crusaders start with a deficiency in ",
   "levelingBonuses": {
     "1": "TODO"
   }

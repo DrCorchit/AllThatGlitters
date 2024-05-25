@@ -1,0 +1,113 @@
+[
+  {
+    "latinName": "mammalia",
+    "phylum": "vertebrata",
+    "commonName": "Mammal",
+    "description": "Warm blooded, hairy creatures. Often social."
+
+  },
+  {
+    "latinName": "aves",
+    "phylum": "vertebrata",
+    "commonName": "Bird",
+    "description": "Warm, feathered creatures. Usually capable of flight."
+  },
+  {
+    "latinName": "reptilia",
+    "phylum": "vertebrata",
+    "commonName": "Reptile",
+    "description": "Cold, scaly creatures with limited empathic faculties."
+  },
+  {
+    "latinName": "amphibia",
+    "phylum": "vertebrata",
+    "commonName": "Amphibian",
+    "description": "Creatures which transition from water to land at different phases of their lifecycle."
+  },
+  {
+    "latinName": "ichthia",
+    "phylum": "vertebrata",
+    "commonName": "Fish",
+    "commonNamePlural": "Fish",
+    "description": "Creatures with gills and scales, native to lakes, rivers, the depths of the sea and so forth."
+  },
+  {
+    "latinName": "arthropoda",
+    "phylum": "invertebrata",
+    "commonName": "Insect",
+    "description": "Creatures possessing an exoskeleton and jointed limbs, such as insects, spiders, and crustaceans."
+  },
+  {
+    "latinName": "mollusca",
+    "phylum": "invertebrata",
+    "commonName": "Mollusk",
+    "description": "Creatures with soft, slimy flesh, such as octopi and snails. Often intelligent."
+  },
+  {
+    "latinName": "amorphia",
+    "phylum": "invertebrata",
+    "commonName": "Blob",
+    "description": "Various amorphous or gelatinous entities colloquially known as slimes, oozes, or blobs."
+  },
+  {
+    "latinName": "pseudophyta",
+    "phylum": "invertebrata",
+    "commonName": "Plant",
+    "description": "Photosynthetic entities possessing biological and morphological similarities to plants."
+  },
+  {
+    "latinName": "reanimis",
+    "phylum": "inmortis",
+    "commonName": "Zombie",
+    "description": "Raised dead which feed on dead and decaying corpses. Extremely unpredictable."
+  },
+  {
+    "latinName": "vampiris",
+    "phylum": "inmortis",
+    "commonName": "Vampire",
+    "description": "Immortal undead which feed exclusively on the blood of the living."
+  },
+  {
+    "latinName": "spectralis",
+    "phylum": "inmortis",
+    "commonName": "Ghost",
+    "description": "Spirits of the recently departed, which yet possess the energy required to manifest in the physical."
+  },
+  {
+    "latinName": "demens",
+    "phylum": "animis",
+    "commonName": "Demon",
+    "description": "Cursed spirits who rebelled against their maker. Now confined to the hells, where their power cannot alleviate their suffering. Too arrogant to seek mercy or forgiveness, they instead strive to bring mortals to subjugation, corruption, and torment."
+  },
+  {
+    "latinName": "draconis",
+    "phylum": "animis",
+    "commonName": "Dragon",
+    "description": "Ferocious beings forged in the primordial fires. They may take any form, but find that of the dragon most befitting their immense power. Obsessed with hierarchy, they fight constantly amongst their own kind. They largely keep to their own, but occasionally take an interest in mortal affairs."
+  },
+  {
+    "latinName": "nympha",
+    "phylum": "animis",
+    "commonName": "Fey",
+    "commonNamecommonNamePlural": "Fey",
+    "description": "Playful and mischievous spirits of nature and the wilds, who cannot be tamed. They have acquired a negative reputation, but in truth they only lash out against mortals who encroach upon the forests and jungles of the world."
+  },
+  {
+    "latinName": "angelis",
+    "phylum": "animis",
+    "commonName": "Angel",
+    "description": "Joyful spirits of light who willingly serve the divine Source Consciousness."
+  },
+  {
+    "latinName": "constructa",
+    "phylum": "monstrum",
+    "commonName": "Construct",
+    "description": "Conglomerations of non-living components animated by lesser spirits. Often assembled by skilled mortal mages."
+  },
+  {
+    "latinName": "pseudomorpha",
+    "phylum": "monstrum",
+    "commonName": "Mimic",
+    "description": "Any of several entities which take the form of physical objects. Immensely dangerous."
+  }
+]

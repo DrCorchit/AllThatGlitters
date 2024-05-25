@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Strength",
+    "abbr": "STR",
+    "description": "Core physical body power",
+    "effects": ["Melee weapon damage", "Maximum Hitpoints", "Defense, Martial Arts, and Intimidation skills"],
+    "interpretation": "10 Strength equals 100 lbs deadlift weight. Each additional point equals a ~25% increase in deadlift weight."
+  },
+  {
+    "name": "Dexterity",
+    "abbr": "DEX",
+    "description": "Acrobatics and manual dexterity",
+    "effects": ["Nimble weapon damage", "Dodge Chance", "Accuracy, Martial Arts, Mobility, Sleight-of-Hand, and Stealth skills"]
+  },
+  {
+    "name": "Speed",
+    "abbr": "SPD",
+    "description": "Walking and running speed",
+    "effects": ["Polearm damage", "Movement speed", "Initiative and Mobility skills"],
+    "interpretation": "2 Speed equals 1 ft/s walking speed"
+  },
+  {
+    "name": "Intelligence",
+    "abbr": "INT",
+    "description": "Reasoning and factual recall",
+    "effects": ["Alchemical and Astrological spell potency", "Training Slots", "Literacy and Medicine skills"],
+    "interpretation": "1 Intelligence point equals 10 points of IQ"
+  },
+  {
+    "name": "Charisma",
+    "abbr": "CHA",
+    "description": "Social and communication skills",
+    "effects": ["Natural and Conjuration spell power", "Devotion, Nature, Performance, and Persuasion skills"]
+  },
+  {
+    "name": "Willpower",
+    "abbr": "WILL",
+    "description": "Force of personality and determination to succeed",
+    "effects": ["Elemental and Psychic spell potency", "Maximum Ability Points", "Perception, Sorcery, and Survival skills"]
+  }
+]

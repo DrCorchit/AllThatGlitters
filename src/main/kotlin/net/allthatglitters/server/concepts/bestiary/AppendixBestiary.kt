@@ -1,6 +1,6 @@
 package net.allthatglitters.server.concepts.bestiary
 
-import net.allthatglitters.server.Generator.inputDir
+import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.bold
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
@@ -9,28 +9,33 @@ import net.allthatglitters.server.util.italicise
 import java.io.File
 
 object AppendixBestiary : HtmlFile("Appendix: Bestiary", "appendix_bestiary.html") {
-	val creaturesDir = File(inputDir, "creatures")
-	val planes = File(creaturesDir, "planes.json")
+	override val inputDir = File(Generator.inputDir, "creatures")
+	val planes = File(inputDir, "planes.json")
 		.deserialize { Plane.deserialize(it) }
-	val spirits = File(creaturesDir, "spirits.json")
+	val spirits = File(inputDir, "spirits.json")
 		.deserialize { Spirit.deserialize(it) }
 
-	val kingdoms = File(creaturesDir, "categories/phyla.json")
+	val phyla = File(inputDir, "categories/phyla.json")
 		.deserialize { Phylum(it) }
-		.associateBy { it.latin.lowercase() }
+		.associateBy { it.latinName.lowercase() }
 
-	val phyla = kingdoms.values.flatMap { it.genera }
-		.associateBy { it.latin.lowercase() }
-
-	fun lookupKingdom(name: String): Phylum {
-		return kingdoms[name.lowercase()]!!
+	fun lookupPhylum(name: String): Phylum {
+		try {
+			return phyla[name.lowercase()]!!
+		} catch (e: NullPointerException) {
+			throw NoSuchElementException("No phylum named \"$name\"")
+		}
 	}
 
-	fun lookupPhylum(name: String): Genus {
-		return phyla[name.lowercase()]!!
+	val genera = File(inputDir, "categories/genera.json")
+		.deserialize { Genus(lookupPhylum(it.get("phylum").asString), it) }
+		.associateBy { it.latinName.lowercase() }
+
+	fun lookupGenus(name: String): Genus {
+		return genera[name.lowercase()]!!
 	}
 
-	val creatures = File(creaturesDir, "animals.json")
+	val creatures = File(inputDir, "animals.json")
 		.deserialize { Creature(it) }
 
 	override fun appendBody(): HtmlFile {
@@ -45,14 +50,14 @@ object AppendixBestiary : HtmlFile("Appendix: Bestiary", "appendix_bestiary.html
 		}
 
 		appendElement("h4", "The Categories of Monster and Beast")
-		kingdoms.values.forEach {
+		phyla.values.forEach {
 			val div = HtmlObject.background()
-			div.withContent("h5", it.plural)
+			div.withContent("h5", it.commonNamePlural)
 			div.withContent("p", it.description)
 			div.withContent("p", "Subcategories:")
 			it.genera.forEach { phylum ->
 				val p = HtmlObject("p").withStyle("margin-left: 25px;")
-					.withContent(phylum.plural.bold())
+					.withContent(phylum.commonNamePlural.bold())
 					.withContent(": ${phylum.description}")
 				div.withContent(p)
 			}

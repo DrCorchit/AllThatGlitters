@@ -1,14 +1,15 @@
 package net.allthatglitters.server.concepts.armor
 
-import net.allthatglitters.server.Generator.inputDir
+import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlTable
 import java.io.File
 
 object AppendixArmor : HtmlFile("Appendix: Armor &amp; Materials", "appendix_armor.html") {
-	val armorFile = File(inputDir, "misc/armor.json")
-	val armor = armorFile.deserialize { Armor.deserialize(it) }
+	override val inputDir = File(Generator.inputDir, "misc")
+	val armor = File(inputDir, "armor.json")
+		.deserialize { Armor.deserialize(it) }
 	val armorHeaders = arrayOf(
 		"Armor",
 		"Block Chance",
@@ -18,7 +19,7 @@ object AppendixArmor : HtmlFile("Appendix: Armor &amp; Materials", "appendix_arm
 		"Description"
 	)
 
-	val materialsFile = File(inputDir, "misc/materials.json")
+	val materialsFile = File(inputDir, "materials.json")
 	val materials = materialsFile.deserialize { Material.deserialize(it) }
 	val materialsHeaders = arrayOf(
 		"Material",

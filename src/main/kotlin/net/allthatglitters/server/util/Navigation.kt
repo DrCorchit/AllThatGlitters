@@ -57,7 +57,7 @@ class Navigation(
 
 	companion object {
 		fun forChapter(i: Int): Navigation {
-			val max = Generator.chapterTitles.size - 1
+			val max = Generator.chapters.size
 			val prev = if (i > 1) {
 				"Retreat to Chapter ${i - 1}" to "c${i - 1}.html"
 			} else null

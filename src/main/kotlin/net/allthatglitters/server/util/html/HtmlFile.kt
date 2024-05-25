@@ -1,63 +1,82 @@
 package net.allthatglitters.server.util.html
 
-import net.allthatglitters.server.Generator.inputDir
-import net.allthatglitters.server.Generator.outputDir
+import net.allthatglitters.server.Generator
+import net.allthatglitters.server.util.FileSubsection
 import net.allthatglitters.server.util.Header
+import net.allthatglitters.server.util.Subsection
 import java.io.File
 
 open class HtmlFile(val title: String, val fileName: String) {
+	open val inputDir = Generator.inputDir
+	val outputFile = File(Generator.outputDir, "version/${Generator.version}/$fileName")
 
-    val head = HtmlObject("head").withContent(HtmlObject("title").withContent(title))
-    val body = HtmlObject("body")
+	fun getSubsection(title: String, link: String, prefix: String): Subsection {
+		return FileSubsection(this, title, link, prefix)
+	}
 
-    fun appendHeader(): HtmlFile {
-        head.withContent(Header)
-        return this
-    }
+	fun getSubsection(title: String, link: String, generator: () -> String): Subsection {
+		return object : Subsection(this, title, link) {
+			override fun render(): String {
+				return generator.invoke()
+			}
+		}
+	}
 
-    fun append(renderable: Renderable): HtmlFile {
-        body.withContent(renderable)
-        return this
-    }
+	val head = HtmlObject("head").withContent(HtmlObject("title").withContent(title))
+	val body = HtmlObject("body")
 
-    fun append(string: String): HtmlFile {
-        body.withContent(string)
-        return this
-    }
+	fun appendHeader(): HtmlFile {
+		head.withContent(Header)
+		return this
+	}
 
-    fun appendElement(tag: String, text: String): HtmlFile {
-        return append(HtmlObject(tag).withContent(text))
-    }
+	fun appendSubsection(subsection: Subsection) {
+		append(subsection.makeHeader())
+		append(subsection)
+	}
 
-    fun appendTitle(tag: String = "h3"): HtmlFile {
-        return appendElement(tag, title)
-    }
+	fun append(renderable: Renderable): HtmlFile {
+		body.withContent(renderable)
+		return this
+	}
 
-    open fun appendBody(): HtmlFile {
-        val text = File(inputDir, fileName).readText()
-        return append(text)
-    }
+	fun append(string: String): HtmlFile {
+		body.withContent(string)
+		return this
+	}
 
-    fun render(version: String): String {
-        return HtmlObject("html")
-            .withAttribute("lang", "en")
-            .withContent(head)
-            .withContent(body)
-            .render()
-            .replace("{{version}}", version)
-    }
+	fun appendElement(tag: String, text: String): HtmlFile {
+		return append(HtmlObject(tag).withContent(text))
+	}
 
-    fun save(version: String) {
-        saveTo(version, "version/$version/$fileName")
-    }
+	fun appendTitle(tag: String = "h3"): HtmlFile {
+		return appendElement(tag, title)
+	}
 
-    fun saveTo(version: String, destination: String) {
-        val content = "<!DOCTYPE html>\n" + render(version)
-        val outputFile = File(outputDir, destination)
-        outputFile.parentFile.mkdirs()
-        val new = outputFile.createNewFile()
-        outputFile.writeText(content)
-        if (new) println("Created file $outputFile")
-        else println("Wrote file $outputFile")
-    }
+	open fun appendBody(): HtmlFile {
+		val text = File(inputDir, fileName).readText()
+		return append(text)
+	}
+
+	fun render(): String {
+		return HtmlObject("html")
+			.withAttribute("lang", "en")
+			.withContent(head)
+			.withContent(body)
+			.render()
+			.replace("{{version}}", Generator.version)
+	}
+
+	fun save() {
+		val content = "<!DOCTYPE html>\n" + render()
+		outputFile.parentFile.mkdirs()
+		val new = outputFile.createNewFile()
+		outputFile.writeText(content)
+		if (new) println("Created file $outputFile")
+		else println("Wrote file $outputFile")
+	}
+
+	override fun toString(): String {
+		return "$inputDir/$fileName -> $title"
+	}
 }

@@ -23,6 +23,14 @@ class CombatClass(
 ) : Renderable {
 
     override fun render(): String {
+        try {
+        	return renderUnsafe()
+        } catch (e: Exception) {
+            throw Exception("Error rendering class $name", e)
+        }
+    }
+
+    fun renderUnsafe(): String {
         val output = HtmlObject.background()
 
         val nameHtml = HtmlObject("h5")

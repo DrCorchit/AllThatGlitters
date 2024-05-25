@@ -1,12 +1,12 @@
 html { font-family: "Calibri"; color: #ccc; background-color: black; }
 body { margin: 50px; }
 h1 { font-family: "Almendra Display"; font-size: 36pt; text-align: center; color: #cb0; margin: 20px 0; }
-h2, h3, h4, h5, h6 { font-family: "Aboreto"; font-size: 20pt; }
+h2, h3, h4, h5, h6 { font-family: "Aboreto"; }
 h2 { font-size: 16pt; font-weight: normal; text-align: center; color: #cb0; margin: 15px 0 15px 0; }
 h3 { font-size: 24pt; text-align: center; color: #cb0; margin: 10px 0 10px 0 }
-h4, h5, h6 { margin-bottom: 5px; margin-top: 20px; color: #aaa; }
-h5 { font-size: 18pt; }
-h6 { font-size: 14pt; }
+h4 { margin-bottom: 5px; margin-top: 20px; color: #aaa; font-size: 20pt; }
+h5 { margin-bottom: 5px; margin-top: 20px; color: #969696; font-size: 16pt; }
+h6 { margin-bottom: 5px; margin-top: 20px; color: #888; font-size: 14pt; }
 h4:after, h5:after, h6:after {
     content:' ';
     display:block;

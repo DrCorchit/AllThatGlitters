@@ -12,7 +12,6 @@
     "What made you leave your previous life and start adventuring?"
   ],
   "alignment": "Lawful",
-  "limitations": "Deficient in Sorcery.",
   "coreAbilityName": "Shining Armor",
   "coreAbilityDescription": [
     "You have sworn an oath to a nobleman or lady, to protect them with your life and to fight for them in battle. In return, they have provided you with a fine suit of steel plate armor, and several high quality steel weapons.",
@@ -22,8 +21,9 @@
       "content": "Note: You are able to wear your armor even"
     }
   ],
+  "limitations": "Deficient in sorcery.",
   "levelingBonuses": {
-    "1": "+1 to strength and +1 to charisma. Proficiency in defense.",
+    "1": "+1 to strength and +1 to charisma, and expertise in defense.",
     "2": "learn a combat ability from the following list:"
   },
   "startingEquipment": [

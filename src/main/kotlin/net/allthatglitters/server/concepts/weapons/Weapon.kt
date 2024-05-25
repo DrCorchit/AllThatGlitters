@@ -2,9 +2,9 @@ package net.allthatglitters.server.concepts.weapons
 
 import com.google.common.collect.ImmutableSet
 import com.google.gson.JsonObject
-import net.allthatglitters.server.concepts.Attribute
-import net.allthatglitters.server.concepts.items.Item
 import net.allthatglitters.server.concepts.NumDice
+import net.allthatglitters.server.concepts.items.Item
+import net.allthatglitters.server.concepts.sheet.Attribute
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.Renderable
 

@@ -10,7 +10,8 @@
   ],
   "coreAbilityName": "Telekinesis",
   "coreAbilityDescription": "As a psychic prodigy, you begin the game with the knowledge of the spells \"Telekinetic Lift\", \"Lesser Telekinetic Pull\", and \"Telekinetic Throw\". You know these spells by rote and may cast them even if you do not meet the attribute requirements. Psionic spells cost half as many training slots when learned.",
+  "limitations": "Psychics choose a deficiency in two of the following three skills: accuracy, defense, and martial arts",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "At level 1, +1 to intelligence and willpower. Gain proficiency in psyche."
   }
 }
