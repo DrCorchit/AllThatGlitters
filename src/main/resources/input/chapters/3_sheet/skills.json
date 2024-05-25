@@ -5,19 +5,9 @@
     "description": "Describes a player’s accuracy with ranged weapons such as bows and firearms."
   },
   {
-    "name": "Alchemy",
-    "attrs": ["INT"],
-    "description": "Used when attempting to brew a magical potion. Proficiency in this skill affects which magical potions one is able to brew."
-  },
-  {
     "name": "Defense",
     "attrs": ["STR"],
-    "description": "Describes a player's knowledge and practice of defensive tactics. Proficiency bonuses for this skill affect what types of armor and shields can be used in combat."
-  },
-  {
-    "name": "Devotion",
-    "attrs": ["CHA"],
-    "description": "The ability to follow the correct protocols when seeking supernatural aid, with due reverence and sincerity. Used when requesting divine aid or performing conjuration spells."
+    "description": "Describes a player’s knowledge and practice of defensive tactics. Proficiency bonuses for this skill affect what types of armor and shields can be used in combat."
   },
   {
     "name": "Initiative",
@@ -52,7 +42,7 @@
   {
     "name": "Performance",
     "attrs": ["CHA"],
-    "description": "The players ability to sing, dance, play instruments, or otherwise entertain a crowd. Proficiency with this skill implies the ability to play at least one musical instruments."
+    "description": "Captures a player's ability to sing, dance, play instruments, or otherwise entertain a crowd. Proficiency with this skill implies the ability to play at least one musical instruments."
   },
   {
     "name": "Persuasion",

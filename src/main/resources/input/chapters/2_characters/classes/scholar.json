@@ -12,6 +12,6 @@
   "coreAbilityName": "Codex Arcana",
   "coreAbilityDescription": "TODO",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "gain +2 to INT"
   }
 }

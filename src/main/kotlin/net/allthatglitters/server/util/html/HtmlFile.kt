@@ -8,7 +8,18 @@ import java.io.File
 
 open class HtmlFile(val title: String, val fileName: String) {
 	open val inputDir = Generator.inputDir
-	val outputFile = File(Generator.outputDir, "version/${Generator.version}/$fileName")
+	val outputFile = File(Generator.versionedOutputDir, fileName)
+
+	val head = HtmlObject("head").withContent(HtmlObject("title").withContent(title))
+	val body = HtmlObject("body")
+
+//	open fun getHeader(): Renderable {
+//		return Header
+//	}
+//
+//	open fun getBody(): Renderable {
+//		return HtmlString(File(inputDir, fileName).readText())
+//	}
 
 	fun getSubsection(title: String, link: String, prefix: String): Subsection {
 		return FileSubsection(this, title, link, prefix)
@@ -22,13 +33,7 @@ open class HtmlFile(val title: String, val fileName: String) {
 		}
 	}
 
-	val head = HtmlObject("head").withContent(HtmlObject("title").withContent(title))
-	val body = HtmlObject("body")
 
-	fun appendHeader(): HtmlFile {
-		head.withContent(Header)
-		return this
-	}
 
 	fun appendSubsection(subsection: Subsection) {
 		append(subsection.makeHeader())
@@ -53,9 +58,13 @@ open class HtmlFile(val title: String, val fileName: String) {
 		return appendElement(tag, title)
 	}
 
+	open fun appendHeader(): HtmlFile {
+		head.withContent(Header)
+		return this
+	}
+
 	open fun appendBody(): HtmlFile {
-		val text = File(inputDir, fileName).readText()
-		return append(text)
+		return append(File(inputDir, fileName).readText())
 	}
 
 	fun render(): String {

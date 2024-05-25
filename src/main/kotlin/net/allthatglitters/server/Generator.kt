@@ -8,6 +8,7 @@ import net.allthatglitters.server.concepts.bestiary.Phylum
 import net.allthatglitters.server.concepts.items.AppendixItems
 import net.allthatglitters.server.concepts.classes.CharactersChapter
 import net.allthatglitters.server.concepts.magic.AppendixSpells
+import net.allthatglitters.server.concepts.sheet.Sheet
 import net.allthatglitters.server.concepts.sheet.SheetChapter
 import net.allthatglitters.server.concepts.weapons.AppendixWeapons
 import net.allthatglitters.server.util.Collapsible
@@ -16,9 +17,10 @@ import net.allthatglitters.server.util.html.HtmlFile
 import java.io.File
 
 object Generator {
-	val outputDir = File("src/main/resources/output")
-	val inputDir = File("src/main/resources/input")
 	val version = "0"
+	val outputDir = Server.serviceDir
+	val versionedOutputDir = File(outputDir, "version/$version")
+	val inputDir = File("src/main/resources/input")
 
 	val deserializer: Gson
 
@@ -55,15 +57,14 @@ object Generator {
 
 	@JvmStatic
 	fun main(vararg args: String) {
-		File(inputDir, "styles.css").copyTo(File(outputDir, "styles.css"), true)
+		File(inputDir, "styles.css")
+			.copyTo(File(outputDir, "styles.css"), true)
 		println("Copied styles.css")
-		File(inputDir, "chapters/3_sheet/character_sheet.html").copyTo(
-			File(
-				outputDir,
-				"version/$version/character_sheet.html"
-			), true
-		)
-		println("Copied character_sheet.html")
+
+		File(Sheet.inputDir, "styles.css")
+			.copyTo(File(versionedOutputDir, "sheet/styles.css"), true)
+		println("Copied sheet/styles.css")
+		Sheet.appendHeader().appendBody().save()
 
 		HtmlFile("All That Glitters", "index.html")
 			.appendHeader()

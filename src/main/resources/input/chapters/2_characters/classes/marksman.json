@@ -11,6 +11,6 @@
   "coreAbilityName": "Sniping Shot",
   "coreAbilityDescription": "TODO",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "at level 1, gain +1 STR and DEX. "
   }
 }

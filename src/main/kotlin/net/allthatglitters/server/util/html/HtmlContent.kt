@@ -13,10 +13,12 @@ class HtmlContent : Renderable {
 	}
 
 	fun withContent(html: Renderable): HtmlContent {
-		if (html !is HtmlString || html.content.isNotEmpty()) {
-			//No empty strings.
-			content.add(html)
-		}
+		if (html is HtmlContent) {
+			content.addAll(html.content)
+		} else if (html !is HtmlString || html.content.isNotEmpty()) {
+				//No empty strings.
+				content.add(html)
+			}
 		return this
 	}
 

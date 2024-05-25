@@ -47,7 +47,7 @@ object SheetChapter : HtmlFile("What's on my character sheet?", "c3.html") {
 
 	fun getSheetLink(text: String): HtmlObject {
 		return HtmlObject("a")
-			.withAttribute("href", "character_sheet.html")
+			.withAttribute("href", "sheet/character_sheet.html")
 			.withContent(text)
 	}
 
