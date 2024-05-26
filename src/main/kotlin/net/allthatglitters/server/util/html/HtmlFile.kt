@@ -13,14 +13,6 @@ open class HtmlFile(val title: String, val fileName: String) {
 	val head = HtmlObject("head").withContent(HtmlObject("title").withContent(title))
 	val body = HtmlObject("body")
 
-//	open fun getHeader(): Renderable {
-//		return Header
-//	}
-//
-//	open fun getBody(): Renderable {
-//		return HtmlString(File(inputDir, fileName).readText())
-//	}
-
 	fun getSubsection(title: String, link: String, prefix: String): Subsection {
 		return FileSubsection(this, title, link, prefix)
 	}
@@ -76,7 +68,7 @@ open class HtmlFile(val title: String, val fileName: String) {
 			.replace("{{version}}", Generator.version)
 	}
 
-	fun save() {
+	fun save(outputFile: File = this.outputFile) {
 		val content = "<!DOCTYPE html>\n" + render()
 		outputFile.parentFile.mkdirs()
 		val new = outputFile.createNewFile()
