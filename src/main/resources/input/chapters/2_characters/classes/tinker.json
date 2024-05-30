@@ -21,11 +21,12 @@
       "A {{items.crowbar}}"
     ],
     "An adventurer's pack, containing:": [
-      "50+1d100 gold",
+      "2d100 gold",
       "3 days {{items.rations}}",
-      "A {{items.bedroll}}",
+      "A {{items.tent}} or a {{items.bedroll}}, {{items.pillow}}",
       "Two sets of {{items.plain_clothes}}",
-      "A {{items.thread}}"
+      "A {{items.scissors}} and a {{items.thread}}",
+      "A {{items.compass}} and {{items.navigational_tools}}"
     ]
   }
 }

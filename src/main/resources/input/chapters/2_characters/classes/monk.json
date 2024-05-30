@@ -11,6 +11,11 @@
   "coreAbilityName": "Inner Peace",
   "coreAbilityDescription": "While not wearing armor or using a shield, your DC is equal to your dexterity score.",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "gain +2 to {{attr.STR}} and {{attr.DEX}}, plus proficiency in {{skills.martial_arts}}"
+  },
+  "startingEquipment": {
+    "_": [
+
+    ]
   }
 }

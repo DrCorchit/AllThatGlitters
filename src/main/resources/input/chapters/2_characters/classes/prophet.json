@@ -1,10 +1,9 @@
 {
   "name": "Prophet",
-  "altName": "Oracle",
-  "description": "The prophet is an individual called upon by a specific god to bring about religious transformation. Often a firebrand or a heretic, prophets care little for the practical consequences of their actions and instead operate based off of faith and unwavering moral or spiritual convictions. For this reason, they are scorned and hated by religious authorities and may be on the run.",
+  "description": "The prophet is an individual called upon by a specific god to bring about religious transformation. Often a firebrand or a heretic, prophets care little for social conformity and instead operate based off of faith and unwavering moral or spiritual convictions. For this reason, they are scorned and hated by religious authorities and are often on the run.",
   "backstoryPrompts": [
-    "When did you first hear the voice of your god?",
-    "Has anyone ever called you a heretic or condemned you in any way?",
+    "When did you first hear the voice of your god calling you to action?",
+    "Has anyone ever called you a heretic or condemned your teachings?",
     "What is your god's attitude towards those who do not believe?",
     "What made you leave your previous life and start adventuring?"
   ],
@@ -12,6 +11,27 @@
   "coreAbilityName": "Divine Smite",
   "coreAbilityDescription": "TODO",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "gain +2 {{attr.CHA}} and {{attr.NST}}, and proficiency in {{skills.sorcery}}, {{skills.medicine}}, and {{skills.stealth}}."
+  },
+  "startingEquipment": {
+    "_": [
+      "A set of {{items.rags}}, blessed by the divine to provide the same benefits as {{items.mage_robes}}.",
+      "A {{items.magical_staff}}"
+    ],
+    "An adventurer's pack, containing:": [
+      "1d20 gold",
+      "3 days {{items.rations}} and a {{items.canteen}}",
+      "A {{items.bedroll}}",
+      "One set of {{items.plain_clothes}}"
+    ],
+    "Two of the following:": [
+      "A {{items.disguise_kit}}",
+      "A {{items.forgery_kit}}",
+      "A half-dozen {{items.lockpick}}s",
+      "A {{items.instrument}}",
+      "A pair of {{items.spectacles}} ",
+      "A {{items.medical_kit}}",
+      "A {{items.frying_pan}}"
+    ]
   }
 }

@@ -42,7 +42,7 @@ data class Attribute(
 		val DEX by lazy { parse("DEX") }
 		val SPD by lazy { parse("SPD") }
 		val INT by lazy { parse("INT") }
-		val INST by lazy { parse("NST") }
+		val NST by lazy { parse("NST") }
 		val CHA by lazy { parse("CHA") }
 
 		val regex = Sheet.attributes.values

@@ -13,17 +13,30 @@
   ],
   "alignment": "Non-Good",
   "coreAbilityName": "Eldritch Blast",
-  "coreAbilityDescription": "You expend 2 willpower, causing a beam of eerie blue energy to streak from your outstretched hand to your target within 60 feet, dealing 1d10 plus your charisma modifier in bludgeoning damage.",
+  "coreAbilityDescription": "As an action, you may expend 2 willpower to channel the power of your patron. A beam of eerie blue energy streaks from your outstretched hand to a target within 60 feet, dealing 1d10 plus your charisma modifier in force damage.",
   "levelingBonuses": {
-    "1": "gain +1 to {{attr.INT}} and {{attr.CHA}}, and proficiency in persuasion."
+    "1": "gain +1 to {{attr.INT}} and {{attr.CHA}}, and proficiency in {{skills.persuasion}}."
   },
   "startingEquipment": {
-    "_": ["A set of {{items.mage_robes}}", "A {{items.magical_wand}}", "A {{items.dagger}} or {{items.stiletto}}"],
+    "_": [
+      "A set of {{items.mage_robes}}",
+      "A {{items.magical_wand}}",
+      "A {{items.dagger}} or {{items.stiletto}}"
+    ],
     "An adventurer's pack, containing:": [
-      "50+1d100 gold",
-      "2 sets of {{items.plain_clothes}}",
+      "2d100 gold",
       "3 days {{items.rations}}",
-      ""
+      "A {{items.bedroll}}, {{items.pillow}}",
+      "2 sets of {{items.plain_clothes}}",
+      "A {{items.talisman}} and a {{items.bell}}"
+    ],
+    "One of the following items, shoved to the bottom of the pack:": [
+      "{{items.formal_wear}} and a set of {{items.priest_robes}}",
+      "A {{items.cards}}, A human skull, a {[items.candle}}, and an {{items.hourglass}} (gain inspiration)",
+      "A {{items.portable_alchemy_set}} (lose 50 gold)",
+      "A {{items.crystal_ball}} (lose 100 gold)",
+      "A bar of {{items.soap}} and {{items.perfume}}",
+      "An {{items.ink}} and a {{items.scroll}}, plus a {{items.signet_ring}} (gain proficiency in {{skills.literacy}})"
     ]
   }
 }

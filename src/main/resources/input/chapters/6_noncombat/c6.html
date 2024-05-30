@@ -1,6 +1,7 @@
 <p>Although much of the action outside of combat is fairly open-ended, there are specific rules for certain actions:</p>
 <ol>
   <li><a href="#Resting">Resting</a></li>
+  <li><a href="#Working">Working</a></li>
   <li><a href="#Travel">Travel</a></li>
   <li><a href="#Swimming">Swimming</a></li>
   <li><a href="#Falling">Fallling</a></li>
@@ -16,18 +17,51 @@
 </p>
 <ul>
   <li><b>Holiday</b>: The party spends several nights in or around a town, resting and relaxing or drinking and
-    carousing as they will. All HP and AP are restored, and all status conditions are recovered. Doing so costs 10 gold
-    per adventurer per night, and grants 1d12 temporary HP and 1d6 temporary AP. Players roll the dice one for each day
-    on holiday and keep the largest value rolled, up to a maximum of 3.
+    carousing as they will. All HP and AP are restored, and all status conditions are recovered. Holiday costs 10 gold
+    per adventurer per night, and grants 1d6 temporary HP and 1d4 temporary WP. Players can reroll these dice up to
+    three times by taking additional days on holiday.
   </li>
   <li><b>Night's Rest</b>: All HP and AP are restored. The entire party makes camp and sleeps for 8 hours, completing
     the adventuring day. If in the wilderness, this typically involves setting up camp, building a fire, cooking dinner,
     and so forth. In villages and towns, it usually involves a night at an inn. Taking a long rest consumes a day's
-    rations, or 1d10 gold when resting at an inn. It's not possible to long rest inside certain areas, such as a
-    fortress controlled by the enemy or a hostile wilderness or dungeon.
+    rations, or 5 gold when resting at an inn. It's not possible to long rest inside certain areas, such as a fortress
+    controlled by the enemy or a hostile wilderness or dungeon.
   </li>
   <li><b>Breather</b>: The party sits down for an hour or so to dress their wounds and catch their breath. Each player
     recovers 2d8 HP and 2d4 AP. The party can take at most two breathers between long rests, possibly back to back.
+  </li>
+</ul>
+<h4><a id="Working"></a>Working</h4>
+<p>At times, players may decide to earn money by plying various trades. Each trade pays a certain amount on a daily
+  basis, sometimes dependent on one or more skill checks, as follows:
+</p>
+<ul>
+  <li><b>Farming &amp; Manual Labor</b>: Pay is low, but honest. A player who engages in this sort of activity earns 3
+    gold per day.
+  </li>
+  <li><b>Guarding</b>: Offers higher pay than other unskilled jobs at 5 gold per day. If the players are directly
+    attacked while guarding, they roll for {{skills.defense}} to handle the situation. If not, the DM may have the
+    players roll for {{skills.perception}}. If the players fail to observe a crime that was committed, they may be
+    docked a day's pay. Players should roll for these events roughly once for every week of guard duty.
+  </li>
+  <li><b>Performing</b>: At most one player can take this job per tavern per night. The base pay depends on the player's
+    {{skills.performance}} roll: Below 10, no pay. Below 15, 1d10 gold. 15 or above, 1d20 gold. Critical success, 1d100
+    gold. If the player has master level performance, the roll is made with advantage. If performing for more than a few
+    nights, the player can take the average of three nights as their daily pay.
+  </li>
+  <li><b>Hunting &amp; Fishing</b>: Player engaged in this activity make a DT 15 {{skills.survival}} check. On a
+    success, they acquire enough fish, fowl, or game to feed themselves and one other player for one night. On a
+    critical success, they feed the entire party. If near a town, the quarry can instead be sold for 10 or 20 gold,
+    respectively. If attempted in an inhospitable environment, the DM may impose disadvantage or forbid hunting
+    altogether.
+  </li>
+  <li><b>Scribing</b>: The player must be at least proficient in {{skills.literacy}}. They work as a scribe for the day,
+    transcribing dictations, copying manuscripts, and the like. Pay is 10 gold per day.
+  </li>
+  <li><b>Healing</b>: The base pay depends on a {{skills.medicine}} check. Below 12, and the pay is 1d4 gold. 12 or
+    above, and the pay is 1d20. On a critical success, pay is 1d20 and pay is doubled for the next two days. If healing
+    for more than a few days, the player can take the average of three days as their daily pay. (It may be necessary to
+    simulate more than three days if a critical is rolled.)
   </li>
 </ul>
 <h4><a id="Travel"></a>Traveling</h4>

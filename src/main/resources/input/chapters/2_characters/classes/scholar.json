@@ -22,11 +22,11 @@
       "A pair of {{items.spectacles}}"
     ],
     "An adventurer's pack, containing:": [
+      "2d100 gold",
+      "7 days {{items.rations}} and a jug of {{items.water}}",
       "A {{items.tent}}",
       "3 sets of {{items.formal_wear}}",
-      "7 days {{items.rations}}",
-      "An {{items.ink}}",
-      "Three blank {{items.scroll}}s",
+      "An {{items.ink}} and three blank {{items.scroll}}s",
       "A {{items.signet_ring}}",
       "A stick of {{items.chalk}}",
       "A bar of {{items.soap}}"

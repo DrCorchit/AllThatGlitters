@@ -1,6 +1,6 @@
 {
   "name": "Marksman",
-  "altName": "Markswoman",
+  "altName": "Sniperess",
   "description": "Anyone can pick up a bow. With some strength and a little training, one can draw and release an arrow as well. However, only a true marksman can hit a distant target quickly and reliably. Such potency with a bow or musket is what distinguishes an ordinary archer from a true marksman.",
   "backstoryPrompts": [
     "How did you learn to use a bow or musket?",
@@ -11,6 +11,22 @@
   "coreAbilityName": "Sniping Shot",
   "coreAbilityDescription": "When making a ranged attack, you may spend 3 willpower to focus your aim, gaining advantage on the attack roll and lowering the CT by 1.",
   "levelingBonuses": {
-    "1": "gain +1 {{attr.STR}} and {{attr.DEX}}, and proficiency in accuracy and stealth."
+    "1": "gain +1 {{attr.STR}} and {{attr.DEX}}, and proficiency in {{skills.accuracy}} and {{skills.stealth}}."
+  },
+  "startingEquipment": {
+    "_": [
+      "A coat of {{armor.gambeson}}.",
+      "Any standard weapon.",
+      "A {{items.lantern}} with {{items.oil}}",
+      "A piece of {{items.chalk}}"
+    ],
+    "An adventurer's pack, containing the following:": [
+      "30 + 1d100 gold",
+      "7 days {{items.rations}} and a {{items.canteen}}",
+      "A {{items.bedroll}}",
+      "Two sets of {{items.plain_clothes}}",
+      "A {{items.spyglass}} and a {{items.map}}",
+      "{{items.climbing_gear}}"
+    ]
   }
 }

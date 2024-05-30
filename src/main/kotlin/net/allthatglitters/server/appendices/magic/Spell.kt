@@ -132,7 +132,7 @@ class Spell(
 				"dex" -> AttrReq(Attribute.DEX, entry.value.asInt)
 				"spd" -> AttrReq(Attribute.SPD, entry.value.asInt)
 				"int" -> AttrReq(Attribute.INT, entry.value.asInt)
-				"inst" -> AttrReq(Attribute.INST, entry.value.asInt)
+				"nst" -> AttrReq(Attribute.NST, entry.value.asInt)
 				"cha" -> AttrReq(Attribute.CHA, entry.value.asInt)
 				"gold" -> GoldReq(entry.value.asInt)
 				"slots" -> SlotsReq(entry.value.asInt)
@@ -140,6 +140,7 @@ class Spell(
 				"wp" -> WillReq("Evocation Willpower", entry.value.asInt)
 				"concentration" -> WillReq("Concentration Willpower", entry.value.asInt)
 				"location" -> StringReq("Location", entry.value.asString)
+				"limitation" -> StringReq("Limitation", entry.value.asString)
 				"materials" -> StringReq("Materials", entry.value.asString)
 				"spells" -> {
 					object : AbilityReq("Required Spells") {

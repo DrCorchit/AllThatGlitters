@@ -17,15 +17,26 @@
     "1": "gain +1 to {{attr.INT}} and {{attr.CHA}} and proficiency in survival."
   },
   "startingEquipment": {
-    "_": ["A set of {{items.mage_robes}}", "A {{items.magical_staff}}", "A large, pointed hat."],
+    "_": [
+      "A set of {{items.mage_robes}}",
+      "A {{items.magical_staff}}",
+      "A large, pointed hat",
+      "Any small weapon"
+    ],
     "An adventurer's pack, containing:": [
+      "3 days {{items.rations}}",
+      "A {{items.tent}} and {{items.pillow}}",
       "2 sets of {{items.plain_clothes}}",
-      "7 days {{items.rations}}",
-      "3 {{items.candle}}s",
-      "A {{items.hourglass}}",
-      "An {{items.ink}}",
-      "A blank {{scroll}}",
-      "Some {{items.string}}"
+      "3 {{items.candle}}s and a {{items.bell}}",
+      "An {{items.ink}} and a blank {{items.scroll}}"
+    ],
+    "Up to three of the following items, secured in a {{items.rucksack}}:": [
+      "A pair of {{items.spectacles}}",
+      "A bottle of any alcoholic drink",
+      "A pipe and {{items.tobacco}}",
+      "A cup of {{items.salt}}",
+      "A gallon jug of {{items.water}}",
+      "A pair of {{items.scissors}} and some {{items.string}}"
     ]
   }
 }

@@ -23,7 +23,7 @@
       "A {{items.instrument}} of some kind"
     ],
     "An adventurer's pack, containing:": [
-      "20 + 1d20 gold.",
+      "30 + 1d100 gold.",
       "3 days {{items.rations}}.",
       "Two sets of {{items.plain_clothes}}.",
       "One set of {{items.formal_wear}}",
@@ -34,8 +34,7 @@
       "A {{items.mirror}}",
       "{{items.soap}} and {{items.perfume}}",
       "A {{items.disguise_kit}}",
-      "A {{items.thread}}",
-      "A pair of {{items.scissors}}"
+      "A pair of {{items.scissors}} and a {{items.thread}}"
     ]
   }
 }

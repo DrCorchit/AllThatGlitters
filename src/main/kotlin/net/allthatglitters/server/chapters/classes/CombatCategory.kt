@@ -1,6 +1,5 @@
 package net.allthatglitters.server.chapters.classes
 
-import net.allthatglitters.server.chapters.sheet.Sheet
 import net.allthatglitters.server.util.html.HtmlTable
 import net.allthatglitters.server.util.html.Renderable
 

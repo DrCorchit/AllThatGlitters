@@ -75,13 +75,6 @@
     "description": "Allows brewing potions, though less reliably so than a proper alchemical laboratory."
   },
   {
-    "name": "Steel Looking Glass",
-    "cost": 20,
-    "weight": 2,
-    "description": "A finely polished steel mirror.",
-    "key": "steel_mirror"
-  },
-  {
     "name": "Looking Glass",
     "cost": 80,
     "weight": 1,
@@ -165,7 +158,8 @@
     "name": "Block &amp; Tackle",
     "cost": 3,
     "weight": 2,
-    "description": "For lifting weight and multiplying effort when hoisting with ropes."
+    "description": "For lifting weight and multiplying effort when hoisting with ropes.",
+    "key": "block_and_tackle"
   },
   {
     "name": "Medical Kit",
@@ -189,13 +183,14 @@
     "name": "Padlock &amp; Key",
     "cost": 10,
     "weight": 3,
-    "description": "For securing valuables, or denying entry."
+    "description": "For securing valuables, or denying entry.",
+    "key": "lock"
   },
   {
-    "name": "Metal Pole",
+    "name": "Flexible Pole",
     "cost": 2,
-    "weight": 10,
-    "description": "A hollow metal rod ten foot in length and one inch in diameter. Useful for detecting and disarming traps."
+    "weight": 3,
+    "description": "A flexible wooden or bamboo pole ten foot in length and one inch in diameter. Useful for detecting and disarming traps, or vaulting obstacles."
   },
   {
     "name": "Frying Pan",

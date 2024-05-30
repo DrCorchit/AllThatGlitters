@@ -11,9 +11,9 @@
   "alignment": "Non-Evil",
   "coreAbilityName": "Wildshape",
   "coreAbilityDescription": "Wildshape. You have the ability to transform into animals, expending an amount of AP dependent on the animal chosen to do so.",
-  "limitations": "As a druid, you begin with deficiency in two of these three skills: defense, literacy, sleight-of-hand.",
+  "limitations": "As a druid, you begin with deficiency in two of these three skills: {{skills.defense}}, {{skills.literacy}}, {{skills.sleight_of_hand}}.",
   "levelingBonuses": {
-    "1": "gain +2 to {{attr.CHA}} and {{attr.NST}}, and proficiency in medicine and survival."
+    "1": "gain +2 to {{attr.CHA}} and {{attr.NST}}, and proficiency in {{skills.medicine}} and {{skills.survival}}."
   },
   "startingEquipment": {
     "_": [
@@ -24,11 +24,11 @@
       "A {{items.talisman}}"
     ],
     "An adventurer's pack, containing": [
-      "20+1d20 gold",
-      "A {{items.bedroll}}",
-      "1 set of {{items.plain_clothes}}",
+      "1d20 gold",
       "3 days {{items.rations}}",
       "A calabash, usable as a {{items.canteen}}",
+      "A {{items.bedroll}}",
+      "1 set of {{items.plain_clothes}}",
       "A {{items.medical_kit}}"
     ]
   }

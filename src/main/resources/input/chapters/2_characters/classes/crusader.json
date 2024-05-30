@@ -10,7 +10,7 @@
   "alignment": "Lawful",
   "coreAbilityName": "Divine Providence",
   "coreAbilityDescription": "Having taken a solemn oath of service before your God, you may call upon divine providence to bolster you and your allies. Once per short rest, you may take an action and expend 4 willpower to beseech your deity, gaining 1d8 temporary hitpoints and 1d8 bonus holy damage to your next successful weapon attack.",
-  "limitations": "Crusaders start with a deficiency in two out of the following three skills: {{skills.literacy}}, {{skills.nature}}, or {{skills.sleight_of_hand}}.",
+  "limitations": "Crusaders start with a deficiency in two of the following three skills: {{skills.literacy}}, {{skills.nature}}, or {{skills.sleight_of_hand}}.",
   "levelingBonuses": {
     "1": "gain +2 {{attr.STR}} and +2 {{attr.CHA}}, plus proficiency in martial arts.",
     "3": [
@@ -42,13 +42,12 @@
       "Any light weapon and a {{weapons.greatshield}}"
     ],
     "An adventurer's pack, containing:": [
-      "20 + 1d20 gold.",
+      "30 + 1d100 gold",
       "3 days {{items.rations}} and a {{items.canteen}}",
+      "A {{items.bedroll}}, {{items.pillow}}",
       "Two sets of {{items.plain_clothes}}.",
       "One set of {{items.priest_robes}}",
-      "A flask of {{items.holy_water}}",
-      "A {{items.candle}} and ",
-      "A {{items.bedroll}}, {{items.pillow}}"
+      "A {{items.candle}} and a flask of {{items.holy_water}}"
     ],
     "One of the following items:": [
       "A {{items.ram}} (Gain +1 {{attr.STR}})",

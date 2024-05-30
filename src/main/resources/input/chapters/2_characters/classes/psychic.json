@@ -10,8 +10,22 @@
   ],
   "coreAbilityName": "Telekinesis",
   "coreAbilityDescription": "As a psychic prodigy, you begin the game with the knowledge of the spells \"Telekinetic Lift\", \"Lesser Telekinetic Pull\", and \"Telekinetic Throw\". You know these spells by rote and may cast them even if you do not meet the attribute requirements. Psionic spells cost half as many training slots when learned.",
-  "limitations": "Psychics choose a deficiency in two of the following three skills: accuracy, defense, and martial arts",
+  "limitations": "Psychics choose a deficiency in two of the following three skills: {{skills.accuracy}}, {{skills.defense}}, and {{skills.martial_arts}}",
   "levelingBonuses": {
-    "1": "At level 1, +1 to intelligence and willpower. Gain proficiency in psyche."
+    "1": "gain +2 to {{attr.INT}} and {{attr.NST}} and proficiency in {{skills.persuasion}}."
+  },
+  "startingEquipment": {
+    "_": [
+      "A set of {{items.plain_clothes}}",
+      "A {{weapons.dagger}}",
+      "A {{items.lantern}} and {{items.oil}}"
+    ],
+    "An adventurer's pack, containing:": [
+      "2d100 gold",
+      "3 days {{items.rations}} and a {{items.canteen}}",
+      "A {{items.bedroll}}, {{items.pillow}}",
+      "2 sets of {{items.plain_clothes}}",
+      "A {{items.rope}} and a {{items.block_and_tackle}}"
+    ]
   }
 }

@@ -14,7 +14,7 @@
   "alignment": "Lawful",
   "coreAbilityName": "Shining Armor",
   "coreAbilityDescription": [
-    "You have sworn an oath to a nobleman or lady, to protect them with your life and to fight for them in battle. In return, they have provided you with a fine suit of steel plate armor, and several high quality steel weapons.",
+    "You have sworn an oath to a nobleman or lady, to protect them with your life and to fight for them in battle. In return, they have provided you with a fine suit of chainmail, and several high quality steel weapons. They may issue quests from time to time, and also ",
     {
       "tag": "p",
       "style": "margin-left: 25px",
@@ -49,11 +49,11 @@
       "A rapier"
     ],
     "An adventurer's pack, containing:": [
-      "50 + 1d100 gold.",
-      "7 days rations.",
-      "Two sets of regular clothing.",
-      "One set of formal wear.",
-      "A {{items.tent}}"
+      "3d100 gold",
+      "7 days {{items.rations}} and a {{items.canteen}}",
+      "A {{items.tent}}",
+      "Two sets of {{items.plain_clothes}}",
+      "One set of {{items.formal_wear}}"
     ]
   }
 }

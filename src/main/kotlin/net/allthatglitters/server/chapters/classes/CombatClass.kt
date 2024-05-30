@@ -38,7 +38,7 @@ class CombatClass(
 		val nameHtml = HtmlObject("h5")
 			.withContent(HtmlObject("a").withAttribute("id", name))
 			.withContent(name)
-		//if (altName != null) nameHtml.withContent(" ($altName)")
+		if (altName != null) nameHtml.withContent(" ($altName)")
 		output.withContent(nameHtml)
 		output.withContent(description.wrapRaw("p"))
 		output.withContent(
@@ -58,15 +58,16 @@ class CombatClass(
 		coreAbilityDescription.preface(coreAbilityName).wrapRaw("p")
 		output.withContent(coreAbilityDescription)
 
-		if (limitations != null) {
-			output.withBoldedEntry("Limitations", limitations)
-		}
+
 
 		val outerDiv = HtmlObject("div").withClass("background-inner")
 		val button = HtmlObject("button").withClass("collapsible")
 			.withContent("Additional Information")
 		val innerDiv = HtmlObject("div").withClass("content")
 
+		if (limitations != null) {
+			innerDiv.withBoldedEntry("Limitations", limitations)
+		}
 		innerDiv.withBoldedEntry("Leveling Bonuses", "")
 		levelingBonuses.forEach {
 			val atLevel = HtmlObject("p").withContent("At level ${it.key}, ")

@@ -5,8 +5,8 @@ import net.allthatglitters.server.chapters.sheet.Attribute
 enum class School(val adjective: String, val primaryAttr: Attribute) {
     Alchemy("alchemical", Attribute.INT),
     Astrology("astrological", Attribute.INT),
-    Biomancy("biological", Attribute.INST),
-    Psionics("psychic", Attribute.INST),
+    Biomancy("biological", Attribute.NST),
+    Psionics("psychic", Attribute.NST),
     Conjuration("conjuration", Attribute.CHA),
     Elementurgy("elemental", Attribute.CHA),
 }

@@ -1,16 +1,5 @@
 [
-  {
-    "name": "Hiking Boots",
-    "cost": 10,
-    "weight": 2,
-    "description": "Comfortable, so as to accomodate long journeys."
-  },
-  {
-    "name": "Climbing Boots",
-    "cost": 20,
-    "weight": 2,
-    "description": "Includes crampons for the surest of footing."
-  },
+
   {
     "name": "Saddle &amp; Bridle",
     "cost": 20,
@@ -29,6 +18,12 @@
     "weight": 5,
     "description": "Soft and warm. An adventurer need not forsake <i>all</i> comfort.",
     "key": "pillow"
+  },
+  {
+    "name": "Gyroscope",
+    "cost": 25,
+    "weight": 2,
+    "description": "A curious spinning doodad. Much prized by tinkers, and to a lesser extent by street magicians and charlatans."
   },
   {
     "name": "Talisman",

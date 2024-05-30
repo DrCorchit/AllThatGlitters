@@ -24,7 +24,7 @@
       "A {{weapons.grappling_hook}}"
     ],
     "An adventurer's pack, containing:": [
-      "20 + 1d100 gold.",
+      "2d100 gold",
       "3 days {{items.rations}}.",
       "Two sets of {{items.plain_clothes}}.",
       "A pair of {{items.manacles}}"

@@ -8,8 +8,33 @@
     "What made you leave your previous life and start adventuring?"
   ],
   "coreAbilityName": "Battlefield Triage",
-  "coreAbilityDescription": "When you help an ally, you may expend 2 AP to heal them for 2d6 HP.",
+  "coreAbilityDescription": "When you help an ally, you may expend 2 AP to heal them for 1d6 HP.",
   "levelingBonuses": {
-    "1": "gain +1 to STR and WILL"
+    "1": "gain +2 to {{attr.STR}} and {{attr.NST}}, and proficiency in {{skills.defense}} and {{skills.medicine}}"
+  },
+  "startingEquipment": {
+    "_": [
+      "A {{armor.breastplate}}",
+      "Any polearm",
+      "Any standard weapon",
+      "Any small weapon"
+    ],
+    "An adventurer's pack, containing:": [
+      "30 + 1d100 gold",
+      "7 days {{items.rations}} and a {{items.canteen}}.",
+      "A {{items.bedroll}}, {{items.pillow}}",
+      "2 sets of {{items.plain_clothes}}",
+      "A {{items.lantern}} and {{items.oil}}",
+      "A {{items.tinderbox}}",
+      "A {{items.medical_kit}}"
+    ],
+    "Any three of the following:": [
+      "A {{items.rope}}, including a {{items.block_and_tackle}}",
+      "{{items.climbing_gear}}",
+      "A {{items.map}} and {{items.compass}}",
+      "A {{items.instrument}}",
+      "A {{items.hammer}}, {{items.chisel}}, and a {{items.crowbar}}",
+      "A {{items.whistle}}"
+    ]
   }
 }

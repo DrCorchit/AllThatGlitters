@@ -9,10 +9,10 @@
   ],
   "alignment": "Chaotic",
   "coreAbilityName": "Rage",
-  "coreAbilityDescription": "You may spend 5 ability points to enter a rage for 5 combat turns. During a rage, you deal 3 extra damage per weapon attack and take 3 less damage from bludgeoning, slashing, piercing, and fire damage. You may not cast spells, read scrolls, or use consumables without ending your rage.",
-  "limitations": "Due to their careless approach and lack of education, barbarians start with a deficiency in two of the following three skills: defense, literacy, stealth.",
+  "coreAbilityDescription": "You may spend 5 ability points to enter a rage for 5 combat turns. During a rage, you deal 3 extra damage per weapon attack. If you are not wearing armor, you take 3 less damage from bludgeoning, slashing, piercing, and fire damage. You may not cast spells, read scrolls, or use consumables without ending your rage.",
+  "limitations": "Due to their careless approach and lack of formal education, barbarians start with a deficiency in two of the following three skills: {{skills.defense}}, {{skills.literacy}}, {{skills.stealth}}.",
   "levelingBonuses": {
-    "1": "gain +3 to {{attr.STR}} and proficiency in initiative."
+    "1": "gain +3 to {{attr.STR}} and proficiency in {{skills.initiative}}."
   },
   "startingEquipment": {
     "_": ["A set of {{armor.quilted_armor}}"],
@@ -29,7 +29,7 @@
       "A {{weapons.hatchet}}"
     ],
     "An adventurer's pack, containing:": [
-      "30 + 1d20 gold.",
+      "30 + 1d100 gold",
       "3 days {{items.rations}}",
       "A {{items.bedroll}}",
       "Two sets of {{items.plain_clothes}}.",
