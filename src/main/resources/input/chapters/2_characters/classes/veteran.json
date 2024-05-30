@@ -10,6 +10,6 @@
   "coreAbilityName": "Battlefield Triage",
   "coreAbilityDescription": "When you help an ally, you may expend 2 AP to heal them for 2d6 HP.",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "gain +1 to STR and WILL"
   }
 }

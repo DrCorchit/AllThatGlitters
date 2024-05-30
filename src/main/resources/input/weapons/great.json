@@ -4,7 +4,7 @@
     "description": "A knight’s two-handed sword. May be upgraded by a blacksmith to gain <i>Sharp</i> for 150 gold.",
     "damage": "1d10",
     "cost": 150,
-    "modifiers": ["Cut-and-Thrust", "Mordhau: 1d8", "Two-Handed"],
+    "modifiers": ["Cut-and-Thrust", "Mordhau: 1d8", "Parrying 6", "Two-Handed"],
     "requirements": ["10 STR", "Martial Arts Proficiency"]
   },
   {

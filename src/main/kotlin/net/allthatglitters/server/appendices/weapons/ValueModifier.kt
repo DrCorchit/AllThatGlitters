@@ -4,6 +4,7 @@ import net.allthatglitters.server.concepts.NumDice
 
 class ValueModifier<T>(type: Type, val value: T) : Modifier {
 	override val displayName = "${type.displayName}: $value"
+	override val description = type.description
 
 	enum class Type(
 		val displayName: String,

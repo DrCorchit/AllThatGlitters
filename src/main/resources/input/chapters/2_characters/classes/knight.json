@@ -23,20 +23,24 @@
   ],
   "limitations": "Deficient in sorcery.",
   "levelingBonuses": {
-    "1": "+1 to strength and +1 to charisma, and expertise in defense.",
+    "1": "+1 to {{attr.STR}} and +1 to {{attr.CHA}}, and expertise in defense.",
     "2": "learn a combat ability from the following list:"
   },
-  "startingEquipment": [
-    "A set of steel half-plate armor",
-    [
-      "A primary weapon, of one of the following types:",
+  "startingEquipment": {
+    "_": [
+      "A set of steel {{armor.half_plate_armor}}",
+      "An arming sword ({{weapons.shortsword}})",
+      "A {{weapons.shield}}",
+      "A {{items.lantern}}, with one {{items.oil}}.",
+      "A {{items.rope}}"
+    ],
+    "A primary weapon, of one of the following types:": [
       "A bastard sword",
       "A longsword",
       "A bearded axe",
       "A warhammer"
     ],
-    [
-      "A secondary weapon, of one of the following types:",
+    "A secondary weapon, of one of the following types:": [
       "A battle axe",
       "A falchion (broadsword)",
       "An estoc",
@@ -44,17 +48,12 @@
       "A morningstar",
       "A rapier"
     ],
-    "An arming sword (shortsword)",
-    "A shield",
-    [
-      "An adventurer's pack, containing:",
+    "An adventurer's pack, containing:": [
       "50 + 1d100 gold.",
       "7 days rations.",
       "Two sets of regular clothing.",
       "One set of formal wear.",
-      "1 pint of oil"
-    ],
-    "A lantern",
-    "50 feet of rope."
-  ]
+      "A {{items.tent}}"
+    ]
+  }
 }

@@ -12,7 +12,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "A pearl and a pile of gold dust, plus other ingredients costing 50 gold."
     },
@@ -33,7 +33,7 @@
     },
     "casting_reqs": {
       "time": "30 minutes",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "Frog legs and fish scales, plus other ingredients costing 50 gold."
     },
@@ -53,7 +53,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 4,
+      "wp": 4,
       "Location": "Alchemical Laboratory",
       "Materials": "A shard of glass and a vial of mermaid tears, plus other ingredients costing 30 gold."
     },
@@ -73,7 +73,7 @@
     },
     "casting_reqs": {
       "time": "15 minutes",
-      "ap": 4,
+      "wp": 4,
       "Location": "Alchemical Laboratory",
       "Materials": "The tail of a shrew and the wing of a bat, plus other ingredients costing 30 gold."
     }
@@ -91,7 +91,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "1 ounce of fresh blood, taken from a lion or bear, plus additional materials costing 25 gold."
     },
@@ -111,7 +111,7 @@
     },
     "casting_reqs": {
       "time": "100 years",
-      "ap": 30,
+      "wp": 30,
       "Location": "Alchemical Laboratory",
       "Materials": "Unknown, but invariably obtained at extreme price."
     },
@@ -132,7 +132,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "10 four leaf clovers, the yolk of a harpy's egg, plus other ingredients costing 50 gold."
     },
@@ -153,7 +153,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "A pearl and a pile of gold dust, plus other ingredients costing 50 gold."
     },
@@ -174,7 +174,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "10 four leaf clovers, the yolk of a harpy's egg, plus other ingredients costing 50 gold."
     },
@@ -195,7 +195,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "A pearl and a pile of gold dust, plus other ingredients costing 50 gold."
     },
@@ -215,9 +215,9 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
-      "Materials": "A spiderweb, a , plus other ingredients costing 50 gold."
+      "Materials": "A spiderweb, a glowing mushroom, and diamond dust, plus other ingredients costing 50 gold."
     },
     "modifiers": {
       "duration": "Invisibility is extended by 10 minutes for every point of intelligence above 17."
@@ -228,14 +228,14 @@
     "rarity": "academic",
     "discipline": "Pharmacology",
     "type": "enchantment",
-    "effect": "A dark crimson conconction derived from crushed bricks, tar, and grass plucked from between the cracks of a sidewalk. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining immunity to all forms of damage for 1 minute.",
+    "effect": "A dark crimson concoction derived from crushed bricks, tar, and grass plucked from between the cracks of a sidewalk. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining immunity to all forms of damage for 1 minute.",
     "training_reqs": {
       "int": 18,
       "slots": 6
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "A brick, a drop of tar, and freshly plucked grass, plus other ingredients costing 100 gold."
     },
@@ -256,7 +256,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "A pearl and a pile of gold dust, plus other ingredients costing 50 gold."
     },
@@ -277,7 +277,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "A pearl and a pile of gold dust, plus other ingredients costing 50 gold."
     },
@@ -298,7 +298,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": ""
     },
@@ -319,7 +319,7 @@
     },
     "casting_reqs": {
       "time": "1 Hour",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "10 crickets and the foot of a rabbit, plus additional materials costing 50 gold."
     },

@@ -12,7 +12,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 4,
+      "wp": 4,
       "Materials": "A rose entire (with petals and thorns) plus other ingredients costing 20 gold."
     },
     "modifiers": {
@@ -32,7 +32,7 @@
     },
     "casting_reqs": {
       "time": "1 hour",
-      "ap": 10,
+      "wp": 10,
       "Location": "Alchemical Laboratory",
       "Materials": "1 ounce of nitric acid and 3 ounces of brimstone, plus additional materials costing 80 gold."
     },
@@ -54,7 +54,7 @@
     },
     "casting_reqs": {
       "time": "30 minutes",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "A cube of gypsum, and a rotten egg."
     },
@@ -75,7 +75,7 @@
     },
     "casting_reqs": {
       "time": "30 minutes",
-      "ap": 4,
+      "wp": 4,
       "Location": "Alchemical Laboratory",
       "Materials": "Nightshade oil, 4 eyeballs gathered from toads or newts, and additional materials costing 30 gold."
     },
@@ -96,7 +96,7 @@
     },
     "casting_reqs": {
       "time": "2 hours",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "An ounce of thistle oil and an ounce of nettle oil, plus additional materials costing 30 gold."
     },
@@ -117,7 +117,7 @@
     },
     "casting_reqs": {
       "time": "6 hours",
-      "ap": 20,
+      "wp": 20,
       "Location": "Alchemical Laboratory",
       "Materials": "A gargoyle's tongue, ten scales of a dragon, a drop of quicksilver, plus additional materials costing 120 gold."
     },
@@ -137,7 +137,7 @@
     },
     "casting_reqs": {
       "time": "30 minutes",
-      "ap": 4,
+      "wp": 4,
       "Location": "Alchemical Laboratory",
       "Materials": "Alchemical algae and a pinch of bile gathered from the stomach of an ogre, plus additional materials costing 30 gold."
     },
@@ -159,7 +159,7 @@
     },
     "casting_reqs": {
       "time": "30 minutes",
-      "ap": 4,
+      "wp": 4,
       "Location": "Alchemical Laboratory",
       "Materials": "Alchemical butter and a pile of silver dust, plus additional materials costing 30 gold."
     },
@@ -179,7 +179,7 @@
     },
     "casting_reqs": {
       "time": "30 minutes",
-      "ap": 4,
+      "wp": 4,
       "Location": "Alchemical Laboratory",
       "Materials": "Spider fangs and toadstool powder, plus additional materials costing 30 gold."
     },
@@ -200,7 +200,7 @@
     },
     "casting_reqs": {
       "time": "12 hours",
-      "ap": 8,
+      "wp": 8,
       "Location": "Alchemical Laboratory",
       "Materials": "A shard of amber, rust shavings, and a dragon tooth, plus additional materials costing 100 gold."
     },
@@ -220,7 +220,7 @@
     },
     "casting_reqs": {
       "time": "30 minutes",
-      "ap": 6,
+      "wp": 6,
       "Location": "Alchemical Laboratory",
       "Materials": "4 viper fangs, plus additional materials costing 30 gold."
     },

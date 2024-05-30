@@ -7,9 +7,17 @@ class HtmlContent : Renderable {
 		return content.isNotEmpty()
 	}
 
+	override fun asContent(): HtmlContent {
+		return this
+	}
+
 	fun withAll(html: Iterable<Renderable>): HtmlContent {
 		content.addAll(html)
 		return this
+	}
+
+	fun withContent(html: String): HtmlContent {
+		return withContent(HtmlString(html))
 	}
 
 	fun withContent(html: Renderable): HtmlContent {
@@ -19,10 +27,6 @@ class HtmlContent : Renderable {
 				//No empty strings.
 				content.add(html)
 			}
-		return this
-	}
-
-	override fun asContent(): HtmlContent {
 		return this
 	}
 

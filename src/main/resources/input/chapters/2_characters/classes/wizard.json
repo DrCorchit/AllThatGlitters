@@ -14,6 +14,18 @@
   "coreAbilityName": "Favorite Spell",
   "coreAbilityDescription": "Whenever you learn a spell, you may choose to make that spell your favorite. When you cast this spell, you add your willpower modifier to the spell potency in addition to the regular spell potency modifier.",
   "levelingBonuses": {
-    "1": "gain +1 to INT and WILL and proficiency in literacy."
+    "1": "gain +1 to {{attr.INT}} and {{attr.CHA}} and proficiency in survival."
+  },
+  "startingEquipment": {
+    "_": ["A set of {{items.mage_robes}}", "A {{items.magical_staff}}", "A large, pointed hat."],
+    "An adventurer's pack, containing:": [
+      "2 sets of {{items.plain_clothes}}",
+      "7 days {{items.rations}}",
+      "3 {{items.candle}}s",
+      "A {{items.hourglass}}",
+      "An {{items.ink}}",
+      "A blank {{scroll}}",
+      "Some {{items.string}}"
+    ]
   }
 }

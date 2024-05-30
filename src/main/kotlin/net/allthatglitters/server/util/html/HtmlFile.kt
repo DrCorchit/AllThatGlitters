@@ -4,28 +4,38 @@ import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.FileSubsection
 import net.allthatglitters.server.util.Header
 import net.allthatglitters.server.util.Subsection
+import net.allthatglitters.server.util.Templatizer
 import java.io.File
 
 open class HtmlFile(val title: String, val fileName: String) {
 	open val inputDir = Generator.inputDir
 	val outputFile = File(Generator.versionedOutputDir, fileName)
+	open val templatizer: Templatizer = Generator.templatizer
 
+	val subsections = mutableListOf<Subsection>()
 	val head = HtmlObject("head").withContent(HtmlObject("title").withContent(title))
 	val body = HtmlObject("body")
 
-	fun getSubsection(title: String, link: String, prefix: String): Subsection {
-		return FileSubsection(this, title, link, prefix)
+	fun getLink(): HtmlObject {
+		return HtmlObject("a").withAttribute("href", fileName)
+			.withContent(title)
 	}
 
-	fun getSubsection(title: String, link: String, generator: () -> String): Subsection {
-		return object : Subsection(this, title, link) {
-			override fun render(): String {
-				return generator.invoke()
-			}
-		}
+	fun addFileSubsection(title: String, link: String): HtmlFile {
+		val index = subsections.size + 1
+		return addCustomSubsection(FileSubsection(this, title, link, index.toString()))
 	}
 
+	fun addCustomSubsection(subsection: Subsection): HtmlFile {
+		subsections.add(subsection)
+		return this
+	}
 
+	fun getOutline(): HtmlObject {
+		val list = HtmlObject("ol")
+		subsections.forEach { list.withContent(HtmlObject("li").withContent(it.linkTo())) }
+		return list
+	}
 
 	fun appendSubsection(subsection: Subsection) {
 		append(subsection.makeHeader())
@@ -56,20 +66,26 @@ open class HtmlFile(val title: String, val fileName: String) {
 	}
 
 	open fun appendBody(): HtmlFile {
-		return append(File(inputDir, fileName).readText())
+		if (subsections.isEmpty()) {
+			append(File(inputDir, fileName).readText())
+		} else {
+			//append(getOutline())
+			subsections.forEach { appendSubsection(it) }
+		}
+		return this
 	}
 
 	fun render(): String {
-		return HtmlObject("html")
+		return "<!DOCTYPE html>\n" + HtmlObject("html")
 			.withAttribute("lang", "en")
 			.withContent(head)
 			.withContent(body)
 			.render()
-			.replace("{{version}}", Generator.version)
+			.let { templatizer.replace(it) }
 	}
 
 	fun save(outputFile: File = this.outputFile) {
-		val content = "<!DOCTYPE html>\n" + render()
+		val content = render()
 		outputFile.parentFile.mkdirs()
 		val new = outputFile.createNewFile()
 		outputFile.writeText(content)

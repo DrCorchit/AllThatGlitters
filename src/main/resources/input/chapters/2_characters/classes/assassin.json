@@ -11,32 +11,31 @@
   ],
   "alignment": "Non-Good",
   "coreAbilityName": "Assassination",
-  "coreAbilityDescription": "You may expend 2 willpower to convert an ordinary attack into an assassination attempt. If the attack results in a critical hit, it becomes an assassination, damaging an enemy by 15 in addition to your normal weapon damage.",
+  "coreAbilityDescription": "You may expend 2 willpower to plan an assassination. On the next turn, the first attack that results in a critical hit becomes an assassination and deals an additional 15 damage.",
   "limitations": "Due to their extremely specialized skillset, assassins have a deficiency in two of the following three skills: devotion, defense, or survival.",
   "levelingBonuses": {
-    "1": "gain proficiency in martial arts and mobility."
+    "1": "gain +1 to {{attr.STR}} and {{attr.DEX}}, and proficiency in martial arts and mobility."
   },
-  "startingEquipment": [
-    "A set of Leather Armor.",
-    [
-      "An adventurer's pack, containing:",
-      "20 + 1d100 gold.",
-      "3 days rations.",
-      "Two sets of regular clothing.",
-      "One set of formal wear.",
-      "A disguise kit.",
-      "A lockpicking kit.",
-      "A pair of manacles"
+  "startingEquipment": {
+    "_": [
+      "A set of {{armor.leather_armor}}.",
+      "Any two {{weapons.modifiers.nimble}} weapons",
+      "A {{weapons.buckler}}",
+      "Any two small weapons",
+      "A vial of neurotoxic poison",
+      "A dozen {{weapons.throwing_knives}} or {{weapons.shuriken}}s",
+      "A {{weapons.grappling_hook}}"
     ],
-    "Three vials of neurotoxic poison.",
-    "12 Throwing knives.",
-    "50 feet of rope.",
-    "A grappling hook.",
-    [
-      "Any one of the following:",
-      "A nimble weapon and a buckler",
-      "Any two nimble weapons",
-      "A dagger, a stiletto, and a tanto blade."
+    "An adventurer's pack, containing:": [
+      "20 + 1d100 gold.",
+      "3 days {{items.rations}}.",
+      "A {{items.bedroll}}",
+      "Two sets of {{items.plain_clothes}}.",
+      "One set of {{items.formal_wear}}",
+      "A {{items.disguise_kit}}",
+      "A dozen {{items.lockpick}}s",
+      "A pair of {{items.manacles}}",
+      "A {{items.rope}}"
     ]
-  ]
+  }
 }

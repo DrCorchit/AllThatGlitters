@@ -14,12 +14,12 @@
     "note": "",
     "training_reqs": {
       "int": 12,
-      "will": 11,
+      "cha": 11,
       "slots": 3
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 2,
+      "wp": 2,
       "concentration": 0
     },
     "modifiers": {

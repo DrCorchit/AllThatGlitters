@@ -10,6 +10,6 @@
   "coreAbilityName": "Animal Companion",
   "coreAbilityDescription": "TODO",
   "levelingBonuses": {
-    "1": "gain proficiency in survival"
+    "1": "gain +1 to {{attr.CHA}} and {{attr.DEX}}, and proficiency in survival"
   }
 }

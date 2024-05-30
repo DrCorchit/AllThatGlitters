@@ -1,6 +1,6 @@
 {
-  "name": "Warlock",
-  "altName": "Witch",
+  "name": "Witch",
+  "altName": "Warlock",
   "description": [
     "Witches and warlocks are a diverse sort, hailing from many walks of life. You may find one in a palace in the very heart of luxury, another in a dingy cave or a squalid coven, and a third in a quaint shack amidst a great forest. Wherever they are found, witches are defined by their immense power, gained from their pact with a supernatural entity. The terms of these pacts are as diverse and as varied as warlocks themselves, and bring danger, madness, and power in equal measure.",
     "Such pacts are usually made with demonic or fey beings, for angels and dragons have little use of pacts. Demonic patrons typically allow their supplicants to dispose of their power in whatever manner they wish, in exchange for enslavement in the afterlife. Conversely, fey constantly demand small (or not-so-small) favors, but care very little for their supplicant’s eternal fate."
@@ -15,6 +15,15 @@
   "coreAbilityName": "Eldritch Blast",
   "coreAbilityDescription": "You expend 2 willpower, causing a beam of eerie blue energy to streak from your outstretched hand to your target within 60 feet, dealing 1d10 plus your charisma modifier in bludgeoning damage.",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "gain +1 to {{attr.INT}} and {{attr.CHA}}, and proficiency in persuasion."
+  },
+  "startingEquipment": {
+    "_": ["A set of {{items.mage_robes}}", "A {{items.magical_wand}}", "A {{items.dagger}} or {{items.stiletto}}"],
+    "An adventurer's pack, containing:": [
+      "50+1d100 gold",
+      "2 sets of {{items.plain_clothes}}",
+      "3 days {{items.rations}}",
+      ""
+    ]
   }
 }

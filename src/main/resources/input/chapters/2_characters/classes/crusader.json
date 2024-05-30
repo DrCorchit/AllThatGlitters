@@ -1,6 +1,6 @@
 {
   "name": "Crusader",
-  "description": "The crusader offers their services to a chosen deity by swearing a sincere theological oath. As long as the oath is kept, their powers never wane and their enemies are smitten down before them. But even the most devoted mortal may at times be sorely tempted to break their oath. Should the temptation prove too much, the crusader may find themselves tumbling down a new path altogether, of the oathbreaker.",
+  "description": "The crusader offers their services to a chosen deity by swearing a sincere theological oath. As long as the oath is kept, their powers never wane and their enemies are smitten down before them. But even the most devoted mortal may at times be sorely tempted to break such an oath. Should the temptation prove too much, the crusader may find themselves tumbling down the dark path of the oathbreaker.",
   "backstoryPrompts": [
     "What made you swear fealty to one particular deity?",
     "Do you ever feel tempted to break your oath?",
@@ -8,10 +8,53 @@
     "What made you leave your previous life and start adventuring?"
   ],
   "alignment": "Lawful",
-  "coreAbilityName": "Divine Oath",
-  "coreAbilityDescription": "TODO",
-  "limitations": "Crusaders start with a deficiency in ",
+  "coreAbilityName": "Divine Providence",
+  "coreAbilityDescription": "Having taken a solemn oath of service before your God, you may call upon divine providence to bolster you and your allies. Once per short rest, you may take an action and expend 4 willpower to beseech your deity, gaining 1d8 temporary hitpoints and 1d8 bonus holy damage to your next successful weapon attack.",
+  "limitations": "Crusaders start with a deficiency in two out of the following three skills: {{skills.literacy}}, {{skills.nature}}, or {{skills.sleight_of_hand}}.",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "gain +2 {{attr.STR}} and +2 {{attr.CHA}}, plus proficiency in martial arts.",
+    "3": [
+      "your god calls you to a deeper level of devotion. During your next night's rest, you behold a vision of a sacred chalice and a righteous blade. You may reach out and touch one of these relics, so embarking on the path of either the <i>cleric</i> or the <i>holy paladin</i>:",
+      {
+        "tag": "ul",
+        "content": [
+          {
+            "tag": "li",
+            "content": "As a cleric, your party shares in your fortitude when you pray to your deity. Your divine providence grants allies 1d8 temporary hitpoints. You also gain proficiency in {{skills.medicine}}."
+          },
+          {
+            "tag": "li",
+            "content": "As a paladin, your prayers kindle divine ardor in the hearts of your companions. After invoking divine providence, each party member gains a bonus of 1d8 to their next weapon or spell attack. You also gain proficiency in {{skills.defense}}"
+          }
+        ]
+      }
+    ]
+  },
+  "startingEquipment": {
+    "_": [
+      "A steel {{armor.hauberk}}.",
+      "A small weapon",
+      "3 {{items.torch}}es"
+    ],
+    "A weapon of one of the following types:": [
+      "Any great weapon or polearm",
+      "Any standard weapon and a {{weapons.shield}}",
+      "Any light weapon and a {{weapons.greatshield}}"
+    ],
+    "An adventurer's pack, containing:": [
+      "20 + 1d20 gold.",
+      "3 days {{items.rations}} and a {{items.canteen}}",
+      "Two sets of {{items.plain_clothes}}.",
+      "One set of {{items.priest_robes}}",
+      "A flask of {{items.holy_water}}",
+      "A {{items.candle}} and ",
+      "A {{items.bedroll}}, {{items.pillow}}"
+    ],
+    "One of the following items:": [
+      "A {{items.ram}} (Gain +1 {{attr.STR}})",
+      "A {{items.instrument}} (Gain proficiency in {{skills.performance}})",
+      "A {{weapons.hand_crossbow}} and {{items.quiver}} with two dozen arrows. (Gain proficiency in {{skills.accuracy}})",
+      "A set of {{items.climbing_gear}}. (Gain proficiency in {{skills.mobility}})"
+    ]
   }
 }

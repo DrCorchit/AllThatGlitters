@@ -85,7 +85,7 @@ open class HtmlObject(
 
 	companion object {
 		val newlineBlacklist =
-			setOf("a", "p", "b", "i", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
+			setOf("a", "p", "b", "i", "u", "span", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
 
 		fun boldedEntry(tag: String, bold: String, content: String): HtmlObject {
 			return HtmlObject(tag).withContent("${bold.bold()}: $content")

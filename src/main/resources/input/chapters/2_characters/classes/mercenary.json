@@ -12,5 +12,22 @@
   "coreAbilityDescription": "You have associations with a mercenaries guild, which connects individuals of martial prowess with clients in need of muscle. This mercenary guild positions you well to take on mercenary contracts and meet trainers for various skills: defense, martial arts, and even sorcery.",
   "levelingBonuses": {
     "1": "TODO"
+  },
+  "startingEquipment": {
+    "_": [
+      "A set of {{armor.breastplate}}.",
+      "Any two standard weapons",
+      "A {{weapons.buckler}}",
+      "Any small weapon",
+      "A dozen {{weapons.throwing_knives}}",
+      "A {{items.rope}}",
+      "A {{weapons.grappling_hook}}"
+    ],
+    "An adventurer's pack, containing:": [
+      "20 + 1d100 gold.",
+      "3 days {{items.rations}}.",
+      "Two sets of {{items.plain_clothes}}.",
+      "A pair of {{items.manacles}}"
+    ]
   }
 }

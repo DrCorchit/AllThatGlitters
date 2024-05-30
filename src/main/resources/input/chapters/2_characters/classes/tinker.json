@@ -12,5 +12,20 @@
   "coreAbilityDescription": "TODO",
   "levelingBonuses": {
     "1": "TODO"
+  },
+  "startingEquipment": {
+    "_": [
+      "A set of {{items.plain_clothes}}",
+      "A {{weapons.shortsword}} and a {{weapons.dagger}}",
+      "A {{items.hammer}} and {{items.chisel}}",
+      "A {{items.crowbar}}"
+    ],
+    "An adventurer's pack, containing:": [
+      "50+1d100 gold",
+      "3 days {{items.rations}}",
+      "A {{items.bedroll}}",
+      "Two sets of {{items.plain_clothes}}",
+      "A {{items.thread}}"
+    ]
   }
 }

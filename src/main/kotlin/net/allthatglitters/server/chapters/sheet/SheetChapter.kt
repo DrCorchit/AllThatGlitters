@@ -11,16 +11,16 @@ import java.io.File
 object SheetChapter : HtmlFile("What's on my character sheet?", "c3.html") {
 	override val inputDir = File(Generator.inputDir, "chapters/3_sheet")
 
-	val subsections = listOf(
-		getSubsection("Character Information", "info", "1"),
-		getSubsection("Statistics", "stats", "2"),
-		AttributesSubsection,
-		getSubsection("Equipment", "equipment", "4"),
-		SkillsSubsection,
-		getSubsection("Spells &amp; Abilities", "abilities", "6"),
-		getSubsection("Backstory &amp; Personality", "backstory", "7"),
-		getSubsection("Inventory", "inventory", "8")
-	)
+	init {
+		addFileSubsection("Character Information", "info")
+		addFileSubsection("Statistics", "stats")
+		addCustomSubsection(AttributesSubsection)
+		addFileSubsection("Equipment", "equipment")
+		addCustomSubsection(SkillsSubsection)
+		addFileSubsection("Spells &amp; Abilities", "abilities")
+		addFileSubsection("Backstory &amp; Personality", "backstory")
+		addFileSubsection("Inventory", "inventory")
+	}
 
 	override fun appendBody(): HtmlFile {
 		val intro = HtmlObject("p")
@@ -28,9 +28,7 @@ object SheetChapter : HtmlFile("What's on my character sheet?", "c3.html") {
 			.withContent(getSheetLink("here"))
 			.withContent(", is divided into ${subsections.size} sections:")
 		append(intro)
-		val list = HtmlObject("ol")
-		subsections.forEach { list.withContent(HtmlObject("li").withContent(it.linkTo())) }
-		append(list)
+		append(getOutline())
 		subsections.forEach { appendSubsection(it) }
 		return this
 	}

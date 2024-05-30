@@ -1,7 +1,7 @@
 [
   {
-    "name": "Throwing Knife",
-    "description": "A knife specially designed to be hurled.",
+    "name": "Throwing Knives",
+    "description": "Knives specially designed to be hurled.",
     "damage": "1d4",
     "cost": 1,
     "modifiers": ["Piercing", "Sharp", "Throwable", "Light", "Range: 30/90"],

@@ -1,5 +1,6 @@
 package net.allthatglitters.server.appendices.items
 
+import com.drcorchit.justice.utils.StringUtils.normalize
 import net.allthatglitters.server.Generator
 import net.allthatglitters.server.appendices.armor.AppendixArmor
 import net.allthatglitters.server.appendices.bestiary.AppendixBestiary
@@ -10,29 +11,33 @@ import net.allthatglitters.server.util.html.HtmlObject
 import java.io.File
 
 object AppendixItems : HtmlFile("Appendix: Mercantile Goods", "appendix_items.html") {
-
 	override val inputDir = File(Generator.inputDir, "items")
+	val itemCategories = mapOf(
+		"Tools" to getItems("tools.json"),
+		"Clothing" to getItems("clothing.json"),
+		"Consumables" to getItems("consumables.json"),
+		"Armor" to getArmor(),
+		"Weapons" to getWeapons(),
+		"Materials" to getMaterials(),
+		"Animals" to getAnimals(),
+		"Containers" to getItems("containers.json"),
+		"Miscellaneous" to getItems("miscellaneous.json")
+	)
+
+	val items by lazy {
+		itemCategories.values.flatten().associateBy { it.key }
+	}
+
+	fun lookupItem(name: String): Item {
+		return items[name.normalize()] ?: throw NoSuchElementException("No such item: $name")
+	}
 
 	override fun appendBody(): HtmlFile {
-		appendItems("Tools")
-		appendItems("Consumables")
-		appendItems("Containers")
-		appendItems("Weapons", getWeapons())
-		appendItems("Armor", getArmor())
-		appendItems("Materials", getMaterials())
-		appendItems("Animals", getAnimals())
-		appendItems("Miscellaneous")
-
-
-		appendElement("h4", "Creatures")
-		val animals = HtmlObject.flexBox()
-		//getCreatures().forEach { animals.withContent(it) }
-		//getCreatures().forEach { append(it) }
-		append(animals)
+		itemCategories.forEach { (category, items) -> appendItems(category, items) }
 		return this
 	}
 
-	private fun appendItems(name: String, list: List<Item> = getItems("${name.lowercase()}.json")) {
+	private fun appendItems(name: String, list: List<Item>) {
 		appendElement("h4", name)
 		val items = HtmlObject.flexBox()
 		list.sortedBy { it.name }.forEach { items.withContent(it) }
@@ -48,7 +53,7 @@ object AppendixItems : HtmlFile("Appendix: Mercantile Goods", "appendix_items.ht
 	}
 
 	private fun getArmor(): List<Item> {
-		return AppendixArmor.armor.map { it.item }
+		return AppendixArmor.armor.values.map { it.item }
 	}
 
 	private fun getMaterials(): List<Item> {
@@ -58,17 +63,4 @@ object AppendixItems : HtmlFile("Appendix: Mercantile Goods", "appendix_items.ht
 	private fun getAnimals(): List<Item> {
 		return AppendixBestiary.creatures.map { it.item }
 	}
-
-	/*
-	fun getCreatures(): List<Creature> {
-		val creaturesFile = File(rootFile, "creatures/animals.json")
-		if (creaturesFile.exists()) {
-			return creaturesFile.readText().let { JsonParser.parseString(it) }
-				.asJsonArray.map { Creature.deserialize(it.asJsonObject) }
-		} else {
-			println("Warning: file \"$creaturesFile\" not found")
-			return listOf()
-		}
-	}
-	 */
 }

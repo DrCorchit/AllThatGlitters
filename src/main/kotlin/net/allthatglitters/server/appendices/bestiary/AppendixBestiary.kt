@@ -1,5 +1,6 @@
 package net.allthatglitters.server.appendices.bestiary
 
+import com.drcorchit.justice.utils.StringUtils.normalize
 import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.bold
 import net.allthatglitters.server.util.deserialize
@@ -17,11 +18,11 @@ object AppendixBestiary : HtmlFile("Appendix: Bestiary", "appendix_bestiary.html
 
 	val phyla = File(inputDir, "categories/phyla.json")
 		.deserialize { Phylum(it) }
-		.associateBy { it.latinName.lowercase() }
+		.associateBy { it.latinName.normalize() }
 
 	fun lookupPhylum(name: String): Phylum {
 		try {
-			return phyla[name.lowercase()]!!
+			return phyla[name.normalize()]!!
 		} catch (e: NullPointerException) {
 			throw NoSuchElementException("No phylum named \"$name\"")
 		}
@@ -29,10 +30,10 @@ object AppendixBestiary : HtmlFile("Appendix: Bestiary", "appendix_bestiary.html
 
 	val genera = File(inputDir, "categories/genera.json")
 		.deserialize { Genus(lookupPhylum(it.get("phylum").asString), it) }
-		.associateBy { it.latinName.lowercase() }
+		.associateBy { it.latinName.normalize() }
 
 	fun lookupGenus(name: String): Genus {
-		return genera[name.lowercase()]!!
+		return genera[name.normalize()]!!
 	}
 
 	val creatures = File(inputDir, "animals.json")

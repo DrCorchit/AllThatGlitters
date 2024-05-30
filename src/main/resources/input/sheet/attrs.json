@@ -27,15 +27,15 @@
     "interpretation": "1 Intelligence point equals 10 points of IQ"
   },
   {
-    "name": "Charisma",
-    "abbr": "CHA",
-    "description": "Social and communication skills",
-    "effects": ["Natural and Conjuration spell power", "Devotion, Nature, Performance, and Persuasion skills"]
+    "name": "Instinct",
+    "abbr": "NST",
+    "description": "Innate or intuitive skills and knowledge",
+    "effects": ["Natural and Conjuration spell power", "Nature, Perception, Sorcery, and Survival skills skills"]
   },
   {
-    "name": "Willpower",
-    "abbr": "WILL",
+    "name": "Charisma",
+    "abbr": "CHA",
     "description": "Force of personality and determination to succeed",
-    "effects": ["Elemental and Psychic spell potency", "Maximum Ability Points", "Perception, Sorcery, and Survival skills"]
+    "effects": ["Elemental and Psychic spell potency", "Maximum Willpower", "Performance, persuasion, and perception skills"]
   }
 ]

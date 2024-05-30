@@ -8,12 +8,12 @@
     "duration": "10 min",
     "effect": "You gain knowledge of the language of beasts, and may converse with them freely.",
     "training_reqs": {
-      "cha": 12,
+      "nst": 12,
       "slots": 3
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 2
+      "wp": 2
     },
     "modifiers": {
       "Duration": "Spell duration increases by 10 minutes for every point of charisma above 12."

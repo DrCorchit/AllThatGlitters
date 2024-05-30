@@ -12,17 +12,17 @@
     "effect": "A bolt of blue lightning leaps from your outstretched hand to a an enemy within range, and then to an additional enemy within 10 feet, if there is one. All targets take 1d8 lightning damage.",
     "training_reqs": {
       "int": 15,
-      "will": 15,
+      "cha": 15,
       "slots": 5
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 5,
+      "wp": 5,
       "concentration": 1
     },
     "modifiers": {
       "targets": "The lightning strikes one additional target per point of intelligence above 15.",
-      "Damage": "The lightning deals one additional damage per point of willpower above 15."
+      "Damage": "The lightning deals one additional damage per point of charisma above 15."
     }
   }
 ]

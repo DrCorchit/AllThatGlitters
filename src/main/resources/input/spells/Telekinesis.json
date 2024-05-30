@@ -9,12 +9,12 @@
       "range": 50
     },
     "training_reqs": {
-      "will": 11,
+      "cha": 11,
       "slots": 2
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 1,
+      "wp": 1,
       "concentration": 1
     },
     "effect": "An object weighing less than 20 pounds responds to telekinetic impulse, rising to hover 3 feet above the ground. The object can be pushed or rotated while levitated without interrupting the spell.",
@@ -35,7 +35,7 @@
     },
     "training_reqs": {
       "int": 13,
-      "will": 15,
+      "cha": 15,
       "slots": 4,
       "spells": [
         "Levitate"
@@ -43,7 +43,7 @@
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 1,
+      "wp": 1,
       "concentration": 1
     },
     "effect": "Via subtle telekinetic impulses, the caster manipulates a target weighing less than 2 pounds with great precision, moving or rotating it at will. The object moves at a maximum speed of 5 ft/s and may not be rotated in such a way that any part of its outer boundary exceeds maximum speed relative to the center of mass. There is no limit to how many times this spell may be cast upon the same object or how much weight may be moved, provided all casters act in concert.",
@@ -64,12 +64,12 @@
       "range": 50
     },
     "training_reqs": {
-      "will": 13,
+      "cha": 13,
       "slots": 2
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 2,
+      "wp": 2,
       "concentration": 1
     },
     "effect": "A target weighing less than 20 pounds is drawn to the beckoning fingers of the caster's outstretched hand, at a rate of 2 ft/s.",
@@ -91,7 +91,7 @@
     },
     "training_reqs": {
       "int": 12,
-      "will": 14,
+      "cha": 14,
       "slots": 3,
       "spells": [
         "Lesser Telekinetic Pull"
@@ -99,7 +99,7 @@
     },
     "casting_reqs": {
       "time": "2 Actions",
-      "ap": 3,
+      "wp": 3,
       "concentration": 1
     },
     "effect": "A target weighing less than 250 pounds is drawn towards the midpoint of the caster's outstretched hands, at a rate of 10 ft/s.",
@@ -118,7 +118,7 @@
       "range": 5
     },
     "training_reqs": {
-      "will": 12,
+      "cha": 12,
       "slots": 2,
       "spells": [
         "Lesser Telekinetic Pull"
@@ -126,7 +126,7 @@
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 2
+      "wp": 2
     },
     "effect": "An object within range (that is subject to a telekinetic positioning spell under your concentration) is launched towards a destination you choose. As a projectile, the object behaves as a thrown projectile, using your accuracy skill. If it hits, it deals 1d10 bludgeoning or piercing damage, depending on the shape of the object. The projectile's speed depends on the weight of the object. If the object weighs one pound or less, it moves at 300 ft/s. Otherwise, its speed is 300 ft/s divided by its weight in pounds.",
     "note": "This terminates any telekinetic spells currently under concentration.",
@@ -148,7 +148,7 @@
     },
     "training_reqs": {
       "int": 13,
-      "will": 15,
+      "cha": 15,
       "slots": 3,
       "spells": [
         "Telekinetic Throw"
@@ -156,7 +156,7 @@
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 3
+      "wp": 3
     },
     "effect": "With a blast of psionic power, the caster deals 1d8 force damage to both allies and enemies within the radius, knocking them back by 5 feet and causing them to fall prone. Targets in the affected area make a strength saving throw equal to the caster's willpower stat. On success, targets take half damage and are not knocked prone.",
     "modifiers": {
@@ -176,12 +176,12 @@
     },
     "training_reqs": {
       "int": 12,
-      "will": 14,
+      "cha": 14,
       "slots": 2
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 3,
+      "wp": 3,
       "concentration": 1
     },
     "effect": "An invisible wall of telekinetic impulse appears in the chosen location. The wall prevents the passage of people and objects except for the spellcaster and allies. The wall can absorb at most 50 damage before concentration fails and the spell must be recast.",

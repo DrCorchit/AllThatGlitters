@@ -7,6 +7,7 @@ import net.allthatglitters.server.appendices.items.Item
 import net.allthatglitters.server.chapters.sheet.Attribute
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.Renderable
+import net.allthatglitters.server.util.underline
 
 class Weapon(
 	val name: String,
@@ -19,6 +20,13 @@ class Weapon(
 
 	val item: Item by lazy {
 		Item(name, description, cost, 1)
+	}
+
+	fun toTooltip() : HtmlObject {
+		val tooltip = "$description Damage: $damage"
+		return HtmlObject("span")
+			.withAttribute("data-tooltip", tooltip)
+			.withContent(name.lowercase().underline())
 	}
 
 	override fun render(): String {

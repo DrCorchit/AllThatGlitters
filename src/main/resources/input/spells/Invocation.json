@@ -15,17 +15,17 @@
     "note": "The same creature cannot be damaged by this spell more than once per round.",
     "training_reqs": {
       "int": 13,
-      "cha": 15,
-      "will": 15,
+      "nst": 15,
+      "nst": 15,
       "slots": 3
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 5,
+      "wp": 5,
       "concentration": 2
     },
     "modifiers": {
-      "Damage": "The damaged is increased by 1 for each point of willpower above 15.",
+      "Damage": "The damaged is increased by 1 for each point of charisma above 15.",
       "dualcast": "The spell's radius is doubled."
     }
   },
@@ -45,13 +45,13 @@
     "note": "The same creature cannot be damaged by this spell more than once per round.",
     "training_reqs": {
       "int": 13,
+      "nst": 15,
       "cha": 15,
-      "will": 15,
       "slots": 3
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 5,
+      "wp": 5,
       "concentration": 2
     },
     "modifiers": {

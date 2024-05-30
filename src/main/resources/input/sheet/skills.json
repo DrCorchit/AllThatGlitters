@@ -17,7 +17,7 @@
   {
     "name": "Literacy",
     "attrs": ["INT"],
-    "description": "Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Used when performing alchemical experiments or casting astrological spells."
+    "description": "Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Deficiency in this skill normally indicates that the character is illiterate."
   },
   {
     "name": "Martial Arts",
@@ -36,7 +36,7 @@
   },
   {
     "name": "Nature",
-    "attrs": ["CHA"],
+    "attrs": ["NST"],
     "description": "Measures background knowledge that would usually be obtained by spending time in nature or around animals. Used when casting nature spells."
   },
   {
@@ -51,7 +51,7 @@
   },
   {
     "name": "Perception",
-    "attrs": ["WILL", "CHA"],
+    "attrs": ["NST", "CHA"],
     "description": "The ability to discern more than is immediately obvious. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat."
   },
   {
@@ -61,7 +61,7 @@
   },
   {
     "name": "Sorcery",
-    "attrs": ["WILL"],
+    "attrs": ["NST"],
     "description": "The ability to reach into one's inner magical reserves. Used when casting elemental magic."
   },
   {
@@ -71,7 +71,7 @@
   },
   {
     "name": "Survival",
-    "attrs": ["WILL"],
+    "attrs": ["NST"],
     "description": "Measures general survival skills, including the ability to recognize threats, build shelter, and live off the land. Used when attempting to recognize monsters at the start of combat."
   }
 ]

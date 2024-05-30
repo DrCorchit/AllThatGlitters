@@ -1,10 +1,10 @@
-html { font-family: "Calibri"; color: #ccc; background-color: black; }
+html { font-family: "Calibri"; color: #CCC; background-color: black; }
 body { margin: 50px; }
 h1 { font-family: "Almendra Display"; font-size: 36pt; text-align: center; color: #cb0; margin: 20px 0; }
 h2, h3, h4, h5, h6 { font-family: "Aboreto"; }
 h2 { font-size: 16pt; font-weight: normal; text-align: center; color: #cb0; margin: 15px 0 15px 0; }
-h3 { font-size: 24pt; text-align: center; color: #cb0; margin: 10px 0 10px 0 }
-h4 { margin-bottom: 5px; margin-top: 20px; color: #aaa; font-size: 20pt; }
+h3 { font-size: 24pt; text-align: center; color: #CB0; margin: 10px 0 10px 0 }
+h4 { margin-bottom: 5px; margin-top: 20px; color: #AAA; font-size: 20pt; }
 h5 { margin-bottom: 5px; margin-top: 20px; color: #969696; font-size: 16pt; }
 h6 { margin-bottom: 5px; margin-top: 20px; color: #888; font-size: 14pt; }
 h4:after, h5:after, h6:after {
@@ -15,8 +15,8 @@ h4:after, h5:after, h6:after {
 hr { border: 0; border-top: 1px solid #bc0; }
 
 li, p, a { font-size: 10pt; line-height: 100%; margin: 0 0 10px 0; }
-ul, li { margin: 10px 0px 10px 0px; }
 blockquote { font-size: 9pt; line-height: 100)%; }
+ul, li { margin: 10px 0px 10px 0px; }
 a:link { color: #cb0 }
 a:visited { color : #980 }
 a:hover { color: #fff }
@@ -92,6 +92,7 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
   display: block;
   position: absolute;
   content: attr(data-tooltip);
+  padding: 5px;
   border: 1px solid #CCC;
   background: #30302A;
   font-family: "Calibri";

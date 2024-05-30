@@ -8,12 +8,12 @@
     "effect": "You position yourself in a quiet spot in the wilderness, outside the limits of any city or town and begin to meditate. Amidst your meditations, you seek and are sought by forest spirits, who (if you are deemed worthy) offer to teach you a spell. You may ask to gain knowledge of a specific spell, or accept whatever teachings they offer. They will always teach a spell which you are able to master but have not yet learned. If you accept, you learn the spell and expend the necessary numberof training slots.",
     "note": "Naturalists are always deemed worthy. Others must pass a DT 15 nature check. Anyone who has ",
     "training_reqs": {
-      "cha": 15,
+      "nst": 15,
       "slots": 4
     },
     "casting_reqs": {
       "time": "30 minutes",
-      "ap": 3,
+      "wp": 3,
       "Limitation": "You may cast this spell at most once per long rest.",
       "Location": "The ritual can only be performed within a wilderness."
     }
@@ -31,12 +31,12 @@
     "duration": "8 hours",
     "effect": "You and all participants call out to the fey, thanking them for their role in maintaining the balance of nature and protecting the life force. You invite them to visit you in your dreams, calling for succor, entertainment, and guidance. All participants roll a 1d4, and gain an effect accordingly: <ol><li>Hellish Nightmares: Tormented by cruel fey, no rest can be had. No AP is gained from the long rest.</li><li>Vivid Visions: Playful and adventurous fey take the dreamer on wondrous adventures seeming to last for many days. Upon awakening, the individual gains 1d4 temporary AP.</li><li>Quiet Quandaries: The dreamer awakens beside a pool of living water, which idly asks the dreamer a question. After it has been answered, it invites the dreamer to ask a question of their own. If the adventurer answered the water's question truthfully, it responds in kind. Gain 1d6 temporary AP.</li><li>Allmother's Embrace: The dreamers is escorted by powerful fey to the magical heart of the forest. They are greeted by a gentle yet powerful dryad called the Allmother, who embraces them tenderly. Gain 1d8 temporary HP and AP.</li></ol>",
     "training_reqs": {
-      "cha": 15,
+      "nst": 15,
       "slots": 4
     },
     "casting_reqs": {
       "time": "30 minutes",
-      "ap": 40,
+      "wp": 40,
       "Location": "The ceremony can only be performed within a forest or jungle."
     }
   },
@@ -51,12 +51,12 @@
     "note": "You cannot cast this spell while submerged in water.",
     "training_reqs": {
       "dex": 12,
-      "cha": 15,
+      "nst": 15,
       "slots": 3
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 2,
+      "wp": 2,
       "concentration": 0
     }
   }

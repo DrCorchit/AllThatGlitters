@@ -9,19 +9,32 @@
   ],
   "alignment": "Chaotic",
   "coreAbilityName": "Rage",
-  "coreAbilityDescription": "You may spend 6 ability points to enter a rage for 5 combat turns. During a rage, you deal 3 extra damage per weapon attack and take 3 less damage from bludgeoning, slashing, piercing, and fire damage.You may not cast spells, read scrolls, or consume potions.",
+  "coreAbilityDescription": "You may spend 5 ability points to enter a rage for 5 combat turns. During a rage, you deal 3 extra damage per weapon attack and take 3 less damage from bludgeoning, slashing, piercing, and fire damage. You may not cast spells, read scrolls, or use consumables without ending your rage.",
   "limitations": "Due to their careless approach and lack of education, barbarians start with a deficiency in two of the following three skills: defense, literacy, stealth.",
   "levelingBonuses": {
-    "1": "gain +2 to STR and proficiency in "
+    "1": "gain +3 to {{attr.STR}} and proficiency in initiative."
   },
-  "startingEquipment": [
-    "A set of leather armor.",
-    [
-      "An adventurer's pack, containing:",
-      "20 + 1d100 gold.",
-      "3 days rations.",
-      "Two sets of regular clothing.",
-      "2 Bottles of Mead"
+  "startingEquipment": {
+    "_": ["A set of {{armor.quilted_armor}}"],
+    "One of the following, as a primary weapon:": [
+      "A {{weapons.longsword}}",
+      "A {{weapons.greataxe}}",
+      "A {{weapons.maul}}",
+      "Two standard weapons with the {{weapons.modifiers.light}} property."
+    ],
+    "Any two of the following small weapons:": [
+      "A {{weapons.cleaver}}",
+      "A {{weapons.club}}",
+      "A {{weapons.dagger}}",
+      "A {{weapons.hatchet}}"
+    ],
+    "An adventurer's pack, containing:": [
+      "30 + 1d20 gold.",
+      "3 days {{items.rations}}",
+      "A {{items.bedroll}}",
+      "Two sets of {{items.plain_clothes}}.",
+      "2 bottles of {{items.mead}}",
+      "A bottle of {{items.moonshine}}"
     ]
-  ]
+  }
 }

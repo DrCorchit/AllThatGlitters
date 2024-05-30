@@ -36,7 +36,7 @@
     "description": "A small shield. Allows shield bash.",
     "damage": "1d4",
     "cost": 30,
-    "modifiers": ["Bludgeoning", "Blocking 1"],
+    "modifiers": ["Bludgeoning", "Blocking 1", "Nimble"],
     "requirements": []
   },
   {

@@ -1,23 +1,27 @@
 package net.allthatglitters.server
 
-import com.google.gson.*
+import com.drcorchit.justice.utils.StringUtils.normalize
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import com.google.gson.JsonDeserializer
 import net.allthatglitters.server.appendices.abilities.AppendixTraining
 import net.allthatglitters.server.appendices.armor.AppendixArmor
 import net.allthatglitters.server.appendices.bestiary.AppendixBestiary
 import net.allthatglitters.server.appendices.bestiary.Phylum
 import net.allthatglitters.server.appendices.items.AppendixItems
-import net.allthatglitters.server.chapters.classes.CharactersChapter
 import net.allthatglitters.server.appendices.magic.AppendixSpells
-import net.allthatglitters.server.chapters.sheet.Sheet
-import net.allthatglitters.server.chapters.sheet.SheetChapter
 import net.allthatglitters.server.appendices.weapons.AppendixWeapons
+import net.allthatglitters.server.chapters.classes.CharactersChapter
 import net.allthatglitters.server.chapters.combat.CombatChapter
 import net.allthatglitters.server.chapters.intro.IntroChapter
 import net.allthatglitters.server.chapters.leveling.LevelingChapter
 import net.allthatglitters.server.chapters.magic.MagicChapter
 import net.allthatglitters.server.chapters.noncombat.NonCombatChapter
+import net.allthatglitters.server.chapters.sheet.Sheet
+import net.allthatglitters.server.chapters.sheet.SheetChapter
 import net.allthatglitters.server.util.Collapsible
 import net.allthatglitters.server.util.Navigation
+import net.allthatglitters.server.util.Templatizer
 import net.allthatglitters.server.util.html.HtmlFile
 import java.io.File
 
@@ -28,6 +32,7 @@ object Generator {
 	val imagesDir = File(Server.serviceDir, "images")
 
 	val deserializer: Gson
+	val templatizer = Templatizer.getDefault()
 
 	init {
 		val builder = GsonBuilder().setPrettyPrinting().disableHtmlEscaping()
@@ -35,8 +40,6 @@ object Generator {
 			Phylum::class.java,
 			JsonDeserializer { json, _, _ -> Phylum(json.asJsonObject) })
 		deserializer = builder.create()
-
-		Sheet.skills.forEach { t, u -> println("$t : $u") }
 	}
 
 	val appendices = listOf(
@@ -57,6 +60,13 @@ object Generator {
 		NonCombatChapter,
 		MagicChapter
 	)
+
+	val files = (appendices + chapters).associateBy { it.fileName }
+
+	fun lookupFile(file: String): HtmlFile {
+		val key = file.normalize() + ".html"
+		return files[key] ?: throw NoSuchElementException("No file named \"$file.html\"")
+	}
 
 	@JvmStatic
 	fun main(vararg args: String) {

@@ -9,13 +9,12 @@
     "effect": "For as long as concentration is maintained, you are fully invisible. You can only be detected by touch or sound. When sneaking, the stealth DT is adjusted as if you were in pitch black darkness.",
     "training_reqs": {
       "int": 17,
-      "will": 13,
+      "cha": 13,
       "slots": 5
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 5,
-      "concentration": "1 AP per ten minutes"
+      "wp": 5
     },
     "modifiers": {
       "Concentration": "If dexterity is above 12, you may attempt to perform quick two-handed tasks without breaking concentration. When doing so, you make a DT 15 sleight-of-hand saving throw. On a failed save, you lose concentration and become visible.",

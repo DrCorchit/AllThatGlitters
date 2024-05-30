@@ -8,12 +8,12 @@
     "note": "The AP cost of the spell is paid twice, once by each party.",
     "training_reqs": {
       "int": 20,
-      "will": 16,
+      "cha": 16,
       "slots": 3
     },
     "casting_reqs": {
       "time": "1 day",
-      "ap": 200
+      "wp": 200
     }
   }
 ]

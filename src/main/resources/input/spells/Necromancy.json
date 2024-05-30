@@ -10,17 +10,17 @@
     "note": "The raised thrall has no weapons, armor, or spellcasting ability of any kind, but you may use an action to hand it a small or medium weapon.",
     "training_reqs": {
       "int": 12,
-      "cha": 12,
-      "will": 12,
+      "nst": 12,
+      "nst": 12,
       "slots": 4
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 4
+      "wp": 4
     },
     "modifiers": {
       "Integrity": "The thrall's strength, dexterity, and speed scores are increased by 1 for every 2 points of intelligence above 12.",
-      "Durability": "The thrall's HP is increased by 2 for every point of willpower above 12."
+      "Durability": "The thrall's HP is increased by 2 for every point of charisma above 12."
     }
   }
 ]

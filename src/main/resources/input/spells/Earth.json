@@ -8,12 +8,12 @@
     "duration": 10,
     "effect": "Your flesh becomes hardened, as if composed of hardened leather. For the duration of the spell, BC is increased by 2.",
     "training_reqs": {
-      "will": 11,
+      "cha": 11,
       "slots": 3
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 3
+      "wp": 3
     },
     "modifiers": {
       "Dual Cast": "The spell increases BC by 3 instead of 2."

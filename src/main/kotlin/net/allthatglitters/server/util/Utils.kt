@@ -2,10 +2,8 @@ package net.allthatglitters.server.util
 
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import net.allthatglitters.server.chapters.sheet.Sheet.inputDir
-import net.allthatglitters.server.chapters.sheet.Sheet.skills
 import net.allthatglitters.server.util.html.HtmlObject
-import net.allthatglitters.server.util.html.HtmlTable
+import net.allthatglitters.server.util.html.Renderable
 import java.io.File
 
 
@@ -13,13 +11,22 @@ fun String.bold(): String {
 	return HtmlObject("b").withContent(this).render()
 }
 
+fun String.underline(): String {
+	return HtmlObject("u").withContent(this).render()
+}
+
 fun String.italicise(): String {
 	return HtmlObject("i").withContent(this).render()
 }
 
 fun <T> File.deserialize(deserializer: (JsonObject) -> T): List<T> {
-	return this.readText().let { JsonParser.parseString(it) }
-		.asJsonArray.map {
+	return this.readText().let {
+		try {
+			JsonParser.parseString(it)
+		} catch (e: Exception) {
+			throw IllegalArgumentException("Error parsing file $this (invalid json)", e)
+		}
+	}.asJsonArray.map {
 		try {
 			deserializer.invoke(it.asJsonObject)
 		} catch (e: Exception) {
@@ -29,20 +36,8 @@ fun <T> File.deserialize(deserializer: (JsonObject) -> T): List<T> {
 	}
 }
 
-private val regex = "\\{\\{(.*)}}".toRegex()
-fun replaceValuesInTemplate(template: String): String {
-	return regex.replace(template) { matchResult ->
-		when (matchResult.value) {
-			"5_skills.html" -> {
-				val table = HtmlTable().withClass("inner")
-				skills.values.map { table.withContent(it.toRow()) }
-				HtmlObject("td")
-					.withClass("border")
-					.withAttribute("colspan", "3")
-					.withContent(table).render()
-				"Hello"
-			}
-			else -> File(inputDir, matchResult.groupValues[1]).readText()
-		}
-	}
+fun makeTooltip(text: String, tooltip: String): Renderable {
+	return HtmlObject("span")
+		.withAttribute("data-tooltip", tooltip)
+		.withContent(text.underline())
 }

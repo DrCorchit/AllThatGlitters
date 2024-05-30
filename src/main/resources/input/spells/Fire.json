@@ -13,12 +13,12 @@
     "effect": "Continuous flames flow from the user’s outstretched hands, dealing 1d6 fire damage to all creatures caught in the blaze.",
     "training_reqs": {
       "int": 11,
-      "will": 12,
+      "cha": 12,
       "slots": 3
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 3,
+      "wp": 3,
       "concentration": 1
     },
     "modifiers": {

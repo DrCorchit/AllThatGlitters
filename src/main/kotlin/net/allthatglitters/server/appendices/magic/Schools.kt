@@ -1,23 +1,14 @@
 package net.allthatglitters.server.appendices.magic
 
 import net.allthatglitters.server.chapters.sheet.Attribute
-import net.allthatglitters.server.chapters.sheet.Skill
 
 enum class School(val adjective: String, val primaryAttr: Attribute) {
-    //Medicine, Literacy
     Alchemy("alchemical", Attribute.INT),
-    //Literacy, Sorcery
     Astrology("astrological", Attribute.INT),
-    //Nature
-    Biomancy("biological", Attribute.CHA),
-    //Persuasion
+    Biomancy("biological", Attribute.INST),
+    Psionics("psychic", Attribute.INST),
     Conjuration("conjuration", Attribute.CHA),
-    //Sorcery
-    Elementurgy("elemental", Attribute.WILL),
-    //
-    Psionics("psychic", Attribute.WILL);
-
-
+    Elementurgy("elemental", Attribute.CHA),
 }
 
 enum class Discipline(val school: School, val adjective: String) {

@@ -12,6 +12,30 @@
   "coreAbilityName": "Codex Arcana",
   "coreAbilityDescription": "TODO",
   "levelingBonuses": {
-    "1": "gain +2 to INT"
+    "1": "gain +2 to {{attr.INT}}, and proficiency in literacy."
+  },
+  "startingEquipment": {
+    "_": [
+      "A set of {{items.mage_robes}}",
+      "A {{items.magical_wand}}",
+      "A steel {{weapons.dagger}}",
+      "A pair of {{items.spectacles}}"
+    ],
+    "An adventurer's pack, containing:": [
+      "A {{items.tent}}",
+      "3 sets of {{items.formal_wear}}",
+      "7 days {{items.rations}}",
+      "An {{items.ink}}",
+      "Three blank {{items.scroll}}s",
+      "A {{items.signet_ring}}",
+      "A stick of {{items.chalk}}",
+      "A bar of {{items.soap}}"
+    ],
+    "One of the following guilty pleasures:": [
+      "A jar of {{items.tobacco}}",
+      "A bottle of {{items.wine}}",
+      "Three bottles of {{items.mead}}",
+      "A {{items.chess_set}}"
+    ]
   }
 }

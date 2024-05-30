@@ -9,12 +9,12 @@
     "effect": "A minor spirit is infused into an object, keeping watch. If the spirit observes unexpected or suspicious behavior, it begins to screech as loudly as possible. The spirit can respond to simple instructions once summoned, regarding when to remain silent, screech, or abandon its post.",
     "note": "After the spell is complete, the spirit returns to the astral plane. It can later be recalled if its name is known.",
     "training_reqs": {
-      "cha": 11,
+      "nst": 11,
       "slots": 1
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 0
+      "wp": 0
     },
     "modifiers": {
       "Alternate Effects": "If the spell <i>Minor Telepathy</i> is known, the spirit can be instructed to transmit a silent telepathic alarm instead. If the spell <i>Major Telepathy</i> is known, it can also communicate certain general details about the situation when the alarm is triggered."

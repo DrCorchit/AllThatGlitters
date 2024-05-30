@@ -10,9 +10,32 @@
     "What made you leave your previous life and start adventuring?"
   ],
   "alignment": "Non-Lawful",
-  "coreAbilityName": "Inspiration",
-  "coreAbilityDescription": "TODO",
+  "coreAbilityName": "Poetic Justice",
+  "coreAbilityDescription": "When any character makes an attack roll, you may spend 2 willpower to make a quick cheer, quip, retort, or insult (as appropriate). On a successful DT 10 performance check, the attacker gains advantage (if they were an ally) or disadvantage (if they were an enemy).",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "gain +1 {{attr.DEX}} and +1 {{attr.CHA}}, plus proficiency in performance."
+  },
+  "startingEquipment": {
+    "_": [
+      "A set of {{armor.quilted_armor}}",
+      "A {{weapons.modifiers.nimble}} weapon",
+      "A {{weapons.dagger}}",
+      "A {{items.instrument}} of some kind"
+    ],
+    "An adventurer's pack, containing:": [
+      "20 + 1d20 gold.",
+      "3 days {{items.rations}}.",
+      "Two sets of {{items.plain_clothes}}.",
+      "One set of {{items.formal_wear}}",
+      "Three {{items.lockpick}}s",
+      "A {{items.tent}}"
+    ],
+    "A satchel, containing:": [
+      "A {{items.mirror}}",
+      "{{items.soap}} and {{items.perfume}}",
+      "A {{items.disguise_kit}}",
+      "A {{items.thread}}",
+      "A pair of {{items.scissors}}"
+    ]
   }
 }

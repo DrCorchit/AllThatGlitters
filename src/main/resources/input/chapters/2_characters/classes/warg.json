@@ -1,15 +1,23 @@
 {
   "name": "Warg",
-  "description": "A warg is usually a hermit or cultist who—over many years—has cultivated the ability to transform at will into a certain animal. Unlike a druid, who can transform into a number of small animals, a warg can only transform into one type of animal. But what a warg sacrifices in flexibilty, they gain in power. Wargs usually transform into large animals, such as a direwolf, rune bear, or even the mighty rhinoceros.",
+  "description": "A warg is someone, often an isolated hermit or cultist, who has developed the ability to transform at will into a particular animal. Unlike a druid who can transform into a wide variety of small animals, a warg can only transform into one type of animal. But what wargs sacrifice in flexibilty, they gain in power. Wargs are known for transforming into powerful animals such as the direwolf, rune bear, lions, and even the mighty rhinoceros.",
   "backstoryPrompts": [
-    "Why did you choose to learn to transform into your specific animal?",
+    "How did you learn to transform into your specific animal?",
     "Have you always had a close connection to nature, or did something spur that connection?",
     "What was your first transformation like?",
+    "Do you feel more at home as a humanoid or as an animal?",
     "What made you leave your previous life and start adventuring?"
   ],
   "coreAbilityName": "Beast Form",
   "coreAbilityDescription": "You expend 6 ability points to transform into your chosen animal, for up to one hour.",
   "levelingBonuses": {
-    "1": "TODO"
+    "1": "gain +1 to {{attr.CHA}} and {{attr.NST}}, and proficiency in survival."
+  },
+  "startingEquipment": {
+    "_": ["A set of {{items.plain_clothes}}", "A {{items.talisman}}"],
+    "An adventurer's pack, containing:": [
+      "1 set of {{items.plain_clothes}}",
+      "3 {{items.torch}}es"
+    ]
   }
 }

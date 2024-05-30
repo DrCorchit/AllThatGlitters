@@ -2,14 +2,14 @@
   {
     "name": "Cleaver",
     "description": "A heavy knife for cutting meat.",
-    "damage": "1d4",
+    "damage": "1d6",
     "cost": 2,
     "modifiers": ["Slashing", "Light", "Improvised"],
     "requirements": []
   },
   {
     "name": "Club",
-    "description": "A hefty stick, chair leg, or workman’s hammer",
+    "description": "Any hefty stick or chair leg will do.",
     "damage": "1d6",
     "cost": 1,
     "modifiers": ["Bludgeoning", "Light", "Improvised"],
@@ -17,7 +17,7 @@
   },
   {
     "name": "Dagger",
-    "description": "A short sidearm, suitable for slashing or stabbing. The \"Sharp\" property does not apply when thrown.",
+    "description": "A short sidearm, suitable for slashing or stabbing. The “Sharp” property does not apply when thrown.",
     "damage": "1d4",
     "cost": 5,
     "modifiers": ["Cut-and-Thrust", "Light", "Nimble", "Sharp", "Throwable", "Range: 20/60"],

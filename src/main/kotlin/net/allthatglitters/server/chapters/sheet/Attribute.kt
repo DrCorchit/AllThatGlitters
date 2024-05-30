@@ -1,7 +1,9 @@
 package net.allthatglitters.server.chapters.sheet
 
+import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonObject
 import net.allthatglitters.server.Generator
+import net.allthatglitters.server.util.Tooltip
 import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.HtmlString
@@ -13,7 +15,9 @@ data class Attribute(
 	val description: String,
 	val interpretation: String?,
 	val effects: Set<String>
-) : Renderable {
+) : Renderable, Tooltip {
+	override val defaultText = abbr
+	override val value = description
 
 	override fun render(): String {
 		val list = HtmlObject("ul").withAll(effects.map { HtmlString(it).wrap("li") })
@@ -29,20 +33,28 @@ data class Attribute(
 		return output.render()
 	}
 
+	override fun toString(): String {
+		return name
+	}
+
 	companion object {
-		val STR by lazy { parse("STR")!! }
-		val DEX by lazy { parse("DEX")!! }
-		val SPD by lazy { parse("SPD")!! }
-		val INT by lazy { parse("INT")!! }
-		val CHA by lazy { parse("CHA")!! }
-		val WILL by lazy { parse("WILL")!! }
+		val STR by lazy { parse("STR") }
+		val DEX by lazy { parse("DEX") }
+		val SPD by lazy { parse("SPD") }
+		val INT by lazy { parse("INT") }
+		val INST by lazy { parse("NST") }
+		val CHA by lazy { parse("CHA") }
+
+		val regex = Sheet.attributes.values
+			.joinToString("|", "(", ")") { it.abbr }
 
 		fun deserialize(obj: JsonObject): Attribute {
 			return Generator.deserializer.fromJson(obj, Attribute::class.java)
 		}
 
-		fun parse(str: String): Attribute? {
-			return Sheet.attributes[str.uppercase()]
+		fun parse(str: String): Attribute {
+			return Sheet.attributes[str.normalize()]
+				?: throw NoSuchElementException("No such attribute: $str")
 		}
 
 		fun statBlockToHtml(stats: Map<Attribute, Int>): Renderable {

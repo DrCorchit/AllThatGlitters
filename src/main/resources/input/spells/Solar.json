@@ -15,12 +15,12 @@
     "note": "",
     "training_reqs": {
       "int": 15,
-      "will": 15,
+      "cha": 15,
       "slots": 4
     },
     "casting_reqs": {
       "time": "1 Action",
-      "ap": 6
+      "wp": 6
     },
     "modifiers": {
       "Healing": "Allies heal one additonal point of HP for every 2 points of intelligence above 15.",

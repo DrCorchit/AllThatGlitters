@@ -8,11 +8,11 @@
     "duration": "10 min",
     "training_reqs": {
       "int": 12,
-      "will": 12
+      "cha": 12
     },
     "casting_reqs": {
       "time": 1,
-      "ap": 1
+      "wp": 1
     },
     "effect": "For ten minutes after casting the spell, you experience a distinct ringing noise in your ears while in the presence of illusion magic. The sound gains a distinctive overtone if the source of the spell is within 10 feet of you."
   },
@@ -27,11 +27,11 @@
     },
     "training_reqs": {
       "int": 13,
-      "will": 14
+      "cha": 14
     },
     "casting_reqs": {
       "time": "10 minutes",
-      "ap": 1
+      "wp": 1
     },
     "effect": ""
   },
@@ -43,11 +43,11 @@
     "duration": "1 hour",
     "target": "self",
     "training_reqs": {
-      "cha": 12,
-      "will": 12
+      "nst": 12,
+      "cha": 12
     },
     "casting_reqs": {
-      "ap": 2
+      "wp": 2
     },
     "effect": "For the duration of the spell, your face appears to change to match any face you have seen previously. Your clothes, stature, and body type do not change. You may dismiss this spell at will before the duration is through. Anyone who scrutinizes your face makes a DT 15 perception check to see past your disguise. Once your disguise is foiled, the creature has advantage on saving throws against your illusions for the next 24 hours.",
     "modifiers": {
@@ -67,14 +67,14 @@
     "duration": "1 hour",
     "training_reqs": {
       "int": 12,
-      "will": 14,
+      "cha": 14,
       "spells": [
         "illusory disguise"
       ]
     },
     "casting_reqs": {
-      "action": 1,
-      "ap": 3,
+      "time": 1,
+      "wp": 3,
       "concentration": 0
     },
     "effect": "You create an illusory being of any of the following types: <i>Beguiling</i>, <i>Terrifying</i>, <i>Distracting</i>, or <i>Ordinary</i>. The being appears in a location you can see, and obeys your telepathic command for the duration of the spell. If the being has a humanoid form, you can take on the appearance of the being instead, as a disguise. Observers react to the being differently depending on the type created."
@@ -91,7 +91,7 @@
     "duration": "1 minute",
     "training_reqs": {
       "int": 12,
-      "will": 14
+      "cha": 14
     },
     "casting_reqs": {
     },
@@ -108,7 +108,7 @@
     },
     "training_reqs": {
       "int": 13,
-      "will": 16
+      "cha": 16
     },
     "casting_reqs": {
     },

@@ -1,5 +1,6 @@
 package net.allthatglitters.server.chapters.sheet
 
+import com.drcorchit.justice.utils.StringUtils.normalize
 import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.Templatizer
 import net.allthatglitters.server.util.deserialize
@@ -11,9 +12,8 @@ import java.io.File
 
 object Sheet : HtmlFile("All That Glitters — Character Sheet", "sheet/character_sheet.html") {
 	override val inputDir = File(Generator.inputDir, "sheet")
-
-	val templatizer = Templatizer()
-		.withRule("5_skills".toRegex()) {
+	override val templatizer = Generator.templatizer.extend()
+		.withRule("5_skills") {
 			val table = HtmlTable().withClass("inner") as HtmlTable
 				table.nextRow()
 				.withDefaultHeaderAttribute("class", "sub")
@@ -28,7 +28,7 @@ object Sheet : HtmlFile("All That Glitters — Character Sheet", "sheet/characte
 				.withAttribute("colspan", "3")
 				.withContent(table).render()
 		}
-		.withRule("6_abilities".toRegex()) {
+		.withRule("6_abilities") {
 			val table = HtmlTable().withClass("inner")
 				.withStyle("background: white url(/images/books.png) no-repeat bottom; background-size: 100%") as HtmlTable
 			table.nextRow().withDefaultHeaderAttribute("class", "sub")
@@ -46,7 +46,7 @@ object Sheet : HtmlFile("All That Glitters — Character Sheet", "sheet/characte
 				.withClass("border")
 				.withContent(table).render()
 		}
-		.withRule("7_rows".toRegex()) {
+		.withRule("7_rows") {
 			val output = HtmlContent()
 			for (i in 1..8) {
 				output.withContent(HtmlObject("tr")
@@ -55,17 +55,17 @@ object Sheet : HtmlFile("All That Glitters — Character Sheet", "sheet/characte
 			}
 			output.render()
 		}
-		.withRule(".*\\.html".toRegex()) { File(inputDir, it).readText() }
 
 	val attributes by lazy {
 		File(inputDir, "attrs.json")
 			.deserialize { Attribute.deserialize(it.asJsonObject) }
-			.associateBy { it.abbr.uppercase() }
+			.associateBy { it.abbr.normalize() }
 	}
+
 	val skills by lazy {
 		File(inputDir, "skills.json")
 			.deserialize { Skill.deserialize(it.asJsonObject) }
-			.associateBy { it.name.uppercase() }
+			.associateBy { it.name.normalize() }
 	}
 
 	override fun appendHeader(): HtmlFile {

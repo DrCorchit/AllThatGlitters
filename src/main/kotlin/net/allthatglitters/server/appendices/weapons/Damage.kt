@@ -23,7 +23,7 @@ class Damage(
 		output.append("${dice.count}d${dice.dice.sides}")
 
 		if (attr.isNotEmpty()) {
-			output.append(" + ").append(attr.joinToString("/"))
+			output.append(" + ").append(attr.joinToString("/") { it.abbr })
 		}
 
 		if (type.size == 2 && type.contains(Type.Slashing) && type.contains(Type.Piercing)) {
@@ -41,7 +41,7 @@ class Damage(
 		Corrosive, Force, Holy, Profane;
 
 		override val displayName = name
-		val description = "Indicates that the weapon deals ${displayName.lowercase()} damage."
+		override val description = "Indicates that the weapon deals ${displayName.lowercase()} damage."
 		val regex = name.toRegex(RegexOption.IGNORE_CASE)
 	}
 }

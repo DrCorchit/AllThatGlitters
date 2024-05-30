@@ -3,12 +3,20 @@
     "name": "Come Hither",
     "effect": "The player learns to use the grappling hook in combat, acquiring the ability Come Hither. Using an action, the player may throw the grappling hook at a target within 20 feet. Upon a successful accuracy skill check against the target’s mitigation, the target is pulled 15 feet towards the player.",
     "cost": {
-      "gold": "30",
-      "slots": "4"
+      "gold": 30,
+      "slots": 4
     },
     "reqs": [
       ""
     ]
+  },
+  {
+    "name": "Parry",
+    "effect": "The player may attempt to parry melee attacks using a reaction. When parrying, mitigation is increased by the parry amount of the weapon. Parrying an attack costs a reaction, regardless of whether the attack is successful.",
+    "cost": {
+      "gold": 30,
+      "slots": 4
+    }
   },
   {
     "name": "Hook Sword Disarm",

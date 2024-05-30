@@ -2,7 +2,7 @@ package net.allthatglitters.server.appendices.weapons
 
 enum class EnumModifier(
 	override val displayName: String,
-	val description: String
+	override val description: String
 ) : Modifier {
 	CutAndThrust(
 		"Cut-and-Thrust",

@@ -3,7 +3,8 @@
     "name": "Flask of Oil",
     "cost": 10,
     "weight": 0,
-    "description": "Contains approximately one pint. Lasts 12 hours."
+    "description": "Contains approximately one pint. Fuels a lantern for 12 hours.",
+    "key": "oil"
   },
   {
     "name": "Holy Water",
@@ -15,7 +16,8 @@
     "name": "Drinking Water",
     "cost": 2,
     "weight": 0,
-    "description": "1 Gallon of potable water for cooking and drinking."
+    "description": "1 Gallon of potable water for cooking and drinking.",
+    "key": "water"
   },
   {
     "name": "Rations",
@@ -27,13 +29,15 @@
     "name": "Salt, 1 cup",
     "cost": 1,
     "weight": 0,
-    "description": "For flavor, and curing meat. And driving off foul spirits."
+    "description": "For flavor, and curing meat. And driving off foul spirits.",
+    "key": "salt"
   },
   {
     "name": "Sugar, 1 cup",
     "cost": 3,
     "weight": 0,
-    "description": "For sweeting cakes, or as a currency when trading with savages."
+    "description": "For sweeting cakes, or as a currency when trading with savages.",
+    "key": "sugar"
   },
   {
     "name": "Tobacco",
@@ -45,30 +49,35 @@
     "name": "Wine, Bottle of",
     "cost": 2,
     "weight": 0,
-    "description": "A finer drink, favored by nobles and kings."
+    "description": "A finer drink, favored by nobles and kings.",
+    "key": "wine"
   },
   {
     "name": "Mead, Bottle of",
     "cost": 1,
     "weight": 0,
-    "description": "Made from honey. Sweeter than beer."
+    "description": "Made from honey. Sweeter than beer.",
+    "key": "mead"
   },
   {
     "name": "Beer, Bottle of",
     "cost": 1,
     "weight": 0,
-    "description": "Proof that the gods love us and want us to be happy."
+    "description": "Proof that the gods love us and want us to be happy.",
+    "key": "beer"
   },
   {
     "name": "Moonshine, Flask of",
     "cost": 1,
     "weight": 0,
-    "description": "Extremely strong alcohol. Lacks the royal stamp, indicating that is has been manufactured illegally by peasants."
+    "description": "Extremely strong alcohol. Lacks the royal stamp, indicating that is has been manufactured illegally.",
+    "key": "moonshine"
   },
   {
     "name": "Rum, Bottle of",
     "cost": 1,
     "weight": 0,
-    "description": "Manufactured from sugarcane. Favored by sailors, accordingly."
+    "description": "Manufactured from sugarcane. Favored by sailors, accordingly.",
+    "key": "rum"
   }
 ]

@@ -1,6 +1,5 @@
 {
   "name": "Thief",
-  "altName": "Rogue",
   "description": "Thieves are found in every city and village and borough, in every corner of the world. Their techniques are as varied as you can imagine, but they have one thing in common: the ability to disappear quickly and quietly. This skill proves immensely useful for those that turn to the path of adventuring, for one cannot easily be killed if one is not seen. Of course, the occasional coinpurse snipped from the belt of an unsuspecting noble doesn’t hurt either.",
   "backstoryPrompts": [
     "Do you have any moral qualms about taking things that don’t belong to you?",

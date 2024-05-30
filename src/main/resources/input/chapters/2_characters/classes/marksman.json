@@ -9,8 +9,8 @@
     "What made you leave your previous life and start adventuring?"
   ],
   "coreAbilityName": "Sniping Shot",
-  "coreAbilityDescription": "TODO",
+  "coreAbilityDescription": "When making a ranged attack, you may spend 3 willpower to focus your aim, gaining advantage on the attack roll and lowering the CT by 1.",
   "levelingBonuses": {
-    "1": "at level 1, gain +1 STR and DEX. "
+    "1": "gain +1 {{attr.STR}} and {{attr.DEX}}, and proficiency in accuracy and stealth."
   }
 }

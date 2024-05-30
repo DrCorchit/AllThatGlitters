@@ -1,9 +1,13 @@
 package net.allthatglitters.server.appendices.armor
 
+import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.common.collect.ImmutableSet
+import com.google.gson.JsonArray
 import com.google.gson.JsonObject
+import net.allthatglitters.server.Generator
 import net.allthatglitters.server.appendices.items.Item
 import net.allthatglitters.server.util.html.HtmlObject
+import net.allthatglitters.server.util.underline
 
 data class Armor(
 	val name: String,
@@ -11,11 +15,11 @@ data class Armor(
 	val bc: Int,
 	val cost: Int,
 	val weight: Int,
-	val reqs: ImmutableSet<String>,
-	val effects: ImmutableSet<String>
+	val reqs: Set<String>,
+	val effects: Set<String>,
+	val key: String = name.normalize()
 ) {
-
-	val item by lazy { Item(name, description, cost, weight) }
+	val item get() = Item(name, description, cost, weight, key)
 
 	fun toRow(): HtmlObject {
 		val row = HtmlObject("tr")
@@ -28,19 +32,25 @@ data class Armor(
 		return row
 	}
 
+	fun toTooltip(): HtmlObject {
+		return HtmlObject("span")
+			.withAttribute("data-tooltip", "$description BC: $bc")
+			.withContent(name.lowercase().underline())
+	}
+
 	companion object {
 		fun deserialize(obj: JsonObject): Armor {
-			return Armor(
-				obj.get("name").asString,
-				obj.get("description").asString,
-				obj.get("bc").asInt,
-				obj.get("cost")?.asInt ?: 0,
-				obj.get("weight")?.asInt ?: 1,
-				obj.get("reqs")?.asJsonArray?.map { it.asString }
-					?.let { ImmutableSet.copyOf(it) } ?: ImmutableSet.of(),
-				obj.get("effects")?.asJsonArray?.map { it.asString }
-					?.let { ImmutableSet.copyOf(it) } ?: ImmutableSet.of()
-			)
+			if (!obj.has("key")) {
+				obj.addProperty("key", obj.get("name").asString.normalize())
+			}
+			if (!obj.has("reqs")) {
+				obj.add("reqs", JsonArray())
+			}
+			if (!obj.has("effects")) {
+				obj.add("effects", JsonArray())
+			}
+
+			return Generator.deserializer.fromJson(obj, Armor::class.java)
 		}
 	}
 }

@@ -1,5 +1,6 @@
 package net.allthatglitters.server.appendices.armor
 
+import com.drcorchit.justice.utils.StringUtils.normalize
 import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
@@ -8,8 +9,16 @@ import java.io.File
 
 object AppendixArmor : HtmlFile("Appendix: Armor &amp; Materials", "appendix_armor.html") {
 	override val inputDir = File(Generator.inputDir, "misc")
-	val armor = File(inputDir, "armor.json")
-		.deserialize { Armor.deserialize(it) }
+	val armor by lazy {
+		File(inputDir, "armor.json")
+			.deserialize { Armor.deserialize(it) }
+			.associateBy { it.key }
+	}
+
+	fun lookupArmor(name: String): Armor {
+		return armor[name.normalize()] ?: throw NoSuchElementException("No such armor: $name")
+	}
+
 	val armorHeaders = arrayOf(
 		"Armor",
 		"Block Chance",
@@ -36,7 +45,7 @@ object AppendixArmor : HtmlFile("Appendix: Armor &amp; Materials", "appendix_arm
 			"Many forms of armor are available for the prospective adventurer. In general, nimble and dexterous characters such as thieves and assassins prefer leather armor or brigandine. Barbarians, mercenaries, inquisitors, and most others usually make use of medium armors, such as breastplate or chainmail. Knights, veterans, and crusaders often wear splinted mail or full plate, being stouter folk."
 		)
 		val armorTable = HtmlTable().withHeaders(*armorHeaders)
-		armor.forEach { armorTable.withContent(it.toRow()) }
+		armor.values.forEach { armorTable.withContent(it.toRow()) }
 		append(armorTable)
 
 		appendElement("h4", "Materials")

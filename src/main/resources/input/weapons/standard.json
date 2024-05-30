@@ -4,7 +4,7 @@
     "description": "A flexible sword with many uses.",
     "damage": "1d6",
     "cost": 100,
-    "modifiers": ["Cut-and-Thrust", "Versatile: 1d8", "Mordhau: 1d6", "Parrying 6"],
+    "modifiers": ["Cut-and-Thrust", "Versatile: 1d10", "Mordhau: 1d6", "Parrying 6"],
     "requirements": ["12 STR", "Martial Arts Expertise"]
   },
   {
