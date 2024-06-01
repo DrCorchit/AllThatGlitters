@@ -18,5 +18,4 @@ object MagicChapter : HtmlFile("How does my character use magic?", "c7.html") {
 		subsections.forEach { appendSubsection(it) }
 		return this
 	}
-
 }

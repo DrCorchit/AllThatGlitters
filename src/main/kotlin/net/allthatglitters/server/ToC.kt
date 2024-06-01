@@ -10,9 +10,8 @@ object ToC : HtmlFile("Player's Handbook", "phb_toc.html") {
 			"p",
 			"This guide is designed for players new to TTRPGs. If you're an experienced player, I suggest skipping the first chapter."
 		)
-		val list = HtmlObject("ol")
-		Generator.chapters.forEach { chapter ->
-			list.withContent(
+		val list = HtmlObject("ol").withAll(
+			Generator.chapters.map { chapter ->
 				HtmlObject("li").withContent(chapter.getLink())
 					.withContent(
 						HtmlObject("ol").withAttribute("type", "i")
@@ -20,11 +19,13 @@ object ToC : HtmlFile("Player's Handbook", "phb_toc.html") {
 								HtmlObject("li").withContent(subsection.linkTo())
 							})
 					)
-			)
-		}
+			}
+		)
+
 		val appendices = HtmlObject("li").withContent("Appendices")
-			.withContent(HtmlObject("ol").withAttribute("type", "i")
-				.withAll(Generator.appendices.map { HtmlObject("li").withContent(it.getLink()) })
+			.withContent(
+				HtmlObject("ol").withAttribute("type", "i")
+					.withAll(Generator.appendices.map { HtmlObject("li").withContent(it.getLink()) })
 			)
 		list.withContent(appendices)
 		append(list)
