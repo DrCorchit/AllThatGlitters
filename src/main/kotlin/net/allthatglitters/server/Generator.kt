@@ -96,6 +96,12 @@ object Generator {
 			.appendElement("h1", "All That Glitters")
 			.appendTitle("h2")
 			.appendBody()
+			.save(File(versionedOutputDir,"toc_old.html"))
+
+		ToC.appendHeader()
+			.appendElement("h1", "All That Glitters")
+			.appendTitle("h2")
+			.appendBody()
 			.save()
 
 		for (i in 1..chapters.size) makeChapter(i)

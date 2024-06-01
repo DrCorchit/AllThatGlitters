@@ -7,5 +7,15 @@ import java.io.File
 object LevelingChapter : HtmlFile("How does my character become stronger?", "c4.html") {
 	override val inputDir = File(Generator.inputDir, "chapters/4_leveling")
 
+	init {
+		addFileSubsection("Leveling", "leveling")
+		addFileSubsection("Training", "training")
+		addFileSubsection("Looting", "looting")
+	}
 
+	override fun appendBody(): HtmlFile {
+		append(File(inputDir, "0_intro.html").readText())
+		subsections.forEach { appendSubsection(it) }
+		return this
+	}
 }

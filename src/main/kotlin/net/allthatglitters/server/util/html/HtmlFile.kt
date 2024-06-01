@@ -1,5 +1,6 @@
 package net.allthatglitters.server.util.html
 
+import com.drcorchit.justice.utils.StringUtils.normalize
 import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.FileSubsection
 import net.allthatglitters.server.util.Header
@@ -21,7 +22,7 @@ open class HtmlFile(val title: String, val fileName: String) {
 			.withContent(title)
 	}
 
-	fun addFileSubsection(title: String, link: String): HtmlFile {
+	fun addFileSubsection(title: String, link: String = title.normalize()): HtmlFile {
 		val index = subsections.size + 1
 		return addCustomSubsection(FileSubsection(this, title, link, index.toString()))
 	}

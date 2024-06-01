@@ -7,10 +7,10 @@ import java.io.File
 
 abstract class Subsection(val parent: HtmlFile, val title: String, val link: String): Renderable {
 
-	fun linkTo(): HtmlObject {
+	fun linkTo(value: String = title): HtmlObject {
 		return HtmlObject("a")
 			.withAttribute("href", "${parent.fileName}#$link")
-			.withContent(title)
+			.withContent(value)
 	}
 
 	fun makeHeader() : HtmlObject {

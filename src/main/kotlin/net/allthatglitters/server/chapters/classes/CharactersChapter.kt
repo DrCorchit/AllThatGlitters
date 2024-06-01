@@ -7,6 +7,7 @@ import net.allthatglitters.server.util.Subsection
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlFile
+import net.allthatglitters.server.util.html.HtmlObject
 import java.io.File
 
 object CharactersChapter : HtmlFile("How do I create a character?", "c2.html") {
@@ -35,20 +36,39 @@ object CharactersChapter : HtmlFile("How do I create a character?", "c2.html") {
 	init {
 		addCustomSubsection(RacesSubsection)
 		addCustomSubsection(ClassesSubsection)
-		addFileSubsection("Pick an Alignment", "alignments")
-		addFileSubsection("Write a Backstory", "backstory")
-		addFileSubsection("Choose starting Equipment", "equipment")
-		addFileSubsection("Fill out your Character Sheet", "sheet")
+		addFileSubsection("Alignments", "alignments")
+		addFileSubsection("Writing a Backstory", "backstory")
+		addFileSubsection("Starting Equipment", "equipment")
 	}
 
 	override fun appendBody(): HtmlFile {
 		append(File(inputDir, "0_intro.html").readText())
-		append(getOutline())
+		//Don't do this because we want to show the subsection names differently at the top of the chapter
+		//append(getOutline())
+		val list = HtmlObject("ol")
+		val altNames = listOf(
+			"Choose A Race",
+			"Choose a Class",
+			"Pick an Alignment",
+			"Write a Backstory",
+			"Choose starting Equipment",
+		)
+		//TODO warn if altNames length != subsections length
+		subsections.zip(altNames).forEach {
+			val section = it.first
+			val title = it.second
+			list.withContent(HtmlObject("li").withContent(section.linkTo(title)))
+		}
+		append(list)
 		subsections.forEach { appendSubsection(it) }
+		appendElement(
+			"p",
+			"Once you've completed steps 1-5, you're now ready to fill out your character sheet. This is covered in the next chapter."
+		)
 		return this
 	}
 
-	private object RacesSubsection : Subsection(this, "Choose a Race", "races") {
+	private object RacesSubsection : Subsection(this, "Races", "races") {
 		override fun render(): String {
 			val output = HtmlContent()
 			output.withContent(File(inputDir, "races/intro.html").readText())
@@ -58,7 +78,7 @@ object CharactersChapter : HtmlFile("How do I create a character?", "c2.html") {
 		}
 	}
 
-	private object ClassesSubsection : Subsection(this, "Choose a Class", "classes") {
+	private object ClassesSubsection : Subsection(this, "Classes", "classes") {
 		override fun render(): String {
 			val s1 = File(inputDir, "2.1_classes.html").readText()
 			val s2 = CombatCategory.render()
