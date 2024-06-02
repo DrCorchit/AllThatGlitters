@@ -8,9 +8,9 @@ object MagicChapter : HtmlFile("How does my character use magic?", "c7.html") {
 	override val inputDir = File(Generator.inputDir, "chapters/7_magic")
 
 	init {
-		addFileSubsection("Learning Spells")
-		addFileSubsection("Casting Spells")
-		addFileSubsection("Schools of Sorcery")
+		addSubsection("Learning Spells")
+		addSubsection("Casting Spells")
+		addSubsection("Schools of Sorcery")
 	}
 
 	override fun appendBody(): HtmlFile {

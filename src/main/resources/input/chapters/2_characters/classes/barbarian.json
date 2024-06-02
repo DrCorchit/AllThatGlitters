@@ -12,7 +12,20 @@
   "coreAbilityDescription": "You may spend 5 ability points to enter a rage for 5 combat turns. During a rage, you deal 3 extra damage per weapon attack. If you are not wearing armor, you take 3 less damage from bludgeoning, slashing, piercing, and fire damage. You may not cast spells, read scrolls, or use consumables without ending your rage.",
   "limitations": "Due to their careless approach and lack of formal education, barbarians start with a deficiency in two of the following three skills: {{skills.defense}}, {{skills.literacy}}, {{skills.stealth}}.",
   "levelingBonuses": {
-    "1": "gain +3 to {{attr.STR}} and proficiency in {{skills.initiative}}."
+    "1": [
+      "+3 to {{attr.STR}}",
+      "+1 to {{attr.DEX}} and {{attr.SPD}}.",
+      "+1 to {{attr.INT}}, {{attr.NST}} or {{attr.CHA}}"
+    ],
+    "3": [
+      "+2 to {{attr.STR}} and +1 to {{attr.DEX}}, and {{attr.SPD}}.",
+      "Gain proficiency in {{skills.initiative}}, {{skills.mobility}}, or {{skills.survival}}."
+    ],
+    "5": "gain +1 to {{attr.STR}}, {{attr.DEX}}, and {{attr.SPD}}. Skill in martial arts advances to expertise.",
+    "7": "gain +1 to {{attr.STR}} and {{attr.DEX}} or {{attr.SPD}}. Your secondary skill learned at level 3 advances to expertise.",
+    "11": "gain +1 to {{attr.STR}} and {{attr.DEX}} or {{attr.SPD}}. Skill in martial arts advances to mastery.",
+    "13": "gain +1 to {{attr.STR}}. Skill in ",
+    "15": "gain +1 to {{attr.STR}}."
   },
   "startingEquipment": {
     "_": ["A set of {{armor.quilted_armor}}"],

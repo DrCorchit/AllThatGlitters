@@ -181,5 +181,23 @@
     "cost": 75,
     "weight": 100,
     "description": "Includes oars, and carries up to 4 people or 600 pounds of weight."
+  },
+  {
+    "name": "Arrow",
+    "cost": 2,
+    "weight": 0,
+    "description": "Ammunition for drawn bows."
+  },
+  {
+    "name": "Bolt",
+    "cost": 3,
+    "weight": 0,
+    "description": "Ammunition for crossbows."
+  },
+  {
+    "name": "Bullet",
+    "cost": 5,
+    "weight": 1,
+    "description": "Ammunition for firearms."
   }
 ]

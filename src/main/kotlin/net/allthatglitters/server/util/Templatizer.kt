@@ -1,13 +1,15 @@
 package net.allthatglitters.server.util
 
+import com.drcorchit.justice.utils.logging.Logger
 import net.allthatglitters.server.Generator
 import net.allthatglitters.server.appendices.armor.AppendixArmor
 import net.allthatglitters.server.appendices.items.AppendixItems
 import net.allthatglitters.server.appendices.weapons.AppendixWeapons
 import net.allthatglitters.server.chapters.sheet.Attribute
 import net.allthatglitters.server.chapters.sheet.Skill
-import org.w3c.dom.Attr
 import java.io.File
+
+val logger = Logger.getLogger(Templatizer::class.java)
 
 class Templatizer(val parent: Templatizer? = null) {
 	val rules: MutableMap<Regex, (String) -> String> = mutableMapOf()
@@ -24,13 +26,16 @@ class Templatizer(val parent: Templatizer? = null) {
 	fun replace(template: String): String {
 		return templateRegex.replace(template) { matchResult ->
 			val value = matchResult.groupValues[1].trim()
-			attemptMatch(value)
+			replace(attemptMatch(value))
 		}
 	}
 
 	private fun attemptMatch(str: String): String {
 		return rules.entries.firstNotNullOfOrNull {
-			if (it.key.matches(str)) it.value.invoke(str) else null
+			if (it.key.matches(str)) {
+				//logger.info("  Matched ${it.key} to $str")
+				it.value.invoke(str)
+			} else null
 		} ?: parent?.attemptMatch(str)
 		?: throw UnsupportedOperationException("Unable to match $str to any rule")
 	}
@@ -63,7 +68,7 @@ class Templatizer(val parent: Templatizer? = null) {
 				}
 				"attr" -> {
 					val attr = Attribute.parse(parts[1])
-					attr.abbr
+					attr.name
 					//attr.getValue().render()
 				}
 				"skills" -> {
@@ -98,7 +103,10 @@ class Templatizer(val parent: Templatizer? = null) {
 					}
 				}
 
-				else -> parts.joinToString(".")
+				else -> {
+					logger.info("Could not match: $parts")
+					parts.joinToString(".")
+				}
 			}
 		}
 	}

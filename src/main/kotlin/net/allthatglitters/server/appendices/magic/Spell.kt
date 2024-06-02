@@ -152,7 +152,7 @@ class Spell(
 				}
 				//TODO parse skill reqs
 				else -> {
-					println("Unable to fully parse requirement: ${entry.key} : ${entry.value}")
+					AppendixSpells.logger.warn("Unable to fully parse requirement: ${entry.key} : ${entry.value}")
 					OtherReq("${entry.key}: ${entry.value.asString}")
 				}
 			}

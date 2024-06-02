@@ -57,7 +57,7 @@ object AppendixSpells : HtmlFile("Appendix: Spells", "appendix_spells.html") {
 			}
 			append(Collapsible.render())
 		} else {
-			println("Warning: spellsDir is not a directory ($inputDir)")
+			logger.info("Warning: spellsDir is not a directory ($inputDir)")
 		}
 		return this
 	}
@@ -82,7 +82,7 @@ object AppendixSpells : HtmlFile("Appendix: Spells", "appendix_spells.html") {
 
 		}
 
-		println(spellStatistics)
+		logger.info(spellStatistics.toString())
 	}
 
 	@JvmStatic

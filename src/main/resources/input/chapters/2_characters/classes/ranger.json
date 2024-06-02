@@ -10,6 +10,20 @@
   "coreAbilityName": "Animal Companion",
   "coreAbilityDescription": "TODO",
   "levelingBonuses": {
-    "1": "gain +1 to {{attr.CHA}} and {{attr.DEX}}, and proficiency in survival"
+    "1": "gain +2 to {{attr.NST}} and {{attr.DEX}}, and proficiency in {{skills.survival}}"
+  },
+  "startingEquipment": {
+    "_": [
+      "A suit of {{items.leather_armor}}",
+      "Any standard weapon",
+      "A {{weapons.dagger}} and two {{weapons.hatchet}}s"
+    ],
+    "An adventurer's pack, containing:": [
+      "30 + 1d100 gold",
+      "3 days {{items.rations}} and a {{items.canteen}}",
+      "A {{items.bedroll}}, {{items.pillow}}",
+      "Two sets of {{items.plain_clothes}}",
+      ""
+    ]
   }
 }

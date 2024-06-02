@@ -17,15 +17,27 @@
   "startingEquipment": {
     "_": [
       "A set of {{items.plain_clothes}}",
-      "A {{weapons.dagger}}",
-      "A {{items.lantern}} and {{items.oil}}"
+      "A {{weapons.dagger}}"
+    ],
+    "A sidearm, such as:": [
+      "A {{weapons.shortsword}}",
+      "A {{weapons.shortbow}} and {{items.quiver}}",
+      "A {{weapons.hand_crossbow}} and {{items.quiver}}",
+      "A dozen {{weapons.throwing_knives}}"
     ],
     "An adventurer's pack, containing:": [
       "2d100 gold",
       "3 days {{items.rations}} and a {{items.canteen}}",
       "A {{items.bedroll}}, {{items.pillow}}",
       "2 sets of {{items.plain_clothes}}",
-      "A {{items.rope}} and a {{items.block_and_tackle}}"
+      "A {{items.rope}} and a {{items.block_and_tackle}}",
+      "A {{items.lantern}} and {{items.oil}}"
+    ],
+    "One of the following": [
+      "A {{items.map}}, {{items.compass}}, and {{items.spyglass}}",
+      "A {{items.medical_kit}}",
+      "A {{items.lock}} and half a dozen {{items.lockpick}}s",
+      "A {{items.thread}}, {{items.scissors}}, and a {{items.disguise_kit}}"
     ]
   }
 }

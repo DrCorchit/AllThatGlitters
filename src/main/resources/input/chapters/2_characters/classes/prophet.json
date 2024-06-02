@@ -22,16 +22,17 @@
       "1d20 gold",
       "3 days {{items.rations}} and a {{items.canteen}}",
       "A {{items.bedroll}}",
-      "One set of {{items.plain_clothes}}"
-    ],
-    "Two of the following:": [
-      "A {{items.disguise_kit}}",
-      "A {{items.forgery_kit}}",
-      "A half-dozen {{items.lockpick}}s",
+      "One set of {{items.plain_clothes}}",
       "A {{items.instrument}}",
       "A pair of {{items.spectacles}} ",
+      "A {{items.frying_pan}}",
+      "A bottle of {{items.moonshine}}"
+    ],
+    "Any two of the following": [
+      "A {{items.disguise_kit}}",
+      "A {{items.forgery_kit}}",
       "A {{items.medical_kit}}",
-      "A {{items.frying_pan}}"
+      "A half-dozen {{items.lockpick}}s"
     ]
   }
 }

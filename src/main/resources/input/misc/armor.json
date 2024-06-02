@@ -4,14 +4,14 @@
     "description": "A homespun gambeson. A sure sign of a hooligan.",
     "bc": 2,
     "cost": 1,
-    "weight": 5,
+    "weight": 1,
     "reqs": [],
     "effects": ["-1 Charisma"]
   },
   {
     "name": "Gambeson",
     "description": "A proper gambeson, befitting a squire.",
-    "bc": 2,
+    "bc": 1,
     "cost": 10,
     "weight": 8,
     "reqs": [],
@@ -78,21 +78,21 @@
     "cost": 250,
     "weight": 45,
     "reqs": ["STR 12", "Defense Expertise"],
-    "effects": ["DC is capped at 11", "Stealth Disadvantage"]
+    "effects": ["DC is capped at 11"]
   },
   {
     "name": "Splinted Chainmail",
     "description": "Chainmail with vertical splints to shore up defense of the limbs.",
-    "bc": 11,
+    "bc": 10,
     "cost": 200,
     "weight": 50,
     "reqs": ["STR 12", "Defense Expertise"],
-    "effects": ["DC is capped at 10", "Stealth disadvantage"]
+    "effects": ["DC is capped at 11", "Stealth disadvantage"]
   },
   {
     "name": "Full Plate Armor",
     "description": "The highest quality.",
-    "bc": 13,
+    "bc": 12,
     "cost": 500,
     "weight": 60,
     "reqs": ["STR 14", "Defense Mastery"],

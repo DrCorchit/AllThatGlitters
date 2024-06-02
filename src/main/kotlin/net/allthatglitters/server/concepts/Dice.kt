@@ -4,7 +4,7 @@ import net.allthatglitters.server.concepts.Dice.D20
 
 data class NumDice(val count: Int, val dice: Dice) {
 	override fun toString(): String {
-		return if (count == 0) "0" else "${count}d$dice"
+		return if (count == 0) "0" else "${count}d${dice.sides}"
 	}
 
 	companion object {

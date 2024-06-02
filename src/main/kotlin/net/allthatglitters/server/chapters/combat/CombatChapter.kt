@@ -8,15 +8,15 @@ object CombatChapter : HtmlFile("How does my character fight?", "c5.html") {
 	override val inputDir = File(Generator.inputDir, "chapters/5_combat")
 
 	init {
-		addFileSubsection("The Battlefield", "battlefield")
-		addFileSubsection("Beginning Combat", "beginning")
-		addFileSubsection("Taking Actions", "actions")
-		addFileSubsection("Attack and Defense", "attacking")
-		addFileSubsection("Moving", "moving")
-		addFileSubsection("Grappling", "grappling")
-		addFileSubsection("Defeat", "defeat")
-		addFileSubsection("Damage Types", "damage_types")
-		addFileSubsection("Status Effects", "status_effects")
+		addSubsection("The Battlefield", "battlefield")
+		addSubsection("Beginning Combat", "beginning")
+		addSubsection("Taking Actions", "actions")
+		addSubsection("Attack and Defense", "attacking")
+		addSubsection("Moving", "moving")
+		addSubsection("Grappling", "grappling")
+		addSubsection("Defeat", "defeat")
+		addSubsection("Damage Types", "damage_types")
+		addSubsection("Status Effects", "status_effects")
 	}
 
 	override fun appendBody(): HtmlFile {

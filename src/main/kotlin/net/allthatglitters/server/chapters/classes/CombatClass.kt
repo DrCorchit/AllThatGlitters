@@ -59,7 +59,6 @@ class CombatClass(
 		output.withContent(coreAbilityDescription)
 
 
-
 		val outerDiv = HtmlObject("div").withClass("background-inner")
 		val button = HtmlObject("button").withClass("collapsible")
 			.withContent("Additional Information")
@@ -70,7 +69,9 @@ class CombatClass(
 		}
 		innerDiv.withBoldedEntry("Leveling Bonuses", "")
 		levelingBonuses.forEach {
-			val atLevel = HtmlObject("p").withContent("At level ${it.key}, ")
+			val atLevel = HtmlObject("p")
+				.withStyle("margin-left: 25px;")
+				.withContent("At level ${it.key}, ")
 			//innerDiv.withContent(it.value.preface(atLevel))
 			it.value.preface(atLevel)
 			innerDiv.withContent(it.value)
@@ -110,31 +111,7 @@ class CombatClass(
 			val baseArr = JsonArray()
 			equObj.add("_", baseArr)
 
-			val se = obj.get("startingEquipment") ?: JsonObject()
-			val startingEquipment = if (se.isJsonArray) {
-				println("$name uses jsonarray inventory")
-				obj.getAsJsonArray("startingEquipment")
-					?.map {
-						if (it.isJsonArray) {
-							val arr = it.asJsonArray
-							if (arr.isEmpty) {
-								throw IllegalArgumentException("Starting equipment for combat class $name is invalid")
-							}
-							val first = arr.remove(0)
-								.let { first -> HtmlString(first.asString) }
-							equObj.add(first.content, arr)
-							val list = HtmlObject("ul")
-								.withAll(arr.map { innerItem ->
-									HtmlString(innerItem.asString).wrap("li")
-								})
-							HtmlContent().withContent(first).withContent(list)
-						} else {
-							baseArr.add(it.asString)
-							HtmlString(it.asString)
-						}.wrap("li")
-					}?.let { HtmlObject("ul").withAll(it) } ?: HtmlString("TODO")
-			} else {
-				val inv = se.asJsonObject
+			val startingEquipment = obj.getAsJsonObject("startingEquipment").let { inv ->
 				val content = HtmlContent()
 				if (inv.has("_")) {
 					val personalAffects = inv.getAsJsonArray("_")

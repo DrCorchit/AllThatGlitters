@@ -3,15 +3,22 @@ package net.allthatglitters.server.chapters.classes
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonParser
 import net.allthatglitters.server.Generator
-import net.allthatglitters.server.util.Subsection
 import net.allthatglitters.server.util.deserialize
-import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
 import java.io.File
 
 object CharactersChapter : HtmlFile("How do I create a character?", "c2.html") {
 	override val inputDir: File = File(Generator.inputDir, "chapters/2_characters")
+	override val templatizer = Generator.templatizer.extend()
+		.withRule("races") {
+			races.values.joinToString("\n") { it.render() }
+		}
+		.withRule("combat_categories") { CombatCategory.render() }
+		.withRule("combat_classes") {
+			classes.values.joinToString("\n") { it.render() }
+		}
+
 	val races by lazy {
 		File(inputDir, "races/races.json")
 			.deserialize { Race.deserialize(it) }
@@ -34,18 +41,17 @@ object CharactersChapter : HtmlFile("How do I create a character?", "c2.html") {
 	}
 
 	init {
-		addCustomSubsection(RacesSubsection)
-		addCustomSubsection(ClassesSubsection)
-		addFileSubsection("Alignments", "alignments")
-		addFileSubsection("Writing a Backstory", "backstory")
-		addFileSubsection("Starting Equipment", "equipment")
+		addSubsection("Races")
+		addSubsection("Classes")
+		addSubsection("Alignments", "alignments")
+		addSubsection("Writing a Backstory", "backstory")
+		addSubsection("Starting Equipment", "equipment")
 	}
 
 	override fun appendBody(): HtmlFile {
 		append(File(inputDir, "0_intro.html").readText())
-		//Don't do this because we want to show the subsection names differently at the top of the chapter
-		//append(getOutline())
-		val list = HtmlObject("ol")
+		//Can't use getOutline() because we want to show the subsection names differently at the top of the chapter
+
 		val altNames = listOf(
 			"Choose A Race",
 			"Choose a Class",
@@ -53,12 +59,13 @@ object CharactersChapter : HtmlFile("How do I create a character?", "c2.html") {
 			"Write a Backstory",
 			"Choose starting Equipment",
 		)
-		//TODO warn if altNames length != subsections length
-		subsections.zip(altNames).forEach {
-			val section = it.first
-			val title = it.second
-			list.withContent(HtmlObject("li").withContent(section.linkTo(title)))
-		}
+		check(altNames.size == subsections.size) { "Subsection/Name mismatch detected in CharactersChapter!" }
+		val list = HtmlObject("ol").withAll(
+			subsections.zip(altNames).map {
+				val section = it.first
+				val title = it.second
+				HtmlObject("li").withContent(section.linkTo(title))
+			})
 		append(list)
 		subsections.forEach { appendSubsection(it) }
 		appendElement(
@@ -66,26 +73,5 @@ object CharactersChapter : HtmlFile("How do I create a character?", "c2.html") {
 			"Once you've completed steps 1-5, you're now ready to fill out your character sheet. This is covered in the next chapter."
 		)
 		return this
-	}
-
-	private object RacesSubsection : Subsection(this, "Races", "races") {
-		override fun render(): String {
-			val output = HtmlContent()
-			output.withContent(File(inputDir, "races/intro.html").readText())
-			races.values.forEach { output.withContent(it) }
-			output.withContent(File(inputDir, "races/outro.html").readText())
-			return output.render()
-		}
-	}
-
-	private object ClassesSubsection : Subsection(this, "Classes", "classes") {
-		override fun render(): String {
-			val s1 = File(inputDir, "2.1_classes.html").readText()
-			val s2 = CombatCategory.render()
-			val s3 = File(inputDir, "2.2_classes.html").readText()
-			val s4 = classes.values.joinToString("\n") { it.render() }
-			return "$s1\n$s2$s3\n$s4"
-		}
-
 	}
 }

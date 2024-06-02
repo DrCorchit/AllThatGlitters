@@ -15,7 +15,7 @@
     "name": "Formal Wear",
     "cost": 100,
     "weight": 1,
-    "description": "Appropriate for appearances before a noble or royal court."
+    "description": "Appropriate for appearances before a noble or royal court. +1 to performance checks."
   },
   {
     "name": "Religious Vestments",
@@ -54,13 +54,13 @@
     "name": "Alchemical Apron",
     "cost": 30,
     "weight": 2,
-    "description": "A cloth apron treated to weather the onslaught of acid. Increases BC versus acid damage by 3. If worn over armor, it falls off after 10+1d10 slashing damage is received."
+    "description": "A cloth apron treated to weather the onslaught of acid. Increases BC versus acid damage by 3, and grants advantage on ability checks to brew alchemical potions. If worn over armor, it falls off after 10 slashing damage is received."
   },
   {
     "name": "Blacksmith's Apron",
     "cost": 50,
     "weight": 5,
-    "description": "A thick leather apron designed to withstand wayward sprays of sparks. Increases BC versus fire damage by 3. If worn over armor, it falls off after 10+1d10 slashing damage is received."
+    "description": "A thick leather apron designed to withstand wayward sprays of sparks. Increases BC versus fire damage by 3. If worn over armor, it falls off after 10 slashing damage is received."
   },
   {
     "name": "Gloves",
@@ -68,12 +68,6 @@
     "weight": 0,
     "description": "Prevents callouses and protects one's hands from the cold.",
     "variants": ["Leather", "Satin", "Fingerless"]
-  },
-  {
-    "name": "Hiking Boots",
-    "cost": 10,
-    "weight": 2,
-    "description": "Comfortable, so as to accommodate long journeys."
   },
   {
     "name": "Climbing Boots",
@@ -85,6 +79,6 @@
     "name": "Elegant Boots",
     "cost": "30",
     "weight": 1,
-    "description": "Ostentatious boots signifying personal wealth."
+    "description": "Ostentatious boots signifying personal wealth. +1 to performance checks when combined with formal wear."
   }
 ]

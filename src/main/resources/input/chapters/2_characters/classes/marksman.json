@@ -9,24 +9,35 @@
     "What made you leave your previous life and start adventuring?"
   ],
   "coreAbilityName": "Sniping Shot",
-  "coreAbilityDescription": "When making a ranged attack, you may spend 3 willpower to focus your aim, gaining advantage on the attack roll and lowering the CT by 1.",
+  "coreAbilityDescription": "When making a ranged attack, you may expend 2 willpower to focus your aim, gaining advantage on the attack roll and lowering the CT by 1.",
+  "limitations": "Marksmen ",
   "levelingBonuses": {
-    "1": "gain +1 {{attr.STR}} and {{attr.DEX}}, and proficiency in {{skills.accuracy}} and {{skills.stealth}}."
+    "1": "gain +2 {{attr.STR}} and {{attr.DEX}} and expertise in {{skills.accuracy}}",
+    "2": "gain +1 {{attr.DEX}}",
+    "3": "gain proficiency in {{skills.medicine}}, {{skills.mobility}}, or {{skills.stealth}}."
   },
   "startingEquipment": {
     "_": [
       "A coat of {{armor.gambeson}}.",
+      "A {{weapons.longbow}} and a {{items.quiver}} with 24 arrows",
       "Any standard weapon.",
-      "A {{items.lantern}} with {{items.oil}}",
-      "A piece of {{items.chalk}}"
+      "A {{items.lantern}} with {{items.oil}}"
+    ],
+    "Either of the following:": [
+      "A {{weapons.shortbow}}, plus 24 {{items.arrow}}s",
+      "A {{weapons.crossbow}} and a {{items.quiver}} with 24 {{items.bolt}}s",
+      "A {{weapons.pistol}} and 12 {{items.bullet}}s",
+      "A {{weapons.arquebus}} and 12 {{items.bullet}}s"
     ],
     "An adventurer's pack, containing the following:": [
       "30 + 1d100 gold",
-      "7 days {{items.rations}} and a {{items.canteen}}",
+      "3 days {{items.rations}} and a {{items.canteen}}",
       "A {{items.bedroll}}",
       "Two sets of {{items.plain_clothes}}",
-      "A {{items.spyglass}} and a {{items.map}}",
-      "{{items.climbing_gear}}"
+      "A {{items.spyglass}} and a set of {{items.navigational_tools}}",
+      "A pair of {{items.climbing_boots}}, {{items.climbing_gear}}, and a {{items.rope}}",
+      "A {{items.medical_kit}}",
+      "A spare {{items.quiver}} containing 24 {{items.arrow}}s"
     ]
   }
 }

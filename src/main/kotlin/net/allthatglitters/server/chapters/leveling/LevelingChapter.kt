@@ -8,9 +8,9 @@ object LevelingChapter : HtmlFile("How does my character become stronger?", "c4.
 	override val inputDir = File(Generator.inputDir, "chapters/4_leveling")
 
 	init {
-		addFileSubsection("Leveling", "leveling")
-		addFileSubsection("Training", "training")
-		addFileSubsection("Looting", "looting")
+		addSubsection("Leveling", "leveling")
+		addSubsection("Training", "training")
+		addSubsection("Looting", "looting")
 	}
 
 	override fun appendBody(): HtmlFile {

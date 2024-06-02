@@ -7,10 +7,10 @@
     "weight": 2
   },
   {
-    "name": "Fishing Net",
+    "name": "Fishing Pole",
     "cost": 10,
-    "weight": 10,
-    "description": "Suitable for catching fish or restraining opponents in combat."
+    "weight": 3,
+    "description": "For catching fish, or passing time."
   },
   {
     "name": "Lockpick",

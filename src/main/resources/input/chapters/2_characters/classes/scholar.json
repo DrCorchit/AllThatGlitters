@@ -26,6 +26,7 @@
       "7 days {{items.rations}} and a jug of {{items.water}}",
       "A {{items.tent}}",
       "3 sets of {{items.formal_wear}}",
+      "A set of {{items.utensils}}",
       "An {{items.ink}} and three blank {{items.scroll}}s",
       "A {{items.signet_ring}}",
       "A stick of {{items.chalk}}",

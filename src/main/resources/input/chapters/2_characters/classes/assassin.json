@@ -20,11 +20,13 @@
     "_": [
       "A set of {{armor.leather_armor}}.",
       "Any two {{weapons.modifiers.nimble}} weapons",
-      "A {{weapons.buckler}}",
+      "A {{weapons.buckler}}"
+    ],
+    "Concealed on their person:": [
       "Any two small weapons",
       "A vial of neurotoxic poison",
       "A dozen {{weapons.throwing_knives}} or {{weapons.shuriken}}s",
-      "A {{weapons.grappling_hook}}"
+      "A dozen {{items.lockpick}}s"
     ],
     "An adventurer's pack, containing:": [
       "2d100 gold",
@@ -33,9 +35,8 @@
       "Two sets of {{items.plain_clothes}}.",
       "One set of {{items.formal_wear}}",
       "A {{items.disguise_kit}}",
-      "A dozen {{items.lockpick}}s",
       "A pair of {{items.manacles}}",
-      "A {{items.rope}}"
+      "A {{items.rope}} and {{weapons.grappling_hook}}"
     ]
   }
 }

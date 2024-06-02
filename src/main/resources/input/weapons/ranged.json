@@ -5,7 +5,7 @@
     "damage": "1d4",
     "cost": 1,
     "modifiers": ["Piercing", "Sharp", "Throwable", "Light", "Range: 30/90"],
-    "requirements": ["14 DEX", "Accuracy Proficiency"]
+    "requirements": ["Accuracy Proficiency"]
   },
   {
     "name": "Shuriken",
@@ -13,7 +13,7 @@
     "damage": "1d6",
     "cost": 2,
     "modifiers": ["Slashing", "Throwable", "Light", "Range: 30/90"],
-    "requirements": ["14 DEX", "Accuracy Expertise"]
+    "requirements": ["Accuracy Expertise"]
   },
   {
     "name": "Javelin",
@@ -21,7 +21,7 @@
     "damage": "1d8",
     "cost": 5,
     "modifiers": ["Piercing", "Throwable", "Light", "Range: 30/120"],
-    "requirements": ["12 DEX", "Accuracy Proficiency."]
+    "requirements": ["Martial Arts Proficiency"]
   },
   {
     "name": "Boomerang",
@@ -29,7 +29,7 @@
     "damage": "1d4",
     "cost": 5,
     "modifiers": ["Bludgeoning", "Nimble", "Throwable", "Light", "Range: 30/90"],
-    "requirements": ["12 DEX", "Accuracy Proficiency"]
+    "requirements": ["Accuracy Expertise"]
   },
   {
     "name": "Shortbow",
@@ -37,7 +37,7 @@
     "damage": "1d8",
     "cost": 10,
     "modifiers": ["Piercing", "Nimble", "Two-Handed", "Projectile: Arrows", "Range: 150/300"],
-    "requirements": ["12 DEX", "Accuracy Proficiency"]
+    "requirements": ["Accuracy Proficiency"]
   },
   {
     "name": "Longbow",
@@ -45,7 +45,7 @@
     "damage": "1d12",
     "cost": 30,
     "modifiers": ["Piercing", "Two-Handed", "Projectile: Arrows", "Range: 300/600"],
-    "requirements": ["12 STR", "12 DEX", "Accuracy Proficiency"]
+    "requirements": ["Accuracy Expertise"]
   },
   {
     "name": "Hand Crossbow",
@@ -69,7 +69,7 @@
     "damage": "3d8",
     "cost": 250,
     "modifiers": ["Piercing", "Two-Handed", "Crossbow", "Projectile: Bolts", "Range: 300/600"],
-    "requirements": ["STR 15"]
+    "requirements": ["STR 14"]
   },
   {
     "name": "Pistol",
@@ -77,7 +77,7 @@
     "damage": "1d12",
     "cost": 100,
     "modifiers": ["Firearm", "Projectile: Bullets", "Light", "Range: 20/60"],
-    "requirements": ["12 DEX"]
+    "requirements": []
   },
   {
     "name": "Hand Cannon",
@@ -85,7 +85,7 @@
     "damage": "2d12",
     "cost": 200,
     "modifiers": ["Firearm", "Projectile: Bullets", "Light", "Range: 20/60"],
-    "requirements": ["14 STR", "12 DEX"]
+    "requirements": ["14 STR"]
   },
   {
     "name": "Arquebus",

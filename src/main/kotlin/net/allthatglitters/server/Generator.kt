@@ -1,6 +1,7 @@
 package net.allthatglitters.server
 
 import com.drcorchit.justice.utils.StringUtils.normalize
+import com.drcorchit.justice.utils.logging.Logger
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonDeserializer
@@ -26,6 +27,8 @@ import net.allthatglitters.server.util.html.HtmlFile
 import java.io.File
 
 object Generator {
+	val logger = Logger.getLogger(Generator::class.java)
+
 	val version = "0"
 	val versionedOutputDir = File(Server.serviceDir, "version/$version")
 	val inputDir = File("src/main/resources/input")
@@ -74,29 +77,24 @@ object Generator {
 		File(inputDir, "images").listFiles()!!.forEach {
 			it.copyTo(File(imagesDir, it.name), true)
 		}
-		println("Copied images")
+		logger.info("Copied images")
 
 		File(inputDir, "styles.css")
 			.copyTo(File(Server.serviceDir, "styles.css"), true)
-		println("Copied styles.css")
+		logger.info("Copied styles.css")
 
 		File(Sheet.inputDir, "styles.css")
 			.copyTo(File(versionedOutputDir, "sheet/styles.css"), true)
-		println("Copied sheet/styles.css")
+		logger.info("Copied sheet/styles.css")
+
 		Sheet.appendHeader().appendBody().save()
+		logger.info("Rendered character sheet")
 
 		HtmlFile("All That Glitters", "index.html")
 			.appendHeader()
 			.appendTitle("h1")
 			.appendBody()
 			.save(File(Server.serviceDir, "index.html"))
-
-		HtmlFile("Player's Handbook", "phb_toc.html")
-			.appendHeader()
-			.appendElement("h1", "All That Glitters")
-			.appendTitle("h2")
-			.appendBody()
-			.save(File(versionedOutputDir,"toc_old.html"))
 
 		ToC.appendHeader()
 			.appendElement("h1", "All That Glitters")

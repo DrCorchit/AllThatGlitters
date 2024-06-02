@@ -8,15 +8,15 @@ object NonCombatChapter : HtmlFile("What can my character do besides fighting?",
 	override val inputDir = File(Generator.inputDir, "chapters/6_noncombat")
 
 	init {
-		addFileSubsection("Resting")
-		addFileSubsection("Working")
-		addFileSubsection("Traveling")
-		addFileSubsection("Swimming")
-		addFileSubsection("Falling")
-		addFileSubsection("Sneaking")
-		addFileSubsection("Pickpocketing")
-		addFileSubsection("Lockpicking")
-		addFileSubsection("Trading &amp; Haggling", "trading")
+		addSubsection("Resting")
+		addSubsection("Working")
+		addSubsection("Traveling")
+		addSubsection("Swimming")
+		addSubsection("Falling")
+		addSubsection("Sneaking")
+		addSubsection("Pickpocketing")
+		addSubsection("Lockpicking")
+		addSubsection("Trading &amp; Haggling", "trading")
 	}
 
 	override fun appendBody(): HtmlFile {

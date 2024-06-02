@@ -1,6 +1,7 @@
 package net.allthatglitters.server.util.html
 
 import com.drcorchit.justice.utils.StringUtils.normalize
+import com.drcorchit.justice.utils.logging.Logger
 import net.allthatglitters.server.Generator
 import net.allthatglitters.server.util.FileSubsection
 import net.allthatglitters.server.util.Header
@@ -9,6 +10,8 @@ import net.allthatglitters.server.util.Templatizer
 import java.io.File
 
 open class HtmlFile(val title: String, val fileName: String) {
+	open val logger = Logger.getLogger(HtmlFile::class.java)
+
 	open val inputDir = Generator.inputDir
 	val outputFile = File(Generator.versionedOutputDir, fileName)
 	open val templatizer: Templatizer = Generator.templatizer
@@ -22,13 +25,9 @@ open class HtmlFile(val title: String, val fileName: String) {
 			.withContent(title)
 	}
 
-	fun addFileSubsection(title: String, link: String = title.normalize()): HtmlFile {
+	fun addSubsection(title: String, link: String = title.normalize()): HtmlFile {
 		val index = subsections.size + 1
-		return addCustomSubsection(FileSubsection(this, title, link, index.toString()))
-	}
-
-	fun addCustomSubsection(subsection: Subsection): HtmlFile {
-		subsections.add(subsection)
+		subsections.add(FileSubsection(this, title, link, index.toString()))
 		return this
 	}
 
@@ -77,12 +76,19 @@ open class HtmlFile(val title: String, val fileName: String) {
 	}
 
 	fun render(): String {
+		logger.info("Rendering $fileName")
 		return "<!DOCTYPE html>\n" + HtmlObject("html")
 			.withAttribute("lang", "en")
 			.withContent(head)
 			.withContent(body)
 			.render()
-			.let { templatizer.replace(it) }
+			.let {
+				try {
+					templatizer.replace(it)
+				} catch (e: Exception) {
+					throw IllegalArgumentException("Error templatizing file: $outputFile", e)
+				}
+			}
 	}
 
 	fun save(outputFile: File = this.outputFile) {
@@ -90,8 +96,8 @@ open class HtmlFile(val title: String, val fileName: String) {
 		outputFile.parentFile.mkdirs()
 		val new = outputFile.createNewFile()
 		outputFile.writeText(content)
-		if (new) println("Created file $outputFile")
-		else println("Wrote file $outputFile")
+		if (new) logger.info("Created file $outputFile")
+		else logger.info("Wrote file $outputFile")
 	}
 
 	override fun toString(): String {
