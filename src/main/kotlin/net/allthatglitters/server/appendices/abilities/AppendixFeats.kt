@@ -5,12 +5,11 @@ import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
 import java.io.File
 
-object AppendixTraining : HtmlFile("Appendix: Training", "appendix_training.html") {
-	override val inputDir = File(Generator.inputDir, "training")
+object AppendixFeats : HtmlFile("Appendix: Training", "appendix_training.html") {
+	override val inputDir = File(Generator.inputDir, "appendices/2_feats")
 
 	override fun appendBody(): HtmlFile {
-		listOf("Athletics", "Combat", "Mobility", "Proficiency")
-			.forEach { appendAll(it) }
+		listOf("Athletics", "Combat", "Proficiency").forEach { appendAll(it) }
 		return this
 	}
 

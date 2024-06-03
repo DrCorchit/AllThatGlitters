@@ -5,7 +5,7 @@ import com.drcorchit.justice.utils.logging.Logger
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonDeserializer
-import net.allthatglitters.server.appendices.abilities.AppendixTraining
+import net.allthatglitters.server.appendices.abilities.AppendixFeats
 import net.allthatglitters.server.appendices.armor.AppendixArmor
 import net.allthatglitters.server.appendices.bestiary.AppendixBestiary
 import net.allthatglitters.server.appendices.bestiary.Phylum
@@ -47,7 +47,7 @@ object Generator {
 
 	val appendices = listOf(
 		AppendixSpells,
-		AppendixTraining,
+		AppendixFeats,
 		AppendixWeapons,
 		AppendixArmor,
 		AppendixItems,

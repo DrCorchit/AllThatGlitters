@@ -8,7 +8,7 @@ import net.allthatglitters.server.util.html.HtmlTable
 import java.io.File
 
 object AppendixArmor : HtmlFile("Appendix: Armor &amp; Materials", "appendix_armor.html") {
-	override val inputDir = File(Generator.inputDir, "misc")
+	override val inputDir = File(Generator.inputDir, "appendices/4_armor")
 	val armor by lazy {
 		File(inputDir, "armor.json")
 			.deserialize { Armor.deserialize(it) }

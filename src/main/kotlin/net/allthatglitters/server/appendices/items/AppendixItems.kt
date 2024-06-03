@@ -11,7 +11,7 @@ import net.allthatglitters.server.util.html.HtmlObject
 import java.io.File
 
 object AppendixItems : HtmlFile("Appendix: Mercantile Goods", "appendix_items.html") {
-	override val inputDir = File(Generator.inputDir, "items")
+	override val inputDir = File(Generator.inputDir, "appendices/5_items")
 	val itemCategories = mapOf(
 		"Tools" to getItems("tools.json"),
 		"Clothing" to getItems("clothing.json"),

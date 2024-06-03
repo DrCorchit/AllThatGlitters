@@ -9,7 +9,7 @@ import net.allthatglitters.server.util.html.HtmlTable
 import java.io.File
 
 object AppendixWeapons : HtmlFile("Appendix: Weapons", "appendix_weapons.html") {
-	override val inputDir = File(Generator.inputDir, "weapons")
+	override val inputDir = File(Generator.inputDir, "appendices/3_weapons")
 	private val headers =
 		arrayOf("Name", "Damage", "Price", "Modifiers", "Requirements", "Notes")
 

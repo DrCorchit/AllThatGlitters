@@ -10,7 +10,7 @@ import net.allthatglitters.server.util.italicise
 import java.io.File
 
 object AppendixBestiary : HtmlFile("Appendix: Bestiary", "appendix_bestiary.html") {
-	override val inputDir = File(Generator.inputDir, "creatures")
+	override val inputDir = File(Generator.inputDir, "appendices/6_bestiary")
 	val planes = File(inputDir, "planes.json")
 		.deserialize { Plane.deserialize(it) }
 	val spirits = File(inputDir, "spirits.json")

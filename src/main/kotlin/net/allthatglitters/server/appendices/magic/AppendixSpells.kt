@@ -10,7 +10,7 @@ import net.allthatglitters.server.util.html.HtmlObject
 import java.io.File
 
 object AppendixSpells : HtmlFile("Appendix: Spells", "appendix_spells.html") {
-	override val inputDir: File = File(Generator.inputDir, "spells")
+	override val inputDir: File = File(Generator.inputDir, "appendices/1_spells")
 	val spells = inputDir.listFiles()!!
 		.flatMap { spellFile -> spellFile.deserialize { Spell.deserialize(it) } }
 		.associateBy { it.name.normalize() }
