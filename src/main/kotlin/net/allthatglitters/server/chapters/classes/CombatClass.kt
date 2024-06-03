@@ -111,24 +111,27 @@ class CombatClass(
 			val baseArr = JsonArray()
 			equObj.add("_", baseArr)
 
-			val startingEquipment = obj.getAsJsonObject("startingEquipment").let { inv ->
-				val content = HtmlContent()
-				if (inv.has("_")) {
-					val personalAffects = inv.getAsJsonArray("_")
-						.map { HtmlString(it.asString).wrap("li") }
-						.let { HtmlObject("ul").withAll(it) }
-					content.withContent(personalAffects)
-					inv.remove("_")
+			val startingEquipment = obj.getAsJsonObject("startingEquipment")
+				.let { inv ->
+					val content = HtmlContent()
+					if (inv.has("_")) {
+						val personalAffects = inv.getAsJsonArray("_")
+							.map { HtmlString(it.asString).wrap("li") }
+							.let { HtmlObject("ul").withAll(it) }
+						content.withContent(personalAffects)
+						inv.remove("_")
+					}
+					inv.entrySet().map {
+						content.withContent(HtmlObject("p")
+								.withStyle("margin-left: 25px;")
+								.withContent(it.key))
+						val items = it.value.asJsonArray
+							.map { item -> HtmlString(item.asString).wrap("li") }
+							.let { items -> HtmlObject("ul").withAll(items) }
+						content.withContent(items)
+					}
+					content
 				}
-				inv.entrySet().map {
-					content.withContent(HtmlObject("p").withContent(it.key))
-					val items = it.value.asJsonArray
-						.map { item -> HtmlString(item.asString).wrap("li") }
-						.let { items -> HtmlObject("ul").withAll(items) }
-					content.withContent(items)
-				}
-				content
-			}
 
 			return CombatClass(
 				name,

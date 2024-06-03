@@ -29,7 +29,7 @@
       "A {{weapons.pistol}} and 12 {{items.bullet}}s",
       "A {{weapons.arquebus}} and 12 {{items.bullet}}s"
     ],
-    "An adventurer's pack, containing the following:": [
+    "An adventurer's pack, containing:": [
       "30 + 1d100 gold",
       "3 days {{items.rations}} and a {{items.canteen}}",
       "A {{items.bedroll}}",

@@ -54,5 +54,28 @@
     "reqs": [
       "A horse"
     ]
+  },
+  {
+    "name": "Vertical Escape",
+    "effect": "The player learns to use the grappling hook to make a hasty escape. If surroundings are appropriate, the player can throw the hook up to 30 feet vertically as an action. On a successful DT 12 {{skills.mobility}} check, the grappling hook latches. The player can use an action to climb 10 feet up the rope, away from enemy melee attacks.",
+    "cost": {
+      "gold": "20",
+      "slots": "3"
+    },
+    "reqs": [
+      "12 DEX",
+      "Mobility Proficiency"
+    ]
+  },
+  {
+    "name": "Wall Run",
+    "effect": "The player learns to run a short distance along or up walls, and to leap backwards off of them.",
+    "cost": {
+      "slots": 4
+    },
+    "reqs": [
+      "Mobility Expertise",
+      "Speed 15 or Dexterity 15"
+    ]
   }
 ]

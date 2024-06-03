@@ -6,4 +6,4 @@ sudo cp target/AllThatGlitters-*.jar target/server.jar || exit 1
 #echo "Generating Files."
 #sudo java -cp target/server.jar net.allthatglitters.server.Generator || exit 1
 echo "Starting Server."
-sudo java -jar target/server.jar $1 &
+sudo nohup java -jar target/server.jar $1 &

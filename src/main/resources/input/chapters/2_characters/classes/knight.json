@@ -14,12 +14,7 @@
   "alignment": "Lawful",
   "coreAbilityName": "Shining Armor",
   "coreAbilityDescription": [
-    "You have sworn an oath to a nobleman or lady, to protect them with your life and to fight for them in battle. In return, they have provided you with a fine suit of chainmail, and several high quality steel weapons.",
-    {
-      "tag": "p",
-      "style": "margin-left: 25px",
-      "content": "Note: You are able to wear your armor even"
-    }
+    "You have sworn an oath to a nobleman or lady, to protect them with your life and to fight for them in battle. In return, they have provided you with a fine suit of chainmail, and several high quality steel weapons."
   ],
   "limitations": "Deficient in sorcery.",
   "attributes": {
@@ -30,7 +25,9 @@
     ]
   },
   "levelingBonuses": {
-    "1": "+2 to {{attr.STR}} and +1 to {{attr.CHA}}, and expertise in defense.",
+    "1": "+2 to {{attr.STR}} and +2 to {{attr.CHA}}, and expertise in defense.",
+
+
     "2": [
       "learn a combat ability from the following list:",
       {

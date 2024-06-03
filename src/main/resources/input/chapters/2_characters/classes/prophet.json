@@ -9,9 +9,9 @@
   ],
   "alignment": "Chaotic",
   "coreAbilityName": "Divine Smite",
-  "coreAbilityDescription": "TODO",
+  "coreAbilityDescription": "As an agent of divine prophecy, you may channel your deity's wrath in order to spread your message.  Your deity",
   "levelingBonuses": {
-    "1": "gain +2 {{attr.CHA}} and {{attr.NST}}, and proficiency in {{skills.sorcery}}, {{skills.medicine}}, and {{skills.stealth}}."
+    "1": "gain +2 {{attr.CHA}} and {{attr.NST}}, and proficiency in {{skills.sorcery}}, {{skills.medicine}}, or {{skills.stealth}}."
   },
   "startingEquipment": {
     "_": [
