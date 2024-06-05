@@ -1,5 +1,5 @@
 html { font-family: "Calibri"; color: #CCC; background-color: black; }
-body { margin: 50px; }
+body { margin: auto; max-width: 720px; }
 h1 { font-family: "Almendra Display"; font-size: 36pt; text-align: center; color: #cb0; margin: 20px 0; }
 h2, h3, h4, h5 { font-family: "Aboreto"; }
 h2 { font-size: 16pt; font-weight: normal; text-align: center; color: #cb0; margin: 15px 0 15px 0; }
