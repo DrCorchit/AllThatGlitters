@@ -7,6 +7,7 @@ import net.allthatglitters.server.util.FileSubsection
 import net.allthatglitters.server.util.Header
 import net.allthatglitters.server.util.Subsection
 import net.allthatglitters.server.util.Templatizer
+import org.jsoup.Jsoup
 import java.io.File
 
 abstract class HtmlFile(val title: String, val fileName: String, val inputDir: File) {
@@ -91,10 +92,12 @@ abstract class HtmlFile(val title: String, val fileName: String, val inputDir: F
 
 	fun save(outputFile: File = this.outputFile) {
 		val content = render()
+		val parsed = Jsoup.parse(content)
+		val pretty = parsed.toString()
 
 		outputFile.parentFile.mkdirs()
 		val new = outputFile.createNewFile()
-		outputFile.writeText(content)
+		outputFile.writeText(pretty)
 		if (new) logger.info("Created file $outputFile")
 		else logger.info("Wrote file $outputFile")
 	}

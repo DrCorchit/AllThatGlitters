@@ -60,22 +60,10 @@ open class HtmlObject(
 	}
 
 	override fun render(): String {
-		val builder = StringBuilder()
-		val useNewlines = !newlineBlacklist.contains(tag)
-		if (useNewlines) {
-			builder.append("\n")
-		}
-
-		builder.append(content.render())
-
-		if (useNewlines) {
-			builder.append("\n")
-		}
-
 		return if (attributes.isEmpty()) {
-			"<$tag>$builder</$tag>"
+			"<$tag>${content.render()}</$tag>"
 		} else {
-			"<$tag ${renderAttributes()}>$builder</$tag>"
+			"<$tag ${renderAttributes()}>${content.render()}</$tag>"
 		}
 	}
 
@@ -84,8 +72,6 @@ open class HtmlObject(
 	}
 
 	companion object {
-		val newlineBlacklist =
-			setOf("a", "p", "b", "i", "u", "span", "td", "th", "li", "h1", "h2", "h3", "h4", "h5", "h6")
 
 		fun boldedEntry(tag: String, bold: String, content: String): HtmlObject {
 			return HtmlObject(tag).withContent("${bold.bold()}: $content")

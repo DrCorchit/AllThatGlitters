@@ -2,7 +2,6 @@ package net.allthatglitters.server.appendices.weapons
 
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonParser
-import net.allthatglitters.server.Generator
 import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject

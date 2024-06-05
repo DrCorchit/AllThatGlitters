@@ -1,261 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>
-How does my character use magic?
-</title>
-<link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Almendra Display' rel='stylesheet'>
-<link rel="stylesheet" href="/styles.css">
-<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<h2>Chapter 7</h2>
-<h3>How does my character use magic?</h3>
-<hr />
-<div class="row" style="justify-content:space-evenly; margin: 0">
-<div class="column-shrink">
-<a href="c6.html">Retreat to Chapter 6</a>
-</div>
-<div class="column-shrink">
-<a href="phb_toc.html">Back to the Table of Contents</a>
-</div>
-</div>
-<hr />
-<h4><a id="learning_spells"></a>Learning Spells</h4>
-<p>In order to learn a spell, a player must usually find a spellbook, scroll, or trainer who has knowledge of that
-  specific spell. These would normally be found in larger towns and cities, or rarely in dungeons or out in the
-  wilderness. Certain spells are so widespread that they are considered common knowledge and can be learned without a
-  tome. Likewise, certain class abilities such as the Witch's eldritch tome or the scholar's codex arcana provide
-  special access to arcane knowledge.
-</p>
-<p>Once an appropriate trainer or tome has been located, the player may have to meet certain requirements, such as:</p>
-<ul>
-  <li>A certain level of an attribute</li>
-  <li>Proficiency in a certain skill</li>
-  <li>Mastery of prerequisite spells</li>
-  <li>A certain number of training slots</li>
-  <li>A required sum of gold</li>
-</ul>
-<p>Each spell lists its specific requirements in its description. Once all these requirements are met, the player learns
-  the spell. The spell can only be unlearned if the player intentionally forgets it, usually in order to free up
-  training slots.
-</p>
-<h5>Spell Rarities</h5>
-<p>Some spells are much more commonly used and studied than others. Spells come in four rarities, which determine how
-  difficult it is to acquire knowledge, as well as how others (such as NPCs) would likely react to seeing them used.
-</p>
-<ul>
-  <li><b>Common</b> spells are widely known and often used for very practical applications such as healing or repair.
-    These spells are usually watered-down versions of more powerful spells studied by academic institutions.
-  </li>
-  <li><b>Academic</b> spells are studied and taught at a university level. They are generally inaccessible to the
-    population at large, usually due to the high precision and innate talent required to cast correctly.
-  </li>
-  <li><b>Esoteric</b> spells are not taught by universities, even at a doctoral level. Learning of the existence of such
-    a spell (let alone learning its practice) usually requires supernatural assistance.
-  </li>
-  <li>
-    <b>Forbidden</b> spells are those that respectable institutions have deemed unethical or dangerous. This typically
-    includes all forms of necromancy and demonolatry. Knowledge of these spells is often guarded behind the bizarre
-    initiation rituals of secret societies or scattered cults. If you want to learn these spells, you might have to get
-    your hands dirty.
-  </li>
-</ul>
-<h4><a id="casting_spells"></a>Casting Spells</h4>
-<p>Once a spell has been learned, certain additional requirements must be met in order to cast the spell. These
-  requirements are unique to each spell, and detailed in the spell description. In general, most spells expend AP and
-  require a main hand action to cast. However, some spells require two hands, while others can be cast with the offhand.
-  Spell requirements are often related to how the spell is cast, as follows:
-</p>
-<ul>
-  <li><b>Evocations</b>: Spells which can be cast quickly and take effect instantaneously. So named because they often
-    initiated by speaking a magical word. Casting the spell incurs a one-time expenditure of AP. Most of these are
-    versatile spells with few material or circumstantial requirements.
-  </li>
-  <li><b>Concentration Spells</b>: Spells which are cast over a span of time. These spells usually require a burst of AP
-    to initiate the spell and a smaller amount to maintain it. Concentration can be broken if the caster is damaged or
-    distracted.
-  </li>
-  <li><b>Rituals</b>: Spells that require careful and methodic preparation. These spells are not normally cast during
-    combat, but usually offer a better tradeoff of AP versus power. Rituals often require specific circumstances, such
-    as certain weather conditions, positioning of the moon or stars, or access to a consecrated altar.
-  </li>
-  <li><b>Ceremonies</b>: Ceremonies are complex rituals that require more magical energy than is available to a single
-    character. During a ceremony, each participant contributes some energy towards the casting of the spell. Like
-    rituals, these spells often have special requirements.
-  </li>
-  <li><b>Enchantments</b>: An enchantment is a special type of ritual spell where the magic is infused into a physical
-    object or substance, such as a sword, piece of armor, or an alchemical brew. The enchantment's magic lingers long
-    after the spell is cast.
-  </li>
-</ul>
-<h5>Targeting Spells</h5>
-<p>Many spells have a range of effectiveness and target a certain area of the battlefield. Every spell has a target, of
-  one of the following types:
-</p>
-<ul>
-  <li><b>Self</b>: The spell targets the caster of the spell only.</li>
-  <li><b>Touch</b>: The spell targets one or more creatures that the spellcaster is able to physically touch.</li>
-  <li><b>Range</b>: The spell affects some or all targets of a specific type within a given range.</li>
-  <li><b>Shape</b>: The spell targets a specific area within range, based on one of the shapes described below. If the
-    range is zero, the shape is targeted on the caster.
-  </li>
-</ul>
-<p>Most spells that target something within a range require line-of-sight to the target. A spell can be cast on a target
-  without line-of-sight only if the description explicitly says so. The caster always has line-of-sight to themselves.
-</p>
-<p>Spells that target a shape use one of the following shapes:</p>
-<table>
-  <tr>
-    <th>Shape</th>
-    <th>Effect</th>
-  </tr>
-  <tr>
-    <td>Sphere</td>
-    <td>Affects all targets which overlap a sphere. The sphere's radius is specified by the spell.</td>
-  </tr>
-  <tr>
-    <td>Cylinder</td>
-    <td>Affects all targets which overlap a vertical cylinder. The cylinder's radius and height are specified by the
-      spell.
-    </td>
-  </tr>
-  <tr>
-    <td>Cone</td>
-    <td>Affects all targets which overlap a horizontal cone, with the tip at the point of origination. The cone's length
-      is specified by the spell. Its angle defaults to 45 if not specified.
-    </td>
-  </tr>
-  <tr>
-    <td>Line</td>
-    <td>Affects all targets in the path of the line. The length is specified by the spell. The width defaults to 1 if
-      not otherwise specified. If the spell target is self, then one of the line endpoints ends on the caster's tile.
-      The caster decides if the spell includes their tile or not.
-    </td>
-  </tr>
-  <tr>
-    <td>Cube</td>
-    <td>Affects all targets within a cube. The edge length of the cube is specified by the spell. The cube is centered
-      on the point of origination if not otherwise specified.
-    </td>
-  </tr>
-</table>
-<h4><a id="schools_of_sorcery"></a>Schools of Sorcery</h4>
-<blockquote>Any sensible treatise on magic will disclose the following insight: <i>magic is energy</i>. Therefore, magic
-  is classified according to whence this energy originates, the techniques used to manipulate it, and finally according
-  to the overall purpose of its application. In fact, all spells follow the same basic pattern, whereby the magus
-  identifies a source of energy, imposes order over chaos, and finally unleashes this directed energy upon the world.
-  <p style="text-align: right;">— Albrecht Riftenvorg, <i>A Primer on Magic</i></p>
-</blockquote>
-<p>Despite being intensely studied, magic remains an abstruse and opaque subject. Among those who study it, there is no
-  consensus as to why certain individuals wield its power so effortlessly, why certain spells are so difficult to
-  reproduce, and why other spells work at all. This inconvenience doesn't stop scholars from doing the one thing they
-  are truly good at, however: categorizing things.
-</p>
-<p>A long time ago, spells were categorized into two types: thaumaturgy and divination. Thaumaturgical disciplines used
-  the suffix -urgy, while divination schools used the suffix -mancy. For example, there was once a distinction between
-  necromancy and necromurgy; the former was concerned with contacting deceased spirits, while the latter with raising
-  their bodies. However, centuries of expanding magical theory as well as a good deal of linguistic bastardization have
-  relegated such distinction to a mere footnote of history. Modern magic is divided into six schools of sorcery, which
-  each have their own disciplines. These are listed below:
-</p>
-<h5>Alchemy</h5>
-<p>An ancient school focused on interactions between magic and chemistry. It is said that the secret is in neither the
-  magic nor the mixture, but in the harmony between the two. Alchemical spells are always enchantment rituals, where the
-  magic is cast upon a potion or poison as it is brewed. Most potions lose their magical properties after a long rest,
-  but can be restored via a short ritual. Optimal results are obtained when performed at an alchemical laboratory, but
-  can be performed using field equipment in a pinch.
-</p>
-<p><b>Primary Attribute</b>: Intelligence</p>
-<p><b>Casting Skill</b>: Literacy</p>
-<p><b>Disciplines</b></p>
-<ul>
-  <li><i>Pharmacology</i>: The study of beneficial brews and potions.</li>
-  <li><i>Toxicology</i>: The study of toxins and potions with detrimental effects.</li>
-</ul>
-<h5>Astrology</h5>
-<p>The magic of the spheres and the vault of the heavens. Spells of this category vary significantly, allowing one to
-  deal damage, heal, invoke insanity, and travel instantaneously through the cosmos.
-</p>
-<p><b>Primary Attribute</b>: Intelligence</p>
-<p><b>Casting Skill</b>: Literacy</p>
-<p><b>Disciplines</b></p>
-<ul>
-  <li><i>Solar Astrology</i>: The subdivision of astrology concerned with the sun and stars. Focuses on radiance and
-    healing.
-  </li>
-  <li><i>Lunar Astrology</i>: The subdivision of astrology connected with the moon and its phases. Focuses on darkness
-    and insanity.
-  </li>
-  <li><i>Planetary Astrology</i>: The subdivision of astrology focused on the movement and alignment of the lesser
-    spheres. Focuses on transportaion and teleportation.
-  </li>
-</ul>
-<h5>Biomancy</h5>
-<p>The magic of living things, of the wild, and the human body. Magical techniques of this school are explored chiefly
-  by the druids, who detest the term "biomancy" and have other names for their craft, such as <i>wyrdworking</i> and <i>shamanism</i>.
-  Spells of this school are often not taught at a university level, and must be obtained from druid circles or the mad
-  whisperings of the fey themselves.
-</p>
-<p><b>Primary Attribute</b>: Charisma</p>
-<p><b>Casting Skill</b>: Nature</p>
-<p><b>Disciplines</b></p>
-<ul>
-  <li><i>Weal</i>: The magic of plants, often used for healing or poisoning.</li>
-  <li><i>Wild</i>: The magic of animals, often used for transformations.</li>
-  <li><i>Wyrd</i>: The magic of the fey. Spells of this discipline are as chaotic and unpredictable as the fey
-    themselves.
-  </li>
-</ul>
-<h5>Conjuration</h5>
-<p><b>Primary Attribute</b>: Charisma</p>
-<p><b>Casting Skill</b>: Devotion</p>
-<p><b>Disciplines</b></p>
-<ul>
-  <li><i>Divination</i>: The practice of summoning spirits for communication. By working this school the magus may
-    acquire a great deal of knowledge concerning the future, the past, and faroff lands.
-  </li>
-  <li><i>Invocation</i>: The practice of summoning spirits in order to produce physical manifestations.</li>
-  <li><i>Necromancy</i>: An amalgamation of iniquitous practices which seek to maim, desecrate, and spew disease, as
-    well as contacting and raising the dead. The entire discipline is utterly forbidden.
-  </li>
-</ul>
-<h5>Elementurgy</h5>
-<p><b>Primary Attribute</b>: Willpower</p>
-<p><b>Casting Skill</b>: Sorcery</p>
-<p><b>Disciplines</b></p>
-<ul>
-  <li><i>Aerokinesis</i>: Elemental air magic. Focuses on forces such as wind, clouds, and lightning .</li>
-  <li><i>Geokinesis</i>: Elemental earth magic. Focuses on substances such as clay, stone, and metal.</li>
-  <li><i>Hydrokinesis</i>: Elemental water magic. Focuses on substances such as water, snow, and ice.</li>
-  <li><i>Pyrokinesis</i>: Elemental fire magic. Focuses on the forces of heat, flame, and lava.</li>
-</ul>
-<h5>Psionics</h5>
-<p><b>Primary Attribute</b>: Willpower</p>
-<p><b>Casting Skill</b>: Sorcery</p>
-<p><b>Disciplines</b></p>
-<ul>
-  <li><i>Illusion</i>: Magic concerned with conveying false sensory impressions and misdirection, and dispelling the
-    same.
-  </li>
-  <li><i>Telekinesis</i>: Magic concerned with the movement of objects by mental impulse alone.</li>
-  <li><i>Telepathy</i>: Explores magically aided communication, and various forms of mind control and mental domination.
-  </li>
-</ul>
-<hr />
-<div class="row" style="justify-content:space-evenly; margin: 0">
-<div class="column-shrink">
-<a href="c6.html">Retreat to Chapter 6</a>
-</div>
-<div class="column-shrink">
-<a href="phb_toc.html">Back to the Table of Contents</a>
-</div>
-</div>
-<hr />
-<!-- Enables collapsible functionality -->
-<script>
+ <head>
+  <title>How does my character use magic?</title>
+  <link href="https://fonts.googleapis.com/css?family=Aboreto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Almendra Display" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+ <body>
+  <h2>Chapter 7</h2>
+  <h3>How does my character use magic?</h3>
+  <hr>
+  <div class="row" style="justify-content:space-evenly; margin: 0">
+   <div class="column-shrink">
+    <a href="c6.html">Retreat to Chapter 6</a>
+   </div>
+   <div class="column-shrink">
+    <a href="phb_toc.html">Back to the Table of Contents</a>
+   </div>
+  </div>
+  <hr>
+  <h4><a id="learning_spells"></a>Learning Spells</h4>
+  <p>In order to learn a spell, a player must usually find a spellbook, scroll, or trainer who has knowledge of that specific spell. These would normally be found in larger towns and cities, or rarely in dungeons or out in the wilderness. Certain spells are so widespread that they are considered common knowledge and can be learned without a tome. Likewise, certain class abilities such as the Witch's eldritch tome or the scholar's codex arcana provide special access to arcane knowledge.</p>
+  <p>Once an appropriate trainer or tome has been located, the player may have to meet certain requirements, such as:</p>
+  <ul>
+   <li>A certain level of an attribute</li>
+   <li>Proficiency in a certain skill</li>
+   <li>Mastery of prerequisite spells</li>
+   <li>A certain number of training slots</li>
+   <li>A required sum of gold</li>
+  </ul>
+  <p>Each spell lists its specific requirements in its description. Once all these requirements are met, the player learns the spell. The spell can only be unlearned if the player intentionally forgets it, usually in order to free up training slots.</p>
+  <h5>Spell Rarities</h5>
+  <p>Some spells are much more commonly used and studied than others. Spells come in four rarities, which determine how difficult it is to acquire knowledge, as well as how others (such as NPCs) would likely react to seeing them used.</p>
+  <ul>
+   <li><b>Common</b> spells are widely known and often used for very practical applications such as healing or repair. These spells are usually watered-down versions of more powerful spells studied by academic institutions.</li>
+   <li><b>Academic</b> spells are studied and taught at a university level. They are generally inaccessible to the population at large, usually due to the high precision and innate talent required to cast correctly.</li>
+   <li><b>Esoteric</b> spells are not taught by universities, even at a doctoral level. Learning of the existence of such a spell (let alone learning its practice) usually requires supernatural assistance.</li>
+   <li><b>Forbidden</b> spells are those that respectable institutions have deemed unethical or dangerous. This typically includes all forms of necromancy and demonolatry. Knowledge of these spells is often guarded behind the bizarre initiation rituals of secret societies or scattered cults. If you want to learn these spells, you might have to get your hands dirty.</li>
+  </ul>
+  <h4><a id="casting_spells"></a>Casting Spells</h4>
+  <p>Once a spell has been learned, certain additional requirements must be met in order to cast the spell. These requirements are unique to each spell, and detailed in the spell description. In general, most spells expend AP and require a main hand action to cast. However, some spells require two hands, while others can be cast with the offhand. Spell requirements are often related to how the spell is cast, as follows:</p>
+  <ul>
+   <li><b>Evocations</b>: Spells which can be cast quickly and take effect instantaneously. So named because they often initiated by speaking a magical word. Casting the spell incurs a one-time expenditure of AP. Most of these are versatile spells with few material or circumstantial requirements.</li>
+   <li><b>Concentration Spells</b>: Spells which are cast over a span of time. These spells usually require a burst of AP to initiate the spell and a smaller amount to maintain it. Concentration can be broken if the caster is damaged or distracted.</li>
+   <li><b>Rituals</b>: Spells that require careful and methodic preparation. These spells are not normally cast during combat, but usually offer a better tradeoff of AP versus power. Rituals often require specific circumstances, such as certain weather conditions, positioning of the moon or stars, or access to a consecrated altar.</li>
+   <li><b>Ceremonies</b>: Ceremonies are complex rituals that require more magical energy than is available to a single character. During a ceremony, each participant contributes some energy towards the casting of the spell. Like rituals, these spells often have special requirements.</li>
+   <li><b>Enchantments</b>: An enchantment is a special type of ritual spell where the magic is infused into a physical object or substance, such as a sword, piece of armor, or an alchemical brew. The enchantment's magic lingers long after the spell is cast.</li>
+  </ul>
+  <h5>Targeting Spells</h5>
+  <p>Many spells have a range of effectiveness and target a certain area of the battlefield. Every spell has a target, of one of the following types:</p>
+  <ul>
+   <li><b>Self</b>: The spell targets the caster of the spell only.</li>
+   <li><b>Touch</b>: The spell targets one or more creatures that the spellcaster is able to physically touch.</li>
+   <li><b>Range</b>: The spell affects some or all targets of a specific type within a given range.</li>
+   <li><b>Shape</b>: The spell targets a specific area within range, based on one of the shapes described below. If the range is zero, the shape is targeted on the caster.</li>
+  </ul>
+  <p>Most spells that target something within a range require line-of-sight to the target. A spell can be cast on a target without line-of-sight only if the description explicitly says so. The caster always has line-of-sight to themselves.</p>
+  <p>Spells that target a shape use one of the following shapes:</p>
+  <table>
+   <tbody>
+    <tr>
+     <th>Shape</th>
+     <th>Effect</th>
+    </tr>
+    <tr>
+     <td>Sphere</td>
+     <td>Affects all targets which overlap a sphere. The sphere's radius is specified by the spell.</td>
+    </tr>
+    <tr>
+     <td>Cylinder</td>
+     <td>Affects all targets which overlap a vertical cylinder. The cylinder's radius and height are specified by the spell.</td>
+    </tr>
+    <tr>
+     <td>Cone</td>
+     <td>Affects all targets which overlap a horizontal cone, with the tip at the point of origination. The cone's length is specified by the spell. Its angle defaults to 45 if not specified.</td>
+    </tr>
+    <tr>
+     <td>Line</td>
+     <td>Affects all targets in the path of the line. The length is specified by the spell. The width defaults to 1 if not otherwise specified. If the spell target is self, then one of the line endpoints ends on the caster's tile. The caster decides if the spell includes their tile or not.</td>
+    </tr>
+    <tr>
+     <td>Cube</td>
+     <td>Affects all targets within a cube. The edge length of the cube is specified by the spell. The cube is centered on the point of origination if not otherwise specified.</td>
+    </tr>
+   </tbody>
+  </table>
+  <h4><a id="schools_of_sorcery"></a>Schools of Sorcery</h4>
+  <blockquote>
+   Any sensible treatise on magic will disclose the following insight: <i>magic is energy</i>. Therefore, magic is classified according to whence this energy originates, the techniques used to manipulate it, and finally according to the overall purpose of its application. In fact, all spells follow the same basic pattern, whereby the magus identifies a source of energy, imposes order over chaos, and finally unleashes this directed energy upon the world. 
+   <p style="text-align: right;">— Albrecht Riftenvorg, <i>A Primer on Magic</i></p>
+  </blockquote>
+  <p>Despite being intensely studied, magic remains an abstruse and opaque subject. Among those who study it, there is no consensus as to why certain individuals wield its power so effortlessly, why certain spells are so difficult to reproduce, and why other spells work at all. This inconvenience doesn't stop scholars from doing the one thing they are truly good at, however: categorizing things.</p>
+  <p>A long time ago, spells were categorized into two types: thaumaturgy and divination. Thaumaturgical disciplines used the suffix -urgy, while divination schools used the suffix -mancy. For example, there was once a distinction between necromancy and necromurgy; the former was concerned with contacting deceased spirits, while the latter with raising their bodies. However, centuries of expanding magical theory as well as a good deal of linguistic bastardization have relegated such distinction to a mere footnote of history. Modern magic is divided into six schools of sorcery, which each have their own disciplines. These are listed below:</p>
+  <h5>Alchemy</h5>
+  <p>An ancient school focused on interactions between magic and chemistry. It is said that the secret is in neither the magic nor the mixture, but in the harmony between the two. Alchemical spells are always enchantment rituals, where the magic is cast upon a potion or poison as it is brewed. Most potions lose their magical properties after a long rest, but can be restored via a short ritual. Optimal results are obtained when performed at an alchemical laboratory, but can be performed using field equipment in a pinch.</p>
+  <p><b>Primary Attribute</b>: Intelligence</p>
+  <p><b>Casting Skill</b>: Literacy</p>
+  <p><b>Disciplines</b></p>
+  <ul>
+   <li><i>Pharmacology</i>: The study of beneficial brews and potions.</li>
+   <li><i>Toxicology</i>: The study of toxins and potions with detrimental effects.</li>
+  </ul>
+  <h5>Astrology</h5>
+  <p>The magic of the spheres and the vault of the heavens. Spells of this category vary significantly, allowing one to deal damage, heal, invoke insanity, and travel instantaneously through the cosmos.</p>
+  <p><b>Primary Attribute</b>: Intelligence</p>
+  <p><b>Casting Skill</b>: Literacy</p>
+  <p><b>Disciplines</b></p>
+  <ul>
+   <li><i>Solar Astrology</i>: The subdivision of astrology concerned with the sun and stars. Focuses on radiance and healing.</li>
+   <li><i>Lunar Astrology</i>: The subdivision of astrology connected with the moon and its phases. Focuses on darkness and insanity.</li>
+   <li><i>Planetary Astrology</i>: The subdivision of astrology focused on the movement and alignment of the lesser spheres. Focuses on transportaion and teleportation.</li>
+  </ul>
+  <h5>Biomancy</h5>
+  <p>The magic of living things, of the wild, and the human body. Magical techniques of this school are explored chiefly by the druids, who detest the term "biomancy" and have other names for their craft, such as <i>wyrdworking</i> and <i>shamanism</i>. Spells of this school are often not taught at a university level, and must be obtained from druid circles or the mad whisperings of the fey themselves.</p>
+  <p><b>Primary Attribute</b>: Charisma</p>
+  <p><b>Casting Skill</b>: Nature</p>
+  <p><b>Disciplines</b></p>
+  <ul>
+   <li><i>Weal</i>: The magic of plants, often used for healing or poisoning.</li>
+   <li><i>Wild</i>: The magic of animals, often used for transformations.</li>
+   <li><i>Wyrd</i>: The magic of the fey. Spells of this discipline are as chaotic and unpredictable as the fey themselves.</li>
+  </ul>
+  <h5>Conjuration</h5>
+  <p><b>Primary Attribute</b>: Charisma</p>
+  <p><b>Casting Skill</b>: Devotion</p>
+  <p><b>Disciplines</b></p>
+  <ul>
+   <li><i>Divination</i>: The practice of summoning spirits for communication. By working this school the magus may acquire a great deal of knowledge concerning the future, the past, and faroff lands.</li>
+   <li><i>Invocation</i>: The practice of summoning spirits in order to produce physical manifestations.</li>
+   <li><i>Necromancy</i>: An amalgamation of iniquitous practices which seek to maim, desecrate, and spew disease, as well as contacting and raising the dead. The entire discipline is utterly forbidden.</li>
+  </ul>
+  <h5>Elementurgy</h5>
+  <p><b>Primary Attribute</b>: Willpower</p>
+  <p><b>Casting Skill</b>: Sorcery</p>
+  <p><b>Disciplines</b></p>
+  <ul>
+   <li><i>Aerokinesis</i>: Elemental air magic. Focuses on forces such as wind, clouds, and lightning .</li>
+   <li><i>Geokinesis</i>: Elemental earth magic. Focuses on substances such as clay, stone, and metal.</li>
+   <li><i>Hydrokinesis</i>: Elemental water magic. Focuses on substances such as water, snow, and ice.</li>
+   <li><i>Pyrokinesis</i>: Elemental fire magic. Focuses on the forces of heat, flame, and lava.</li>
+  </ul>
+  <h5>Psionics</h5>
+  <p><b>Primary Attribute</b>: Willpower</p>
+  <p><b>Casting Skill</b>: Sorcery</p>
+  <p><b>Disciplines</b></p>
+  <ul>
+   <li><i>Illusion</i>: Magic concerned with conveying false sensory impressions and misdirection, and dispelling the same.</li>
+   <li><i>Telekinesis</i>: Magic concerned with the movement of objects by mental impulse alone.</li>
+   <li><i>Telepathy</i>: Explores magically aided communication, and various forms of mind control and mental domination.</li>
+  </ul>
+  <hr>
+  <div class="row" style="justify-content:space-evenly; margin: 0">
+   <div class="column-shrink">
+    <a href="c6.html">Retreat to Chapter 6</a>
+   </div>
+   <div class="column-shrink">
+    <a href="phb_toc.html">Back to the Table of Contents</a>
+   </div>
+  </div>
+  <hr><!-- Enables collapsible functionality -->
+  <script>
 	var coll = document.getElementsByClassName("collapsible");
 	var i;
 
@@ -271,5 +177,5 @@ How does my character use magic?
 	  });
 	}
 </script>
-</body>
+ </body>
 </html>
