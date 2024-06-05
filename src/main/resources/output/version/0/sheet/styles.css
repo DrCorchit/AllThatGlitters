@@ -19,7 +19,7 @@ th.sub {
 }
 td { height: line-height: 100%; border-bottom: 0.5px solid black; }
 .border { border: 1px solid black; }
-.noborder { border: 0; }
+.noborder { border: 0 solid transparent; }
 
 td.image { border: 0; text-align: center; position: relative; }
 td.image img { height: 70px; width: auto; }
