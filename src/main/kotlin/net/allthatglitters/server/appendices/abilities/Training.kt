@@ -15,7 +15,7 @@ data class Training(
 
 	override fun render(): String {
 		val output = HtmlObject.background()
-		output.withContent("h6", name)
+		output.withContent("h5", name)
 		if (reqs.isNotEmpty()) {
 			output.withContent("p", "Requirements: " + reqs.joinToString())
 		}

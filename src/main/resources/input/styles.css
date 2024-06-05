@@ -1,13 +1,12 @@
 html { font-family: "Calibri"; color: #CCC; background-color: black; }
 body { margin: 50px; }
 h1 { font-family: "Almendra Display"; font-size: 36pt; text-align: center; color: #cb0; margin: 20px 0; }
-h2, h3, h4, h5, h6 { font-family: "Aboreto"; }
+h2, h3, h4, h5 { font-family: "Aboreto"; }
 h2 { font-size: 16pt; font-weight: normal; text-align: center; color: #cb0; margin: 15px 0 15px 0; }
 h3 { font-size: 24pt; text-align: center; color: #CB0; margin: 10px 0 10px 0 }
 h4 { margin-bottom: 5px; margin-top: 20px; color: #AAA; font-size: 20pt; }
 h5 { margin-bottom: 5px; margin-top: 20px; color: #777; font-size: 14pt; }
-h6 { margin-bottom: 5px; margin-top: 20px; color: #777; font-size: 14pt; }
-h4:after, h5:after, h6:after {
+h4:after, h5:after {
     content:' ';
     display:block;
     border: .5px solid #aaa;
@@ -49,7 +48,7 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
     border-radius: 3px;
     background-color: #181818
 }
-.background h4, h5, h6 {
+.background h4, h5 {
     margin-top: 0px;
 }
 

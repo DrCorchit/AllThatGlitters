@@ -1,5 +1,5 @@
 page { size: 8.5in 11in; margin: 0.5in; }
-html { font-family: "Bellefair"; font-size: 13pt; }
+html { font-family: "Bellefair"; font-size: 13pt; background-color: transparent; }
 table { border: 1px solid black; }
 table.inner { height: 100%; width: 100%; border: 0; }
 th {
@@ -11,6 +11,7 @@ th {
     font-weight: bold;
     text-align: center;
     border: 1px solid black;
+    background-color: transparent;
 }
 th.sub {
     border: 0;
@@ -25,7 +26,7 @@ td.image img { height: 70px; width: auto; }
 td.image div {
     position: absolute;
     font-size: 8pt;
-    bottom: 15%;
+    bottom: 16%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

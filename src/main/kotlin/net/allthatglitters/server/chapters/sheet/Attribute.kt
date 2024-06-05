@@ -23,7 +23,7 @@ data class Attribute(
 		val list = HtmlObject("ul").withAll(effects.map { HtmlString(it).wrap("li") })
 
 		val output = HtmlContent()
-			.withContent(HtmlObject("h6").withContent(name))
+			.withContent(HtmlObject("h5").withContent(name))
 			.withContent(HtmlObject("p").withContent(description))
 			.withContent(HtmlObject("p").withContent("Gameplay Effects:"))
 			.withContent(list)

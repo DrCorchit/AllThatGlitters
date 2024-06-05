@@ -19,7 +19,7 @@ class Item(
 	override fun render(): String {
 		val output = HtmlObject.background()
 			.withStyle("margin: 5px; width: 200px; flex: 0 0 auto;")
-		output.withContent("h6", name)
+		output.withContent("h5", name)
 		output.withContent("p", description)
 		val temp = "<b>Price</b>: $cost" + if (weight > 0) {
 			" <b>Weight</b>: $weight lbs"

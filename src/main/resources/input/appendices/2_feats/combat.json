@@ -87,17 +87,28 @@
   },
   {
     "name": "Shield Charge",
-    "effect": "",
+    "effect": "The player uses both hands to ",
     "cost": {
       "gold": "30",
       "slots": "4"
+    },
+    "reqs": [
+      "Shield Bash"
+    ]
+  },
+  {
+    "name": "Riposte",
+    "effect": "",
+    "cost": {
+      "gold": 0,
+      "slots": 4
     },
     "reqs": [
       ""
     ]
   },
   {
-    "name": "Estoc Piercing Strike",
+    "name": "Estoc Master",
     "effect": "The player learns the proper use of the estoc, a martial thrusting sword. When attacking with the estoc, opponents wearing chain mail gain half BC from their armor.",
     "cost": {
       "gold": "30",
@@ -105,7 +116,7 @@
     },
     "reqs": [
       "At least one estoc sword in inventory",
-      "Martial Arts proficiency"
+      "Martial Arts Proficiency"
     ]
   },
   {
