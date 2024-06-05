@@ -2,7 +2,7 @@ package net.allthatglitters.server.chapters.sheet
 
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonObject
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.Tooltip
 import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlObject
@@ -49,7 +49,7 @@ data class Attribute(
 			.joinToString("|", "(", ")") { it.abbr }
 
 		fun deserialize(obj: JsonObject): Attribute {
-			return Generator.deserializer.fromJson(obj, Attribute::class.java)
+			return generator.deserializer.fromJson(obj, Attribute::class.java)
 		}
 
 		fun parse(str: String): Attribute {

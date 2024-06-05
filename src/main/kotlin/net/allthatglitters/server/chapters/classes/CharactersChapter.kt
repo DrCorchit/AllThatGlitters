@@ -3,14 +3,18 @@ package net.allthatglitters.server.chapters.classes
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonParser
 import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
 import java.io.File
 
-object CharactersChapter : HtmlFile("How do I create a character?", "c2.html") {
-	override val inputDir: File = File(Generator.inputDir, "chapters/2_characters")
-	override val templatizer = Generator.templatizer.extend()
+object CharactersChapter : HtmlFile(
+	"How do I create a character?",
+	"c2.html",
+	File(generator.inputDir, "chapters/2_characters")
+) {
+	override val templatizer = generator.templatizer.extend()
 		.withRule("races") {
 			races.values.joinToString("\n") { it.render() }
 		}

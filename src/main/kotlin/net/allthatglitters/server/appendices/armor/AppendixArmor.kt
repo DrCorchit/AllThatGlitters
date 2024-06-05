@@ -1,14 +1,17 @@
 package net.allthatglitters.server.appendices.armor
 
 import com.drcorchit.justice.utils.StringUtils.normalize
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlTable
 import java.io.File
 
-object AppendixArmor : HtmlFile("Appendix: Armor &amp; Materials", "appendix_armor.html") {
-	override val inputDir = File(Generator.inputDir, "appendices/4_armor")
+object AppendixArmor : HtmlFile(
+	"Appendix: Armor &amp; Materials",
+	"appendix_armor.html",
+	File(generator.inputDir, "appendices/4_armor")
+) {
 	val armor by lazy {
 		File(inputDir, "armor.json")
 			.deserialize { Armor.deserialize(it) }

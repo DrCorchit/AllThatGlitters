@@ -1,7 +1,7 @@
 package net.allthatglitters.server.appendices.magic
 
 import com.drcorchit.justice.utils.StringUtils.normalize
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.concepts.requirement.AttrReq
 import net.allthatglitters.server.util.Collapsible
 import net.allthatglitters.server.util.deserialize
@@ -9,8 +9,11 @@ import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
 import java.io.File
 
-object AppendixSpells : HtmlFile("Appendix: Spells", "appendix_spells.html") {
-	override val inputDir: File = File(Generator.inputDir, "appendices/1_spells")
+object AppendixSpells : HtmlFile(
+	"Appendix: Spells",
+	"appendix_spells.html",
+	File(generator.inputDir, "appendices/1_spells")
+) {
 	val spells = inputDir.listFiles()!!
 		.flatMap { spellFile -> spellFile.deserialize { Spell.deserialize(it) } }
 		.associateBy { it.name.normalize() }

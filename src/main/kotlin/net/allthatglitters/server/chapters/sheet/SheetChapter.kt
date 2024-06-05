@@ -1,15 +1,18 @@
 package net.allthatglitters.server.chapters.sheet
 
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.bold
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.HtmlTable
 import java.io.File
 
-object SheetChapter : HtmlFile("What's on my character sheet?", "c3.html") {
-	override val inputDir = File(Generator.inputDir, "chapters/3_sheet")
-	override val templatizer = Generator.templatizer.extend()
+object SheetChapter : HtmlFile(
+	"What's on my character sheet?",
+	"c3.html",
+	File(generator.inputDir, "chapters/3_sheet")
+) {
+	override val templatizer = generator.templatizer.extend()
 		.withRule("attrs") {
 			val table = HtmlTable().withHeaders(
 				"Attribute Name",

@@ -2,6 +2,7 @@ package net.allthatglitters.server.chapters.classes
 
 import com.google.gson.JsonObject
 import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.Renderable
@@ -18,7 +19,7 @@ class Race(val name: String, val description: List<String>, val bonuses: String)
 
 	companion object {
 		fun deserialize(obj: JsonObject): Race {
-			return Generator.deserializer.fromJson(obj, Race::class.java)
+			return generator.deserializer.fromJson(obj, Race::class.java)
 		}
 	}
 }

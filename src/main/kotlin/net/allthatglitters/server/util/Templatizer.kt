@@ -1,20 +1,20 @@
 package net.allthatglitters.server.util
 
+import com.drcorchit.justice.utils.StringUtils.normalize
 import com.drcorchit.justice.utils.logging.Logger
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.appendices.armor.AppendixArmor
 import net.allthatglitters.server.appendices.items.AppendixItems
 import net.allthatglitters.server.appendices.weapons.AppendixWeapons
 import net.allthatglitters.server.chapters.sheet.Attribute
 import net.allthatglitters.server.chapters.sheet.Skill
-import java.io.File
 
 val logger = Logger.getLogger(Templatizer::class.java)
 
-class Templatizer(val parent: Templatizer? = null) {
-	val rules: MutableMap<Regex, (String) -> String> = mutableMapOf()
+class Templatizer private constructor(private val parent: Templatizer? = null) {
+	val rules: MutableMap<Regex, (MatchResult) -> String> = mutableMapOf()
 
-	fun withRule(regex: String, rule: (String) -> String): Templatizer {
+	fun withRule(regex: String, rule: (MatchResult) -> String): Templatizer {
 		rules[regex.toRegex()] = rule
 		return this
 	}
@@ -30,47 +30,47 @@ class Templatizer(val parent: Templatizer? = null) {
 		}
 	}
 
-	private fun attemptMatch(str: String): String {
-		return rules.entries.firstNotNullOfOrNull {
-			if (it.key.matches(str)) {
-				//logger.info("  Matched ${it.key} to $str")
-				it.value.invoke(str)
-			} else null
-		} ?: parent?.attemptMatch(str)
-		?: throw UnsupportedOperationException("Unable to match $str to any rule")
+	private fun attemptMatch(value: String): String {
+		return rules.entries.firstNotNullOfOrNull { entry ->
+			entry.key.matchEntire(value)?.let { match -> entry.value.invoke(match) }
+		} ?: parent?.attemptMatch(value)
+		?: throw UnsupportedOperationException("Unable to match \"$value\" to any rule")
 	}
 
 	companion object {
 		val templateRegex = "\\{\\{(.*?)}}".toRegex()
 
-		fun getDefault(): Templatizer {
-			val output = Templatizer()
-				.withRule("\\w+(\\.\\w+)*#(.*)") {
-					val index = it.indexOf('#')
-					val parts = it.substring(0, index).split(".")
-					val name = it.substring(index+1)
-					parsePath(parts, name)
-				}
-				.withRule("\\w+(\\.\\w+)*") {
-					val parts = it.split(".")
-					parsePath(parts, null)
-				}
-				.withRule(".*\\.html") {
-					File(Generator.inputDir, it).readText()
-				}
-			return output
+		fun create(): Templatizer {
+			return Templatizer()
 		}
 
-		fun parsePath(parts: List<String>, name: String?): String {
+		fun getDefault(): Templatizer {
+			return create()
+				.withRule("(?<parts>\\w+(\\.\\w+)*)(#(?<name>.*))?") {
+					val parts = it.groups["parts"]!!.value.split(".")
+					val text = it.groups["name"]?.value
+					//logger.info("{${it.value}} matched as {parts: $parts name: $text}")
+					parsePath(parts, text)
+				}
+		}
+
+		fun parsePath(parts: List<String>, text: String?): String {
 			return when (parts[0]) {
 				"version" -> {
-					Generator.version
+					generator.version
 				}
+
+				"strings" -> {
+					val key = parts[1]
+					generator.strings[key.normalize()]!!
+				}
+
 				"attr" -> {
 					val attr = Attribute.parse(parts[1])
 					attr.name
 					//attr.getValue().render()
 				}
+
 				"skills" -> {
 					val skill = Skill.parse(parts[1])
 					skill.getValue().render()
@@ -79,7 +79,8 @@ class Templatizer(val parent: Templatizer? = null) {
 
 				"link" -> {
 					require(parts.size == 2)
-					Generator.lookupFile(parts[1]).getLink().render()
+					val file = generator.lookupFile(parts[1])
+					file.getLink(text ?: file.title).render()
 				}
 
 				"armor" -> {

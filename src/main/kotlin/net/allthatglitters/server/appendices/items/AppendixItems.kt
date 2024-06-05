@@ -1,7 +1,7 @@
 package net.allthatglitters.server.appendices.items
 
 import com.drcorchit.justice.utils.StringUtils.normalize
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.appendices.armor.AppendixArmor
 import net.allthatglitters.server.appendices.bestiary.AppendixBestiary
 import net.allthatglitters.server.appendices.weapons.AppendixWeapons
@@ -10,8 +10,11 @@ import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
 import java.io.File
 
-object AppendixItems : HtmlFile("Appendix: Mercantile Goods", "appendix_items.html") {
-	override val inputDir = File(Generator.inputDir, "appendices/5_items")
+object AppendixItems : HtmlFile(
+	"Appendix: Mercantile Goods",
+	"appendix_items.html",
+	File(generator.inputDir, "appendices/5_items")
+) {
 	val itemCategories = mapOf(
 		"Tools" to getItems("tools.json"),
 		"Clothing" to getItems("clothing.json"),

@@ -1,5 +1,0 @@
-{
-  "max_hp_formula": "<pre>Max HP = STR * (Level+1) / 2</pre>",
-  "max_wp_formula": "<pre>Max WP = NST + CHA - 10</pre>",
-  "dc_formula": "5 + (DEX/2)"
-}

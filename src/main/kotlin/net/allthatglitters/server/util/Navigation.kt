@@ -1,6 +1,6 @@
 package net.allthatglitters.server.util
 
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.Renderable
@@ -57,7 +57,7 @@ class Navigation(
 
 	companion object {
 		fun forChapter(i: Int): Navigation {
-			val max = Generator.chapters.size
+			val max = generator.chapters.size
 			val prev = if (i > 1) {
 				"Retreat to Chapter ${i - 1}" to "c${i - 1}.html"
 			} else null

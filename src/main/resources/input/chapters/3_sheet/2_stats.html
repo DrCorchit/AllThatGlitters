@@ -1,44 +1,51 @@
-<p>Found in the upper right corner, this section tracks several important statistics.</p>
+<p>Found in the topmost right corner, this section tracks several important statistics:</p>
 <h5>Hitpoints</h5>
-<p>Hitpoints (HP) are a resource that cause the player to fall unconscious when fully depleted. A character’s maximum HP
-  is initially equal to their strength score and increases each level by one half their strength score.
+<p>Hitpoints (HP) measure hardiness and vitality. When a creature's hitpoints fall to zero, they succumb to their wounds
+  and fall unconscious. A character’s maximum HP is initially equal to their strength score and increases each level by
+  one half their strength score. The base value can be bolstered by other effects such as class feature, feats, or
+  magical gear.
 </p>
-<h5>Ability Points</h5>
-<p>Ability Points (AP) are expended as the player uses powerful spells and abilities. When AP is fully depleted, the
-  character is said to be exhausted. There is not an immediate penalty for this condition, other than not being able to
-  use critically necessary abilities. Maximum ability points is equal to a players level plus their willpower attribute,
-  but can be increased further by various bonuses.
+<pre>{{strings.max_hp_formula}}</pre>
+<h5>Willpower</h5>
+<p>Willpower (WP) is expended as the player uses powerful spells and abilities. When WP is fully depleted, the character
+  is said to be exhausted. There is not an immediate penalty for this condition, other than not being able to use
+  critically important abilities. Maximum willpower is equal to 10 plus a player's {{attr.CHA}} and {{attr.NST}}
+  modifiers.
 </p>
+<pre>{{strings.max_wp_formula}}</pre>
 <h5>Mitigation</h5>
-<p>Mitigation (MIT) is a derived statistic which determines how likely a player is to successfully dodge or block an
-  attack, similar to armor class from D&amp;D. During combat, melee and ranged attacks are treated as an event roll
-  testing the martial arts or accuracy skill respectively. In this situation, mitigation provides the difficulty
-  threshold for whether the attack succeeds. Thus, players with high mitigation are hit less often and therefore survive
-  longer.
+<p>Mitigation (MIT) is a derived statistic which determines how likely a character is to successfully avoid damage from
+  an attack, similar to armor class from D&amp;D. During combat, melee and ranged attacks are treated as an event roll
+  testing the martial arts or accuracy skill of the attacking player. Mitigation provides the difficulty threshold that
+  determines whether the attack succeeds. Thus, players with high mitigation are hit less often and survive longer.
 </p>
-<p>Mitigation is composed primarily of two values: dodge chance (DC), conferred by the player’s dexterity attribute, and
-  block chance (BC), conferred by the player’s shields and armor. A third value, parry chance, is added when a player is
-  actively attempting to parry an attack. The three values are added together to calculate total mitigation, but certain
-  attacks may bypass some or all of the three values, reducing effective mitigation against that tactic. For example,
-  most types of armor are not ideal for absorbing blows from blunt weapons. Accordingly, bludgeoning damage
-  automatically bypasses half of the target’s BC.
+<p>Mitigation is composed of two values: dodge chance (DC) and block chance (BC). Dodge chance is initially equal to the
+  player’s dexterity attribute, while block chance is determined by the character’s shields and armor. The two values
+  are added together to calculate total mitigation, but certain attacks may bypass one or the other, reducing effective
+  mitigation against that tactic. For example, if a character is restrained or grappled they are no longer able to dodge
+  attacks.
 </p>
-<p>The player’s DC is normally equal to their dexterity attribute, while BC is determined by the player's choice of <a
-    href="appendix_armor.html">armor</a>. Parry chance is determined by the character's weapon, if the weapon is capable
-  of parrying. If the character is not parrying or their weapon does not allow parrying, parry chance is zero. If you're
-  filling out the sheet for the first time, put your dexterity score under DC and your armor BC plus your shield BC (if
-  you have one) under BC. Add the two together, and that's your base mitigation stat.
+<p>DC, BC, and MIT are calculated as follows:</p>
+<pre>{{strings.dc_formula}}</pre>
+<pre>{{strings.bc_formula}}</pre>
+<pre>{{strings.mit_formula}}</pre>
+<p style="margin-left:25px;">Note: The character sheet is meant to record the base mitigation statistic. Temporary or
+  conditional bonuses (such as from potions, spells, or parrying) should not be recorded here.
+</p>
+<p>To calculate effective MIT against an attack, add any circumstantial bonuses or penalties to BC and DC to the base
+  mitigation value. For example, specific potions increase DC, while the parry reaction or certain spells improve BC.
 </p>
 <h5>Gold</h5>
-<p>Gold is the currency of the land, whether pounds, doubloons, or rupees. Gold is used in a variety of ways, mainly to
-  buy equipment from merchants, hire trainers, or stock up on camping supplies. In order to simplify the economy, only
-  one type of currency is used. If other currencies such as copper or silver pieces, the value is expressed in terms of
-  gold. In practical terms, one gold represents about one day's wages for a peasant laborer or farmer.
+<p>Gold measures a character's material wealth, and does not necessarily correspond to a specific number of gold coins
+  or any specific currency. Coins made from other metals such as copper or silver are converted to their gold value when
+  recorded on the character sheet. Gold is mainly used to purchase goods and services, such as buying equipment from
+  merchants or hiring trainers.
 </p>
 <h5>Training Slots</h5>
-<p>Training slots are a resource that controls how often a character can learn new abilities from training. You
-  temporarily expend training slots whenever you learn a new ability (other than a class ability). If you don't have
-  enough training slots for a new ability, you may have to forget an ability to regain the required training slots, or
-  wait until you level up. If you're just making a character you won't have used any training slots, so they will be at
-  maximum, which is normally equal to your intelligence attribute score.
+<p>Training slots are a resource that control how often a character can learn new abilities from training. Characters
+  expend training slots whenever they learn new feats or spells. If they don't have enough training slots for a new
+  ability, they may have to forget an ability to regain the required training slots, or wait until they level up. If
+  you're just making a character, you won't have used any training slots, so they will be at maximum, which is equal to
+  your intelligence attribute score. Training slots are explained in more detail in {{link.c6#chapter 6}}.
 </p>
+<pre>{{strings.training_slots_formula}}</pre>

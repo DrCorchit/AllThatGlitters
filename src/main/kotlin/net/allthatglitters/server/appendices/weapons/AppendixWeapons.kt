@@ -3,13 +3,17 @@ package net.allthatglitters.server.appendices.weapons
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonParser
 import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.HtmlTable
 import java.io.File
 
-object AppendixWeapons : HtmlFile("Appendix: Weapons", "appendix_weapons.html") {
-	override val inputDir = File(Generator.inputDir, "appendices/3_weapons")
+object AppendixWeapons : HtmlFile(
+	"Appendix: Weapons",
+	"appendix_weapons.html",
+	File(generator.inputDir, "appendices/3_weapons")
+) {
 	private val headers =
 		arrayOf("Name", "Damage", "Price", "Modifiers", "Requirements", "Notes")
 
@@ -19,7 +23,8 @@ object AppendixWeapons : HtmlFile("Appendix: Weapons", "appendix_weapons.html") 
 			.associateBy { it.first.normalize() }
 
 	fun lookupModifier(name: String): Pair<String, String> {
-		return modifiers[name.normalize()] ?: throw NoSuchElementException("No such modifier: $name")
+		return modifiers[name.normalize()]
+			?: throw NoSuchElementException("No such modifier: $name")
 	}
 
 	val weaponTables = File(inputDir, "weaponTables.json")

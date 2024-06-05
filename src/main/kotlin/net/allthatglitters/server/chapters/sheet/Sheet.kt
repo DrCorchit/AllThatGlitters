@@ -1,8 +1,7 @@
 package net.allthatglitters.server.chapters.sheet
 
 import com.drcorchit.justice.utils.StringUtils.normalize
-import net.allthatglitters.server.Generator
-import net.allthatglitters.server.util.Templatizer
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlFile
@@ -10,12 +9,15 @@ import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.HtmlTable
 import java.io.File
 
-object Sheet : HtmlFile("All That Glitters — Character Sheet", "sheet/character_sheet.html") {
-	override val inputDir = File(Generator.inputDir, "sheet")
-	override val templatizer = Generator.templatizer.extend()
+object Sheet : HtmlFile(
+	"All That Glitters — Character Sheet",
+	"sheet/character_sheet.html",
+	File(generator.inputDir, "sheet")
+) {
+	override val templatizer = generator.templatizer.extend()
 		.withRule("5_skills") {
 			val table = HtmlTable().withClass("inner") as HtmlTable
-				table.nextRow()
+			table.nextRow()
 				.withDefaultHeaderAttribute("class", "sub")
 				.withHeader("Skill")
 				.withHeader("Base")
@@ -49,9 +51,16 @@ object Sheet : HtmlFile("All That Glitters — Character Sheet", "sheet/characte
 		.withRule("7_rows") {
 			val output = HtmlContent()
 			for (i in 1..8) {
-				output.withContent(HtmlObject("tr")
-					.withContent(HtmlObject("td", mutableMapOf("colspan" to "3")).withContent("<br/>"))
-					.withContent(HtmlObject("td").withContent("<br/>")))
+				output.withContent(
+					HtmlObject("tr")
+						.withContent(
+							HtmlObject(
+								"td",
+								mutableMapOf("colspan" to "3")
+							).withContent("<br/>")
+						)
+						.withContent(HtmlObject("td").withContent("<br/>"))
+				)
 			}
 			output.render()
 		}

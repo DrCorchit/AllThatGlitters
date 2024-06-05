@@ -1,7 +1,7 @@
 package net.allthatglitters.server.appendices.bestiary
 
 import com.drcorchit.justice.utils.StringUtils.normalize
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.bold
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
@@ -9,8 +9,11 @@ import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.italicise
 import java.io.File
 
-object AppendixBestiary : HtmlFile("Appendix: Bestiary", "appendix_bestiary.html") {
-	override val inputDir = File(Generator.inputDir, "appendices/6_bestiary")
+object AppendixBestiary : HtmlFile(
+	"Appendix: Bestiary",
+	"appendix_bestiary.html",
+	File(generator.inputDir, "appendices/6_bestiary")
+) {
 	val planes = File(inputDir, "planes.json")
 		.deserialize { Plane.deserialize(it) }
 	val spirits = File(inputDir, "spirits.json")

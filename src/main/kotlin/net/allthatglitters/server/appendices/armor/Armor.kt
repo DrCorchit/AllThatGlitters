@@ -1,10 +1,9 @@
 package net.allthatglitters.server.appendices.armor
 
 import com.drcorchit.justice.utils.StringUtils.normalize
-import com.google.common.collect.ImmutableSet
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.appendices.items.Item
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.underline
@@ -50,7 +49,7 @@ data class Armor(
 				obj.add("effects", JsonArray())
 			}
 
-			return Generator.deserializer.fromJson(obj, Armor::class.java)
+			return generator.deserializer.fromJson(obj, Armor::class.java)
 		}
 	}
 }

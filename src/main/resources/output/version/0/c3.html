@@ -39,63 +39,73 @@ What's on my character sheet?
 </ol>
 <h4><a id="info"></a>Character Information</h4>
 <p>This section is found in the topmost left section of the character sheet, and records the most basic information
-  about your character, including their name, combat class, level and race. Race, class, and alignment are discussed in
+  about your character, including their name, combat class, level, race, and alignment. Races, classes, and alignments are discussed in
   more detail in the <a href="c2.html" rel="prev">previous chapter</a>. Except for your character level, information in
   this section usually doesn't change.
 </p>
 <h4><a id="stats"></a>Statistics</h4>
-<p>Found in the upper right corner, this section tracks several important statistics.</p>
+<p>Found in the topmost right corner, this section tracks several important statistics:</p>
 <h5>Hitpoints</h5>
-<p>Hitpoints (HP) are a resource that cause the player to fall unconscious when fully depleted. A character’s maximum HP
-  is initially equal to their strength score and increases each level by one half their strength score.
+<p>Hitpoints (HP) measure hardiness and vitality. When a creature's hitpoints fall to zero, they succumb to their wounds
+  and fall unconscious. A character’s maximum HP is initially equal to their strength score and increases each level by
+  one half their strength score. The base value can be bolstered by other effects such as class feature, feats, or
+  magical gear.
 </p>
-<h5>Ability Points</h5>
-<p>Ability Points (AP) are expended as the player uses powerful spells and abilities. When AP is fully depleted, the
-  character is said to be exhausted. There is not an immediate penalty for this condition, other than not being able to
-  use critically necessary abilities. Maximum ability points is equal to a players level plus their willpower attribute,
-  but can be increased further by various bonuses.
+<pre>Max HP = Strength + (Strength * level / 2)</pre>
+<h5>Willpower</h5>
+<p>Willpower (WP) is expended as the player uses powerful spells and abilities. When WP is fully depleted, the character
+  is said to be exhausted. There is not an immediate penalty for this condition, other than not being able to use
+  critically important abilities. Maximum willpower is equal to 10 plus a player's Charisma and Instinct
+  modifiers.
 </p>
+<pre>Max WP = 10 + Instinct modifier + Charisma modifier</pre>
 <h5>Mitigation</h5>
-<p>Mitigation (MIT) is a derived statistic which determines how likely a player is to successfully dodge or block an
-  attack, similar to armor class from D&amp;D. During combat, melee and ranged attacks are treated as an event roll
-  testing the martial arts or accuracy skill respectively. In this situation, mitigation provides the difficulty
-  threshold for whether the attack succeeds. Thus, players with high mitigation are hit less often and therefore survive
-  longer.
+<p>Mitigation (MIT) is a derived statistic which determines how likely a character is to successfully avoid damage from
+  an attack, similar to armor class from D&amp;D. During combat, melee and ranged attacks are treated as an event roll
+  testing the martial arts or accuracy skill of the attacking player. Mitigation provides the difficulty threshold that
+  determines whether the attack succeeds. Thus, players with high mitigation are hit less often and survive longer.
 </p>
-<p>Mitigation is composed primarily of two values: dodge chance (DC), conferred by the player’s dexterity attribute, and
-  block chance (BC), conferred by the player’s shields and armor. A third value, parry chance, is added when a player is
-  actively attempting to parry an attack. The three values are added together to calculate total mitigation, but certain
-  attacks may bypass some or all of the three values, reducing effective mitigation against that tactic. For example,
-  most types of armor are not ideal for absorbing blows from blunt weapons. Accordingly, bludgeoning damage
-  automatically bypasses half of the target’s BC.
+<p>Mitigation is composed of two values: dodge chance (DC) and block chance (BC). Dodge chance is initially equal to the
+  player’s dexterity attribute, while block chance is determined by the character’s shields and armor. The two values
+  are added together to calculate total mitigation, but certain attacks may bypass one or the other, reducing effective
+  mitigation against that tactic. For example, if a character is restrained or grappled they are no longer able to dodge
+  attacks.
 </p>
-<p>The player’s DC is normally equal to their dexterity attribute, while BC is determined by the player's choice of <a
-    href="appendix_armor.html">armor</a>. Parry chance is determined by the character's weapon, if the weapon is capable
-  of parrying. If the character is not parrying or their weapon does not allow parrying, parry chance is zero. If you're
-  filling out the sheet for the first time, put your dexterity score under DC and your armor BC plus your shield BC (if
-  you have one) under BC. Add the two together, and that's your base mitigation stat.
+<p>DC, BC, and MIT are calculated as follows:</p>
+<pre>DC = Dexterity</pre>
+<pre>BC = armor BC + shield BC</pre>
+<pre>MIT = BC + DC</pre>
+<p style="margin-left:25px;">Note: The character sheet is meant to record the base mitigation statistic. Temporary or
+  conditional bonuses (such as from potions, spells, or parrying) should not be recorded here.
+</p>
+<p>To calculate effective MIT against an attack, add any circumstantial bonuses or penalties to BC and DC to the base
+  mitigation value. For example, specific potions increase DC, while the parry reaction or certain spells improve BC.
 </p>
 <h5>Gold</h5>
-<p>Gold is the currency of the land, whether pounds, doubloons, or rupees. Gold is used in a variety of ways, mainly to
-  buy equipment from merchants, hire trainers, or stock up on camping supplies. In order to simplify the economy, only
-  one type of currency is used. If other currencies such as copper or silver pieces, the value is expressed in terms of
-  gold. In practical terms, one gold represents about one day's wages for a peasant laborer or farmer.
+<p>Gold measures a character's material wealth, and does not necessarily correspond to a specific number of gold coins
+  or any specific currency. Coins made from other metals such as copper or silver are converted to their gold value when
+  recorded on the character sheet. Gold is mainly used to purchase goods and services, such as buying equipment from
+  merchants or hiring trainers.
 </p>
 <h5>Training Slots</h5>
-<p>Training slots are a resource that controls how often a character can learn new abilities from training. You
-  temporarily expend training slots whenever you learn a new ability (other than a class ability). If you don't have
-  enough training slots for a new ability, you may have to forget an ability to regain the required training slots, or
-  wait until you level up. If you're just making a character you won't have used any training slots, so they will be at
-  maximum, which is normally equal to your intelligence attribute score.
+<p>Training slots are a resource that control how often a character can learn new abilities from training. Characters
+  expend training slots whenever they learn new feats or spells. If they don't have enough training slots for a new
+  ability, they may have to forget an ability to regain the required training slots, or wait until they level up. If
+  you're just making a character, you won't have used any training slots, so they will be at maximum, which is equal to
+  your intelligence attribute score. Training slots are explained in more detail in <a href="c6.html">chapter 6</a>.
 </p>
+<pre>Max Training Slots = Intelligence</pre>
 <h4><a id="attrs"></a>Attributes</h4>
-<p>The six attributes, <i>Strength</i>, <i>Dexterity</i>, <i>Speed</i>, <i>Intelligence</i>, <i>Charisma</i>, and <i>
-  Willpower</i>, describe the raw physical and mental capabilities of a character. Each attribute has a value typically
+<p>The six attributes, <i>Strength</i>, <i>Dexterity</i>, <i>Speed</i>, <i>Intelligence</i>, <i>Instinct</i>, and <i>
+  Charisma</i>, describe the raw physical and mental capabilities of a character. Each attribute has a value typically
   from 0 to 20, with a score of 0 indicating a total absence of the attribute (as with someone who is dead or
   unconscious) while a score of 20 indicating a nearly superhuman level of aptitude. For humans, a score of ten
   indicates an average level of proficiency.
 </p>
-<table>
+<p style="margin-left: 25px;">Note: In some situations, we do not use the attribute score directly, but the <a
+    id="modifier"></a><i>modifier</i>. The modifier for an attribute is obtained by subtracting 10 from the attribute
+  score. An average human with 10 for all attribute scores would thus have 0 for their modifiers.
+</p><table>
 <tr>
 <th>Attribute Name</th>
 <th>What it Measures</th>
@@ -105,67 +115,68 @@ What's on my character sheet?
 <tr>
 <td>Strength</td>
 <td>Core physical body power</td>
-<td>• Melee weapon damage<br/>• Maximum Hitpoints<br/>• Defense, Martial Arts, and Intimidation skills</td>
+<td>• Maximum Hitpoints<br/>• Melee weapon damage<br/>• Defense and Martial Arts skills</td>
 <td>10 Strength equals 100 lbs deadlift weight. Each additional point equals a ~25% increase in deadlift weight.</td>
 </tr>
 <tr>
 <td>Dexterity</td>
 <td>Acrobatics and manual dexterity</td>
-<td>• Nimble weapon damage<br/>• Dodge Chance<br/>• Accuracy, Martial Arts, Mobility, Sleight-of-Hand, and Stealth skills</td>
+<td>• Dodge Chance<br/>• Nimble weapon damage<br/>• Accuracy, Martial Arts, Mobility, Sleight-of-Hand, and Stealth skills</td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Speed</td>
 <td>Walking and running speed</td>
-<td>• Polearm damage<br/>• Movement speed<br/>• Initiative and Mobility skills</td>
+<td>• Movement speed<br/>• Polearm damage<br/>• Initiative and Mobility skills</td>
 <td>2 Speed equals 1 ft/s walking speed</td>
 </tr>
 <tr>
 <td>Intelligence</td>
 <td>Reasoning and factual recall</td>
-<td>• Alchemical and Astrological spell potency<br/>• Training Slots<br/>• Literacy and Medicine skills</td>
+<td>• Training Slots<br/>• Alchemical and Astrological spell potency<br/>• Literacy and Medicine skills</td>
 <td>1 Intelligence point equals 10 points of IQ</td>
 </tr>
 <tr>
 <td>Instinct</td>
 <td>Innate or intuitive skills and knowledge</td>
-<td>• Natural and Conjuration spell power<br/>• Nature, Perception, Sorcery, and Survival skills skills</td>
+<td>• Maximum Willpower<br/>• Natural and Conjuration spell power<br/>• Nature, Perception, Sorcery, and Survival skills skills</td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Charisma</td>
 <td>Force of personality and determination to succeed</td>
-<td>• Elemental and Psychic spell potency<br/>• Maximum Willpower<br/>• Performance, persuasion, and perception skills</td>
+<td>• Maximum Willpower<br/>• Elemental and Psychic spell potency<br/>• Performance, persuasion, and perception skills</td>
 <td>N/A</td>
 </tr>
 </table>
-<p>In addition to these effects, each attribute supports one or more skills, which are used during event rolls.
-  Importantly, each attribute affects multiple aspects of gameplay, meaning that players should care about which stats
-  they prioritize and which they neglect. Not every character needs to be well-rounded, but characters with unusual
-  ability score distributions should feel somewhat unbalanced to play.
-</p>
-<p style="margin-left: 25px;">Note: In some situations, we do not use the attribute score directly, but the <a
-    id="modifier"></a>modifier. The modifier for an attribute is obtained by subtracting 10 from the attribute score. An
-  average human with 10 for all attribute scores would thus have 0 for their modifiers.
+<p>Each attribute affects multiple aspects of gameplay, meaning that players should care about which stats they
+  prioritize and which they neglect. Not every character needs to be well-rounded, but characters with unusual ability
+  score distributions should feel somewhat unbalanced to play.
 </p>
 <p>If you're filling out your character sheet for the first time, your attributes are going to be determined by your
-  racial and class bonuses. Adding these together should give you 6 numbers. Copy these into the "attributes" section
-  and then move on to equipment.
+  racial and class bonuses. Go ahead and add up the totals and record them onto your character sheet, then move to the
+  next section. Your attribute scores will increase later on as you level up.
 </p>
 <h4><a id="equipment"></a>Equipment</h4>
-<h5>Weapons</h5>
 <p>This section records your character's equipped weapons and armor. Magical trinkets are not recorded here, but under
   "inventory", even if they are currently being worn.
 </p>
-<p>To fill out this section, copy down the name and damage of the weapon you chose when you created your character. For
-  example, let's suppose you're playing a character with a strength score of 13 and a dexterity score of 15. If you
-  chose a longsword, you would write: <span style="font-family: Courier New;">Longsword 1d12+3</span>. The 1d12 is the
-  die used by the weapon, while the +3 comes from your strength, because the longsword is a strength weapon. On the
-  other hand, if you chose a katana, you would enter <span style="font-family: Courier New;">Katana 1d8+5</span>. Since
-  the katana is a nimble weapon, you want to use whichever is higher of strength and dexterity for damage. Since 15 is
-  higher than 13, you would use dexterity. Finally, write down whichever modifiers apply to that weapon. If you run out
-  of space, just write the most important modifiers. You can refer to <a href="appendix_weapons.html">Appendix:
-    Weapons</a> for more information on weapons and modifiers.
+<h5>Weapons</h5>
+<p>To fill out this section, copy down the names and damage of the weapons you chose when you created your character.
+  For example, let's suppose you're playing a character with a strength score of 13 and a dexterity score of 15. If you
+  chose a longsword, you would write:
+</p>
+<pre>Longsword 1d12+3</pre>
+<p>The 1d12 is the die used by the weapon, while the +3 comes from your strength, because the longsword is a strength
+  weapon. On the other hand, if you chose a katana, you would enter:
+<p>
+<pre>Katana 1d8+5</pre>
+<p>Since the katana is a nimble weapon, you want to use whichever is higher of strength and dexterity for damage. Since
+  15 is higher than 13, you would use dexterity.
+</p>
+<p>Finally, write down whichever modifiers apply to that weapon. You can refer to <a href="appendix_weapons.html">Appendix: Weapons</a> for more
+  information on weapons and modifiers. If you're fully familiar with your weapon's modifiers, I suggest using this
+  space to record the abilities of any magical weapons you equip.
 </p>
 <p>A player can carry up to two weapons, as follows:</p>
 <ul>
@@ -178,16 +189,17 @@ What's on my character sheet?
 <p>If you only carry one weapon, leave the "offhand" column blank.</p>
 <h5>Armor</h5>
 <p>Under the "armor" section, write down the type of armor your character is wearing and the associated BC. For example,
-  if your character is a knight you would start out wearing half plate. Therefore, you would write <span
-      style="font-family: Courier New">Half Plate (BC 8)</span>. If you're not carrying a shield and no other bonuses
-  apply, this is the same value as what you entered under "BC" in the "Statistics" section.
+  if your character is a knight you would start out wearing half plate. Therefore, you would write:
 </p>
+<pre>Half Plate (BC 12)</pre>
+<p>If you don't know the BC of your armor, you can look it up in <a href="appendix_armor.html">Appendix: Armor &amp; Materials</a></p>
 <h4><a id="skills"></a>Skills</h4>
 <p>Skills are related to attributes in that they are also used for event rolls. Every skill has an underlying supporting
   attribute, whose modifier is added to the roll as with an attribute check. In addition to this, players add a bonus
-  from training called a proficiency bonus. The number rolled on the d20 plus the modifier plus the proficency bonus
-  added together determine the final value for the skill check.
+  from training called a proficiency bonus. The final value of the skill check equals the number rolled on the d20 plus
+  the attribute modifier plus the proficency bonus, as follows:
 </p>
+<pre>Skill Check = 1d20 + attribute modifier + proficiency bonus</pre>
 <p>Although every skill depends on at least one attribute, several skills have a secondary supporting attribute whose
   modifier may be used instead, under certain circumstances. For example, a player who is sneaking may decide that they
   are too clumsy to move quietly and instead opt to sprint past the guard while his gaze is turned. In this case, the
@@ -195,7 +207,13 @@ What's on my character sheet?
   substitution is allowed is situational. Certain circumstances may <i>require</i> that the alternative attribute score
   modifier is used, while others may allow the player to choose whichever is higher.
 </p>
-<p>When filling out this section, copy the value of the corresponding</p>
+<p>When filling out this section, copy the <a href="#modifier">modifier</a> of the relevant attribute under the column
+  labeled "base". Then, record your proficiency bonus (if any) under "bonus". Add the two together to calculate your
+  total bonus for that skill. For example, if your character has a dexterity score of 13 and proficiency in
+  <span data-tooltip="Describes a player’s accuracy with ranged weapons such as bows and firearms."><u>Accuracy</u></span>, you would fill out the entry for the accuracy skill as follows:
+</p>
+<pre>Base + Bonus = Total
+3    + 2     = +5</pre>
 <p>Here is a list of all skills:</p>
 <table>
 <tr>
@@ -307,45 +325,45 @@ What's on my character sheet?
   is made.
 </p>
 <p>When players obtain proficiency bonuses to the same skill from multiple sources, they do not combine to advance one’s
-  proficiency in that skill to the next level. The only exception to this rule is that proficiency bonuses from a
-  player’s race and class can be combined, allowing a player to begin the game with expert level in that skill.
+  proficiency in that skill to the next level. However, if a player acquires proficiency for the same skill from both
+  their race and class, they may take proficiency in a new skill to replace the doubled proficiency.
 </p>
 <h4><a id="abilities"></a>Spells &amp; Abilities</h4>
-<p>Abilities are learned or innate skills that confer some benefit to the player, such as spells or combat maneuvers.
-  Abilities are categorized in a few ways. First, abilities acquired from a player’s class (such as the barbarian’s
-  rage) are called innate abilities. Abilities learned from trainers are called trained abilities, and finally trained
-  abilities which have been fully mastered are called rote abilities.
+<p>Abilities are specific skills that confer some benefit to the player, such as spells or feats. Abilities are
+  categorized in a few ways. First, abilities acquired from a player’s class (such as the barbarian’s rage) are called
+  innate abilities. Abilities learned from trainers are called trained abilities, and finally trained abilities which
+  have been fully mastered are called rote abilities. Abilities that aren't spells or innate are called feats.
 </p>
 <p>Abilities are also classified by whether or not they are explicitly invoked by the player or if they take effect
-  automatically. The former are called active abilities and usually cost AP to activate, while the latter are called
-  passive abilities (or perks) and take effect without the use of AP.
+  automatically. The former are called active abilities and usually cost WP to activate, while the latter are called
+  passive abilities (or perks) and usually take effect without the use of WP.
 </p>
 <p>An example of a passive ability would be a perk that restores HP at the start of the player’s turn. Since the player
   is not required to do anything to receive this benefit, it is passive. On the other hand, an ability that allows the
-  player to spend AP to deal extra damage would be an active ability.
+  player to spend WP to deal extra damage would be an active ability.
 </p>
-<p>In this section, write down the name of any learned or rote abilities you have acquired, followed by the training
-  slots used by that ability. Innate abilities don't need to go here, since they are determined by your class. If an
-  ability is rote, just leave the "training slots" column for that ability blank. Your training slots
+<p>In this section, write down the name of any abilities you learn, followed by the training slots used by that ability.
+  Innate abilities don't need to go here, since they are determined by your class. If an ability is known by rote, leave
+  the "training slots" column for that ability blank. If you're filling out a character sheet for a level one character,
+  this section will be mostly blank except for any starting spells.
 </p>
 <h4><a id="backstory"></a>Backstory &amp; Personality</h4>
 <p>This section is highly unique to each character, and describes their origins, their motivations for becoming an
   adventurers, personal goals, as well as character strengths or flaws. There's a lot that can go here, so use your
   judgement and flesh out your character as much as you like.
 </p>
+<p>Ideally, this section should provide some explanation of your character's motives, origins, and flaws.</p>
 <h4><a id="inventory"></a>Inventory</h4>
-<p>The final aspect of your character is their inventory, which includes everything they are carrying other than
-  equipped weapons and armor. If you're filling out your character sheet for the first time, you should refer to your
-  class choice to find your initial loadout. When you find additional items during your adventure, you'll add them here.
-  You don't need to add your equipped weapons and armor here, though. Those have their own section on your character
-  sheet. If you unequip weapons or armor, don't forget to add them to your inventory.
+<p>The final aspect of your character is their inventory, which includes everything they are carrying including equipped
+  weapons and armor. If you're filling out your character sheet for the first time, you should refer to your class
+  choice to find your initial loadout. When you find additional items during your adventure, you'll add them here.
 </p>
 <p>Inventory items are categorized as weapons, gear (clothing, armor, and jewelry), tools, and consumables. All of these
   items are stored in your adventurer's pack. If any inventory item is equipped (such as a magic ring or amulet) you can
   put a star or other special mark next to it, to indicate that it is worn. There is no limit to the number of magical
   items you can equip, although you can't gain benefits from wearing multiple items of the same type or on the same
-  bodypart. For example, you can't receive the bonuses from two amulets or rings at once, even if your character chooses
-  to wear them.
+  bodypart. For example, you can't receive the bonuses from two amulets or rings at once, even if your character
+  wears them at the same time.
 </p>
 <p>For more info on equipment, see the following appendices:</p>
 <ul>

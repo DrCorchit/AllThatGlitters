@@ -1,0 +1,9 @@
+{
+  "max_hp_formula": "Max HP = {{attr.STR}} + ({{attr.STR}} * level / 2)",
+  "max_wp_formula": "Max WP = 10 + {{attr.NST}} modifier + {{attr.CHA}} modifier",
+  "dc_formula": "DC = {{attr.dex}}",
+  "bc_formula": "BC = armor BC + shield BC",
+  "mit_formula": "MIT = BC + DC",
+  "skill_check_formula": "Skill Check = 1d20 + attribute modifier + proficiency bonus",
+  "training_slots_formula": "Max Training Slots = {{attr.INT}}"
+}

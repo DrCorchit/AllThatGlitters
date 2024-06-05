@@ -5,18 +5,21 @@
 </p>
 <p>To level up, follow these steps:</p>
 <ol>
-  <li>Look over the new class features you've gained, including any attribute or proficiency bonuses. Class features
-    are covered <a
-      href="c2.html#classes"> here</a>.
+  <li>Look over the new class features you've gained, including any attribute or proficiency bonuses. Class features are
+    covered <a href="c2.html#classes"> here</a>.
   </li>
   <li>Increase your maximum hitpoints. Max HP is initially equal to your strength score and increases by half your
-    strength score each level. If you leveled STR, you should recalculate your max hp: {{max_hp_formula}}
+    strength score each level. If you leveled STR, you should recalculate your max hp:
+    <pre>{{strings.max_hp_formula}}</pre>
   </li>
   <li>If you leveled instinct or charisma, increase your maximum willpower accordingly. Max WP is equal to 10 plus your
-    instinct and charisma modifiers. This is equivalent to:
-    <pre>Max WP = NST + CHA - 10</pre>
+    instinct and charisma modifiers:
+    <pre>{{strings.max_wp_formula}}</pre>
   </li>
-  <li>Regain training slots. Any abilities trained in previous levels now use half as many training slots.</li>
+  <li>If you leveled {{attr.INT}}, increase your maximum training slots:
+    <pre>{{strings.training_slots_formula}}</pre>
+  </li>
+  <li>Regain training slots. Any abilities trained in previous levels now use half as many training slots, rounded down.</li>
   <li>Update your character sheet. You don't need to copy new class abilities into the "abilities" section, but you
     should make sure that your attribute values and training slots are accurate. If your attributes changed, max HP, WP,
     and skill scores may also need to be updated, since they depend on your attributes.

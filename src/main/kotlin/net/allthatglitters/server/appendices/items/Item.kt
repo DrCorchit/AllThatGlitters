@@ -2,11 +2,10 @@ package net.allthatglitters.server.appendices.items
 
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonObject
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.Renderable
 import net.allthatglitters.server.util.makeTooltip
-import net.allthatglitters.server.util.underline
 
 class Item(
 	val name: String,
@@ -42,7 +41,7 @@ class Item(
 			if (!obj.has("key")) {
 				obj.addProperty("key", obj.get("name").asString.normalize())
 			}
-			return Generator.deserializer.fromJson(obj, Item::class.java)
+			return generator.deserializer.fromJson(obj, Item::class.java)
 		}
 	}
 

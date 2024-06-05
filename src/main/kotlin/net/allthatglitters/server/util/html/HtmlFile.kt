@@ -2,27 +2,25 @@ package net.allthatglitters.server.util.html
 
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.drcorchit.justice.utils.logging.Logger
-import net.allthatglitters.server.Generator
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.FileSubsection
 import net.allthatglitters.server.util.Header
 import net.allthatglitters.server.util.Subsection
 import net.allthatglitters.server.util.Templatizer
 import java.io.File
 
-open class HtmlFile(val title: String, val fileName: String) {
+abstract class HtmlFile(val title: String, val fileName: String, val inputDir: File) {
 	open val logger = Logger.getLogger(HtmlFile::class.java)
-
-	open val inputDir = Generator.inputDir
-	val outputFile = File(Generator.versionedOutputDir, fileName)
-	open val templatizer: Templatizer = Generator.templatizer
+	val outputFile = File(generator.versionedOutputDir, fileName)
+	open val templatizer: Templatizer = generator.templatizer
 
 	val subsections = mutableListOf<Subsection>()
 	val head = HtmlObject("head").withContent(HtmlObject("title").withContent(title))
 	val body = HtmlObject("body")
 
-	fun getLink(): HtmlObject {
+	fun getLink(text: String = title): HtmlObject {
 		return HtmlObject("a").withAttribute("href", fileName)
-			.withContent(title)
+			.withContent(text)
 	}
 
 	fun addSubsection(title: String, link: String = title.normalize()): HtmlFile {
@@ -93,6 +91,7 @@ open class HtmlFile(val title: String, val fileName: String) {
 
 	fun save(outputFile: File = this.outputFile) {
 		val content = render()
+
 		outputFile.parentFile.mkdirs()
 		val new = outputFile.createNewFile()
 		outputFile.writeText(content)

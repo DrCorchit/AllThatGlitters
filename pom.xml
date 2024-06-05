@@ -125,6 +125,24 @@
             <artifactId>justice-utils</artifactId>
             <version>1.5.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fleeksoft.ksoup/ksoup -->
+        <!--
+        <dependency>
+            <groupId>com.fleeksoft.ksoup</groupId>
+            <artifactId>ksoup</artifactId>
+            <version>0.1.2</version>
+        </dependency>
+        -->
+
+        <!--
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-html-jvm</artifactId>
+            <version>0.11.0</version>
+        </dependency>
+        -->
+
         <!-- https://mvnrepository.com/artifact/io.javalin/javalin -->
         <dependency>
             <groupId>io.javalin</groupId>

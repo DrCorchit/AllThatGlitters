@@ -5,6 +5,7 @@ import com.drcorchit.justice.utils.logging.Logger
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonDeserializer
+import com.google.gson.JsonParser
 import net.allthatglitters.server.appendices.abilities.AppendixFeats
 import net.allthatglitters.server.appendices.armor.AppendixArmor
 import net.allthatglitters.server.appendices.bestiary.AppendixBestiary
@@ -25,17 +26,27 @@ import net.allthatglitters.server.util.Navigation
 import net.allthatglitters.server.util.Templatizer
 import net.allthatglitters.server.util.html.HtmlFile
 import java.io.File
+import java.io.FileNotFoundException
 
-object Generator {
-	val logger = Logger.getLogger(Generator::class.java)
-
-	val version = "0"
-	val versionedOutputDir = File(Server.serviceDir, "version/$version")
-	val inputDir = File("src/main/resources/input")
-	val imagesDir = File(Server.serviceDir, "images")
+class Generator(val version: String, val inputDir: File, val outputDir: File) {
+	val versionedOutputDir = File(outputDir, "version/$version")
+	val imagesDir = File(outputDir, "images")
+	val strings: Map<String, String> =
+		File(inputDir, "strings.json").readText()
+			.let { JsonParser.parseString(it).asJsonObject }
+			.entrySet().associate { it.key.normalize() to it.value.asString }
 
 	val deserializer: Gson
 	val templatizer = Templatizer.getDefault()
+		.withRule(".*\\.html") {
+			val file = File(inputDir, it.value.trim())
+			if (file.exists()) {
+				logger.info("  Inserting file: ${file.name}")
+				file.readText()
+			} else {
+				throw FileNotFoundException("Substitution file not found: ${file.absolutePath}")
+			}
+		}
 
 	init {
 		val builder = GsonBuilder().setPrettyPrinting().disableHtmlEscaping()
@@ -45,65 +56,34 @@ object Generator {
 		deserializer = builder.create()
 	}
 
-	val appendices = listOf(
-		AppendixSpells,
-		AppendixFeats,
-		AppendixWeapons,
-		AppendixArmor,
-		AppendixItems,
-		AppendixBestiary
-	)
+	val appendices by lazy {
+		listOf(
+			AppendixSpells,
+			AppendixFeats,
+			AppendixWeapons,
+			AppendixArmor,
+			AppendixItems,
+			AppendixBestiary
+		)
+	}
 
-	val chapters = listOf(
-		IntroChapter,
-		CharactersChapter,
-		SheetChapter,
-		LevelingChapter,
-		CombatChapter,
-		NonCombatChapter,
-		MagicChapter
-	)
+	val chapters by lazy {
+		listOf(
+			IntroChapter,
+			CharactersChapter,
+			SheetChapter,
+			LevelingChapter,
+			CombatChapter,
+			NonCombatChapter,
+			MagicChapter
+		)
+	}
 
-	val files = (appendices + chapters).associateBy { it.fileName }
+	private val files by lazy { (appendices + chapters).associateBy { it.fileName } }
 
 	fun lookupFile(file: String): HtmlFile {
 		val key = file.normalize() + ".html"
 		return files[key] ?: throw NoSuchElementException("No file named \"$file.html\"")
-	}
-
-	@JvmStatic
-	fun main(vararg args: String) {
-		imagesDir.mkdir()
-		File(inputDir, "images").listFiles()!!.forEach {
-			it.copyTo(File(imagesDir, it.name), true)
-		}
-		logger.info("Copied images")
-
-		File(inputDir, "styles.css")
-			.copyTo(File(Server.serviceDir, "styles.css"), true)
-		logger.info("Copied styles.css")
-
-		File(Sheet.inputDir, "styles.css")
-			.copyTo(File(versionedOutputDir, "sheet/styles.css"), true)
-		logger.info("Copied sheet/styles.css")
-
-		Sheet.appendHeader().appendBody().save()
-		logger.info("Rendered character sheet")
-
-		HtmlFile("All That Glitters", "index.html")
-			.appendHeader()
-			.appendTitle("h1")
-			.appendBody()
-			.save(File(Server.serviceDir, "index.html"))
-
-		ToC.appendHeader()
-			.appendElement("h1", "All That Glitters")
-			.appendTitle("h2")
-			.appendBody()
-			.save()
-
-		for (i in 1..chapters.size) makeChapter(i)
-		for (i in appendices.indices) makeAppendix(i)
 	}
 
 	fun makeChapter(i: Int) {
@@ -133,5 +113,47 @@ object Generator {
 			.appendBody().append(nav)
 			.save()
 	}
-}
 
+	fun generate() {
+		imagesDir.mkdir()
+		File(inputDir, "images").listFiles()!!.forEach {
+			it.copyTo(File(imagesDir, it.name), true)
+		}
+		logger.info("Copied images")
+
+		File(inputDir, "styles.css")
+			.copyTo(File(Server.serviceDir, "styles.css"), true)
+		logger.info("Copied styles.css")
+
+		File(Sheet.inputDir, "styles.css")
+			.copyTo(File(versionedOutputDir, "sheet/styles.css"), true)
+		logger.info("Copied sheet/styles.css")
+
+		Sheet.appendHeader().appendBody().save()
+		logger.info("Rendered character sheet")
+
+		Index.appendHeader()
+			.appendTitle("h1")
+			.appendBody()
+			.save(File(Server.serviceDir, "index.html"))
+
+		ToC.appendHeader()
+			.appendElement("h1", "All That Glitters")
+			.appendTitle("h2")
+			.appendBody()
+			.save()
+
+		for (i in 1..chapters.size) makeChapter(i)
+		for (i in appendices.indices) makeAppendix(i)
+	}
+
+	companion object {
+		val logger = Logger.getLogger(Generator::class.java)
+		val generator = Generator("0", File("src/main/resources/input"), Server.serviceDir)
+
+		@JvmStatic
+		fun main(vararg args: String) {
+			generator.generate()
+		}
+	}
+}
