@@ -17,7 +17,7 @@
       "wp": 5
     },
     "modifiers": {
-      "Concentration": "If dexterity is above 12, you may attempt to perform quick two-handed tasks without breaking concentration. When doing so, you make a DT 15 sleight-of-hand saving throw. On a failed save, you lose concentration and become visible.",
+      "Concentration": "If dexterity is above 12, you may attempt to perform quick two-handed tasks without breaking concentration. When doing so, you make a DT 15 {{skills.legerdemain}} saving throw. On a failed save, you lose concentration and become visible.",
       "Duration": "Concentration may be maintained for 1 additional hour for every point of willpower above 17."
     }
   }

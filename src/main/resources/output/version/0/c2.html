@@ -52,7 +52,7 @@
   <h5>Halfling</h5>
   <p>The shortest of the races, halfling men average 3’9” in height. Their women are yet shorter, scarcely 3’6” by average. A tall halfling may resemble a short dwarf, though the former may still be distinguished by his slender build and wispy facial hair, if he has any at all. Halflings weigh only 50-100 lbs, and I’ll wager a drink you can’t find a heavier one in under a fortnight. They are somewhat long lived, often lasting a bit more than a century.</p>
   <p>As timeless as their quaint and cozy country villages may seem, they are no strangers to change. Nearly half of them are now second or third generation immigrants in large cities. They are unwelcome there on account of their ill reputation: it is said that nearly a third of them are criminals. I don't doubt it; they make exceedingly sly thieves.</p>
-  <p>Halflings tend to be unbalanced characters, having a -2 penalty to STR and a -2 penalty to SPD. They make up for this with a +2 to DEX, and another +2 to INT, CHA, or WILL. Urban halflings start with proficiency in mobility and sleight of hand, while rural halflings start with proficiency in nature and survival. They excel as mages, zealots, and renegades, but struggle as warriors.</p>
+  <p>Halflings tend to be unbalanced characters, having a -2 penalty to STR and a -2 penalty to SPD. They make up for this with a +2 to DEX, and another +2 to INT, CHA, or WILL. Urban halflings start with proficiency in <span data-tooltip="The ability to climb, mantle, vault, and otherwise navigate past obstacles."><u>Mobility</u></span> and <span data-tooltip="Used when lockpicking and pickpocketing items, or other such tricks."><u>Legerdemain</u></span>, while rural halflings start with proficiency in nature and survival. They excel as mages, zealots, and renegades, but struggle as warriors.</p>
   <h5>Orc</h5>
   <p>Stout and rippling with muscle, orcs are warriors to the last. Their menfolk are nearly as tall as the elves, around 6’, and their women are barely any shorter, around 5’10”. Fully grown, they weigh somewhere between 180 to 300 lbs—quite formidable! Their hair is almost invariably black or gray, while their skin ranges from dark green to pale yellow or gray. In years, they may reach 60 if they are lucky; usually less. They make up for this by living with what I will graciously call ‘extreme vigor’.</p>
   <p>The history of orcs is full of long and bloody intertribal conflicts. Despite this, they have made steady progress as a species and have transitioned from cave dwellings to small villages, then larger villages, until now many think to mingle with humans, dwarves, and halflings on the frontiers of civilization. (Elves will have none of their ilk.) They are well-suited to mercenary or guard work. They make poor thieves or wizards.</p>
@@ -138,8 +138,8 @@
   <h4><a id="classes"></a>Classes</h4>
   <div class="row">
    <div class="column">
-    <p>A character's combat class gives you an idea of both their fighting style and occupational background. Realtistically, these two are rarely separate. Unless you're an aristocrat, you don't have the time and money to aquire skills of little use within your day-to-day life. So, a monk picks up his staff, or a veteran takes his sword from the mantlepiece, or else a scholar gathers her books. Each of them takes something familiar to them and does something extraordinary with it—and it all begins by embarking on an adventure!</p>
-    <p>The easiest way to choose a class is to avoid all the details and just pick one that sounds cool. However, if you're of a mind to make an informed decision by carefully examine the unique features of each class, you certainly can! There are no wrong choices, only interesting ones.</p>
+    <p>A character's combat class gives you an idea of both their fighting style and occupational background. Realtistically, these two are rarely separate. Unless you're an aristocrat, you don't have the time and money to aquire skills of little use within your day-to-day life. So a monk picks up his staff, a veteran takes his sword from the mantlepiece, or a scholar gathers her books. Each of them takes something familiar to them and does something extraordinary with it, as they begin their adventure.</p>
+    <p>The easiest way to choose a class is to avoid all the details and just pick one that sounds cool. However, if you're of a mind to make an informed decision by carefully examine the unique features of each class, you certainly can. There are no wrong choices, only interesting ones.</p>
     <p>There is some ongoing debate as to the ideal number of classes in a TTRPG system. Too few classes, and players are less likely to find one that really captures their interest and vision. Too many, and the player is at risk of being drowned by excess choices—which may not be well balanced, either! I’ve decided to use 20 classes, which are grouped into five categories, listed below. Players who struggle to pick a class can thus choose between one of these five categories and then choose between one of the four classes within that category. Hopefully it is easier to make two simple choices than one complicated choice.</p>
    </div>
    <div class="column" style="width: 120px;">
@@ -148,16 +148,17 @@
      <li><a href="#Barbarian">Barbarian</a></li>
      <li><a href="#Crusader">Crusader</a></li>
      <li><a href="#Druid">Druid</a></li>
+     <li><a href="#Hermit">Hermit</a></li>
      <li><a href="#Inquisitor">Inquisitor</a></li>
      <li><a href="#Knight">Knight</a></li>
      <li><a href="#Mercenary">Marksman</a></li>
      <li><a href="#Mercenary">Mercenary</a></li>
      <li><a href="#Minstrel">Minstrel</a></li>
-     <li><a href="#Monk">Monk</a></li>
     </ul>
    </div>
    <div class="column" style="width: 120px; ">
     <ul>
+     <li><a href="#Monk">Monk</a></li>
      <li><a href="#Prophet">Prophet</a></li>
      <li><a href="#Psychic">Psychic</a></li>
      <li><a href="#Ranger">Ranger</a></li>
@@ -165,7 +166,6 @@
      <li><a href="#Thief">Thief</a></li>
      <li><a href="#Tinker">Tinker</a></li>
      <li><a href="#Veteran">Veteran</a></li>
-     <li><a href="#Warg">Warg</a></li>
      <li><a href="#Witch">Witch</a></li>
      <li><a href="#Wizard">Wizard</a></li>
     </ul>
@@ -214,7 +214,7 @@
       <p>Elite Instinct</p>
       <p>Nature Proficiency</p>
       <p>Ability: Beast Speech</p></td>
-     <td>Druid, Marksman, Ranger, Warg</td>
+     <td>Druid, Hermit, Marksman, Ranger</td>
     </tr>
     <tr>
      <td>Zealot</td>
@@ -230,7 +230,7 @@
   <p>In addition to each category’s attribute and proficiency bonus, each class category has a special bonus ability shared between all characters in that category. Here’s what each ability does:</p>
   <ul>
    <li><b>Heavy Attack</b>: When making a strength-based weapon attack, you may expend 2 AP to increase the damage of your attack. If it hits, you may roll your weapon's damage die a second time and add its value to the total damage for the attack.</li>
-   <li><b>Mana Regeneration</b>: When starting a combat turn with less than two AP, gain one ability point.</li>
+   <li><b>Mana Regeneration</b>: When starting a combat turn with less than two willpower, gain one willpower.</li>
    <li><b>Precision Strike</b>: When making a dexterity-based weapon attack, you may expend 2 AP to gain +3 to hit on the attack roll and lower the critical threshold by 1. (i.e. from 20 to 19, typically.)</li>
    <li><b>Beast Speech</b>: You know the language of beasts, and may converse with them at any time. Once a day, you may expend 5 AP to attempt a persuasion check to convince an animal to fight by your side for 1 hour. The difficulty of the check depends on the type of animal being recruited.</li>
    <li><b>Meditation</b>: Once per long rest and while outside of combat, you may expend 5 AP to meditate or pray to your deity. You may increase an attribute of your choice by 2 for one hour, not exceeding the hard cap.</li>
@@ -256,11 +256,12 @@
     <div class="content">
      <p><b>Limitations</b>: Due to their extremely specialized skillset, assassins have a deficiency in two of the following three skills: <span data-tooltip="Measures background knowledge that would usually be obtained by spending time in nature or around animals. Used when casting nature spells."><u>Nature</u></span>, <span data-tooltip="Describes a player’s knowledge and practice of defensive tactics. Proficiency bonuses for this skill affect what types of armor and shields can be used in combat."><u>Defense</u></span>, or <span data-tooltip="Measures general survival skills, including the ability to recognize threats, build shelter, and live off the land. Used when attempting to recognize monsters at the start of combat."><u>Survival</u></span>.</p>
      <p><b>Leveling Bonuses</b>:</p>
-     <p style="margin-left: 25px;">At level 1, gain +1 to Strength and Dexterity, and proficiency in <span data-tooltip="Describes skill in armed and unarmed combat. Proficiency bonuses in this area are required to use certain melee weapons effectively. Normally, either strength or dexterity can be used interchangeably as the base attribute."><u>Martial Arts</u></span> and <span data-tooltip="Describes a player’s accuracy with ranged weapons such as bows and firearms."><u>Accuracy</u></span>.</p>
+     <p style="margin-left: 25px;">At level 1, gain proficiency in two out of these three skills: <span data-tooltip="Describes skill in armed and unarmed combat. Proficiency bonuses in this area are required to use certain melee weapons effectively. Normally, either strength or dexterity can be used interchangeably as the base attribute."><u>Martial Arts</u></span>, <span data-tooltip="Determines move order in battle."><u>Initiative</u></span>, and <span data-tooltip="Describes a player’s accuracy with ranged weapons such as bows and firearms."><u>Accuracy</u></span>.</p>
+     <p style="margin-left: 25px;">At level 2, when you initiate combat with an attack, gain advantage on the <span data-tooltip="Determines move order in battle."><u>Initiative</u></span> roll. You begin combat with an extra action.</p>
      <p><b>Starting Equipment</b>:</p>
      <ul>
-      <li>A set of <span data-tooltip="Composed of boiled leather. Worn by knaves. BC: 3"><u>leather armor</u></span>.</li>
-      <li>Any two <span data-tooltip="Dexterity can be used to provide the weapon's damage, instead of strength."><u>nimble</u></span> weapons</li>
+      <li>A set of <span data-tooltip="Composed of boiled leather. Worn by knaves. BC: 5"><u>leather armor</u></span>.</li>
+      <li>Any two <span data-tooltip="Dexterity can be used to provide the weapon's damage, instead of strength.">[<u>nimble</u>]</span> weapons</li>
       <li>A <span data-tooltip="A small shield. Allows shield bash. Damage: 1d4 + STR/DEX Bludgeoning"><u>buckler</u></span></li>
      </ul>
      <p style="margin-left: 25px;">Concealed on their person:</p>
@@ -295,19 +296,23 @@
     <li>What made you leave your previous life and start adventuring?</li>
    </ol>
    <p><b>Alignment Suggestion</b>: Chaotic</p>
-   <p><b>Core Ability</b>: <i>Rage</i>. You may spend 5 ability points to enter a rage for 5 combat turns. During a rage, you deal 3 extra damage per weapon attack. If you are not wearing armor, you take 3 less damage from bludgeoning, slashing, piercing, and fire damage. You may not cast spells, read scrolls, or use consumables without ending your rage.</p>
+   <p><b>Core Ability</b>: <i>Rage</i>. You may spend 3 willpower to enter a rage for 5 combat turns. During a rage, your strength is increased by 3. If you are not wearing armor, you also gain 3 resistance to bludgeoning, slashing, piercing, and fire damage. You may not cast spells, read scrolls, or use consumables without ending your rage. Note: when an ability increases your rage level, it increases your strength and resistance by the indicated amount and also resets the rage duration to 5 turns.</p>
    <div class="background-inner">
     <button class="collapsible">Additional Information</button>
     <div class="content">
-     <p><b>Limitations</b>: Due to their careless approach and lack of formal education, barbarians start with a deficiency in two of the following three skills: <span data-tooltip="Describes a player’s knowledge and practice of defensive tactics. Proficiency bonuses for this skill affect what types of armor and shields can be used in combat."><u>Defense</u></span>, <span data-tooltip="Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Deficiency in this skill normally indicates that the character is illiterate."><u>Literacy</u></span>, <span data-tooltip="Used when sneaking or attempting to perform actions without being seen. Speed cannot be used if the noise of sprinting would arouse excessive suspicion."><u>Stealth</u></span>.</p>
+     <p><b>Limitations</b>: Due to their careless approach and lack of formal education, barbarians start with a deficiency in two of the following three skills: <span data-tooltip="The ability to reach into one's inner magical reserves. Used when casting elemental magic."><u>Sorcery</u></span>, <span data-tooltip="Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Deficiency in this skill normally indicates that the character is illiterate."><u>Literacy</u></span>, <span data-tooltip="Used when sneaking or attempting to perform actions without being seen. Speed cannot be used if the noise of sprinting would arouse excessive suspicion."><u>Stealth</u></span>.</p>
      <p><b>Leveling Bonuses</b>:</p>
-     <p style="margin-left: 25px;">At level 1, +3 to Strength</p>+1 to Dexterity and Speed.+1 to Intelligence, Instinct or Charisma
-     <p style="margin-left: 25px;">At level 3, +2 to Strength and +1 to Dexterity, and Speed.</p>Gain proficiency in <span data-tooltip="Determines move order in battle."><u>Initiative</u></span>, <span data-tooltip="The ability to climb, mantle, vault, and otherwise navigate past obstacles."><u>Mobility</u></span>, or <span data-tooltip="Measures general survival skills, including the ability to recognize threats, build shelter, and live off the land. Used when attempting to recognize monsters at the start of combat."><u>Survival</u></span>.
-     <p style="margin-left: 25px;">At level 5, gain +1 to Strength, Dexterity, and Speed. Skill in martial arts advances to expertise.</p>
-     <p style="margin-left: 25px;">At level 7, gain +1 to Strength and Dexterity or Speed. Your secondary skill learned at level 3 advances to expertise.</p>
-     <p style="margin-left: 25px;">At level 11, gain +1 to Strength and Dexterity or Speed. Skill in martial arts advances to mastery.</p>
-     <p style="margin-left: 25px;">At level 13, gain +1 to Strength. Skill in</p>
-     <p style="margin-left: 25px;">At level 15, gain +1 to Strength.</p>
+     <p style="margin-left: 25px;">At level 1, Gain proficiency in two of these skills: <span data-tooltip="Determines move order in battle."><u>Initiative</u></span>, <span data-tooltip="The ability to climb, mantle, vault, and otherwise navigate past obstacles."><u>Mobility</u></span>, or <span data-tooltip="Measures general survival skills, including the ability to recognize threats, build shelter, and live off the land. Used when attempting to recognize monsters at the start of combat."><u>Survival</u></span>.</p>
+     <p style="margin-left: 25px;">At level 2, you develop a terrifying primal roar. As an action, you can spend 1 willpower to roar, potentially terrifying nearby enemies. Each enemy must pass an Instinct saving throw or become <span data-tooltip="Terrified beyond rational measure, the target is compelled to take the move away from the source of its fear each turn before taking any other actions."><u>Terrified</u></span>. The DT of the saving throw is equal to your Instinct attribute score.</p>
+     <p style="margin-left: 25px;">At level 3, Learn the <a href="src\main\resources\output\version\0\appendix_abilities.html#cleaving_strike">Cleaving Strike</a> combat ability. You can use the cleaving strike ability even when dealing bludgeoning damage.</p>
+     <p style="margin-left: 25px;">At level 4, your rage deepens. When you get a kill during a rage, you can expend 1 willpower to increase your rage level by 1.</p>
+     <p style="margin-left: 25px;">At level 5, your proficiency in martial arts advances to expertise.</p>
+     <p style="margin-left: 25px;">At level 6, magic is stupid, but you can make it go away by yelling at it. Enemies which fail their saving throw against your roar may not cast spells on their next turn, and lose concentration on any spells they have already cast.</p>
+     <p style="margin-left: 25px;">At level 7, increase your proficiency level in one of these skills: initiative, mobility, or survival.</p>
+     <p style="margin-left: 25px;">At level 8, your rage sustains you in your darkest hour. Once per turn, when you take damage while below half hp, your rage level increases by 1.</p>
+     <p style="margin-left: 25px;">At level 11, Your skill in martial arts advances to mastery.</p>
+     <p style="margin-left: 25px;">At level 14, increase your proficiency level in two of these skills: initiative, mobility, or survival.</p>
+     <p style="margin-left: 25px;">At level 15, gain the ability to enter a blackout rage. Entering a blackout rage costs 10 willpower, and immediately increases your rage level to 10 (instead of 3). After your first blackout rage, you either gain a permanent rage level of 1, or you reconsider your life choices and become a monk. As a monk, you keep your barbarian starting gear and proficiencies, but lose your barbarian rage ability and class abilities.</p>
      <p><b>Starting Equipment</b>:</p>
      <ul>
       <li>A set of <span data-tooltip="A homespun gambeson. A sure sign of a hooligan. BC: 2"><u>quilted armor</u></span></li>
@@ -317,7 +322,7 @@
       <li>A <span data-tooltip="A knight’s two-handed sword. May be upgraded by a blacksmith to gain <i>Sharp</i> for 150 gold. Damage: 1d10 + STR <nobr>Cut-and-Thrust</nobr>"><u>longsword</u></span></li>
       <li>A <span data-tooltip="A large axe well suited to those possessing great brawn Damage: 1d12 + STR Slashing"><u>greataxe</u></span></li>
       <li>A <span data-tooltip="A greathammer, for smashing through armor. Damage: 1d12 + STR Bludgeoning"><u>maul</u></span></li>
-      <li>Two standard weapons with the <span data-tooltip="The weapon can be used alongside a greatshield, or dual wielded alongside another light weapon."><u>light</u></span> property.</li>
+      <li>Two standard weapons with the <span data-tooltip="The weapon can be used alongside a greatshield, or dual wielded alongside another light weapon.">[<u>light</u>]</span> property.</li>
      </ul>
      <p style="margin-left: 25px;">Any two of the following small weapons:</p>
      <ul>
@@ -353,7 +358,7 @@
    <div class="background-inner">
     <button class="collapsible">Additional Information</button>
     <div class="content">
-     <p><b>Limitations</b>: Crusaders start with a deficiency in two of the following three skills: <span data-tooltip="Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Deficiency in this skill normally indicates that the character is illiterate."><u>Literacy</u></span>, <span data-tooltip="Measures background knowledge that would usually be obtained by spending time in nature or around animals. Used when casting nature spells."><u>Nature</u></span>, or <span data-tooltip="Used when lockpicking and pickpocketing items, or other such tricks."><u>Sleight-of-Hand</u></span>.</p>
+     <p><b>Limitations</b>: Crusaders start with a deficiency in two of the following three skills: <span data-tooltip="Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Deficiency in this skill normally indicates that the character is illiterate."><u>Literacy</u></span>, <span data-tooltip="Measures background knowledge that would usually be obtained by spending time in nature or around animals. Used when casting nature spells."><u>Nature</u></span>, or <span data-tooltip="Used when lockpicking and pickpocketing items, or other such tricks."><u>Legerdemain</u></span>.</p>
      <p><b>Leveling Bonuses</b>:</p>
      <p style="margin-left: 25px;">At level 1, gain +2 Strength and +2 Charisma, plus proficiency in martial arts.</p>
      <p style="margin-left: 25px;">At level 3, your god calls you to a deeper level of devotion. During your next night's rest, you behold a vision of a sacred chalice and a righteous blade. You may reach out and touch one of these relics, so embarking on the path of either the <i>cleric</i> or the <i>holy paladin</i>:</p>
@@ -363,9 +368,9 @@
      </ul>
      <p><b>Starting Equipment</b>:</p>
      <ul>
-      <li>A steel <span data-tooltip="A chainmail shirt, as worn by rank-and-file infantry. BC: 7"><u>hauberk</u></span>.</li>
+      <li>A steel <span data-tooltip="A chainmail shirt, as worn by rank-and-file infantry. BC: 9"><u>hauberk</u></span>.</li>
       <li>A small weapon</li>
-      <li>3 <span data-tooltip="Lasts 4 hours"><u>torch</u></span>es</li>
+      <li>A holy symbol of your deity, which functions as a <span data-tooltip="A blessed or holy artifact designed to nullify the trickery of evil spirits."><u>talisman</u></span></li>
      </ul>
      <p style="margin-left: 25px;">A weapon of one of the following types:</p>
      <ul>
@@ -380,6 +385,7 @@
       <li>A <span data-tooltip="A minimal sleeping arrangement for a rugged adventurer."><u>bedroll</u></span>, <span data-tooltip="Soft and warm. An adventurer need not forsake <i>all</i> comfort."><u>blanket &amp; pillow</u></span></li>
       <li>Two sets of <span data-tooltip="Ordinary clothes for ordinary folk."><u>plain clothes</u></span>.</li>
       <li>One set of <span data-tooltip="Distinguishing attire of a priest, cleric, or similar ilk."><u>religious vestments</u></span></li>
+      <li>3 <span data-tooltip="Lasts 4 hours"><u>torch</u></span>es</li>
       <li>A <span data-tooltip="Lasts 1 hour; emits only dim light."><u>candle</u></span> and a flask of <span data-tooltip="Contains 1 cup of water blessed by a priest. Deals 3d8 holy damage when thrown."><u>holy water</u></span></li>
      </ul>
      <p style="margin-left: 25px;">One of the following items:</p>
@@ -408,7 +414,7 @@
    <div class="background-inner">
     <button class="collapsible">Additional Information</button>
     <div class="content">
-     <p><b>Limitations</b>: As a druid, you begin with deficiency in two of these three skills: <span data-tooltip="Describes a player’s knowledge and practice of defensive tactics. Proficiency bonuses for this skill affect what types of armor and shields can be used in combat."><u>Defense</u></span>, <span data-tooltip="Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Deficiency in this skill normally indicates that the character is illiterate."><u>Literacy</u></span>, <span data-tooltip="Used when lockpicking and pickpocketing items, or other such tricks."><u>Sleight-of-Hand</u></span>.</p>
+     <p><b>Limitations</b>: As a druid, you begin with deficiency in two of these three skills: <span data-tooltip="Describes a player’s knowledge and practice of defensive tactics. Proficiency bonuses for this skill affect what types of armor and shields can be used in combat."><u>Defense</u></span>, <span data-tooltip="Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Deficiency in this skill normally indicates that the character is illiterate."><u>Literacy</u></span>, <span data-tooltip="Used when lockpicking and pickpocketing items, or other such tricks."><u>Legerdemain</u></span>.</p>
      <p><b>Leveling Bonuses</b>:</p>
      <p style="margin-left: 25px;">At level 1, gain +2 to Charisma and Instinct, and proficiency in <span data-tooltip="Measures knowledge of disease and wound treatment."><u>Medicine</u></span> and <span data-tooltip="Measures general survival skills, including the ability to recognize threats, build shelter, and live off the land. Used when attempting to recognize monsters at the start of combat."><u>Survival</u></span>.</p>
      <p><b>Starting Equipment</b>:</p>
@@ -432,6 +438,53 @@
    </div>
   </div>
   <div class="background">
+   <h5><a id="Hermit"></a>Hermit</h5>
+   <p>A hermit is someone who has chosen to live alone, usually on the outskirts of civilization. Such prolonged solitude leaves one with countless hours of quiet contemplation, and the slow progression from idiosyncrasy to eccentricity and madness. Alone in the wilderness, it is only a matter of time before one's most savage and primal instincts begin to dominate. Then comes the choice of whether to resist the madness or embrace it wholeheartedly, but this too is only a matter of time. In the end, there comes a day when that which lumbers out of the hermit's hut is more beast than man.</p>
+   <p>Whether by some inborn ability or through countless hours of meditation, a hermit is someone who has developed the ability to transform at will into a particular animal. Unlike a druid who can transform into a wide variety of small animals, a hermit can only transform into one type of animal. But what a hermit sacrifices in flexibility, they gain in power. Hermits are known for transforming into mighty animals such as the direwolf, rune bear, lions, and even the mighty rhinoceros.</p>
+   <p>While writing the backstory for a hermit, consider the following:</p>
+   <ol>
+    <li>How did you learn to transform into your specific animal?</li>
+    <li>Have you always had a close connection to nature, or did something spur that connection?</li>
+    <li>What was your first transformation like?</li>
+    <li>Do you feel more at home as a humanoid or as an animal?</li>
+    <li>What made you leave your previous life and start adventuring?</li>
+   </ol>
+   <p><b>Core Ability</b>: <i>Beast Form</i>. You expend 3 willpower to transform into your chosen animal for up to one hour. Your clothing and worn items merge with your beast form, and return upon detransformation. While transformed, your physical attributes (Strength, Dexterity, Speed) change to that of your chosen form.</p>
+   <div class="background-inner">
+    <button class="collapsible">Additional Information</button>
+    <div class="content">
+     <p><b>Leveling Bonuses</b>:</p>
+     <p style="margin-left: 25px;">At level 1, gain proficiency in <span data-tooltip="Measures general survival skills, including the ability to recognize threats, build shelter, and live off the land. Used when attempting to recognize monsters at the start of combat."><u>Survival</u></span>.</p>
+     <p style="margin-left: 25px;">At level 5, You may cast nature spells while transformed.</p>
+     <p><b>Starting Equipment</b>:</p>
+     <ul>
+      <li>A set of <span data-tooltip="Ordinary clothes for ordinary folk."><u>plain clothes</u></span></li>
+      <li>A <span data-tooltip="A blessed or holy artifact designed to nullify the trickery of evil spirits."><u>talisman</u></span></li>
+     </ul>
+     <p style="margin-left: 25px;">An adventurer's pack, containing:</p>
+     <ul>
+      <li>1d20 gold</li>
+      <li>1 days <span data-tooltip="Consists of non-perishable food items for a single day's sustenance."><u>rations</u></span> and a <span data-tooltip="Holds one quart of drinking water."><u>canteen</u></span></li>
+      <li>A <span data-tooltip="A minimal sleeping arrangement for a rugged adventurer."><u>bedroll</u></span></li>
+      <li>1 set of <span data-tooltip="Ordinary clothes for ordinary folk."><u>plain clothes</u></span></li>
+      <li>3 <span data-tooltip="Lasts 4 hours"><u>torch</u></span>es</li>
+      <li>A <span data-tooltip="Easily affixed to an adventurer's pack. Holds up to 1000 pounds of weight."><u>100 foot rope</u></span></li>
+      <li>A <span data-tooltip="Conveys a general sense of surrounding terrain."><u>map</u></span> and <span data-tooltip="Always points north, except in the presence of magical fields."><u>compass</u></span></li>
+      <li>A <span data-tooltip="For frying eggs. Oft improvised as a weapon of housewives, against intruders."><u>frying pan</u></span> and a <span data-tooltip="For starting fire. If one is in your possession, you may light a torch, candle, or lantern as an action."><u>tinderbox</u></span></li>
+     </ul>
+     <p style="margin-left: 25px;">Two of the following:</p>
+     <ul>
+      <li>A <span data-tooltip="For securing valuables, or denying entry."><u>padlock &amp; key</u></span></li>
+      <li>A <span data-tooltip="For sharpening knives and blades."><u>whetstone</u></span></li>
+      <li>A <span data-tooltip="Dogs may be trained to respond to its signal in a specific way. Typical commands: come, attack, heel, or fetch."><u>dog whistle</u></span></li>
+      <li>A pet, such as a <span data-tooltip="A domesticated cat, excellent at tracking and hunting small animals."><u>cat</u></span>, <span data-tooltip="Man's best friend."><u>dog</u></span>, <span data-tooltip="A colorful bird able to mimic human speech. Those purchased from sailors often possess a colorful vocabulary."><u>parrot</u></span>, or <span data-tooltip="A small monkey likely imported from a faroff land. Able to obey simple commands, and in extremely rare cases, cast simple spells."><u>monkey</u></span></li>
+      <li>A bottle of <span data-tooltip="Extremely strong alcohol. Lacks the royal stamp, indicating that is has been manufactured illegally."><u>moonshine, flask of</u></span></li>
+      <li>Two <span data-tooltip="Reusable. For trapping small animals, such as rabbits, mice, or gophers."><u>hunting trap</u></span>s</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="background">
    <h5><a id="Inquisitor"></a>Inquisitor</h5>
    <p>Often clad in black armor and concealed beneath a dark hood or mask, the inquisitor’s dark countenance usually conceals and ever darker heart. An inquisitor has been called by their deity to drive out heresy, and will not hesitate to interrogate or kill anyone who stands in his or her way. Inquisitors are perhaps best known for branding their opponents as heretics, marking them for divine retribution.</p>
    <p>While writing the backstory for a inquisitor, consider the following:</p>
@@ -446,12 +499,12 @@
    <div class="background-inner">
     <button class="collapsible">Additional Information</button>
     <div class="content">
-     <p><b>Limitations</b>: As an inquisitor, you have a deficiency in skill.accuracy, <span data-tooltip="Measures knowledge of disease and wound treatment."><u>Medicine</u></span>, <span data-tooltip="Measures background knowledge that would usually be obtained by spending time in nature or around animals. Used when casting nature spells."><u>Nature</u></span>.</p>
+     <p><b>Limitations</b>: As an inquisitor, you have a deficiency in <span data-tooltip="Describes a player’s accuracy with ranged weapons such as bows and firearms."><u>Accuracy</u></span>, <span data-tooltip="Measures knowledge of disease and wound treatment."><u>Medicine</u></span>, <span data-tooltip="Measures background knowledge that would usually be obtained by spending time in nature or around animals. Used when casting nature spells."><u>Nature</u></span>.</p>
      <p><b>Leveling Bonuses</b>:</p>
      <p style="margin-left: 25px;">At level 1, gain +2 to Intelligence and Charisma, and proficiency in <span data-tooltip="The ability to reach into one's inner magical reserves. Used when casting elemental magic."><u>Sorcery</u></span> and <span data-tooltip="The ability to discern more than is immediately obvious. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat."><u>Perception</u></span>.</p>
      <p><b>Starting Equipment</b>:</p>
      <ul>
-      <li>A set of <span data-tooltip="Metal plates riveted together beneath leather. Cheaper than mail. BC: 5"><u>brigandine</u></span>.</li>
+      <li>A set of <span data-tooltip="Metal plates riveted together beneath leather. Cheaper than mail. BC: 7"><u>brigandine</u></span>.</li>
       <li>Any standard weapon.</li>
       <li>A <span data-tooltip="A short sidearm, suitable for slashing or stabbing. The “Sharp” property does not apply when thrown. Damage: 1d4 + STR/DEX <nobr>Cut-and-Thrust</nobr>"><u>dagger</u></span></li>
       <li>A <span data-tooltip="Requires oil. Emits bright light to a radius of 30 feet when the hood is removed."><u>lantern</u></span> with <span data-tooltip="Contains approximately one pint. Fuels a lantern for 12 hours."><u>flask of oil</u></span></li>
@@ -497,15 +550,26 @@
     <div class="content">
      <p><b>Limitations</b>: Deficient in sorcery.</p>
      <p><b>Leveling Bonuses</b>:</p>
-     <p style="margin-left: 25px;">At level 1, +2 to Strength and +2 to Charisma, and expertise in defense.</p>
-     <p style="margin-left: 25px;">At level 2, learn a combat ability from the following list:</p>
-     <ol>
-      <li>12</li>
-     </ol>
-     <p style="margin-left: 25px;">At level 3, +2 to STR and +1 to</p>
+     <p style="margin-left: 25px;">At level 1, gain expertise in defense.</p>
+     <p style="margin-left: 25px;">At level 2, learn any two abilities from the following list:</p>
+     <ul>
+      <li><a href="src\main\resources\output\version\0\appendix_abilities.html#parry">Parry</a></li>
+      <li><a href="src\main\resources\output\version\0\appendix_abilities.html#shield_bash">Shield Bash</a></li>
+      <li><a href="src\main\resources\output\version\0\appendix_abilities.html#lancer">Lancer</a></li>
+      <li><a href="src\main\resources\output\version\0\appendix_abilities.html#defender">Defender</a></li>
+     </ul>
+     <p style="margin-left: 25px;">At level 3, your liege gifts you an improved suit of armor. You may choose a suit of <span data-tooltip="Plate armor, but with nonessentials stripped away to spare the cost. BC: 12"><u>half plate armor</u></span> or <span data-tooltip="Chainmail with vertical splints to shore up defense of the limbs. BC: 13"><u>splinted chainmail</u></span>.</p>
+     <p style="margin-left: 25px;">At level 4, The dexterity and speed caps on your armor are increased by 1.</p>
+     <p style="margin-left: 25px;">At level 5, Learn 2 combat maneuvers</p>
+     <p style="margin-left: 25px;">At level 6, in recognition of your glorious and heroic conduct, your liege grants you a set of steel plate armor.</p>
+     <p style="margin-left: 25px;">At level 7, You ignore disadvantage on mobility checks while wearing half plate armor, and ignore disadvantage on stealth checks while wearing full plate.</p>
+     <p style="margin-left: 25px;">At level 8, The dexterity and speed caps on your armor are further increased, from 1 to 2.</p>
+     <p style="margin-left: 25px;">At level 9, when you fail a saving throw against a spell, you can expend willpower (equal to the amount by which you failed the save) to instead succeed the save.</p>
+     <p style="margin-left: 25px;">At level 12, The dexterity and speed caps on your armor are further increased, from 2 to 3.</p>
+     <p style="margin-left: 25px;">At level 16, The dexterity and speed caps on your armor are further increased, from 3 to 4.</p>
      <p><b>Starting Equipment</b>:</p>
      <ul>
-      <li>A set of steel <span data-tooltip="Plate armor, but with nonessentials stripped away to spare the cost. BC: 10"><u>half plate armor</u></span></li>
+      <li>A set of steel <span data-tooltip="Full mail. Flexible and effective. BC: 11"><u>chainmail</u></span></li>
       <li>An arming sword (<span data-tooltip="A shorter sword of lighter weight, making an ideal sidearm. Similar to the arming sword and gladius. Damage: 1d6 + STR/DEX <nobr>Cut-and-Thrust</nobr>"><u>shortsword</u></span>)</li>
       <li>A <span data-tooltip="An ordinary shield. Allows shield bash. Damage: 1d4 + STR Bludgeoning"><u>shield</u></span></li>
       <li>A <span data-tooltip="Requires oil. Emits bright light to a radius of 30 feet when the hood is removed."><u>lantern</u></span>, with one <span data-tooltip="Contains approximately one pint. Fuels a lantern for 12 hours."><u>flask of oil</u></span>.</li>
@@ -559,7 +623,7 @@
      <p style="margin-left: 25px;">At level 3, gain proficiency in <span data-tooltip="Measures knowledge of disease and wound treatment."><u>Medicine</u></span>, <span data-tooltip="The ability to climb, mantle, vault, and otherwise navigate past obstacles."><u>Mobility</u></span>, or <span data-tooltip="Used when sneaking or attempting to perform actions without being seen. Speed cannot be used if the noise of sprinting would arouse excessive suspicion."><u>Stealth</u></span>.</p>
      <p><b>Starting Equipment</b>:</p>
      <ul>
-      <li>A coat of <span data-tooltip="A proper gambeson, befitting a squire. BC: 1"><u>gambeson</u></span>.</li>
+      <li>A coat of <span data-tooltip="A proper gambeson, befitting a squire. BC: 3"><u>gambeson</u></span>.</li>
       <li>A <span data-tooltip="The bow used by professional archers. Damage: 1d12 + STR Piercing"><u>longbow</u></span> and a <span data-tooltip="Holds up to 24 arrows or crossbow bolts."><u>quiver</u></span> with 24 arrows</li>
       <li>Any standard weapon.</li>
       <li>A <span data-tooltip="Requires oil. Emits bright light to a radius of 30 feet when the hood is removed."><u>lantern</u></span> with <span data-tooltip="Contains approximately one pint. Fuels a lantern for 12 hours."><u>flask of oil</u></span></li>
@@ -604,7 +668,7 @@
      <p style="margin-left: 25px;">At level 1, gain +2 to Strength, +1 to Dexterity and Intelligence.</p>
      <p><b>Starting Equipment</b>:</p>
      <ul>
-      <li>A set of <span data-tooltip="Robust protection for the vital regions. BC: 6"><u>breastplate</u></span>.</li>
+      <li>A set of <span data-tooltip="Robust protection for the vital regions. BC: 8"><u>breastplate</u></span>.</li>
       <li>Any standard weapon</li>
       <li>Any small weapon</li>
       <li>A <span data-tooltip="A small shield. Allows shield bash. Damage: 1d4 + STR/DEX Bludgeoning"><u>buckler</u></span></li>
@@ -650,7 +714,7 @@
      <p><b>Starting Equipment</b>:</p>
      <ul>
       <li>A set of <span data-tooltip="A homespun gambeson. A sure sign of a hooligan. BC: 2"><u>quilted armor</u></span></li>
-      <li>A <span data-tooltip="Dexterity can be used to provide the weapon's damage, instead of strength."><u>nimble</u></span> weapon</li>
+      <li>A <span data-tooltip="Dexterity can be used to provide the weapon's damage, instead of strength.">[<u>nimble</u>]</span> weapon</li>
       <li>A <span data-tooltip="A short sidearm, suitable for slashing or stabbing. The “Sharp” property does not apply when thrown. Damage: 1d4 + STR/DEX <nobr>Cut-and-Thrust</nobr>"><u>dagger</u></span></li>
       <li>A <span data-tooltip="An instrument such as a guitar, banjo, lute, or dulcimer. Not included: the skill to play it."><u>musical instrument</u></span> of some kind</li>
      </ul>
@@ -711,7 +775,14 @@
     <button class="collapsible">Additional Information</button>
     <div class="content">
      <p><b>Leveling Bonuses</b>:</p>
-     <p style="margin-left: 25px;">At level 1, gain +2 Charisma and Instinct, and proficiency in <span data-tooltip="The ability to reach into one's inner magical reserves. Used when casting elemental magic."><u>Sorcery</u></span>, <span data-tooltip="Measures knowledge of disease and wound treatment."><u>Medicine</u></span>, or <span data-tooltip="Used when sneaking or attempting to perform actions without being seen. Speed cannot be used if the noise of sprinting would arouse excessive suspicion."><u>Stealth</u></span>.</p>
+     <p style="margin-left: 25px;">At level 1, gain proficiency in <span data-tooltip="The ability to reach into one's inner magical reserves. Used when casting elemental magic."><u>Sorcery</u></span>. You have knowledge of any</p>
+     <p style="margin-left: 25px;">At level 2, choose your divine calling. You may choose one of the following:</p>
+     <ul>
+      <li>Calling of the healer. Gain proficiency in <span data-tooltip="Measures knowledge of disease and wound treatment."><u>Medicine</u></span>.</li>
+      <li>Calling of the deceiver. Gain proficiency in <span data-tooltip="Used when sneaking or attempting to perform actions without being seen. Speed cannot be used if the noise of sprinting would arouse excessive suspicion."><u>Stealth</u></span> and <span data-tooltip="Used when lockpicking and pickpocketing items, or other such tricks."><u>Legerdemain</u></span>.</li>
+      <li>Calling of the teacher. Gain proficiency in <span data-tooltip="Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Deficiency in this skill normally indicates that the character is illiterate."><u>Literacy</u></span>. You may learn one scholarly spell.</li>
+      <li>Calling of the destroyer. Gain proficiency in {{skills..</li>
+     </ul>
      <p><b>Starting Equipment</b>:</p>
      <ul>
       <li>A set of <span data-tooltip="A set of threadbare garments, such as befits a beggar."><u>rags</u></span>, blessed by the divine to provide the same benefits as <span data-tooltip="Distinguishes one as a practitioner of the arcane. Grants advantage on ability checks to cast magical spells."><u>sorcerer's robes</u></span>.</li>
@@ -723,16 +794,16 @@
       <li>3 days <span data-tooltip="Consists of non-perishable food items for a single day's sustenance."><u>rations</u></span> and a <span data-tooltip="Holds one quart of drinking water."><u>canteen</u></span></li>
       <li>A <span data-tooltip="A minimal sleeping arrangement for a rugged adventurer."><u>bedroll</u></span></li>
       <li>One set of <span data-tooltip="Ordinary clothes for ordinary folk."><u>plain clothes</u></span></li>
-      <li>A <span data-tooltip="An instrument such as a guitar, banjo, lute, or dulcimer. Not included: the skill to play it."><u>musical instrument</u></span></li>
+      <li>One set of <span data-tooltip="Distinguishing attire of a priest, cleric, or similar ilk."><u>religious vestments</u></span></li>
       <li>A pair of <span data-tooltip="For reading comfort, or restoring sight to the nearsighted adventurer."><u>spectacles</u></span></li>
       <li>A <span data-tooltip="For frying eggs. Oft improvised as a weapon of housewives, against intruders."><u>frying pan</u></span></li>
       <li>A bottle of <span data-tooltip="Extremely strong alcohol. Lacks the royal stamp, indicating that is has been manufactured illegally."><u>moonshine, flask of</u></span></li>
      </ul>
      <p style="margin-left: 25px;">Any two of the following</p>
      <ul>
-      <li>A <span data-tooltip="For changing one's appearance. "><u>disguise kit</u></span></li>
-      <li>A <span data-tooltip="Contains stationery, pens, and inks of various sorts, for falsifying signatures."><u>forgery kit</u></span></li>
-      <li>A <span data-tooltip="Includes bandages, sutures, and antiseptic. +2 to medicine checks while in inventory, or may be used to provide 2d6 healing during a short rest."><u>medical kit</u></span></li>
+      <li>A <span data-tooltip="An instrument such as a guitar, banjo, lute, or dulcimer. Not included: the skill to play it."><u>musical instrument</u></span> (and proficiency in <span data-tooltip="Captures a player's ability to sing, dance, play instruments, or otherwise entertain a crowd. Proficiency with this skill implies the ability to play at least one musical instruments."><u>Performance</u></span></li>
+      <li>A <span data-tooltip="For changing one's appearance. "><u>disguise kit</u></span> and a <span data-tooltip="Contains stationery, pens, and inks of various sorts, for falsifying signatures."><u>forgery kit</u></span></li>
+      <li>A <span data-tooltip="Includes bandages, sutures, and antiseptic. +2 to medicine checks while in inventory, or may be used to provide 2d6 healing during a short rest."><u>medical kit</u></span> (and proficiency in <span data-tooltip="Measures knowledge of disease and wound treatment."><u>Medicine</u></span>)</li>
       <li>A half-dozen <span data-tooltip="For opening locks without the key. Not sold by decent folk."><u>lockpick</u></span>s</li>
      </ul>
     </div>
@@ -888,11 +959,11 @@
     <button class="collapsible">Additional Information</button>
     <div class="content">
      <p><b>Leveling Bonuses</b>:</p>
-     <p style="margin-left: 25px;">At level 1, +2 to Dexterity and Instinct, and proficiency in <span data-tooltip="Used when lockpicking and pickpocketing items, or other such tricks."><u>Sleight-of-Hand</u></span> and <span data-tooltip="The ability to discern more than is immediately obvious. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat."><u>Perception</u></span>.</p>
+     <p style="margin-left: 25px;">At level 1, +2 to Dexterity and Instinct, and proficiency in <span data-tooltip="Used when lockpicking and pickpocketing items, or other such tricks."><u>Legerdemain</u></span> and <span data-tooltip="The ability to discern more than is immediately obvious. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat."><u>Perception</u></span>.</p>
      <p style="margin-left: 25px;">At level 7, gain <i>Lucky Sevens</i>. Whenever you roll a 7 on a d20, it automatically counts as a critical success.</p>
      <p><b>Starting Equipment</b>:</p>
      <ul>
-      <li>A set of <span data-tooltip="Composed of boiled leather. Worn by knaves. BC: 3"><u>leather armor</u></span></li>
+      <li>A set of <span data-tooltip="Composed of boiled leather. Worn by knaves. BC: 5"><u>leather armor</u></span></li>
       <li>Any two small weapons</li>
       <li>A <span data-tooltip="A short sidearm, suitable for slashing or stabbing. The “Sharp” property does not apply when thrown. Damage: 1d4 + STR/DEX <nobr>Cut-and-Thrust</nobr>"><u>dagger</u></span>, <span data-tooltip="A stabbing knife, long and sharp. Ignores BC from chainmail. Damage: 1d4 + STR/DEX Piercing"><u>stiletto</u></span> or <span data-tooltip="A short slashing blade with an angular tip. Damage: 1d4 + STR/DEX Slashing"><u>tanto</u></span>, concealed on your person.</li>
       <li>Five <span data-tooltip="Knives specially designed to be hurled. Damage: 1d4 + STR Piercing"><u>throwing knives</u></span></li>
@@ -966,7 +1037,7 @@
      <p style="margin-left: 25px;">At level 1, gain +2 to Strength and Instinct, and proficiency in <span data-tooltip="Describes a player’s knowledge and practice of defensive tactics. Proficiency bonuses for this skill affect what types of armor and shields can be used in combat."><u>Defense</u></span> and <span data-tooltip="Measures knowledge of disease and wound treatment."><u>Medicine</u></span></p>
      <p><b>Starting Equipment</b>:</p>
      <ul>
-      <li>A <span data-tooltip="Robust protection for the vital regions. BC: 6"><u>breastplate</u></span></li>
+      <li>A <span data-tooltip="Robust protection for the vital regions. BC: 8"><u>breastplate</u></span></li>
       <li>Any polearm</li>
       <li>Any standard weapon</li>
       <li>Any small weapon</li>
@@ -989,51 +1060,6 @@
       <li>A <span data-tooltip="An instrument such as a guitar, banjo, lute, or dulcimer. Not included: the skill to play it."><u>musical instrument</u></span></li>
       <li>A <span data-tooltip="An ordinary ball-peen hammer."><u>workman's hammer</u></span>, <span data-tooltip="For shaping stone and wood. Best when combined with a workman's hammer."><u>chisel</u></span>, and a <span data-tooltip="Invented by workmen, for prying. A favorite of thieves and hoodlums galore."><u>crowbar</u></span></li>
       <li>A <span data-tooltip="Emits a shrill noise, often to alert of danger."><u>whistle</u></span></li>
-     </ul>
-    </div>
-   </div>
-  </div>
-  <div class="background">
-   <h5><a id="Warg"></a>Warg</h5>
-   <p>A warg is someone—often an isolated hermit or cultist—who has developed the ability to transform at will into a particular animal. Unlike a druid who can transform into a wide variety of small animals, a warg can only transform into one type of animal. But what wargs sacrifice in flexibilty, they gain in power. Wargs are known for transforming into mighty animals such as the direwolf, rune bear, lions, and even the mighty rhinoceros.</p>
-   <p>While writing the backstory for a warg, consider the following:</p>
-   <ol>
-    <li>How did you learn to transform into your specific animal?</li>
-    <li>Have you always had a close connection to nature, or did something spur that connection?</li>
-    <li>What was your first transformation like?</li>
-    <li>Do you feel more at home as a humanoid or as an animal?</li>
-    <li>What made you leave your previous life and start adventuring?</li>
-   </ol>
-   <p><b>Core Ability</b>: <i>Beast Form</i>. You expend 5 ability points to transform into your chosen animal for up to one hour. Their stats replace yours, except for intelligence.</p>
-   <div class="background-inner">
-    <button class="collapsible">Additional Information</button>
-    <div class="content">
-     <p><b>Leveling Bonuses</b>:</p>
-     <p style="margin-left: 25px;">At level 1, gain +2 to Instinct and +2 to Strength, Speed or Dexterity, and proficiency in <span data-tooltip="Measures general survival skills, including the ability to recognize threats, build shelter, and live off the land. Used when attempting to recognize monsters at the start of combat."><u>Survival</u></span>.</p>
-     <p><b>Starting Equipment</b>:</p>
-     <ul>
-      <li>A set of <span data-tooltip="Ordinary clothes for ordinary folk."><u>plain clothes</u></span></li>
-      <li>A <span data-tooltip="A blessed or holy artifact designed to nullify the trickery of evil spirits."><u>talisman</u></span></li>
-     </ul>
-     <p style="margin-left: 25px;">An adventurer's pack, containing:</p>
-     <ul>
-      <li>1d20 gold</li>
-      <li>1 days <span data-tooltip="Consists of non-perishable food items for a single day's sustenance."><u>rations</u></span> and a <span data-tooltip="Holds one quart of drinking water."><u>canteen</u></span></li>
-      <li>A <span data-tooltip="A minimal sleeping arrangement for a rugged adventurer."><u>bedroll</u></span></li>
-      <li>1 set of <span data-tooltip="Ordinary clothes for ordinary folk."><u>plain clothes</u></span></li>
-      <li>3 <span data-tooltip="Lasts 4 hours"><u>torch</u></span>es</li>
-      <li>A <span data-tooltip="Easily affixed to an adventurer's pack. Holds up to 1000 pounds of weight."><u>100 foot rope</u></span></li>
-      <li>A <span data-tooltip="Conveys a general sense of surrounding terrain."><u>map</u></span> and <span data-tooltip="Always points north, except in the presence of magical fields."><u>compass</u></span></li>
-      <li>A <span data-tooltip="For frying eggs. Oft improvised as a weapon of housewives, against intruders."><u>frying pan</u></span> and a <span data-tooltip="For starting fire. If one is in your possession, you may light a torch, candle, or lantern as an action."><u>tinderbox</u></span></li>
-     </ul>
-     <p style="margin-left: 25px;">Two of the following:</p>
-     <ul>
-      <li>A <span data-tooltip="For securing valuables, or denying entry."><u>padlock &amp; key</u></span></li>
-      <li>A <span data-tooltip="For sharpening knives and blades."><u>whetstone</u></span></li>
-      <li>A <span data-tooltip="Dogs may be trained to respond to its signal in a specific way. Typical commands: come, attack, heel, or fetch."><u>dog whistle</u></span></li>
-      <li>A pet, such as a <span data-tooltip="A domesticated cat, excellent at tracking and hunting small animals."><u>cat</u></span>, <span data-tooltip="Man's best friend."><u>dog</u></span>, <span data-tooltip="A colorful bird able to mimic human speech. Those purchased from sailors often possess a colorful vocabulary."><u>parrot</u></span>, or <span data-tooltip="A small monkey likely imported from a faroff land. Able to obey simple commands, and in extremely rare cases, cast simple spells."><u>monkey</u></span></li>
-      <li>A bottle of <span data-tooltip="Extremely strong alcohol. Lacks the royal stamp, indicating that is has been manufactured illegally."><u>moonshine, flask of</u></span></li>
-      <li>Two <span data-tooltip="Reusable. For trapping small animals, such as rabbits, mice, or gophers."><u>hunting trap</u></span>s</li>
      </ul>
     </div>
    </div>

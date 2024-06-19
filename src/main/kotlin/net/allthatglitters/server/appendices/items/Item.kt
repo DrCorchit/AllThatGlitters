@@ -3,6 +3,7 @@ package net.allthatglitters.server.appendices.items
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonObject
 import net.allthatglitters.server.Generator.Companion.generator
+import net.allthatglitters.server.util.HasProperties
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.Renderable
 import net.allthatglitters.server.util.makeTooltip
@@ -36,12 +37,16 @@ class Item(
 		return "items.$key"
 	}
 
-	companion object {
+	companion object : HasProperties {
 		fun deserialize(obj: JsonObject): Item {
 			if (!obj.has("key")) {
 				obj.addProperty("key", obj.get("name").asString.normalize())
 			}
 			return generator.deserializer.fromJson(obj, Item::class.java)
+		}
+
+		override fun getProperty(property: String): Any {
+			return AppendixItems.lookupItem(property)
 		}
 	}
 

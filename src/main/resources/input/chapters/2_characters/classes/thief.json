@@ -30,7 +30,7 @@
     }
   ],
   "levelingBonuses": {
-    "1": "+2 to {{attr.DEX}} and {{attr.NST}}, and proficiency in {{skills.sleight_of_hand}} and {{skills.perception}}.",
+    "1": "+2 to {{attr.DEX}} and {{attr.NST}}, and proficiency in {{skills.legerdemain}} and {{skills.perception}}.",
     "7": "gain <i>Lucky Sevens</i>. Whenever you roll a 7 on a d20, it automatically counts as a critical success."
   },
   "startingEquipment": {

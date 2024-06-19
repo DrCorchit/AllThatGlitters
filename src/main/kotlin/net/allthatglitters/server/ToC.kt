@@ -13,7 +13,7 @@ object ToC : HtmlFile("Player's Handbook", "phb_toc.html", generator.inputDir) {
 		)
 		val list = HtmlObject("ol").withAll(
 			generator.chapters.map { chapter ->
-				HtmlObject("li").withContent(chapter.getLink())
+				HtmlObject("li").withContent(chapter.linkTo())
 					.withContent(
 						HtmlObject("ol").withAttribute("type", "i")
 							.withAll(chapter.subsections.map { subsection ->
@@ -26,7 +26,7 @@ object ToC : HtmlFile("Player's Handbook", "phb_toc.html", generator.inputDir) {
 		val appendices = HtmlObject("li").withContent("Appendices")
 			.withContent(
 				HtmlObject("ol").withAttribute("type", "i")
-					.withAll(generator.appendices.map { HtmlObject("li").withContent(it.getLink()) })
+					.withAll(generator.appendices.map { HtmlObject("li").withContent(it.linkTo()) })
 			)
 		list.withContent(appendices)
 		append(list)

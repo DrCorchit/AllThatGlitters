@@ -11,18 +11,18 @@
       "radius": 5
     },
     "duration": 10,
-    "effect": "Dozens of daggers summoned from the astral plane begin to swirl around the designated region. Creatures within taken 1d4 slashing and 1d4 piercing damage when the spell is cast, at the start of their turn, and whenever they enter the cloud of daggers. (At most once per round).",
+    "effect": "Dozens of daggers summoned from the astral plane begin to swirl around the designated region. Creatures within taken 1d4 slashing and 1d4 piercing damage. The effect is applied when the spell is cast, at the start of their turn, and whenever they enter the cloud of daggers. (At most once per round).",
     "note": "The same creature cannot be damaged by this spell more than once per round.",
     "training_reqs": {
+      "level": 3,
       "int": 13,
-      "nst": 15,
       "nst": 15,
       "slots": 3
     },
     "casting_reqs": {
       "time": "1 Action",
-      "wp": 5,
-      "concentration": 2
+      "wp": 2,
+      "concentration": 1
     },
     "modifiers": {
       "Damage": "The damaged is increased by 1 for each point of charisma above 15.",

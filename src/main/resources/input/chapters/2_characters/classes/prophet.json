@@ -11,7 +11,31 @@
   "coreAbilityName": "Divine Smite",
   "coreAbilityDescription": "As an agent of divine prophecy, you may channel your deity's wrath in order to spread your message.  Your deity",
   "levelingBonuses": {
-    "1": "gain +2 {{attr.CHA}} and {{attr.NST}}, and proficiency in {{skills.sorcery}}, {{skills.medicine}}, or {{skills.stealth}}."
+    "1": "gain proficiency in {{skills.sorcery}}. You have knowledge of any ",
+    "2": [
+      "choose your divine calling. You may choose one of the following:",
+      {
+        "tag": "ul",
+        "content": [
+          {
+            "tag": "li",
+            "content": "Calling of the healer. Gain proficiency in {{skills.medicine}}."
+          },
+          {
+            "tag": "li",
+            "content": "Calling of the deceiver. Gain proficiency in {{skills.stealth}} and {{skills.legerdemain}}."
+          },
+          {
+            "tag": "li",
+            "content": "Calling of the teacher. Gain proficiency in {{skills.literacy}}. You may learn one scholarly spell."
+          },
+          {
+            "tag": "li",
+            "content": "Calling of the destroyer. Gain proficiency in {{skills.."
+          }
+        ]
+      }
+    ]
   },
   "startingEquipment": {
     "_": [
@@ -23,15 +47,15 @@
       "3 days {{items.rations}} and a {{items.canteen}}",
       "A {{items.bedroll}}",
       "One set of {{items.plain_clothes}}",
-      "A {{items.instrument}}",
+      "One set of {{items.priest_robes}}",
       "A pair of {{items.spectacles}} ",
       "A {{items.frying_pan}}",
       "A bottle of {{items.moonshine}}"
     ],
     "Any two of the following": [
-      "A {{items.disguise_kit}}",
-      "A {{items.forgery_kit}}",
-      "A {{items.medical_kit}}",
+      "A {{items.instrument}} (and proficiency in {{skills.performance}}",
+      "A {{items.disguise_kit}} and a {{items.forgery_kit}}",
+      "A {{items.medical_kit}} (and proficiency in {{skills.medicine}})",
       "A half-dozen {{items.lockpick}}s"
     ]
   }

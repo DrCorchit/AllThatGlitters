@@ -24,7 +24,7 @@
    </div>
   </div>
   <hr>
-  <p>The character sheet, available <a href="sheet/character_sheet.html">here</a>, is divided into 8 sections:</p>
+  <p>The character sheet, available <a href="sheet/character_sheet.html">here</a>, is divided into 9 sections:</p>
   <ol>
    <li><a href="c3.html#info">Character Information</a></li>
    <li><a href="c3.html#stats">Statistics</a></li>
@@ -34,6 +34,7 @@
    <li><a href="c3.html#abilities">Spells &amp; Abilities</a></li>
    <li><a href="c3.html#backstory">Backstory &amp; Personality</a></li>
    <li><a href="c3.html#inventory">Inventory</a></li>
+   <li><a href="c3.html#all_together">Putting it all Together</a></li>
   </ol>
   <h4><a id="info"></a>Character Information</h4>
   <p>This section is found in the topmost left section of the character sheet, and records the most basic information about your character, including their name, combat class, level, race, and alignment. Races, classes, and alignments are discussed in more detail in the <a href="c2.html" rel="prev">previous chapter</a>. Except for your character level, information in this section usually doesn't change.</p>
@@ -47,7 +48,7 @@
   <pre>Max WP = 10 + Instinct modifier + Charisma modifier</pre>
   <h5>Mitigation</h5>
   <p>Mitigation (MIT) is a derived statistic which determines how likely a character is to successfully avoid damage from an attack, similar to armor class from D&amp;D. During combat, melee and ranged attacks are treated as an event roll testing the martial arts or accuracy skill of the attacking player. Mitigation provides the difficulty threshold that determines whether the attack succeeds. Thus, players with high mitigation are hit less often and survive longer.</p>
-  <p>Mitigation is composed of two values: dodge chance (DC) and block chance (BC). Dodge chance is initially equal to the player’s dexterity attribute, while block chance is determined by the character’s shields and armor. The two values are added together to calculate total mitigation, but certain attacks may bypass one or the other, reducing effective mitigation against that tactic. For example, if a character is restrained or grappled they are no longer able to dodge attacks.</p>
+  <p>Mitigation is composed of two values: dodge chance (DC) and block chance (BC). Dodge chance is initially equal to the player’s dexterity attribute, while block chance is determined by the character’s shields and armor. The two values are added together to calculate total mitigation. Note that DC is reduced after every attack by the attacker's Dexterity modifier, whether the attack is successful or not. Dodge chance is also reduced to zero (for both characters) when a character is grappled.</p>
   <p>DC, BC, and MIT are calculated as follows:</p>
   <pre>DC = Dexterity</pre>
   <pre>BC = armor BC + shield BC</pre>
@@ -56,6 +57,8 @@
   <p>To calculate effective MIT against an attack, add any circumstantial bonuses or penalties to BC and DC to the base mitigation value. For example, specific potions increase DC, while the parry reaction or certain spells improve BC.</p>
   <h5>Gold</h5>
   <p>Gold measures a character's material wealth, and does not necessarily correspond to a specific number of gold coins or any specific currency. Coins made from other metals such as copper or silver are converted to their gold value when recorded on the character sheet. Gold is mainly used to purchase goods and services, such as buying equipment from merchants or hiring trainers.</p>
+  <h5>Status</h5>
+  <p>This section records any status effects inflicted on your character.</p>
   <h5>Training Slots</h5>
   <p>Training slots are a resource that control how often a character can learn new abilities from training. Characters expend training slots whenever they learn new feats or spells. If they don't have enough training slots for a new ability, they may have to forget an ability to regain the required training slots, or wait until they level up. If you're just making a character, you won't have used any training slots, so they will be at maximum, which is equal to your intelligence attribute score. Training slots are explained in more detail in <a href="c6.html">chapter 6</a>.</p>
   <pre>Max Training Slots = Intelligence</pre>
@@ -83,7 +86,7 @@
      <td>Acrobatics and manual dexterity</td>
      <td>• Dodge Chance<br>
       • Nimble weapon damage<br>
-      • Accuracy, Martial Arts, Mobility, Sleight-of-Hand, and Stealth skills</td>
+      • Accuracy, Martial Arts, Mobility, Legerdemain, and Stealth skills</td>
      <td>N/A</td>
     </tr>
     <tr>
@@ -143,7 +146,7 @@
   <p>If you only carry one weapon, leave the "offhand" column blank.</p>
   <h5>Armor</h5>
   <p>Under the "armor" section, write down the type of armor your character is wearing and the associated BC. For example, if your character is a knight you would start out wearing half plate. Therefore, you would write:</p>
-  <pre>Half Plate (BC 12)</pre>
+  <pre>Name: Half Plate BC: 12</pre>
   <p>If you don't know the BC of your armor, you can look it up in <a href="appendix_armor.html">Appendix: Armor &amp; Materials</a></p>
   <h4><a id="skills"></a>Skills</h4>
   <p>Skills are related to attributes in that they are also used for event rolls. Every skill has an underlying supporting attribute, whose modifier is added to the roll as with an attribute check. In addition to this, players add a bonus from training called a proficiency bonus. The final value of the skill check equals the number rolled on the d20 plus the attribute modifier plus the proficency bonus, as follows:</p>
@@ -174,6 +177,11 @@
      <td><b>Initiative</b></td>
      <td>SPD</td>
      <td>Determines move order in battle.</td>
+    </tr>
+    <tr>
+     <td><b>Legerdemain</b></td>
+     <td>DEX</td>
+     <td>Used when lockpicking and pickpocketing items, or other such tricks.</td>
     </tr>
     <tr>
      <td><b>Literacy</b></td>
@@ -214,11 +222,6 @@
      <td><b>Perception</b></td>
      <td>NST, CHA</td>
      <td>The ability to discern more than is immediately obvious. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat.</td>
-    </tr>
-    <tr>
-     <td><b>Sleight-of-Hand</b></td>
-     <td>DEX</td>
-     <td>Used when lockpicking and pickpocketing items, or other such tricks.</td>
     </tr>
     <tr>
      <td><b>Sorcery</b></td>
@@ -281,6 +284,30 @@
    <li><a href="appendix_armor.html">Armor</a></li>
    <li><a href="appendix_items.html">Tools &amp; Consumables</a></li>
   </ul>
+  <h4><a id="all_together"></a>Putting it all Together</h4>
+  <p>Now that we've covered the various components of the character sheet, let's walk through the process of creating a character and filling out the sheet. Let's create a character named "Arnoch Strontorius":</p>
+  <blockquote>
+   Arnoch is a wizard, preferring to explore the application of arcane energy outside the auspices of university. He comes from a long line of adventurers, all the way back to his thrice-great grandfather, Sapio Strontorius. Back in the day, Sapio made a name for himself as a mercenary who wielded his hand-and-a-half sword and elemental magic with equal finesse. Although Arnoch has a lot to live up to, he's already shown himself as a magical prodigy. A string of family anecdotes recount his abilities, including a time when he burnt down an entire outhouse and several trees at the wee age of three, despite not having any formal training in pyromancy. Arnoch has always been enamored with flames, and fireball is his favorite spell. He says his favorite sound is the silence that comes just before a fireball (usually hurled by Arnoch himself) strikes and explodes, although the sound of dry tinder bursting into flame is a close second. His family has always encouraged him to develop his talents, and are very excited to send their little pyromaniac off on his first adventure.
+  </blockquote>
+  <blockquote>
+   Although Arnoch's got a bit of elven ancestry from way back when, he's mainly just an old-fashioned, home-grown human raised on the family farm. (Meaning the true source of his powers remains a mystery.) Arnoch has a strong moral compass, but little regard for the law, making him unpredictable and threat to corrupt politicians. As Arnoch sets out to find his fortune, he little guesses just what he's heading into... or that he is already being watched, on account of his extraordinary powers.
+  </blockquote>
+  <p>Now that we've established Arnoch's background, let's fill in his character sheet. First we write "Arnoch Strontorius" in the info section, followed by "wizard" as his class and "1" as his level. Below this, we write "human" and "CG" or "Chaotic Good" as his alignment.</p>
+  <p>In the next section, we need Arnoch's attributes. As a human, we can choose to improve two of Arnoch's attributes by 1, by decreasing two others by 1. We'll increase his Intelligence and Charisma, at the cost of his Speed and Strength. As a wizard, he gains +2 to Intelligence and Charisma. Adding these together, Arnoch's attributes are as follows:</p>
+  <ul>
+   <li><b>STR</b>: 9</li>
+   <li><b>DEX</b>: 10</li>
+   <li><b>SPD</b>: 9</li>
+   <li><b>INT</b>: 13</li>
+   <li><b>NST</b>: 10</li>
+   <li><b>CHA</b>: 13</li>
+  </ul>
+  <p>We can now go ahead and enter these values under "Attributes", and then move on to the statistics section. At level 1, max HP is equal to Strength, so we enter "9" as his max HP. Arnoch's Instinct modifier is +0 and his Charisma modifier is +3. We add these together and then add 10 to calculate his max willpower of 13. Finally, his intelligence of 13 means that he has 13 training slots. Since he hasn't learned any new abilities yet, his training slots are at maximum.</p>
+  <p>Now let's calculate his mitigation stat. He's wearing sorcerer's robes, so his block chance is zero. Meanwhile, his dexterity is 10, which is his dodge chance. For his mitigation stat, we write:</p>
+  <pre>Block + Dodge = Mitigation
+0     + 10    = 10</pre>
+  <p>The next sections are abilities, backstory, and equipment.</p>
+  <p>TODO: Martial Class walkthrough (knight)</p>
   <hr>
   <div class="row" style="justify-content:space-evenly; margin: 0">
    <div class="column-shrink">

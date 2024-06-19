@@ -1,0 +1,44 @@
+{
+  "name": "Hermit",
+  "description": [
+    "A hermit is someone who has chosen to live alone, usually on the outskirts of civilization. Such prolonged solitude leaves one with countless hours of quiet contemplation, and the slow progression from idiosyncrasy to eccentricity and madness. Alone in the wilderness, it is only a matter of time before one's most savage and primal instincts begin to dominate. Then comes the choice of whether to resist the madness or embrace it wholeheartedly, but this too is only a matter of time. In the end, there comes a day when that which lumbers out of the hermit's hut is more beast than man.",
+    "Whether by some inborn ability or through countless hours of meditation, a hermit is someone who has developed the ability to transform at will into a particular animal. Unlike a druid who can transform into a wide variety of small animals, a hermit can only transform into one type of animal. But what a hermit sacrifices in flexibility, they gain in power. Hermits are known for transforming into mighty animals such as the direwolf, rune bear, lions, and even the mighty rhinoceros."
+  ],
+  "backstoryPrompts": [
+    "How did you learn to transform into your specific animal?",
+    "Have you always had a close connection to nature, or did something spur that connection?",
+    "What was your first transformation like?",
+    "Do you feel more at home as a humanoid or as an animal?",
+    "What made you leave your previous life and start adventuring?"
+  ],
+  "coreAbilityName": "Beast Form",
+  "coreAbilityDescription": "You expend 3 willpower to transform into your chosen animal for up to one hour. Your clothing and worn items merge with your beast form, and return upon detransformation. While transformed, your physical attributes ({{attr.STR}}, {{attr.DEX}}, {{attr.SPD}}) change to that of your chosen form.",
+  "levelingBonuses": {
+    "1": "gain proficiency in {{skills.survival}}.",
+    "5": "You may cast nature spells while transformed."
+  },
+  "startingEquipment": {
+    "_": [
+      "A set of {{items.plain_clothes}}",
+      "A {{items.talisman}}"
+    ],
+    "An adventurer's pack, containing:": [
+      "1d20 gold",
+      "1 days {{items.rations}} and a {{items.canteen}}",
+      "A {{items.bedroll}}",
+      "1 set of {{items.plain_clothes}}",
+      "3 {{items.torch}}es",
+      "A {{items.rope}}",
+      "A {{items.map}} and {{items.compass}}",
+      "A {{items.frying_pan}} and a {{items.tinderbox}}"
+    ],
+    "Two of the following:": [
+      "A {{items.lock}}",
+      "A {{items.whetstone}}",
+      "A {{items.dog_whistle}}",
+      "A pet, such as a {{items.cat}}, {{items.dog}}, {{items.parrot}}, or {{items.monkey}}",
+      "A bottle of {{items.moonshine}}",
+      "Two {{items.trap}}s"
+    ]
+  }
+}

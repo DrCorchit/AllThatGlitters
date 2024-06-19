@@ -1,5 +1,11 @@
 [
   {
+    "name": "Antidote",
+    "cost": 30,
+    "weight": 0,
+    "description": "Cures poisoning. If taken as a preventative, prevents poisoning for one hour."
+  },
+  {
     "name": "Flask of Oil",
     "cost": 10,
     "weight": 0,

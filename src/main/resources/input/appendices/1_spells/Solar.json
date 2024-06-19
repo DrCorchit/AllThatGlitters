@@ -1,6 +1,6 @@
 [
   {
-    "name": "Solar Healing",
+    "name": "Solstice",
     "rarity": "Academic",
     "discipline": "Solar",
     "type": "evocation",
@@ -11,20 +11,16 @@
       "radius": 5
     },
     "duration": 1,
-    "effect": "A beam of healing sunlight shines down on a designated area. Allied targets within heal for 1d4, while enemies take 1d4 holy damage instead.",
+    "effect": "A beam of healing sunlight shines down on a chosen area and remains for duration of the spell. Within the spell's effect radius, allies gain 1d6 healing, while enemies take 1d6 holy damage. This effect is applied when the spell is cast, and again at the start of the caster's turn.",
     "note": "",
     "training_reqs": {
       "int": 15,
-      "cha": 15,
-      "slots": 4
+      "slots": 3
     },
     "casting_reqs": {
       "time": "1 Action",
-      "wp": 6
-    },
-    "modifiers": {
-      "Healing": "Allies heal one additonal point of HP for every 2 points of intelligence above 15.",
-      "Damage": "Enemies take one additional point of damage for every 2 points of will above 15."
+      "wp": 3,
+      "concentration": 1
     }
   }
 ]

@@ -36,7 +36,7 @@ object AppendixWeapons : HtmlFile(
 				it.get("description").asString,
 				File(inputDir, it.get("file").asString)
 			)
-		}.associateBy { it.name }
+		}.associateBy { it.name.normalize() }
 
 	val weapons = weaponTables.values.flatMap { it.weapons }
 		.associateBy { it.name.normalize() }

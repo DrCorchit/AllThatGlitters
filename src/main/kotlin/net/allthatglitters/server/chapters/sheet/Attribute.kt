@@ -3,6 +3,7 @@ package net.allthatglitters.server.chapters.sheet
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonObject
 import net.allthatglitters.server.Generator.Companion.generator
+import net.allthatglitters.server.util.HasProperties
 import net.allthatglitters.server.util.Tooltip
 import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlObject
@@ -15,7 +16,7 @@ data class Attribute(
 	val description: String,
 	val interpretation: String?,
 	val effects: Set<String>
-) : Renderable, Tooltip {
+) : Renderable, HasProperties, Tooltip {
 	override val defaultText = abbr
 	override val value = description
 
@@ -33,11 +34,21 @@ data class Attribute(
 		return output.render()
 	}
 
+	override fun getProperty(property: String): Any? {
+		return when (property) {
+			"name" -> name
+			"abbr" -> abbr
+			"description" -> description
+			"effects" -> effects.joinToString()
+			else -> null
+		}
+	}
+
 	override fun toString(): String {
 		return name
 	}
 
-	companion object {
+	companion object : HasProperties {
 		val STR by lazy { parse("STR") }
 		val DEX by lazy { parse("DEX") }
 		val SPD by lazy { parse("SPD") }
@@ -73,6 +84,10 @@ data class Attribute(
 				}
 
 			return div.withContent(left).withContent(center).withContent(right)
+		}
+
+		override fun getProperty(property: String): Any {
+			return parse(property)
 		}
 	}
 }

@@ -52,6 +52,7 @@ object SheetChapter : HtmlFile(
 		addSubsection("Spells &amp; Abilities", "abilities")
 		addSubsection("Backstory &amp; Personality", "backstory")
 		addSubsection("Inventory", "inventory")
+		addSubsection("Putting it all Together", "all_together")
 	}
 
 	override fun appendBody(): HtmlFile {

@@ -52,7 +52,7 @@ object AppendixItems : HtmlFile(
 	}
 
 	private fun getWeapons(): List<Item> {
-		return AppendixWeapons.weaponTables["Small Weapons"]!!.weapons.map { it.item }
+		return AppendixWeapons.weaponTables["small_weapons"]!!.weapons.map { it.item }
 	}
 
 	private fun getArmor(): List<Item> {

@@ -4,14 +4,14 @@ import net.allthatglitters.server.util.html.HtmlObject
 
 enum class Abbreviations(val fullName: String) {
     DM("Storyteller"),
-    Player("Player"),
+    P("Player"),
     NPC("NPC"),
     PC("Character"),
 
     HP("HP"),
     MAX_HP("Maximum HP"),
-    AP("wp"),
-    MAX_AP("Maximum AP"),
+    WP("willpower"),
+    MAX_WP("Maximum Willpower"),
     BC("Block Chance"),
     DC("Dodge Chance"),
     Parry("Parry Chance"),

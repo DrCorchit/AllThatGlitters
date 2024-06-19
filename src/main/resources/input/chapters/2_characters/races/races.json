@@ -31,7 +31,7 @@
       "The shortest of the races, halfling men average 3’9” in height. Their women are yet shorter, scarcely 3’6” by average. A tall halfling may resemble a short dwarf, though the former may still be distinguished by his slender build and wispy facial hair, if he has any at all. Halflings weigh only 50-100 lbs, and I’ll wager a drink you can’t find a heavier one in under a fortnight. They are somewhat long lived, often lasting a bit more than a century.",
       "As timeless as their quaint and cozy country villages may seem, they are no strangers to change. Nearly half of them are now second or third generation immigrants in large cities. They are unwelcome there on account of their ill reputation: it is said that nearly a third of them are criminals. I don't doubt it; they make exceedingly sly thieves."
     ],
-    "bonuses": "Halflings tend to be unbalanced characters, having a -2 penalty to STR and a -2 penalty to SPD. They make up for this with a +2 to DEX, and another +2 to INT, CHA, or WILL. Urban halflings start with proficiency in mobility and sleight of hand, while rural halflings start with proficiency in nature and survival. They excel as mages, zealots, and renegades, but struggle as warriors."
+    "bonuses": "Halflings tend to be unbalanced characters, having a -2 penalty to STR and a -2 penalty to SPD. They make up for this with a +2 to DEX, and another +2 to INT, CHA, or WILL. Urban halflings start with proficiency in {{skills.mobility}} and {{skills.legerdemain}}, while rural halflings start with proficiency in nature and survival. They excel as mages, zealots, and renegades, but struggle as warriors."
   },
   {
     "name": "Orc",

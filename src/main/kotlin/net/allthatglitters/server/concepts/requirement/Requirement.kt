@@ -1,7 +1,7 @@
 package net.allthatglitters.server.concepts.requirement
 
 import net.allthatglitters.server.chapters.sheet.Character
-import net.allthatglitters.server.concepts.Ability
+import net.allthatglitters.server.concepts.Trainable
 import net.allthatglitters.server.util.bold
 import net.allthatglitters.server.util.html.Renderable
 
@@ -27,7 +27,7 @@ abstract class ValueReq(val valueName: String, val minLevel: Int) : Requirement 
 }
 
 abstract class AbilityReq(val type: String) : Requirement {
-	abstract val reqAbilities: Set<Ability>
+	abstract val reqAbilities: Set<Trainable>
 
 	override fun isSatisfied(character: Character): Boolean {
 		return character.abilities.containsAll(reqAbilities)

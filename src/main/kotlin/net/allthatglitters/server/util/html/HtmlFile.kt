@@ -3,14 +3,11 @@ package net.allthatglitters.server.util.html
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.drcorchit.justice.utils.logging.Logger
 import net.allthatglitters.server.Generator.Companion.generator
-import net.allthatglitters.server.util.FileSubsection
-import net.allthatglitters.server.util.Header
-import net.allthatglitters.server.util.Subsection
-import net.allthatglitters.server.util.Templatizer
+import net.allthatglitters.server.util.*
 import org.jsoup.Jsoup
 import java.io.File
 
-abstract class HtmlFile(val title: String, val fileName: String, val inputDir: File) {
+abstract class HtmlFile(val title: String, val fileName: String, val inputDir: File): HasProperties {
 	open val logger = Logger.getLogger(HtmlFile::class.java)
 	val outputFile = File(generator.versionedOutputDir, fileName)
 	open val templatizer: Templatizer = generator.templatizer
@@ -19,7 +16,7 @@ abstract class HtmlFile(val title: String, val fileName: String, val inputDir: F
 	val head = HtmlObject("head").withContent(HtmlObject("title").withContent(title))
 	val body = HtmlObject("body")
 
-	fun getLink(text: String = title): HtmlObject {
+	fun linkTo(text: String = title): HtmlObject {
 		return HtmlObject("a").withAttribute("href", fileName)
 			.withContent(text)
 	}
@@ -75,7 +72,7 @@ abstract class HtmlFile(val title: String, val fileName: String, val inputDir: F
 	}
 
 	fun render(): String {
-		logger.info("Rendering $fileName")
+		logger.debug("Rendering $fileName")
 		return "<!DOCTYPE html>\n" + HtmlObject("html")
 			.withAttribute("lang", "en")
 			.withContent(head)
@@ -98,8 +95,20 @@ abstract class HtmlFile(val title: String, val fileName: String, val inputDir: F
 		outputFile.parentFile.mkdirs()
 		val new = outputFile.createNewFile()
 		outputFile.writeText(pretty)
-		if (new) logger.info("Created file $outputFile")
-		else logger.info("Wrote file $outputFile")
+		if (new) logger.debug("Created file $outputFile")
+		else logger.debug("Wrote file $outputFile")
+	}
+
+	override fun getProperty(property: String): Any? {
+		return when (property) {
+			"title" -> title
+			"sections" -> object : HasProperties {
+				override fun getProperty(property: String): Any {
+					return subsections[property.toInt()]
+				}
+			}
+			else -> null
+		}
 	}
 
 	override fun toString(): String {

@@ -41,3 +41,8 @@ fun makeTooltip(text: String, tooltip: String): Renderable {
 		.withAttribute("data-tooltip", tooltip)
 		.withContent(text.underline())
 }
+
+fun <K2, V2, K1 : K2, V1 : V2> Map<K1, V1>.inherit(parent: Map<K2, V2>): Map<K2, V2> {
+	return (this.keys + parent.keys).associateWith { this.getOrDefault(it, parent[it])!! }
+}
+

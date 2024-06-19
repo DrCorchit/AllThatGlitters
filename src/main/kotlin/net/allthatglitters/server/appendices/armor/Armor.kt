@@ -5,6 +5,7 @@ import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.appendices.items.Item
+import net.allthatglitters.server.util.HasProperties
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.underline
 
@@ -37,7 +38,7 @@ data class Armor(
 			.withContent(name.lowercase().underline())
 	}
 
-	companion object {
+	companion object : HasProperties {
 		fun deserialize(obj: JsonObject): Armor {
 			if (!obj.has("key")) {
 				obj.addProperty("key", obj.get("name").asString.normalize())
@@ -50,6 +51,10 @@ data class Armor(
 			}
 
 			return generator.deserializer.fromJson(obj, Armor::class.java)
+		}
+
+		override fun getProperty(property: String): Any {
+			return AppendixArmor.lookupArmor(property)
 		}
 	}
 }

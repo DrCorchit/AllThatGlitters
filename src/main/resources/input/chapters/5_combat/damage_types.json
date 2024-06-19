@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Slashing",
+    "color": "#CFF",
+    "effect": "Difficult to dodge. The target's dodge is reduced by 3 until the start of their next turn.",
+    "sources": "bladed weapons such as swords and axes, or the claws of wild animals."
+  },
+  {
+    "name": "Piercing",
+    "color": "#FFF",
+    "effect": "Difficult to block. The attack ignores ignores 25% of the target's block.",
+    "sources": "arrows, spears, and swords, or the fangs of monsters."
+  },
+  {
+    "name": "Bludgeoning",
+    "color": "#888",
+    "effect": "Cannot be fully blocked by armor. When an attack which deals bludgeoning damage is blocked, the target still takes two damage.",
+    "sources": "hammers, hooves or fists, and falling damage."
+  },
+  {
+    "name": "Heat",
+    "color": "#F80",
+    "effect": "Sets the target on fire. The target gains one level of burning.",
+    "sources": "burning creatures, pyromantic magic, or the breath of dragons."
+  },
+  {
+    "name": "Cold",
+    "color": "#4BF",
+    "effect": "Chills the opponent. The target gains one level of freezing.",
+    "sources": "frost spells or environmental hazards such as blizzards or icy water."
+  },
+  {
+    "name": "Force",
+    "color": "#D00",
+    "effect": "Liable to knock the target prone.",
+    "sources": "explosions, and certain spells"
+  },
+  {
+    "name": "Poison",
+    "color": "#4D0",
+    "effect": "Carries with it additional effects dependant on the type of poison.",
+    "sources": "poisoned blades, the claws and fangs of venomous beasts, and certain spells."
+  },
+  {
+    "name": "Lightning",
+    "color": "#FF4",
+    "effect": "Cannot be dodged, but deals half damage versus opponents wearing metal armor.",
+    "sources": "lightning or storm spells"
+  },
+  {
+    "name": "Acid",
+    "color": "#AF0",
+    "effect": "Decreases the efficacy of armor when blocked with armor or shields.",
+    "sources": "bile, acidic venom, and certain alchemical mixtures."
+  },
+  {
+    "name": "Holy",
+    "color": "#FFA",
+    "effect": "An extraordinarily bright light of divine origin. Deals double damage to evil and the undead, but only half to good.",
+    "sources": "radiant lights, solar astrology, and theurgical summons."
+  },
+  {
+    "name": "Profane",
+    "color": "#92F",
+    "effect": "A sickening miasma of spiritual darkness. Deals double damage to good-aligned creatures, but only half to evil.",
+    "sources": "lunar astrology, necromantic spells, and demonic summons."
+  }
+]

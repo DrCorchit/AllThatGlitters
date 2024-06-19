@@ -11,7 +11,7 @@
   "alignment": "Non-Evil",
   "coreAbilityName": "Wildshape",
   "coreAbilityDescription": "Wildshape. You have the ability to transform into animals, expending an amount of AP dependent on the animal chosen to do so.",
-  "limitations": "As a druid, you begin with deficiency in two of these three skills: {{skills.defense}}, {{skills.literacy}}, {{skills.sleight_of_hand}}.",
+  "limitations": "As a druid, you begin with deficiency in two of these three skills: {{skills.defense}}, {{skills.literacy}}, {{skills.legerdemain}}.",
   "levelingBonuses": {
     "1": "gain +2 to {{attr.CHA}} and {{attr.NST}}, and proficiency in {{skills.medicine}} and {{skills.survival}}."
   },

@@ -4,8 +4,8 @@ h1 { font-family: "Almendra Display"; font-size: 36pt; text-align: center; color
 h2, h3, h4, h5 { font-family: "Aboreto"; }
 h2 { font-size: 16pt; font-weight: normal; text-align: center; color: #cb0; margin: 15px 0 15px 0; }
 h3 { font-size: 24pt; text-align: center; color: #CB0; margin: 10px 0 10px 0 }
-h4 { margin-bottom: 5px; margin-top: 20px; color: #AAA; font-size: 20pt; }
-h5 { margin-bottom: 5px; margin-top: 20px; color: #777; font-size: 14pt; }
+h4 { margin-bottom: 5px; margin-top: 20px; color: #CCC; font-size: 20pt; }
+h5 { margin-bottom: 5px; margin-top: 20px; color: #AAA; font-size: 14pt; }
 h4:after, h5:after {
     content:' ';
     display:block;

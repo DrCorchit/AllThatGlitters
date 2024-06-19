@@ -35,7 +35,7 @@
     "cost": 5,
     "weight": 1.2,
     "bc": 3,
-    "effects": ["Resists fire and cold damage."]
+    "effects": ["Resists fire and cold damage.", "Doubles weapon damage dice."]
   },
   {
     "name": "Mithril",
@@ -43,6 +43,6 @@
     "cost": 10,
     "weight": 0.5,
     "bc": 2,
-    "effects": ["Acid damage does not lower BC.", "Armor DC caps relaxed by 2"]
+    "effects": ["Acid damage does not lower BC.", "Armor DC caps relaxed by 2", "Adds the \"nimble\" property to weapons."]
   }
 ]

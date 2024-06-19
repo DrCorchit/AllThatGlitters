@@ -1,0 +1,125 @@
+[
+  {
+    "name": "Bleeding",
+    "effect": "Accumulates. The target takes damage at the end of its turn equal to its bleeding amount, then loses one level of bleeding.",
+    "causes": "Certain slashing or piercing attacks.",
+    "recovery": "Alleviated by resting, healing spells, or the \"help\" action.",
+    "notes": "Monsters not composed of living flesh are immune."
+  },
+  {
+    "name": "Blinded",
+    "effect": "The target cannot see, has disadvantage on attack rolls, and automatically fails any ability checks and saving throws based on sight.",
+    "causes": "Poison or intense light.",
+    "recovery": "{{items.antidote}}, or wait until vision returns naturally.",
+    "notes": "Characters that use echolocation or magical sight are immune to this condition."
+  },
+  {
+    "name": "Burning",
+    "effect": "Accumulates. Characters take 1d4 damage at the end of their turn, then lose one level of burning. If accumulated burning exceeds the target's {{attr.STR}} score at the start of their turn, they are incapacitated for that turn.",
+    "causes": "Fire and sometimes radiant damage.",
+    "recovery": "Alleviated by freezing, water, or the Fire Mitigation ability.",
+    "notes": "Enemies immune to burning damage are also immune to this condition."
+  },
+  {
+    "name": "Deafened",
+    "effect": "The target cannot hear, and automatically fails ability checks and saving throws based on hearing.",
+    "causes": "Poisons or loud sounds and explosions.",
+    "recovery": "Wait until hearing returns naturally.",
+    "notes": "If the target navigates via echolocation, it also has disadvantage on attack rolls."
+  },
+  {
+    "name": "Incapacitated",
+    "effect": "The target cannot take actions or reactions, and automatically fails ability checks and saving throws. DC is reduced to zero.",
+    "causes": "Falling unconscious.",
+    "recovery": "Wait until the condition passes.",
+    "notes": ""
+  },
+  {
+    "name": "Intoxicated",
+    "effect": "Accumulates. Reduces {{attr.DEX}} and {{attr.INT}} by 1 for every level. The target becomes incapacitated and falls unconscious for 1d4 hours when intoxication level exceeds {{attr.STR}} score.",
+    "causes": "Inflicted by alcohol and certain drugs or poisons.",
+    "recovery": "One level of intoxication is lost per hour.",
+    "notes": ""
+  },
+  {
+    "name": "Terrified",
+    "effect": "Terrified beyond rational measure, the target is compelled to take the move away from the source of its fear each turn before taking any other actions.",
+    "causes": "Fear spells, and the roar of a barbarian.",
+    "recovery": "Wait until the condition passes.",
+    "notes": ""
+  },
+  {
+    "name": "Dazed",
+    "effect": "The target cannot take reactions, and has disadvantage on all ability checks.",
+    "causes": "Blows to the head, poisoning, or confusion spells.",
+    "recovery": "Wait until the condition passes.",
+    "notes": ""
+  },
+  {
+    "name": "Freezing",
+    "effect": "Accumulates. The target's {{attr.DEX}} is reduced by 1 for each turn of accumulated freezing. Accumulated freezing decreases by 1 at the end of every turn.",
+    "causes": "Cold damage, and ",
+    "recovery": "Fire damage, or short rest.",
+    "notes": "Progresses to frozen when total freezing exceeds the target's {{attr.STR}} score."
+  },
+  {
+    "name": "Frozen",
+    "effect": "The target is encased in ice and incapacitated. The target becomes vulnerable to {{damage.force}} and {{damage.bludgeoning}}, but resistant to all other forms of damage.",
+    "causes": "Freezing buildup.",
+    "recovery": "Short rest.",
+    "notes": "End burning and pauses poisoned and bleeding status effects."
+  },
+  {
+    "name": "Petrified",
+    "effect": "The target is incapacitated and becomes vulnerable to {{damage.force}} and {{damage.bludgeoning}}, but immune to all other forms of damage.",
+    "causes": "Petrification spells, or gazing upon a Gorgon.",
+    "recovery": "Basilisk Oil",
+    "notes": "Extremely rare."
+  },
+  {
+    "name": "Poisoned",
+    "effect": "After a set amount of time, the poison takes hold. The exact effect depends on the type of poison.",
+    "causes": "Alchemical or biological toxins, or necromantic spells.",
+    "recovery": "Taking an {{items.antidote}} or a long rest.",
+    "notes": "Monsters not composed of living flesh are immune."
+  },
+  {
+    "name": "Prone",
+    "effect": "The target cannot move or take actions that require both hands. DC is reduced by half. Ranged attacks against prone creatures have disadvantage.",
+    "causes": "Force damage and various martial abilities.",
+    "recovery": "Use the move action to stand up.",
+    "notes": "Standing from the prone position costs one half of remaining movement points."
+  },
+  {
+    "name": "Madness",
+    "effect": "Temporarily insane, the target no longer speaks or thinks coherently. Their {{attr.INT}} and {{attr.CHA}} scores are reduced by half, and their speech comes out as incoherent babbling. The target must also make a DT 15 {{attr.NST}} saving throw or else immediately attack the nearest creature."
+  },
+  {
+    "name": "Ensnared",
+    "effect": "Restrained by some trap, the target cannot move and their DC is reduced by half. They also have disadvantage when making melee and ranged attacks.",
+    "causes": "Ropes, nets, spiderwebs, or entangling vines or tentacles.",
+    "recovery": "Receiving help from an ally or taking {{damage.slashing}} or {{damage.heat}} damage.",
+    "notes": "Vines and webbing can typically be rent by passing a DT 14 {{attr.STR}} saving throw, ending the effect."
+  },
+  {
+    "name": "Levitated",
+    "effect": "The target is levitating, unable to plant their feet firmly on the ground. The target cannot take the move action or make melee attacks.",
+    "causes": "Magical spells.",
+    "recovery": "Wait until the condition passes.",
+    "notes": ""
+  },
+  {
+    "name": "Invisibility",
+    "effect": "The target cannot be seen or detected via light sources, including magical light sources. The target has advantage when attempting to hide or make melee attacks. Enemies attempting to make melee or ranged attacks against the target have disadvantage.",
+    "causes": "Magical spells or alchemical potions.",
+    "recovery": "Wait until the condition passes.",
+    "notes": ""
+  },
+  {
+    "name": "Ephemeral Invisibility",
+    "effect": "A fragile form of invisibility that dispels at anything more than a slight touch. When interacting with objects (such a handling a bow or opening a door), the target must make a DT 16 {{attr.DEX}} saving throw or lose invisibility. The target also loses invisibility after making a melee attack, being attacked, or touching a living being. The target otherwise gains all the benefits of true invisibility.",
+    "causes": "Magical spells.",
+    "recover": "Wait until the condition passes.",
+    "notes": ""
+  }
+]

@@ -4,7 +4,7 @@ import net.allthatglitters.server.appendices.armor.Armor
 import net.allthatglitters.server.appendices.weapons.Weapon
 import net.allthatglitters.server.chapters.classes.CombatClass
 import net.allthatglitters.server.chapters.classes.Race
-import net.allthatglitters.server.concepts.Ability
+import net.allthatglitters.server.concepts.Trainable
 
 class Character(
 	val race: Race,
@@ -19,7 +19,7 @@ class Character(
 	val inventory: Inventory,
 	val attrs: Map<Attribute, Int>,
 	val skills: Map<Skill, Proficiency>,
-	val abilities: List<Ability>
+	val abilities: List<Trainable>
 ) {
 
 	val maxHP get() = attrs[Attribute.STR]!! * (level + 1) / 2

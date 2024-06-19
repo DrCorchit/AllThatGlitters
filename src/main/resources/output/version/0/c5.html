@@ -25,7 +25,7 @@
   </div>
   <hr>
   <p>Combat is pure chaos. It's nothing like the movies; you won't find any choreographed fencing with somersaults and pirouettes, dramatic music, or witty banter. Real combat is full of noise and blood and grime, broken bones, and the screams of the dying—or the eerie silence of the dead. Be that as it may, mortal combat is actually the most advanced form problem-solving on a great many worlds. So you'd better get good at it.</p>
-  <p>In order to make sense out of chaos, the battlefield is represented with a grid and time is divided into <i>turns</i> and <i> rounds</i>. Each grid square represents a 5-by-5 foot square of terrain, while a turn of combat captures a single fighter doing their best to kill and not be killed for a single 5-second snapshot of time. Finally, a round is completed when all combatants have completed their turn. Once combat has started, it continues through as many rounds as it needs to until only one faction remains, and all others have either surrendered, fled, or been slain. Then it ends, as quickly as it began.</p>
+  <p>In order to make sense out of chaos, the battlefield is represented with a grid and time is divided into <i>turns</i> and <i> rounds</i>. Each grid square represents a 6-by-6 foot square of terrain, while a turn of combat captures a single fighter doing their best to kill and not be killed for a single 6-second snapshot of time. Finally, a round is completed when all combatants have completed their turn. Once combat has started, it continues through as many rounds as it needs to until only one faction remains, and all others have either surrendered, fled, or been slain. Then it ends, as quickly as it began.</p>
   <ol>
    <li><a href="c5.html#battlefield">The Battlefield</a></li>
    <li><a href="c5.html#beginning">Beginning Combat</a></li>
@@ -49,9 +49,9 @@
   <p>When playing without a battlemap, the DM verbally describes the layout of the battlefield, including the positioning of any hazards or attackers the characters can see. Players respond by describing their intended actions, or asking questions about what moves are or are not available. Combat proceeds in a similar way as when there is a battlemap, although complex positioning and tactics are not practically viable.</p>
   <h4><a id="beginning"></a>Beginning Combat</h4>
   <h5>Initiative</h5>
-  <p>Combat begins with a skill check, as both players and npc combatants roll for initiative. Initiative determines move order, with higher scores moving first. In <i>All That Glitters</i>, rolling for initiative is an ordinary event roll, and all other rules such as proficiency bonuses apply. When a monster and a player roll the same initiative, players move first. Two players rolling the same initiative may either reach an agreement about who moves first or roll a d20 to decide, while monsters rolling the same initiative move in whatever order the DM decides.</p>
+  <p>Combat begins with a skill check, as both players and npc combatants roll for initiative. This determines move order, with higher scores moving first. In <i>All That Glitters</i>, rolling for initiative is an ordinary event roll, and all other rules such as proficiency bonuses apply. When a monster and a player roll the same initiative, players move first. Two players rolling the same initiative may either reach an agreement about who moves first or roll a d20 to decide, while monsters rolling the same initiative move in whatever order the storyteller decides.</p>
   <h5>Recognition</h5>
-  <p>Optionally, the DM may decide to allow players to roll for recognition to see the stats of the monsters they are about to fight. This normally includes their HP, AP, attributes, mitigation, and some of their abilities. This check depends on the survival skill and its DT is determined by the rarity of the monsters in question:</p>
+  <p>Optionally, the DM may decide to ask players to roll for recognition to see the stats of the monsters they are about to fight. This normally includes their HP, AP, attributes, mitigation, and some of their spells, attacks, or abilities. This check depends on the survival skill and its DT is determined by the rarity of the monsters in question:</p>
   <table>
    <tbody>
     <tr>
@@ -61,7 +61,7 @@
     </tr>
     <tr>
      <td>Common</td>
-     <td>The monster's physicalities are thoroughly documented in literature, and its attacks are an (at least) annual occurance.</td>
+     <td>The monster's physicalities are thoroughly documented in literature, and it is encountered by humans somewhat frequently.</td>
      <td>18</td>
     </tr>
     <tr>
@@ -74,9 +74,14 @@
      <td>The monster has not been sighted in perhaps a century or more. Many doubt that it still exists, or ever existed.</td>
      <td>30</td>
     </tr>
+    <tr>
+     <td>Exotic</td>
+     <td>No human has ever seen the monster and lived to tell the tale.</td>
+     <td>Impossible</td>
+    </tr>
    </tbody>
   </table>
-  <p>The recognition roll is normally made with disadvantage if the area is obscured by heavy fog or darkness. Conversely, players may roll with advantage if attempting to discern monsters that emit distinctive noises or smells. If successful, the players gain knowledge of the monster's HP, attacks, and mitigation stat, and any other information the DM chooses to reveal. If there are several monsters attacking together, the roll should be done in one go rather than rolling recognition separately for each unique type of monster in the encounter.</p>
+  <p>The recognition roll is normally made with disadvantage if the area is obscured by heavy fog or darkness. Conversely, players may roll with advantage if attempting to discern monsters that emit distinctive noises or smells. If successful, the players gain knowledge of the monster's HP, attacks, and mitigation stat, and any other information the <span data-tooltip="TODO">Storyteller</span> chooses to reveal. If there are several monsters attacking together, the roll should be done in one go rather than rolling recognition separately for each unique type of monster in the encounter.</p>
   <p style="margin-left: 25px;">Note: Sometimes, players may have a chance to view their enemies from a distance before they are recognized. In this case, they may roll for recognition before combat begins, possibly with advantage.</p>
   <h5>Surprise</h5>
   <p>During an ambush or surprise attack, sometimes the defenders are so completely discombobulated that they are unable to react decisively. This condition is called <i>surprise</i> and has the following effects:</p>
@@ -219,38 +224,71 @@
   <p>The modern rules offer an alternative system where unconscious players do not need to make saving throws to stay alive. However, they also do not regain consciousness after being healed by healing magic. Instead, they regain consciousness 1d4 hours after combat is over.</p>
   <p>In gameplay strategy, modern rules prioritize keeping the characters conscious, making single-target healing spells quite valuable. Permadeath rules favor mass healing spells that resurrect the character whenever they fall. You should think carefully about which system works best for you.</p>
   <h4><a id="damage_types"></a>Damage Types</h4>
-  <p>Smashing, slashing, poisoning, burning… There are quite a few ways to do someone in. Here's a list of damage types and their unique effects:</p>
-  <h5>Common Damage Types:</h5>
+  <p>Smashing, slashing, poisoning, burning… There are quite a few ways to do someone in. When damage is dealt by an attack or spell, it always comes with a damage type that modifies the original effect. Here's a list of damage types and their unique effects:</p>
   <ul>
-   <li><b>Slashing</b>: Liable to cause bleeding.</li>
-   <li><b>Bludgeoning</b>: +3 to hit versus plate armors.</li>
-   <li><b>Piercing</b>: +3 to hit versus mail armors.</li>
-   <li><b>Fire</b>: Liable to cause burning.</li>
-   <li><b>Poisoning</b>: Deals additional effects, depending on the type of poison.</li>
-   <li><b>Force</b>: Dealt from explosions. Liable to knock the target prone.</li>
-  </ul>
-  <h5>Rare Damage Types:</h5>
-  <ul>
-   <li><b>Ice</b>: Liable to cause freezing.</li>
-   <li><b>Lightning</b>: Voids BC from metal armor.</li>
-   <li><b>Corrosive</b>: Causes armor damage which must later be repaired at a smithy.</li>
-   <li><b>Holy</b>: An extraordinarily bright light causes extra damage to undead and evil aligned creatures.</li>
-   <li><b>Profane</b>: A sickening miasma of spiritual darkness causes extra damage to good-aligned creatures.</li>
+   <li><span style="font-size: 12pt; color: #CFF"><b>Slashing</b></span><br>
+    Difficult to dodge. The target's dodge is reduced by 3 until the start of their next turn.<br>
+    Inflicted by bladed weapons such as swords and axes, or the claws of wild animals.</li>
+   <li><span style="font-size: 12pt; color: #FFF"><b>Piercing</b></span><br>
+    Difficult to block. The attack ignores ignores 25% of the target's block.<br>
+    Inflicted by arrows, spears, and swords, or the fangs of monsters.</li>
+   <li><span style="font-size: 12pt; color: #888"><b>Bludgeoning</b></span><br>
+    Cannot be fully blocked by armor. When an attack which deals bludgeoning damage is blocked, the target still takes two damage.<br>
+    Inflicted by hammers, hooves or fists, and falling damage.</li>
+   <li><span style="font-size: 12pt; color: #F80"><b>Heat</b></span><br>
+    Sets the target on fire. The target gains one level of burning.<br>
+    Inflicted by burning creatures, pyromantic magic, or the breath of dragons.</li>
+   <li><span style="font-size: 12pt; color: #4BF"><b>Cold</b></span><br>
+    Chills the opponent. The target gains one level of freezing.<br>
+    Inflicted by frost spells or environmental hazards such as blizzards or icy water.</li>
+   <li><span style="font-size: 12pt; color: #D00"><b>Force</b></span><br>
+    Liable to knock the target prone.<br>
+    Inflicted by explosions, and certain spells</li>
+   <li><span style="font-size: 12pt; color: #4D0"><b>Poison</b></span><br>
+    Carries with it additional effects dependant on the type of poison.<br>
+    Inflicted by poisoned blades, the claws and fangs of venomous beasts, and certain spells.</li>
+   <li><span style="font-size: 12pt; color: #FF4"><b>Lightning</b></span><br>
+    Cannot be dodged, but deals half damage versus opponents wearing metal armor.<br>
+    Inflicted by lightning or storm spells</li>
+   <li><span style="font-size: 12pt; color: #AF0"><b>Acid</b></span><br>
+    Decreases the efficacy of armor when blocked with armor or shields.<br>
+    Inflicted by bile, acidic venom, and certain alchemical mixtures.</li>
+   <li><span style="font-size: 12pt; color: #FFA"><b>Holy</b></span><br>
+    An extraordinarily bright light of divine origin. Deals double damage to evil and the undead, but only half to good.<br>
+    Inflicted by radiant lights, solar astrology, and theurgical summons.</li>
+   <li><span style="font-size: 12pt; color: #92F"><b>Profane</b></span><br>
+    A sickening miasma of spiritual darkness. Deals double damage to good-aligned creatures, but only half to evil.<br>
+    Inflicted by lunar astrology, necromantic spells, and demonic summons.</li>
   </ul>
   <p>A few notes on damage types:</p>
   <ul>
-   <li>Slashing, fire, and ice damage deal one level of their respective status effects per hit.</li>
    <li>When a character takes force damage exceeding their strength score, they must make a strength saving throw with DT equal to the force damage dealt or be knocked prone.</li>
+   <li>Metal armor protects the wearer from lightning damage by acting as a <a href="https://www.youtube.com/watch?v=eNxDgd3D_bU">faraday cage</a>.</li>
    <li>Successful attacks with acid decrease the target's BC by 1, until zero. The armor can be repaired at a blacksmith for 20 gold per BC lost.</li>
    <li>Good-aligned characters possess resistance to holy damage, and vulnerability to profane damage. Conversely, evil-aligned characters and the undead possess resistance to profane damage and vulnerability to holy damage.</li>
   </ul>
   <h5>Vulnerability, Resistance, and Immunity</h5>
-  <p>Vulnerability, resistance, and immunity affect the damage from specific damage types, as follows:</p>
-  <ul>
-   <li><b>Vulnerability</b>: Damage is doubled.</li>
-   <li><b>Resistance</b>: Damage is halved.</li>
-   <li><b>Immunity</b>: Damage is voided.</li>
-  </ul>
+  <p>Besides their inherent effects, damage types may deal differing amounts of damage to creatures depending on their vulnerabilities. Every creature has one of four levels of vulnerability to each damage type, modifying incoming damage of that type as follows:</p>
+  <table>
+   <tbody>
+    <tr>
+     <td>Vulnerable</td>
+     <td>Damage is doubled</td>
+    </tr>
+    <tr>
+     <td>Normal</td>
+     <td>No effect</td>
+    </tr>
+    <tr>
+     <td>Resistant</td>
+     <td>Damage is haled</td>
+    </tr>
+    <tr>
+     <td>Immune</td>
+     <td>Damage is voided</td>
+    </tr>
+   </tbody>
+  </table>
   <h4><a id="status_effects"></a>Status Effects</h4>
   <p>Sometimes characters fall prey to certain temporary conditions that reduce their effectiveness in combat. These conditions are called status effects and begin and end under certain conditions. Also, some status effects can accumulate, meaning they can be inflicted multiple times on the same character.</p>
   <table>
@@ -258,90 +296,109 @@
     <tr>
      <th>Name</th>
      <th>Effect</th>
-     <th>Typical Causes</th>
+     <th>Causes</th>
      <th>Recovery Strategy</th>
      <th>Notes</th>
     </tr>
     <tr>
      <td>Bleeding</td>
-     <td>Accumulates. Each turn, the target takes damage equal to the number of turns of bleeding remaining, and then lowers their bleeding level by 1.</td>
-     <td>Inflicted by slashing damage.</td>
-     <td>Alleviated by a short rest, or when an ally takes the "help" action and passes a medicine check.</td>
-     <td>Enemies not composed of flesh are immune.</td>
+     <td>Accumulates. The target takes damage at the end of its turn equal to its bleeding amount, then loses one level of bleeding.</td>
+     <td>Certain slashing or piercing attacks.</td>
+     <td>Alleviated by resting, healing spells, or the "help" action.</td>
+     <td>Monsters not composed of living flesh are immune.</td>
     </tr>
     <tr>
      <td>Blinded</td>
      <td>The target cannot see, has disadvantage on attack rolls, and automatically fails any ability checks and saving throws based on sight.</td>
      <td>Poison or intense light.</td>
-     <td>Antidote, or wait until vision returns naturally.</td>
-     <td>Some characters that use echolocation or magical sight are immune to this condition.</td>
+     <td><span data-tooltip="Cures poisoning. If taken as a preventative, prevents poisoning for one hour."><u>antidote</u></span>, or wait until vision returns naturally.</td>
+     <td>Characters that use echolocation or magical sight are immune to this condition.</td>
     </tr>
     <tr>
      <td>Burning</td>
-     <td>The target takes 1d4 fire damage each turn. If accumulated <i>burning</i> exceeds the target's WILL score at the start of the target's turn, they are incapacitated by pain for that turn.</td>
-     <td>Fire and radiant damage.</td>
-     <td>Alleviated by water and the <i>Fire Mitigation Technique</i> ability.</td>
-     <td></td>
+     <td>Accumulates. Characters take 1d4 damage at the end of their turn, then lose one level of burning. If accumulated burning exceeds the target's Strength score at the start of their turn, they are incapacitated for that turn.</td>
+     <td>Fire and sometimes radiant damage.</td>
+     <td>Alleviated by freezing, water, or the Fire Mitigation ability.</td>
+     <td>Enemies immune to {{damage.heat}} damage are also immune to this condition.</td>
     </tr>
     <tr>
      <td>Deafened</td>
      <td>The target cannot hear, and automatically fails ability checks and saving throws based on hearing.</td>
-     <td>Loud sounds and explosions.</td>
+     <td>Poisons or loud sounds and explosions.</td>
      <td>Wait until hearing returns naturally.</td>
-     <td>If the target navigates via echolocation, it has disability on attack rolls.</td>
+     <td>If the target navigates via echolocation, it also has disadvantage on attack rolls.</td>
     </tr>
     <tr>
      <td>Incapacitated</td>
-     <td>The target cannot move or take actions, and automatically fails ability checks and saving throws. DC is reduced to zero.</td>
-     <td>A variety of causes.</td>
-     <td>Wait a set number of turns, or a set number of hours (usually 1d4).</td>
-     <td>Several status effects inflict this condition.</td>
+     <td>The target cannot take actions or reactions, and automatically fails ability checks and saving throws. DC is reduced to zero.</td>
+     <td>Falling unconscious.</td>
+     <td>Wait until the condition passes.</td>
+     <td></td>
     </tr>
     <tr>
      <td>Intoxicated</td>
-     <td>Accumulates. Reduces DEX and INT by 1 for every level. The target becomes incapacitated and falls unconscious for 1d4 hours when intoxication level exceeds strength score.</td>
+     <td>Accumulates. Reduces Dexterity and Intelligence by 1 for every level. The target becomes incapacitated and falls unconscious for 1d4 hours when intoxication level exceeds Strength score.</td>
      <td>Inflicted by alcohol and certain drugs or poisons.</td>
      <td>One level of intoxication is lost per hour.</td>
      <td></td>
     </tr>
     <tr>
+     <td>Terrified</td>
+     <td>Terrified beyond rational measure, the target is compelled to take the move away from the source of its fear each turn before taking any other actions.</td>
+     <td>Fear spells, and the roar of a barbarian.</td>
+     <td>Wait until the condition passes.</td>
+     <td></td>
+    </tr>
+    <tr>
+     <td>Dazed</td>
+     <td>The target cannot take reactions, and has disadvantage on all ability checks.</td>
+     <td>Blows to the head, poisoning, or confusion spells.</td>
+     <td>Wait until the condition passes.</td>
+     <td></td>
+    </tr>
+    <tr>
      <td>Freezing</td>
-     <td>Accumulates. The target's DEX is reduced by 1 for each turn of accumulated freezing. Freezing decreases by 1 at the end of every turn, or when cancelled out by fire damage.</td>
-     <td>Ice damage and spells.</td>
+     <td>Accumulates. The target's Dexterity is reduced by 1 for each turn of accumulated freezing. Accumulated freezing decreases by 1 at the end of every turn.</td>
+     <td>Cold damage, and</td>
      <td>Fire damage, or short rest.</td>
-     <td>Progresses to <i>frozen</i> when total freezing exceeds the target's STR score.</td>
+     <td>Progresses to frozen when total freezing exceeds the target's Strength score.</td>
     </tr>
     <tr>
      <td>Frozen</td>
-     <td>The target is encased in ice and incapacitated. They vulnerable to force and bludgeoning, but resistant to all other forms of damage.</td>
+     <td>The target is encased in ice and incapacitated. The target becomes vulnerable to <span style="color:#D00">Force</span> and <span style="color:#888">Bludgeoning</span>, but resistant to all other forms of damage.</td>
      <td>Freezing buildup.</td>
      <td>Short rest.</td>
-     <td>Ends <i>burning</i> and pauses <i>poisoned</i> and <i>bleeding</i> status effects.</td>
+     <td>End burning and pauses poisoned and bleeding status effects.</td>
     </tr>
     <tr>
      <td>Petrified</td>
-     <td>The target is encased in stone, incapacitated.</td>
-     <td>Petrification spells</td>
-     <td>Basilisk Oil.</td>
+     <td>The target is incapacitated and becomes vulnerable to <span style="color:#D00">Force</span> and <span style="color:#888">Bludgeoning</span>, but immune to all other forms of damage.</td>
+     <td>Petrification spells, or gazing upon a Gorgon.</td>
+     <td>Basilisk Oil</td>
      <td>Extremely rare.</td>
     </tr>
     <tr>
      <td>Poisoned</td>
-     <td>After a set number of turns, the poison takes effect. The effect depends on the specific spell</td>
-     <td>Poisons and certain spells.</td>
-     <td>Alleviated by long resting or the antidote consumable.</td>
-     <td></td>
+     <td>After a set amount of time, the poison takes hold. The exact effect depends on the type of poison.</td>
+     <td>Alchemical or biological toxins, or necromantic spells.</td>
+     <td>Taking an <span data-tooltip="Cures poisoning. If taken as a preventative, prevents poisoning for one hour."><u>antidote</u></span> or a long rest.</td>
+     <td>Monsters not composed of living flesh are immune.</td>
     </tr>
     <tr>
      <td>Prone</td>
-     <td>The target cannot move and DC is halved, but ranged attacks have disadvantage.</td>
-     <td>Force damage and various abilities.</td>
-     <td>Use a main hand or offhand action to stand up.</td>
-     <td></td>
+     <td>The target cannot move or take actions that require both hands. DC is reduced by half. Ranged attacks against prone creatures have disadvantage.</td>
+     <td>Force damage and various martial abilities.</td>
+     <td>Use the move action to stand up.</td>
+     <td>Standing from the prone position costs one half of remaining movement points.</td>
     </tr>
    </tbody>
   </table>
-  <p style="margin-left: 25px;">Note: the freezing and burning status effects are mutually exclusive. One turn of freezing cancels out one turn of burning, and vice versa.</p>
+  <p>Notes:</p>
+  <ul>
+   <li>1 point of healing cancels out 1 point of bleeding.</li>
+   <li>When using the help action to treat bleeding, the character providing assistance must pass a <span data-tooltip="Measures knowledge of disease and wound treatment."><u>Medicine</u></span> check (DT equal to twice the bleeding amount). On a success, bleeding is reduced by half.</li>
+   <li>Freezing and burning status effects are mutually exclusive. One turn of freezing cancels out one turn of burning, and vice versa.</li>
+  </ul>
   <hr>
   <div class="row" style="justify-content:space-evenly; margin: 0">
    <div class="column-shrink">

@@ -1,0 +1,179 @@
+[
+  {
+    "name": "Come Hither",
+    "effect": "The player learns to use the grappling hook in combat. Using an action, the player may throw the grappling hook at a target within 20 feet. Upon a successful {{skills.accuracy}} check against the target’s mitigation, the target is pulled 15 feet towards the player.",
+    "cost": {
+      "gold": 30,
+      "slots": 4
+    },
+    "reqs": [
+      "14 DEX",
+      "Vertical Escape mastery"
+    ]
+  },
+  {
+    "name": "Defender",
+    "effect": "The maximum DC penalty for wearing heavy armor is decreased by 2. The player no longer has disadvantage to mobility while wearing plate armor.",
+    "cost": {
+      "slots": 6
+    },
+    "reqs": [
+      "Defense Expertise"
+    ]
+  },
+  {
+    "name": "Parry",
+    "effect": "The player may attempt to parry melee attacks using a reaction. When parrying, mitigation is increased by the parry amount of the weapon. Parrying an attack costs a reaction, regardless of whether the attack is successful.",
+    "cost": {
+      "gold": 30,
+      "slots": 2
+    },
+    "reqs": [
+      "{{skills.martial_arts}} Proficiency"
+    ]
+  },
+  {
+    "name": "Riposte",
+    "effect": "The player may expend 2 willpower to follow up a successful parry with a counterattack. The attack roll must use dexterity as the base stat.",
+    "cost": {
+      "gold": 50,
+      "slots": 4
+    },
+    "reqs": [
+      "Parry Mastery",
+      "{{skills.Martial Arts}} Expertise"
+    ]
+  },
+  {
+    "name": "Feint Attack",
+    "effect": "The player chooses a target and feigns an attack against it. The target's DC is reduced by 1d8 until the start of its next turn. If the target succeeds a dexterity saving throw equal to the attacker's dexterity score, their DC is only reduced by 1d4.",
+    "cost": {
+      "slots": 4
+    },
+    "reqs": [
+      "{{skills.martial_arts}} Expertise"
+    ]
+  },
+  {
+    "name": "Hook Sword Disarm",
+    "effect": "The player expends 1 willpower to make a special strike with the hook sword. The target must succeed a strength saving throw equal to the attacker's strength score or else their weapon is wrenched from their grasp.",
+    "cost": {
+      "gold": "30",
+      "slots": "4"
+    },
+    "reqs": [
+      "Martial Arts Expertise"
+    ]
+  },
+  {
+    "name": "Hook Sword Link Strike",
+    "effect": "If the player is dual wielding hook swords, they may expend 2 willpower to make a two-handed attack. The damage die for the attack is increased to 1d10 and the attack range is increased to 10 feet.",
+    "cost": {
+      "gold": "30",
+      "slots": "4"
+    },
+    "reqs": [
+      "Hook Sword Disarm Mastery",
+      "Martial Arts Mastery"
+    ]
+  },
+  {
+    "name": "Flailing Strike",
+    "effect": "When making a weapon attack with a flail, the player may expend 1 willpower to ignore the bonus block chance provided by a shield. If the shield is actively blocking, its block chance is reduced by half instead.",
+    "cost": {
+      "gold": "30",
+      "slots": "4"
+    },
+    "reqs": [
+      "{{skills.martial_arts}} Proficiency"
+    ]
+  },
+  {
+    "name": "Cleaving Strike",
+    "effect": "Before making a slashing weapon attack, the player may spend 3 willpower to extend the weapon attack to an additional creature. The attacker makes separate attack rolls for both creatures; if both rolls are successful, the second attack does half damage. Both creatures must be within melee range.",
+    "cost": {
+      "slots": 3,
+      "str": 14
+    }
+  },
+  {
+    "name": "Polearm Haft Strike",
+    "effect": "The player may expend an action to follow up a polearm attack with a haft strike. The player makes a normal melee attack roll. haft strike deals 1d4 damage, and does not reduce dodge chance.",
+    "cost": {
+      "gold": 30,
+      "slots": 2
+    },
+    "reqs": [
+      "Lancer mastery"
+    ]
+  },
+  {
+    "name": "Shield Bash",
+    "effect": "The player strikes directly with their shield. On a successful hit, the player deals 1d4 bludgeoning damage.",
+    "cost": {
+      "gold": "30",
+      "slots": "4"
+    },
+    "reqs": [
+      ""
+    ]
+  },
+  {
+    "name": "Shield Charge",
+    "effect": "The player uses both hands to ",
+    "cost": {
+      "gold": "30",
+      "slots": "4"
+    },
+    "reqs": [
+      "Shield Bash"
+    ]
+  },
+  {
+    "name": "Estoc Master",
+    "effect": "The player learns the proper use of the estoc, a martial thrusting sword. When attacking with the estoc, opponents wearing chain mail gain half BC from their armor.",
+    "cost": {
+      "gold": "30",
+      "slots": "3"
+    },
+    "reqs": [
+      "At least one estoc sword in inventory",
+      "Martial Arts Proficiency"
+    ]
+  },
+  {
+    "name": "Mordhau",
+    "effect": "The player learns the proper use of the mordhau technique, and can deal bludgeoning damage with mordhau weapons.",
+    "cost": {
+      "gold": "30",
+      "slots": "4"
+    },
+    "reqs": [
+      "At least one sword in inventory with the mordhau property.",
+      "Martial Arts Expertise"
+    ]
+  },
+  {
+    "name": "Lancer",
+    "effect": "The player can use speed as the primary stat when attacking with polearms, and has advantage when making polearm attacks while mounted.",
+    "cost": {
+      "gold": 30,
+      "slots": 3
+    },
+    "reqs": [
+      "{{skills.martial_arts}} Proficiency"
+    ]
+  },
+  {
+    "name": "Keshik",
+    "effect": "The player learns to manipulate and aim a bow and arrow from horseback. Range attacks while mounted no longer have disadvantage.",
+    "cost": {
+      "gold": 30,
+      "slots": 3
+    },
+    "reqs": [
+      "Lancer mastery",
+      "{{skills.accuracy}} Mastery"
+    ]
+  }
+]

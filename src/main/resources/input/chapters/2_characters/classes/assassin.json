@@ -14,12 +14,13 @@
   "coreAbilityDescription": "You may expend 2 willpower to mark a target for assassination. On the next turn, the first attack that results in a critical hit becomes an assassination and deals an additional 15 damage.",
   "limitations": "Due to their extremely specialized skillset, assassins have a deficiency in two of the following three skills: {{skills.nature}}, {{skills.defense}}, or {{skills.survival}}.",
   "levelingBonuses": {
-    "1": "gain +1 to {{attr.STR}} and {{attr.DEX}}, and proficiency in {{skills.martial_arts}} and {{skills.accuracy}}."
+    "1": "gain proficiency in two out of these three skills: {{skills.martial_arts}}, {{skills.initiative}}, and {{skills.accuracy}}.",
+    "2": "when you initiate combat with an attack, gain advantage on the {{skills.initiative}} roll. You begin combat with an extra action."
   },
   "startingEquipment": {
     "_": [
       "A set of {{armor.leather_armor}}.",
-      "Any two {{weapons.modifiers.nimble}} weapons",
+      "Any two {{weapon_modifiers.nimble}} weapons",
       "A {{weapons.buckler}}"
     ],
     "Concealed on their person:": [

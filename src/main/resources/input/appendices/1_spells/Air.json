@@ -1,5 +1,44 @@
 [
   {
+    "name": "Electrocute",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "evocation",
+    "target": {
+      "touch": "enemy"
+    },
+    "effect": "Roll for {{attr.DEX}} against an opponent's DC. On a success, deal 1d8 {{damage.lightning}} damage.",
+    "training_reqs": {
+      "level": 1,
+      "int": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "time": "1 Action",
+      "wp": 1
+    }
+  },
+  {
+    "name": "Thunderbolt",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "evocation",
+    "target": {
+      "type": "enemy",
+      "range": 50
+    },
+    "effect": "A bolt of lightning from the heavens strikes a single enemy, dealing 1d10 damage.",
+    "training_reqs": {
+      "level": 1,
+      "int": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "time": "1 Action",
+      "wp": 1
+    }
+  },
+  {
     "name": "Chain Lightning",
     "rarity": "Academic",
     "discipline": "Air",
@@ -9,7 +48,7 @@
       "range": 30
     },
     "duration": 10,
-    "effect": "A bolt of blue lightning leaps from your outstretched hand to a an enemy within range, and then to an additional enemy within 10 feet, if there is one. All targets take 1d8 lightning damage.",
+    "effect": "A bolt of blue lightning leaps from your outstretched hand to a an enemy within range, and then to an additional enemy within 10 feet, if available. All targets take 1d8 lightning damage.",
     "training_reqs": {
       "int": 15,
       "cha": 15,

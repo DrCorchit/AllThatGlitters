@@ -5,6 +5,7 @@ import com.google.gson.JsonObject
 import net.allthatglitters.server.concepts.NumDice
 import net.allthatglitters.server.appendices.items.Item
 import net.allthatglitters.server.chapters.sheet.Attribute
+import net.allthatglitters.server.util.HasProperties
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.Renderable
 import net.allthatglitters.server.util.underline
@@ -40,7 +41,7 @@ class Weapon(
 		return output.render()
 	}
 
-	companion object {
+	companion object : HasProperties {
 		fun deserialize(obj: JsonObject): Weapon {
 			val name = obj.get("name").asString
 			val description = obj.get("description").asString
@@ -70,6 +71,10 @@ class Weapon(
 				ImmutableSet.copyOf(modifiers.filterNot { it is Damage.Type }),
 				requirements
 			)
+		}
+
+		override fun getProperty(property: String): Any {
+			return AppendixWeapons.lookupWeapon(property)
 		}
 	}
 

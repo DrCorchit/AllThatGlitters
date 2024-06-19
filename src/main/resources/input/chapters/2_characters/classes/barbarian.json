@@ -9,23 +9,20 @@
   ],
   "alignment": "Chaotic",
   "coreAbilityName": "Rage",
-  "coreAbilityDescription": "You may spend 5 ability points to enter a rage for 5 combat turns. During a rage, you deal 3 extra damage per weapon attack. If you are not wearing armor, you take 3 less damage from bludgeoning, slashing, piercing, and fire damage. You may not cast spells, read scrolls, or use consumables without ending your rage.",
-  "limitations": "Due to their careless approach and lack of formal education, barbarians start with a deficiency in two of the following three skills: {{skills.defense}}, {{skills.literacy}}, {{skills.stealth}}.",
+  "coreAbilityDescription": "You may spend 3 willpower to enter a rage for 5 combat turns. During a rage, your strength is increased by 3. If you are not wearing armor, you also gain 3 resistance to bludgeoning, slashing, piercing, and fire damage. You may not cast spells, read scrolls, or use consumables without ending your rage. Note: when an ability increases your rage level, it increases your strength and resistance by the indicated amount and also resets the rage duration to 5 turns.",
+  "limitations": "Due to their careless approach and lack of formal education, barbarians start with a deficiency in two of the following three skills: {{skills.sorcery}}, {{skills.literacy}}, {{skills.stealth}}.",
   "levelingBonuses": {
-    "1": [
-      "+3 to {{attr.STR}}",
-      "+1 to {{attr.DEX}} and {{attr.SPD}}.",
-      "+1 to {{attr.INT}}, {{attr.NST}} or {{attr.CHA}}"
-    ],
-    "3": [
-      "+2 to {{attr.STR}} and +1 to {{attr.DEX}}, and {{attr.SPD}}.",
-      "Gain proficiency in {{skills.initiative}}, {{skills.mobility}}, or {{skills.survival}}."
-    ],
-    "5": "gain +1 to {{attr.STR}}, {{attr.DEX}}, and {{attr.SPD}}. Skill in martial arts advances to expertise.",
-    "7": "gain +1 to {{attr.STR}} and {{attr.DEX}} or {{attr.SPD}}. Your secondary skill learned at level 3 advances to expertise.",
-    "11": "gain +1 to {{attr.STR}} and {{attr.DEX}} or {{attr.SPD}}. Skill in martial arts advances to mastery.",
-    "13": "gain +1 to {{attr.STR}}. Skill in ",
-    "15": "gain +1 to {{attr.STR}}."
+    "1": "Gain proficiency in two of these skills: {{skills.initiative}}, {{skills.mobility}}, or {{skills.survival}}.",
+    "2": "you develop a terrifying primal roar. As an action, you can spend 1 willpower to roar, potentially terrifying nearby enemies. Each enemy must pass an {{attr.NST}} saving throw or become {{status.terrified}}. The DT of the saving throw is equal to your {{attr.NST}} attribute score.",
+    "3": "Learn the {{maneuvers.cleaving_strike}} combat ability. You can use the cleaving strike ability even when dealing bludgeoning damage.",
+    "4": "your rage deepens. When you get a kill during a rage, you can expend 1 willpower to increase your rage level by 1.",
+    "5": "your proficiency in martial arts advances to expertise.",
+    "6": "magic is stupid, but you can make it go away by yelling at it. Enemies which fail their saving throw against your roar may not cast spells on their next turn, and lose concentration on any spells they have already cast.",
+    "7": "increase your proficiency level in one of these skills: initiative, mobility, or survival.",
+    "8": "your rage sustains you in your darkest hour. Once per turn, when you take damage while below half hp, your rage level increases by 1.",
+    "11": "Your skill in martial arts advances to mastery.",
+    "14": "increase your proficiency level in two of these skills: initiative, mobility, or survival.",
+    "15": "gain the ability to enter a blackout rage. Entering a blackout rage costs 10 willpower, and immediately increases your rage level to 10 (instead of 3). After your first blackout rage, you either gain a permanent rage level of 1, or you reconsider your life choices and become a monk. As a monk, you keep your barbarian starting gear and proficiencies, but lose your barbarian rage ability and class abilities."
   },
   "startingEquipment": {
     "_": ["A set of {{armor.quilted_armor}}"],
@@ -33,7 +30,7 @@
       "A {{weapons.longsword}}",
       "A {{weapons.greataxe}}",
       "A {{weapons.maul}}",
-      "Two standard weapons with the {{weapons.modifiers.light}} property."
+      "Two standard weapons with the {{weapon_modifiers.light}} property."
     ],
     "Any two of the following small weapons:": [
       "A {{weapons.cleaver}}",

@@ -76,7 +76,7 @@ sealed class Target {
                 } else {
                     val obj = ele.asJsonObject
                     return if (obj.has("touch")) {
-                        val type = obj.get("type").deserializeEnum<Type>()
+                        val type = obj.get("touch").deserializeEnum<Type>()
                         Touch(type)
                     } else if (obj.has("shape")) {
                         val type = obj.get("type").deserializeEnum<Type>()

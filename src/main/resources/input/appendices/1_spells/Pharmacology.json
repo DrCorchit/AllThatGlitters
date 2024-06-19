@@ -46,7 +46,7 @@
     "rarity": "academic",
     "discipline": "Pharmacology",
     "type": "enchantment",
-    "effect": "Produces a transparent liquid, distilled from an alchemical solution of crushed glass and mermaid tears. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial. You gain 1d6 temporary HP and 1d4 temporary AP, and your nerves are greatly dulled to the sensation of pain.",
+    "effect": "Produces a transparent liquid, distilled from an alchemical solution of crushed glass and mermaid tears. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial. You gain 1d6 temporary HP and 1d4 temporary WP, and your nerves are greatly dulled to the sensation of pain.",
     "training_reqs": {
       "int": 14,
       "slots": 3
@@ -240,7 +240,7 @@
       "Materials": "A brick, a drop of tar, and freshly plucked grass, plus other ingredients costing 100 gold."
     },
     "modifiers": {
-      "maintenance": "Its original properties can be restored via a ritual which takes 20 minutes and expends 4 AP."
+      "maintenance": "Its original properties can be restored via a ritual which takes 20 minutes and expends 4 WP."
     }
   },
   {

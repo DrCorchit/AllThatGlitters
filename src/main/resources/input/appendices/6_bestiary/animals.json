@@ -2,28 +2,28 @@
   {
     "name": "Draft Horse",
     "description": "A sturdy and robust horse for pulling heavy equipment, ploughs, or wagons.",
-    "cost": 150,
+    "cost": 100,
     "upkeep": 2,
     "stats": {
       "str": 22,
       "dex": 4,
-      "spd": 24,
+      "spd": 21,
       "int": 4,
-      "nst": 4,
-      "cha": 8
+      "nst": 7,
+      "cha": 5
     }
   },
   {
     "name": "Riding Horse",
     "description": "A horse suitable for riding long distances. Accustomed to carts and carriages.",
-    "cost": 250,
+    "cost": 150,
     "upkeep": 2,
     "stats": {
       "str": 18,
       "dex": 5,
-      "spd": 36,
+      "spd": 24,
       "int": 5,
-      "nst": 5,
+      "nst": 7,
       "cha": 6
     }
   },
@@ -35,9 +35,9 @@
     "stats": {
       "str": 20,
       "dex": 5,
-      "spd": 30,
+      "spd": 24,
       "int": 5,
-      "nst": 5,
+      "nst": 8,
       "cha": 6
     }
   },
@@ -79,8 +79,8 @@
       "dex": 10,
       "spd": 20,
       "int": 5,
-      "nst": 10,
-      "cha": 8
+      "nst": 8,
+      "cha": 10
     }
   },
   {
@@ -144,7 +144,7 @@
       "str": 23,
       "dex": 8,
       "spd": 12,
-      "int": 7,
+      "int": 6,
       "nst": 4,
       "cha": 8
     }
@@ -157,7 +157,7 @@
       "str": 24,
       "dex": 4,
       "spd": 15,
-      "int": 6,
+      "int": 5,
       "nst": 3,
       "cha": 8
     }

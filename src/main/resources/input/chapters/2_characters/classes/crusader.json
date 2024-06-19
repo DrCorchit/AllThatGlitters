@@ -10,7 +10,7 @@
   "alignment": "Lawful",
   "coreAbilityName": "Divine Providence",
   "coreAbilityDescription": "Having taken a solemn oath of service before your God, you may call upon divine providence to bolster you and your allies. Once per short rest, you may take an action and expend 4 willpower to beseech your deity, gaining 1d8 temporary hitpoints and 1d8 bonus holy damage to your next successful weapon attack.",
-  "limitations": "Crusaders start with a deficiency in two of the following three skills: {{skills.literacy}}, {{skills.nature}}, or {{skills.sleight_of_hand}}.",
+  "limitations": "Crusaders start with a deficiency in two of the following three skills: {{skills.literacy}}, {{skills.nature}}, or {{skills.legerdemain}}.",
   "levelingBonuses": {
     "1": "gain +2 {{attr.STR}} and +2 {{attr.CHA}}, plus proficiency in martial arts.",
     "3": [
@@ -34,7 +34,7 @@
     "_": [
       "A steel {{armor.hauberk}}.",
       "A small weapon",
-      "3 {{items.torch}}es"
+      "A holy symbol of your deity, which functions as a {{items.talisman}}"
     ],
     "A weapon of one of the following types:": [
       "Any great weapon or polearm",
@@ -47,6 +47,7 @@
       "A {{items.bedroll}}, {{items.pillow}}",
       "Two sets of {{items.plain_clothes}}.",
       "One set of {{items.priest_robes}}",
+      "3 {{items.torch}}es",
       "A {{items.candle}} and a flask of {{items.holy_water}}"
     ],
     "One of the following items:": [

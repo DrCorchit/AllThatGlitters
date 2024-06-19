@@ -1,5 +1,6 @@
 package net.allthatglitters.server.appendices.magic
 
+import com.drcorchit.justice.utils.StringUtils.normalize
 import com.drcorchit.justice.utils.json.JsonUtils.deserializeEnum
 import com.drcorchit.justice.utils.math.units.Measurement
 import com.drcorchit.justice.utils.math.units.TimeUnits
@@ -9,6 +10,7 @@ import com.google.gson.JsonObject
 import net.allthatglitters.server.chapters.sheet.Attribute
 import net.allthatglitters.server.concepts.*
 import net.allthatglitters.server.concepts.requirement.*
+import net.allthatglitters.server.util.HasProperties
 import net.allthatglitters.server.util.html.HtmlObject
 
 class Spell(
@@ -23,8 +25,8 @@ class Spell(
 	trainingReqs: List<Requirement>,
 	val castingReqs: List<Requirement>,
 	val modifiers: ImmutableMap<String, Any>,
-) : Ability(name, effect, trainingReqs) {
-	val tag = makeTag(name)
+) : Trainable(name, effect, trainingReqs), HasProperties {
+	private val tag = name.normalize()
 
 	fun render(): String {
 		val output = HtmlObject("div").withClass("background")
@@ -78,12 +80,25 @@ class Spell(
 		return output.render()
 	}
 
+	fun linkTo(text: String = name): HtmlObject {
+		return HtmlObject("a")
+			.withAttribute("href", "${AppendixSpells.outputFile}#$tag")
+			.withContent(text)
+	}
+
+	override fun getProperty(property: String): Any? {
+		return when (property) {
+			"name" -> name
+			//TODO other properties
+			else -> null
+		}
+	}
+
 	override fun toString(): String {
 		return "$name: ${discipline.describe(rarity, type)}"
 	}
 
-	companion object {
-
+	companion object : HasProperties {
 		fun deserialize(info: JsonObject): Spell {
 			val name = info.get("name").asString
 			val rarity = info.get("rarity").deserializeEnum<Rarity>()
@@ -144,7 +159,7 @@ class Spell(
 				"materials" -> StringReq("Materials", entry.value.asString)
 				"spells" -> {
 					object : AbilityReq("Required Spells") {
-						override val reqAbilities: Set<Ability>
+						override val reqAbilities: Set<Trainable>
 							get() = entry.value.asJsonArray
 								.map { AppendixSpells.lookupSpell(it.asString) }
 								.toSet()
@@ -175,12 +190,12 @@ class Spell(
 			}
 		}
 
-		fun makeTag(name: String): String {
-			return name.replace(" +", "_").replace("[^a-zA-Z_]+", "")
+		fun toLink(name: String): HtmlObject {
+			return HtmlObject("a").withAttribute("href", "#${name.normalize()}").withContent(name)
 		}
 
-		fun toLink(name: String): HtmlObject {
-			return HtmlObject("a").withAttribute("href", "#${makeTag(name)}").withContent(name)
+		override fun getProperty(property: String): Any {
+			return AppendixSpells.lookupSpell(property)
 		}
 	}
 }

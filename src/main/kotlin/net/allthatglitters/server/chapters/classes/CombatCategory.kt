@@ -26,7 +26,7 @@ enum class CombatCategory(
 
 	Naturalist(
 		"For those who want to work closely with nature and animals, living in harmony with the natural world.",
-		listOf("Druid", "Marksman", "Ranger", "Warg"),
+		listOf("Druid", "Hermit", "Marksman", "Ranger"),
 		listOf("Elite Instinct", "Nature Proficiency", "Ability: Beast Speech")
 	),
 	Zealot(

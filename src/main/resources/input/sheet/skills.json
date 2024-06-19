@@ -15,6 +15,11 @@
     "description": "Determines move order in battle."
   },
   {
+  "name": "Legerdemain",
+  "attrs": ["DEX"],
+  "description": "Used when lockpicking and pickpocketing items, or other such tricks."
+},
+  {
     "name": "Literacy",
     "attrs": ["INT"],
     "description": "Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Deficiency in this skill normally indicates that the character is illiterate."
@@ -54,11 +59,7 @@
     "attrs": ["NST", "CHA"],
     "description": "The ability to discern more than is immediately obvious. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat."
   },
-  {
-    "name": "Sleight-of-Hand",
-    "attrs": ["DEX"],
-    "description": "Used when lockpicking and pickpocketing items, or other such tricks."
-  },
+
   {
     "name": "Sorcery",
     "attrs": ["NST"],

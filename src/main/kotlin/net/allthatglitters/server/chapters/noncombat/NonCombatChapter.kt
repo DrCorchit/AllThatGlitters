@@ -13,6 +13,7 @@ object NonCombatChapter : HtmlFile(
 		addSubsection("Resting")
 		addSubsection("Working")
 		addSubsection("Traveling")
+		addSubsection("Mounts &amp; Riding", "riding")
 		addSubsection("Swimming")
 		addSubsection("Falling")
 		addSubsection("Sneaking")

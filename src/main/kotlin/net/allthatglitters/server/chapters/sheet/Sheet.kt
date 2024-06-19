@@ -17,8 +17,8 @@ object Sheet : HtmlFile(
 	override val templatizer = generator.templatizer.extend()
 		.withRule("5_skills") {
 			val table = HtmlTable().withClass("inner") as HtmlTable
-			table.nextRow()
-				.withDefaultHeaderAttribute("class", "sub")
+			table.withDefaultHeaderAttribute("class", "sub")
+				.nextRow()
 				.withHeader("Skill")
 				.withHeader("Base")
 				.withHeader("Bonuses")
@@ -33,16 +33,15 @@ object Sheet : HtmlFile(
 		.withRule("6_abilities") {
 			val table = HtmlTable().withClass("inner")
 				.withStyle("background: white url(/images/books.png) no-repeat bottom; background-size: 100%") as HtmlTable
-			table.nextRow().withDefaultHeaderAttribute("class", "sub")
-				.withHeader("Ability", mutableMapOf("class" to "sub", "width" to "40%"))
-				.withHeader("Slots", mutableMapOf("class" to "sub", "width" to "10%"))
-				.withHeader("Ability", mutableMapOf("class" to "sub", "width" to "40%"))
-				.withHeader("Slots", mutableMapOf("class" to "sub", "width" to "10%"))
+			val row = table.withDefaultHeaderAttribute("class", "sub")
+				.nextRow()
+				row.withHeader("Ability").withStyle("width: 40%")
+			row.withHeader("Slots").withStyle("width: 10%")
+			row.withHeader("Ability").withStyle("width: 40%")
+			row.withHeader("Slots").withStyle("width: 10%")
 
-			table.withHeaders()
 			for (i in 1..15) {
 				table.withRow("<br/>", "", "", "")
-				//table.withRow("${2 * i - 1}.", "<br/>", "${2*i}.", "<br />")
 			}
 			HtmlObject("td")
 				.withClass("border")

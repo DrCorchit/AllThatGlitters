@@ -45,17 +45,6 @@
     ]
   },
   {
-    "name": "Horseback Riding",
-    "effect": "The player learns to ride a saddle and control a horse via bridle. The player can now attempt mounted attacks from horseback, ",
-    "cost": {
-      "gold": 30,
-      "slots": 2
-    },
-    "reqs": [
-      "A horse"
-    ]
-  },
-  {
     "name": "Vertical Escape",
     "effect": "The player learns to use the grappling hook to make a hasty escape. If surroundings are appropriate, the player can throw the hook up to 30 feet vertically as an action. On a successful DT 12 {{skills.mobility}} check, the grappling hook latches. The player can use an action to climb 10 feet up the rope, away from enemy melee attacks.",
     "cost": {

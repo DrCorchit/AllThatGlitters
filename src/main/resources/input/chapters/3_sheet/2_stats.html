@@ -21,9 +21,9 @@
 </p>
 <p>Mitigation is composed of two values: dodge chance (DC) and block chance (BC). Dodge chance is initially equal to the
   player’s dexterity attribute, while block chance is determined by the character’s shields and armor. The two values
-  are added together to calculate total mitigation, but certain attacks may bypass one or the other, reducing effective
-  mitigation against that tactic. For example, if a character is restrained or grappled they are no longer able to dodge
-  attacks.
+  are added together to calculate total mitigation. Note that DC is reduced after every attack by the attacker's
+  {{attr.DEX}} modifier, whether the attack is successful or not. Dodge chance is also reduced to zero (for both
+  characters) when a character is grappled.
 </p>
 <p>DC, BC, and MIT are calculated as follows:</p>
 <pre>{{strings.dc_formula}}</pre>
@@ -41,11 +41,14 @@
   recorded on the character sheet. Gold is mainly used to purchase goods and services, such as buying equipment from
   merchants or hiring trainers.
 </p>
+<h5>Status</h5>
+<p>This section records any status effects inflicted on your character.
+</p>
 <h5>Training Slots</h5>
 <p>Training slots are a resource that control how often a character can learn new abilities from training. Characters
   expend training slots whenever they learn new feats or spells. If they don't have enough training slots for a new
   ability, they may have to forget an ability to regain the required training slots, or wait until they level up. If
   you're just making a character, you won't have used any training slots, so they will be at maximum, which is equal to
-  your intelligence attribute score. Training slots are explained in more detail in {{link.c6#chapter 6}}.
+  your intelligence attribute score. Training slots are explained in more detail in {{files.c6#chapter 6}}.
 </p>
 <pre>{{strings.training_slots_formula}}</pre>

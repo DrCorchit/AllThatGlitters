@@ -6,29 +6,38 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonParser
-import net.allthatglitters.server.appendices.abilities.AppendixFeats
+import net.allthatglitters.server.appendices.abilities.Ability
+import net.allthatglitters.server.appendices.abilities.AppendixAbilities
 import net.allthatglitters.server.appendices.armor.AppendixArmor
+import net.allthatglitters.server.appendices.armor.Armor
 import net.allthatglitters.server.appendices.bestiary.AppendixBestiary
 import net.allthatglitters.server.appendices.bestiary.Phylum
 import net.allthatglitters.server.appendices.items.AppendixItems
+import net.allthatglitters.server.appendices.items.Item
 import net.allthatglitters.server.appendices.magic.AppendixSpells
+import net.allthatglitters.server.appendices.magic.Spell
 import net.allthatglitters.server.appendices.weapons.AppendixWeapons
+import net.allthatglitters.server.appendices.weapons.Modifier
+import net.allthatglitters.server.appendices.weapons.Weapon
 import net.allthatglitters.server.chapters.classes.CharactersChapter
 import net.allthatglitters.server.chapters.combat.CombatChapter
+import net.allthatglitters.server.chapters.combat.DamageType
+import net.allthatglitters.server.chapters.combat.StatusEffect
 import net.allthatglitters.server.chapters.intro.IntroChapter
 import net.allthatglitters.server.chapters.leveling.LevelingChapter
 import net.allthatglitters.server.chapters.magic.MagicChapter
 import net.allthatglitters.server.chapters.noncombat.NonCombatChapter
-import net.allthatglitters.server.chapters.sheet.Sheet
-import net.allthatglitters.server.chapters.sheet.SheetChapter
+import net.allthatglitters.server.chapters.sheet.*
+import net.allthatglitters.server.concepts.Abbreviations
 import net.allthatglitters.server.util.Collapsible
+import net.allthatglitters.server.util.HasProperties
 import net.allthatglitters.server.util.Navigation
 import net.allthatglitters.server.util.Templatizer
 import net.allthatglitters.server.util.html.HtmlFile
 import java.io.File
 import java.io.FileNotFoundException
 
-class Generator(val version: String, val inputDir: File, val outputDir: File) {
+class Generator(val version: String, val inputDir: File, val outputDir: File) : HasProperties {
 	val versionedOutputDir = File(outputDir, "version/$version")
 	val imagesDir = File(outputDir, "images")
 	val strings: Map<String, String> =
@@ -48,7 +57,42 @@ class Generator(val version: String, val inputDir: File, val outputDir: File) {
 			}
 		}
 
+	override fun getProperty(property: String): Any? {
+		return when (property) {
+			"version" -> version
+			"strings" -> object : HasProperties {
+				override fun getProperty(property: String): Any? {
+					return strings[property]
+				}
+			}
+			"files" -> object : HasProperties {
+				override fun getProperty(property: String): Any {
+					return lookupFile(property)
+				}
+			}
+			"attr" -> Attribute.Companion
+			"skills" -> Skill.Companion
+			"armor" -> Armor.Companion
+			"items" -> Item.Companion
+			"weapons" -> Weapon.Companion
+			"weapon_modifiers" -> Modifier.Companion
+			"damage" -> DamageType.Companion
+			"status", "status_effects" -> StatusEffect.Companion
+			"spells" -> Spell.Companion
+			"abilities" -> Ability.Companion
+			"maneuvers" -> Ability.Companion
+			"feats" -> Ability.Companion
+			else -> try {
+				Abbreviations.valueOf(property.uppercase()).getReplacement()
+			} catch (e : Exception) {
+				null
+			}
+		}
+	}
+
 	init {
+		net.allthatglitters.server.concepts.round
+
 		val builder = GsonBuilder().setPrettyPrinting().disableHtmlEscaping()
 		builder.registerTypeAdapter(
 			Phylum::class.java,
@@ -59,7 +103,7 @@ class Generator(val version: String, val inputDir: File, val outputDir: File) {
 	val appendices by lazy {
 		listOf(
 			AppendixSpells,
-			AppendixFeats,
+			AppendixAbilities,
 			AppendixWeapons,
 			AppendixArmor,
 			AppendixItems,
@@ -84,6 +128,30 @@ class Generator(val version: String, val inputDir: File, val outputDir: File) {
 	fun lookupFile(file: String): HtmlFile {
 		val key = file.normalize() + ".html"
 		return files[key] ?: throw NoSuchElementException("No file named \"$file.html\"")
+	}
+
+	fun copyFiles() {
+		imagesDir.mkdir()
+		File(inputDir, "images").listFiles()!!.forEach {
+			it.copyTo(File(imagesDir, it.name), true)
+		}
+		logger.info("Copied images")
+
+		File(inputDir, "styles.css")
+			.copyTo(File(Server.serviceDir, "styles.css"), true)
+		logger.info("Copied styles.css")
+	}
+
+	fun makeSheet() {
+		File(Sheet.inputDir, "styles.css")
+			.copyTo(File(versionedOutputDir, "sheet/styles.css"), true)
+		logger.info("Copied sheet/styles.css")
+
+		Sheet.appendHeader().appendBody().save()
+		logger.info("Rendered character sheet")
+
+		Sheet2.appendHeader().appendBody().save()
+		logger.info("Rendered character sheet 2")
 	}
 
 	fun makeChapter(i: Int) {
@@ -115,22 +183,9 @@ class Generator(val version: String, val inputDir: File, val outputDir: File) {
 	}
 
 	fun generate() {
-		imagesDir.mkdir()
-		File(inputDir, "images").listFiles()!!.forEach {
-			it.copyTo(File(imagesDir, it.name), true)
-		}
-		logger.info("Copied images")
+		copyFiles()
 
-		File(inputDir, "styles.css")
-			.copyTo(File(Server.serviceDir, "styles.css"), true)
-		logger.info("Copied styles.css")
-
-		File(Sheet.inputDir, "styles.css")
-			.copyTo(File(versionedOutputDir, "sheet/styles.css"), true)
-		logger.info("Copied sheet/styles.css")
-
-		Sheet.appendHeader().appendBody().save()
-		logger.info("Rendered character sheet")
+		makeSheet()
 
 		Index.appendHeader()
 			.appendTitle("h1")
@@ -145,6 +200,10 @@ class Generator(val version: String, val inputDir: File, val outputDir: File) {
 
 		for (i in 1..chapters.size) makeChapter(i)
 		for (i in appendices.indices) makeAppendix(i)
+	}
+
+	override fun toString(): String {
+		return "Generator $inputDir --> $outputDir"
 	}
 
 	companion object {

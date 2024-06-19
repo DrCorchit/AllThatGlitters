@@ -10,7 +10,7 @@
   "alignment": "Non-Good",
   "coreAbilityName": "Heretic’s Brand",
   "coreAbilityDescription": "In addition to your regular equipment, you have a special branding iron obtained from your chosen deity. This iron is imbued with divine magic and cannot be heated by ordinary means, but you may expend 2 AP to whisper a short prayer or sacred word, causing the end of the brand to glow blazing hot for 1 minute. Your brand is a standard melee weapon that deals 1d6 piercing damage plus your {{attr.CHA}} modifier in fire damage. Enemies struck by this weapon also receive the heretic’s brand, marking them for divine retribution.",
-  "limitations": "As an inquisitor, you have a deficiency in {{skill.accuracy}}, {{skills.medicine}}, {{skills.nature}}.",
+  "limitations": "As an inquisitor, you have a deficiency in {{skills.accuracy}}, {{skills.medicine}}, {{skills.nature}}.",
   "levelingBonuses": {
     "1": "gain +2 to {{attr.INT}} and {{attr.CHA}}, and proficiency in {{skills.sorcery}} and {{skills.perception}}."
   },

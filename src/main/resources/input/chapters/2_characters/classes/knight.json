@@ -17,34 +17,45 @@
     "You have sworn an oath to a nobleman or lady, to protect them with your life and to fight for them in battle. In return, they have provided you with a fine suit of chainmail, and several high quality steel weapons."
   ],
   "limitations": "Deficient in sorcery.",
-  "attributes": {
-    "1": [
-      "2 STR",
-      "1 DEX|SPD",
-      "1 INT|CHA|NST"
-    ]
-  },
   "levelingBonuses": {
-    "1": "+2 to {{attr.STR}} and +2 to {{attr.CHA}}, and expertise in defense.",
-
-
+    "1": "gain expertise in defense.",
     "2": [
-      "learn a combat ability from the following list:",
+      "learn any two abilities from the following list:",
       {
-        "tag": "ol",
+        "tag": "ul",
         "content": [
           {
             "tag": "li",
-            "content": "12"
+            "content": "{{maneuvers.parry}}"
+          },
+          {
+            "tag": "li",
+            "content": "{{maneuvers.shield_bash}}"
+          },
+          {
+            "tag": "li",
+            "content": "{{feats.lancer}}"
+          },
+          {
+            "tag": "li",
+            "content": "{{feats.defender}}"
           }
         ]
       }
     ],
-    "3": "+2 to STR and +1 to "
+    "3": "your liege gifts you an improved suit of armor. You may choose a suit of {{armor.half_plate_armor}} or {{armor.splinted_chainmail}}.",
+    "4": "The dexterity and speed caps on your armor are increased by 1.",
+    "5": "Learn 2 combat maneuvers",
+    "6": "in recognition of your glorious and heroic conduct, your liege grants you a set of steel plate armor.",
+    "7": "You ignore disadvantage on mobility checks while wearing half plate armor, and ignore disadvantage on stealth checks while wearing full plate.",
+    "8": "The dexterity and speed caps on your armor are further increased, from 1 to 2.",
+    "9": "when you fail a saving throw against a spell, you can expend willpower (equal to the amount by which you failed the save) to instead succeed the save.",
+    "12": "The dexterity and speed caps on your armor are further increased, from 2 to 3.",
+    "16": "The dexterity and speed caps on your armor are further increased, from 3 to 4."
   },
   "startingEquipment": {
     "_": [
-      "A set of steel {{armor.half_plate_armor}}",
+      "A set of steel {{armor.chainmail}}",
       "An arming sword ({{weapons.shortsword}})",
       "A {{weapons.shield}}",
       "A {{items.lantern}}, with one {{items.oil}}.",
