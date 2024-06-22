@@ -121,9 +121,8 @@ object DnD {
 
 	@JvmStatic
 	fun main(vararg args: String) {
-		//countSpells()
+		countSpells()
 		//displaySpellsOfLevel(1)
-		displaySpellsOfSchool(Spell.School.Evocation)
-
+		//displaySpellsOfSchool(Spell.School.Evocation)
 	}
 }

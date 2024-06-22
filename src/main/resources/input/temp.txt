@@ -2,7 +2,7 @@ Stellar
     1|Lodestone|Evocation|A trail of ghostly lights appear, guiding you to a location you have visited before and is no further than ten miles away. The lights last for one hour, and can be seen by allies and enemies. The lights appear as you approach them and disappear as you leave them behind.
     1|Sunbeam|Evocation|Deal 1d8 {{damage.holy}} damage to an enemy. If cast upon an ally (but not undead or an automaton) heal it by that amount instead.
     2|Luminance|Enchantment|An item you choose begins to glow with a gentle blue or yellow aura. You may combine this enchantment with a divination spell (by casting both at the same time) to make the aura only appear when some condition is met.
-    3|Solstice|Concentration|A beam of healing sunlight shines down on a chosen area and remains for duration of the spell. Within the spell's effect radius, allies gain 1d6 healing, while enemies take 1d6 holy damage. This effect is applied when the spell is cast, and again at the start of the caster's turn. TODO: radius
+    3|Solstice|Concentration|A beam of healing sunlight shines down on a chosen area and remains for duration of the spell. Within the spell's effect radius, allies gain 1d6 healing, while enemies take 1d6 holy damage. This effect is applied when the spell is cast, and again at the start of the caster's turn.
     4|Starlight|Concentration|Illuminate an area (no larger than an acre) with a soft blue celestial light. The light is only visible to you and your allies. Living creatures illuminated by this light glow brightly, but not the undead or automatons.
     5|Aurora|Concentration|A spectral halo of prismatic light circles the head of an ally you choose. For every turn concentration is maintained, they heal 1d6 hitpoints per turn and deal 1d6 bonus radiant damage with their melee attacks. In addition, they cannot be {{status.blinded}} by magical effects.
     7|Soul Equinox|Evocation|A mote of light damages an enemy for 10 radiant damage and then heals an ally by 10. If the enemy succeeds a DT 10 {{attr.DEX}} saving throw, the damage and healing are reduced by half.
@@ -13,11 +13,11 @@ Lunar
     3|Lesser Invisibility|Evocation|You or a target you can touch gains {{status.epehemeral_invisibility}} for 10 minutes.
     3|Time Stream|Evocation|Time accelerates for you or a target you touch, allowing the target to take twice as many actions per turn for 2 turns. From the target's perspective, the world appears to be unfolding in slow motion for around twenty seconds.
     5|Time Void|Evocation|An object or entity disappears into a dark void where no time passes for 1d4 turns. When the spell ends, the object returns to the same spot, unchanged, as if no time had passed during that interval.
-    7|Time Rift|Concentration|The spell creates a sphere with an eight-foot radius around the caster. Within the sphere, time appears to proceed at a normal rate, and time outside the sphere appears to be accelerated by a factor of ten. Living creatures which pass through the sphere take 3d8 true damage, due to the effects of time compression (or decompression) on their internal organs.
+    7|Time Rift|Concentration|The spell creates a sphere with an eight-foot radius around the caster. Within the sphere, time appears to proceed at a normal rate, and time outside the sphere appears to be accelerated by a factor of ten. Living creatures which pass through the sphere take 3d8 damage, due to the effects of time compression (or decompression) on their internal organs.
     8|Greater Invisibility|Concentration|You or a target you touch gains {{status.invisibility}} for 1 hour.
     9|Mass Invisibility|Ceremony|You and all ceremonial participants gain {{status.invisibility}} for 24 hours.
-    10|Phantasm|Concentration|The caster's physical form fades, still visible to the eye but noticeably transparent. Fire and blade find no purchase against them, passing through the body as through empty air. The caster gains the {{status.levitated}} status and may not move without levitation, but may pass through ground and walls should they do so. If the target is partially inside physical matter when the spell ends, they are pushed away. If wholly inside, death is instantaneous and certain.
-  Planetary
+    9|Phantasm|Concentration|The caster's physical form fades, still visible to the eye but noticeably transparent. Fire and blade find no purchase against them, passing through the body as through empty air. The caster gains the {{status.levitated}} status and may not move without levitation, but may pass through ground and walls should they do so. If the target is partially inside physical matter when the spell ends, they are pushed away. If wholly inside, death is instantaneous and certain.
+Planetary
     1|Meteorite|Evocation|A meteorite slams into the ground, striking a chosen location. The meteorite deals 1d8 {{damage.bludgeoning}} damage to its target and 1d4 {{damage.force}} damage to creatures within 6 feet. If the target makes a DT 11 {{attr.DEX}} saving throw, it does not take bludgeoning damage.
     2|Gravity Slam|Concentration|The spell caster chooses a target within range. As long as concentration is maintained, the target ceases to be effected by gravity and hovers a few feet above the ground. The caster can choose to end concentration, overwhelming the target with residual gravity and slamming them into the ground. The target taking 1d8 bludgeoning damage for every turn concentration was maintained. If concentration was broken (or the caster chooses) the spell ends without slamming the target into the ground.
     3|Levitation|Concentration|The caster hovers roughly 3 feet above the ground, gliding above the terrain. They gain the {{status.levitated}} status and their {{attr.SPD}} increases to 20. If the ground is more than 3 feet below, they descend slowly and gracefully.
@@ -27,8 +27,7 @@ Lunar
     8|Meteor Shower|Evocation|A storm of meteors plummets from the sky, towards random locations near a chosen point. Targets within range take 2d8 bludgeoning and 2d8 {{damage.force}} damage. Each target that passes a DT 12 {{attr.DEX}} save takes no bludgeoning damage.
     9|Mass Teleportation|Ceremony|When the ceremony is completed, all participants are teleported to a location up to 10 miles away. Each additional participant increases the cost of the spell by 15, but also increases the teleportation range by 5 miles.
     10|Stargate|Ceremony|Two parties working in tandem perform corresponding ceremonies in two different locations. After confirming appropriate astrological alignment, the two groups (typically working via psychic connection) gather around a circle and perform a complex ceremony involving specific incantations. When the ceremony is complete, a permanent astral gate appears in that location, linked to the corresponding gate constructed by the cooperating party. The portal remains open indefinitely, unless another ceremony is convened to banish it.
-
-  Weal
+Weal
     1|Herbal Remedy|Evocation|The caster heals themselves and a target they touch for 1d6 damage. The caster must be able to touch another living creature in order to heal themselves with this spell.
     1|Shillelagh|Evocation|Any wooden weapons (such as a club or quarterstaff) wielded by the caster becomes imbued with the power of nature. While active, the caster may add their {{skills.nature}} proficiency bonus to the weapon's damage. In addition, they may use the nature skill to make attack rolls with the weapon, instead of {{skills.martial_arts}}.
     2|Barkskin|Concentration|The caster's skin gradually gains a thick covering resembling the bark of a tree. Their BC increases by 2 each turn concentration is maintained, up to a maximum of 10.
@@ -40,7 +39,7 @@ Lunar
     6|Thorn Bed|Evocation|An area designated by the caster becomes thickly overgrown with thorns, becoming difficult terrain. Targets affected take 1d4 piercing damage immediately and an additional 1d4 piercing damage whenever they move through the terrain.
     8|Tree of Life|Evocation|A magical tree appears, healing all living creatures in range by 3d6 each turn, at the start of their turn. The tree has 100 hitpoints, but is vulnerable to {{damage.heat}} and {{damage.poison}} damage. The tree's healing decreases to 2d6 below 70 hp and to 1d6 below 40 hp.
     9|Become Tree|Ritual|The caster gradually transforms themselves into a tree. In so doing, they lose the ability to speak or see, but retain their knowledge, memories and personality. In addition, they may communicate with nearby trees and their lifespan is increased by 1d6 millennia.
-  Fauna
+Fauna
     1|Spiderweb|Evocation|A gout of sticky webbing shoots from the caster's outstretched hands. The target must make a DT 14 {{skills.mobility}} saving throw or become {{status.ensnared}}, unable to move.
     1|Snakebite|Evocation|The appearance of a serpent lashes out from the caster's outstretched hand, striking towards a target up to 12 feet away. The caster makes a {{skills.nature}} check against the target's mitigation. If successful, the target takes 1d12 {{damage.poison}} damage.
     1|Cat's Eye|Evocation|The target gains the ability to see in the dark, seeing in pitch blackness as if it were dim light, and in dim light as if it were bright light.
@@ -52,38 +51,45 @@ Lunar
     6|Owl's Wisdom|Ritual|The caster's {{attr.INT}} increases by 1d8 for 8 hours.
     7|Rhino's Hide|Evocation|If not wearing armor, the caster's skin becomes as tough as a Rhinoceros, increasing their BC by 8 for 5 turns. They also gain resistance to {{damage.acid}}, {damage.lightning}} and {{damage.heat}} damage.
     9|Circle of Life|Evocation|The caster takes 2d6 damage, but the target is healed for thrice that amount. If the caster falls unconscious as a result of casting this spell, the target is healed completely.
-  Fey
-     1|Fairy Fire|Evocation|The caster designates an area, causing the ground to glow and sparkle with eerie fey fire. Enemies entering this area become illuminated and outlined in green, blue, teal, or violet light. Melee or ranged attacks against such enemies have advantage, unless the attacker is blinded or the target is invisible.
-     1|Beast Speech|Ritual|The caster gains the ability to speak with animals. Animals know quite a few things and, besides, can be persuaded to fight alongside the caster after passing a DT 15 persuasion check.
+Fey
+     1|Fairy Fire|Evocation|The caster designates an area, causing the ground to glow and sparkle with eerie fairy fire. Enemies entering this area become illuminated and outlined in green, blue, teal, or violet light, even if they are invisible. Melee or ranged attacks against such enemies have advantage, unless the attacker is blinded.
+     1|Beast Speech|Ritual|The caster expends one willpower to gain the ability to converse with animals for one hour.
      2|Water Walking|Evocation|For one hour, the caster gains the ability to walk on water as if it were solid ground. When the spell is about to expire, the water's surface betakes a spongy and soft texture, as if it were thick mud or bedding. If cast while the mage is partially submerged, the spell propels the mage to the surface of the water. If fully underwater, the spell has no effect.
-     2|Spirit Animal|Ritual|The caster enters a deep trance and meets their spirit animal, a spirit wise in the ways of the wild. TODO
+     2|Spirit Animal|Ritual|The first time this spell is cast, the caster enters a trance and meets their spirit animal, a fey spirit wise in the ways of the wild who takes the form of a spectral animal, such as a bear, panther, wolf, or hawk.
      3|Far Whisper|Evocation|You gain the ability to whisper to distant creatures as if they were near. You may whisper or speak to a creature up to a mile away, and they will hear your voice as if they were standing beside you.
      4|Illusory Terrain|Ceremony|The caster beseeches the appropriate fairy council to disguise a large swathe of terrain in an appropriate manner. The fairies must be convinced that it is in their benefit to do so, though (being fey) they rarely say no to a sufficiently clever prank. If the player passes a DT 16 {{skills.persuasion}} check, the terrain appears transformed for 1d8 days, after which time the fey grow bored and cease the illusion. The illusion can be detected by anyone who draws close and
+     4|Rain Dance|Ceremony|The caster leads a group in a dance of supplication around a fire, beseeching the fey for rain, snow, or clear skies. The fey, eager to show their power, respond by producing the requested weather.
      5|Awaken Beastie|Evocation|A beast is permanently awakened to sentience, gaining +3 to {{attr.INT}} and +3 to {{attr.CHA}} in addition to the ability to speak. It automatically joins you in combat, unless mortally afraid. After one week of sentience, the animal must make a DT 14 {{attr.INT}} saving throw or be overcome with existential angst, whereupon it will plead the caster to revoke sentience (which is done by casting the spell a second time).
      5|Oneiromancy|Ritual|During the ritual, the caster beseeches the fey for a vision concerning an important topic, and then falls into a magical slumber. While asleep, the caster receives a vision. The DM privately rolls a d20, which determines how directly the vision answers the question. On a 1, the vision (fantastical as it may be) bears absolutely no relation to the question at hand, and may even be malicious fey trickery.
      6|Sweet Dreams|Ceremony|You and all participants call out to the fey, thanking them for their role in maintaining the balance of nature and protecting the life force. You invite them to visit you in your dreams, calling for succor, entertainment, and guidance. All participants roll a 1d4, and gain an effect accordingly: <ol><li>Hellish Nightmares: Tormented by cruel fey, no rest can be had. No Willpower is recovered during the long rest.</li><li>Vivid Visions: Playful and adventurous fey take the dreamer on wondrous adventures seeming to last for many days. Upon awakening, the individual gains 1d4 temporary AP.</li><li>Quiet Quandaries: The dreamer awakens beside a pool of water, which idly asks the dreamer a question. After it has been answered, it invites the dreamer to ask a question of their own. If the adventurer answered the water's question truthfully, it answers truthfully. Also gain 1d6 temporary WP.</li><li>Allmother's Embrace: The dreamers is escorted by powerful fey to the magical heart of the forest. They are greeted by a gentle yet powerful dryad called the Allmother, who embraces them tenderly. Gain 1d8 temporary HP and AP.</li></ol>
+     6|Primal Form|Evocation|The caster expends 10 willpower to transform into a more primal version of their race for one hour. For example, a human, elf, dwarf, or halfling would become a neanderthal. The caster gains +5 {{attr.STR}}, and +2 {{attr.NST}} but suffers -5 {{attr.INT}} and -2 {{attr.CHA}} for the duration of the spell. You lose one level of proficiency in every skill for the duration of the spell.
      7|Forest Defender|Ritual|An allied animal (recruited via {{spells.beast_speech}} or {{spells.awaken_beastie}}) grows to twice its normal size. Such a creature gains +10 {{attr.STR}}.
-       Dream Warrior
-       Fairy’s Feast
-       Fairy’s Paradise
-  Summon
-    Eldritch Blast
-    cloud of daggers
-    mage hand
-    Summon Weapon
-    Bind Spirit (to object)
-    Find Familiar
-    summon ancient (demon/dragon/angel/fey)
-    Seek Patron
-    invade body (demonolatry)
-    reincarnation (draconolatry)
-    resurrection (theurgy)
+     7|Fairy’s Feast|Ritual|The fairies bring forth a great feast, consisting of fruits and vegetables, wine, cheeses, and venison. The feast serves up to a dozen men, and all who partake become immune to disease and poison (and cured thereof) for eight hours, and also heal 3d20 hp. The feast also alleviates two levels of hunger. After one hour, the entire repast vanishes without a trace.<br /><b>But beware!</b> If anyone partakes and forgets to thank the fairies, they shall suffer one of the following curses for 1 hour (chosen randomly):<ol><li>Shrunken to the size of a rat</li><li>Beset with bizarre illusions and hallucinations</li><li>Plagued with swarms of gnats and biting flies</li><li>Loss of sight and hearing</li><li>Dreadful nightmares and intrusive thoughts most vile</li><li>Gnawing hunger, which is not sated by any amount of food or drink</li></ol>
+     8|Dream Warrior|Ritual|During the next long rest following the ritual, you dream of a warrior spirit who will assist you in times of hardship. You may determine the warrior's race, class, and level, though their level is limited to half of yours. When you awake in the morning, you will find at your side a glittering silver hand bell. When you ring this bell, you may expend willpower (equal to twice their level) to summon this warrior to your side for eight hours. Performing this ritual a second time causes the first bell to disappear.
+     9|Monkey's Paw|Ceremony|Three individuals wish upon the severed paw of a monkey, gaining one wish each. Each one who would wish rolls a d20; the number shown is the number of words they may use to construct their wish. Each wish is sure to come true, but the execution is left to the caprice of powerful fairy. A given individual may partake three times of this ceremony, ere the fey turn a deaf ear to their pleas.
+Summon
+    1|Find Familiar|Ritual|The caster expends 6 willpower to summon a lesser spirit for eight hours. The spirit takes the form of an imp, a pseudodragon, or a chupacabra. Besides being able to obey basic commands, the creature can join its master in battle.
+    1|Mage Hand|Evocation|The caster expends 1 willpower to summon a floating spectral hand. The hand is a minor spirit, obedient and sentient but prone to occasional unbidden mischief. The hand can fly up to 100 yards away from its master, and carry an object weighing up to five pounds.
+    2|Summon Weapon|Evocation|Expend 1 willpower to summon a small or standard weapon to hand for one hour. The weapon is partially transparent, ever burning with an eerie violet flame. The weapon deals the same damage as a weapon of steel.
+    3|Cloud of Daggers|Concentration|Dozens of daggers summoned from the astral plane begin to swirl around the designated region. Creatures within take 1d4 slashing and 1d4 piercing damage. The effect is applied when the spell is cast, at the start of their turn, and whenever they enter the cloud of daggers. (At most once per round).
+    3|Imbue Sentience|Evocation|A minor spirit is bound to an inanimate object weighing less than one ton.
+    4|Soul Dart|Evocation|The caster imbues some of their life force into a number of spectral darts, up to four. Lose 1 hp and one willpower for each dart summoned. Each dart deals 1d6 piercing damage on a hit, and cannot miss.
+    4|Sentient Weapon|Evocation|The spirit of a fallen warrior is summoned from the astral to imbue a summoned weapon with sentience for one hour. The spirit possess a weapon summoned with {{spells.summon_weapon}}, and causes it hover in place and attack on its own.
+    5|Exorcism|Ritual|The caster attempts to purge a demon or unnatural host from a possessed body. The caster rolls for {{skills.sorcery}} while the possessing spirit rolls for {{skills.NST}}. If the caster rolls higher, the spirit is cast out, unless it is extremely powerful.
+    6|Demonic Posession|Evocation|The caster calls forth a demon by name and commands it to bind the chosen creature. The demon attempts possession, rolling for {{attr.CHA}} against the victim's willpower score. If successful, the target is possessed for one hour, at which point they may roll for willpower against the demon's charisma. As long as the
+    7|Invade Body|Evocation|The caster identifies a victim and attempts to permanently enter their body. The caster rolls for {{skills.sorcery}} against the target's willpower score. If successful, the victim is abruptly torn from their body and cast into the astral plane, while their attacker inhabits their body. If this spell is cast successful while already incarnate, the caster's previous body suffers cardiac arrest and undergoes irreversible damage after 2d6 minutes.
+    8|Reincarnation|Draconic spirits answer the ceremonial call, allowing a living and a deceased soul exchange places. The reincarnated spirit inhabits the new body, while the sacrificial participant departs into the astral plane as a servant of dragons. The dragons accept only willing sacrifices, but otherwise do not question the methods of the ceremony. Once reincarnated, the soul retains both their old memories and those of the body's original inhabitant.
+    9|Resurrection|Ceremony|A deceased soul is returned to its body and made whole again, in a manner holy and pure. If the soul's body was destroyed, a new one in the same likeness is formed. The spirit to be resurrected must be good aligned. Otherwise, the leader must pass a DT 18 {{skills.persuasion}} check to persuade the angels that it is righteous to make an exception and overturn the course of nature. If the spirit to resurrect is evil, the
 Divination
-    Guidance|Concentration|Give an ally a 1d4 bonus to ability checks.
-    Alarm (Make item make noise when condition is met)
-    Soul Sight (can see ghosts)
+    1|Guidance|Concentration|The caster touches an ally, so giving them a 1d4 bonus to ability checks and saving throws for one round.
+    1|Alarm|Evocation|A minor spirit is infused into an object, keeping watch. If the spirit observes unexpected or suspicious behavior, it begins to screech as loudly as possible. Each minor spirit has its own manner of screeching, but they are invariably extremely loud and annoying. The spirit can respond to simple instructions once summoned, regarding when to remain silent, screech, or abandon its post. If the spell {{spells.minor_telepathy}} is known, the spirit can be instructed to transmit a silent telepathic alarm instead. If the spell {{spells.major_telepathy}} is known, it can also communicate details about the situation when the alarm is triggered.
+    2|Seek Spirit|Ritual|The caster enters a meditative state and calls out for assistance, either to angels, demons, or dragons. Up to three entities are called forth, identifying themselves by name, but not by rank or alignment. The caster may ask each entity three questions, in order to discern its nature. The questions are limited to hypotheticals. The caster remembers the names of these principalities and powers, whose names he may later call upon in times of need.
+    3|Seance|Ritual|The caster enters a state of focus, sitting in a quiet and darkened room scented with
+    3|Soul Sight|Evocation|For one hour, gain the ability to perceive latent spirits and the lingering deceased.
+    4|Speak with the Dead|
     Augury
-    Astral Projection
+    5|Astral Projection|Ritual|The caster enters a meditative state and enters the astral plane, the realm ordinarily accessible only to disincarnate entities. The nature of the astral is elucidated in {{pages.appendix_bestiary}}. While in the astral, the caster may explore the lower astral to perceive a warped version of the physical plane, or venture into the higher astral and converse with various entities in their natural environs, and request their name for summoning purposes.
+    6|Ancient Name|Ritual|The ritual establishes an audience with an ancient and mighty spirit: a dragon, an archdemon, or an angel. Each type of spirit must be plied by a valuable thing of a specific kind: the dragon, by gold. The demon, by the blood of innocents. The angel, by sincerity and a pure heart. If the offering is lacking in quality or quantity, the spirit chastises the summoner and explains by what terms, if any, the spirit may be plied. If successful, the spirit joins the player as a summon for eight hours. The spirit fights at the player's side and is true to their word, but acts of their own volition otherwise.
 Necromancy
     Life Leach (leach 1d6 WP from opponent)
     reanimate
@@ -103,8 +109,7 @@ Necromancy
     starvation
     rend soul (kill enemy outright, esoteric)
     become lich (esoteric)
-
-  Earth
+Earth
     Heat Metal
     Mend
     Quake
@@ -113,7 +118,7 @@ Necromancy
     Earth Elemental
     Earth Golem
     Earthquake
-  Fire
+Fire
     Mote o' Fire
     Arcane Flames
     Fireball
@@ -123,7 +128,7 @@ Necromancy
     Fire elemental
     Fire Storm
     Fire golem
-  Water
+Water
     Faucet (produce water/make it rain)
     Frostbite (cold wind)
     Melt Ice/Freeze Water
@@ -133,7 +138,7 @@ Necromancy
     Ice Wall
     Blizzard
     Ice Golem
-  Air
+Air
     Electrocute (damage by touch -- roll for martial arts)
     Thunderbolt (single target, vertical bolt)
     Soar (fly for 1 minute)
@@ -144,8 +149,7 @@ Necromancy
     DND - chain lightning
     DND - lightning storm
     Storm Golem
-
-  Illusion
+Illusion
     detect illusion
     dispell illusion
     illusory disguise
@@ -153,7 +157,7 @@ Necromancy
     fleeting illusion
     mass illusion
     Fool's Invisibility (target thinks they're invisible, but they're not)
-  Telepathy
+Telepathy
     telempathy
     minor telepathy
     major telepathy
@@ -164,7 +168,7 @@ Necromancy
     Hypnosis
     Mind Control (mind control concentration)
     Unimind
-  Telekinesis
+Telekinesis
     Levitate
     Telemanipulation
     Lesser telekinetic pull

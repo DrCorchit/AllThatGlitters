@@ -13,7 +13,7 @@
   ],
   "alignment": "Non-Good",
   "coreAbilityName": "Eldritch Blast",
-  "coreAbilityDescription": "As an action, you may expend 2 willpower to channel the power of your patron. A beam of eerie blue energy streaks from your outstretched hand to a target within 60 feet, dealing 1d10 plus your charisma modifier in force damage.",
+  "coreAbilityDescription": "You may expend 2 willpower to channel the power of your patron. A beam of eerie blue energy streaks from your outstretched hand to a target within 60 feet, dealing 1d10 plus your charisma modifier in force damage.",
   "levelingBonuses": {
     "1": "gain +1 to {{attr.INT}} and {{attr.CHA}}, and proficiency in {{skills.persuasion}}."
   },

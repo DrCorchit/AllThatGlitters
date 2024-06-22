@@ -34,7 +34,7 @@
       "time": "1 hour",
       "wp": 10,
       "Location": "Alchemical Laboratory",
-      "Materials": "1 ounce of nitric acid and 3 ounces of brimstone, plus additional materials costing 80 gold."
+      "Materials": "1 ounce of nitric acid and 3 ounces of brimstone, plus additional materials costing 30 gold."
     },
     "modifiers": {
       "Location": "If brewed using field equipment rather than an alchemical laboratory, the caster must pass a DT 12 int saving throw or the spell fails and AP and ingredients are lost.",
