@@ -7,7 +7,12 @@
   {
     "name": "Defense",
     "attrs": ["STR"],
-    "description": "Describes a player’s knowledge and practice of defensive tactics. Proficiency bonuses for this skill affect what types of armor and shields can be used in combat."
+    "description": "Skill at defensive maneuvers and tactics, in particular armor and shields."
+  },
+  {
+    "name": "Folklore",
+    "attrs": ["NST"],
+    "description": "Measures knowledge gained from listening to locals and engaging in conversation with diverse sorts of individuals. In addition to local geography and history, includes knowledge of myths, mythical beings, and religion."
   },
   {
     "name": "Initiative",
@@ -15,14 +20,14 @@
     "description": "Determines move order in battle."
   },
   {
-  "name": "Legerdemain",
-  "attrs": ["DEX"],
-  "description": "Used when lockpicking and pickpocketing items, or other such tricks."
-},
+    "name": "Legerdemain",
+    "attrs": ["DEX"],
+    "description": "Used when lockpicking and pickpocketing items, or other such tricks."
+  },
   {
     "name": "Literacy",
     "attrs": ["INT"],
-    "description": "Measures background knowledge that would usually be obtained via formal education or reading books, such as history or religion. Deficiency in this skill normally indicates that the character is illiterate."
+    "description": "Measures knowledge that would usually be obtained via formal education or reading books, such as philosophy, mathematics, economics, or history. Deficiency in this skill normally indicates that the character is illiterate."
   },
   {
     "name": "Martial Arts",
@@ -47,7 +52,7 @@
   {
     "name": "Performance",
     "attrs": ["CHA"],
-    "description": "Captures a player's ability to sing, dance, play instruments, or otherwise entertain a crowd. Proficiency with this skill implies the ability to play at least one musical instruments."
+    "description": "Captures a player's ability to sing, dance, play instruments, or otherwise entertain a crowd. Proficiency with this skill implies the ability to play at least one musical instrument."
   },
   {
     "name": "Persuasion",
@@ -59,11 +64,10 @@
     "attrs": ["NST", "CHA"],
     "description": "The ability to discern more than is immediately obvious. When attempting to perceive a character’s honesty or motives, charisma becomes the base stat."
   },
-
   {
     "name": "Sorcery",
-    "attrs": ["NST"],
-    "description": "The ability to reach into one's inner magical reserves. Used when casting elemental magic."
+    "attrs": ["INT"],
+    "description": "Practical knowledge of magic, including the speedy recall and correct execution of verbal and somatic spell components."
   },
   {
     "name": "Stealth",

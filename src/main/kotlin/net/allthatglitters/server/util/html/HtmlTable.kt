@@ -50,7 +50,7 @@ class HtmlTable(attributes: MutableMap<String, String> = mutableMapOf()) :
 
 		fun withHeader(
 			content: String,
-			attributes: MutableMap<String, String> = mutableMapOf()
+			attributes: Map<String, String> = mutableMapOf()
 		): TableRow {
 			withContent(
 				HtmlObject(
@@ -63,7 +63,7 @@ class HtmlTable(attributes: MutableMap<String, String> = mutableMapOf()) :
 
 		fun withData(
 			content: String,
-			attributes: MutableMap<String, String> = mutableMapOf()
+			attributes: Map<String, String> = mutableMapOf()
 		): TableRow {
 			withContent(
 				HtmlObject(

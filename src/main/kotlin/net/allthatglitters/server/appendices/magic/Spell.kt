@@ -2,6 +2,7 @@ package net.allthatglitters.server.appendices.magic
 
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.drcorchit.justice.utils.json.JsonUtils.deserializeEnum
+import com.drcorchit.justice.utils.json.JsonUtils.toJsonObject
 import com.drcorchit.justice.utils.math.units.Measurement
 import com.drcorchit.justice.utils.math.units.TimeUnits
 import com.google.common.collect.ImmutableMap
@@ -18,13 +19,11 @@ class Spell(
 	val rarity: Rarity,
 	val discipline: Discipline,
 	val type: Type,
-	val target: Target?,
 	val duration: Measurement<TimeUnits.Time>?,
 	effect: String,
-	val note: String?,
 	trainingReqs: List<Requirement>,
 	val castingReqs: List<Requirement>,
-	val modifiers: ImmutableMap<String, Any>,
+	val modifiers: Map<String, Any>,
 ) : Trainable(name, effect, trainingReqs), HasProperties {
 	private val tag = name.normalize()
 
@@ -35,20 +34,12 @@ class Spell(
 		val category = discipline.describe(rarity, type)
 		output.withContent(HtmlObject("p").withContent(HtmlObject("i").withContent(category)))
 
-		if (target != null) {
-			output.withBoldedEntry("Target", target.render())
-		}
+		//if (target != null) output.withBoldedEntry("Target", target.render())
 		if (duration != null) {
 			output.withBoldedEntry("Duration", duration.toString())
 		}
 
 		output.withBoldedEntry("Effect", effect)
-		if (note != null) {
-			output.withContent(
-				HtmlObject("p").withStyle("margin-left: 25px")
-					.withContent("Note: $note")
-			)
-		}
 
 		val outerDiv = HtmlObject("div").withClass("background-inner")
 		val button = HtmlObject("button").withClass("collapsible")
@@ -80,6 +71,23 @@ class Spell(
 		return output.render()
 	}
 
+	fun serialize(): JsonObject {
+		val output = JsonObject()
+		output.addProperty("name", name)
+		output.addProperty("rarity", rarity.name)
+		output.addProperty("discipline", discipline.name)
+		output.addProperty("type", type.name)
+		output.addProperty("effect", effect)
+
+
+		val castingReqsInfo =
+			castingReqs.map { it.serialize() }.associate { it.first to it.second }.toJsonObject()
+
+		output.add("castingReqs", castingReqsInfo)
+
+		return output
+	}
+
 	fun linkTo(text: String = name): HtmlObject {
 		return HtmlObject("a")
 			.withAttribute("href", "${AppendixSpells.outputFile}#$tag")
@@ -107,7 +115,6 @@ class Spell(
 			val target = info.get("target")?.let { Target.deserialize(it) }
 			val duration = info.get("duration")?.let { TimeUnits.deserialize(it, round) }
 			val effect = info.get("effect").asString
-			val note = info.get("note")?.asString
 
 			val trainingReqs = deserializeReqs(info.get("training_reqs"))
 			val castingReqs = deserializeReqs(info.get("casting_reqs"))
@@ -122,10 +129,8 @@ class Spell(
 				rarity,
 				discipline,
 				type,
-				target,
 				duration,
 				effect,
-				note,
 				trainingReqs,
 				castingReqs,
 				modifiers
@@ -143,12 +148,10 @@ class Spell(
 
 		fun entryToReq(entry: Map.Entry<String, JsonElement>): Requirement {
 			return when (entry.key.lowercase()) {
-				"str" -> AttrReq(Attribute.STR, entry.value.asInt)
-				"dex" -> AttrReq(Attribute.DEX, entry.value.asInt)
-				"spd" -> AttrReq(Attribute.SPD, entry.value.asInt)
-				"int" -> AttrReq(Attribute.INT, entry.value.asInt)
-				"nst" -> AttrReq(Attribute.NST, entry.value.asInt)
-				"cha" -> AttrReq(Attribute.CHA, entry.value.asInt)
+				"str", "dex", "spd", "int", "nst", "cha" -> {
+					AttrReq(Attribute.parse(entry.key), entry.value.asInt)
+				}
+
 				"gold" -> GoldReq(entry.value.asInt)
 				"slots" -> SlotsReq(entry.value.asInt)
 				"time" -> TimeReq.parse(entry.value.asString)!!
@@ -168,7 +171,7 @@ class Spell(
 				//TODO parse skill reqs
 				else -> {
 					AppendixSpells.logger.warn("Unable to fully parse requirement: ${entry.key} : ${entry.value}")
-					OtherReq("${entry.key}: ${entry.value.asString}")
+					StringReq(entry.key, entry.value.asString)
 				}
 			}
 		}

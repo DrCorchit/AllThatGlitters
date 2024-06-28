@@ -20,11 +20,11 @@
         },
         {
           "tag": "li",
-          "content": "<b>Hard Knocks</b>: You can always conceal one small weapon on your person. This weapon can only be found if physically searched, and the person conducting the search passes a DT 15 {{skills.perception}} check. Further, your small weapon attacks never suffer from the improvised trait."
+          "content": "<b>Hard Knocks</b>: As an expert with small weapons, you can always conceal one small weapon on your person. This weapon can only be found if you are physically searched and the person conducting the search passes a DT 15 {{skills.perception}} check."
         },
         {
           "tag": "li",
-          "content": "<b>Thieves' Cant</b>: You know a special form of communication that allows you to communicate secret messages, up to 6 words per minute. The language is widely known among thieves and beggars, and may be shared with party members."
+          "content": "<b>Thieves' Cant</b>: You know a special form of communication that allows you to communicate secret messages, up to 6 words per minute. The language is widely known among thieves and beggars, and may be taught with party members."
         }
       ]
     }

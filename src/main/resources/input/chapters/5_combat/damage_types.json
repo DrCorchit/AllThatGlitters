@@ -2,31 +2,31 @@
   {
     "name": "Slashing",
     "color": "#CFF",
-    "effect": "Difficult to dodge. The target's dodge is reduced by 3 until the start of their next turn.",
+    "effect": "The target's DC is reduced by 2 until the start of their next turn.",
     "sources": "bladed weapons such as swords and axes, or the claws of wild animals."
   },
   {
     "name": "Piercing",
     "color": "#FFF",
-    "effect": "Difficult to block. The attack ignores ignores 25% of the target's block.",
+    "effect": "Critical hit damage is doubled.",
     "sources": "arrows, spears, and swords, or the fangs of monsters."
   },
   {
     "name": "Bludgeoning",
     "color": "#888",
-    "effect": "Cannot be fully blocked by armor. When an attack which deals bludgeoning damage is blocked, the target still takes two damage.",
+    "effect": "When a bludgeoning attack is blocked, the target still takes half damage.",
     "sources": "hammers, hooves or fists, and falling damage."
   },
   {
     "name": "Heat",
     "color": "#F80",
-    "effect": "Sets the target on fire. The target gains one level of burning.",
+    "effect": "The target gains one level of burning.",
     "sources": "burning creatures, pyromantic magic, or the breath of dragons."
   },
   {
     "name": "Cold",
     "color": "#4BF",
-    "effect": "Chills the opponent. The target gains one level of freezing.",
+    "effect": "The target gains one level of freezing.",
     "sources": "frost spells or environmental hazards such as blizzards or icy water."
   },
   {
@@ -36,21 +36,15 @@
     "sources": "explosions, and certain spells"
   },
   {
-    "name": "Poison",
-    "color": "#4D0",
-    "effect": "Carries with it additional effects dependant on the type of poison.",
-    "sources": "poisoned blades, the claws and fangs of venomous beasts, and certain spells."
-  },
-  {
     "name": "Lightning",
     "color": "#FF4",
-    "effect": "Cannot be dodged, but deals half damage versus opponents wearing metal armor.",
+    "effect": "Deals 1 Deals half damage versus opponents wearing metal armor.",
     "sources": "lightning or storm spells"
   },
   {
     "name": "Acid",
     "color": "#AF0",
-    "effect": "Decreases the efficacy of armor when blocked with armor or shields.",
+    "effect": "Erodes armor. Target BC is reduced by 1 if the attack is not dodged.",
     "sources": "bile, acidic venom, and certain alchemical mixtures."
   },
   {

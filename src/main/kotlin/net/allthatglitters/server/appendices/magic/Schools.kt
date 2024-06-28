@@ -45,4 +45,10 @@ enum class Discipline(val school: School, val adjective: String) {
             else -> "$rarity $adjective ${type.label}"
         }
     }
+
+    companion object {
+        fun parse(input: String): Discipline {
+            return entries.first { it.name.equals(input, true) }
+        }
+    }
 }

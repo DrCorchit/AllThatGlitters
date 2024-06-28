@@ -58,13 +58,13 @@
   {
     "name": "Freezing",
     "effect": "Accumulates. The target's {{attr.DEX}} is reduced by 1 for each turn of accumulated freezing. Accumulated freezing decreases by 1 at the end of every turn.",
-    "causes": "Cold damage, and ",
+    "causes": "Cold damage or frigid weather.",
     "recovery": "Fire damage, or short rest.",
     "notes": "Progresses to frozen when total freezing exceeds the target's {{attr.STR}} score."
   },
   {
     "name": "Frozen",
-    "effect": "The target is encased in ice and incapacitated. The target becomes vulnerable to {{damage.force}} and {{damage.bludgeoning}}, but resistant to all other forms of damage.",
+    "effect": "The target is encased in ice and incapacitated. They become vulnerable to {{damage.force}} and {{damage.bludgeoning}}, but resistant to all other forms of damage.",
     "causes": "Freezing buildup.",
     "recovery": "Short rest.",
     "notes": "End burning and pauses poisoned and bleeding status effects."
@@ -74,7 +74,7 @@
     "effect": "The target is incapacitated and becomes vulnerable to {{damage.force}} and {{damage.bludgeoning}}, but immune to all other forms of damage.",
     "causes": "Petrification spells, or gazing upon a Gorgon.",
     "recovery": "Basilisk Oil",
-    "notes": "Extremely rare."
+    "notes": "Ends burning and pauses poisoned and bleeding status effects."
   },
   {
     "name": "Poisoned",
@@ -92,7 +92,10 @@
   },
   {
     "name": "Madness",
-    "effect": "Temporarily insane, the target no longer speaks or thinks coherently. Their {{attr.INT}} and {{attr.CHA}} scores are reduced by half, and their speech comes out as incoherent babbling. The target must also make a DT 15 {{attr.NST}} saving throw or else immediately attack the nearest creature."
+    "effect": "Temporarily insane, the target no longer speaks or acts coherently. Their {{attr.INT}} and {{attr.CHA}} scores are reduced by half, and their speech comes out as incoherent babbling. The target must also make a DT 18 {{attr.NST}} saving throw or else immediately attack the nearest creature. Unless otherwise specified, the target may attempt a DT 15 {{attr.NST}] saving throw at the end of its turn to end the effect.",
+    "causes": "Certain forms of magic or poisons.",
+    "recovery": "Wait until the condition passes.",
+    "notes": ""
   },
   {
     "name": "Ensnared",
@@ -119,7 +122,7 @@
     "name": "Ephemeral Invisibility",
     "effect": "A fragile form of invisibility that dispels at anything more than a slight touch. When interacting with objects (such a handling a bow or opening a door), the target must make a DT 16 {{attr.DEX}} saving throw or lose invisibility. The target also loses invisibility after making a melee attack, being attacked, or touching a living being. The target otherwise gains all the benefits of true invisibility.",
     "causes": "Magical spells.",
-    "recover": "Wait until the condition passes.",
+    "recovery": "Wait until the condition passes.",
     "notes": ""
   }
 ]

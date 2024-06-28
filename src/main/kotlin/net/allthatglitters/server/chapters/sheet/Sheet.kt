@@ -35,12 +35,12 @@ object Sheet : HtmlFile(
 				.withStyle("background: white url(/images/books.png) no-repeat bottom; background-size: 100%") as HtmlTable
 			val row = table.withDefaultHeaderAttribute("class", "sub")
 				.nextRow()
-				row.withHeader("Ability").withStyle("width: 40%")
-			row.withHeader("Slots").withStyle("width: 10%")
-			row.withHeader("Ability").withStyle("width: 40%")
-			row.withHeader("Slots").withStyle("width: 10%")
+				row.withHeader("Ability", mapOf("style" to "width: 40%"))
+			row.withHeader("Slots", mapOf("style" to "width: 10%"))
+			row.withHeader("Ability", mapOf("style" to "width: 40%"))
+			row.withHeader("Slots", mapOf("style" to "width: 10%"))
 
-			for (i in 1..15) {
+			for (i in 1..skills.size) {
 				table.withRow("<br/>", "", "", "")
 			}
 			HtmlObject("td")
@@ -49,7 +49,7 @@ object Sheet : HtmlFile(
 		}
 		.withRule("7_rows") {
 			val output = HtmlContent()
-			for (i in 1..8) {
+			for (i in 1..7) {
 				output.withContent(
 					HtmlObject("tr")
 						.withContent(
