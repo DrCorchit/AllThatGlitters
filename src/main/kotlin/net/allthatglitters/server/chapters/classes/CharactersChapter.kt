@@ -18,6 +18,18 @@ object CharactersChapter : HtmlFile(
 		.withRule("races") {
 			races.values.joinToString("\n") { it.render() }
 		}
+		.withRule("sizes") {
+			val table = HtmlObject("table")
+			val headers = HtmlObject("tr")
+				.withContent("th", "Size")
+				.withContent("th", "Maximum Height")
+				.withContent("th", "Grid Size")
+				.withContent("th", "Terminal Velocity")
+				.withContent("th", "Notes")
+
+			table.withContent(headers)
+				.withAll(Size.entries.map { it.toRow() }).render()
+		}
 		.withRule("combat_categories") { CombatCategory.render() }
 		.withRule("combat_classes") {
 			classes.values.joinToString("\n") { it.render() }

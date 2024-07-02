@@ -22,7 +22,7 @@ object SheetChapter : HtmlFile(
 			)
 			Sheet.attributes.values.forEach {
 				table.withRow(
-					it.name,
+					it.displayName,
 					it.description,
 					it.effects.joinToString("<br/>") { effect -> "• $effect" },
 					it.interpretation ?: "N/A"

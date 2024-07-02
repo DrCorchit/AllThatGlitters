@@ -3,7 +3,7 @@ package net.allthatglitters.server.concepts.requirement
 import net.allthatglitters.server.chapters.sheet.Attribute
 import net.allthatglitters.server.chapters.sheet.Character
 
-class AttrReq(val attribute: Attribute, minLevel: Int) : ValueReq(attribute.name, minLevel) {
+class AttrReq(val attribute: Attribute, minLevel: Int) : ValueReq(attribute.displayName, minLevel) {
 	override fun getValue(character: Character): Int {
 		return character.attrs[attribute]!!
 	}

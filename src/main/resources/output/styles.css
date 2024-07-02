@@ -22,11 +22,11 @@ a:visited { color : #980 }
 a:hover { color: #fff }
 
 table { border-collapse: collapse; width: 100%; margin: 10px 0 10px 0; }
-tr:nth-child(odd) { background-color: #30302c; }
+tr:nth-child(odd) { background-color: #30302C; }
 tr:nth-child(even) { background-color: #151515; }
 tr:hover { background-color: #664; }
-th { font-size: 14pt; border: 1px solid #aa8; padding: 6px; text-align: center; color: #aa8; background-color: #303033; }
-td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
+th { font-size: 14pt; border: 1px solid #AA8; padding: 6px; text-align: center; color: #aa8; background-color: #303033; }
+td { font-size: 10pt; border: 1px solid #AA8; padding: 4px; }
 
 .row { display: flex; flex-wrap: nowrap; justify-content: flex-start; }
 .column {
@@ -88,14 +88,35 @@ td { font-size: 10pt; border: 1px solid #aa8; padding: 4px; }
     white-space: nowrap;
 }
 
-[data-tooltip]:hover::after {
+a.tooltip {
+  position: relative;
+
+  /* if want hover over icon instead of text based, uncomment below */
+  /*    background-image: url("../images/info_tooltip.svg");
+            /!* width and height of svg *!/
+            width: 16px;
+            height: 16px;*/
+}
+
+a.tooltip span {
+  display: none;
+}
+
+a.tooltip:hover span {
+  /* show tooltip */
   display: block;
+  /* position relative to container div.tooltip */
   position: absolute;
-  content: attr(data-tooltip);
-  padding: 5px;
-  border: 1px solid #CCC;
-  background: #30302A;
-  font-family: "Calibri";
-  font-size 10pt;
+  left: 0%;
+  bottom: 100%;
+  /* prettify */
+  padding: 8px;
   color: #CCC;
+  background-color: black;
+  border: 0.1em solid #AA8;
+  /* round the corners */
+  border-radius: 5px;
+  /* prevent too wide tooltip */
+  width: 200px;
+  z-index: 8;
 }

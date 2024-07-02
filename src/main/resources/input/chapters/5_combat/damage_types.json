@@ -48,6 +48,12 @@
     "sources": "bile, acidic venom, and certain alchemical mixtures."
   },
   {
+    "name": "Poison",
+    "color": "#4D0",
+    "effect": "Carries with it additional effects dependant on the type of poison.",
+    "sources": "poisoned blades, the claws and fangs of venomous beasts, and certain spells."
+  },
+  {
     "name": "Holy",
     "color": "#FFA",
     "effect": "An extraordinarily bright light of divine origin. Deals double damage to evil and the undead, but only half to good.",

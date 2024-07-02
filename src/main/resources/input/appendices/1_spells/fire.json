@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Mote o' Fire",
+    "rarity": "Common",
+    "discipline": "Fire",
+    "type": "Evocation",
+    "effect": "A mote of fire alights in your hand, hovering gently. The flame can be held for illumination, or thrown at an enemy within 30 feet. If thrown, roll for {{skills.accuracy}} again your target. On a hit, it takes 2d6 {{damage.heat}} damage.",
+    "castingReqs": {
+      "cost": 0
+    }
+  },
+  {
+    "name": "Arcane Flames",
+    "rarity": "Common",
+    "discipline": "Fire",
+    "type": "Evocation",
+    "effect": "Flowing flames surge from your outstretched hands, dealing 3d6 {{damage.heat}} damage to all creatures caught in the blaze.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Flame Armor",
+    "rarity": "Common",
+    "discipline": "Fire",
+    "type": "Evocation",
+    "effect": "Wreath your body in flame. The spell does not increase your {{BC}}, but causes enemies that start or end their turn next to you to take 1d12 {{damage.heat}} damage.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Flaming Sword",
+    "rarity": "Common",
+    "discipline": "Fire",
+    "type": "Enchantment",
+    "effect": "For one hour, A blade is imbued with the power of arcane fire. The blade deals 1d6 additional {{damage.heat}} damage.",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Fireball",
+    "rarity": "Common",
+    "discipline": "Fire",
+    "type": "Evocation",
+    "effect": "Hurl a blazing ball of fire which explodes upon impact. Roll for {{skills.accuracy}}",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Incinerate",
+    "rarity": "Common",
+    "discipline": "Fire",
+    "type": "Evocation",
+    "effect": "An flame of exceptional heat deals 2d12 {{damage.heat}} damage to a target within 15 feet.",
+    "castingReqs": {
+      "cost": 4
+    }
+  },
+  {
+    "name": "Create Lava",
+    "rarity": "Common",
+    "discipline": "Fire",
+    "type": "Evocation",
+    "effect": "Create a mass of lava, able to cover 100 square feet of terrain. Creatures which start or end their turn on lava take 3d6 {{damage.heat}} damage.",
+    "castingReqs": {
+      "cost": 4
+    }
+  },
+  {
+    "name": "Fire Elemental",
+    "rarity": "Common",
+    "discipline": "Fire",
+    "type": "Ritual",
+    "effect": "Summon a fire elemental. It knows the spells {{spells.mote_o_fire}}, {{spells.arcane_flames}} and {{spells.fireball}}, and has a continual flame cloak as if it had cast {{spells.flame_armor}}.",
+    "castingReqs": {
+      "cost": 10
+    }
+  },
+  {
+    "name": "Flame Wall",
+    "rarity": "Common",
+    "discipline": "Fire",
+    "type": "Evocation",
+    "effect": "A wall of flames, 20 feet in height, surges up from scorched and blackened ground. Creatures which pass through the wall take 3d12 {{damage.heat}} damage. Any creatures standing where the wall is cast take 2d12 {{damage.heat}} damage.",
+    "castingReqs": {
+      "cost": 5
+    }
+  },
+  {
+    "name": "Fire Storm",
+    "rarity": "Common",
+    "discipline": "Fire",
+    "type": "Evocation",
+    "effect": "Pure flame explodes from the caster bringing glorious devastation. The caster deals 4d20 {{damage.heat}} damage to all creatures within 50 feet.",
+    "castingReqs": {
+      "cost": 10
+    }
+  },
+  {
+    "name": "Fire Golem",
+    "rarity": "Academic",
+    "discipline": "Fire",
+    "type": "Ceremony",
+    "effect": "The ritual summons a fire golem, the most volatile of the golems.",
+    "castingReqs": {
+      "cost": 100
+    }
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    "name": "Guidance",
+    "rarity": "Common",
+    "discipline": "Divination",
+    "type": "Concentration",
+    "effect": "The caster touches an ally, giving them a 1d4 bonus to ability checks and saving throws for one round.",
+    "castingReqs": {
+      "cost": 1,
+      "concentration": 0
+    }
+  },
+  {
+    "name": "Alarm",
+    "rarity": "Common",
+    "discipline": "Divination",
+    "type": "Evocation",
+    "effect": "A minor spirit is infused into an object, keeping watch. If the spirit observes unexpected or suspicious behavior, it begins to screech as loudly as possible. Each minor spirit has its own manner of screeching, but they are invariably extremely loud and annoying. The spirit can respond to simple instructions once summoned, regarding when to remain silent, screech, or abandon its post. If the spell {{spells.minor_telepathy}} is known, the spirit can be instructed to transmit a silent telepathic alarm instead. If the spell {{spells.major_telepathy}} is known, it can also communicate details about the situation when the alarm is triggered.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Detect Magic",
+    "rarity": "Common",
+    "discipline": "Divination",
+    "type": "Evocation",
+    "effect": "You detect the presence of any ongoing spells. You may also detect",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Seek Spirit",
+    "rarity": "Common",
+    "discipline": "Divination",
+    "type": "Ritual",
+    "effect": "The caster enters a meditative state and calls out for assistance, either to angels, demons, or dragons. Up to three entities are called forth, identifying themselves by name, but not by rank or alignment. The caster may ask each entity three questions, in order to discern its nature. The questions are limited to hypotheticals. The caster remembers the names of these principalities and powers, whose names he may later call upon in times of need.",
+    "castingReqs": {
+      "cost": 0
+    }
+  },
+  {
+    "name": "Seance",
+    "rarity": "Common",
+    "discipline": "Divination",
+    "type": "Ritual",
+    "effect": "The caster enters a state of focus, sitting in a quiet and darkened room scented with incense. The caster calls a departed soul by name and asks them to come forward. A spirit responds and may answer questions, but might not answer truthfully or be the one which was called. The caster can attempt a DT 16 {{skills.perception}} (CHA) check to determine if the spirit has lied at any point so far during the ritual. Detecting a liar banishes the spirit but does not necessarily end the seance.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Diagnose",
+    "rarity": "Common",
+    "discipline": "Divination",
+    "type": "Evocation",
+    "effect": "Gain insight into the remaining hitpoints and willpower of an enemy monster.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Soul Sight",
+    "rarity": "Common",
+    "discipline": "Divination",
+    "type": "Evocation",
+    "effect": "For one hour, gain the ability to perceive latent spirits and the lingering deceased.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Augury",
+    "rarity": "Common",
+    "discipline": "Divination",
+    "type": "Ritual",
+    "effect": "TODO",
+    "castingReqs": {
+      "cost": 5
+    }
+  },
+  {
+    "name": "Astral Projection",
+    "rarity": "Common",
+    "discipline": "Divination",
+    "type": "Ritual",
+    "effect": "The caster enters a meditative state and enters the astral plane, the realm ordinarily accessible only to disincarnate entities. The nature of the astral is elucidated in {{files.appendix_bestiary}}. While in the astral, the caster may explore the lower astral to perceive a distorted version of the physical plane, or venture into the higher astral and converse with various entities in their natural environs, and request their names for summoning purposes.",
+    "castingReqs": {
+      "cost": 10
+    }
+  },
+  {
+    "name": "Ancient Name",
+    "rarity": "Common",
+    "discipline": "Divination",
+    "type": "Ritual",
+    "effect": "The ritual establishes an audience with an ancient and mighty spirit: a dragon, an archdemon, or an angel. Each type of spirit must be plied by a valuable thing of a specific kind: the dragon, by gold. The demon, by the blood of innocents. The angel, by sincerity and a pure heart. If the offering is lacking in quality or quantity, the spirit chastises the summoner and explains by what terms, if any, the spirit may be plied. If successful, the spirit joins the player as a summon for eight hours. The spirit fights at the player's side and is true to their word, but acts of their own volition otherwise.",
+    "castingReqs": {
+      "cost": 0
+    }
+  },
+  {
+    "name": "Futuresight",
+    "rarity": "Esoteric",
+    "discipline": "Divination",
+    "type": "Ritual",
+    "effect": "The player gains the ability to foresee events before they occur. For one hour, the player may see the result of skill checks before the underlying action is undertaken.",
+    "castingReqs": {
+      "cost": 10
+    }
+  }
+]

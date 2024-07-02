@@ -6,9 +6,9 @@ enum class School(val adjective: String, val primaryAttr: Attribute) {
     Alchemy("alchemical", Attribute.INT),
     Astrology("astrological", Attribute.INT),
     Biomancy("biological", Attribute.NST),
-    Psionics("psychic", Attribute.NST),
+    Psionics("psychic", Attribute.CHA),
     Conjuration("conjuration", Attribute.CHA),
-    Elementurgy("elemental", Attribute.CHA),
+    Elementurgy("elemental", Attribute.NST),
 }
 
 enum class Discipline(val school: School, val adjective: String) {
@@ -34,7 +34,7 @@ enum class Discipline(val school: School, val adjective: String) {
 
     Illusion(School.Psionics, "illusion"),
     Telepathy(School.Psionics, "telepathic"),
-    Telekinetics(School.Psionics, "telekinetic");
+    Telekinesis(School.Psionics, "telekinetic");
 
     fun describe(rarity: Rarity, type: Type): String {
         return when (this) {

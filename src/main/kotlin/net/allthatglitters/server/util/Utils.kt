@@ -2,7 +2,9 @@ package net.allthatglitters.server.util
 
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
+import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlObject
+import net.allthatglitters.server.util.html.HtmlString
 import net.allthatglitters.server.util.html.Renderable
 import java.io.File
 
@@ -37,9 +39,14 @@ fun <T> File.deserialize(deserializer: (JsonObject) -> T): List<T> {
 }
 
 fun makeTooltip(text: String, tooltip: String): Renderable {
-	return HtmlObject("span")
-		.withAttribute("data-tooltip", tooltip)
+	return makeTooltip(text, HtmlString(tooltip))
+}
+
+fun makeTooltip(text: String, tooltip: Renderable): Renderable {
+	return HtmlObject("a")
+		.withClass("tooltip")
 		.withContent(text.underline())
+		.withContent(HtmlObject("span").withContent(tooltip))
 }
 
 fun <K2, V2, K1 : K2, V1 : V2> Map<K1, V1>.inherit(parent: Map<K2, V2>): Map<K2, V2> {

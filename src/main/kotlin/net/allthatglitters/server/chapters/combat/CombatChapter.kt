@@ -2,10 +2,6 @@ package net.allthatglitters.server.chapters.combat
 
 import com.drcorchit.justice.utils.StringUtils.normalize
 import net.allthatglitters.server.Generator.Companion.generator
-import net.allthatglitters.server.appendices.magic.AppendixSpells.spells
-import net.allthatglitters.server.appendices.magic.Spell
-import net.allthatglitters.server.chapters.classes.CharactersChapter.races
-import net.allthatglitters.server.util.bold
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
@@ -50,7 +46,7 @@ object CombatChapter : HtmlFile(
 		}
 		.withRule("status_effects") {
 			val table =
-				HtmlTable().withHeaders("Name", "Effect", "Causes", "Recovery Strategy", "Notes")
+				HtmlTable().withHeaders("Name", "Effect", "Causes", "Counterplay", "Notes")
 			statusEffects.values.forEach {
 				table.withRow(it.name, it.effect, it.causes, it.recovery, it.notes)
 			}

@@ -1,0 +1,133 @@
+[
+  {
+    "name": "Find Familiar",
+    "rarity": "Common",
+    "discipline": "Invocation",
+    "type": "Ritual",
+    "effect": "The caster summons a lesser spirit as a familiar. The spirit takes the form of an imp, a pseudodragon, or a chupacabra.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Mage Hand",
+    "rarity": "Common",
+    "discipline": "Invocation",
+    "type": "Evocation",
+    "effect": "The caster expends 1 willpower to summon a floating spectral hand. The hand is a minor spirit, obedient and sentient but prone to occasional unbidden mischief. The hand can fly up to 100 yards away from its master, and carry an object weighing up to five pounds.",
+    "castingReqs": {
+      "cost": 0
+    }
+  },
+  {
+    "name": "Summon Weapon",
+    "rarity": "Common",
+    "discipline": "Invocation",
+    "type": "Evocation",
+    "effect": "Summon a small or standard weapon to hand for one hour. The weapon is partially transparent, ever burning with an eerie violet flame. The weapon deals the same damage as a weapon of steel.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Locust Swarm",
+    "rarity": "Common",
+    "discipline": "Invocation",
+    "type": "Evocation",
+    "effect": "A swarm of biting locusts swarms around a target, dealing 2d6 {{damage.piercing}} damage. The spell also has a chance to inflict {{status.poisoned}},",
+    "castingReqs": {
+      "cost": 4
+    }
+  },
+  {
+    "name": "Imbue Sentience",
+    "rarity": "Common",
+    "discipline": "Invocation",
+    "type": "Ritual",
+    "effect": "A minor spirit is bound to an inanimate object weighing less than one ton. TODO",
+    "castingReqs": {
+      "cost": 5
+    }
+  },
+  {
+    "name": "Soul Dart",
+    "rarity": "Common",
+    "discipline": "Invocation",
+    "type": "Evocation",
+    "effect": "The caster imbues some of their life force into a number of spectral darts, up to four. Lose 1 hp and one willpower for each dart summoned. Each dart deals 1d6 piercing damage on a hit, and cannot miss.",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Sentient Weapon",
+    "rarity": "Common",
+    "discipline": "Invocation",
+    "type": "Evocation",
+    "effect": "The spirit of a fallen warrior is summoned from the astral to imbue a summoned weapon with sentience for one hour. The spirit possess a weapon summoned with {{spells.summon_weapon}}, and causes it hover in place and attack on its own.",
+    "castingReqs": {
+      "cost": 4
+    }
+  },
+  {
+    "name": "Exorcism",
+    "rarity": "Common",
+    "discipline": "Invocation",
+    "type": "Ritual",
+    "effect": "The caster attempts to purge a demon or unnatural host from a possessed body. The caster rolls for {{skills.sorcery}} while the possessing spirit rolls for {{attr.NST}}. If the caster rolls higher, the spirit is cast out, unless it is extremely powerful.",
+    "castingReqs": {
+      "cost": 10
+    }
+  },
+  {
+    "name": "Cloud of Daggers",
+    "rarity": "Common",
+    "discipline": "Invocation",
+    "type": "Concentration",
+    "effect": "Summon dozens of daggers from the astral plane begin to swirl around the designated region. Creatures within take 2d4 slashing and 2d4 piercing damage per turn.",
+    "castingReqs": {
+      "cost": 3,
+      "concentration": 0
+    }
+  },
+  {
+    "name": "Demonic Posession",
+    "rarity": "Forbidden",
+    "discipline": "Invocation",
+    "type": "Evocation",
+    "effect": "The caster calls forth a lesser demon and commands it to bind the chosen creature. The demon attempts possession, rolling for {{attr.CHA}} against the victim's current willpower. If successful, the target is possessed for one hour, at which point they may make an additional saving throw to escape possession.",
+    "castingReqs": {
+      "cost": 10
+    }
+  },
+  {
+    "name": "Invade Body",
+    "rarity": "Forbidden",
+    "discipline": "Invocation",
+    "type": "Evocation",
+    "effect": "The caster identifies a victim and attempts to permanently enter their body. The caster rolls for {{skills.sorcery}} against the target's willpower score. If successful, the victim is abruptly torn from their body and cast into the astral plane, while their attacker inhabits their body. If this spell is cast successful while already incarnate, the caster's previous body suffers cardiac arrest and undergoes irreversible damage after 2d6 minutes.",
+    "castingReqs": {
+      "cost": 9
+    }
+  },
+  {
+    "name": "Reincarnation",
+    "rarity": "Esoteric",
+    "discipline": "Invocation",
+    "type": "Ceremony",
+    "effect": "Draconic spirits answer the ceremonial call, allowing a living and a deceased soul exchange places. The reincarnated spirit inhabits the new body, while the sacrificial participant departs into the astral plane as a servant of dragons. The dragons accept only willing sacrifices, but otherwise do not question the methods of the ceremony. Once reincarnated, the soul retains both their old memories and those of the body's original inhabitant.",
+    "castingReqs": {
+      "cost": 100
+    }
+  },
+  {
+    "name": "Resurrection",
+    "rarity": "Esoteric",
+    "discipline": "Invocation",
+    "type": "Ceremony",
+    "effect": "A deceased soul is returned to its body and made whole again, in a manner holy and pure. If the soul's body was destroyed, a new one in the same likeness is formed. The spirit to be resurrected must be good aligned. Otherwise, the leader must pass a DT 18 {{skills.persuasion}} check to persuade the angels that it is righteous to make an exception and overturn the course of nature. If the spirit to resurrect is evil, the",
+    "castingReqs": {
+      "cost": 150
+    }
+  }
+]

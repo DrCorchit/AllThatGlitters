@@ -16,13 +16,10 @@ object AppendixWeapons : HtmlFile(
 	private val headers =
 		arrayOf("Name", "Damage", "Price", "Modifiers", "Requirements", "Notes")
 
-	val modifiers =
-		(EnumModifier.entries.map { it.displayName to it.description } +
-				ValueModifier.Type.entries.map { it.displayName to it.description })
-			.associateBy { it.first.normalize() }
+	val keywords = WeaponKeyword.entries.associateBy { it.name.normalize() }
 
-	fun lookupModifier(name: String): Pair<String, String> {
-		return modifiers[name.normalize()]
+	fun lookupModifier(name: String): Keyword {
+		return keywords[name.normalize()]
 			?: throw NoSuchElementException("No such modifier: $name")
 	}
 
@@ -50,8 +47,8 @@ object AppendixWeapons : HtmlFile(
 		appendElement("h4", "Weapon Modifiers")
 		appendElement("p", "Certain weapons have special properties, which affect how they behave:")
 		val list = HtmlObject("ul")
-			.withAll(modifiers.entries.map {
-				HtmlObject("li").withContent("<b>${it.value.first}</b>: ${it.value.second}</li>")
+			.withAll(keywords.entries.map {
+				HtmlObject("li").withContent(it.value.render())
 			})
 		append(list)
 

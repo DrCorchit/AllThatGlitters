@@ -1,0 +1,144 @@
+[
+  {
+    "name": "Frostbite",
+    "rarity": "Common",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "A conical spray of frost deals 1d6 {{damage.cold}} damage to all enemies caught within.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Shape Water",
+    "rarity": "Common",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "You may shape water into a form you choose, and freeze so that it retains its form. This spell can manipulate, freeze, or melt up to 100 pounds of water per cast.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Icicle",
+    "rarity": "Common",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "An icy spear is hurled at a foe, dealing 1d8 {{damage.piercing}} and 1d6 {{damage.cold}} damage.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Water Walking",
+    "rarity": "Common",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "For one hour, you gain the ability to walk on water as if it were solid ground. When the spell is about to expire, the water's surface betakes a spongy and soft texture, as if it were thick mud or bedding. If cast while the mage is partially submerged, you are propelled to the surface of the water. If fully underwater, the spell has no effect. You do not take fall damage if you cast this spell before falling onto the surface of the water.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Ice Elemental",
+    "rarity": "Common",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "Summon and bid an ice elemental from the plane of water. The ice elemental knows the spells {{spells.frostbite}}, {{spells.icicle}}, {{spells.water_walking}}, and {{spells.become_water}}.",
+    "castingReqs": {
+      "cost": 4
+    }
+  },
+  {
+    "name": "Steam Blast",
+    "rarity": "Common",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "A gout of pressurized steam spouts from your outstretched hand, dealing 1d10 {{damage.heat}} damage and 1d10 {{damage.force}} damage. The heat damage dealt by this spell does not inflict {{status.burning}}.",
+    "castingReqs": {
+      "cost": 4
+    }
+  },
+  {
+    "name": "Ice Wall",
+    "rarity": "Common",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "Construct a wall of ice, one yard thick and up to 10 yards in length. Creatures inside the wall when it forms must make a DT 8 {{skills.mobility}} saving throw or become encased in the wall for the duration of the spell. Creatures which pass the saving throw may choose to stand on top of the wall or be pushed to one side.",
+    "castingReqs": {
+      "cost": 6
+    }
+  },
+  {
+    "name": "Wellspring",
+    "rarity": "Academic",
+    "discipline": "Water",
+    "type": "Concentration",
+    "effect": "Water spouts forth from a point designated by the caster, releasing up to 10 gallons per minute.",
+    "castingReqs": {
+      "cost": 2,
+      "concentration": 1
+    }
+  },
+  {
+    "name": "Become Water",
+    "rarity": "Academic",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "The caster becomes liquid water for up to eight hours, able to flow and reform according to their will.",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Ice Armor",
+    "rarity": "Academic",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "Encase yourself in armor of solid ice. You gain immunity to {{damage.cold}} damage and you BC increases by 7. The spell lasts for 1 minute or until you take 10 {{damage.bludgeoning}} damage.",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Blizzard",
+    "rarity": "Common",
+    "discipline": "Water",
+    "type": "Concentration",
+    "effect": "You summon a small blizzard, creating a region of extremely frigid air within a radius of 100 feet that lasts for 1 hour. Targets within take 1d12 {{damage.cold}} damage and 1d12 {{damage.force}} damage per turn.",
+    "castingReqs": {
+      "cost": 6,
+      "concentration": 2
+    }
+  },
+  {
+    "name": "Ice Golem",
+    "rarity": "Academic",
+    "discipline": "Water",
+    "type": "Ceremony",
+    "effect": "Summon and bid a powerful ice golem.",
+    "castingReqs": {
+      "cost": 50
+    }
+  },
+  {
+    "name": "Ice Statue",
+    "rarity": "Academic",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "An enemy makes a DT 16 {{skills.defense}} aving throw or is instantaneously encased into a block of ice. On a successful save, the target accumulates 3 levels of {{status.freezing}} instead. If this is sufficient to trigger the {{status.frozen}} status, then so be it.",
+    "castingReqs": {
+      "cost": 6
+    }
+  },
+  {
+    "name": "Tsunami",
+    "rarity": "Esoteric",
+    "discipline": "Water",
+    "type": "Evocation",
+    "effect": "A great wall of water appears, sweeping across the battlefield in a wide berth 100 feet wide. Targets take 4d10 {{damage.force}} damage and must make a DT 20 {{skills.mobility}} saving throw or be pushed up to 100 yards by the wall of water.",
+    "castingReqs": {
+      "cost": 10
+    }
+  }
+]

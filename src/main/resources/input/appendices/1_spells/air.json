@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Thunderbolt",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "Evocation",
+    "effect": "A bolt of lightning from the heavens strikes a single enemy, dealing 1d10 damage.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Electrocute",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "Evocation",
+    "effect": "Attempt an unarmed attack on an opponent. On a success, deal 1d8 {{damage.lightning}} damage in addition to your normal damage.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Cyclone",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "Concentration",
+    "effect": "A swiftly swirling whirlwind forms in the location you choose. On your turn, you can move the cyclone along a path up to 20 feet in length, dealing 2d6 {{damage.force}} damage to each target hit.",
+    "castingReqs": {
+      "cost": 3,
+      "concentration": 2
+    }
+  },
+  {
+    "name": "Shocking Blade",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "Enchantment",
+    "effect": "Imbue a metallic weapon you can touch with the power of lightning. The weapon deals 1d6 {{damage.lightning}} damage for one hour.",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Blustering Gust",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "Evocation",
+    "effect": "A gust of wind blusters forth, dealing no damage but pushing enemies about. An enemy caught in the gust is pushed 20 feet in the direction of the gust. On a successful DT 10 {{skills.defense}} saving throw, the target is only pushed half that distance.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Soar",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "Evocation",
+    "effect": "Gain the ability of wingless flight for five minutes. While the spell is active, you may move through the air at 15 feet per second.",
+    "castingReqs": {
+      "cost": 4
+    }
+  },
+  {
+    "name": "Lightning Dash",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "Evocation",
+    "effect": "Teleport to a location you can see within 15 feet. If any enemies are between you and your destination, they take 1d12 {{damage.lightning}} damage.",
+    "castingReqs": {
+      "cost": 4
+    }
+  },
+  {
+    "name": "Air Elemental",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "Evocation",
+    "effect": "Summons an air elemental to do your bidding. The elemental knows {{spells.blustering_gust}}, {{spells.soar}}, {{spells.lightning_dash}}, abd {{spells.thunderbolt}}.",
+    "castingReqs": {
+      "cost": 10
+    }
+  },
+  {
+    "name": "Become Vapor",
+    "rarity": "Esoteric",
+    "discipline": "Air",
+    "type": "Evocation",
+    "effect": "Become a cloud of vapor. You become immune to slashing, piercing, and bludgeoning damage. You may change your shape to fit around or between narrow obstacles or enemies. You may not delve underwater, and if this spell is cast underwater, you automatically shoot to the surface.",
+    "castingReqs": {
+      "cost": 8
+    }
+  },
+  {
+    "name": "Chain Lighting",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "Concentration",
+    "effect": "A bolt of blue lightning leaps from your outstretched hand to an enemy within range, and then to an additional enemy within 10 feet, if available. Up to three targets take 3d8 {{damage.lightning}} damage.",
+    "castingReqs": {
+      "cost": 6,
+      "concentration": 3
+    }
+  },
+  {
+    "name": "Lighting Storm",
+    "rarity": "Common",
+    "discipline": "Air",
+    "type": "Concentration",
+    "effect": "A dark thundrous cloud spreads over a 50-foot radius around a point up to 100 yards away. Each target within the area takes 1d20 {{damage.lightning}} damage.",
+    "castingReqs": {
+      "cost": 10,
+      "concentration": 5
+    }
+  },
+  {
+    "name": "Storm Golem",
+    "rarity": "Esoteric",
+    "discipline": "Air",
+    "type": "Ceremony",
+    "effect": "Summon the mighty storm golem, the most powerful elemental entity which can be summoned and bidden.",
+    "castingReqs": {
+      "cost": 200
+    }
+  },
+  {
+    "name": "Hurricane",
+    "rarity": "Esoteric",
+    "discipline": "Air",
+    "type": "Ceremony",
+    "effect": "By the power of this ceremony, a mighty hurricane is formed and travels along the path you have ordained. Roll a d20. The category of the hurricane is as follows: <ul><li><b>1-9</b>:1</li><li><b>11-14</b></li><li><b>15-17</b>: 3</li><li><b>18-19</b>: 4</li><li><b>20</b>: 5</li></ul>",
+    "castingReqs": {
+      "cost": 300
+    }
+  }
+]

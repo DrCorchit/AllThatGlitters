@@ -7,6 +7,8 @@ import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.appendices.items.Item
 import net.allthatglitters.server.util.HasProperties
 import net.allthatglitters.server.util.html.HtmlObject
+import net.allthatglitters.server.util.html.Renderable
+import net.allthatglitters.server.util.makeTooltip
 import net.allthatglitters.server.util.underline
 
 data class Armor(
@@ -32,10 +34,8 @@ data class Armor(
 		return row
 	}
 
-	fun toTooltip(): HtmlObject {
-		return HtmlObject("span")
-			.withAttribute("data-tooltip", "$description BC: $bc")
-			.withContent(name.lowercase().underline())
+	fun toTooltip(): Renderable {
+		return makeTooltip(name.lowercase(), "$description BC: $bc")
 	}
 
 	companion object : HasProperties {

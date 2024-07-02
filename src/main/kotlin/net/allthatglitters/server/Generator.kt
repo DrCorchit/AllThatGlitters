@@ -1,6 +1,7 @@
 package net.allthatglitters.server
 
 import com.drcorchit.justice.utils.StringUtils.normalize
+import com.drcorchit.justice.utils.StringUtils.parseEnum
 import com.drcorchit.justice.utils.logging.Logger
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -17,9 +18,10 @@ import net.allthatglitters.server.appendices.items.Item
 import net.allthatglitters.server.appendices.magic.AppendixSpells
 import net.allthatglitters.server.appendices.magic.Spell
 import net.allthatglitters.server.appendices.weapons.AppendixWeapons
-import net.allthatglitters.server.appendices.weapons.Modifier
+import net.allthatglitters.server.appendices.weapons.Keyword
 import net.allthatglitters.server.appendices.weapons.Weapon
 import net.allthatglitters.server.chapters.classes.CharactersChapter
+import net.allthatglitters.server.chapters.classes.Size
 import net.allthatglitters.server.chapters.combat.CombatChapter
 import net.allthatglitters.server.chapters.combat.DamageType
 import net.allthatglitters.server.chapters.combat.StatusEffect
@@ -28,7 +30,7 @@ import net.allthatglitters.server.chapters.leveling.LevelingChapter
 import net.allthatglitters.server.chapters.magic.MagicChapter
 import net.allthatglitters.server.chapters.noncombat.NonCombatChapter
 import net.allthatglitters.server.chapters.sheet.*
-import net.allthatglitters.server.concepts.Abbreviations
+import net.allthatglitters.server.concepts.Abbreviation
 import net.allthatglitters.server.util.Collapsible
 import net.allthatglitters.server.util.HasProperties
 import net.allthatglitters.server.util.Navigation
@@ -72,10 +74,11 @@ class Generator(val version: String, val inputDir: File, val outputDir: File) : 
 			}
 			"attr" -> Attribute.Companion
 			"skills" -> Skill.Companion
+			"size" -> Size.Companion
 			"armor" -> Armor.Companion
 			"items" -> Item.Companion
 			"weapons" -> Weapon.Companion
-			"weapon_modifiers" -> Modifier.Companion
+			"weapon_modifiers" -> Keyword.Companion
 			"damage" -> DamageType.Companion
 			"status", "status_effects" -> StatusEffect.Companion
 			"spells" -> Spell.Companion
@@ -83,7 +86,7 @@ class Generator(val version: String, val inputDir: File, val outputDir: File) : 
 			"maneuvers" -> Ability.Companion
 			"feats" -> Ability.Companion
 			else -> try {
-				Abbreviations.valueOf(property.uppercase()).getReplacement()
+				property.parseEnum<Abbreviation>()
 			} catch (e : Exception) {
 				null
 			}

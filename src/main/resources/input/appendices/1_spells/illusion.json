@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Detect Illusion",
+    "rarity": "Common",
+    "discipline": "Illusion",
+    "type": "Evocation",
+    "effect": "For one hour after casting the spell, you psychically discern the presence of illusions.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Fleeting Illusion",
+    "rarity": "Common",
+    "discipline": "Illusion",
+    "type": "Evocation",
+    "effect": "You manifest a small illusion, which may have a physical and auditory component. The illusion may be used to lure, mystify, repel, or even assist the target. However, if the target passes a DT 16 {{skills.perception}} check, they are able to perceive the illusion.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Illusory Disguise",
+    "rarity": "Common",
+    "discipline": "Illusion",
+    "type": "Evocation",
+    "effect": "For one hour, your face appears to change to match any face you have seen previously. Your clothes, stature, and body type do not change unless you also know the {{spells.illusory_being}} spell. You may dismiss this spell at will before the duration is through. Anyone who scrutinizes your face may make a DT 18 {{skills.perception}} check to see past your disguise.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Dispell Illusion",
+    "rarity": "Common",
+    "discipline": "Illusion",
+    "type": "Evocation",
+    "effect": "An illusion spell you have detected is permanently dispelled. Some illusions may make a saving throw based on the charisma of the caster.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Illusory Being",
+    "rarity": "Common",
+    "discipline": "Illusion",
+    "type": "Evocation",
+    "effect": "You create an illusory being of any of the following types: <i>Beguiling</i>, <i>Terrifying</i>, <i>Distracting</i>, or <i>Ordinary</i>. The being appears in a location you can see, and obeys your telepathic command for the duration of the spell.",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Fool's Invisibility",
+    "rarity": "Common",
+    "discipline": "Illusion",
+    "type": "Evocation",
+    "effect": "The target is filled with the inexplicable and illogical conviction that they are fully invisible.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Mass Illusion",
+    "rarity": "Common",
+    "discipline": "Illusion",
+    "type": "Evocation",
+    "effect": "You create a powerful illusion visible from a great distance to any number of people. The visual has a",
+    "castingReqs": {
+      "cost": 6
+    }
+  }
+]

@@ -56,6 +56,34 @@
     "notes": ""
   },
   {
+    "name": "Prone",
+    "effect": "The target cannot move or take actions that require both hands. DC is reduced by half. Ranged attacks against prone creatures have disadvantage.",
+    "causes": "Force damage and various martial abilities.",
+    "recovery": "Use the move action to stand up.",
+    "notes": "Standing from the prone position costs one half of remaining movement points."
+  },
+  {
+    "name": "Lethargic",
+    "effect": "The target must expend willpower to take the move action. All willpower is exhuasted if traveling more than one mile on foot. The target also has disadvantage on skill checks and saving throws.",
+    "causes": "Diseases, and necromantic curses",
+    "recovery": "Wait until the condition passes",
+    "notes": "Typically not inflicted during combat, since diseases take an hour or to so to take hold."
+  },
+  {
+    "name": "Madness",
+    "effect": "Temporarily insane, the target no longer speaks or acts coherently. Their {{attr.INT}} and {{attr.CHA}} scores are reduced by half, and their speech comes out as incoherent babbling. The target must also make a DT 18 {{attr.NST}} saving throw or else immediately attack the nearest creature. Unless otherwise specified, the target may attempt a DT 15 {{attr.NST}] saving throw at the end of its turn to end the effect.",
+    "causes": "Certain forms of magic or poisons.",
+    "recovery": "Wait until the condition passes.",
+    "notes": ""
+  },
+  {
+    "name": "Restrained",
+    "effect": "The target cannot move and their DC is reduced by half. They also have disadvantage when making melee and ranged attacks.",
+    "causes": "Ropes, nets, spiderwebs, or entangling vines or tentacles.",
+    "recovery": "Receiving help from an ally or taking {{damage.slashing}} or {{damage.heat}} damage.",
+    "notes": "Vines and webbing can typically be rent by passing a DT 14 {{attr.STR}} saving throw, ending the effect."
+  },
+  {
     "name": "Freezing",
     "effect": "Accumulates. The target's {{attr.DEX}} is reduced by 1 for each turn of accumulated freezing. Accumulated freezing decreases by 1 at the end of every turn.",
     "causes": "Cold damage or frigid weather.",
@@ -84,45 +112,24 @@
     "notes": "Monsters not composed of living flesh are immune."
   },
   {
-    "name": "Prone",
-    "effect": "The target cannot move or take actions that require both hands. DC is reduced by half. Ranged attacks against prone creatures have disadvantage.",
-    "causes": "Force damage and various martial abilities.",
-    "recovery": "Use the move action to stand up.",
-    "notes": "Standing from the prone position costs one half of remaining movement points."
-  },
-  {
-    "name": "Madness",
-    "effect": "Temporarily insane, the target no longer speaks or acts coherently. Their {{attr.INT}} and {{attr.CHA}} scores are reduced by half, and their speech comes out as incoherent babbling. The target must also make a DT 18 {{attr.NST}} saving throw or else immediately attack the nearest creature. Unless otherwise specified, the target may attempt a DT 15 {{attr.NST}] saving throw at the end of its turn to end the effect.",
-    "causes": "Certain forms of magic or poisons.",
-    "recovery": "Wait until the condition passes.",
-    "notes": ""
-  },
-  {
-    "name": "Ensnared",
-    "effect": "Restrained by some trap, the target cannot move and their DC is reduced by half. They also have disadvantage when making melee and ranged attacks.",
-    "causes": "Ropes, nets, spiderwebs, or entangling vines or tentacles.",
-    "recovery": "Receiving help from an ally or taking {{damage.slashing}} or {{damage.heat}} damage.",
-    "notes": "Vines and webbing can typically be rent by passing a DT 14 {{attr.STR}} saving throw, ending the effect."
-  },
-  {
     "name": "Levitated",
-    "effect": "The target is levitating, unable to plant their feet firmly on the ground. The target cannot take the move action or make melee attacks.",
+    "effect": "The target is levitating, unable to plant their feet firmly on the ground. The target cannot move by mundane means, or make melee attacks.",
     "causes": "Magical spells.",
-    "recovery": "Wait until the condition passes.",
+    "recovery": "Break the caster's concentration.",
     "notes": ""
   },
   {
     "name": "Invisibility",
     "effect": "The target cannot be seen or detected via light sources, including magical light sources. The target has advantage when attempting to hide or make melee attacks. Enemies attempting to make melee or ranged attacks against the target have disadvantage.",
     "causes": "Magical spells or alchemical potions.",
-    "recovery": "Wait until the condition passes.",
+    "recovery": "",
     "notes": ""
   },
   {
     "name": "Ephemeral Invisibility",
-    "effect": "A fragile form of invisibility that dispels at anything more than a slight touch. When interacting with objects (such a handling a bow or opening a door), the target must make a DT 16 {{attr.DEX}} saving throw or lose invisibility. The target also loses invisibility after making a melee attack, being attacked, or touching a living being. The target otherwise gains all the benefits of true invisibility.",
+    "effect": "A fragile form of invisibility that dispels at anything more than a slight touch. When interacting with objects (such a handling a bow or opening a door), the target must make a DT 16 {{attr.DEX}} saving throw or lose invisibility. The target also loses invisibility after making a melee attack or being attacked. The target otherwise gains all the benefits of true invisibility.",
     "causes": "Magical spells.",
-    "recovery": "Wait until the condition passes.",
+    "recovery": "",
     "notes": ""
   }
 ]

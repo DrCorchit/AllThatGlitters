@@ -3,41 +3,29 @@ package net.allthatglitters.server.chapters.sheet
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonObject
 import net.allthatglitters.server.Generator.Companion.generator
+import net.allthatglitters.server.appendices.weapons.Keyword
 import net.allthatglitters.server.util.HasProperties
-import net.allthatglitters.server.util.Tooltip
-import net.allthatglitters.server.util.html.HtmlContent
+import net.allthatglitters.server.util.bold
 import net.allthatglitters.server.util.html.HtmlObject
-import net.allthatglitters.server.util.html.HtmlString
 import net.allthatglitters.server.util.html.Renderable
 
 data class Attribute(
+	override val abbr: String,
 	val name: String,
-	val abbr: String,
-	val description: String,
+	override val description: String,
 	val interpretation: String?,
 	val effects: Set<String>
-) : Renderable, HasProperties, Tooltip {
-	override val defaultText = abbr
-	override val value = description
+) : Renderable, HasProperties, Keyword {
+	override val displayName get() = name
 
 	override fun render(): String {
-		val list = HtmlObject("ul").withAll(effects.map { HtmlString(it).wrap("li") })
-
-		val output = HtmlContent()
-			.withContent(HtmlObject("h5").withContent(name))
-			.withContent(HtmlObject("p").withContent(description))
-			.withContent(HtmlObject("p").withContent("Gameplay Effects:"))
-			.withContent(list)
-		if (interpretation != null) {
-			output.withContent(HtmlObject("p").withContent("Real-life Equivalence: $interpretation"))
-		}
-		return output.render()
+		return abbr.bold()
 	}
 
 	override fun getProperty(property: String): Any? {
 		return when (property) {
-			"name" -> name
 			"abbr" -> abbr
+			"name" -> displayName
 			"description" -> description
 			"effects" -> effects.joinToString()
 			else -> null
@@ -45,7 +33,7 @@ data class Attribute(
 	}
 
 	override fun toString(): String {
-		return name
+		return displayName
 	}
 
 	companion object : HasProperties {
@@ -79,7 +67,7 @@ data class Attribute(
 
 			Sheet.attributes.values.zip(listOf(left, center, right, left, center, right))
 				.forEach {
-					val text = "${it.first.name}: ${stats[it.first]}"
+					val text = "${it.first.displayName}: ${stats[it.first]}"
 					it.second.withContent("p", text)
 				}
 

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Spiderweb",
+    "rarity": "Common",
+    "discipline": "Wild",
+    "type": "Evocation",
+    "effect": "A gout of sticky webbing shoots from the caster's outstretched hands. The target must make a DT 14 {{skills.mobility}} saving throw or become {{status.restrained}}, unable to move.",
+    "castingReqs": {
+      "cost": 0
+    }
+  },
+  {
+    "name": "Snakebite",
+    "rarity": "Common",
+    "discipline": "Wild",
+    "type": "Evocation",
+    "effect": "The appearance of a serpent lashes out from the caster's outstretched hand, striking towards a target up to 12 feet away. The caster makes a {{skills.nature}} check against the target's mitigation. If successful, the target takes 1d12 {{damage.poison}} damage.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Cat's Eye",
+    "rarity": "Common",
+    "discipline": "Wild",
+    "type": "Evocation",
+    "effect": "The target gains the ability to see in the dark, seeing in pitch blackness as if it were dim light, and in dim light as if it were bright light.",
+    "castingReqs": {
+      "cost": 0
+    }
+  },
+  {
+    "name": "Fish's lung",
+    "rarity": "Esoteric",
+    "discipline": "Wild",
+    "type": "Evocation",
+    "effect": "The caster gains the ability to breathe water for 1 hour.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Eagle's Talons",
+    "rarity": "Common",
+    "discipline": "Wild",
+    "type": "Evocation",
+    "effect": "The caster's hands temporarily grow sharp talons, increasing their unarmed melee damage by 1d6 plus their {{skills.nature}} proficiency in {{damage.piercing}} damage. In addition, they gain advantage on grappling checks.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Hawk's Eyes",
+    "rarity": "Common",
+    "discipline": "Wild",
+    "type": "Evocation",
+    "effect": "For one hour, gain advantage on perception checks. You see objects clearly, up to a distance of 10 miles.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Raven's Wings",
+    "rarity": "Esoteric",
+    "discipline": "Wild",
+    "type": "Evocation",
+    "effect": "Feathered wings sprout from your back, imbuing you with the ability to fly. The coloration and shape of the wings is unique to each caster, often a reflection of their underlying personality. Casting this spell for the first time is often treated as a coming-of-age ritual in druid circles.",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Lacerate",
+    "rarity": "Esoteric",
+    "discipline": "Wild",
+    "type": "Evocation",
+    "effect": "You make a horizontal slashing motion with your hands, causing a large spectral paw to slice their air with its claws. Enemies lined up horizontally in front of you must make a {{attr.STR}} saving throw or take 2d12 {{damage.slashing}} damage. On a successful save, they take half damage.",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Mole",
+    "rarity": "Esoteric",
+    "discipline": "Wild",
+    "type": "Ritual",
+    "effect": "For one hour, gain the ability to tunnel through dirt. Your tunneling speed is one foot per second. Creatures cannot follow you in your burrow unless you expend 1 willpower per 10 feet to make it wide enough to follow.",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Owl's Wisdom",
+    "rarity": "Esoteric",
+    "discipline": "Wild",
+    "type": "Ritual",
+    "effect": "The caster's {{attr.INT}} increases by 1d8 for 8 hours.",
+    "castingReqs": {
+      "cost": 5
+    }
+  },
+  {
+    "name": "Rhino's Hide",
+    "rarity": "Esoteric",
+    "discipline": "Wild",
+    "type": "Evocation",
+    "effect": "If not wearing armor, the caster's skin becomes as tough as a Rhinoceros, increasing their BC by 8 for 5 turns. They also gain resistance to {{damage.acid}}, {damage.lightning}} and {{damage.heat}} damage.",
+    "castingReqs": {
+      "cost": 5
+    }
+  },
+  {
+    "name": "Circle of Life",
+    "rarity": "Esoteric",
+    "discipline": "Wild",
+    "type": "Evocation",
+    "effect": "The caster takes 2d6 damage, but the target is healed for thrice that amount. If the caster falls unconscious as a result of casting this spell, the target is healed completely.",
+    "castingReqs": {
+      "cost": 5
+    }
+  }
+]

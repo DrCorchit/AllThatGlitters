@@ -11,28 +11,28 @@ enum class CombatCategory(
 	Warrior(
 		"For those who want to play as someone sturdy, wearing heavy armor and fighting with weapons like swords, spears, and halberds.",
 		listOf("Barbarian", "Knight", "Mercenary", "Veteran"),
-		listOf("Elite Strength", "Martial Arts Proficiency", "Ability: Heavy Attack")
+		listOf("+1 Strength", "Martial Arts Proficiency", "Ability: Heavy Attack")
 	),
 	Renegade(
 		"For those focused on stealth, sneak attacks, and subterfuge—or assassination and seduction!",
 		listOf("Assassin", "Minstrel", "Thief", "Tinker"),
-		listOf("Elite Dexterity", "Stealth Proficiency", "Ability: Precision Strike")
+		listOf("+1 Dexterity", "Stealth Proficiency", "Ability: Precision Strike")
 	),
 	Mage(
 		"For those who wish to wield mystical powers, casting arcane spells and unleashing the elements of frost, fire, and lightning.",
 		listOf("Psychic", "Scholar", "Witch", "Wizard"),
-		listOf("Elite Intelligence", "Sorcery Proficiency", "Ability: Mana Regeneration")
+		listOf("+1 Intelligence", "Sorcery Proficiency", "Ability: Mana Regeneration")
 	),
 
 	Naturalist(
 		"For those who want to work closely with nature and animals, living in harmony with the natural world.",
 		listOf("Druid", "Hermit", "Marksman", "Ranger"),
-		listOf("Elite Instinct", "Nature Proficiency", "Ability: Beast Speech")
+		listOf("+1 Instinct", "Nature Proficiency", "Ability: Beast Speech")
 	),
 	Zealot(
 		"For those who wish to combine magical and martial prowess in devotion to a higher principle or power.",
 		listOf("Crusader", "Inquisitor", "Monk", "Prophet"),
-		listOf("Elite Charisma", "Devotion Proficiency", "Ability: Meditation")
+		listOf("+1 Charisma", "Devotion Proficiency", "Ability: Meditation")
 	);
 
 	val classes by lazy { classNames.map { name -> CharactersChapter.lookupClass(name) } }

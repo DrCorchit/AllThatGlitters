@@ -5,7 +5,7 @@
       "Overall, humans are proud, robust, and athletic. I daresay we are altogether quite handsome. Men average around 5’9” in height; women around 5’4”. Weight varies greatly, usually between 100-200 lbs. We live between 70 and 90 years, if we do not die in one of our many wars.",
       "Although we humans may seem an uninspiring choice to some, it’s all a matter of perspective. To dwarves, we are tall and regal. To elves, we are robust and warlike. Among saurids, we are called slow and loud. And so it goes."
     ],
-    "bonuses": "Human characters begin with +1 in up to two attributes, and -1 to as many attributes. They also begin with proficiency in a skill of their choice."
+    "bonuses": "Human characters begin with +1 to two attributes, and -1 to an attribute. They also begin with proficiency in a skill of their choice."
   },
   {
     "name": "Elf",
@@ -15,7 +15,7 @@
       "Members of the common line are called Numenarii, and pursue archery, hunting, fishing, and farming. They have interbred on occasion with humans, and so take on darker hair and skin tones. They imitate the arrogance of the Eldarii, though it is but a veneer: they are quite insecure.",
       "Members of the third bloodline are called Drow, and are descended from the line of the nameless usurper. Tales of their cruelty are exaggerated, but not by much. Their skin is bluish gray, and their hair silver. They do not spare themselves from their own ruthless designs, and many attempt to escape their subterranean holds. Those few who do often become brave adventurers."
     ],
-    "bonuses": "All elven characters suffer a -1 penalty to STR, and gain bonuses depending on their bloodline. Those of the royal line gain +2 INT and knowledge of a basic astrology or elemental spell, plus proficiency in literacy. However, they have -1 to NST and deficiency in survival. Members of the common line gain +2 DEX and proficiency in nature and accuracy, but suffer -1 to INT and deficiency in defense. Drow gain +2 CHA and proficiency in perception and stealth, at the cost of -1 to NST and deficiency in nature. Drow also have the gift of darkvision, allowing them to see twice as far in dim light."
+    "bonuses": "All elven characters suffer a -1 penalty to {{attr.STR}}, and gain bonuses depending on their bloodline. Those of the royal line gain +2 {{attr.INT}} and knowledge of a level 1 astrology or elemental spell, plus proficiency in {{skills.literacy}}. However, they also have deficiency in {{skills.survival}}. Members of the common line gain +2 {{attr.DEX}} and proficiency in {{skills.nature}} and {{skills.accuracy}}, but suffer deficiency in {{skills.defense}}. Drow gain +2 {{attr.CHA}} and proficiency in perception and {{skills.stealth}}, at the cost of -1 to {{attr.NST}} and deficiency in {{skills.nature}}. Drow also have the gift of darkvision, allowing them to see normally in dim light."
   },
   {
     "name": "Dwarf",
@@ -23,7 +23,7 @@
       "A short and ruddy race. Male dwarves average around 5 feet in height, while their females average around 4’8”. Despite their stature, they weigh between 100-160 lbs. It is customary for their men to grow long beards, though beards longer than twenty inches are seldom seen outside storybooks. They live a bit longer than humans, so a century and a half is not out of the question.",
       "The dwarves of yore possessed insatiable bloodthirst and fought man, elf, and dragon alike in a great many wars. Times have changed, and they have been at peace nigh on two millennia. They are now greatly concerned with the exploration of mountains and caves, the industry of mining, and the acquisition of gold."
     ],
-    "bonuses": "Despite their unusual habits and short stature, dwarves are actually a fairly well balanced race that can excel in many roles. Dwarves gain +1 STR and +1 WILL at the cost of -2 SPD, and choose an additional +1 in STR or WILL. Also, dwarves have a keen sense for gold and have advantage on perception and persuasion checks when searching for treasure or bartering with merchants. All dwarves have proficiency in defense. Dwarves make particularly fearsome warriors, but are a solid choice in many other roles."
+    "bonuses": "Despite their unusual habits and short stature, dwarves are actually a fairly well balanced race that can excel in many roles. Dwarves gain +1 {{attr.STR}} and +1 {{attr.CHA}} at the cost of -2 {{attr.SPD}}, and choose an additional +1 in {{attr.STR}} or {{attr.CHA}}. Also, dwarves have a keen sense for gold and have advantage on {{skills.perception}} and {{skills.persuasion}} checks when searching for treasure or bartering with merchants. All dwarves have proficiency in {{skills.defense}}. Dwarves make particularly fearsome warriors, but are a solid choice in many other roles."
   },
   {
     "name": "Halfling",
@@ -31,7 +31,7 @@
       "The shortest of the races, halfling men average 3’9” in height. Their women are yet shorter, scarcely 3’6” by average. A tall halfling may resemble a short dwarf, though the former may still be distinguished by his slender build and wispy facial hair, if he has any at all. Halflings weigh only 50-100 lbs, and I’ll wager a drink you can’t find a heavier one in under a fortnight. They are somewhat long lived, often lasting a bit more than a century.",
       "As timeless as their quaint and cozy country villages may seem, they are no strangers to change. Nearly half of them are now second or third generation immigrants in large cities. They are unwelcome there on account of their ill reputation: it is said that nearly a third of them are criminals. I don't doubt it; they make exceedingly sly thieves."
     ],
-    "bonuses": "Halflings tend to be unbalanced characters, having a -2 penalty to STR and a -2 penalty to SPD. They make up for this with a +2 to DEX, and another +2 to INT, CHA, or WILL. Urban halflings start with proficiency in {{skills.mobility}} and {{skills.legerdemain}}, while rural halflings start with proficiency in nature and survival. They excel as mages, zealots, and renegades, but struggle as warriors."
+    "bonuses": "Halflings tend to be unbalanced characters, having a -2 penalty to {{attr.STR}} and a -1 penalty to {{attr.SPD}}. They make up for this with a +2 to DEX, and another +2 to {{attr.INT}}, {{attr.CHA}}, or {{attr.NST}}. All halflings have proficiency in {{skills.folklore}}, but urban halflings have proficiency in {{skills.mobility}} while rural halflings have proficiency in {{skills.nature}}. They excel as mages, naturalists, or renegades, but struggle as warriors."
   },
   {
     "name": "Orc",
@@ -39,7 +39,7 @@
       "Stout and rippling with muscle, orcs are warriors to the last. Their menfolk are nearly as tall as the elves, around 6’, and their women are barely any shorter, around 5’10”. Fully grown, they weigh somewhere between 180 to 300 lbs—quite formidable! Their hair is almost invariably black or gray, while their skin ranges from dark green to pale yellow or gray. In years, they may reach 60 if they are lucky; usually less. They make up for this by living with what I will graciously call ‘extreme vigor’.",
       "The history of orcs is full of long and bloody intertribal conflicts. Despite this, they have made steady progress as a species and have transitioned from cave dwellings to small villages, then larger villages, until now many think to mingle with humans, dwarves, and halflings on the frontiers of civilization. (Elves will have none of their ilk.) They are well-suited to mercenary or guard work. They make poor thieves or wizards."
     ],
-    "bonuses": "Orcs gain +2 to STR and WILL, at the cost of -1 to DEX and -1 INT, and an addional -1 to either INT or CHA. They have proficiency in intimidation and survival."
+    "bonuses": "Orcs gain +2 to {{attr.STR}} and +1 to either {{attr.CHA}} or {{attr.NST}}, at the cost of -1 to {{attr.DEX}} and -1 {{attr.INT}}. They have proficiency in {{skills.folklore}} and {{skills.survival}}. Above all, they make excellent warriors."
   },
   {
     "name": "Tiefling",
@@ -48,7 +48,7 @@
       "It is difficult to give a straightforward account of their physical nature, because it is so widely varied. I have seen some as short as 5’ and others as tall as 6’8”. They are neither particularly bulky nor slender, and so their weight is comparable to that of a human. Only in longevity have the gods relented, granting them perhaps 110 years, around the same span as a halfling.",
       "Tieflings typically live in colonies suitably removed from human and elven settlements. They have dealings with dwarves and halflings, who treat them fairly. They quietly pursue industry and keep to themselves, but their young oft grow weary of their meek ways and seek adventure and companionship abroad."
     ],
-    "bonuses": "Tieflings gain +1 to CHA and DEX, and an additional +1 to INT or CHA, at the cost of -2 WILL. They possess the gift of darkvision, and can see in total darkness to a range of 3 yards, or dim light to about 30 yards. They have proficiency in performance and either medicine or perception."
+    "bonuses": "Tieflings gain +2 to {{attr.CHA}} and +1 to another attribute, at the cost of -2 to another attribute. They possess the gift of darkvision, and can see in total darkness to a range of 3 yards, or dim light to about 30 yards. They have proficiency in two of {{skills.performance}}, {{skills.medicine}} or {{skills.perception}}."
   },
   {
     "name": "Aarakocra",
@@ -56,7 +56,7 @@
       "Flighty and covered with feathers, the Aarakocra are an extremely vibrant and colorful race. There are as many sub-races of these as of man or elf; it seems that many take after some species of bird or another. So you have one with feathers of azure and gold, another crimson, cream, and jade, and a third black as a raven. In general, they are about the size of a man, but extraordinarily light. I think 5'6\" is a typical height, but they weigh less than 80 pounds. Their longevity varies greatly, and some have a span of up to 250 years, rivaling even the elves. However, this is not common and I have met very few over the age of ninety or so.",
       "On my travels, I have observed that Aarakocra races and tribes can be roughly divided into two categories: raptors and songbirds. The former are taller and stronger, and possess extremely keen hearing and sight. As for the songbirds, they are extremely quick with their limbs and can mimic almost any sound they hear. They have a reputation for bing tricksters, and are in the habit of gathering shiny things, as their brothers the ravens and crows do."
     ],
-    "bonuses": "Aarakocra gain a +2 bonus to SPD, but -2 to STR. All aarakocra can glide and are immune to fall damage. Raptors gain +1 STR and proficiency in perception, while songbirds gain +1 DEX and proficiency in performance."
+    "bonuses": "Aarakocra gain a +2 bonus to {{attr.SPD}}, but -1 to {{attr.STR}}. All aarakocra can fly (when not wearing armor) and are immune to fall damage. Raptors gain +1 {{attr.STR}} and proficiency in {{skills.perception}}, while songbirds gain +1 {{attr.DEX}} and proficiency in {{skills.performance}}."
   },
   {
     "name": "Saurid",
@@ -65,6 +65,6 @@
       "A saurid is typically shorter than a man, but they grow all their lives until old age. Some can become quite large. Their females are a bit taller and more muscular than their males. In terms of height, they reach about 5’6” while the male might reach only 5’2 or so. They are not long-lived, and seventy years is a ripe age for a saurid.",
       "The saurids I have seen are fairly xenophobic, and live in colonies inside caves usually near water. They hunt, fish, and raise their hatchlings quietly, having few dealings with man or elf, except for the occasional territorial clash. They have developed a unique sort of architecture, and their colonies are quite remarkable, often lavishly decorated with precious stones and cut stone. Their predilection for gathering all things shiny has attracted dwarven traders, which has brought the common tongue to their knowledge. Many of them now seek adventure abroad, bringing with them their fearsome and curious ways."
     ],
-    "bonuses": "Saurids gain +2 to STR and SPD, at the cost of -2 INT and -1 CHA. They possess the gift of darkvision, able to see in near total darkness. They have deficiency in literacy, but may take proficiency in two out of initiative, stealth, or perception."
+    "bonuses": "Saurids gain +2 to {{attr.STR}} and {{attr.SPD}}, at the cost of -2 {{attr.INT}} and -1 {{attr.CHA}}. They possess the gift of darkvision, able to see in near total darkness. They have deficiency in {{skills.literacy}} but may take proficiency in two out of {{skills.folklore}}, {{skills.stealth}}, or {{skills.survival}}."
   }
 ]

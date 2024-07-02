@@ -10,6 +10,8 @@ import com.drcorchit.justice.utils.json.JsonUtils.toJsonArray
 import net.allthatglitters.server.appendices.magic.Rarity
 import net.allthatglitters.server.appendices.magic.Spell
 import net.allthatglitters.server.appendices.magic.Type
+import net.allthatglitters.server.concepts.requirement.AttrReq
+import net.allthatglitters.server.concepts.requirement.LevelReq
 import net.allthatglitters.server.concepts.requirement.WillReq
 
 class SpellsParser(val inputFile: File) {
@@ -28,8 +30,12 @@ class SpellsParser(val inputFile: File) {
 				if (disciplineRegex.matches(it)) {
 					discipline = line.parseEnum<Discipline>()
 				} else {
-					val match = spellsRegex.matchEntire(line) ?: throw IllegalArgumentException("Unparseable.")
-					val level = match.groupValues[1].toInt()
+					val match = spellsRegex.matchEntire(line)
+						?: throw IllegalArgumentException("Unparseable.")
+					val spellLevel = match.groupValues[1].toInt()
+					val attrReq = AttrReq(discipline!!.school.primaryAttr, spellLevel + 10)
+					val levelReq = LevelReq((spellLevel * 2) - 1)
+
 					val name = match.groupValues[2]
 					val infoMatch = spellInfoRegex.matchEntire(match.groupValues[3])!!
 					val description = match.groupValues[4]
@@ -39,8 +45,9 @@ class SpellsParser(val inputFile: File) {
 					val castCost = infoMatch.groupValues[3].toInt()
 					val concCost =
 						infoMatch.groupValues[4].let { cost -> if (cost.isEmpty()) 0 else cost.toInt() }
-					val reqs = mutableListOf(WillReq("cost", castCost))
-					if (type == Type.Concentration) reqs.add(WillReq("concentration", concCost))
+					val trainReqs = listOf(levelReq, attrReq)
+					val castReqs = mutableListOf(WillReq("cost", castCost))
+					if (type == Type.Concentration) castReqs.add(WillReq("concentration", concCost))
 
 					val output = Spell(
 						name,
@@ -49,20 +56,19 @@ class SpellsParser(val inputFile: File) {
 						type,
 						null,
 						description,
-						listOf(),
-						reqs,
+						trainReqs,
+						castReqs,
 						mapOf()
 					)
 					builder.add(output)
 				}
 			} catch (e: Exception) {
-				logger.error("Could not parse line of spells file: $it", e)
+				logger.error("Could not parse line of spells file: $line", e)
 			}
 		}
 
 		spells = builder.associateBy { it.name.normalize() }
 	}
-
 
 
 	fun save() {
@@ -85,7 +91,7 @@ class SpellsParser(val inputFile: File) {
 		val logger = Logger.getLogger(SpellsParser::class.java)
 
 		val disciplineRegex = "\\w+".toRegex()
-		val spellsRegex = "\\s*(\\d+)\\|([a-zA-Z '-]+)\\|([a-zA-Z0-9, ]+)\\|(.*)".toRegex()
+		val spellsRegex = "\\s*(\\d+)\\|(.+)\\|([a-zA-Z0-9, ]+)\\|(.*)".toRegex()
 		val spellInfoRegex = "([a-zA-Z]+ )?([a-zA-Z]+) (\\d+),?(\\d+)?".toRegex()
 	}
 }

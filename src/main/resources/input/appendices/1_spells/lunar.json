@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Ray of Lunacy",
+    "rarity": "Common",
+    "discipline": "Lunar",
+    "type": "Evocation",
+    "effect": "A dark violet ray issues forth from your extended creature, directed towards the forehead of the chosen creature. That creature must succeed a DT 12 {{attr.CHA}} saving throw or be driven to {{status.madness}} and become {{status.blinded}} for 1d4 turns.",
+    "castingReqs": {
+      "cost": 1
+    }
+  },
+  {
+    "name": "Moonshadow",
+    "rarity": "Common",
+    "discipline": "Lunar",
+    "type": "Concentration",
+    "effect": "A circular shadow appears on the ground, encircled by ghastly violet flames. Entities stepping inside the circle are {{status.blinded}} and take 1d6 {{damage.profane}} damage per turn.",
+    "castingReqs": {
+      "cost": 2,
+      "concentration": 0
+    }
+  },
+  {
+    "name": "Lesser Invisibility",
+    "rarity": "Common",
+    "discipline": "Lunar",
+    "type": "Evocation",
+    "effect": "You or a target you can touch gains {{status.ephemeral_invisibility}} for 10 minutes.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Time Stream",
+    "rarity": "Academic",
+    "discipline": "Lunar",
+    "type": "Evocation",
+    "effect": "Time accelerates for you or a target you touch, allowing the target to take twice as many actions per turn for 2 turns. From the target's perspective, the world appears to be unfolding in slow motion for around 20 seconds.",
+    "castingReqs": {
+      "cost": 3
+    }
+  },
+  {
+    "name": "Time Void",
+    "rarity": "Academic",
+    "discipline": "Lunar",
+    "type": "Evocation",
+    "effect": "An object or entity makes a DT 14 {{skills.defense}} saving throw. On a failed save, it disappears into a dark void where no time passes for 1d4 turns. When the spell ends, the object returns to the same spot, unchanged, as if no time had passed during that interval.",
+    "castingReqs": {
+      "cost": 4
+    }
+  },
+  {
+    "name": "Phantasm",
+    "rarity": "Esoteric",
+    "discipline": "Lunar",
+    "type": "Concentration",
+    "effect": "Your physical form fades, still visible to the eye but noticeably transparent. Fire and blade find no purchase against you, passing through your body as through empty air. As a result of casting this spell, you become {{status.levitated}} and may not move by walking. If you are partially inside physical matter when the spell ends, you are pushed out forcefully. If wholly inside, death is instantaneous and certain.",
+    "castingReqs": {
+      "cost": 3,
+      "concentration": 2
+    }
+  },
+  {
+    "name": "Midnight",
+    "rarity": "Common",
+    "discipline": "Lunar",
+    "type": "Evocation",
+    "effect": "The target loses 3 willpower. On a successful DT 12 {{skills.defense}} saving throw, the target only loses 2 willpower.",
+    "castingReqs": {
+      "cost": 2
+    }
+  },
+  {
+    "name": "Time Rift",
+    "rarity": "Academic",
+    "discipline": "Lunar",
+    "type": "Concentration",
+    "effect": "The spell creates a sphere with an eight-foot radius around yourself. Within the sphere, time appears to proceed at a normal rate, and time outside the sphere appears to be accelerated by a factor of ten. Living creatures which pass through the sphere take 3d8 damage, due to the effects of the time disjunction on their internal organs.",
+    "castingReqs": {
+      "cost": 5,
+      "concentration": 1
+    }
+  },
+  {
+    "name": "Greater Invisibility",
+    "rarity": "Academic",
+    "discipline": "Lunar",
+    "type": "Concentration",
+    "effect": "You or a target you touch gains {{status.invisibility}} for 1 hour.",
+    "castingReqs": {
+      "cost": 5,
+      "concentration": 0
+    }
+  },
+  {
+    "name": "Dark Mercy",
+    "rarity": "Forbidden",
+    "discipline": "Lunar",
+    "type": "Evocation",
+    "effect": "Deal 1d100 {{damage.profane}} damage to a creature whose willpower is exhausted. On a DT 18 {{skills.defense}} save, the damage is reduced by half.",
+    "castingReqs": {
+      "cost": 6
+    }
+  },
+  {
+    "name": "Mass Invisibility",
+    "rarity": "Academic",
+    "discipline": "Lunar",
+    "type": "Ceremony",
+    "effect": "You and up to six ceremonial participants gain {{status.invisibility}} for 8 hours.",
+    "castingReqs": {
+      "cost": 50
+    }
+  }
+]

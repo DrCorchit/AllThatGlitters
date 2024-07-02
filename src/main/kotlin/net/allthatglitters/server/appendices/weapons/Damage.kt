@@ -1,8 +1,13 @@
 package net.allthatglitters.server.appendices.weapons
 
 import com.google.common.collect.ImmutableSet
+import net.allthatglitters.server.appendices.weapons.Weapon.Companion.piercing
+import net.allthatglitters.server.appendices.weapons.Weapon.Companion.slashing
+import net.allthatglitters.server.chapters.combat.CombatChapter
+import net.allthatglitters.server.chapters.combat.DamageType
 import net.allthatglitters.server.concepts.NumDice
 import net.allthatglitters.server.chapters.sheet.Attribute
+import net.allthatglitters.server.util.html.Renderable
 
 class Damage(
 	//The base damage of the weapon
@@ -12,36 +17,36 @@ class Damage(
 	//The attribute modifiers added to the weapon's damage, if any
 	val attr: ImmutableSet<Attribute>,
 	//The damage types available with this weapon
-	val type: ImmutableSet<Type>
-) {
+	val types: ImmutableSet<DamageType>
+): Renderable {
 
-	override fun toString(): String {
-		if (dice.count == 0) return "0"
+	val isCutAndThrust by lazy {
+		types.containsAll(setOf(slashing, piercing))
+	}
+
+	override fun render(): String {
+		if (base == 0 && dice.count == 0) return "0"
 
 		val output = StringBuilder()
 		if (base > 0) output.append("$base + ")
-		output.append("${dice.count}d${dice.dice.sides}")
+		if (dice.count > 0) output.append("$dice")
 
 		if (attr.isNotEmpty()) {
 			output.append(" + ").append(attr.joinToString("/") { it.abbr })
 		}
 
-		if (type.size == 2 && type.contains(Type.Slashing) && type.contains(Type.Piercing)) {
-			output.append(" <nobr>Cut-and-Thrust</nobr>")
-		} else {
-			output.append(" ").append(type.joinToString("/") { it.name })
+		val types = types.toMutableSet<Keyword>()
+		if (isCutAndThrust) {
+			types.remove(slashing)
+			types.remove(piercing)
+			types.add(WeaponKeyword.CutAndThrust)
+		}
+		types.sortedBy { it.displayName }
+
+		if (types.isNotEmpty()) {
+			output.append(" ").append(types.joinToString { it.render() })
 		}
 
 		return output.toString()
-	}
-
-	enum class Type : Modifier {
-		Piercing, Slashing, Bludgeoning,
-		Fire, Cold, Lightning,
-		Corrosive, Force, Holy, Profane;
-
-		override val displayName = name
-		override val description = "Indicates that the weapon deals ${displayName.lowercase()} damage."
-		val regex = name.toRegex(RegexOption.IGNORE_CASE)
 	}
 }
