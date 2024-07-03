@@ -44,7 +44,7 @@ class Damage(
 		types.sortedBy { it.displayName }
 
 		if (types.isNotEmpty()) {
-			output.append(" ").append(types.joinToString { it.render() })
+			output.append(" ").append(types.joinToString { it.displayName })
 		}
 
 		return output.toString()

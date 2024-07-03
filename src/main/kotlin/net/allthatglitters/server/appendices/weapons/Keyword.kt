@@ -25,7 +25,7 @@ interface Keyword : Renderable {
 		}
 
 		override fun getProperty(property: String): Any {
-			return AppendixWeapons.lookupModifier(property).toTooltip()
+			return AppendixWeapons.lookupModifier(property)
 		}
 	}
 }

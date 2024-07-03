@@ -3,6 +3,7 @@ package net.allthatglitters.server.appendices.weapons
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.google.gson.JsonParser
 import net.allthatglitters.server.Generator.Companion.generator
+import net.allthatglitters.server.util.bold
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.HtmlTable
@@ -47,8 +48,8 @@ object AppendixWeapons : HtmlFile(
 		appendElement("h4", "Weapon Modifiers")
 		appendElement("p", "Certain weapons have special properties, which affect how they behave:")
 		val list = HtmlObject("ul")
-			.withAll(keywords.entries.map {
-				HtmlObject("li").withContent(it.value.render())
+			.withAll(keywords.values.map {
+				HtmlObject("li").withContent("${it.displayName.bold()}: ${it.description}")
 			})
 		append(list)
 

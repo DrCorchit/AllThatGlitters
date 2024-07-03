@@ -5,7 +5,7 @@
     "damage": "1d10",
     "cost": 150,
     "modifiers": ["Cut-and-Thrust", "Mordhau: 1d8", "Parrying 6", "Two-Handed"],
-    "requirements": ["10 STR", "Martial Arts Proficiency"]
+    "requirements": ["12 STR", "Martial Arts Proficiency"]
   },
   {
     "name": "Katana",
@@ -13,7 +13,7 @@
     "damage": "1d8",
     "cost": 200,
     "modifiers": ["Slashing", "Nimble", "Sharp", "Two-Handed"],
-    "requirements": ["10 STR", "14 DEX", "Martial Arts Expertise"]
+    "requirements": ["14 DEX", "Martial Arts Expertise"]
   },
   {
     "name": "Claymore",

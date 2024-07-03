@@ -5,18 +5,15 @@ import com.drcorchit.justice.utils.math.units.TimeUnits
 import com.google.gson.JsonElement
 import com.google.gson.JsonPrimitive
 import net.allthatglitters.server.chapters.sheet.Character
+import net.allthatglitters.server.util.bold
 
-class TimeReq(val time: Measurement<TimeUnits.Time>) : Requirement {
+class TimeReq(override val name: String, val time: Measurement<TimeUnits.Time>) : Requirement {
 	override fun isSatisfied(character: Character): Boolean {
 		return true
 	}
 
 	override fun render(): String {
-		return toString()
-	}
-
-	override fun serialize(): Pair<String, JsonElement> {
-		return "time" to JsonPrimitive(time.toString())
+		return "${name.bold()}: $time"
 	}
 
 	override fun toString(): String {
@@ -24,9 +21,9 @@ class TimeReq(val time: Measurement<TimeUnits.Time>) : Requirement {
 	}
 
 	companion object {
-		fun parse(str: String): TimeReq? {
+		fun parse(name: String, str: String): TimeReq? {
 			return try {
-				TimeReq(TimeUnits.parse(str))
+				TimeReq(name, TimeUnits.parse(str))
 			} catch (e: Exception) {
 				//ignore
 				null

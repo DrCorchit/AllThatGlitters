@@ -1,155 +1,260 @@
 [
   {
     "name": "Heat Metal",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Concentration",
+    "level": 1,
     "effect": "A piece of metal such as a weapon or suit of armor becomes unbearably hot. If the item is worn or carried, the wearer takes 2 {{damage.heat}} damage, which increases by 2 each turn to a maximum of 8 {{damage.heat}} damage per turn.",
-    "castingReqs": {
-      "cost": 1,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 1,
+      "NST": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Mend",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Evocation",
+    "level": 1,
     "effect": "The caster magically repairs a small wound, crack, or tear in a person or object. The target must be smaller than one cubic foot of volume.",
-    "castingReqs": {
-      "cost": 0
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "NST": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Clay Armor",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Evocation",
+    "level": 2,
     "effect": "The caster's skin becomes hardened clay for one hour, improving BC by 5.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 3,
+      "NST": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Quake",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Concentration",
+    "level": 2,
     "effect": "The caster concentrates on accumulating seismic forces within the earth. A patch of ground with a radius of 10 feet begins to tremble and undulate noticeably. When the spell is ended, all targets within 30 feet of the caster take 1d10 {{damage.force}} damage for every turn concentration was maintained.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 3,
+      "NST": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Quicksand",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Evocation",
+    "level": 3,
     "effect": "Transform solid ground into sinking sand. The affected area becomes difficult terrain. Additionally, targets which start their turn on the quicksand must make a DT 14 {{skills.mobility}} saving throw or lose the ability to move.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 5,
+      "NST": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Acid Blade",
-    "rarity": "Academic",
-    "discipline": "Earth",
-    "type": "Evocation",
+    "level": 3,
     "effect": "Imbue a blade you touch with the power of acid. For one hour, attacks with the weapon deal 1d4 {{damage.acid}} damage and decrease enemy BC by 1.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Scholarly",
+    "college": "Earth",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 5,
+      "NST": 13,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Clay Golem",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Ceremony",
+    "level": 4,
     "effect": "A clay golem is summoned for 8 hours. Though the weakest of the golems, it has resistance to {{damage.bludgeoning}} and {{damage.piercing}} damage due to its soft body.",
-    "castingReqs": {
-      "cost": 20
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 7,
+      "NST": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 20,
+      "time": "1 action"
     }
   },
   {
     "name": "Stone Armor",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Evocation",
+    "level": 4,
     "effect": "The caster's skin becomes brittle stone, improving BC by 7. The armor shatters after 10 {{damage.bludgeoning}} damage is taken, ending the spell.",
-    "castingReqs": {
-      "cost": 4
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 7,
+      "NST": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 4,
+      "time": "1 action"
     }
   },
   {
     "name": "Earthen Wall",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Evocation",
+    "level": 5,
     "effect": "A great earthen wall up to 100 feet long appears in the indicated location, obstructing movement. The wall can absorb 50 damage before it breaks, and is immune to {{damage.heat}} damage. Targets over the area where the wall was constructed are pushed aside.",
-    "castingReqs": {
-      "cost": 3
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 9,
+      "NST": 15,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "time": "1 action"
     }
   },
   {
     "name": "Stone Golem",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Ceremony",
+    "level": 6,
     "effect": "Summon a stone golem. The golem is vulnerable to {{damage.bludgeoning}} damage, but resistant to {{damage.piercing}} damage.",
-    "castingReqs": {
-      "cost": 30
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 11,
+      "NST": 16,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 30,
+      "time": "1 action"
     }
   },
   {
     "name": "Iron Armor",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Concentration",
+    "level": 6,
     "effect": "Your skin becomes covered by a magical metallic liquid. The liquid condenses and becomes firm wherever an arrow, missile, or blade would strike true. {{BC}} is increased by 10.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 1
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 11,
+      "NST": 16,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Awaken Statue",
-    "rarity": "Common",
-    "discipline": "Earth",
-    "type": "Evocation",
+    "level": 7,
     "effect": "A statue you touch comes to life for one hour. The statue may assist you in battle or inform you events that have transpired since it was built.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Common",
+    "college": "Earth",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 13,
+      "NST": 17,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Earthquake",
-    "rarity": "Academic",
-    "discipline": "Earth",
-    "type": "Evocation",
+    "level": 7,
     "effect": "The ground around you rumbles and shakes, as your spell unleashes a mighty earthquake. Creatures within 300 yards take 3d12 {{damage.force} damage and have disadvantage on the saving throw to avoid being knocked prone.",
-    "castingReqs": {
-      "cost": 6
+    "rarity": "Scholarly",
+    "college": "Earth",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 13,
+      "NST": 17,
+      "slots": 6
+    },
+    "casting_reqs": {
+      "evocation": 6,
+      "time": "1 action"
     }
   },
   {
     "name": "Iron Golem",
-    "rarity": "Academic",
-    "discipline": "Earth",
-    "type": "Ceremony",
+    "level": 8,
     "effect": "Summon a heavy iron golem, heaviest of the golems.",
-    "castingReqs": {
-      "cost": 50
+    "rarity": "Scholarly",
+    "college": "Earth",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 15,
+      "NST": 18,
+      "slots": 6
+    },
+    "casting_reqs": {
+      "evocation": 50,
+      "time": "1 action"
     }
   },
   {
     "name": "Petrify",
-    "rarity": "Esoteric",
-    "discipline": "Earth",
-    "type": "Evocation",
+    "level": 9,
     "effect": "Transform a creature of living flesh into stone. The creature may make a DT 10 {{skills.defense}} saving throw to resist this effect.",
-    "castingReqs": {
-      "cost": 12
+    "rarity": "Esoteric",
+    "college": "Earth",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 17,
+      "NST": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 12,
+      "time": "1 action"
     }
   }
 ]

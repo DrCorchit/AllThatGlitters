@@ -26,22 +26,22 @@
   <h4>Weapon Modifiers</h4>
   <p>Certain weapons have special properties, which affect how they behave:</p>
   <ul>
-   <li><b>Cut-and-Thrust</b></li>
-   <li><b>Nimble</b></li>
-   <li><b>Improvised</b></li>
-   <li><b>Light</b></li>
-   <li><b>Two-Handed</b></li>
-   <li><b>Sharp</b></li>
-   <li><b>Polearm</b></li>
-   <li><b>Throwable</b></li>
-   <li><b>Crossbow</b></li>
-   <li><b>Firearm</b></li>
-   <li><b>Parrying</b></li>
-   <li><b>Blocking</b></li>
-   <li><b>Mordhau</b></li>
-   <li><b>Versatile</b></li>
-   <li><b>Projectile</b></li>
-   <li><b>Ranged</b></li>
+   <li><b>Cut-and-Thrust</b>: The weapon can deal either <span style="color:#CFF">Slashing</span> or <span style="color:#FFF">Piercing</span> damage.</li>
+   <li><b>Nimble</b>: Dexterity can be used to provide the weapon's damage, instead of strength.</li>
+   <li><b>Improvised</b>: The item is not designed as a weapon. The damage die is rolled with disadvantage.</li>
+   <li><b>Light</b>: The weapon can be used alongside a greatshield, or dual wielded alongside another light weapon.</li>
+   <li><b>Two-Handed</b>: The weapon must be handled with two hands when attacking.</li>
+   <li><b>Sharp</b>: The critical threshold for the weapon is reduced by 1. This ability is lost after critical failing an attack roll, but can be regained by using a whetstone.</li>
+   <li><b>Polearm</b>: The weapon can hit targets 10 feet away instead of 5, and is compatible with the <i>Polarm Charge</i> ability.</li>
+   <li><b>Throwable</b>: The weapon does not gain the <a class="tooltip"><u>improvised</u><span>The item is not designed as a weapon. The damage die is rolled with disadvantage.</span></a> trait when thrown.</li>
+   <li><b>Crossbow</b>: The weapon is a mechanical crossbow. It requires 30 seconds to reload, and its damage does not benefit from the user's attribute scores.</li>
+   <li><b>Firearm</b>: The weapon is a firearm and deals <span style="color:#D00">Force</span> damage. It requires 1 minute to reload, and its damage does not benefit from the user's attribute scores.</li>
+   <li><b>Parrying</b>: The weapon increases mitigation by the indicated amount when the parry reaction is taken.</li>
+   <li><b>Blocking</b>: The weapon increases BC by a certain amount, doubled when actively blocking.</li>
+   <li><b>Mordhau</b>: The weapon can be held by the blade, using the crossguard as a hammer. This changes the weapon’s damage type to bludgeoning, and replaces the damage die. (Larger swords have this property.)</li>
+   <li><b>Versatile</b>: The weapon can be held in an alternate grip for extra damage.</li>
+   <li><b>Projectile</b>: The weapon fires a specific type of projectile</li>
+   <li><b>Ranged</b>: The weapon has a range: X/Y. Attacks against targets beyond X feet away have disadvantage; attacks against targets beyond Y feet away automatically fail.</li>
   </ul>
   <h4>Small Weapons</h4>
   <p>Small weapons are those which are easily wielded in one hand, including everyday tools improvised as weapons. They require no especial skill to use, are easily concealed, and are typically wielded by civilians. These weapons automatically have the light property, and can be dual-wielded or used in the offhand.</p>
@@ -57,7 +57,7 @@
     </tr>
     <tr>
      <td>Cleaver</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@6e4de19b</td>
+     <td>1d6 + STR Slashing</td>
      <td>2</td>
      <td><nobr>Light</nobr>, <nobr>Improvised</nobr></td>
      <td></td>
@@ -65,7 +65,7 @@
     </tr>
     <tr>
      <td>Club</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@f6c03cb</td>
+     <td>1d6 + STR Bludgeoning</td>
      <td>1</td>
      <td><nobr>Light</nobr>, <nobr>Improvised</nobr></td>
      <td></td>
@@ -73,7 +73,7 @@
     </tr>
     <tr>
      <td>Dagger</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@46f699d5</td>
+     <td>1d4 + STR/DEX Cut-and-Thrust</td>
      <td>5</td>
      <td><nobr>Light</nobr>, <nobr>Nimble</nobr>, <nobr>Sharp</nobr>, <nobr>Throwable</nobr>, <nobr>Ranged: 20/60</nobr></td>
      <td></td>
@@ -81,7 +81,7 @@
     </tr>
     <tr>
      <td>Hatchet</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@18518ccf</td>
+     <td>1d4 + STR/DEX Slashing</td>
      <td>5</td>
      <td><nobr>Light</nobr>, <nobr>Nimble</nobr>, <nobr>Throwable</nobr>, <nobr>Ranged: 20/60</nobr></td>
      <td></td>
@@ -89,7 +89,7 @@
     </tr>
     <tr>
      <td>Knife</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@267f474e</td>
+     <td>1d4 + STR/DEX Piercing</td>
      <td>1</td>
      <td><nobr>Light</nobr>, <nobr>Nimble</nobr>, <nobr>Improvised</nobr></td>
      <td></td>
@@ -97,7 +97,7 @@
     </tr>
     <tr>
      <td>Sickle</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@7a7471ce</td>
+     <td>1d6 + STR/DEX Slashing</td>
      <td>5</td>
      <td><nobr>Light</nobr>, <nobr>Nimble</nobr>, <nobr>Improvised</nobr></td>
      <td></td>
@@ -105,7 +105,7 @@
     </tr>
     <tr>
      <td>Stiletto</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@21d8bcbe</td>
+     <td>1d4 + STR/DEX Piercing</td>
      <td>5</td>
      <td><nobr>Light</nobr>, <nobr>Nimble</nobr>, <nobr>Sharp</nobr></td>
      <td></td>
@@ -113,7 +113,7 @@
     </tr>
     <tr>
      <td>Tanto</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@5be067de</td>
+     <td>1d4 + STR/DEX Slashing</td>
      <td>10</td>
      <td><nobr>Light</nobr>, <nobr>Nimble</nobr>, <nobr>Sharp</nobr></td>
      <td></td>
@@ -135,15 +135,15 @@
     </tr>
     <tr>
      <td>Bastard Sword</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@28276e50</td>
+     <td>1d6 + STR Cut-and-Thrust</td>
      <td>100</td>
      <td><nobr>Versatile: 1d8</nobr>, <nobr>Mordhau: 1d4</nobr>, <nobr>Parrying: 6</nobr></td>
-     <td>12 STR, Martial Arts Expertise</td>
+     <td>11 STR, Martial Arts Expertise</td>
      <td>A flexible sword with many uses.</td>
     </tr>
     <tr>
      <td>Battle Axe</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@162be91c</td>
+     <td>1d6 + STR Slashing</td>
      <td>30</td>
      <td><nobr>Light</nobr></td>
      <td></td>
@@ -151,15 +151,15 @@
     </tr>
     <tr>
      <td>Bearded Axe</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@62e70ea3</td>
+     <td>1d6 + STR Slashing</td>
      <td>50</td>
      <td><nobr>Versatile: 1d8</nobr></td>
-     <td>Martial Arts Proficiency</td>
+     <td>11 STR, Martial Arts Proficiency</td>
      <td>An axe with its weight balanced at the head.</td>
     </tr>
     <tr>
      <td>Broadsword</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@2488b073</td>
+     <td>1d6 + STR Slashing</td>
      <td>20</td>
      <td><nobr>Light</nobr>, <nobr>Parrying: 6</nobr></td>
      <td></td>
@@ -167,7 +167,7 @@
     </tr>
     <tr>
      <td>Estoc</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@1c9f0a20</td>
+     <td>1d6 + STR Piercing</td>
      <td>50</td>
      <td><nobr>Parrying: 6</nobr></td>
      <td>Martial Arts Proficiency</td>
@@ -175,15 +175,15 @@
     </tr>
     <tr>
      <td>Mace</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@55787112</td>
+     <td>1d6 + STR Bludgeoning</td>
      <td>30</td>
      <td><nobr>Versatile: 1d8</nobr>, <nobr>Parrying: 3</nobr></td>
-     <td></td>
+     <td>11 STR, Martial Arts Proficiency</td>
      <td>A martial weapon for crushing armor.</td>
     </tr>
     <tr>
      <td>Morningstar</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@1cd201a8</td>
+     <td>1d6 + STR Piercing</td>
      <td>50</td>
      <td></td>
      <td>Martial Arts Proficiency</td>
@@ -191,7 +191,7 @@
     </tr>
     <tr>
      <td>Rapier</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@7db82169</td>
+     <td>1d6 + STR/DEX Piercing</td>
      <td>30</td>
      <td><nobr>Nimble</nobr>, <nobr>Parrying: 3</nobr></td>
      <td></td>
@@ -199,7 +199,7 @@
     </tr>
     <tr>
      <td>Shortsword</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@659eef7</td>
+     <td>1d6 + STR/DEX Cut-and-Thrust</td>
      <td>20</td>
      <td><nobr>Nimble</nobr>, <nobr>Light</nobr>, <nobr>Parrying: 3</nobr></td>
      <td></td>
@@ -207,7 +207,7 @@
     </tr>
     <tr>
      <td>Quarterstaff</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@3efe7086</td>
+     <td>1d6 + STR/DEX Bludgeoning</td>
      <td>10</td>
      <td><nobr>Nimble</nobr>, <nobr>Improvised</nobr>, <nobr>Parrying: 6</nobr></td>
      <td></td>
@@ -215,7 +215,7 @@
     </tr>
     <tr>
      <td>Spear</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@675d8c96</td>
+     <td>1d6 + STR/SPD Piercing</td>
      <td>20</td>
      <td><nobr>Polearm</nobr>, <nobr>Throwable</nobr></td>
      <td>Martial Arts Proficiency</td>
@@ -223,7 +223,7 @@
     </tr>
     <tr>
      <td>Wakizashi</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@741b3bc3</td>
+     <td>1d6 + STR/DEX Slashing</td>
      <td>100</td>
      <td><nobr>Nimble</nobr>, <nobr>Sharp</nobr>, <nobr>Light</nobr></td>
      <td>Martial Arts Proficiency</td>
@@ -231,10 +231,10 @@
     </tr>
     <tr>
      <td>Warhammer</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@2ed3b1f5</td>
+     <td>1d6 + STR Bludgeoning</td>
      <td>30</td>
      <td><nobr>Versatile: 1d8</nobr>, <nobr>Parrying: 6</nobr></td>
-     <td>Martial Arts Proficiency</td>
+     <td>11 STR, Martial Arts Proficiency</td>
      <td>A large hammer, sized for one or two hands.</td>
     </tr>
    </tbody>
@@ -253,23 +253,23 @@
     </tr>
     <tr>
      <td>Longsword</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@9bd0fa6</td>
+     <td>1d10 + STR Cut-and-Thrust</td>
      <td>150</td>
      <td><nobr>Mordhau: 1d8</nobr>, <nobr>Parrying: 6</nobr>, <nobr>Two-Handed</nobr></td>
-     <td>10 STR, Martial Arts Proficiency</td>
+     <td>12 STR, Martial Arts Proficiency</td>
      <td>A knight’s two-handed sword. May be upgraded by a blacksmith to gain <i>Sharp</i> for 150 gold.</td>
     </tr>
     <tr>
      <td>Katana</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@63648ee9</td>
+     <td>1d8 + STR/DEX Slashing</td>
      <td>200</td>
      <td><nobr>Nimble</nobr>, <nobr>Sharp</nobr>, <nobr>Two-Handed</nobr></td>
-     <td>10 STR, 14 DEX, Martial Arts Expertise</td>
+     <td>14 DEX, Martial Arts Expertise</td>
      <td>Lighter and sharper than a longsword.</td>
     </tr>
     <tr>
      <td>Claymore</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@68d6972f</td>
+     <td>1d12 + STR Cut-and-Thrust</td>
      <td>200</td>
      <td><nobr>Two-Handed</nobr>, <nobr>Mordhau: 1d8</nobr></td>
      <td>14 STR, Martial Arts Expertise</td>
@@ -277,7 +277,7 @@
     </tr>
     <tr>
      <td>Greataxe</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@59d2103b</td>
+     <td>1d12 + STR Slashing</td>
      <td>150</td>
      <td><nobr>Two-Handed</nobr></td>
      <td>14 STR, Martial Arts Proficiency</td>
@@ -285,7 +285,7 @@
     </tr>
     <tr>
      <td>Maul</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@39dcf4b0</td>
+     <td>1d12 + STR Bludgeoning</td>
      <td>150</td>
      <td><nobr>Two-Handed</nobr></td>
      <td>15 STR, Martial Arts Proficiency</td>
@@ -293,7 +293,7 @@
     </tr>
     <tr>
      <td>Bardiche</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@45be7cd5</td>
+     <td>1d10 + STR/SPD Slashing</td>
      <td>200</td>
      <td><nobr>Two-Handed</nobr>, <nobr>Polearm</nobr></td>
      <td>13 STR, Martial Arts Proficiency</td>
@@ -301,7 +301,7 @@
     </tr>
     <tr>
      <td>Halberd</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@7651218e</td>
+     <td>1d12 + STR/SPD Cut-and-Thrust</td>
      <td>250</td>
      <td><nobr>Two-Handed</nobr>, <nobr>Polearm</nobr></td>
      <td>13 STR, Martial Arts Proficiency</td>
@@ -309,7 +309,7 @@
     </tr>
     <tr>
      <td>Pike</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@3185fa6b</td>
+     <td>1d10 + STR/SPD Piercing</td>
      <td>150</td>
      <td><nobr>Sharp</nobr>, <nobr>Two-Handed</nobr>, <nobr>Polearm</nobr></td>
      <td>13 STR, Martial Arts Proficiency</td>
@@ -317,7 +317,7 @@
     </tr>
     <tr>
      <td>Naginata</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@6d366c9b</td>
+     <td>1d10 + STR/DEX/SPD Slashing</td>
      <td>200</td>
      <td><nobr>Nimble</nobr>, <nobr>Two-Handed</nobr>, <nobr>Polearm</nobr></td>
      <td>12 STR, 12 DEX, Martial Arts Expertise</td>
@@ -325,7 +325,7 @@
     </tr>
     <tr>
      <td>Lance</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@5b58ed3c</td>
+     <td>1d12 + STR/SPD Piercing</td>
      <td>250</td>
      <td><nobr>Improvised</nobr>, <nobr>Two-Handed</nobr>, <nobr>Polearm</nobr></td>
      <td>12 STR, Martial Arts Proficiency</td>
@@ -333,7 +333,7 @@
     </tr>
     <tr>
      <td>Trident</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@24faea88</td>
+     <td>1d10 + STR/SPD Piercing</td>
      <td>150</td>
      <td><nobr>Throwable</nobr>, <nobr>Two-Handed</nobr>, <nobr>Polearm</nobr>, <nobr>Ranged: 20/60</nobr></td>
      <td>12 STR</td>
@@ -355,7 +355,7 @@
     </tr>
     <tr>
      <td>Throwing Knives</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@f27ea3</td>
+     <td>1d4 + STR Piercing</td>
      <td>1</td>
      <td><nobr>Sharp</nobr>, <nobr>Throwable</nobr>, <nobr>Light</nobr>, <nobr>Ranged: 30/90</nobr></td>
      <td>Accuracy Proficiency</td>
@@ -363,7 +363,7 @@
     </tr>
     <tr>
      <td>Shuriken</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@1ce61929</td>
+     <td>1d6 + STR Slashing</td>
      <td>2</td>
      <td><nobr>Throwable</nobr>, <nobr>Light</nobr>, <nobr>Ranged: 30/90</nobr></td>
      <td>Accuracy Expertise</td>
@@ -371,7 +371,7 @@
     </tr>
     <tr>
      <td>Javelin</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@3a320ade</td>
+     <td>1d8 + STR Piercing</td>
      <td>5</td>
      <td><nobr>Throwable</nobr>, <nobr>Light</nobr>, <nobr>Ranged: 30/120</nobr></td>
      <td>Martial Arts Proficiency</td>
@@ -379,7 +379,7 @@
     </tr>
     <tr>
      <td>Boomerang</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@64beebb7</td>
+     <td>1d4 + STR/DEX Bludgeoning</td>
      <td>5</td>
      <td><nobr>Nimble</nobr>, <nobr>Throwable</nobr>, <nobr>Light</nobr>, <nobr>Ranged: 30/90</nobr></td>
      <td>Accuracy Expertise</td>
@@ -387,7 +387,7 @@
     </tr>
     <tr>
      <td>Shortbow</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@f74e835</td>
+     <td>1d8 + STR/DEX Piercing</td>
      <td>10</td>
      <td><nobr>Nimble</nobr>, <nobr>Two-Handed</nobr>, <nobr>Projectile: Arrows</nobr>, <nobr>Ranged: 150/300</nobr></td>
      <td>Accuracy Proficiency</td>
@@ -395,7 +395,7 @@
     </tr>
     <tr>
      <td>Longbow</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@1992eaf4</td>
+     <td>1d12 + STR Piercing</td>
      <td>30</td>
      <td><nobr>Two-Handed</nobr>, <nobr>Projectile: Arrows</nobr>, <nobr>Ranged: 300/600</nobr></td>
      <td>Accuracy Expertise</td>
@@ -403,7 +403,7 @@
     </tr>
     <tr>
      <td>Hand Crossbow</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@4c6daf0</td>
+     <td>1d8 + STR Piercing</td>
      <td>50</td>
      <td><nobr>Light</nobr>, <nobr>Crossbow</nobr>, <nobr>Projectile: Bolts</nobr>, <nobr>Ranged: 50/150</nobr></td>
      <td></td>
@@ -411,7 +411,7 @@
     </tr>
     <tr>
      <td>Crossbow</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@3276732</td>
+     <td>2d8 + STR Piercing</td>
      <td>100</td>
      <td><nobr>Crossbow</nobr>, <nobr>Projectile: Bolts</nobr>, <nobr>Ranged: 300/600</nobr></td>
      <td></td>
@@ -419,7 +419,7 @@
     </tr>
     <tr>
      <td>Arbalest</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@7813cb11</td>
+     <td>3d8 + STR Piercing</td>
      <td>250</td>
      <td><nobr>Two-Handed</nobr>, <nobr>Crossbow</nobr>, <nobr>Projectile: Bolts</nobr>, <nobr>Ranged: 300/600</nobr></td>
      <td>STR 14</td>
@@ -427,7 +427,7 @@
     </tr>
     <tr>
      <td>Pistol</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@3f28bd56</td>
+     <td>1d12 + STR Force</td>
      <td>100</td>
      <td><nobr>Firearm</nobr>, <nobr>Projectile: Bullets</nobr>, <nobr>Light</nobr>, <nobr>Ranged: 20/60</nobr></td>
      <td></td>
@@ -435,7 +435,7 @@
     </tr>
     <tr>
      <td>Hand Cannon</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@19fe4644</td>
+     <td>2d12 + STR Force</td>
      <td>200</td>
      <td><nobr>Firearm</nobr>, <nobr>Projectile: Bullets</nobr>, <nobr>Light</nobr>, <nobr>Ranged: 20/60</nobr></td>
      <td>14 STR</td>
@@ -443,7 +443,7 @@
     </tr>
     <tr>
      <td>Arquebus</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@31e3250d</td>
+     <td>2d12 + STR Force</td>
      <td>150</td>
      <td><nobr>Firearm</nobr>, <nobr>Projectile: Bullets</nobr>, <nobr>Ranged: 30/90</nobr></td>
      <td></td>
@@ -451,7 +451,7 @@
     </tr>
     <tr>
      <td>Blunderbus</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@bcec031</td>
+     <td>3d12 + STR Force</td>
      <td>200</td>
      <td><nobr>Firearm</nobr>, <nobr>Projectile: Bullets</nobr>, <nobr>Ranged: 20/60</nobr></td>
      <td>12 STR, 12 DEX</td>
@@ -459,7 +459,7 @@
     </tr>
     <tr>
      <td>Musket</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@21005f6c</td>
+     <td>3d12 + STR Force</td>
      <td>250</td>
      <td><nobr>Firearm</nobr>, <nobr>Projectile: Bullets</nobr>, <nobr>Ranged: 50/150</nobr></td>
      <td>12 STR, 12 DEX</td>
@@ -481,7 +481,7 @@
     </tr>
     <tr>
      <td>Net</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@10650953</td>
+     <td>0</td>
      <td>10</td>
      <td></td>
      <td>Martial Arts Proficiency</td>
@@ -489,7 +489,7 @@
     </tr>
     <tr>
      <td>Grappling Hook</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@346939bf</td>
+     <td>0</td>
      <td>10</td>
      <td></td>
      <td>Martial Arts proficiency</td>
@@ -497,7 +497,7 @@
     </tr>
     <tr>
      <td>Flail</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@32f0fba8</td>
+     <td>1d6 + STR Piercing</td>
      <td>100</td>
      <td></td>
      <td>Martial Arts Expertise</td>
@@ -505,7 +505,7 @@
     </tr>
     <tr>
      <td>Hook Sword</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@545de5a4</td>
+     <td>1d6 + STR Slashing</td>
      <td>100</td>
      <td></td>
      <td>Martial Arts Expertise</td>
@@ -513,7 +513,7 @@
     </tr>
     <tr>
      <td>Buckler</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@10fde30a</td>
+     <td>1d4 + STR/DEX Bludgeoning</td>
      <td>30</td>
      <td><nobr>Blocking: 1</nobr>, <nobr>Nimble</nobr></td>
      <td></td>
@@ -521,7 +521,7 @@
     </tr>
     <tr>
      <td>Shield</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@1991f767</td>
+     <td>1d4 + STR Bludgeoning</td>
      <td>50</td>
      <td><nobr>Blocking: 2</nobr></td>
      <td>Defense proficiency, 12 STR</td>
@@ -529,7 +529,7 @@
     </tr>
     <tr>
      <td>Greatshield</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@768ccdc5</td>
+     <td>1d6 + STR Bludgeoning</td>
      <td>100</td>
      <td><nobr>Blocking: 3</nobr></td>
      <td>Defense Expertise, 14 STR</td>
@@ -537,7 +537,7 @@
     </tr>
     <tr>
      <td>Mantlet</td>
-     <td>net.allthatglitters.server.appendices.weapons.Damage@29ef6856</td>
+     <td>1d8 + STR Bludgeoning</td>
      <td>150</td>
      <td><nobr>Blocking: 4</nobr></td>
      <td>Defense Proficiency, 14 STR</td>

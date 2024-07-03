@@ -5,13 +5,13 @@ import net.allthatglitters.server.chapters.sheet.Attribute
 enum class School(val adjective: String, val primaryAttr: Attribute) {
     Alchemy("alchemical", Attribute.INT),
     Astrology("astrological", Attribute.INT),
-    Biomancy("biological", Attribute.NST),
+    Biomancy("natural", Attribute.NST),
     Psionics("psychic", Attribute.CHA),
     Conjuration("conjuration", Attribute.CHA),
     Elementurgy("elemental", Attribute.NST),
 }
 
-enum class Discipline(val school: School, val adjective: String) {
+enum class College(val school: School, val adjective: String) {
     Pharmacology(School.Alchemy, "beneficial"),
     Toxicology(School.Alchemy, "toxic"),
 
@@ -36,18 +36,8 @@ enum class Discipline(val school: School, val adjective: String) {
     Telepathy(School.Psionics, "telepathic"),
     Telekinesis(School.Psionics, "telekinetic");
 
-    fun describe(rarity: Rarity, type: Type): String {
-        return when (this) {
-            Pharmacology -> "$rarity potion"
-            Toxicology -> "$rarity toxin"
-            Solar, Lunar, Planetary -> "$rarity $adjective ${school.adjective} ${type.label}"
-            Fire, Earth, Water, Air -> "$rarity ${school.adjective} ${type.label}"
-            else -> "$rarity $adjective ${type.label}"
-        }
-    }
-
     companion object {
-        fun parse(input: String): Discipline {
+        fun parse(input: String): College {
             return entries.first { it.name.equals(input, true) }
         }
     }

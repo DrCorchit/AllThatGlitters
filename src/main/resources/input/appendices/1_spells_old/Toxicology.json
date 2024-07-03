@@ -21,7 +21,7 @@
   },
   {
     "name": "Brew: Aqua Regia",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Toxicology",
     "type": "enchantment",
     "effect": "The alchemical ritual renders an extremely volatile acid that even dissolves inert metals such as gold and platinum. The reaction yields four ounces of liquid, which are stored in a stoppered flask. When thrown at a target after the incantation has been uttered, it deals 4d6 acid damage and reduces armor by 3.",
@@ -65,7 +65,7 @@
   },
   {
     "name": "Brew: Debilitative",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Toxicology",
     "type": "enchantment",
     "effect": "A tepid solution of nightshade oil and ocular jelly is dissolved in alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons must pass a DT 14 willpower saving throw or suffer -1 to INT, CHA, and WILL scores.",
@@ -86,7 +86,7 @@
   },
   {
     "name": "Brew: Enervative",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Toxicology",
     "type": "enchantment",
     "effect": "A frothing solution of nettles and thistle is distilled from an alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons loses 1d4 AP for each hit.",
@@ -190,7 +190,7 @@
   },
   {
     "name": "Brew: Liquid Light",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Toxicology",
     "type": "enchantment",
     "effect": "A viscous, glowing solution of yellow-white light appears overnight after the proper admixture of rust shavings, crushed amber, and powdered dragon tooth has settled. The reaction yields 4 ounces of liquid, which are stored in a stoppered flask. With an action, you coat a weapon or up to ten arrows with one ounce of the solution. Any target damaged by these weapons takes 1d6 fire damage. Additionally, the entire flask can be thrown, causing an explosion which deals 3d6 fire damage and 3d6 force damage to all enemies within 10 feet.",
@@ -210,7 +210,7 @@
   },
   {
     "name": "Brew: Neurotoxin",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Toxicology",
     "type": "enchantment",
     "effect": "A potent concentrate of serpent venom is precipitated in alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. With an action, you can coat a weapon or up to ten arrows with the solution. Any target damaged by these weapons must pass a DT 12 willpower saving throw or become paralysed.",

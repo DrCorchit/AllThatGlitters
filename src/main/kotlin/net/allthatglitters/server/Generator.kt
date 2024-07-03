@@ -78,7 +78,7 @@ class Generator(val version: String, val inputDir: File, val outputDir: File) : 
 			"armor" -> Armor.Companion
 			"items" -> Item.Companion
 			"weapons" -> Weapon.Companion
-			"weapon_modifiers" -> Keyword.Companion
+			"weapon_keywords" -> Keyword.Companion
 			"damage" -> DamageType.Companion
 			"status", "status_effects" -> StatusEffect.Companion
 			"spells" -> Spell.Companion

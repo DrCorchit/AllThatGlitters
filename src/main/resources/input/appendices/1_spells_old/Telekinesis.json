@@ -25,7 +25,7 @@
   },
   {
     "name": "Telemanipulation",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "telekinetics",
     "type": "concentration",
     "target": {
@@ -81,7 +81,7 @@
   },
   {
     "name": "Greater Telekinetic Pull",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "telekinetics",
     "type": "concentration",
     "target": {
@@ -137,7 +137,7 @@
   },
   {
     "name": "Shockwave",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "telekinetics",
     "type": "evocation",
     "target": {
@@ -166,7 +166,7 @@
   },
   {
     "name": "Force Field",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "telekinetics",
     "type": "concentration",
     "target": {

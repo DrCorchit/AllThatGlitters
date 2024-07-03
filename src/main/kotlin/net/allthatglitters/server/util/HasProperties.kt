@@ -7,6 +7,7 @@ import net.allthatglitters.server.appendices.items.Item
 import net.allthatglitters.server.appendices.magic.Spell
 import net.allthatglitters.server.appendices.weapons.Keyword
 import net.allthatglitters.server.appendices.weapons.Weapon
+import net.allthatglitters.server.appendices.weapons.WeaponKeyword
 import net.allthatglitters.server.chapters.combat.DamageType
 import net.allthatglitters.server.chapters.combat.StatusEffect
 import net.allthatglitters.server.chapters.sheet.Attribute

@@ -18,7 +18,7 @@
   "startingEquipment": {
     "_": [
       "A set of {{armor.quilted_armor}}",
-      "A {{weapon_modifiers.nimble}} weapon",
+      "A {{weapon_keywords.nimble}} weapon",
       "A {{weapons.dagger}}",
       "A {{items.instrument}} of some kind"
     ],

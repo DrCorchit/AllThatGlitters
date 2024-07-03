@@ -49,7 +49,7 @@
   },
   {
     "name": "Major Telepathy",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "telepathy",
     "type": "concentration",
     "target": {
@@ -104,7 +104,7 @@
   },
   {
     "name": "Psychic Sight",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "telepathy",
     "type": "concentration",
     "target": {
@@ -134,7 +134,7 @@
   },
   {
     "name": "Induce Emotion",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "telepathy",
     "type": "evocation",
     "target": {
@@ -182,7 +182,7 @@
   },
   {
     "name": "Unimind",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "telepathy",
     "type": "ceremony",
     "target": {

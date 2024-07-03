@@ -57,7 +57,7 @@
   },
   {
     "name": "Illusory Being",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "illusion",
     "type": "concentration",
     "target": {
@@ -99,7 +99,7 @@
   },
   {
     "name": "Mass Illusion",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "illusion",
     "type": "evocation",
     "target": {

@@ -50,7 +50,7 @@
   },
   {
     "name": "Dazed",
-    "effect": "The target cannot take reactions, and has disadvantage on all ability checks.",
+    "effect": "The target cannot take reactions, and has disadvantage on all saving throws.",
     "causes": "Blows to the head, poisoning, or confusion spells.",
     "recovery": "Wait until the condition passes.",
     "notes": ""

@@ -1,104 +1,174 @@
 [
   {
     "name": "Esoteric Telepathy",
-    "rarity": "Esoteric",
-    "discipline": "Telepathy",
-    "type": "Ritual",
+    "level": 7,
     "effect": "For 24 hours, you gain the ability to read the thoughts of an entity known to you by name, and may communicate with them telepathically. If at any point they become aware of your presence within their mind, they may make a DT 18 willpower saving throw to resist. If successful, they reject your intrusion and have advantage on all willpower saving throws against you for the next 24 hours.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Esoteric",
+    "college": "Telepathy",
+    "type": "Ritual",
+    "training_reqs": {
+      "level": 13,
+      "CHA": 17,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Telempathy",
-    "rarity": "Common",
-    "discipline": "Telepathy",
-    "type": "Evocation",
+    "level": 1,
     "effect": "You reach out and place the palms of your hands on either side of the target's forehead. While so positioned, you experience the emotions of the target as if they were your own. By mutual agreement, the target may also experience your emotions as well.",
-    "castingReqs": {
-      "cost": 0
+    "rarity": "Common",
+    "college": "Telepathy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "CHA": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Minor telepathy",
-    "rarity": "Common",
-    "discipline": "Telepathy",
-    "type": "Evocation",
+    "level": 1,
     "effect": "You read the thoughts of a creature within 100 feet of you. You may also impart your own thoughts into their mind. Unwilling targets make a DT 15 {{attr.CHA}} saving throw to resist. If successful, they reject your contact and have advantage on willpower saving throws against your psychic spells for the next 24 hours.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Telepathy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "CHA": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Major Telepathy",
-    "rarity": "Common",
-    "discipline": "Telepathy",
-    "type": "Concentration",
+    "level": 4,
     "effect": "You establish a psychic connection with a being within range that you can see. You may read their thoughts, including those that the being is unable or unwilling to articulate. You may also impart your own thoughts into their mind. The spell lasts for as long as you continue concentration, or until the target breaks line of sight for ten minutes. If the target is unwilling, they may make a DT 15 willpower saving throw to resist. If successful, they reject your contact and have advantage on all willpower saving throws against you for the next 24 hours.",
-    "castingReqs": {
-      "cost": 2,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Telepathy",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 7,
+      "CHA": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Psychic Sight",
-    "rarity": "Common",
-    "discipline": "Telepathy",
-    "type": "Evocation",
+    "level": 3,
     "effect": "You see and hear through the senses of someone you can see, from a first person perspective. If the target has not consented to psychic contact, they make a DT 12 {{skills.perception}} saving throw to detect your presence. If this check succeeds, they may make a DT 15 {{attr.CHA}} saving throw to reject your from their mind. Failing this, they can interfere with the spell by closing their eyes.",
-    "castingReqs": {
-      "cost": 3
+    "rarity": "Common",
+    "college": "Telepathy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 5,
+      "CHA": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "time": "1 action"
     }
   },
   {
     "name": "Induce Emotion",
-    "rarity": "Common",
-    "discipline": "Telepathy",
-    "type": "Evocation",
+    "level": 2,
     "effect": "Induce one of the following emotions in a target: calm, confusion, courage, fear, or rage.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Telepathy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 3,
+      "CHA": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Inflict Amnesia",
-    "rarity": "Common",
-    "discipline": "Telepathy",
-    "type": "Evocation",
+    "level": 4,
     "effect": "The the target fails a DT 17 {{attr.CHA}} saving throw, they immediately forget their immediate surroundings and intentions.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Common",
+    "college": "Telepathy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 7,
+      "CHA": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Hypnosis",
-    "rarity": "Academic",
-    "discipline": "Telepathy",
-    "type": "Evocation",
+    "level": 5,
     "effect": "You mesmerize a target that can see you, causing it to serve you in combat. If the target fails a DT 15 {{attr.CHA}} saving throw, the spell takes hold and the target joins you in combat. If the target takes damage, they may repeat the saving throw.",
-    "castingReqs": {
-      "cost": 3
+    "rarity": "Scholarly",
+    "college": "Telepathy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 9,
+      "CHA": 15,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "time": "1 action"
     }
   },
   {
     "name": "Mind Control",
-    "rarity": "Forbidden",
-    "discipline": "Telepathy",
-    "type": "Concentration",
+    "level": 7,
     "effect": "Take control of being you can see within range. You automatically gain the psychic sight and major telepathy. The target makes a DT 10 perception check to realize they are being psychically dominated. If the target succeeds, they may make an additional DT 18 willpower check to resist your control. If they succeed this check, the spell ends and they have advantage on similar checks against you. If it fails, they may make additional attempts to resist at the end of each of their combat turns, or before making actions significantly against their interests. Additionally, if the target is aware that they are being dominated, they may give subtle tells such as speaking with unnatural vocal inflections or eye twitches.",
-    "castingReqs": {
-      "cost": 5,
-      "concentration": 1
+    "rarity": "Forbidden",
+    "college": "Telepathy",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 13,
+      "CHA": 17,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "concentration": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Unimind",
-    "rarity": "Academic",
-    "discipline": "Telepathy",
-    "type": "Ceremony",
+    "level": 8,
     "effect": "During the ceremony, all participants share a single mind such that the thoughts and emotions of each participant are instantaneously apparent to all others. Participants other than the caster must possess at least 12 {{attr.CHA}} in order to participate in the ritual. The willpower cost is divided between all participants.",
-    "castingReqs": {
-      "cost": 50
+    "rarity": "Scholarly",
+    "college": "Telepathy",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 15,
+      "CHA": 18,
+      "slots": 6
+    },
+    "casting_reqs": {
+      "evocation": 50,
+      "time": "1 action"
     }
   }
 ]

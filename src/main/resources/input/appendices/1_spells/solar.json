@@ -1,117 +1,194 @@
 [
   {
     "name": "Lodestone",
-    "rarity": "Common",
-    "discipline": "Solar",
-    "type": "Evocation",
+    "level": 1,
     "effect": "A trail of ghostly lights appear, guiding you to a location you have visited before no further than ten miles away. The lights last for one hour, and can be seen by allies and enemies. The lights appear as you approach them and disappear as you leave them behind.",
-    "castingReqs": {
-      "cost": 0
+    "rarity": "Common",
+    "college": "Solar",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "INT": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Sunbeam",
-    "rarity": "Common",
-    "discipline": "Solar",
-    "type": "Evocation",
+    "level": 1,
     "effect": "Deal 1d8 {{damage.holy}} damage to an enemy. If cast upon an ally (but not undead or an automaton) heal it by that amount instead.",
-    "castingReqs": {
-      "cost": 1
+    "rarity": "Common",
+    "college": "Solar",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "INT": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Luminance",
-    "rarity": "Common",
-    "discipline": "Solar",
-    "type": "Enchantment",
+    "level": 2,
     "effect": "An item you choose begins to glow with a gentle blue or yellow aura. You may combine this enchantment with a divination spell (by casting both at the same time) to make the aura only appear when some condition is met.",
-    "castingReqs": {
-      "cost": 0
+    "rarity": "Common",
+    "college": "Solar",
+    "type": "Enchantment",
+    "training_reqs": {
+      "level": 3,
+      "INT": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Solstice",
-    "rarity": "Common",
-    "discipline": "Solar",
-    "type": "Concentration",
+    "level": 3,
     "effect": "A beam of healing sunlight shines down on an area and remains for duration of the spell. Within the spell's effect radius of 10 feet, allies gain 1d6 healing, while enemies take 1d6 {{damage.holy}} damage. This effect is applied when the spell is cast, and again at the start of your turn.",
-    "castingReqs": {
-      "cost": 2,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Solar",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 5,
+      "INT": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Bolster",
-    "rarity": "Common",
-    "discipline": "Solar",
-    "type": "Concentration",
+    "level": 3,
     "effect": "Grant an ally 5 temporary hitpoints and increase their BC by 5 for as long as concentration is maintained.",
-    "castingReqs": {
-      "cost": 2,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Solar",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 5,
+      "INT": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Starlight",
-    "rarity": "Academic",
-    "discipline": "Solar",
-    "type": "Concentration",
+    "level": 4,
     "effect": "Illuminate an area (no larger than an acre) with a soft blue celestial light. The light is only visible to you and your allies. Living creatures illuminated by this light glow brightly, but not the undead or automatons.",
-    "castingReqs": {
-      "cost": 1,
-      "concentration": 0
+    "rarity": "Scholarly",
+    "college": "Solar",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 7,
+      "INT": 14,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Holy Aurora",
-    "rarity": "Academic",
-    "discipline": "Solar",
-    "type": "Concentration",
+    "level": 5,
     "effect": "A spectral halo of prismatic light circles the head of an ally you choose. For every turn concentration is maintained, they heal 1d6 hitpoints per turn and deal 1d6 bonus {{damage.holy}} damage with their melee attacks. In addition, they cannot be {{status.blinded}} by magical effects.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 0
+    "rarity": "Scholarly",
+    "college": "Solar",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 9,
+      "INT": 15,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "High Noon",
-    "rarity": "Common",
-    "discipline": "Solar",
-    "type": "Evocation",
+    "level": 6,
     "effect": "Deal {{damage.holy}} damage to a target by its remaining willpower.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Common",
+    "college": "Solar",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 11,
+      "INT": 16,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Soul Equinox",
-    "rarity": "Academic",
-    "discipline": "Solar",
-    "type": "Evocation",
+    "level": 7,
     "effect": "A mote of light damages an enemy for 10 {{damage.holy}} damage and then heals an ally by 10. If the enemy succeeds a DT 10 {{skills.defense}} saving throw, the damage and healing are reduced by half.",
-    "castingReqs": {
-      "cost": 4
+    "rarity": "Scholarly",
+    "college": "Solar",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 13,
+      "INT": 17,
+      "slots": 6
+    },
+    "casting_reqs": {
+      "evocation": 4,
+      "time": "1 action"
     }
   },
   {
     "name": "Justice",
-    "rarity": "Academic",
-    "discipline": "Solar",
-    "type": "Evocation",
+    "level": 8,
     "effect": "Deal {{damage.holy}} damage to an enemy equal to the last amount of damage it dealt, or heal a target by the last damage it took.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Scholarly",
+    "college": "Solar",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 15,
+      "INT": 18,
+      "slots": 6
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Solar Laser",
-    "rarity": "Esoteric",
-    "discipline": "Solar",
-    "type": "Concentration",
+    "level": 9,
     "effect": "A beam of light brighter than the sun issues forth from your hands and burns all in its path. All creatures caught in the path of the light must pass a DT 15 {{skills.mobility}} check or take 2d20 {{damage.holy}} damage and become {{status.blinded}} for 1d4 turns. Creatures that make their save take half damage and are not blinded.",
-    "castingReqs": {
-      "cost": 5,
-      "concentration": 2
+    "rarity": "Esoteric",
+    "college": "Solar",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 17,
+      "INT": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "concentration": 2,
+      "time": "1 action"
     }
   }
 ]

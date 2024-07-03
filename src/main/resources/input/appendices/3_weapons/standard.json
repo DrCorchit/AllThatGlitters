@@ -5,7 +5,7 @@
     "damage": "1d6",
     "cost": 100,
     "modifiers": ["Cut-and-Thrust", "Versatile: 1d8", "Mordhau: 1d4", "Parrying 6"],
-    "requirements": ["12 STR", "Martial Arts Expertise"]
+    "requirements": ["11 STR", "Martial Arts Expertise"]
   },
   {
     "name": "Battle Axe",
@@ -21,7 +21,7 @@
     "damage": "1d6",
     "cost": 50,
     "modifiers": ["Slashing", "Versatile: 1d8"],
-    "requirements": ["Martial Arts Proficiency"]
+    "requirements": ["11 STR", "Martial Arts Proficiency"]
   },
   {
     "name": "Broadsword",
@@ -45,7 +45,7 @@
     "damage": "1d6",
     "cost": 30,
     "modifiers": ["Bludgeoning", "Versatile: 1d8", "Parrying 3"],
-    "requirements": []
+    "requirements": ["11 STR", "Martial Arts Proficiency"]
   },
   {
     "name": "Morningstar",
@@ -101,6 +101,6 @@
     "damage": "1d6",
     "cost": 30,
     "modifiers": ["Bludgeoning", "Versatile: 1d8", "Parrying 6"],
-    "requirements": ["Martial Arts Proficiency"]
+    "requirements": ["11 STR", "Martial Arts Proficiency"]
   }
 ]

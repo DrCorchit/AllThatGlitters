@@ -1,162 +1,274 @@
 [
   {
     "name": "Fairy Fire",
-    "rarity": "Common",
-    "discipline": "Wyrd",
-    "type": "Evocation",
+    "level": 1,
     "effect": "The caster designates an area, causing the ground to glow and sparkle with eerie fairy fire. Enemies entering this area become illuminated and outlined in green, blue, teal, or violet light, even if they are invisible. Melee or ranged attacks against such enemies have advantage, unless the attacker is blinded.",
-    "castingReqs": {
-      "cost": 1
+    "rarity": "Common",
+    "college": "Wyrd",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "NST": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Beast Speech",
-    "rarity": "Esoteric",
-    "discipline": "Wyrd",
-    "type": "Ritual",
+    "level": 1,
     "effect": "The caster gains the ability to converse with animals for one hour.",
-    "castingReqs": {
-      "cost": 1
+    "rarity": "Esoteric",
+    "college": "Wyrd",
+    "type": "Ritual",
+    "training_reqs": {
+      "level": 1,
+      "NST": 11,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Bubble",
-    "rarity": "Common",
-    "discipline": "Wyrd",
-    "type": "Evocation",
+    "level": 2,
     "effect": "A magical bubble appears, able to engulf one {{size.medium}} target. On your turn, you can move the bubble up to 3 feet per second. Physical attacks cannot pass through the bubble, but it can be attacked from within by the engulfed creature. The bubble is vulnerable to {{damage.piercing}} damage and pops after taking 1d20 piercing damage. The bubble lasts for up to 1 minute and has a Mitigation of 5, from its dodge chance.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Wyrd",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 3,
+      "NST": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Bonfire",
-    "rarity": "Common",
-    "discipline": "Wyrd",
-    "type": "Evocation",
+    "level": 2,
     "effect": "A magical bonfire appears, lasting for up to one hour. Once per turn, the caster can use a reaction to cause it to deal 2d6 fire damage to enemies within 5 feet. The bonfire is otherwise ordinary and can be extinguished by water or suffocation.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Wyrd",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 3,
+      "NST": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Spirit Animal",
-    "rarity": "Common",
-    "discipline": "Wyrd",
-    "type": "Ritual",
+    "level": 3,
     "effect": "The first time this spell is cast, the caster enters a trance and meets their spirit animal, a fey spirit wise in the ways of the wild who takes the form of a spectral animal, such as a bear, panther, wolf, or hawk. TODO",
-    "castingReqs": {
-      "cost": 1
+    "rarity": "Common",
+    "college": "Wyrd",
+    "type": "Ritual",
+    "training_reqs": {
+      "level": 5,
+      "NST": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Far Whisper",
-    "rarity": "Common",
-    "discipline": "Wyrd",
-    "type": "Evocation",
+    "level": 3,
     "effect": "You gain the ability to whisper to distant creatures as if they were near. You may whisper or speak to a creature up to a mile away, and they will hear your voice as if they were standing beside you.",
-    "castingReqs": {
-      "cost": 0
+    "rarity": "Common",
+    "college": "Wyrd",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 5,
+      "NST": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Illusory Terrain",
-    "rarity": "Esoteric",
-    "discipline": "Wyrd",
-    "type": "Ceremony",
+    "level": 4,
     "effect": "The caster beseeches the appropriate fairy council to disguise a large swathe of terrain in an appropriate manner. The fairies must be convinced that it is in their benefit to do so, though (being fey) they rarely say no to a sufficiently clever prank. If the player passes a DT 16 {{skills.persuasion}} check, the terrain appears transformed for 1d8 days, after which time the fey grow bored and cease the illusion. The illusion can be detected by anyone who draws close and",
-    "castingReqs": {
-      "cost": 40
+    "rarity": "Esoteric",
+    "college": "Wyrd",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 7,
+      "NST": 14,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 40,
+      "time": "1 action"
     }
   },
   {
     "name": "Rain Dance",
-    "rarity": "Common",
-    "discipline": "Wyrd",
-    "type": "Ceremony",
+    "level": 4,
     "effect": "The caster leads a group in a dance of supplication around a fire, beseeching the fey for rain, snow, or clear skies. The fey, eager to show their power, respond by producing the requested weather.",
-    "castingReqs": {
-      "cost": 20
+    "rarity": "Common",
+    "college": "Wyrd",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 7,
+      "NST": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 20,
+      "time": "1 action"
     }
   },
   {
     "name": "Awaken Beastie",
-    "rarity": "Esoteric",
-    "discipline": "Wyrd",
-    "type": "Ritual",
+    "level": 5,
     "effect": "A beast is permanently awakened to sentience, gaining +3 to {{attr.INT}} and +3 to {{attr.CHA}} in addition to the ability to speak. It automatically joins you in combat, unless mortally afraid. After one week of sentience, the animal must make a DT 14 {{attr.CHA}} saving throw or be overcome with existential angst, whereupon it will plead the caster to revoke sentience (which is done by casting the spell a second time).",
-    "castingReqs": {
-      "cost": 10
+    "rarity": "Esoteric",
+    "college": "Wyrd",
+    "type": "Ritual",
+    "training_reqs": {
+      "level": 9,
+      "NST": 15,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 10,
+      "time": "1 action"
     }
   },
   {
     "name": "Oneiromancy",
-    "rarity": "Common",
-    "discipline": "Wyrd",
-    "type": "Ritual",
+    "level": 5,
     "effect": "During the ritual, the caster beseeches the fey for a vision concerning an important topic, and then falls into a magical slumber. While asleep, the caster receives a vision. The DM privately rolls a d20, which determines how directly the vision answers the question. On a 1, the vision (fantastical as it may be) bears absolutely no relation to the question at hand, and may even be malicious fey trickery.",
-    "castingReqs": {
-      "cost": 0
+    "rarity": "Common",
+    "college": "Wyrd",
+    "type": "Ritual",
+    "training_reqs": {
+      "level": 9,
+      "NST": 15,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Sweet Dreams",
-    "rarity": "Esoteric",
-    "discipline": "Wyrd",
-    "type": "Ceremony",
+    "level": 6,
     "effect": "You and all participants call out to the fey, thanking them for their role in maintaining the balance of nature and protecting the life force. You invite them to visit you in your dreams, calling for succor, entertainment, and guidance. All participants roll a 1d4, and gain an effect accordingly: <ol><li>Hellish Nightmares: Tormented by cruel fey, no rest can be had. No Willpower is recovered during the long rest.</li><li>Vivid Visions: Playful and adventurous fey take the dreamer on wondrous adventures seeming to last for many days. Upon awakening, the individual gains 1d4 temporary AP.</li><li>Quiet Quandaries: The dreamer awakens beside a pool of water, which idly asks the dreamer a question. After it has been answered, it invites the dreamer to ask a question of their own. If the adventurer answered the water's question truthfully, it answers truthfully. Also gain 1d6 temporary WP.</li><li>Allmother's Embrace: The dreamers is escorted by powerful fey to the magical heart of the forest. They are greeted by a gentle yet powerful dryad called the Allmother, who embraces them tenderly. Gain 1d8 temporary HP and AP.</li></ol>",
-    "castingReqs": {
-      "cost": 10
+    "rarity": "Esoteric",
+    "college": "Wyrd",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 11,
+      "NST": 16,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 10,
+      "time": "1 action"
     }
   },
   {
     "name": "Primal Form",
-    "rarity": "Esoteric",
-    "discipline": "Wyrd",
-    "type": "Evocation",
+    "level": 6,
     "effect": "The caster expends 10 willpower to transform into a more primal version of their race for one hour. For example, a human, elf, dwarf, or halfling would become a neanderthal. The caster gains +5 {{attr.STR}}, and +2 {{attr.NST}} but suffers -5 {{attr.INT}} and -2 {{attr.CHA}} for the duration of the spell. You lose one level of proficiency in every skill for the duration of the spell.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Esoteric",
+    "college": "Wyrd",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 11,
+      "NST": 16,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Forest Defender",
-    "rarity": "Esoteric",
-    "discipline": "Wyrd",
-    "type": "Ritual",
+    "level": 7,
     "effect": "An allied animal (recruited via {{spells.beast_speech}} or {{spells.awaken_beastie}}) grows to twice its normal size. Such a creature gains +10 {{attr.STR}}.",
-    "castingReqs": {
-      "cost": 10
+    "rarity": "Esoteric",
+    "college": "Wyrd",
+    "type": "Ritual",
+    "training_reqs": {
+      "level": 13,
+      "NST": 17,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 10,
+      "time": "1 action"
     }
   },
   {
     "name": "Fairy’s Feast",
-    "rarity": "Esoteric",
-    "discipline": "Wyrd",
-    "type": "Ritual",
+    "level": 7,
     "effect": "The fairies bring forth a great feast, consisting of fruits and vegetables, wine, cheeses, and venison. The feast serves up to a dozen men, and all who partake become immune to disease and poison (and cured thereof) for eight hours, and also heal 3d20 hp. The feast also alleviates two levels of hunger. After one hour, the entire repast vanishes without a trace.<br /><b>But beware!</b> If anyone partakes and forgets to thank the fairies, they shall suffer one of the following curses for 1 hour (chosen randomly):<ol><li>Shrunken to the size of a rat</li><li>Beset with bizarre illusions and hallucinations</li><li>Plagued with swarms of gnats and biting flies</li><li>Loss of sight and hearing</li><li>Dreadful nightmares and intrusive thoughts most vile</li><li>Gnawing hunger, which is not sated by any amount of food or drink</li></ol>",
-    "castingReqs": {
-      "cost": 10
+    "rarity": "Esoteric",
+    "college": "Wyrd",
+    "type": "Ritual",
+    "training_reqs": {
+      "level": 13,
+      "NST": 17,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 10,
+      "time": "1 action"
     }
   },
   {
     "name": "Dream Warrior",
-    "rarity": "Esoteric",
-    "discipline": "Wyrd",
-    "type": "Ritual",
+    "level": 8,
     "effect": "During the next long rest following the ritual, you dream of a warrior spirit who will assist you in times of hardship. You may determine the warrior's race, class, and level, though their level is limited to half of yours. When you awake in the morning, you will find at your side a glittering silver hand bell. When you ring this bell, you may expend willpower (equal to twice their level) to summon this warrior to your side for eight hours. Performing this ritual a second time causes the first bell to disappear.",
-    "castingReqs": {
-      "cost": 10
+    "rarity": "Esoteric",
+    "college": "Wyrd",
+    "type": "Ritual",
+    "training_reqs": {
+      "level": 15,
+      "NST": 18,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 10,
+      "time": "1 action"
     }
   },
   {
     "name": "Monkey's Paw",
-    "rarity": "Forbidden",
-    "discipline": "Wyrd",
-    "type": "Ceremony",
+    "level": 9,
     "effect": "Three individuals wish upon the severed paw of a monkey, gaining one wish each. Each one who would wish rolls a d20; the number shown is the number of words they may use to construct their wish. Each wish is sure to come true, but the execution is left to the caprice of powerful fairy. A given individual may partake three times of this ceremony, ere the fey turn a deaf ear to their pleas.",
-    "castingReqs": {
-      "cost": 33
+    "rarity": "Forbidden",
+    "college": "Wyrd",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 17,
+      "NST": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 33,
+      "time": "1 action"
     }
   }
 ]

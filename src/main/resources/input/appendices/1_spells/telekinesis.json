@@ -1,118 +1,195 @@
 [
   {
     "name": "Lesser Telekinetic Pull",
-    "rarity": "Common",
-    "discipline": "Telekinesis",
-    "type": "Evocation",
+    "level": 1,
     "effect": "A target weighing less than 20 pounds is drawn to the beckoning fingers of your outstretched hand. The object must be within 50 feet.",
-    "castingReqs": {
-      "cost": 0
+    "rarity": "Common",
+    "college": "Telekinesis",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "CHA": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Telekinetic Throw",
-    "rarity": "Common",
-    "discipline": "Telekinesis",
-    "type": "Evocation",
+    "level": 1,
     "effect": "Hurl an object or enemy captured by one of your telekinetic spells and make an {{skills.accuracy}} attack roll. If it hits, deal 2d8 {{damage.bludgeoning}} damage. If the object thrown was already under your telekinetic control, you have advantage on the attack roll. If the object levitated was a dagger or spear etc, the damage type changes to {{damage.piercing}}. The projectile's speed depends on the weight of the object. If the object weighs one pound or less, it moves at 200 ft/s. Otherwise, its speed is 200 ft/s divided by its weight in pounds.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Telekinesis",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "CHA": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Levitate Object",
-    "rarity": "Common",
-    "discipline": "Telekinesis",
-    "type": "Concentration",
+    "level": 2,
     "effect": "An object weighing at most 1000 pounds responds to telekinetic impulse, rising to hover 3 feet above the ground. The object can be pushed or rotated while levitated without interrupting the spell.",
-    "castingReqs": {
-      "cost": 2,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Telekinesis",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 3,
+      "CHA": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Shockwave",
-    "rarity": "Common",
-    "discipline": "Telekinesis",
-    "type": "Evocation",
+    "level": 2,
     "effect": "With a blast of psionic power, you deal 2d8 force damage to targets within the radius, knocking them back by 10 feet and causing them to fall {{status.prone}}. If a target makes a DT 13 {{skills.defense}} saving throw, it takes half damage and is not knocked prone. If a target rolls below a 9 on its saving throw, it also becomes {{status.dazed}}.",
-    "castingReqs": {
-      "cost": 3
+    "rarity": "Common",
+    "college": "Telekinesis",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 3,
+      "CHA": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "time": "1 action"
     }
   },
   {
     "name": "Levitation",
-    "rarity": "Common",
-    "discipline": "Telekinesis",
-    "type": "Concentration",
+    "level": 3,
     "effect": "While concentration is maintained, you hover roughly 3 feet above the ground, gliding above the terrain. You gain the {{status.levitated}} status and your {{attr.SPD}} changes to 18. If the ground is more than 3 feet below, you may remain aloft or descend gracefully.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Telekinesis",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 5,
+      "CHA": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Telemanipulation",
-    "rarity": "Common",
-    "discipline": "Telekinesis",
-    "type": "Concentration",
+    "level": 3,
     "effect": "Via subtle telekinetic impulses, the caster manipulates a target weighing less than 20 pounds with great precision, moving or rotating it at will. The object moves at a maximum speed of 5 ft/s and may not be rotated in such a way that any part of its outer boundary exceeds maximum speed relative to the center of mass. There is no limit to how many times this spell may be cast upon the same object or how much weight may be moved, provided all casters act in concert.",
-    "castingReqs": {
-      "cost": 2,
-      "concentration": 1
+    "rarity": "Common",
+    "college": "Telekinesis",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 5,
+      "CHA": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "concentration": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Greater Telekinetic Pull",
-    "rarity": "Common",
-    "discipline": "Telekinesis",
-    "type": "Concentration",
+    "level": 4,
     "effect": "A {{size.medium}} or small creature is drawn just before your outstretched hands, at a rate of 10 ft/s. It gains the {{status.levitated}} status for as long as you maintain concentration. The target may make a DT 11 {{skills.defense}} or {{skills.sorcery}} saving throw to resist being pulled.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Telekinesis",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 7,
+      "CHA": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Force Shield",
-    "rarity": "Common",
-    "discipline": "Telekinesis",
-    "type": "Concentration",
+    "level": 4,
     "effect": "Generate a shield of telekinetic force measuring six feet in diameter. The shield appears as a shimmering transparent pocket of air hovering in front of you. The shield grants partial cover and provides 7 {{BC}} to up to two people standing behind it.",
-    "castingReqs": {
-      "cost": 1,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Telekinesis",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 7,
+      "CHA": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Psyblast",
-    "rarity": "Common",
-    "discipline": "Telekinesis",
-    "type": "Evocation",
+    "level": 5,
     "effect": "Deal 4d6 {{damage.force}} damage to an enemy. If it fails a DT 16 {{skills.mobility}} saving throw, it is also knocked back 10 feet.",
-    "castingReqs": {
-      "cost": 3
+    "rarity": "Common",
+    "college": "Telekinesis",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 9,
+      "CHA": 15,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "time": "1 action"
     }
   },
   {
     "name": "Force Field",
-    "rarity": "Academic",
-    "discipline": "Telekinesis",
-    "type": "Concentration",
+    "level": 7,
     "effect": "An invisible wall of telekinetic impulse appears in the chosen location. The wall prevents the passage of people and objects except for the spellcaster and allies. The wall can absorb 50+1d100 damage before concentration fails and the spell must be recast.",
-    "castingReqs": {
-      "cost": 4,
-      "concentration": 1
+    "rarity": "Scholarly",
+    "college": "Telekinesis",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 13,
+      "CHA": 17,
+      "slots": 6
+    },
+    "casting_reqs": {
+      "evocation": 4,
+      "concentration": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Mind Armor",
-    "rarity": "Esoteric",
-    "discipline": "Telekinesis",
-    "type": "Ceremony",
+    "level": 9,
     "effect": "Generate a telekinetic suit of armor covering your entire body. The suit provides 10 BC initially, but loses 1 BC per hour until it vanishes.",
-    "castingReqs": {
-      "cost": 30
+    "rarity": "Esoteric",
+    "college": "Telekinesis",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 17,
+      "CHA": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 30,
+      "time": "1 action"
     }
   }
 ]

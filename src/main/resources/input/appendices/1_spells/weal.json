@@ -1,113 +1,190 @@
 [
   {
     "name": "Herbal Remedy",
-    "rarity": "Common",
-    "discipline": "Weal",
-    "type": "Evocation",
+    "level": 1,
     "effect": "Heal yourself and a target you touch for 1d6 damage. You cannot heal yourself with this spell unless you heal a living creature.",
-    "castingReqs": {
-      "cost": 1
+    "rarity": "Common",
+    "college": "Weal",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "NST": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Shillelagh",
-    "rarity": "Common",
-    "discipline": "Weal",
-    "type": "Evocation",
+    "level": 1,
     "effect": "Any wooden weapons (such as a club or quarterstaff) wielded by the caster becomes imbued with the power of nature. While active, the caster may add their {{skills.nature}} proficiency bonus to the weapon's damage. In addition, they may use the nature skill to make attack rolls with the weapon, instead of {{skills.martial_arts}}.",
-    "castingReqs": {
-      "cost": 0
+    "rarity": "Common",
+    "college": "Weal",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "NST": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Barkskin",
-    "rarity": "Common",
-    "discipline": "Weal",
-    "type": "Concentration",
+    "level": 2,
     "effect": "The caster's skin gradually gains a thick covering resembling the bark of a tree. Their BC increases by 2 each turn concentration is maintained, up to a maximum of 10.",
-    "castingReqs": {
-      "cost": 1,
-      "concentration": 1
+    "rarity": "Common",
+    "college": "Weal",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 3,
+      "NST": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "concentration": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Thorn Whip",
-    "rarity": "Common",
-    "discipline": "Weal",
-    "type": "Evocation",
+    "level": 2,
     "effect": "The caster lashes out with the power of thorns, coiling around the target and dragging them 5 feet towards the caster. The target takes 2d6 piercing damage and is dragged up to 10 feet towards the caster. If the target makes a DT 10 {{attr.STR}} saving throw, the target takes half damage and is not dragged.",
-    "castingReqs": {
-      "cost": 1
+    "rarity": "Common",
+    "college": "Weal",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 3,
+      "NST": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Aromatherapy",
-    "rarity": "Common",
-    "discipline": "Weal",
-    "type": "Ritual",
+    "level": 3,
     "effect": "Soothed by the scent of magical incense, the party heals 3d6 damage during the ritual.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Weal",
+    "type": "Ritual",
+    "training_reqs": {
+      "level": 5,
+      "NST": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Tree Speech",
-    "rarity": "Esoteric",
-    "discipline": "Weal",
-    "type": "Evocation",
+    "level": 4,
     "effect": "Placing their hands on a tree, the caster gains the ability to converse with a forest. Trees bear a timeless wisdom, and are able to communicate with other trees via their roots. Trees cannot see or speak (to humans) but they can distinguish animals, humans, and intruders within the limits of their root network.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Esoteric",
+    "college": "Weal",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 7,
+      "NST": 14,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Chaos Spores",
-    "rarity": "Esoteric",
-    "discipline": "Weal",
-    "type": "Evocation",
+    "level": 5,
     "effect": "A cloud of spores coalesces around a point chosen by the caster. Targets within must make a {{attr.NST}} saving throw or suffer one of the following effects: <ol><li>{{status.blinded}}</li><li>{{status.dazed}}</li><li>{{status.madness}}</li><li>{{status.terrified}}</li></ol>",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Esoteric",
+    "college": "Weal",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 9,
+      "NST": 15,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Poison Spores",
-    "rarity": "Esoteric",
-    "discipline": "Weal",
-    "type": "Evocation",
+    "level": 6,
     "effect": "A cloud of poisonous spores condenses on the target, implanting them with fungal growth. The spell cannot be mitigated, and inflicts 3 {{damage.poison}} damage. The damage increases by 3 every time it is cast on the same target. Spore buildup is removed if the target is set aflame.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Esoteric",
+    "college": "Weal",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 11,
+      "NST": 16,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Thorn Bed",
-    "rarity": "Esoteric",
-    "discipline": "Weal",
-    "type": "Evocation",
+    "level": 6,
     "effect": "An area designated by the caster becomes thickly overgrown with thorns, becoming difficult terrain. Targets affected take 1d4 piercing damage immediately and an additional 1d4 piercing damage whenever they move through the terrain.",
-    "castingReqs": {
-      "cost": 4
+    "rarity": "Esoteric",
+    "college": "Weal",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 11,
+      "NST": 16,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 4,
+      "time": "1 action"
     }
   },
   {
     "name": "Tree of Life",
+    "level": 8,
+    "effect": "A magical tree appears, healing all living creatures in range by 3d6 each turn, at the start of their turn. The tree has 100 hitpoints, but is vulnerable to {{damage.heat}} damage. The tree's healing decreases to 2d6 below 70 hp and to 1d6 below 40 hp.",
     "rarity": "Esoteric",
-    "discipline": "Weal",
+    "college": "Weal",
     "type": "Evocation",
-    "effect": "A magical tree appears, healing all living creatures in range by 3d6 each turn, at the start of their turn. The tree has 100 hitpoints, but is vulnerable to {{damage.heat}} and {{damage.poison}} damage. The tree's healing decreases to 2d6 below 70 hp and to 1d6 below 40 hp.",
-    "castingReqs": {
-      "cost": 10
+    "training_reqs": {
+      "level": 15,
+      "NST": 18,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 10,
+      "time": "1 action"
     }
   },
   {
     "name": "Become Tree",
-    "rarity": "Esoteric",
-    "discipline": "Weal",
-    "type": "Ritual",
+    "level": 9,
     "effect": "The caster gradually transforms themselves into a tree. In so doing, they lose the ability to speak or see, but retain their knowledge, memories and personality. In addition, they may communicate with nearby trees and their lifespan is increased by 1d6 millennia.",
-    "castingReqs": {
-      "cost": 50
+    "rarity": "Esoteric",
+    "college": "Weal",
+    "type": "Ritual",
+    "training_reqs": {
+      "level": 17,
+      "NST": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 50,
+      "time": "1 action"
     }
   }
 ]

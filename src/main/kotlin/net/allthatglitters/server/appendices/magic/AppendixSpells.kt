@@ -19,7 +19,7 @@ object AppendixSpells : HtmlFile(
 		.associateBy { it.name.normalize() }
 
 	fun getGroupedSpells(): Map<School, List<Spell>> {
-		return spells.values.groupBy { it.discipline.school }
+		return spells.values.groupBy { it.college.school }
 			//Sort keys and values alphabetically
 			.toSortedMap()
 			.mapValues { it.value.sortedBy { spell -> spell.name } }
@@ -67,9 +67,14 @@ object AppendixSpells : HtmlFile(
 
 	fun showSpellStatistics() {
 		val spellStatistics = StringBuilder()
-		spellStatistics.append("              10  11  12  13  14  15  16  17  18  19  20 TOTAL")
+		spellStatistics
+			.append("\n")
+			.append("              10  11  12  13  14  15  16  17  18  19  20 TOTAL")
+
+		var total = 0
 
 		getGroupedSpells().forEach { school ->
+			total += school.value.size
 			spellStatistics.append(String.format("\n%-12s", school.key.name))
 			val reqCount = mutableMapOf<Int, Int>()
 			school.value.forEach { spell ->
@@ -82,14 +87,23 @@ object AppendixSpells : HtmlFile(
 				spellStatistics.append("%4s".format(reqCount.getOrDefault(i, 0)))
 			}
 			spellStatistics.append("%6s".format(reqCount.values.sum()))
-
 		}
+		spellStatistics.append("\nTOTAL: $total")
 
 		logger.info(spellStatistics.toString())
+	}
+
+	fun printSpells() {
+		spells.values.filter {
+			it.college.school == School.Alchemy
+		}.forEach {
+			println(it.descriptiveString())
+		}
 	}
 
 	@JvmStatic
 	fun main(vararg args: String) {
 		showSpellStatistics()
+		//printSpells()
 	}
 }

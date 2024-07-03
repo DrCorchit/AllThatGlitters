@@ -1,7 +1,7 @@
 [
   {
     "name": "Brew: Acumen Philter",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Pharmacology",
     "type": "enchantment",
     "effect": "Produces a cerulean solution of crushed pearl and gold dust, which forms at the top of an alchemical mixture. The reaction yields 1 ounce of product, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 2 points of intelligence until the next long rest.",
@@ -43,7 +43,7 @@
   },
   {
     "name": "Brew: Anaesthetic Potion",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Pharmacology",
     "type": "enchantment",
     "effect": "Produces a transparent liquid, distilled from an alchemical solution of crushed glass and mermaid tears. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial. You gain 1d6 temporary HP and 1d4 temporary WP, and your nerves are greatly dulled to the sensation of pain.",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Brew: Eloquence Philter",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Pharmacology",
     "type": "enchantment",
     "effect": "A xanthous solution of egg yolk and four-leaf clovers is condensed from an alchemical mixture. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 1 point of charisma until the next long rest.",
@@ -163,7 +163,7 @@
   },
   {
     "name": "Brew: Hermetic Philter",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Pharmacology",
     "type": "enchantment",
     "effect": "A pale solution of ostrich feathers and gazelle blood is condensed from an alchemical mixture. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 1 point of speed until the next long rest.",
@@ -205,7 +205,7 @@
   },
   {
     "name": "Brew: Invisibility Potion",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Pharmacology",
     "type": "enchantment",
     "effect": "A glowing, translucent potion remains after aught else is boiled away. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, so becoming invisible for 10 minutes.",
@@ -225,7 +225,7 @@
   },
   {
     "name": "Brew: Elixir of Invulnerability",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Pharmacology",
     "type": "enchantment",
     "effect": "A dark crimson concoction derived from crushed bricks, tar, and grass plucked from between the cracks of a sidewalk. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining immunity to all forms of damage for 1 minute.",
@@ -245,7 +245,7 @@
   },
   {
     "name": "Brew: Persistence Philter",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Pharmacology",
     "type": "enchantment",
     "effect": "A cerulean solution of crushed pearl and gold dust is extracted from an alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 1 point of intelligence until the next long rest.",
@@ -266,7 +266,7 @@
   },
   {
     "name": "Brew: Potency Philter",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Pharmacology",
     "type": "enchantment",
     "effect": "A cerulean solution of crushed pearl and gold dust is extracted from an alchemical solution. The reaction yields 1 ounce of liquid, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 1 point of intelligence until the next long rest.",
@@ -308,7 +308,7 @@
   },
   {
     "name": "Brew: Vigor Philter",
-    "rarity": "academic",
+    "rarity": "Scholarly",
     "discipline": "Pharmacology",
     "type": "enchantment",
     "effect": "Produces an effervescent yellow potion which swirls without cessation. The reaction produces 1 ounce of product, which is stored in a vial. As an action, you may drink the contents of the vial, gaining 2 points of dexterity until the next long rest.",

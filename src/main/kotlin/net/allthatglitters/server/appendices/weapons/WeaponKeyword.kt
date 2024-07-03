@@ -2,7 +2,6 @@ package net.allthatglitters.server.appendices.weapons
 
 import net.allthatglitters.server.concepts.NumDice
 import net.allthatglitters.server.util.HasProperties
-import net.allthatglitters.server.util.bold
 
 enum class WeaponKeyword(
 	override val displayName: String,
@@ -39,7 +38,7 @@ enum class WeaponKeyword(
 	),
 	Throwable(
 		"Throwable",
-		"The weapon does not gain the {{weapon_modifiers.improvised}} trait when thrown."
+		"The weapon does not gain the {{weapon_keywords.improvised}} trait when thrown."
 	),
 	XBow(
 		"Crossbow",

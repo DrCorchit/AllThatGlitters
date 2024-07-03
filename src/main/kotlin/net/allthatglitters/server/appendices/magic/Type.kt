@@ -1,7 +1,7 @@
 package net.allthatglitters.server.appendices.magic
 
 enum class Type(val label: String) {
-    Evocation("evocation"),
+    Evocation("evocation spell"),
     Concentration("concentration spell"),
     Ritual("ritual"),
     Ceremony("ceremony"),

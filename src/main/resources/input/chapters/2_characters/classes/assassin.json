@@ -20,7 +20,7 @@
   "startingEquipment": {
     "_": [
       "A set of {{armor.leather_armor}}.",
-      "Any two {{weapon_modifiers.nimble}} weapons",
+      "Any two {{weapon_keywords.nimble}} weapons",
       "A {{weapons.buckler}}"
     ],
     "Concealed on their person:": [

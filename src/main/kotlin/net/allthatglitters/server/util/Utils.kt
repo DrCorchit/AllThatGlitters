@@ -21,6 +21,10 @@ fun String.italicise(): String {
 	return HtmlObject("i").withContent(this).render()
 }
 
+fun String.capitalizeAll(): String {
+	return this.replace(" [a-z]".toRegex()) { it.value.uppercase() }
+}
+
 fun <T> File.deserialize(deserializer: (JsonObject) -> T): List<T> {
 	return this.readText().let {
 		try {

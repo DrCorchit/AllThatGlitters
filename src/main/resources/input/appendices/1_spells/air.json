@@ -1,135 +1,226 @@
 [
   {
     "name": "Thunderbolt",
-    "rarity": "Common",
-    "discipline": "Air",
-    "type": "Evocation",
+    "level": 1,
     "effect": "A bolt of lightning from the heavens strikes a single enemy, dealing 1d10 damage.",
-    "castingReqs": {
-      "cost": 1
+    "rarity": "Common",
+    "college": "Air",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "NST": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Electrocute",
-    "rarity": "Common",
-    "discipline": "Air",
-    "type": "Evocation",
+    "level": 1,
     "effect": "Attempt an unarmed attack on an opponent. On a success, deal 1d8 {{damage.lightning}} damage in addition to your normal damage.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Air",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "NST": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Cyclone",
-    "rarity": "Common",
-    "discipline": "Air",
-    "type": "Concentration",
+    "level": 2,
     "effect": "A swiftly swirling whirlwind forms in the location you choose. On your turn, you can move the cyclone along a path up to 20 feet in length, dealing 2d6 {{damage.force}} damage to each target hit.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 2
+    "rarity": "Common",
+    "college": "Air",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 3,
+      "NST": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Shocking Blade",
-    "rarity": "Common",
-    "discipline": "Air",
-    "type": "Enchantment",
+    "level": 2,
     "effect": "Imbue a metallic weapon you can touch with the power of lightning. The weapon deals 1d6 {{damage.lightning}} damage for one hour.",
-    "castingReqs": {
-      "cost": 3
+    "rarity": "Common",
+    "college": "Air",
+    "type": "Enchantment",
+    "training_reqs": {
+      "level": 3,
+      "NST": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "time": "1 action"
     }
   },
   {
     "name": "Blustering Gust",
-    "rarity": "Common",
-    "discipline": "Air",
-    "type": "Evocation",
+    "level": 3,
     "effect": "A gust of wind blusters forth, dealing no damage but pushing enemies about. An enemy caught in the gust is pushed 20 feet in the direction of the gust. On a successful DT 10 {{skills.defense}} saving throw, the target is only pushed half that distance.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Air",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 5,
+      "NST": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Soar",
-    "rarity": "Common",
-    "discipline": "Air",
-    "type": "Evocation",
+    "level": 4,
     "effect": "Gain the ability of wingless flight for five minutes. While the spell is active, you may move through the air at 15 feet per second.",
-    "castingReqs": {
-      "cost": 4
+    "rarity": "Common",
+    "college": "Air",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 7,
+      "NST": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 4,
+      "time": "1 action"
     }
   },
   {
     "name": "Lightning Dash",
-    "rarity": "Common",
-    "discipline": "Air",
-    "type": "Evocation",
+    "level": 4,
     "effect": "Teleport to a location you can see within 15 feet. If any enemies are between you and your destination, they take 1d12 {{damage.lightning}} damage.",
-    "castingReqs": {
-      "cost": 4
+    "rarity": "Common",
+    "college": "Air",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 7,
+      "NST": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 4,
+      "time": "1 action"
     }
   },
   {
     "name": "Air Elemental",
-    "rarity": "Common",
-    "discipline": "Air",
-    "type": "Evocation",
+    "level": 5,
     "effect": "Summons an air elemental to do your bidding. The elemental knows {{spells.blustering_gust}}, {{spells.soar}}, {{spells.lightning_dash}}, abd {{spells.thunderbolt}}.",
-    "castingReqs": {
-      "cost": 10
+    "rarity": "Common",
+    "college": "Air",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 9,
+      "NST": 15,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 10,
+      "time": "1 action"
     }
   },
   {
     "name": "Become Vapor",
-    "rarity": "Esoteric",
-    "discipline": "Air",
-    "type": "Evocation",
+    "level": 6,
     "effect": "Become a cloud of vapor. You become immune to slashing, piercing, and bludgeoning damage. You may change your shape to fit around or between narrow obstacles or enemies. You may not delve underwater, and if this spell is cast underwater, you automatically shoot to the surface.",
-    "castingReqs": {
-      "cost": 8
+    "rarity": "Esoteric",
+    "college": "Air",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 11,
+      "NST": 16,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 8,
+      "time": "1 action"
     }
   },
   {
     "name": "Chain Lighting",
-    "rarity": "Common",
-    "discipline": "Air",
-    "type": "Concentration",
+    "level": 7,
     "effect": "A bolt of blue lightning leaps from your outstretched hand to an enemy within range, and then to an additional enemy within 10 feet, if available. Up to three targets take 3d8 {{damage.lightning}} damage.",
-    "castingReqs": {
-      "cost": 6,
-      "concentration": 3
+    "rarity": "Common",
+    "college": "Air",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 13,
+      "NST": 17,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 6,
+      "concentration": 3,
+      "time": "1 action"
     }
   },
   {
     "name": "Lighting Storm",
-    "rarity": "Common",
-    "discipline": "Air",
-    "type": "Concentration",
+    "level": 8,
     "effect": "A dark thundrous cloud spreads over a 50-foot radius around a point up to 100 yards away. Each target within the area takes 1d20 {{damage.lightning}} damage.",
-    "castingReqs": {
-      "cost": 10,
-      "concentration": 5
+    "rarity": "Common",
+    "college": "Air",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 15,
+      "NST": 18,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 10,
+      "concentration": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Storm Golem",
-    "rarity": "Esoteric",
-    "discipline": "Air",
-    "type": "Ceremony",
+    "level": 9,
     "effect": "Summon the mighty storm golem, the most powerful elemental entity which can be summoned and bidden.",
-    "castingReqs": {
-      "cost": 200
+    "rarity": "Esoteric",
+    "college": "Air",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 17,
+      "NST": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 200,
+      "time": "1 action"
     }
   },
   {
     "name": "Hurricane",
-    "rarity": "Esoteric",
-    "discipline": "Air",
-    "type": "Ceremony",
+    "level": 9,
     "effect": "By the power of this ceremony, a mighty hurricane is formed and travels along the path you have ordained. Roll a d20. The category of the hurricane is as follows: <ul><li><b>1-9</b>:1</li><li><b>11-14</b></li><li><b>15-17</b>: 3</li><li><b>18-19</b>: 4</li><li><b>20</b>: 5</li></ul>",
-    "castingReqs": {
-      "cost": 300
+    "rarity": "Esoteric",
+    "college": "Air",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 17,
+      "NST": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 300,
+      "time": "1 action"
     }
   }
 ]

@@ -1,136 +1,227 @@
 [
   {
     "name": "Meteorite",
-    "rarity": "Common",
-    "discipline": "Planetary",
-    "type": "Evocation",
+    "level": 1,
     "effect": "A meteorite slams into the ground, striking a chosen location. The meteorite deals 1d8 {{damage.bludgeoning}} damage to its target and 1d4 {{damage.force}} damage to creatures within 6 feet. If the target makes a DT 11 {{attr.DEX}} saving throw, it does not take force damage.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Planetary",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "INT": 11,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Gravity Slam",
-    "rarity": "Common",
-    "discipline": "Planetary",
-    "type": "Concentration",
+    "level": 2,
     "effect": "Choose a target within range. As long as concentration is maintained, the target ceases to be effected by gravity and hovers a few feet above the ground. If you choose, you may overwhelm the target with residual gravity and slam them into the ground when you end concentration. The target takes 1d12 {{damage.bludgeoning}} damage for every turn concentration was maintained. If concentration is broken, the spell ends without slamming the target into the ground.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Planetary",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 3,
+      "INT": 12,
+      "slots": 2
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Microgravity",
-    "rarity": "Common",
-    "discipline": "Planetary",
-    "type": "Concentration",
+    "level": 3,
     "effect": "For one minute, the target's weight is reduced by half. The target can jump twice as high and their terminal velocity is reduced by half. They have advantage on {{skills.mobility}} checks, but disadvantage on mobility saves.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 2
+    "rarity": "Common",
+    "college": "Planetary",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 5,
+      "INT": 13,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Gravity Well",
-    "rarity": "Common",
-    "discipline": "Planetary",
-    "type": "Concentration",
+    "level": 4,
     "effect": "Create a gravity well at a chosen point. Each creature that starts its turn within 50 feet of the sphere must make a DT 12 {{skills.mobility}} saving throw or be pulled 10 feet closer to the point and lose the ability to move. If the creature begins its turn adjacent to the sphere, the DT of the saving throw increases to 18.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 0
+    "rarity": "Common",
+    "college": "Planetary",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 7,
+      "INT": 14,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Arms of Hadar",
-    "rarity": "Esoteric",
-    "discipline": "Planetary",
-    "type": "Evocation",
+    "level": 4,
     "effect": "A mass of tentacles erupt from a portal to the dark between the stars, lashing out at an enemy. If the enemy fails a DT 13 {{skills.defense}} saving throw, it takes 1d6 {{damage.profane}} damage and becomes {{status.restrained}}. The creature may attempt to break free as an action on each of its turns by rerolling its saving throw, taking an additional 1d6 profane damage each time it fails. If it fails to break free after four attempts, it is pulled through the portal and devoured by the eternal ones. The target must be {{size.large}} or smaller, and is immediately freed if helped by an ally.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Esoteric",
+    "college": "Planetary",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 7,
+      "INT": 14,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Misty Step",
-    "rarity": "Common",
-    "discipline": "Planetary",
-    "type": "Evocation",
+    "level": 5,
     "effect": "Teleport to a location you can see, within 300 feet.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Common",
+    "college": "Planetary",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 9,
+      "INT": 15,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Great Comet",
-    "rarity": "Academic",
-    "discipline": "Planetary",
-    "type": "Evocation",
+    "level": 6,
     "effect": "A comet burning with pure white flame issues forth from your outstretched hands. Dodge and weave as they may, the comet tracks its target around corners and over obstacles to strike true. On a hit, the comet deals 1d8 {{damage.bludgeoning}} and 1d8 {{damage.holy}} damage.",
-    "castingReqs": {
-      "cost": 3
+    "rarity": "Scholarly",
+    "college": "Planetary",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 11,
+      "INT": 16,
+      "slots": 6
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "time": "1 action"
     }
   },
   {
     "name": "Hunger of Hadar",
-    "rarity": "Esoteric",
-    "discipline": "Planetary",
-    "type": "Concentration",
+    "level": 6,
     "effect": "A portal to the dark between the stars is opened, invoking the power of the nameless ones. A cloud of darkness appears which cannot be illuminated, absorbing all light that passes within. Sickly white tentacles sprout from the ground, and their air is filled with the sound of whispers and slithering Creatures that enter the darkness are {{status.blinded}} and take 1d6 {{damage.cold}} damage and 1d6 {{damage.profane}} damage.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 0
+    "rarity": "Esoteric",
+    "college": "Planetary",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 11,
+      "INT": 16,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Teleportation",
-    "rarity": "Academic",
-    "discipline": "Planetary",
-    "type": "Evocation",
+    "level": 7,
     "effect": "Transport yourself or a target you touch to a location you have visited before. If the target is unwilling, they may attempt a DT 8 {{skills.defense}} saving throw to resist being teleported.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Scholarly",
+    "college": "Planetary",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 13,
+      "INT": 17,
+      "slots": 6
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Meteor Shower",
-    "rarity": "Esoteric",
-    "discipline": "Planetary",
-    "type": "Evocation",
+    "level": 8,
     "effect": "A storm of meteors plummets from the sky, towards random locations near a chosen point. Targets within range take 2d8 bludgeoning and 2d8 {{damage.force}} damage. Each target that passes a DT 12 {{skills.mobility}} save takes no bludgeoning damage.",
-    "castingReqs": {
-      "cost": 10
+    "rarity": "Esoteric",
+    "college": "Planetary",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 15,
+      "INT": 18,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 10,
+      "time": "1 action"
     }
   },
   {
     "name": "Black Hole",
-    "rarity": "Forbidden",
-    "discipline": "Planetary",
-    "type": "Evocation",
+    "level": 8,
     "effect": "A dark sphere appears in the chosen location, drawing in nearby creatures and objects for one minute. Each creature that starts its turn within 50 feet of the sphere must make a DT 15 {{skills.mobility}} saving throw or be pulled 10 feet closer to the sphere and lose the ability to move. Any creature that ends its turn adjacent (including diagonally) to the sphere takes 3d20 {{damage.force}} damage. If the creature begins its turn adjacent to the sphere, the DT of the saving throw increases to 20.",
-    "castingReqs": {
-      "cost": 10
+    "rarity": "Forbidden",
+    "college": "Planetary",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 15,
+      "INT": 18,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 10,
+      "time": "1 action"
     }
   },
   {
     "name": "Mass Teleportation",
-    "rarity": "Esoteric",
-    "discipline": "Planetary",
-    "type": "Ceremony",
+    "level": 9,
     "effect": "When the ceremony is completed, up all participants are teleported to a location up to 10 miles away. Each additional participant increases the cost of the spell by 20, but also increases the teleportation range by 5 miles.",
-    "castingReqs": {
-      "cost": 50
+    "rarity": "Esoteric",
+    "college": "Planetary",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 17,
+      "INT": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 50,
+      "time": "1 action"
     }
   },
   {
     "name": "Stargate",
-    "rarity": "Esoteric",
-    "discipline": "Planetary",
-    "type": "Ceremony",
+    "level": 9,
     "effect": "Two parties working in tandem perform corresponding ceremonies in two different locations. After confirming appropriate astrological alignment, the two groups (typically working via psychic connection) gather around a circle and perform a complex ceremony involving specific incantations. When the ceremony is complete, a permanent astral gate appears in that location, linked to the corresponding gate constructed by the cooperating party. The portal remains open indefinitely, unless another ceremony is convened to banish it.",
-    "castingReqs": {
-      "cost": 100
+    "rarity": "Esoteric",
+    "college": "Planetary",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 17,
+      "INT": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 100,
+      "time": "1 action"
     }
   }
 ]

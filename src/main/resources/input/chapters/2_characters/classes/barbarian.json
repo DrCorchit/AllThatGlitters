@@ -30,7 +30,7 @@
       "A {{weapons.longsword}}",
       "A {{weapons.greataxe}}",
       "A {{weapons.maul}}",
-      "Two standard weapons with the {{weapon_modifiers.light}} property."
+      "Two standard weapons with the {{weapon_keywords.light}} property."
     ],
     "Any two of the following small weapons:": [
       "A {{weapons.cleaver}}",

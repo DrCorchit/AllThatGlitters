@@ -32,7 +32,7 @@ class Weapon(
 	override fun render(): String {
 		val output = HtmlObject("tr")
 			.withContent("td", name)
-			.withContent("td", damage.toString())
+			.withContent("td", damage.render())
 			.withContent("td", cost.toString())
 			.withContent("td", modifiers.joinToString { "<nobr>${it.render()}</nobr>" })
 			.withContent("td", requirements.joinToString())

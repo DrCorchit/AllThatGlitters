@@ -1,144 +1,242 @@
 [
   {
     "name": "Vampiric Touch",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Evocation",
+    "level": 1,
     "effect": "A target you touch is putrefied with necrotic energy. The target takes 1d8 {{damage.profane}} damage, while you are healed by the same amount of damage dealt.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 1,
+      "CHA": 11,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Life Leach",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Concentration",
+    "level": 2,
     "effect": "A ray of black energy arcs from the hands of the caster to their target. The target takes 1d4 {{damage.profane}} damage on the first turn the spell is cast and 1d6 damage on subsequent turns. The healer is healed by 1 for every point of damage dealt.",
-    "castingReqs": {
-      "cost": 2,
-      "concentration": 1
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 3,
+      "CHA": 12,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "concentration": 1,
+      "time": "1 action"
     }
   },
   {
     "name": "Reanimate",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Evocation",
+    "level": 2,
     "effect": "A bestial or humanoid creature is returned to an eerie semblance of life.",
-    "castingReqs": {
-      "cost": 4
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 3,
+      "CHA": 12,
+      "slots": 3
+    },
+    "casting_reqs": {
+      "evocation": 4,
+      "time": "1 action"
     }
   },
   {
     "name": "Inflict Disease",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Evocation",
+    "level": 3,
     "effect": "A target you choose potentially becomes afflicted by one of a number of diseases, with symptoms appearing within one hour if the target fails a DT 10 {{skills.defense}} saving throw. The target becomes {{status.lethargic}} for 1d8 days.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 5,
+      "CHA": 13,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Hex",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Evocation",
+    "level": 3,
     "effect": "Cruel magic inflicts a lasting disability upon the target, hampering their use of a chosen skill. The target gains disadvantage on checks with that skill until they are cleansed by a priest or sprinkled with holy water.",
-    "castingReqs": {
-      "cost": 4
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 5,
+      "CHA": 13,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 4,
+      "time": "1 action"
     }
   },
   {
     "name": "Starvation",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Evocation",
+    "level": 4,
     "effect": "The target gains one level of starvation, as if it had gone a day without consuming food.",
-    "castingReqs": {
-      "cost": 2
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 7,
+      "CHA": 14,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 2,
+      "time": "1 action"
     }
   },
   {
     "name": "Speak with the Dead",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Concentration",
+    "level": 5,
     "effect": "A dead body is used as conduit to contact a departed soul. The soul is torn across time and space and wrenched back into its former body in order to answer up to three questions. Afterwards, its body crumbles into dust. If the soul is incarnated, its current body falls unconscious while this spell is cast.",
-    "castingReqs": {
-      "cost": 3,
-      "concentration": 0
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Concentration",
+    "training_reqs": {
+      "level": 9,
+      "CHA": 15,
+      "slots": 4
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "concentration": 0,
+      "time": "1 action"
     }
   },
   {
     "name": "Curse",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Evocation",
+    "level": 6,
     "effect": "The target is cursed with a cruel and lasting affliction of one of the following types: TODO",
-    "castingReqs": {
-      "cost": 3
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 11,
+      "CHA": 16,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "time": "1 action"
     }
   },
   {
     "name": "Disintegrate",
-    "rarity": "Esoteric",
-    "discipline": "Necromancy",
-    "type": "Evocation",
+    "level": 6,
     "effect": "A ray of dark black and green energy arcs towards a target. The target takes 3d12 {{damage.profane}} damage if it is living, or disintegrates into a pile of ash if it is inanimate.",
-    "castingReqs": {
-      "cost": 4
+    "rarity": "Esoteric",
+    "college": "Necromancy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 11,
+      "CHA": 16,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 4,
+      "time": "1 action"
     }
   },
   {
     "name": "Vampiric Kiss",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Evocation",
+    "level": 7,
     "effect": "Transfer up to 6 willpower to or from a target you can touch. If the target is willing, the spell costs no willpower. If not, you must grapple the target before casting the spell.",
-    "castingReqs": {
-      "cost": 4
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 13,
+      "CHA": 17,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 4,
+      "time": "1 action"
     }
   },
   {
     "name": "Devour",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Evocation",
+    "level": 8,
     "effect": "Inflict 2d6 {{damage.profane}} damage on a target. If the spell lands a killing blow, gain their remaining willpower.",
-    "castingReqs": {
-      "cost": 3
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 15,
+      "CHA": 18,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 3,
+      "time": "1 action"
     }
   },
   {
     "name": "Rend Soul",
-    "rarity": "Esoteric",
-    "discipline": "Necromancy",
-    "type": "Evocation",
+    "level": 8,
     "effect": "Deal 4d12 {{damage.profane}} damage to a target within 100 yards. If a target is slain as a result of this spell, the caster may immediately enter its body.",
-    "castingReqs": {
-      "cost": 5
+    "rarity": "Esoteric",
+    "college": "Necromancy",
+    "type": "Evocation",
+    "training_reqs": {
+      "level": 15,
+      "CHA": 18,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 5,
+      "time": "1 action"
     }
   },
   {
     "name": "Flesh Golem",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Ceremony",
+    "level": 9,
     "effect": "A repulsive mountain of pulsating organs and exposed muscle is summoned to do its master's bidding.",
-    "castingReqs": {
-      "cost": 66
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 17,
+      "CHA": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 66,
+      "time": "1 action"
     }
   },
   {
     "name": "Become Lich",
-    "rarity": "Forbidden",
-    "discipline": "Necromancy",
-    "type": "Ceremony",
+    "level": 9,
     "effect": "The caster prepares a number of vessels, called phylacteries, to anchor the components of their soul to the physical plane. For every phylactery, a sentient mortal life (willing or unwilling) is sacrificed, to provide the necessary magical binding energy. A minimum of three sacrifices is required, to complete the ritual. The sacrificial victims contribute their willpower towards the completion of the ritual. When the ceremony is complete, the caster becomes a lich, a sentient undead with a lifespan of 666 years. Repeating the ritual extends lifespan by an additional 666 years, but requires twice as many sacrifices each time.",
-    "castingReqs": {
-      "cost": 100
+    "rarity": "Forbidden",
+    "college": "Necromancy",
+    "type": "Ceremony",
+    "training_reqs": {
+      "level": 17,
+      "CHA": 19,
+      "slots": 5
+    },
+    "casting_reqs": {
+      "evocation": 100,
+      "time": "1 action"
     }
   }
 ]
