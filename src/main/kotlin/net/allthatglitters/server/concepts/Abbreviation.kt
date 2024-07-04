@@ -32,7 +32,7 @@ enum class Abbreviation(
 	),
 	BC("BC", "Block Chance", "The chance that an attack is mitigated by armor or shields."),
 	DC("DC", "Dodge Chance", "The chance that an attack misses a character entirely."),
-	MIT("MIT", "Mitigation", "The chance that an attack is mitigated by armor or shields."),
+	MIT("MIT", "Mitigation", "The chance to avoid damage from an attack. Obtained from the sum of BC and DC."),
 	CT(
 		"CT",
 		"Critical Threshold",

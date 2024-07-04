@@ -2,6 +2,7 @@ package net.allthatglitters.server.util
 
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
+import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.util.html.HtmlContent
 import net.allthatglitters.server.util.html.HtmlObject
 import net.allthatglitters.server.util.html.HtmlString
@@ -23,6 +24,10 @@ fun String.italicise(): String {
 
 fun String.capitalizeAll(): String {
 	return this.replace(" [a-z]".toRegex()) { it.value.uppercase() }
+}
+
+fun toFullLink(link: String): String {
+	return "https://all-that-glitters.net/version/${generator.version}/$link"
 }
 
 fun <T> File.deserialize(deserializer: (JsonObject) -> T): List<T> {

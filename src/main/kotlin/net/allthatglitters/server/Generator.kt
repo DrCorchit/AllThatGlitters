@@ -31,7 +31,6 @@ import net.allthatglitters.server.chapters.magic.MagicChapter
 import net.allthatglitters.server.chapters.noncombat.NonCombatChapter
 import net.allthatglitters.server.chapters.sheet.*
 import net.allthatglitters.server.concepts.Abbreviation
-import net.allthatglitters.server.util.Collapsible
 import net.allthatglitters.server.util.HasProperties
 import net.allthatglitters.server.util.Navigation
 import net.allthatglitters.server.util.Templatizer
@@ -163,7 +162,7 @@ class Generator(val version: String, val inputDir: File, val outputDir: File) : 
 			.appendElement("h2", "Chapter $i")
 			.appendTitle().append(nav)
 			.appendBody().append(nav)
-			.append(Collapsible)
+			.appendScripts()
 			.save()
 	}
 
@@ -182,6 +181,7 @@ class Generator(val version: String, val inputDir: File, val outputDir: File) : 
 			.appendHeader()
 			.appendTitle().append(nav)
 			.appendBody().append(nav)
+			.appendScripts()
 			.save()
 	}
 

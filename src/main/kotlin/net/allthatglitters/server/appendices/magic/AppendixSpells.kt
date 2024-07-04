@@ -3,10 +3,10 @@ package net.allthatglitters.server.appendices.magic
 import com.drcorchit.justice.utils.StringUtils.normalize
 import net.allthatglitters.server.Generator.Companion.generator
 import net.allthatglitters.server.concepts.requirement.AttrReq
-import net.allthatglitters.server.util.Collapsible
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
+import net.allthatglitters.server.util.html.JSFile
 import java.io.File
 
 object AppendixSpells : HtmlFile(
@@ -14,6 +14,8 @@ object AppendixSpells : HtmlFile(
 	"appendix_spells.html",
 	File(generator.inputDir, "appendices/1_spells")
 ) {
+	override val scripts = listOf("collapsible.js", "clipboard.js")
+
 	val spells = inputDir.listFiles()!!
 		.flatMap { spellFile -> spellFile.deserialize { Spell.deserialize(it) } }
 		.associateBy { it.name.normalize() }
@@ -30,37 +32,32 @@ object AppendixSpells : HtmlFile(
 	}
 
 	override fun appendBody(): HtmlFile {
-		if (inputDir.isDirectory) {
-			append(HtmlObject("h4").withContent("Schools of Sorcery"))
-			append(HtmlObject("a").withAttribute("id", "top"))
-			val ol = HtmlObject("ul")
-			School.entries.forEach {
-				val link = HtmlObject("a").withAttribute("href", "#${it.name}").withContent(it.name)
-				ol.withContent(HtmlObject("li").withContent(link))
-			}
-			append(ol)
+		append(HtmlObject("h4").withContent("Schools of Sorcery"))
+		append(HtmlObject("a").withAttribute("id", "top"))
+		val ol = HtmlObject("ul")
+		School.entries.forEach {
+			val link = HtmlObject("a").withAttribute("href", "#${it.name}").withContent(it.name)
+			ol.withContent(HtmlObject("li").withContent(link))
+		}
+		append(ol)
 
-			getGroupedSpells().forEach {
-				append(
-					HtmlObject("h4")
-						.withContent(
-							HtmlObject("a")
-								.withAttribute("id", it.key.name)
-						)
-						.withContent("School of ${it.key.name}")
-				)
-				it.value.forEach { spell ->
-					try {
-						append(spell.render())
-					} catch (e: Exception) {
-						throw IllegalArgumentException("Error rendering spell ${spell.name}", e)
-					}
+		getGroupedSpells().forEach {
+			append(
+				HtmlObject("h4")
+					.withContent(
+						HtmlObject("a")
+							.withAttribute("id", it.key.name)
+					)
+					.withContent("School of ${it.key.name}")
+			)
+			it.value.sortedBy { spell -> spell.level }.forEach { spell ->
+				try {
+					append(spell.render())
+				} catch (e: Exception) {
+					throw IllegalArgumentException("Error rendering spell ${spell.name}", e)
 				}
-				append(HtmlObject("a").withAttribute("href", "#top").withContent("Back to Top"))
 			}
-			append(Collapsible.render())
-		} else {
-			logger.info("Warning: spellsDir is not a directory ($inputDir)")
+			append(HtmlObject("a").withAttribute("href", "#top").withContent("Back to Top"))
 		}
 		return this
 	}

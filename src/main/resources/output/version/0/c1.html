@@ -84,7 +84,7 @@
    <li><b>Will</b>: Willpower (Expended when using powerful abilities.)</li>
    <li><b>BC</b>: Block Chance (The chance that an attack is mitigated by armor or shields.)</li>
    <li><b>DC</b>: Dodge Chance (The chance that an attack misses a character entirely.)</li>
-   <li><b>MIT</b>: Mitigation (The chance that an attack is mitigated by armor or shields.)</li>
+   <li><b>MIT</b>: Mitigation (The chance to avoid damage from an attack. Obtained from the sum of BC and DC.)</li>
   </ul>
   <p>Attributes</p>
   <ul>
@@ -106,22 +106,6 @@
     <a href="c2.html">Advance to Chapter 2</a>
    </div>
   </div>
-  <hr><!-- Enables collapsible functionality -->
-  <script>
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
-
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-		this.classList.toggle("active");
-		var content = this.nextElementSibling;
-		if (content.style.display === "block") {
-		  content.style.display = "none";
-		} else {
-		  content.style.display = "block";
-		}
-	  });
-	}
-</script>
+  <hr>
  </body>
 </html>

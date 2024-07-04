@@ -7,7 +7,8 @@ import net.allthatglitters.server.util.*
 import org.jsoup.Jsoup
 import java.io.File
 
-abstract class HtmlFile(val title: String, val fileName: String, val inputDir: File): HasProperties {
+abstract class HtmlFile(val title: String, val fileName: String, val inputDir: File) :
+	HasProperties {
 	open val logger = Logger.getLogger(HtmlFile::class.java)
 	val outputFile = File(generator.versionedOutputDir, fileName)
 	open val templatizer: Templatizer = generator.templatizer
@@ -15,6 +16,7 @@ abstract class HtmlFile(val title: String, val fileName: String, val inputDir: F
 	val subsections = mutableListOf<Subsection>()
 	val head = HtmlObject("head").withContent(HtmlObject("title").withContent(title))
 	val body = HtmlObject("body")
+	open val scripts = listOf<String>()
 
 	fun linkTo(text: String = title): HtmlObject {
 		return HtmlObject("a").withAttribute("href", fileName)
@@ -71,6 +73,15 @@ abstract class HtmlFile(val title: String, val fileName: String, val inputDir: F
 		return this
 	}
 
+	fun appendScripts(): HtmlFile {
+		if (scripts.isNotEmpty()) {
+			val script = HtmlObject("script")
+				.withAll(scripts.map { JSFile(it) })
+			append(script)
+		}
+		return this
+	}
+
 	fun render(): String {
 		logger.debug("Rendering $fileName")
 		return "<!DOCTYPE html>\n" + HtmlObject("html")
@@ -107,6 +118,7 @@ abstract class HtmlFile(val title: String, val fileName: String, val inputDir: F
 					return subsections[property.toInt()]
 				}
 			}
+
 			else -> null
 		}
 	}

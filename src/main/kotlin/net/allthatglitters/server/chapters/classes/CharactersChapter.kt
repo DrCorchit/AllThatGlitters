@@ -14,6 +14,7 @@ object CharactersChapter : HtmlFile(
 	"c2.html",
 	File(generator.inputDir, "chapters/2_characters")
 ) {
+	override val scripts = listOf("collapsible.js")
 	override val templatizer = generator.templatizer.extend()
 		.withRule("races") {
 			races.values.joinToString("\n") { it.render() }

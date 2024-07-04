@@ -3,7 +3,6 @@ package net.allthatglitters.server.appendices.magic
 import com.drcorchit.justice.utils.StringUtils.normalize
 import com.drcorchit.justice.utils.json.JsonUtils.deserializeEnum
 import com.drcorchit.justice.utils.math.MathUtils.ordinal
-import com.drcorchit.justice.utils.math.MathUtils.ordinalSuffix
 import com.drcorchit.justice.utils.math.units.Measurement
 import com.drcorchit.justice.utils.math.units.TimeUnits
 import com.google.common.collect.ImmutableMap
@@ -17,6 +16,7 @@ import net.allthatglitters.server.concepts.round
 import net.allthatglitters.server.util.HasProperties
 import net.allthatglitters.server.util.capitalizeAll
 import net.allthatglitters.server.util.html.HtmlObject
+import net.allthatglitters.server.util.toFullLink
 
 class Spell(
 	name: String,
@@ -33,11 +33,19 @@ class Spell(
 	val modifiers: Map<String, Any>,
 ) : Trainable(name, effect, trainingReqs), HasProperties {
 	private val tag = name.normalize()
+	val link = "${AppendixSpells.fileName}#$tag"
 
 	fun render(): String {
 		val output = HtmlObject("div").withClass("background")
 		output.withContent(HtmlObject("a").withAttribute("id", tag))
-		output.withContent(HtmlObject("h5").withContent(name))
+		val linkButton = HtmlObject("button")
+			.withClass("h5")
+			.withAttribute("onClick", "clipboard('${toFullLink(link)}')")
+			.withContent(name)
+
+		output.withContent(HtmlObject("h5").withContent(linkButton))
+
+
 		val category = describe()
 		output.withContent(HtmlObject("p").withContent(HtmlObject("i").withContent(category)))
 
@@ -84,7 +92,7 @@ class Spell(
 
 	fun linkTo(text: String = name): HtmlObject {
 		return HtmlObject("a")
-			.withAttribute("href", "${AppendixSpells.outputFile}#$tag")
+			.withAttribute("href", link)
 			.withContent(text)
 	}
 
@@ -117,7 +125,7 @@ class Spell(
 		when (college.school) {
 			School.Alchemy -> {
 				if (college == College.Pharmacology) {
-					if (rarity == Rarity.Esoteric) {
+					if (level > 6) {
 						output.append(" alchemical elixir")
 					} else {
 						output.append(" alchemical potion")
@@ -125,8 +133,12 @@ class Spell(
 				} else output.append(" alchemical poison")
 			}
 
-			School.Biomancy, School.Conjuration -> output.append(" ").append(college.adjective).append(" ")
+			School.Biomancy, School.Conjuration -> output.append(" ").append(college.adjective)
+				.append(" ")
 				.append(type.label)
+
+			School.Elementurgy -> output.append(" ").append(college.school.adjective).append(" ")
+				.append(college.name).append(" ").append(type.label)
 
 			else -> output
 				.append(" ").append(college.school.adjective).append(" ").append(type.label)
