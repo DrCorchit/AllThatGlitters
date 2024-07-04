@@ -6,7 +6,6 @@ import net.allthatglitters.server.concepts.requirement.AttrReq
 import net.allthatglitters.server.util.deserialize
 import net.allthatglitters.server.util.html.HtmlFile
 import net.allthatglitters.server.util.html.HtmlObject
-import net.allthatglitters.server.util.html.JSFile
 import java.io.File
 
 object AppendixSpells : HtmlFile(

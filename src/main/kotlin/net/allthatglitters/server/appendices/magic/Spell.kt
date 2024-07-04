@@ -40,7 +40,7 @@ class Spell(
 		output.withContent(HtmlObject("a").withAttribute("id", tag))
 		val linkButton = HtmlObject("button")
 			.withClass("h5")
-			.withAttribute("onClick", "clipboard('${toFullLink(link)}')")
+			.withAttribute("onClick", "setClipboard('${toFullLink(link)}')")
 			.withContent(name)
 
 		output.withContent(HtmlObject("h5").withContent(linkButton))
